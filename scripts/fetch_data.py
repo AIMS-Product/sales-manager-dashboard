@@ -40,6 +40,12 @@ EXCLUDED_LEAD_STATUSES = {
     "stat_YV4ZngDB4IGjLjlOf0YTFEWuKZJ6fhNxVkzQkvKYfdB",  # Outside the US
 }
 
+# Opp statuses where confidence=0 is expected (skip confidence check for CRM compliance)
+LOST_OPP_STATUSES = {
+    "stat_bBWcww9IflskaleadKuK2E4SGFF4qy3IuBucrqo7H4u",  # Lost
+    "stat_E9LE4YrRUQvQIIs7GoaWA4eOFqzs1GtsoV4qKWmvbYN",  # Outside the US
+}
+
 # Custom field IDs (lead object)
 CF_FIRST_CALL_SHOW_ID     = "cf_OPyvpU45RdvjLqfm8V1VWwNxrGKogEH2IBJmfCj0Uhq"
 CF_LEAD_OWNER_ID           = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
@@ -372,6 +378,11 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id):
         opp_confidence_filled = False
         for opp in lead.get("opportunities", []):
             if opp.get("pipeline_id") == PIPELINE_ID:
+                opp_status = opp.get("status_id", "")
+                # Lost opps get a free pass — confidence=0 is expected
+                if opp_status in LOST_OPP_STATUSES:
+                    opp_confidence_filled = True
+                    break
                 confidence = opp.get("confidence", 0) or 0
                 if confidence > 0:
                     opp_confidence_filled = True
