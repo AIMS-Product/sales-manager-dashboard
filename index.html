@@ -159,6 +159,16 @@
 
         thead tr.sort-header th:hover { color: var(--accent); }
         thead tr.sort-header th.active { color: var(--accent); }
+
+        thead tr.sort-header th[title] {
+            text-decoration: underline dotted var(--text-muted);
+            text-underline-offset: 3px;
+            cursor: help;
+        }
+
+        thead tr.sort-header th[title]:hover {
+            text-decoration: underline dotted var(--accent);
+        }
         thead tr.sort-header th.active::after { content: ' ▼'; font-size: 8px; }
         thead tr.sort-header th.active.asc::after { content: ' ▲'; font-size: 8px; }
         thead tr.sort-header th:first-child { text-align: left; padding-left: 24px; }
@@ -281,16 +291,16 @@
                     </tr>
                     <tr class="sort-header" id="tableHead">
                         <th data-key="name" data-dir="asc" data-type="string">Rep Name</th>
-                        <th data-key="booked" data-dir="desc" data-type="num" class="active g-activity-start">Booked</th>
-                        <th data-key="shown" data-dir="desc" data-type="num">Shown</th>
-                        <th data-key="qualified" data-dir="desc" data-type="num">Qualified</th>
-                        <th data-key="deals" data-dir="desc" data-type="num">Closed Won</th>
-                        <th data-key="revenue" data-dir="desc" data-type="num" class="g-activity-end">Revenue</th>
-                        <th data-key="close_rate" data-dir="desc" data-type="num">Close %</th>
-                        <th data-key="qa_score" data-dir="desc" data-type="num">QA Score</th>
-                        <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end">Avg/Deal</th>
-                        <th data-key="crm_compliance" data-dir="desc" data-type="num">CRM Compl.</th>
-                        <th data-key="task_adherence" data-dir="desc" data-type="num">Task Adh.</th>
+                        <th data-key="booked" data-dir="desc" data-type="num" class="active g-activity-start" title="New first strategy calls booked this week (Mon–today). Only counts meetings matching qualifying title patterns (e.g. Vending Strategy Call, Vendingpreneurs Consultation). Excludes follow-ups, reschedules, and canceled meetings.">Booked</th>
+                        <th data-key="shown" data-dir="desc" data-type="num" title="Booked meetings where the prospect showed up. Based on the 'First Call Show Up (Opp)' field = Yes on the lead.">Shown</th>
+                        <th data-key="qualified" data-dir="desc" data-type="num" title="Booked meetings where the lead was marked as qualified. Based on the 'Qualified (Opp)' field = Yes on the lead.">Qualified</th>
+                        <th data-key="deals" data-dir="desc" data-type="num" title="Unique Closed/Won deals this week. One deal per lead per rep. Based on date_won in the Sales Pipeline.">Closed Won</th>
+                        <th data-key="revenue" data-dir="desc" data-type="num" class="g-activity-end" title="Total dollar value of Closed/Won opportunities this week. Includes all opps per lead (not deduplicated by value).">Revenue</th>
+                        <th data-key="close_rate" data-dir="desc" data-type="num" title="Deals closed ÷ meetings booked × 100. Week-to-date conversion rate.">Close %</th>
+                        <th data-key="qa_score" data-dir="desc" data-type="num" title="Quality assurance score. Coming soon.">QA Score</th>
+                        <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
+                        <th data-key="crm_compliance" data-dir="desc" data-type="num" title="% of key CRM fields filled on booked leads. Checks 4 fields per lead: (1) First Call Show Up, (2) Today's Call Disposition, (3) Qualified (Opp), (4) Opportunity Confidence > 0%.">CRM Compl.</th>
+                        <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. 100% = fully caught up.">Task Adh.</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
