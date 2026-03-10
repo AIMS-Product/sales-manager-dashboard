@@ -533,12 +533,15 @@ def fetch_task_adherence(user_map, today_str):
 # ── Step 6: Fetch open leads per rep ─────────────────────────────────────────
 
 def fetch_open_leads_per_rep(user_map):
-    """Count open leads per rep (not Lost, Canceled, Outside US).
+    """Count open leads per rep (not Lost, Canceled, Outside US, Closed/Won).
+    Also excludes leads that have a Closed/Won opportunity in the Sales Pipeline,
+    even if the lead status hasn't been updated yet.
     Uses Lead Owner custom field for attribution.
     Returns rep_open_leads dict {rep_name: count}.
     """
     name_to_id = {v: k for k, v in user_map.items()}
     rep_open_leads = {}
+    won_opp_skipped = 0
 
     for rep_name in name_to_id:
         if rep_name in EXCLUDE_USERS or rep_name in MANAGER_USERS:
@@ -550,14 +553,26 @@ def fetch_open_leads_per_rep(user_map):
             while True:
                 data = api_get("/lead/", {
                     "query": f'"Lead Owner":"{rep_name}"',
-                    "_fields": "id,status_id",
+                    "_fields": "id,status_id,opportunities",
                     "_skip": skip,
                     "_limit": 200,
                 })
                 leads = data.get("data", [])
                 for lead in leads:
-                    if lead.get("status_id") not in CLOSED_LEAD_STATUSES:
-                        count += 1
+                    # Skip excluded lead statuses
+                    if lead.get("status_id") in CLOSED_LEAD_STATUSES:
+                        continue
+                    # Skip leads with a Closed/Won opp (even if lead status is stale)
+                    has_won_opp = False
+                    for opp in lead.get("opportunities", []):
+                        if opp.get("pipeline_id") == PIPELINE_ID and \
+                           opp.get("status_id") == CLOSED_WON_STATUS_ID:
+                            has_won_opp = True
+                            break
+                    if has_won_opp:
+                        won_opp_skipped += 1
+                        continue
+                    count += 1
                 if not data.get("has_more", False):
                     break
                 skip += 200
@@ -568,6 +583,8 @@ def fetch_open_leads_per_rep(user_map):
 
     total_open = sum(rep_open_leads.values())
     print(f"  Open leads: {total_open} total across {len(rep_open_leads)} reps", flush=True)
+    if won_opp_skipped:
+        print(f"  ℹ️ Excluded {won_opp_skipped} leads with Closed/Won opp but stale lead status", flush=True)
     return rep_open_leads
 
 
