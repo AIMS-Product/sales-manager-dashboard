@@ -51,6 +51,7 @@ CLOSED_LEAD_STATUSES = {
     "stat_aR2jBa8YnTNZmHAnPsnlQuinBdaXpSBCkZGP3UvoBlV",  # Lost
     "stat_hWIGHjzyNpl4YjIFSFz3VK4fp2ny10SFJLKAihmo4KT",  # Canceled (by Lead)
     "stat_YV4ZngDB4IGjLjlOf0YTFEWuKZJ6fhNxVkzQkvKYfdB",  # Outside the US
+    "stat_0oW3iRpVp9z5DJq0cuwI1HgR0XhHAhykEPPIq4TFsxd",  # Closed / Won
 }
 
 # Pipeline estimation constants
@@ -730,7 +731,7 @@ def build_dashboard_data():
     week_label = f"{mon_dt.strftime('%b %d')} – {fri_dt.strftime('%b %d, %Y')}"
 
     return {
-        "updated_at": now.strftime("%Y-%m-%d %I:%M %p PST"),
+        "updated_at": now.strftime("%Y-%m-%d %I:%M %p %Z"),
         "week_label": week_label,
         "monday_str": monday_str,
         "today_str": today_str,
