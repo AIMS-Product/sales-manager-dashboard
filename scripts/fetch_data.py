@@ -533,9 +533,9 @@ def fetch_task_adherence(user_map, today_str):
 # ── Step 6: Fetch open leads per rep ─────────────────────────────────────────
 
 def fetch_open_leads_per_rep(user_map):
-    """Count open leads per rep (not Lost, Canceled, Outside US, Closed/Won).
-    Also excludes leads that have a Closed/Won opportunity in the Sales Pipeline,
-    even if the lead status hasn't been updated yet.
+    """Count qualified open leads per rep.
+    Only counts leads where Qualified (Opp) = Yes AND not Lost/Canceled/Outside US/Closed Won.
+    Also excludes leads with a Closed/Won opp in the Sales Pipeline (stale lead status).
     Uses Lead Owner custom field for attribution.
     Returns rep_open_leads dict {rep_name: count}.
     """
@@ -552,7 +552,7 @@ def fetch_open_leads_per_rep(user_map):
             skip = 0
             while True:
                 data = api_get("/lead/", {
-                    "query": f'"Lead Owner":"{rep_name}"',
+                    "query": f'"Lead Owner":"{rep_name}" "Qualified (Opp)":"Yes"',
                     "_fields": "id,status_id,opportunities",
                     "_skip": skip,
                     "_limit": 200,
@@ -582,7 +582,7 @@ def fetch_open_leads_per_rep(user_map):
             print(f"    ⚠️ Failed to fetch open leads for {rep_name}: {e}", flush=True)
 
     total_open = sum(rep_open_leads.values())
-    print(f"  Open leads: {total_open} total across {len(rep_open_leads)} reps", flush=True)
+    print(f"  Qualified pipeline: {total_open} leads across {len(rep_open_leads)} reps", flush=True)
     if won_opp_skipped:
         print(f"  ℹ️ Excluded {won_opp_skipped} leads with Closed/Won opp but stale lead status", flush=True)
     return rep_open_leads
