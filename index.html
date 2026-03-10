@@ -303,8 +303,8 @@
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
                         <th data-key="crm_compliance" data-dir="desc" data-type="num" title="% of key CRM fields filled on booked leads (past meetings only — today's calls excluded). Checks 4 fields per lead: (1) First Call Show Up, (2) Today's Call Disposition, (3) Qualified (Opp), (4) Opportunity Confidence > 0%. Lost opps get a free pass on confidence.">CRM Compl.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. 100% = fully caught up.">Task Adh.</th>
-                        <th data-key="open_leads" data-dir="desc" data-type="num" title="Total leads in rep's pipeline that aren't Lost, Canceled, or Outside the US. Based on Lead Owner field.">Open Leads</th>
-                        <th data-key="est_pipeline" data-dir="desc" data-type="num" title="Estimated pipeline value: Open Leads × $8K avg deal × 30% close rate. Represents potential revenue from the rep's active pipeline.">Est. Pipeline</th>
+                        <th data-key="open_leads" data-dir="desc" data-type="num" title="Qualified leads in rep's pipeline — leads where Qualified (Opp) = Yes, excluding Lost, Canceled, Outside US, and Closed/Won. Based on Lead Owner field.">Qual. Pipeline</th>
+                        <th data-key="est_pipeline" data-dir="desc" data-type="num" title="Estimated pipeline value: Qualified Leads × $8K avg deal × 30% close rate. Represents potential revenue from the rep's qualified pipeline.">Est. Revenue</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
