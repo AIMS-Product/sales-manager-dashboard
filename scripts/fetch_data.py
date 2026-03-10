@@ -46,6 +46,17 @@ LOST_OPP_STATUSES = {
     "stat_E9LE4YrRUQvQIIs7GoaWA4eOFqzs1GtsoV4qKWmvbYN",  # Outside the US
 }
 
+# Lead statuses excluded from "Open Leads" pipeline count
+CLOSED_LEAD_STATUSES = {
+    "stat_aR2jBa8YnTNZmHAnPsnlQuinBdaXpSBCkZGP3UvoBlV",  # Lost
+    "stat_hWIGHjzyNpl4YjIFSFz3VK4fp2ny10SFJLKAihmo4KT",  # Canceled (by Lead)
+    "stat_YV4ZngDB4IGjLjlOf0YTFEWuKZJ6fhNxVkzQkvKYfdB",  # Outside the US
+}
+
+# Pipeline estimation constants
+AVG_DEAL_VALUE = 8000
+CLOSE_RATE_ESTIMATE = 0.30
+
 # Custom field IDs (lead object)
 CF_FIRST_CALL_SHOW_ID     = "cf_OPyvpU45RdvjLqfm8V1VWwNxrGKogEH2IBJmfCj0Uhq"
 CF_LEAD_OWNER_ID           = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
@@ -305,16 +316,42 @@ def classify_meetings(meetings, user_map):
 
 # ── Step 3: Fetch lead data for qualifying meetings ──────────────────────────
 
-def fetch_leads_for_meetings(meetings, user_map, name_to_id):
+def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
     rep_booked = {}
     rep_shown = {}
     rep_qualified = {}
     rep_crm_filled = {}
     rep_crm_total = {}
 
+    # Pre-compute which leads have at least one PAST meeting (before today)
+    # CRM compliance only applies to meetings that already happened
+    try:
+        from zoneinfo import ZoneInfo
+        pst = ZoneInfo("America/Los_Angeles")
+    except ImportError:
+        pst = timezone(timedelta(hours=-8))
+
+    leads_with_past_meetings = set()
+    for m in meetings:
+        lead_id = m.get("lead_id", "")
+        if not lead_id:
+            continue
+        start = m.get("starts_at") or m.get("activity_at") or ""
+        if not start:
+            continue
+        try:
+            dt_str = start.replace("Z", "+00:00")
+            dt = datetime.fromisoformat(dt_str)
+            dt_pst = dt.astimezone(pst)
+            if dt_pst.strftime("%Y-%m-%d") < today_str:
+                leads_with_past_meetings.add(lead_id)
+        except (ValueError, TypeError):
+            pass
+
     seen_leads = set()
     lead_cache = {}
     fetch_errors = 0
+    crm_skipped_future = 0
 
     for m in meetings:
         lead_id = m.get("lead_id", "")
@@ -365,36 +402,41 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id):
         if str(qualified_val).strip().lower() == "yes":
             rep_qualified[rep_name] = rep_qualified.get(rep_name, 0) + 1
 
-        # CRM Compliance: 4 fields per lead
-        crm_checks = 4
-        crm_filled = 0
-        if is_field_filled(show_up):
-            crm_filled += 1
-        if is_field_filled(disposition):
-            crm_filled += 1
-        if is_field_filled(qualified_val):
-            crm_filled += 1
+        # CRM Compliance: 4 fields per lead — only for meetings that already happened
+        if lead_id in leads_with_past_meetings:
+            crm_checks = 4
+            crm_filled = 0
+            if is_field_filled(show_up):
+                crm_filled += 1
+            if is_field_filled(disposition):
+                crm_filled += 1
+            if is_field_filled(qualified_val):
+                crm_filled += 1
 
-        opp_confidence_filled = False
-        for opp in lead.get("opportunities", []):
-            if opp.get("pipeline_id") == PIPELINE_ID:
-                opp_status = opp.get("status_id", "")
-                # Lost opps get a free pass — confidence=0 is expected
-                if opp_status in LOST_OPP_STATUSES:
-                    opp_confidence_filled = True
-                    break
-                confidence = opp.get("confidence", 0) or 0
-                if confidence > 0:
-                    opp_confidence_filled = True
-                    break
-        if opp_confidence_filled:
-            crm_filled += 1
+            opp_confidence_filled = False
+            for opp in lead.get("opportunities", []):
+                if opp.get("pipeline_id") == PIPELINE_ID:
+                    opp_status = opp.get("status_id", "")
+                    # Lost opps get a free pass — confidence=0 is expected
+                    if opp_status in LOST_OPP_STATUSES:
+                        opp_confidence_filled = True
+                        break
+                    confidence = opp.get("confidence", 0) or 0
+                    if confidence > 0:
+                        opp_confidence_filled = True
+                        break
+            if opp_confidence_filled:
+                crm_filled += 1
 
-        rep_crm_filled[rep_name] = rep_crm_filled.get(rep_name, 0) + crm_filled
-        rep_crm_total[rep_name] = rep_crm_total.get(rep_name, 0) + crm_checks
+            rep_crm_filled[rep_name] = rep_crm_filled.get(rep_name, 0) + crm_filled
+            rep_crm_total[rep_name] = rep_crm_total.get(rep_name, 0) + crm_checks
+        else:
+            crm_skipped_future += 1
 
     if fetch_errors:
         print(f"  ⚠️ {fetch_errors} lead fetch errors", flush=True)
+    if crm_skipped_future:
+        print(f"  ℹ️ CRM compliance skipped for {crm_skipped_future} leads (meeting today, not yet past)", flush=True)
 
     return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total
 
@@ -487,6 +529,47 @@ def fetch_task_adherence(user_map, today_str):
     return rep_adherence, rep_overdue, rep_total_incomplete
 
 
+# ── Step 6: Fetch open leads per rep ─────────────────────────────────────────
+
+def fetch_open_leads_per_rep(user_map):
+    """Count open leads per rep (not Lost, Canceled, Outside US).
+    Uses Lead Owner custom field for attribution.
+    Returns rep_open_leads dict {rep_name: count}.
+    """
+    name_to_id = {v: k for k, v in user_map.items()}
+    rep_open_leads = {}
+
+    for rep_name in name_to_id:
+        if rep_name in EXCLUDE_USERS or rep_name in MANAGER_USERS:
+            continue
+
+        try:
+            count = 0
+            skip = 0
+            while True:
+                data = api_get("/lead/", {
+                    "query": f'"Lead Owner":"{rep_name}"',
+                    "_fields": "id,status_id",
+                    "_skip": skip,
+                    "_limit": 200,
+                })
+                leads = data.get("data", [])
+                for lead in leads:
+                    if lead.get("status_id") not in CLOSED_LEAD_STATUSES:
+                        count += 1
+                if not data.get("has_more", False):
+                    break
+                skip += 200
+
+            rep_open_leads[rep_name] = count
+        except Exception as e:
+            print(f"    ⚠️ Failed to fetch open leads for {rep_name}: {e}", flush=True)
+
+    total_open = sum(rep_open_leads.values())
+    print(f"  Open leads: {total_open} total across {len(rep_open_leads)} reps", flush=True)
+    return rep_open_leads
+
+
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 def build_dashboard_data():
@@ -547,12 +630,16 @@ def build_dashboard_data():
 
     print(f"  Fetching lead data for {len(qualifying)} qualifying meetings...", flush=True)
     rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total = \
-        fetch_leads_for_meetings(qualifying, user_map, name_to_id)
+        fetch_leads_for_meetings(qualifying, user_map, name_to_id, today_str)
     print(f"  Final counts by {len(rep_booked)} reps.", flush=True)
 
     # Task adherence (per rep, excludes managers)
     print("  Fetching task adherence per rep...", flush=True)
     rep_adherence, rep_overdue, rep_total_incomplete = fetch_task_adherence(user_map, today_str)
+
+    # Open leads per rep (excludes managers)
+    print("  Fetching open leads per rep...", flush=True)
+    rep_open_leads = fetch_open_leads_per_rep(user_map)
 
     # Build per-rep data
     all_rep_names = set()
@@ -589,6 +676,8 @@ def build_dashboard_data():
             "task_adherence": rep_adherence.get(name) if not is_mgr else None,
             "tasks_overdue": rep_overdue.get(name, 0) if not is_mgr else None,
             "tasks_incomplete": rep_total_incomplete.get(name, 0) if not is_mgr else None,
+            "open_leads": rep_open_leads.get(name, 0) if not is_mgr else None,
+            "est_pipeline": round(rep_open_leads.get(name, 0) * AVG_DEAL_VALUE * CLOSE_RATE_ESTIMATE) if not is_mgr else None,
             "is_manager": is_mgr,
         })
 
@@ -617,6 +706,10 @@ def build_dashboard_data():
     total_deals = sum(r["deals"] for r in reps)
     total_revenue = sum(r["revenue"] for r in reps)
     total_avg_rev = round(total_revenue / total_deals, 2) if total_deals > 0 else None
+
+    # Open leads and pipeline (non-manager)
+    total_open_leads = sum(r.get("open_leads", 0) or 0 for r in non_mgr)
+    total_est_pipeline = round(total_open_leads * AVG_DEAL_VALUE * CLOSE_RATE_ESTIMATE)
 
     # Team targets = individual target × number of non-manager reps
     team_targets = {
@@ -655,6 +748,8 @@ def build_dashboard_data():
         "team_crm_compliance": safe_pct(total_crm_filled, total_crm_total),
         "team_task_adherence": team_task_adherence,
         "team_overdue": total_overdue,
+        "team_open_leads": total_open_leads,
+        "team_est_pipeline": total_est_pipeline,
         "reps": reps,
     }
 
