@@ -281,13 +281,15 @@
                     <col class="col-money">
                     <col class="col-rate">
                     <col class="col-rate">
+                    <col class="col-prog">
+                    <col class="col-money">
                 </colgroup>
                 <thead>
                     <tr class="group-header">
                         <th></th>
                         <th class="group-activity" colspan="5">Week-to-Date Activity</th>
                         <th class="group-performance" colspan="3">Performance</th>
-                        <th class="group-quality" colspan="2">Quality</th>
+                        <th class="group-quality" colspan="4">Quality</th>
                     </tr>
                     <tr class="sort-header" id="tableHead">
                         <th data-key="name" data-dir="asc" data-type="string">Rep Name</th>
@@ -299,12 +301,14 @@
                         <th data-key="close_rate" data-dir="desc" data-type="num" title="Deals closed ÷ meetings booked × 100. Week-to-date conversion rate.">Close %</th>
                         <th data-key="qa_score" data-dir="desc" data-type="num" title="Quality assurance score. Coming soon.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
-                        <th data-key="crm_compliance" data-dir="desc" data-type="num" title="% of key CRM fields filled on booked leads. Checks 4 fields per lead: (1) First Call Show Up, (2) Today's Call Disposition, (3) Qualified (Opp), (4) Opportunity Confidence > 0%.">CRM Compl.</th>
+                        <th data-key="crm_compliance" data-dir="desc" data-type="num" title="% of key CRM fields filled on booked leads (past meetings only — today's calls excluded). Checks 4 fields per lead: (1) First Call Show Up, (2) Today's Call Disposition, (3) Qualified (Opp), (4) Opportunity Confidence > 0%. Lost opps get a free pass on confidence.">CRM Compl.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. 100% = fully caught up.">Task Adh.</th>
+                        <th data-key="open_leads" data-dir="desc" data-type="num" title="Total leads in rep's pipeline that aren't Lost, Canceled, or Outside the US. Based on Lead Owner field.">Open Leads</th>
+                        <th data-key="est_pipeline" data-dir="desc" data-type="num" title="Estimated pipeline value: Open Leads × $8K avg deal × 30% close rate. Represents potential revenue from the rep's active pipeline.">Est. Pipeline</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <tr><td colspan="11" class="loading"><div class="spinner"></div> Loading data…</td></tr>
+                    <tr><td colspan="13" class="loading"><div class="spinner"></div> Loading data…</td></tr>
                 </tbody>
             </table>
         </div>
@@ -426,8 +430,12 @@
                     <td class="g-perf-end">${r.avg_rev_per_deal ? fmtK(r.avg_rev_per_deal) : '—'}</td>
                     <td style="color:var(--text-muted)">—</td>
                     <td style="color:var(--text-muted)">—</td>
+                    <td style="color:var(--text-muted)">—</td>
+                    <td style="color:var(--text-muted)">—</td>
                 </tr>`;
             } else {
+                const ol = r.open_leads || 0;
+                const ep = r.est_pipeline || 0;
                 html += `<tr>
                     <td>${r.name}${mgrTag}</td>
                     <td class="g-activity-start">${prog(r.booked, t.booked)}</td>
@@ -440,6 +448,8 @@
                     <td class="g-perf-end">${progMoney(r.avg_rev_per_deal, t.avg_rev_per_deal)}</td>
                     <td>${progPct(r.crm_compliance, t.crm_compliance)}</td>
                     <td>${fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
+                    <td>${ol}</td>
+                    <td>${fmtK(ep)}</td>
                 </tr>`;
             }
         }
@@ -457,6 +467,8 @@
             <td class="g-perf-end">${DATA.team_avg_rev_per_deal ? fmtK(DATA.team_avg_rev_per_deal) : '—'}</td>
             <td>${progPct(DATA.team_crm_compliance, tt.crm_compliance)}</td>
             <td>${fmtAdherence(DATA.team_task_adherence, DATA.team_overdue)}</td>
+            <td>${DATA.team_open_leads || 0}</td>
+            <td>${fmtK(DATA.team_est_pipeline)}</td>
         </tr>`;
 
         document.getElementById('tableBody').innerHTML = html;
