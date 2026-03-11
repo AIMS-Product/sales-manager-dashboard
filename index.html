@@ -193,6 +193,61 @@
             padding: 2px 7px; border-radius: 4px; margin-left: 6px; font-weight: 500;
         }
 
+        .crm-clickable {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .crm-clickable:hover { color: var(--accent); }
+
+        .crm-detail-row td {
+            background: #fafbfc;
+            padding: 12px 24px !important;
+            text-align: left !important;
+            border-bottom: 2px solid var(--border) !important;
+        }
+
+        .crm-detail-row:hover { background: #fafbfc !important; }
+
+        .crm-detail {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 12px;
+        }
+
+        .crm-field {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .crm-field-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .crm-field-val {
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .crm-field-val.good { color: var(--green); }
+        .crm-field-val.bad { color: var(--red); }
+        .crm-field-val.partial { color: var(--amber); }
+
+        .crm-fix-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 12px;
+            margin-left: auto;
+            white-space: nowrap;
+        }
+
+        .crm-fix-link:hover { text-decoration: underline; }
+
         .tbd-tag {
             font-size: 10px; background: #f5f3ff; color: var(--purple);
             padding: 2px 7px; border-radius: 4px; font-weight: 600;
@@ -301,7 +356,7 @@
                         <th data-key="close_rate" data-dir="desc" data-type="num" title="Deals closed ÷ meetings booked × 100. Week-to-date conversion rate.">Close %</th>
                         <th data-key="qa_score" data-dir="desc" data-type="num" title="Quality assurance score. Coming soon.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
-                        <th data-key="crm_compliance" data-dir="desc" data-type="num" title="% of key CRM fields filled on booked leads (past meetings only — today's calls excluded). Checks 4 fields per lead: (1) First Call Show Up, (2) Today's Call Disposition, (3) Qualified (Opp), (4) Opportunity Confidence > 0%. Lost opps get a free pass on confidence.">CRM Compl.</th>
+                        <th data-key="crm_compliance" data-dir="desc" data-type="num" title="% of key CRM fields filled on booked leads (past meetings only — today's calls excluded). Checks 4 fields per lead: (1) First Call Show Up, (2) Today's Call Disposition, (3) Qualified (Opp), (4) Opportunity Confidence > 0%. Lost opps get a free pass on confidence. Click a rep's % to see per-field breakdown.">CRM Compl.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. Tasks on Closed/Won leads are excluded. 100% = fully caught up.">Task Adh.</th>
                         <th data-key="open_leads" data-dir="desc" data-type="num" title="Qualified leads in rep's pipeline — leads where Qualified (Opp) = Yes, excluding Lost, Canceled, Outside US, and Closed/Won. Based on Lead Owner field.">Qual. Pipeline</th>
                         <th data-key="est_pipeline" data-dir="desc" data-type="num" title="Estimated pipeline value: Qualified Leads × $8K avg deal × 30% close rate. Represents potential revenue from the rep's qualified pipeline.">Est. Revenue</th>
@@ -396,6 +451,15 @@
         return `<span class="${cls}">${adherence}%</span>${extra}`;
     }
 
+    const CLOSE_SMART_VIEW_URL = 'https://app.close.com/leads/save_vIX4e18a9Sb1ZjOgu8dN1DDa6lI01O7syYvYwvhiwep/';
+
+    function crmFieldHtml(label, filled, total) {
+        if (!total) return '';
+        const pct = Math.round(filled / total * 100);
+        const cls = pct >= 100 ? 'good' : pct >= 50 ? 'partial' : 'bad';
+        return `<span class="crm-field"><span class="crm-field-label">${label}:</span> <span class="crm-field-val ${cls}">${filled}/${total}</span></span>`;
+    }
+
     function renderTable() {
         const reps = [...DATA.reps];
         const { key, dir } = currentSort;
@@ -417,7 +481,8 @@
         const TBD = '<span class="tbd-tag">TBD</span>';
         let html = '';
 
-        for (const r of reps) {
+        for (let i = 0; i < reps.length; i++) {
+            const r = reps[i];
             const mgr = r.is_manager;
             const mgrTag = mgr ? '<span class="manager-tag">MGR</span>' : '';
 
@@ -440,6 +505,10 @@
             } else {
                 const ol = r.open_leads || 0;
                 const ep = r.est_pipeline || 0;
+                const crmCell = r.crm_detail
+                    ? `<td class="crm-clickable" data-crm-idx="${i}">${progPct(r.crm_compliance, t.crm_compliance)} <span style="font-size:9px;color:var(--text-muted);">▼</span></td>`
+                    : `<td>${progPct(r.crm_compliance, t.crm_compliance)}</td>`;
+
                 html += `<tr>
                     <td>${r.name}${mgrTag}</td>
                     <td class="g-activity-start">${prog(r.booked, t.booked)}</td>
@@ -450,11 +519,27 @@
                     <td>${progPct(r.close_rate, t.close_rate)}</td>
                     <td>${TBD}</td>
                     <td class="g-perf-end">${progMoney(r.avg_rev_per_deal, t.avg_rev_per_deal)}</td>
-                    <td>${progPct(r.crm_compliance, t.crm_compliance)}</td>
+                    ${crmCell}
                     <td>${fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
                     <td>${ol}</td>
                     <td>${fmtK(ep)}</td>
                 </tr>`;
+
+                // Hidden CRM detail row
+                if (r.crm_detail) {
+                    const d = r.crm_detail;
+                    html += `<tr class="crm-detail-row" id="crm-detail-${i}" style="display:none;">
+                        <td colspan="13">
+                            <div class="crm-detail">
+                                ${crmFieldHtml('Show Up', d.show_up[0], d.show_up[1])}
+                                ${crmFieldHtml('Disposition', d.disposition[0], d.disposition[1])}
+                                ${crmFieldHtml('Qualified', d.qualified[0], d.qualified[1])}
+                                ${crmFieldHtml('Confidence', d.confidence[0], d.confidence[1])}
+                                <a href="${CLOSE_SMART_VIEW_URL}" target="_blank" class="crm-fix-link">Fix in Close →</a>
+                            </div>
+                        </td>
+                    </tr>`;
+                }
             }
         }
 
@@ -476,6 +561,18 @@
         </tr>`;
 
         document.getElementById('tableBody').innerHTML = html;
+
+        // Attach click handlers for CRM detail toggle
+        document.querySelectorAll('.crm-clickable').forEach(td => {
+            td.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const idx = td.dataset.crmIdx;
+                const row = document.getElementById(`crm-detail-${idx}`);
+                if (row) {
+                    row.style.display = row.style.display === 'none' ? '' : 'none';
+                }
+            });
+        });
     }
 
     document.getElementById('tableHead').addEventListener('click', (e) => {
