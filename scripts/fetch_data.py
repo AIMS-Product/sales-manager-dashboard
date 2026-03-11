@@ -323,6 +323,11 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
     rep_qualified = {}
     rep_crm_filled = {}
     rep_crm_total = {}
+    # Per-field CRM detail tracking
+    rep_crm_show_up = {}      # {rep: [filled, total]}
+    rep_crm_disposition = {}
+    rep_crm_qualified = {}
+    rep_crm_confidence = {}
 
     # Pre-compute which leads have at least one PAST meeting (before today)
     # CRM compliance only applies to meetings that already happened
@@ -407,18 +412,38 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
         if lead_id in leads_with_past_meetings:
             crm_checks = 4
             crm_filled = 0
+
+            # Init per-field tracking for this rep
+            if rep_name not in rep_crm_show_up:
+                rep_crm_show_up[rep_name] = [0, 0]
+                rep_crm_disposition[rep_name] = [0, 0]
+                rep_crm_qualified[rep_name] = [0, 0]
+                rep_crm_confidence[rep_name] = [0, 0]
+
+            # Field 1: Show Up
+            rep_crm_show_up[rep_name][1] += 1
             if is_field_filled(show_up):
                 crm_filled += 1
+                rep_crm_show_up[rep_name][0] += 1
+
+            # Field 2: Disposition
+            rep_crm_disposition[rep_name][1] += 1
             if is_field_filled(disposition):
                 crm_filled += 1
+                rep_crm_disposition[rep_name][0] += 1
+
+            # Field 3: Qualified
+            rep_crm_qualified[rep_name][1] += 1
             if is_field_filled(qualified_val):
                 crm_filled += 1
+                rep_crm_qualified[rep_name][0] += 1
 
+            # Field 4: Opp Confidence
+            rep_crm_confidence[rep_name][1] += 1
             opp_confidence_filled = False
             for opp in lead.get("opportunities", []):
                 if opp.get("pipeline_id") == PIPELINE_ID:
                     opp_status = opp.get("status_id", "")
-                    # Lost opps get a free pass — confidence=0 is expected
                     if opp_status in LOST_OPP_STATUSES:
                         opp_confidence_filled = True
                         break
@@ -428,6 +453,7 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
                         break
             if opp_confidence_filled:
                 crm_filled += 1
+                rep_crm_confidence[rep_name][0] += 1
 
             rep_crm_filled[rep_name] = rep_crm_filled.get(rep_name, 0) + crm_filled
             rep_crm_total[rep_name] = rep_crm_total.get(rep_name, 0) + crm_checks
@@ -439,7 +465,16 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
     if crm_skipped_future:
         print(f"  ℹ️ CRM compliance skipped for {crm_skipped_future} leads (meeting today, not yet past)", flush=True)
 
-    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total
+    crm_detail = {}
+    for rn in rep_crm_show_up:
+        crm_detail[rn] = {
+            "show_up": rep_crm_show_up[rn],
+            "disposition": rep_crm_disposition[rn],
+            "qualified": rep_crm_qualified[rn],
+            "confidence": rep_crm_confidence[rn],
+        }
+
+    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail
 
 
 # ── Step 4: Fetch Closed/Won opps for the week ──────────────────────────────
@@ -678,7 +713,7 @@ def build_dashboard_data():
     qualifying = classify_meetings(week_meetings, user_map)
 
     print(f"  Fetching lead data for {len(qualifying)} qualifying meetings...", flush=True)
-    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total = \
+    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail = \
         fetch_leads_for_meetings(qualifying, user_map, name_to_id, today_str)
     print(f"  Final counts by {len(rep_booked)} reps.", flush=True)
 
@@ -722,6 +757,7 @@ def build_dashboard_data():
             "crm_compliance": safe_pct(crm_filled, crm_total),
             "crm_filled": crm_filled,
             "crm_total": crm_total,
+            "crm_detail": crm_detail.get(name, None),
             "task_adherence": rep_adherence.get(name) if not is_mgr else None,
             "tasks_overdue": rep_overdue.get(name, 0) if not is_mgr else None,
             "tasks_incomplete": rep_total_incomplete.get(name, 0) if not is_mgr else None,
