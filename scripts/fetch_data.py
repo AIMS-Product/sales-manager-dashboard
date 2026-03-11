@@ -472,14 +472,38 @@ def fetch_task_adherence(user_map, today_str):
     A rep with 0 incomplete tasks = 100% (fully caught up).
     Overdue = incomplete task where date < today.
 
+    Tasks on leads with a Closed/Won opp in the Sales Pipeline are excluded
+    entirely — reps shouldn't be penalized for old tasks on closed deals.
+
     Uses GET /task/?assigned_to={user_id}&is_complete=false
-    One API call per rep (~17 calls at 0.5s = ~9 seconds).
     """
     rep_adherence = {}
     rep_overdue = {}
     rep_total_incomplete = {}
 
     name_to_id = {v: k for k, v in user_map.items()}
+
+    # Cache lead lookups — many tasks may share the same lead
+    lead_won_cache = {}  # lead_id -> bool (True if has Closed/Won opp)
+    won_tasks_skipped = 0
+
+    def is_lead_closed_won(lead_id):
+        if not lead_id:
+            return False
+        if lead_id in lead_won_cache:
+            return lead_won_cache[lead_id]
+        try:
+            lead = api_get(f"/lead/{lead_id}/", {"_fields": "id,opportunities"})
+            for opp in lead.get("opportunities", []):
+                if opp.get("pipeline_id") == PIPELINE_ID and \
+                   opp.get("status_id") == CLOSED_WON_STATUS_ID:
+                    lead_won_cache[lead_id] = True
+                    return True
+            lead_won_cache[lead_id] = False
+            return False
+        except Exception:
+            lead_won_cache[lead_id] = False
+            return False
 
     for rep_name, user_id in name_to_id.items():
         if rep_name in EXCLUDE_USERS or rep_name in MANAGER_USERS:
@@ -502,30 +526,37 @@ def fetch_task_adherence(user_map, today_str):
                     break
                 skip += 200
 
-            # Count overdue (date < today) vs on-time
+            # Filter out tasks on Closed/Won leads, then count overdue
             overdue = 0
+            active_tasks = 0
             for task in all_incomplete:
+                lead_id = task.get("lead_id", "")
+                if is_lead_closed_won(lead_id):
+                    won_tasks_skipped += 1
+                    continue
+                active_tasks += 1
                 task_date = (task.get("date") or "")[:10]
                 if task_date and task_date < today_str:
                     overdue += 1
 
-            total = len(all_incomplete)
-            on_time = total - overdue
+            on_time = active_tasks - overdue
 
             rep_overdue[rep_name] = overdue
-            rep_total_incomplete[rep_name] = total
+            rep_total_incomplete[rep_name] = active_tasks
 
-            if total == 0:
+            if active_tasks == 0:
                 rep_adherence[rep_name] = 100.0  # fully caught up
             else:
-                rep_adherence[rep_name] = round(on_time / total * 100, 1)
+                rep_adherence[rep_name] = round(on_time / active_tasks * 100, 1)
 
         except Exception as e:
             print(f"    ⚠️ Failed to fetch tasks for {rep_name}: {e}", flush=True)
 
     total_overdue = sum(rep_overdue.values())
     total_incomplete = sum(rep_total_incomplete.values())
-    print(f"  Task adherence: {total_incomplete} incomplete tasks, {total_overdue} overdue across {len(rep_adherence)} reps", flush=True)
+    print(f"  Task adherence: {total_incomplete} active tasks, {total_overdue} overdue across {len(rep_adherence)} reps", flush=True)
+    if won_tasks_skipped:
+        print(f"  ℹ️ Excluded {won_tasks_skipped} tasks on Closed/Won leads ({len(lead_won_cache)} leads checked)", flush=True)
 
     return rep_adherence, rep_overdue, rep_total_incomplete
 
