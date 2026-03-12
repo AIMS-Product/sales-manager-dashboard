@@ -358,6 +358,7 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
     lead_cache = {}
     fetch_errors = 0
     crm_skipped_future = 0
+    crm_skipped_canceled = 0
 
     for m in meetings:
         lead_id = m.get("lead_id", "")
@@ -408,8 +409,10 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
         if str(qualified_val).strip().lower() == "yes":
             rep_qualified[rep_name] = rep_qualified.get(rep_name, 0) + 1
 
-        # CRM Compliance: 4 fields per lead — only for meetings that already happened
-        if lead_id in leads_with_past_meetings:
+        # CRM Compliance: 4 fields per lead — only for past meetings, skip canceled calls
+        disp_lower = str(disposition).strip().lower()
+        is_canceled_call = disp_lower == "canceled"
+        if lead_id in leads_with_past_meetings and not is_canceled_call:
             crm_checks = 4
             crm_filled = 0
 
@@ -457,6 +460,8 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
 
             rep_crm_filled[rep_name] = rep_crm_filled.get(rep_name, 0) + crm_filled
             rep_crm_total[rep_name] = rep_crm_total.get(rep_name, 0) + crm_checks
+        elif is_canceled_call:
+            crm_skipped_canceled += 1
         else:
             crm_skipped_future += 1
 
@@ -464,6 +469,8 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
         print(f"  ⚠️ {fetch_errors} lead fetch errors", flush=True)
     if crm_skipped_future:
         print(f"  ℹ️ CRM compliance skipped for {crm_skipped_future} leads (meeting today, not yet past)", flush=True)
+    if crm_skipped_canceled:
+        print(f"  ℹ️ CRM compliance skipped for {crm_skipped_canceled} leads (canceled disposition)", flush=True)
 
     crm_detail = {}
     for rn in rep_crm_show_up:
