@@ -336,6 +336,7 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
     rep_crm_disposition = {}
     rep_crm_qualified = {}
     rep_crm_confidence = {}
+    rep_crm_missing = {}      # {rep: [{name, missing: [...]}, ...]}
 
     # Pre-compute which leads have at least one PAST meeting (before today)
     # CRM compliance only applies to meetings that already happened
@@ -423,6 +424,7 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
         if lead_id in leads_with_past_meetings and not is_canceled_call:
             crm_checks = 4
             crm_filled = 0
+            missing_fields = []
 
             # Init per-field tracking for this rep
             if rep_name not in rep_crm_show_up:
@@ -436,18 +438,24 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
             if is_field_filled(show_up):
                 crm_filled += 1
                 rep_crm_show_up[rep_name][0] += 1
+            else:
+                missing_fields.append("Show Up")
 
             # Field 2: Disposition
             rep_crm_disposition[rep_name][1] += 1
             if is_field_filled(disposition):
                 crm_filled += 1
                 rep_crm_disposition[rep_name][0] += 1
+            else:
+                missing_fields.append("Disposition")
 
             # Field 3: Qualified
             rep_crm_qualified[rep_name][1] += 1
             if is_field_filled(qualified_val):
                 crm_filled += 1
                 rep_crm_qualified[rep_name][0] += 1
+            else:
+                missing_fields.append("Qualified")
 
             # Field 4: Opp Confidence
             rep_crm_confidence[rep_name][1] += 1
@@ -465,6 +473,18 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
             if opp_confidence_filled:
                 crm_filled += 1
                 rep_crm_confidence[rep_name][0] += 1
+            else:
+                missing_fields.append("Confidence")
+
+            # Track leads with missing fields
+            if missing_fields:
+                lead_display = lead.get("display_name", "") or lead.get("name", "") or lead_id
+                if rep_name not in rep_crm_missing:
+                    rep_crm_missing[rep_name] = []
+                rep_crm_missing[rep_name].append({
+                    "name": lead_display,
+                    "missing": missing_fields,
+                })
 
             rep_crm_filled[rep_name] = rep_crm_filled.get(rep_name, 0) + crm_filled
             rep_crm_total[rep_name] = rep_crm_total.get(rep_name, 0) + crm_checks
@@ -487,6 +507,7 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
             "disposition": rep_crm_disposition[rn],
             "qualified": rep_crm_qualified[rn],
             "confidence": rep_crm_confidence[rn],
+            "missing_leads": rep_crm_missing.get(rn, []),
         }
 
     return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail
