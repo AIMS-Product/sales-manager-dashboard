@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-13 03:45 PM PDT",
+  "updated_at": "2026-03-13 03:47 PM PDT",
   "week_label": "Mar 09 \u2013 Mar 13, 2026",
   "monday_str": "2026-03-09",
   "today_str": "2026-03-13",
@@ -70,6 +70,27 @@
         "confidence": [
           9,
           12
+        ],
+        "missing_leads": [
+          {
+            "name": "Juan Hernandez",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Shawn Martin",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Joseph Ornelas",
+            "missing": [
+              "Confidence"
+            ]
+          }
         ]
       },
       "task_adherence": 100.0,
@@ -108,6 +129,15 @@
         "confidence": [
           8,
           9
+        ],
+        "missing_leads": [
+          {
+            "name": "Tyler Destefano",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
         ]
       },
       "task_adherence": 100.0,
@@ -146,6 +176,26 @@
         "confidence": [
           8,
           11
+        ],
+        "missing_leads": [
+          {
+            "name": "FJV Beverage",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Jake Rowland",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Sean Mussington",
+            "missing": [
+              "Confidence"
+            ]
+          }
         ]
       },
       "task_adherence": 100.0,
@@ -184,6 +234,22 @@
         "confidence": [
           5,
           6
+        ],
+        "missing_leads": [
+          {
+            "name": "Marco Paquette",
+            "missing": [
+              "Disposition",
+              "Qualified"
+            ]
+          },
+          {
+            "name": "Ravi",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
         ]
       },
       "task_adherence": 100.0,
@@ -222,7 +288,8 @@
         "confidence": [
           8,
           8
-        ]
+        ],
+        "missing_leads": []
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
@@ -260,7 +327,8 @@
         "confidence": [
           5,
           5
-        ]
+        ],
+        "missing_leads": []
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
@@ -298,6 +366,22 @@
         "confidence": [
           6,
           8
+        ],
+        "missing_leads": [
+          {
+            "name": "Kristin halblib",
+            "missing": [
+              "Show Up",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Joel Benson",
+            "missing": [
+              "Confidence"
+            ]
+          }
         ]
       },
       "task_adherence": 100.0,
@@ -305,82 +389,6 @@
       "tasks_incomplete": 0,
       "open_leads": 9,
       "est_pipeline": 21600,
-      "is_manager": false
-    },
-    {
-      "name": "Vince Bartolini",
-      "booked": 8,
-      "shown": 6,
-      "qualified": 5,
-      "deals": 1,
-      "revenue": 4997.0,
-      "close_rate": 12.5,
-      "qa_score": null,
-      "avg_rev_per_deal": 4997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 16,
-      "crm_total": 16,
-      "crm_detail": {
-        "show_up": [
-          4,
-          4
-        ],
-        "disposition": [
-          4,
-          4
-        ],
-        "qualified": [
-          4,
-          4
-        ],
-        "confidence": [
-          4,
-          4
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 23,
-      "open_leads": 11,
-      "est_pipeline": 26400,
-      "is_manager": false
-    },
-    {
-      "name": "Elvis Ellis",
-      "booked": 8,
-      "shown": 5,
-      "qualified": 5,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 91.7,
-      "crm_filled": 22,
-      "crm_total": 24,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          6,
-          6
-        ],
-        "qualified": [
-          6,
-          6
-        ],
-        "confidence": [
-          4,
-          6
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 17,
-      "est_pipeline": 40800,
       "is_manager": false
     },
     {
@@ -412,13 +420,66 @@
         "confidence": [
           5,
           5
-        ]
+        ],
+        "missing_leads": []
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 77,
       "open_leads": 28,
       "est_pipeline": 67200,
+      "is_manager": false
+    },
+    {
+      "name": "Elvis Ellis",
+      "booked": 8,
+      "shown": 5,
+      "qualified": 5,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 91.7,
+      "crm_filled": 22,
+      "crm_total": 24,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          6,
+          6
+        ],
+        "qualified": [
+          6,
+          6
+        ],
+        "confidence": [
+          4,
+          6
+        ],
+        "missing_leads": [
+          {
+            "name": "Quan Brown",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Victor prieto",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 17,
+      "est_pipeline": 40800,
       "is_manager": false
     },
     {
@@ -450,7 +511,8 @@
         "confidence": [
           7,
           7
-        ]
+        ],
+        "missing_leads": []
       },
       "task_adherence": 47.3,
       "tasks_overdue": 58,
@@ -486,8 +548,61 @@
           3
         ],
         "confidence": [
+          4,
+          4
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 1,
+      "open_leads": 18,
+      "est_pipeline": 43200,
+      "is_manager": false
+    },
+    {
+      "name": "Andrea Shoop",
+      "booked": 6,
+      "shown": 5,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 83.3,
+      "crm_filled": 10,
+      "crm_total": 12,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
           1,
           3
+        ],
+        "missing_leads": [
+          {
+            "name": "Naveh",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Diana Valencia",
+            "missing": [
+              "Confidence"
+            ]
+          }
         ]
       },
       "task_adherence": 100.0,
@@ -526,7 +641,8 @@
         "confidence": [
           3,
           3
-        ]
+        ],
+        "missing_leads": []
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
@@ -564,7 +680,8 @@
         "confidence": [
           4,
           4
-        ]
+        ],
+        "missing_leads": []
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
@@ -602,7 +719,8 @@
         "confidence": [
           3,
           3
-        ]
+        ],
+        "missing_leads": []
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
@@ -640,6 +758,15 @@
         "confidence": [
           1,
           2
+        ],
+        "missing_leads": [
+          {
+            "name": "Fred Benjamin",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
         ]
       },
       "task_adherence": 9.1,
