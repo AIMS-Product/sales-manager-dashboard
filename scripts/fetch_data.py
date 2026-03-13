@@ -102,7 +102,6 @@ REP_QUOTAS = {
     "John Kirk": 75_000,
     "Jake Skinner": 75_000,
     "Vince Bartolini": 50_000,
-    "Julia Scaroni": 50_000,
     "Elvis Ellis": 50_000,
     "Chris Wanke": 50_000,
     "Andrea Shoop": 50_000,
@@ -111,7 +110,7 @@ REP_QUOTAS = {
 
 EXCLUDE_USERS = {
     "Kristin Nelson", "Spencer Reynolds", "Stephen Olivas",
-    "Ahmad Bukhari", "Mallory Kent", "Unknown",
+    "Ahmad Bukhari", "Mallory Kent", "Unknown", "Julia Scaroni",
 }
 MANAGER_USERS = {"Joe Dysert"}
 
@@ -183,11 +182,19 @@ def api_get(endpoint, params=None):
 def fetch_org_users():
     data = api_get("/user/")
     users = {}
+    seen_names = {}  # name -> first user_id (to detect duplicates)
     for u in data.get("data", []):
         first = u.get("first_name", "")
         last = u.get("last_name", "")
-        full = f"{first} {last}".strip()
-        users[u["id"]] = full
+        # Normalize: collapse all whitespace types to single space, strip
+        full = " ".join(f"{first} {last}".split())
+        uid = u["id"]
+        users[uid] = full
+        if full in seen_names:
+            print(f"  ⚠️ Duplicate user name: '{full}' — "
+                  f"{seen_names[full]} and {uid}", flush=True)
+        else:
+            seen_names[full] = uid
     return users
 
 
@@ -198,8 +205,9 @@ def resolve_owner(raw_owner, user_map, name_to_id):
         uid = raw_owner.get("id", "")
         if uid in user_map:
             return user_map[uid]
-        return raw_owner.get("name", "Unknown")
-    owner_str = str(raw_owner).strip()
+        name = raw_owner.get("name", "Unknown")
+        return " ".join(name.split()) if name else "Unknown"
+    owner_str = " ".join(str(raw_owner).split())  # normalize whitespace
     if owner_str in user_map:
         return user_map[owner_str]
     if owner_str in name_to_id:
@@ -738,6 +746,10 @@ def build_dashboard_data():
     all_rep_names.update(rep_booked.keys())
     all_rep_names.update(REP_QUOTAS.keys())
     all_rep_names -= EXCLUDE_USERS
+
+    # Debug: check for near-duplicate names
+    name_list = sorted(all_rep_names)
+    print(f"  Building data for {len(name_list)} reps: {name_list}", flush=True)
 
     reps = []
     for name in all_rep_names:
