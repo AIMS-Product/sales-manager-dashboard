@@ -248,6 +248,39 @@
 
         .crm-fix-link:hover { text-decoration: underline; }
 
+        .crm-missing-list {
+            width: 100%;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #e5e7ec;
+        }
+
+        .crm-missing-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .crm-missing-item {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            padding: 3px 0;
+            font-size: 12px;
+        }
+
+        .crm-missing-name {
+            font-weight: 600;
+            color: var(--text);
+            min-width: 140px;
+        }
+
+        .crm-missing-fields {
+            color: var(--red);
+            font-size: 11px;
+        }
+
         .tbd-tag {
             font-size: 10px; background: #f5f3ff; color: var(--purple);
             padding: 2px 7px; border-radius: 4px; font-weight: 600;
@@ -528,6 +561,21 @@
                 // Hidden CRM detail row
                 if (r.crm_detail) {
                     const d = r.crm_detail;
+                    const ml = d.missing_leads || [];
+
+                    let missingHtml = '';
+                    if (ml.length > 0) {
+                        missingHtml = '<div class="crm-missing-list">';
+                        missingHtml += `<div class="crm-missing-label">Leads with missing fields (${ml.length}):</div>`;
+                        for (const lead of ml) {
+                            missingHtml += `<div class="crm-missing-item">
+                                <span class="crm-missing-name">${lead.name}</span>
+                                <span class="crm-missing-fields">${lead.missing.join(', ')}</span>
+                            </div>`;
+                        }
+                        missingHtml += '</div>';
+                    }
+
                     html += `<tr class="crm-detail-row" id="crm-detail-${i}" style="display:none;">
                         <td colspan="13">
                             <div class="crm-detail">
@@ -537,6 +585,7 @@
                                 ${crmFieldHtml('Confidence', d.confidence[0], d.confidence[1])}
                                 <a href="${CLOSE_SMART_VIEW_URL}" target="_blank" class="crm-fix-link">Fix in Close →</a>
                             </div>
+                            ${missingHtml}
                         </td>
                     </tr>`;
                 }
