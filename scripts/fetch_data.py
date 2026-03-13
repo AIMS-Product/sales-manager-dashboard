@@ -44,6 +44,7 @@ EXCLUDED_LEAD_STATUSES = {
 LOST_OPP_STATUSES = {
     "stat_bBWcww9IflskaleadKuK2E4SGFF4qy3IuBucrqo7H4u",  # Lost
     "stat_E9LE4YrRUQvQIIs7GoaWA4eOFqzs1GtsoV4qKWmvbYN",  # Outside the US
+    "stat_NCXVjokjo3VXirJx2eSAcRoKlEDg1WsO1sjeLfU8udO",  # No Show
 }
 
 # Lead statuses excluded from "Open Leads" pipeline count
