@@ -112,6 +112,9 @@
                             <th>Close %</th>
                             <th>Avg/Deal</th>
                             <th>CRM Compl.</th>
+                            <th>Task Adh.</th>
+                            <th>Qual. Pipeline</th>
+                            <th>Est. Revenue</th>
                         </tr>
                     </thead>
                     <tbody id="snapshotBody"></tbody>
@@ -175,6 +178,25 @@
         return '$' + Math.round(v).toLocaleString();
     }
 
+    function fmtK(v) {
+        if (v === null || v === undefined) return '—';
+        if (v >= 1000000) {
+            const m = v / 1000000;
+            return '$' + (m % 1 === 0 ? m.toFixed(0) : m.toFixed(2)) + 'm';
+        }
+        if (v >= 1000) {
+            const k = v / 1000;
+            return '$' + (k % 1 === 0 ? k.toFixed(0) : k.toFixed(1)) + 'k';
+        }
+        return '$' + Math.round(v).toLocaleString();
+    }
+
+    function fmtAdherence(adherence, overdue) {
+        if (adherence === null || adherence === undefined) return '—';
+        const extra = overdue > 0 ? ` <span style="font-size:10px;color:#dc2626;">(${overdue})</span>` : '';
+        return adherence + '%' + extra;
+    }
+
     function rateClass(v) {
         if (v === null || v === undefined) return 'rate-na';
         if (v >= 80) return 'rate-high';
@@ -188,7 +210,7 @@
         document.getElementById('snapshotView').style.display = 'block';
         document.getElementById('snapshotTitle').textContent = formatWeek(mondayStr);
         document.getElementById('snapshotBody').innerHTML =
-            '<tr><td colspan="9" class="loading">Loading…</td></tr>';
+            '<tr><td colspan="12" class="loading">Loading…</td></tr>';
 
         try {
             const resp = await fetch(`archives/data_week_${mondayStr}.json?t=${Date.now()}`);
@@ -196,7 +218,7 @@
             renderSnapshot(data);
         } catch (e) {
             document.getElementById('snapshotBody').innerHTML =
-                '<tr><td colspan="9" class="loading">Failed to load snapshot.</td></tr>';
+                '<tr><td colspan="12" class="loading">Failed to load snapshot.</td></tr>';
         }
     };
 
@@ -215,6 +237,9 @@
                 <td class="${rateClass(r.close_rate)}">${fmtPct(r.close_rate)}</td>
                 <td>${fmtMoney(r.avg_rev_per_deal)}</td>
                 <td class="${rateClass(r.crm_compliance)}">${fmtPct(r.crm_compliance)}</td>
+                <td>${fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
+                <td>${r.open_leads != null ? r.open_leads : '—'}</td>
+                <td>${r.est_pipeline != null ? fmtK(r.est_pipeline) : '—'}</td>
             </tr>`;
         }
 
@@ -228,6 +253,9 @@
             <td class="${rateClass(data.team_close_rate)}">${fmtPct(data.team_close_rate)}</td>
             <td>${fmtMoney(data.team_avg_rev_per_deal)}</td>
             <td class="${rateClass(data.team_crm_compliance)}">${fmtPct(data.team_crm_compliance)}</td>
+            <td>${fmtAdherence(data.team_task_adherence, data.team_overdue)}</td>
+            <td>${data.team_open_leads || 0}</td>
+            <td>${fmtK(data.team_est_pipeline)}</td>
         </tr>`;
 
         document.getElementById('snapshotBody').innerHTML = html;
