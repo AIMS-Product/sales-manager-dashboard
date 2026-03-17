@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-17 04:30 PM PDT",
+  "updated_at": "2026-03-17 04:45 PM PDT",
   "week_label": "Mar 16 \u2013 Mar 20, 2026",
   "monday_str": "2026-03-16",
   "today_str": "2026-03-17",
@@ -129,7 +129,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 77,
+      "tasks_incomplete": 78,
       "open_leads": 59,
       "est_pipeline": 141600,
       "is_manager": false
@@ -363,6 +363,53 @@
       "is_manager": false
     },
     {
+      "name": "Ryan Jones",
+      "booked": 5,
+      "shown": 4,
+      "qualified": 4,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 75.0,
+      "crm_filled": 6,
+      "crm_total": 8,
+      "crm_detail": {
+        "show_up": [
+          2,
+          2
+        ],
+        "disposition": [
+          2,
+          2
+        ],
+        "qualified": [
+          1,
+          2
+        ],
+        "confidence": [
+          1,
+          2
+        ],
+        "missing_leads": [
+          {
+            "name": "Zonar",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 45.8,
+      "tasks_overdue": 64,
+      "tasks_incomplete": 118,
+      "open_leads": 60,
+      "est_pipeline": 144000,
+      "is_manager": false
+    },
+    {
       "name": "Chris Wanke",
       "booked": 5,
       "shown": 3,
@@ -466,53 +513,6 @@
       "is_manager": false
     },
     {
-      "name": "Ryan Jones",
-      "booked": 5,
-      "shown": 4,
-      "qualified": 4,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 75.0,
-      "crm_filled": 6,
-      "crm_total": 8,
-      "crm_detail": {
-        "show_up": [
-          2,
-          2
-        ],
-        "disposition": [
-          2,
-          2
-        ],
-        "qualified": [
-          1,
-          2
-        ],
-        "confidence": [
-          1,
-          2
-        ],
-        "missing_leads": [
-          {
-            "name": "Zonar",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 45.8,
-      "tasks_overdue": 64,
-      "tasks_incomplete": 118,
-      "open_leads": 60,
-      "est_pipeline": 144000,
-      "is_manager": false
-    },
-    {
       "name": "Andrea Shoop",
       "booked": 4,
       "shown": 1,
@@ -562,48 +562,6 @@
       "is_manager": false
     },
     {
-      "name": "Jordan Humphrey",
-      "booked": 3,
-      "shown": 3,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 102,
-      "open_leads": 35,
-      "est_pipeline": 84000,
-      "is_manager": false
-    },
-    {
-      "name": "Vince Bartolini",
-      "booked": 3,
-      "shown": 2,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 17,
-      "open_leads": 18,
-      "est_pipeline": 43200,
-      "is_manager": false
-    },
-    {
       "name": "Ategeka Musinguzi",
       "booked": 3,
       "shown": 1,
@@ -640,6 +598,48 @@
       "tasks_incomplete": 2,
       "open_leads": 39,
       "est_pipeline": 93600,
+      "is_manager": false
+    },
+    {
+      "name": "Vince Bartolini",
+      "booked": 3,
+      "shown": 2,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 17,
+      "open_leads": 18,
+      "est_pipeline": 43200,
+      "is_manager": false
+    },
+    {
+      "name": "Jordan Humphrey",
+      "booked": 3,
+      "shown": 3,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 102,
+      "open_leads": 35,
+      "est_pipeline": 84000,
       "is_manager": false
     },
     {
