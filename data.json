@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-17 02:00 PM PDT",
+  "updated_at": "2026-03-17 02:15 PM PDT",
   "week_label": "Mar 16 \u2013 Mar 20, 2026",
   "monday_str": "2026-03-16",
   "today_str": "2026-03-17",
@@ -29,8 +29,8 @@
     "task_adherence": 100
   },
   "total_booked": 80,
-  "total_shown": 40,
-  "total_qualified": 31,
+  "total_shown": 41,
+  "total_qualified": 32,
   "total_deals": 9,
   "total_revenue": 57476.0,
   "team_close_rate": 11.2,
@@ -38,8 +38,8 @@
   "team_crm_compliance": 82.8,
   "team_task_adherence": 88.3,
   "team_overdue": 65,
-  "team_open_leads": 642,
-  "team_est_pipeline": 1540800,
+  "team_open_leads": 631,
+  "team_est_pipeline": 1514400,
   "reps": [
     {
       "name": "Scott Seymour",
@@ -128,9 +128,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 34,
-      "open_leads": 56,
-      "est_pipeline": 134400,
+      "tasks_incomplete": 35,
+      "open_leads": 57,
+      "est_pipeline": 136800,
       "is_manager": false
     },
     {
@@ -272,8 +272,47 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 13,
-      "open_leads": 83,
-      "est_pipeline": 199200,
+      "open_leads": 84,
+      "est_pipeline": 201600,
+      "is_manager": false
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 6,
+      "shown": 4,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 12,
+      "crm_total": 12,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 96,
+      "open_leads": 46,
+      "est_pipeline": 110400,
       "is_manager": false
     },
     {
@@ -324,17 +363,17 @@
       "is_manager": false
     },
     {
-      "name": "Jason Aaron",
-      "booked": 6,
-      "shown": 4,
-      "qualified": 3,
+      "name": "Chris Wanke",
+      "booked": 5,
+      "shown": 3,
+      "qualified": 2,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 12,
+      "crm_compliance": 91.7,
+      "crm_filled": 11,
       "crm_total": 12,
       "crm_detail": {
         "show_up": [
@@ -346,18 +385,25 @@
           3
         ],
         "qualified": [
-          3,
+          2,
           3
         ],
         "confidence": [
           3,
           3
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Barnett Palmer",
+            "missing": [
+              "Qualified"
+            ]
+          }
+        ]
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 96,
+      "tasks_incomplete": 4,
       "open_leads": 46,
       "est_pipeline": 110400,
       "is_manager": false
@@ -365,8 +411,8 @@
     {
       "name": "Ryan Jones",
       "booked": 5,
-      "shown": 2,
-      "qualified": 2,
+      "shown": 3,
+      "qualified": 3,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
@@ -467,52 +513,6 @@
       "is_manager": false
     },
     {
-      "name": "Chris Wanke",
-      "booked": 5,
-      "shown": 3,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 91.7,
-      "crm_filled": 11,
-      "crm_total": 12,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          2,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "missing_leads": [
-          {
-            "name": "Barnett Palmer",
-            "missing": [
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 4,
-      "open_leads": 46,
-      "est_pipeline": 110400,
-      "is_manager": false
-    },
-    {
       "name": "Vince Bartolini",
       "booked": 4,
       "shown": 3,
@@ -546,9 +546,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 15,
-      "open_leads": 26,
-      "est_pipeline": 62400,
+      "tasks_incomplete": 16,
+      "open_leads": 19,
+      "est_pipeline": 45600,
       "is_manager": false
     },
     {
@@ -596,8 +596,29 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 2,
-      "open_leads": 31,
-      "est_pipeline": 74400,
+      "open_leads": 25,
+      "est_pipeline": 60000,
+      "is_manager": false
+    },
+    {
+      "name": "Jordan Humphrey",
+      "booked": 3,
+      "shown": 2,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 111,
+      "open_leads": 35,
+      "est_pipeline": 84000,
       "is_manager": false
     },
     {
@@ -637,27 +658,6 @@
       "tasks_incomplete": 2,
       "open_leads": 39,
       "est_pipeline": 93600,
-      "is_manager": false
-    },
-    {
-      "name": "Jordan Humphrey",
-      "booked": 3,
-      "shown": 2,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 111,
-      "open_leads": 35,
-      "est_pipeline": 84000,
       "is_manager": false
     },
     {
