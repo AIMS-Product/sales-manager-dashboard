@@ -59,6 +59,10 @@ CLOSED_LEAD_STATUSES = {
 AVG_DEAL_VALUE = 8000
 CLOSE_RATE_ESTIMATE = 0.30
 
+# Lead statuses with special CRM compliance handling
+NO_SHOW_LEAD_STATUS = "stat_5CqIgNJnGYO357zXjSnH6BAkKyoCvYUOBxVvpYfDMZn"
+RESCHEDULE_LEAD_STATUS = "stat_2SmOUMCp1vDFJF0TcJ011hNnpLYWDGwugyo4JyiRMEP"
+
 # Custom field IDs (lead object)
 CF_FIRST_CALL_SHOW_ID     = "cf_OPyvpU45RdvjLqfm8V1VWwNxrGKogEH2IBJmfCj0Uhq"
 CF_LEAD_OWNER_ID           = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
@@ -369,6 +373,7 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
     fetch_errors = 0
     crm_skipped_future = 0
     crm_skipped_canceled = 0
+    crm_skipped_reschedule = 0
 
     for m in meetings:
         lead_id = m.get("lead_id", "")
@@ -419,13 +424,13 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
         if str(qualified_val).strip().lower() == "yes":
             rep_qualified[rep_name] = rep_qualified.get(rep_name, 0) + 1
 
-        # CRM Compliance: 4 fields per lead — only for past meetings, skip canceled calls
+        # CRM Compliance — only for past meetings, with special handling per lead status
         disp_lower = str(disposition).strip().lower()
         is_canceled_call = disp_lower == "canceled"
-        if lead_id in leads_with_past_meetings and not is_canceled_call:
-            crm_checks = 4
-            crm_filled = 0
-            missing_fields = []
+        is_reschedule = status_id == RESCHEDULE_LEAD_STATUS
+        is_no_show = status_id == NO_SHOW_LEAD_STATUS
+
+        if lead_id in leads_with_past_meetings and not is_canceled_call and not is_reschedule:
 
             # Init per-field tracking for this rep
             if rep_name not in rep_crm_show_up:
@@ -434,7 +439,13 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
                 rep_crm_qualified[rep_name] = [0, 0]
                 rep_crm_confidence[rep_name] = [0, 0]
 
-            # Field 1: Show Up
+            # No Show leads: only check Show Up + Disposition (2 fields)
+            # All other leads: check all 4 fields
+            crm_checks = 2 if is_no_show else 4
+            crm_filled = 0
+            missing_fields = []
+
+            # Field 1: Show Up (always checked)
             rep_crm_show_up[rep_name][1] += 1
             if is_field_filled(show_up):
                 crm_filled += 1
@@ -442,7 +453,7 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
             else:
                 missing_fields.append("Show Up")
 
-            # Field 2: Disposition
+            # Field 2: Disposition (always checked)
             rep_crm_disposition[rep_name][1] += 1
             if is_field_filled(disposition):
                 crm_filled += 1
@@ -450,32 +461,34 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
             else:
                 missing_fields.append("Disposition")
 
-            # Field 3: Qualified
-            rep_crm_qualified[rep_name][1] += 1
-            if is_field_filled(qualified_val):
-                crm_filled += 1
-                rep_crm_qualified[rep_name][0] += 1
-            else:
-                missing_fields.append("Qualified")
+            # Field 3: Qualified (skip for No Show)
+            if not is_no_show:
+                rep_crm_qualified[rep_name][1] += 1
+                if is_field_filled(qualified_val):
+                    crm_filled += 1
+                    rep_crm_qualified[rep_name][0] += 1
+                else:
+                    missing_fields.append("Qualified")
 
-            # Field 4: Opp Confidence
-            rep_crm_confidence[rep_name][1] += 1
-            opp_confidence_filled = False
-            for opp in lead.get("opportunities", []):
-                if opp.get("pipeline_id") == PIPELINE_ID:
-                    opp_status = opp.get("status_id", "")
-                    if opp_status in LOST_OPP_STATUSES:
-                        opp_confidence_filled = True
-                        break
-                    confidence = opp.get("confidence", 0) or 0
-                    if confidence > 0:
-                        opp_confidence_filled = True
-                        break
-            if opp_confidence_filled:
-                crm_filled += 1
-                rep_crm_confidence[rep_name][0] += 1
-            else:
-                missing_fields.append("Confidence")
+            # Field 4: Opp Confidence (skip for No Show)
+            if not is_no_show:
+                rep_crm_confidence[rep_name][1] += 1
+                opp_confidence_filled = False
+                for opp in lead.get("opportunities", []):
+                    if opp.get("pipeline_id") == PIPELINE_ID:
+                        opp_status = opp.get("status_id", "")
+                        if opp_status in LOST_OPP_STATUSES:
+                            opp_confidence_filled = True
+                            break
+                        confidence = opp.get("confidence", 0) or 0
+                        if confidence > 0:
+                            opp_confidence_filled = True
+                            break
+                if opp_confidence_filled:
+                    crm_filled += 1
+                    rep_crm_confidence[rep_name][0] += 1
+                else:
+                    missing_fields.append("Confidence")
 
             # Track leads with missing fields
             if missing_fields:
@@ -491,6 +504,8 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
             rep_crm_total[rep_name] = rep_crm_total.get(rep_name, 0) + crm_checks
         elif is_canceled_call:
             crm_skipped_canceled += 1
+        elif is_reschedule:
+            crm_skipped_reschedule += 1
         else:
             crm_skipped_future += 1
 
@@ -500,6 +515,8 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
         print(f"  ℹ️ CRM compliance skipped for {crm_skipped_future} leads (meeting today, not yet past)", flush=True)
     if crm_skipped_canceled:
         print(f"  ℹ️ CRM compliance skipped for {crm_skipped_canceled} leads (canceled disposition)", flush=True)
+    if crm_skipped_reschedule:
+        print(f"  ℹ️ CRM compliance skipped for {crm_skipped_reschedule} leads (reschedule status)", flush=True)
 
     crm_detail = {}
     for rn in rep_crm_show_up:
