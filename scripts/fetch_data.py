@@ -98,7 +98,6 @@ REP_QUOTAS = {
     "Jordan Humphrey": 75_000,
     "Jason Aaron": 75_000,
     "Robin Perkins": 75_000,
-    "William Chase": 75_000,
     "Ryan Jones": 75_000,
     "John Kirk": 75_000,
     "Jake Skinner": 75_000,
@@ -112,6 +111,7 @@ REP_QUOTAS = {
 EXCLUDE_USERS = {
     "Kristin Nelson", "Spencer Reynolds", "Stephen Olivas",
     "Ahmad Bukhari", "Mallory Kent", "Unknown", "Julia Scaroni",
+    "William Chase",
 }
 MANAGER_USERS = {"Joe Dysert"}
 
