@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-19 11:30 AM PDT",
+  "updated_at": "2026-03-19 11:45 AM PDT",
   "week_label": "Mar 16 \u2013 Mar 20, 2026",
   "monday_str": "2026-03-16",
   "today_str": "2026-03-19",
@@ -38,8 +38,8 @@
   "team_crm_compliance": 97.1,
   "team_task_adherence": 85.1,
   "team_overdue": 84,
-  "team_open_leads": 652,
-  "team_est_pipeline": 1564800,
+  "team_open_leads": 651,
+  "team_est_pipeline": 1562400,
   "reps": [
     {
       "name": "Robin Perkins",
@@ -162,6 +162,46 @@
       "is_lead": false
     },
     {
+      "name": "Jason Aaron",
+      "booked": 12,
+      "shown": 10,
+      "qualified": 9,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 8.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 38,
+      "crm_total": 38,
+      "crm_detail": {
+        "show_up": [
+          10,
+          10
+        ],
+        "disposition": [
+          10,
+          10
+        ],
+        "qualified": [
+          9,
+          9
+        ],
+        "confidence": [
+          9,
+          9
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 97,
+      "open_leads": 50,
+      "est_pipeline": 120000,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Chris Wanke",
       "booked": 12,
       "shown": 6,
@@ -211,46 +251,6 @@
       "tasks_incomplete": 7,
       "open_leads": 46,
       "est_pipeline": 110400,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 12,
-      "shown": 10,
-      "qualified": 9,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 8.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 38,
-      "crm_total": 38,
-      "crm_detail": {
-        "show_up": [
-          10,
-          10
-        ],
-        "disposition": [
-          10,
-          10
-        ],
-        "qualified": [
-          9,
-          9
-        ],
-        "confidence": [
-          9,
-          9
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 97,
-      "open_leads": 50,
-      "est_pipeline": 120000,
       "is_manager": false,
       "is_lead": false
     },
@@ -429,55 +429,6 @@
       "is_lead": false
     },
     {
-      "name": "Eric Piccione",
-      "booked": 8,
-      "shown": 2,
-      "qualified": 2,
-      "deals": 2,
-      "revenue": 11994.0,
-      "close_rate": 25.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 75.0,
-      "crm_filled": 9,
-      "crm_total": 12,
-      "crm_detail": {
-        "show_up": [
-          3,
-          4
-        ],
-        "disposition": [
-          3,
-          4
-        ],
-        "qualified": [
-          1,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "missing_leads": [
-          {
-            "name": "Johnnie",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 1,
-      "open_leads": 42,
-      "est_pipeline": 100800,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Ategeka Musinguzi",
       "booked": 8,
       "shown": 3,
@@ -527,42 +478,51 @@
       "is_lead": false
     },
     {
-      "name": "Jake Skinner",
-      "booked": 7,
-      "shown": 6,
-      "qualified": 5,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "name": "Eric Piccione",
+      "booked": 8,
+      "shown": 2,
+      "qualified": 2,
+      "deals": 2,
+      "revenue": 11994.0,
+      "close_rate": 25.0,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 16,
-      "crm_total": 16,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 75.0,
+      "crm_filled": 9,
+      "crm_total": 12,
       "crm_detail": {
         "show_up": [
-          4,
+          3,
           4
         ],
         "disposition": [
-          4,
+          3,
           4
         ],
         "qualified": [
-          4,
-          4
+          1,
+          2
         ],
         "confidence": [
-          4,
-          4
+          2,
+          2
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Johnnie",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified"
+            ]
+          }
+        ]
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 17,
-      "est_pipeline": 40800,
+      "tasks_incomplete": 1,
+      "open_leads": 42,
+      "est_pipeline": 100800,
       "is_manager": false,
       "is_lead": false
     },
@@ -607,6 +567,46 @@
       "is_lead": false
     },
     {
+      "name": "Jake Skinner",
+      "booked": 7,
+      "shown": 6,
+      "qualified": 5,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 16,
+      "crm_total": 16,
+      "crm_detail": {
+        "show_up": [
+          4,
+          4
+        ],
+        "disposition": [
+          4,
+          4
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          4,
+          4
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 17,
+      "est_pipeline": 40800,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Andrea Shoop",
       "booked": 6,
       "shown": 4,
@@ -641,8 +641,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 3,
-      "open_leads": 18,
-      "est_pipeline": 43200,
+      "open_leads": 17,
+      "est_pipeline": 40800,
       "is_manager": false,
       "is_lead": false
     },
@@ -680,7 +680,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 103,
+      "tasks_incomplete": 105,
       "open_leads": 37,
       "est_pipeline": 88800,
       "is_manager": false,
