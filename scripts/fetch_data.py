@@ -118,6 +118,7 @@ EXCLUDE_USERS = {
     "William Chase",
 }
 MANAGER_USERS = {"Joe Dysert"}
+LEAD_USERS = {"Christian Hartwell"}
 
 
 # ── Meeting title classification ─────────────────────────────────────────────
@@ -801,6 +802,7 @@ def build_dashboard_data():
         crm_total = rep_crm_total.get(name, 0)
         avg_rev = round(revenue / deals, 2) if deals > 0 else None
         is_mgr = name in MANAGER_USERS
+        is_lead = name in LEAD_USERS
 
         reps.append({
             "name": name,
@@ -822,6 +824,7 @@ def build_dashboard_data():
             "open_leads": rep_open_leads.get(name, 0) if not is_mgr else None,
             "est_pipeline": round(rep_open_leads.get(name, 0) * AVG_DEAL_VALUE * CLOSE_RATE_ESTIMATE) if not is_mgr else None,
             "is_manager": is_mgr,
+            "is_lead": is_lead,
         })
 
     reps.sort(key=lambda r: r["booked"], reverse=True)
