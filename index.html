@@ -193,6 +193,11 @@
             padding: 2px 7px; border-radius: 4px; margin-left: 6px; font-weight: 500;
         }
 
+        .lead-tag {
+            font-size: 10px; background: #dbeafe; color: #2563eb;
+            padding: 2px 7px; border-radius: 4px; margin-left: 6px; font-weight: 500;
+        }
+
         .crm-clickable {
             cursor: pointer;
             position: relative;
@@ -518,10 +523,11 @@
             const r = reps[i];
             const mgr = r.is_manager;
             const mgrTag = mgr ? '<span class="manager-tag">MGR</span>' : '';
+            const leadTag = r.is_lead ? '<span class="lead-tag">Lead</span>' : '';
 
             if (mgr) {
                 html += `<tr>
-                    <td>${r.name}${mgrTag}</td>
+                    <td>${r.name}${mgrTag}${leadTag}</td>
                     <td class="g-activity-start" style="color:var(--text-muted)">${r.booked}</td>
                     <td style="color:var(--text-muted)">${r.shown}</td>
                     <td style="color:var(--text-muted)">${r.qualified}</td>
@@ -543,7 +549,7 @@
                     : `<td>${progPct(r.crm_compliance, t.crm_compliance)}</td>`;
 
                 html += `<tr>
-                    <td>${r.name}${mgrTag}</td>
+                    <td>${r.name}${mgrTag}${leadTag}</td>
                     <td class="g-activity-start">${prog(r.booked, t.booked)}</td>
                     <td>${prog(r.shown, t.shown)}</td>
                     <td>${prog(r.qualified, t.qualified)}</td>
