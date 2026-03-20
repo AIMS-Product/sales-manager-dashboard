@@ -287,6 +287,7 @@
 
         // Render funnel breakdown if available
         const funnels = data.funnel_breakdown || [];
+        const src = data.funnel_sources || {};
         const funnelToggle = document.getElementById('archiveFunnelToggle');
         const funnelPanel = document.getElementById('archiveFunnelPanel');
 
@@ -296,7 +297,17 @@
             funnelPanel.style.display = 'none';
 
             const total = funnels.reduce((s, f) => s + f.count, 0);
-            let fhtml = '<table><thead><tr><th>Funnel</th><th>Booked</th></tr></thead><tbody>';
+
+            let srcHtml = '<div style="display:flex;gap:16px;justify-content:center;margin-bottom:12px;font-size:12px;">';
+            srcHtml += `<span style="font-weight:600;">Total: ${total}</span>`;
+            srcHtml += `<span>In-House: <strong>${src.in_house || 0}</strong> (${src.in_house_pct || 0}%)</span>`;
+            srcHtml += `<span>External: <strong>${src.external || 0}</strong> (${src.external_pct || 0}%)</span>`;
+            if (src.unknown > 0) {
+                srcHtml += `<span style="color:#9ca0ad;">Unknown: <strong>${src.unknown}</strong> (${src.unknown_pct}%)</span>`;
+            }
+            srcHtml += '</div>';
+
+            let fhtml = srcHtml + '<table><thead><tr><th>Funnel</th><th>Booked</th></tr></thead><tbody>';
             for (const f of funnels) {
                 fhtml += `<tr><td>${f.funnel}</td><td>${f.count}</td></tr>`;
             }
