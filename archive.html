@@ -44,6 +44,29 @@
         .empty { padding: 40px 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
         .footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: 12px; }
 
+        .funnel-toggle {
+            text-align: center;
+            padding: 12px 24px;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 12px;
+            user-select: none;
+        }
+        .funnel-toggle:hover { color: var(--accent); }
+
+        .funnel-panel {
+            display: none;
+            padding: 0 24px 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .funnel-panel table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .funnel-panel th { text-align: left; color: var(--text-secondary); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; padding: 6px 8px; border-bottom: 2px solid var(--border); }
+        .funnel-panel th:last-child { text-align: right; }
+        .funnel-panel td { padding: 5px 8px; border-bottom: 1px solid #f0f1f3; }
+        .funnel-panel td:last-child { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+        .funnel-panel .funnel-total td { font-weight: 700; border-top: 2px solid var(--border); border-bottom: none; }
+
         .snapshot-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; border-bottom: 1px solid var(--border); }
         .snapshot-title { font-size: 15px; font-weight: 700; }
         .snapshot-back { color: var(--accent); text-decoration: none; font-size: 13px; font-weight: 600; cursor: pointer; }
@@ -121,6 +144,8 @@
                 </table>
             </div>
         </div>
+        <div class="funnel-toggle" id="archiveFunnelToggle" style="display:none;">▶ Funnel Breakdown</div>
+        <div class="funnel-panel" id="archiveFunnelPanel"></div>
     </div>
 </div>
 
@@ -259,11 +284,48 @@
         </tr>`;
 
         document.getElementById('snapshotBody').innerHTML = html;
+
+        // Render funnel breakdown if available
+        const funnels = data.funnel_breakdown || [];
+        const funnelToggle = document.getElementById('archiveFunnelToggle');
+        const funnelPanel = document.getElementById('archiveFunnelPanel');
+
+        if (funnels.length > 0) {
+            funnelToggle.style.display = '';
+            funnelToggle.textContent = '▶ Funnel Breakdown';
+            funnelPanel.style.display = 'none';
+
+            const total = funnels.reduce((s, f) => s + f.count, 0);
+            let fhtml = '<table><thead><tr><th>Funnel</th><th>Booked</th></tr></thead><tbody>';
+            for (const f of funnels) {
+                fhtml += `<tr><td>${f.funnel}</td><td>${f.count}</td></tr>`;
+            }
+            fhtml += `<tr class="funnel-total"><td>Total</td><td>${total}</td></tr>`;
+            fhtml += '</tbody></table>';
+            funnelPanel.innerHTML = fhtml;
+        } else {
+            funnelToggle.style.display = 'none';
+            funnelPanel.style.display = 'none';
+        }
     }
+
+    document.getElementById('archiveFunnelToggle').addEventListener('click', () => {
+        const panel = document.getElementById('archiveFunnelPanel');
+        const toggle = document.getElementById('archiveFunnelToggle');
+        if (panel.style.display === 'none' || !panel.style.display) {
+            panel.style.display = 'block';
+            toggle.textContent = '▼ Funnel Breakdown';
+        } else {
+            panel.style.display = 'none';
+            toggle.textContent = '▶ Funnel Breakdown';
+        }
+    });
 
     document.getElementById('snapshotBack').addEventListener('click', () => {
         document.getElementById('snapshotView').style.display = 'none';
         document.getElementById('weekListView').style.display = 'block';
+        document.getElementById('archiveFunnelToggle').style.display = 'none';
+        document.getElementById('archiveFunnelPanel').style.display = 'none';
     });
 
     loadIndex();
