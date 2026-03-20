@@ -318,6 +318,60 @@
         .footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
         .footer a:hover { text-decoration: underline; }
 
+        .funnel-toggle {
+            text-align: center;
+            padding: 12px 24px;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 12px;
+            user-select: none;
+        }
+
+        .funnel-toggle:hover { color: var(--accent); }
+
+        .funnel-panel {
+            display: none;
+            padding: 0 24px 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .funnel-panel table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .funnel-panel th {
+            text-align: left;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 6px 8px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .funnel-panel th:last-child { text-align: right; }
+
+        .funnel-panel td {
+            padding: 5px 8px;
+            border-bottom: 1px solid #f0f1f3;
+        }
+
+        .funnel-panel td:last-child {
+            text-align: right;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .funnel-panel .funnel-total td {
+            font-weight: 700;
+            border-top: 2px solid var(--border);
+            border-bottom: none;
+        }
+
         .loading {
             display: flex; align-items: center; justify-content: center;
             padding: 80px 20px; color: var(--text-muted); font-size: 14px; gap: 10px;
@@ -408,6 +462,9 @@
     </div>
 </div>
 
+<div class="funnel-toggle" id="funnelToggle">▶ Funnel Breakdown</div>
+<div class="funnel-panel" id="funnelPanel"></div>
+
 <div class="footer">
     Data from Close CRM &nbsp;·&nbsp; <a href="archive.html">📅 View Archive →</a>
 </div>
@@ -445,9 +502,38 @@
         document.getElementById('dayIndicator').innerHTML = dayHtml;
 
         renderTable();
+        renderFunnel();
     }
 
     const T = () => DATA.targets || {};
+
+    function renderFunnel() {
+        const funnels = DATA.funnel_breakdown || [];
+        if (!funnels.length) {
+            document.getElementById('funnelPanel').innerHTML = '<p style="color:var(--text-muted);font-size:12px;">No funnel data available.</p>';
+            return;
+        }
+        const total = funnels.reduce((s, f) => s + f.count, 0);
+        let html = '<table><thead><tr><th>Funnel</th><th>Booked</th></tr></thead><tbody>';
+        for (const f of funnels) {
+            html += `<tr><td>${f.funnel}</td><td>${f.count}</td></tr>`;
+        }
+        html += `<tr class="funnel-total"><td>Total</td><td>${total}</td></tr>`;
+        html += '</tbody></table>';
+        document.getElementById('funnelPanel').innerHTML = html;
+    }
+
+    document.getElementById('funnelToggle').addEventListener('click', () => {
+        const panel = document.getElementById('funnelPanel');
+        const toggle = document.getElementById('funnelToggle');
+        if (panel.style.display === 'none' || !panel.style.display) {
+            panel.style.display = 'block';
+            toggle.textContent = '▼ Funnel Breakdown';
+        } else {
+            panel.style.display = 'none';
+            toggle.textContent = '▶ Funnel Breakdown';
+        }
+    });
 
     function prog(val, target) {
         if (val === null || val === undefined) return '<span class="prog zero"><span class="val">—</span></span>';
