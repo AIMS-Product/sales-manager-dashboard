@@ -59,6 +59,31 @@ CLOSED_LEAD_STATUSES = {
 AVG_DEAL_VALUE = 8000
 CLOSE_RATE_ESTIMATE = 0.30
 
+# Funnel source classification: In-House vs External
+FUNNEL_SOURCE = {
+    "Low Ticket Funnel": "External",
+    "Instagram": "External",
+    "YouTube": "In-House",
+    "YouTube - OG - Cam": "In-House",
+    "Website": "In-House",
+    "VSL": "In-House",
+    "Meta Ads": "In-House",
+    "Reactivation Email": "In-House",
+    "X": "External",
+    "Linkedin": "External",
+    "Internal Webinar": "In-House",
+    "WWWS": "In-House",
+    "Mike Newsletter": "In-House",
+    "Sales Reactivation": "In-House",
+    "Direct Traffic": "In-House",
+    "Side Hustle Nation": "In-House",
+    "Passivepreneurs": "In-House",
+    "Instagram Setter": "External",
+    "X Setter": "External",
+    "Linkedin Setter": "External",
+    "Webinar": "In-House",
+}
+
 # Lead statuses with special CRM compliance handling
 NO_SHOW_LEAD_STATUS = "stat_5CqIgNJnGYO357zXjSnH6BAkKyoCvYUOBxVvpYfDMZn"
 RESCHEDULE_LEAD_STATUS = "stat_2SmOUMCp1vDFJF0TcJ011hNnpLYWDGwugyo4JyiRMEP"
@@ -544,9 +569,36 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
     # Sort funnel breakdown by count descending
     funnel_breakdown = sorted(funnel_counts.items(), key=lambda x: x[1], reverse=True)
     funnel_breakdown = [{"funnel": f, "count": c} for f, c in funnel_breakdown]
-    print(f"  Funnel breakdown: {len(funnel_breakdown)} funnels", flush=True)
 
-    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown
+    # Compute in-house vs external vs unknown percentages
+    total_funnel = sum(fc["count"] for fc in funnel_breakdown)
+    in_house = 0
+    external = 0
+    unknown_src = 0
+    for fc in funnel_breakdown:
+        source = FUNNEL_SOURCE.get(fc["funnel"], None)
+        if source == "In-House":
+            in_house += fc["count"]
+        elif source == "External":
+            external += fc["count"]
+        else:
+            unknown_src += fc["count"]
+
+    funnel_sources = {
+        "in_house": in_house,
+        "external": external,
+        "unknown": unknown_src,
+        "in_house_pct": round(in_house / total_funnel * 100, 1) if total_funnel else 0,
+        "external_pct": round(external / total_funnel * 100, 1) if total_funnel else 0,
+        "unknown_pct": round(unknown_src / total_funnel * 100, 1) if total_funnel else 0,
+    }
+
+    print(f"  Funnel breakdown: {len(funnel_breakdown)} funnels | "
+          f"In-House: {in_house} ({funnel_sources['in_house_pct']}%) | "
+          f"External: {external} ({funnel_sources['external_pct']}%) | "
+          f"Unknown: {unknown_src} ({funnel_sources['unknown_pct']}%)", flush=True)
+
+    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources
 
 
 # ── Step 4: Fetch Closed/Won opps for the week ──────────────────────────────
@@ -785,7 +837,7 @@ def build_dashboard_data():
     qualifying = classify_meetings(week_meetings, user_map)
 
     print(f"  Fetching lead data for {len(qualifying)} qualifying meetings...", flush=True)
-    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown = \
+    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources = \
         fetch_leads_for_meetings(qualifying, user_map, name_to_id, today_str)
     print(f"  Final counts by {len(rep_booked)} reps.", flush=True)
 
@@ -846,14 +898,17 @@ def build_dashboard_data():
 
     reps.sort(key=lambda r: r["booked"], reverse=True)
 
-    # Team totals — manager excluded from meeting/shown/qualified/CRM,
-    # but included for revenue and deals
+    # Team totals — manager excluded from CRM/tasks,
+    # but included for booked/shown/qualified/revenue/deals (counts toward team volume)
     non_mgr = [r for r in reps if not r["is_manager"]]
     num_reps = len(non_mgr)
 
-    total_booked = sum(r["booked"] for r in non_mgr)
-    total_shown = sum(r["shown"] for r in non_mgr)
-    total_qualified = sum(r["qualified"] for r in non_mgr)
+    # Booked/shown/qualified include everyone (manager takes calls that count)
+    total_booked = sum(r["booked"] for r in reps)
+    total_shown = sum(r["shown"] for r in reps)
+    total_qualified = sum(r["qualified"] for r in reps)
+
+    # CRM still excludes manager
     total_crm_filled = sum(r["crm_filled"] for r in non_mgr)
     total_crm_total = sum(r["crm_total"] for r in non_mgr)
 
@@ -914,6 +969,7 @@ def build_dashboard_data():
         "team_open_leads": total_open_leads,
         "team_est_pipeline": total_est_pipeline,
         "funnel_breakdown": funnel_breakdown,
+        "funnel_sources": funnel_sources,
         "reps": reps,
     }
 
