@@ -68,6 +68,7 @@ CF_FIRST_CALL_SHOW_ID     = "cf_OPyvpU45RdvjLqfm8V1VWwNxrGKogEH2IBJmfCj0Uhq"
 CF_LEAD_OWNER_ID           = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
 CF_QUALIFIED_ID            = "cf_ZDx7NBQaDzV1yYrFcBMzt6cIYj81dAcswpNN0CQzCPS"
 CF_CALL_DISPOSITION_ID     = "cf_n2QvikNfeZ0uWObMsyCJmnXnrbWNLGlSvYiKJTwxTqU"
+CF_FUNNEL_NAME_ID          = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
 
 # Fields to request when fetching individual leads
 LEAD_FIELDS = ",".join([
@@ -76,6 +77,7 @@ LEAD_FIELDS = ",".join([
     f"custom.{CF_LEAD_OWNER_ID}",
     f"custom.{CF_QUALIFIED_ID}",
     f"custom.{CF_CALL_DISPOSITION_ID}",
+    f"custom.{CF_FUNNEL_NAME_ID}",
     "opportunities",
 ])
 
@@ -343,6 +345,7 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
     rep_crm_qualified = {}
     rep_crm_confidence = {}
     rep_crm_missing = {}      # {rep: [{name, missing: [...]}, ...]}
+    funnel_counts = {}         # {funnel_name: count}
 
     # Pre-compute which leads have at least one PAST meeting (before today)
     # CRM compliance only applies to meetings that already happened
@@ -413,9 +416,18 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
         if not disposition:
             disposition = custom.get(CF_CALL_DISPOSITION_ID, "")
 
+        # Funnel name
+        funnel_raw = lead.get(f"custom.{CF_FUNNEL_NAME_ID}", "")
+        if not funnel_raw:
+            funnel_raw = custom.get(CF_FUNNEL_NAME_ID, "")
+
         rep_name = resolve_owner(owner_raw, user_map, name_to_id)
         if rep_name in EXCLUDE_USERS:
             continue
+
+        # Track funnel (before any rep-level skips since this is a team metric)
+        funnel_name = str(funnel_raw).strip() if funnel_raw else "Unknown"
+        funnel_counts[funnel_name] = funnel_counts.get(funnel_name, 0) + 1
 
         rep_booked[rep_name] = rep_booked.get(rep_name, 0) + 1
 
@@ -529,7 +541,12 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
             "missing_leads": rep_crm_missing.get(rn, []),
         }
 
-    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail
+    # Sort funnel breakdown by count descending
+    funnel_breakdown = sorted(funnel_counts.items(), key=lambda x: x[1], reverse=True)
+    funnel_breakdown = [{"funnel": f, "count": c} for f, c in funnel_breakdown]
+    print(f"  Funnel breakdown: {len(funnel_breakdown)} funnels", flush=True)
+
+    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown
 
 
 # ── Step 4: Fetch Closed/Won opps for the week ──────────────────────────────
@@ -768,7 +785,7 @@ def build_dashboard_data():
     qualifying = classify_meetings(week_meetings, user_map)
 
     print(f"  Fetching lead data for {len(qualifying)} qualifying meetings...", flush=True)
-    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail = \
+    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown = \
         fetch_leads_for_meetings(qualifying, user_map, name_to_id, today_str)
     print(f"  Final counts by {len(rep_booked)} reps.", flush=True)
 
@@ -896,6 +913,7 @@ def build_dashboard_data():
         "team_overdue": total_overdue,
         "team_open_leads": total_open_leads,
         "team_est_pipeline": total_est_pipeline,
+        "funnel_breakdown": funnel_breakdown,
         "reps": reps,
     }
 
