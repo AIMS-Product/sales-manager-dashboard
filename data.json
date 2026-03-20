@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-20 11:15 AM PDT",
+  "updated_at": "2026-03-20 11:30 AM PDT",
   "week_label": "Mar 16 \u2013 Mar 20, 2026",
   "monday_str": "2026-03-16",
   "today_str": "2026-03-20",
@@ -30,7 +30,7 @@
   },
   "total_booked": 191,
   "total_shown": 120,
-  "total_qualified": 102,
+  "total_qualified": 103,
   "total_deals": 15,
   "total_revenue": 114458.0,
   "team_close_rate": 7.9,
@@ -38,8 +38,8 @@
   "team_crm_compliance": 96.0,
   "team_task_adherence": 84.0,
   "team_overdue": 91,
-  "team_open_leads": 671,
-  "team_est_pipeline": 1610400,
+  "team_open_leads": 674,
+  "team_est_pipeline": 1617600,
   "reps": [
     {
       "name": "Robin Perkins",
@@ -364,8 +364,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 0,
-      "open_leads": 19,
-      "est_pipeline": 45600,
+      "open_leads": 20,
+      "est_pipeline": 48000,
       "is_manager": false,
       "is_lead": false
     },
@@ -460,8 +460,57 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 1,
-      "open_leads": 45,
-      "est_pipeline": 108000,
+      "open_leads": 46,
+      "est_pipeline": 110400,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Eric Piccione",
+      "booked": 10,
+      "shown": 3,
+      "qualified": 3,
+      "deals": 3,
+      "revenue": 24991.0,
+      "close_rate": 30.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 8330.33,
+      "crm_compliance": 85.0,
+      "crm_filled": 17,
+      "crm_total": 20,
+      "crm_detail": {
+        "show_up": [
+          6,
+          7
+        ],
+        "disposition": [
+          6,
+          7
+        ],
+        "qualified": [
+          2,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "missing_leads": [
+          {
+            "name": "Johnnie",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 1,
+      "open_leads": 44,
+      "est_pipeline": 105600,
       "is_manager": false,
       "is_lead": false
     },
@@ -546,55 +595,6 @@
       "is_lead": false
     },
     {
-      "name": "Eric Piccione",
-      "booked": 10,
-      "shown": 3,
-      "qualified": 2,
-      "deals": 3,
-      "revenue": 24991.0,
-      "close_rate": 30.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 8330.33,
-      "crm_compliance": 85.0,
-      "crm_filled": 17,
-      "crm_total": 20,
-      "crm_detail": {
-        "show_up": [
-          6,
-          7
-        ],
-        "disposition": [
-          6,
-          7
-        ],
-        "qualified": [
-          2,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "missing_leads": [
-          {
-            "name": "Johnnie",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 1,
-      "open_leads": 43,
-      "est_pipeline": 103200,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Andrea Shoop",
       "booked": 10,
       "shown": 6,
@@ -668,7 +668,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 104,
+      "tasks_incomplete": 105,
       "open_leads": 39,
       "est_pipeline": 93600,
       "is_manager": false,
