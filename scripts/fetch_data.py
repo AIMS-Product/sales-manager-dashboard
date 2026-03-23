@@ -126,7 +126,6 @@ REP_QUOTAS = {
     "Ategeka Musinguzi": 100_000,
     "Scott Seymour": 100_000,
     "Eric Piccione": 100_000,
-    "Jordan Humphrey": 75_000,
     "Jason Aaron": 75_000,
     "Robin Perkins": 75_000,
     "Ryan Jones": 75_000,
@@ -135,14 +134,13 @@ REP_QUOTAS = {
     "Vince Bartolini": 50_000,
     "Elvis Ellis": 50_000,
     "Chris Wanke": 50_000,
-    "Andrea Shoop": 50_000,
     "Joe Dysert": 0,
 }
 
 EXCLUDE_USERS = {
     "Kristin Nelson", "Spencer Reynolds", "Stephen Olivas",
     "Ahmad Bukhari", "Mallory Kent", "Unknown", "Julia Scaroni",
-    "William Chase",
+    "William Chase", "Jordan Humphrey", "Andrea Shoop",
 }
 MANAGER_USERS = {"Joe Dysert"}
 LEAD_USERS = {"Christian Hartwell"}
