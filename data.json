@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-24 06:45 AM PDT",
+  "updated_at": "2026-03-24 07:00 AM PDT",
   "week_label": "Mar 23 \u2013 Mar 27, 2026",
   "monday_str": "2026-03-23",
   "today_str": "2026-03-24",
@@ -29,7 +29,7 @@
     "task_adherence": 100
   },
   "total_booked": 72,
-  "total_shown": 21,
+  "total_shown": 22,
   "total_qualified": 16,
   "total_deals": 2,
   "total_revenue": 16994.0,
@@ -46,11 +46,11 @@
       "count": 17
     },
     {
-      "funnel": "Instagram",
-      "count": 15
+      "funnel": "Low Ticket Funnel",
+      "count": 16
     },
     {
-      "funnel": "Low Ticket Funnel",
+      "funnel": "Instagram",
       "count": 15
     },
     {
@@ -60,10 +60,6 @@
     {
       "funnel": "Meta Ads",
       "count": 4
-    },
-    {
-      "funnel": "Unknown",
-      "count": 3
     },
     {
       "funnel": "Reactivation Email",
@@ -78,6 +74,10 @@
       "count": 2
     },
     {
+      "funnel": "Unknown",
+      "count": 2
+    },
+    {
       "funnel": "Internal Webinar",
       "count": 2
     },
@@ -88,11 +88,11 @@
   ],
   "funnel_sources": {
     "in_house": 33,
-    "external": 34,
-    "unknown": 5,
+    "external": 35,
+    "unknown": 4,
     "in_house_pct": 45.8,
-    "external_pct": 47.2,
-    "unknown_pct": 6.9
+    "external_pct": 48.6,
+    "unknown_pct": 5.6
   },
   "reps": [
     {
@@ -296,6 +296,46 @@
       "is_lead": false
     },
     {
+      "name": "Ryan Jones",
+      "booked": 6,
+      "shown": 2,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 10,
+      "crm_total": 10,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 30.8,
+      "tasks_overdue": 83,
+      "tasks_incomplete": 120,
+      "open_leads": 62,
+      "est_pipeline": 148800,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Ategeka Musinguzi",
       "booked": 6,
       "shown": 3,
@@ -351,8 +391,8 @@
       "is_lead": false
     },
     {
-      "name": "Ryan Jones",
-      "booked": 6,
+      "name": "Elvis Ellis",
+      "booked": 5,
       "shown": 2,
       "qualified": 2,
       "deals": 0,
@@ -360,8 +400,8 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 10,
+      "crm_compliance": 90.0,
+      "crm_filled": 9,
       "crm_total": 10,
       "crm_detail": {
         "show_up": [
@@ -377,23 +417,30 @@
           2
         ],
         "confidence": [
-          2,
+          1,
           2
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Kel Raz",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
       },
-      "task_adherence": 30.8,
-      "tasks_overdue": 83,
-      "tasks_incomplete": 120,
-      "open_leads": 62,
-      "est_pipeline": 148800,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 34,
+      "est_pipeline": 81600,
       "is_manager": false,
       "is_lead": false
     },
     {
       "name": "Eric Piccione",
       "booked": 5,
-      "shown": 1,
+      "shown": 2,
       "qualified": 1,
       "deals": 0,
       "revenue": 0,
@@ -474,53 +521,6 @@
       "tasks_incomplete": 0,
       "open_leads": 59,
       "est_pipeline": 141600,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Elvis Ellis",
-      "booked": 5,
-      "shown": 2,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 90.0,
-      "crm_filled": 9,
-      "crm_total": 10,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          1,
-          2
-        ],
-        "missing_leads": [
-          {
-            "name": "Kel Raz",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 34,
-      "est_pipeline": 81600,
       "is_manager": false,
       "is_lead": false
     },
