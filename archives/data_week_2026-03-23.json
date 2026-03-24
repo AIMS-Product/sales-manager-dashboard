@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-24 09:15 AM PDT",
+  "updated_at": "2026-03-24 09:30 AM PDT",
   "week_label": "Mar 23 \u2013 Mar 27, 2026",
   "monday_str": "2026-03-23",
   "today_str": "2026-03-24",
@@ -36,8 +36,8 @@
   "team_close_rate": 2.8,
   "team_avg_rev_per_deal": 8497.0,
   "team_crm_compliance": 88.6,
-  "team_task_adherence": 81.9,
-  "team_overdue": 86,
+  "team_task_adherence": 82.3,
+  "team_overdue": 84,
   "team_open_leads": 691,
   "team_est_pipeline": 1658400,
   "funnel_breakdown": [
@@ -298,13 +298,53 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 30.8,
-      "tasks_overdue": 83,
+      "task_adherence": 32.5,
+      "tasks_overdue": 81,
       "tasks_incomplete": 120,
       "open_leads": 62,
       "est_pipeline": 148800,
       "is_manager": false,
       "is_lead": false
+    },
+    {
+      "name": "Christian Hartwell",
+      "booked": 6,
+      "shown": 2,
+      "qualified": 2,
+      "deals": 1,
+      "revenue": 10997.0,
+      "close_rate": 16.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 10997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 10,
+      "crm_total": 10,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 87.5,
+      "tasks_overdue": 2,
+      "tasks_incomplete": 16,
+      "open_leads": 91,
+      "est_pipeline": 218400,
+      "is_manager": false,
+      "is_lead": true
     },
     {
       "name": "Ategeka Musinguzi",
@@ -362,17 +402,17 @@
       "is_lead": false
     },
     {
-      "name": "Christian Hartwell",
-      "booked": 6,
+      "name": "Elvis Ellis",
+      "booked": 5,
       "shown": 2,
       "qualified": 2,
-      "deals": 1,
-      "revenue": 10997.0,
-      "close_rate": 16.7,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
       "qa_score": null,
-      "avg_rev_per_deal": 10997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 10,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 90.0,
+      "crm_filled": 9,
       "crm_total": 10,
       "crm_detail": {
         "show_up": [
@@ -388,18 +428,25 @@
           2
         ],
         "confidence": [
-          2,
+          1,
           2
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Kel Raz",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
       },
-      "task_adherence": 87.5,
-      "tasks_overdue": 2,
-      "tasks_incomplete": 16,
-      "open_leads": 91,
-      "est_pipeline": 218400,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 34,
+      "est_pipeline": 81600,
       "is_manager": false,
-      "is_lead": true
+      "is_lead": false
     },
     {
       "name": "Eric Piccione",
@@ -449,49 +496,42 @@
       "is_lead": false
     },
     {
-      "name": "Elvis Ellis",
-      "booked": 5,
+      "name": "Jake Skinner",
+      "booked": 4,
       "shown": 2,
-      "qualified": 2,
+      "qualified": 1,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 90.0,
-      "crm_filled": 9,
-      "crm_total": 10,
+      "crm_compliance": 100.0,
+      "crm_filled": 4,
+      "crm_total": 4,
       "crm_detail": {
         "show_up": [
-          3,
-          3
+          1,
+          1
         ],
         "disposition": [
-          3,
-          3
+          1,
+          1
         ],
         "qualified": [
-          2,
-          2
+          1,
+          1
         ],
         "confidence": [
           1,
-          2
+          1
         ],
-        "missing_leads": [
-          {
-            "name": "Kel Raz",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 0,
-      "open_leads": 34,
-      "est_pipeline": 81600,
+      "open_leads": 59,
+      "est_pipeline": 141600,
       "is_manager": false,
       "is_lead": false
     },
@@ -532,46 +572,6 @@
       "tasks_incomplete": 81,
       "open_leads": 40,
       "est_pipeline": 96000,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Jake Skinner",
-      "booked": 4,
-      "shown": 2,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 4,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 59,
-      "est_pipeline": 141600,
       "is_manager": false,
       "is_lead": false
     },
