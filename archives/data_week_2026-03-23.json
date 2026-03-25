@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-25 07:45 AM PDT",
+  "updated_at": "2026-03-25 08:00 AM PDT",
   "week_label": "Mar 23 \u2013 Mar 27, 2026",
   "monday_str": "2026-03-23",
   "today_str": "2026-03-25",
@@ -35,7 +35,7 @@
   "total_revenue": 60976.0,
   "team_close_rate": 8.0,
   "team_avg_rev_per_deal": 7622.0,
-  "team_crm_compliance": 94.0,
+  "team_crm_compliance": 94.9,
   "team_task_adherence": 82.3,
   "team_overdue": 88,
   "team_open_leads": 708,
@@ -281,8 +281,8 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 84.4,
-      "crm_filled": 27,
+      "crm_compliance": 90.6,
+      "crm_filled": 29,
       "crm_total": 32,
       "crm_detail": {
         "show_up": [
@@ -298,16 +298,10 @@
           8
         ],
         "confidence": [
-          4,
+          6,
           8
         ],
         "missing_leads": [
-          {
-            "name": "Jeff Warren",
-            "missing": [
-              "Confidence"
-            ]
-          },
           {
             "name": "Trinintie Haynes",
             "missing": [
@@ -317,12 +311,6 @@
           },
           {
             "name": "Jennifer Francis",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Erica",
             "missing": [
               "Confidence"
             ]
@@ -378,86 +366,6 @@
       "is_lead": false
     },
     {
-      "name": "Christian Hartwell",
-      "booked": 7,
-      "shown": 4,
-      "qualified": 4,
-      "deals": 1,
-      "revenue": 10997.0,
-      "close_rate": 14.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 10997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 20,
-      "crm_total": 20,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          6,
-          6
-        ],
-        "qualified": [
-          4,
-          4
-        ],
-        "confidence": [
-          4,
-          4
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 93.8,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 16,
-      "open_leads": 93,
-      "est_pipeline": 223200,
-      "is_manager": false,
-      "is_lead": true
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 7,
-      "shown": 4,
-      "qualified": 4,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 18,
-      "crm_total": 18,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          4,
-          4
-        ],
-        "confidence": [
-          4,
-          4
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 98.8,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 85,
-      "open_leads": 43,
-      "est_pipeline": 103200,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Eric Piccione",
       "booked": 7,
       "shown": 4,
@@ -501,6 +409,46 @@
       "tasks_incomplete": 1,
       "open_leads": 46,
       "est_pipeline": 110400,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Lyle Hubbard",
+      "booked": 7,
+      "shown": 4,
+      "qualified": 4,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 18,
+      "crm_total": 18,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          4,
+          4
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 98.8,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 85,
+      "open_leads": 43,
+      "est_pipeline": 103200,
       "is_manager": false,
       "is_lead": false
     },
@@ -557,6 +505,46 @@
       "est_pipeline": 98400,
       "is_manager": false,
       "is_lead": false
+    },
+    {
+      "name": "Christian Hartwell",
+      "booked": 7,
+      "shown": 4,
+      "qualified": 4,
+      "deals": 1,
+      "revenue": 10997.0,
+      "close_rate": 14.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 10997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 20,
+      "crm_total": 20,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          6,
+          6
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          4,
+          4
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 93.8,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 16,
+      "open_leads": 93,
+      "est_pipeline": 223200,
+      "is_manager": false,
+      "is_lead": true
     },
     {
       "name": "Jake Skinner",
