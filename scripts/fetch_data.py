@@ -154,6 +154,7 @@ INCLUDE_PATTERNS = [
     re.compile(r"vendingpren[eu]+rs?\s+strategy\s+call", re.IGNORECASE),
     re.compile(r"new\s+vendingpren[eu]+r\s+strategy\s+call", re.IGNORECASE),
     re.compile(r"vending\s+consult\b", re.IGNORECASE),
+    re.compile(r"post\s+masterclass\s+strategy\s+call", re.IGNORECASE),
 ]
 
 EXCLUDE_TITLE_CONTAINS = [
