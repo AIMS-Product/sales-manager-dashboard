@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-27 01:00 PM PDT",
+  "updated_at": "2026-03-27 01:15 PM PDT",
   "week_label": "Mar 23 \u2013 Mar 27, 2026",
   "monday_str": "2026-03-23",
   "today_str": "2026-03-27",
@@ -28,14 +28,14 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 194,
+  "total_booked": 193,
   "total_shown": 111,
   "total_qualified": 89,
-  "total_deals": 18,
-  "total_revenue": 140452.0,
-  "team_close_rate": 9.3,
-  "team_avg_rev_per_deal": 7802.89,
-  "team_crm_compliance": 98.7,
+  "total_deals": 19,
+  "total_revenue": 146449.0,
+  "team_close_rate": 9.8,
+  "team_avg_rev_per_deal": 7707.84,
+  "team_crm_compliance": 97.9,
   "team_task_adherence": 84.8,
   "team_overdue": 79,
   "team_open_leads": 738,
@@ -47,7 +47,7 @@
     },
     {
       "funnel": "Instagram",
-      "count": 37
+      "count": 36
     },
     {
       "funnel": "YouTube",
@@ -96,10 +96,10 @@
   ],
   "funnel_sources": {
     "in_house": 110,
-    "external": 76,
+    "external": 75,
     "unknown": 8,
-    "in_house_pct": 56.7,
-    "external_pct": 39.2,
+    "in_house_pct": 57.0,
+    "external_pct": 38.9,
     "unknown_pct": 4.1
   },
   "reps": [
@@ -193,9 +193,9 @@
       "close_rate": 5.3,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 44,
-      "crm_total": 44,
+      "crm_compliance": 92.3,
+      "crm_filled": 48,
+      "crm_total": 52,
       "crm_detail": {
         "show_up": [
           13,
@@ -207,17 +207,42 @@
         ],
         "qualified": [
           9,
-          9
+          13
         ],
         "confidence": [
-          9,
-          9
+          13,
+          13
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Abel dos Santos Amaral",
+            "missing": [
+              "Qualified"
+            ]
+          },
+          {
+            "name": "Mariano Irizarry",
+            "missing": [
+              "Qualified"
+            ]
+          },
+          {
+            "name": "Mohammad Mahmud",
+            "missing": [
+              "Qualified"
+            ]
+          },
+          {
+            "name": "Eddie Evans Jr",
+            "missing": [
+              "Qualified"
+            ]
+          }
+        ]
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 51,
+      "tasks_incomplete": 52,
       "open_leads": 67,
       "est_pipeline": 160800,
       "is_manager": false,
@@ -265,12 +290,12 @@
     },
     {
       "name": "Ryan Jones",
-      "booked": 15,
+      "booked": 14,
       "shown": 8,
       "qualified": 7,
       "deals": 1,
       "revenue": 13997.0,
-      "close_rate": 6.7,
+      "close_rate": 7.1,
       "qa_score": null,
       "avg_rev_per_deal": 13997.0,
       "crm_compliance": 100.0,
@@ -300,6 +325,46 @@
       "tasks_incomplete": 127,
       "open_leads": 64,
       "est_pipeline": 153600,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Jake Skinner",
+      "booked": 14,
+      "shown": 11,
+      "qualified": 10,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 32,
+      "crm_total": 32,
+      "crm_detail": {
+        "show_up": [
+          8,
+          8
+        ],
+        "disposition": [
+          8,
+          8
+        ],
+        "qualified": [
+          8,
+          8
+        ],
+        "confidence": [
+          8,
+          8
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 0.0,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 1,
+      "open_leads": 65,
+      "est_pipeline": 156000,
       "is_manager": false,
       "is_lead": false
     },
@@ -353,46 +418,6 @@
       "tasks_incomplete": 2,
       "open_leads": 49,
       "est_pipeline": 117600,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Jake Skinner",
-      "booked": 14,
-      "shown": 11,
-      "qualified": 10,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 32,
-      "crm_total": 32,
-      "crm_detail": {
-        "show_up": [
-          8,
-          8
-        ],
-        "disposition": [
-          8,
-          8
-        ],
-        "qualified": [
-          8,
-          8
-        ],
-        "confidence": [
-          8,
-          8
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 0.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 1,
-      "open_leads": 65,
-      "est_pipeline": 156000,
       "is_manager": false,
       "is_lead": false
     },
@@ -451,46 +476,6 @@
       "is_lead": false
     },
     {
-      "name": "Elvis Ellis",
-      "booked": 13,
-      "shown": 8,
-      "qualified": 7,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 7.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 36,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          11,
-          11
-        ],
-        "disposition": [
-          11,
-          11
-        ],
-        "qualified": [
-          7,
-          7
-        ],
-        "confidence": [
-          7,
-          7
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 36,
-      "est_pipeline": 86400,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Christian Hartwell",
       "booked": 13,
       "shown": 5,
@@ -529,6 +514,46 @@
       "est_pipeline": 225600,
       "is_manager": false,
       "is_lead": true
+    },
+    {
+      "name": "Elvis Ellis",
+      "booked": 13,
+      "shown": 8,
+      "qualified": 7,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 7.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 36,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          11,
+          11
+        ],
+        "disposition": [
+          11,
+          11
+        ],
+        "qualified": [
+          7,
+          7
+        ],
+        "confidence": [
+          7,
+          7
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 36,
+      "est_pipeline": 86400,
+      "is_manager": false,
+      "is_lead": false
     },
     {
       "name": "Chris Wanke",
@@ -575,9 +600,9 @@
       "booked": 12,
       "shown": 7,
       "qualified": 6,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 8.3,
+      "deals": 2,
+      "revenue": 11994.0,
+      "close_rate": 16.7,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
       "crm_compliance": 97.2,
