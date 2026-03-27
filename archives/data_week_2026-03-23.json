@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-27 02:30 PM PDT",
+  "updated_at": "2026-03-27 02:45 PM PDT",
   "week_label": "Mar 23 \u2013 Mar 27, 2026",
   "monday_str": "2026-03-23",
   "today_str": "2026-03-27",
@@ -29,12 +29,12 @@
     "task_adherence": 100
   },
   "total_booked": 192,
-  "total_shown": 115,
-  "total_qualified": 91,
-  "total_deals": 22,
-  "total_revenue": 174440.0,
-  "team_close_rate": 11.5,
-  "team_avg_rev_per_deal": 7929.09,
+  "total_shown": 116,
+  "total_qualified": 92,
+  "total_deals": 23,
+  "total_revenue": 187437.0,
+  "team_close_rate": 12.0,
+  "team_avg_rev_per_deal": 8149.43,
   "team_crm_compliance": 97.8,
   "team_task_adherence": 84.9,
   "team_overdue": 79,
@@ -279,8 +279,48 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 1,
-      "open_leads": 51,
-      "est_pipeline": 122400,
+      "open_leads": 52,
+      "est_pipeline": 124800,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Ryan Jones",
+      "booked": 14,
+      "shown": 8,
+      "qualified": 7,
+      "deals": 2,
+      "revenue": 26994.0,
+      "close_rate": 14.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 13497.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 38,
+      "crm_total": 38,
+      "crm_detail": {
+        "show_up": [
+          12,
+          12
+        ],
+        "disposition": [
+          12,
+          12
+        ],
+        "qualified": [
+          7,
+          7
+        ],
+        "confidence": [
+          7,
+          7
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 39.4,
+      "tasks_overdue": 77,
+      "tasks_incomplete": 127,
+      "open_leads": 63,
+      "est_pipeline": 151200,
       "is_manager": false,
       "is_lead": false
     },
@@ -338,90 +378,10 @@
       "is_lead": false
     },
     {
-      "name": "Jake Skinner",
-      "booked": 14,
-      "shown": 11,
-      "qualified": 10,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 32,
-      "crm_total": 32,
-      "crm_detail": {
-        "show_up": [
-          8,
-          8
-        ],
-        "disposition": [
-          8,
-          8
-        ],
-        "qualified": [
-          8,
-          8
-        ],
-        "confidence": [
-          8,
-          8
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 0.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 1,
-      "open_leads": 65,
-      "est_pipeline": 156000,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Ryan Jones",
+      "name": "Christian Hartwell",
       "booked": 14,
       "shown": 8,
       "qualified": 7,
-      "deals": 1,
-      "revenue": 13997.0,
-      "close_rate": 7.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 13997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 38,
-      "crm_total": 38,
-      "crm_detail": {
-        "show_up": [
-          12,
-          12
-        ],
-        "disposition": [
-          12,
-          12
-        ],
-        "qualified": [
-          7,
-          7
-        ],
-        "confidence": [
-          7,
-          7
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 39.8,
-      "tasks_overdue": 77,
-      "tasks_incomplete": 128,
-      "open_leads": 64,
-      "est_pipeline": 153600,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 14,
-      "shown": 7,
-      "qualified": 6,
       "deals": 2,
       "revenue": 16994.0,
       "close_rate": 14.3,
@@ -508,6 +468,46 @@
       "tasks_incomplete": 2,
       "open_leads": 44,
       "est_pipeline": 105600,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Jake Skinner",
+      "booked": 14,
+      "shown": 11,
+      "qualified": 10,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 32,
+      "crm_total": 32,
+      "crm_detail": {
+        "show_up": [
+          8,
+          8
+        ],
+        "disposition": [
+          8,
+          8
+        ],
+        "qualified": [
+          8,
+          8
+        ],
+        "confidence": [
+          8,
+          8
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 0.0,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 1,
+      "open_leads": 65,
+      "est_pipeline": 156000,
       "is_manager": false,
       "is_lead": false
     },
@@ -672,7 +672,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 107,
+      "tasks_incomplete": 108,
       "open_leads": 54,
       "est_pipeline": 129600,
       "is_manager": false,
