@@ -157,6 +157,13 @@ INCLUDE_PATTERNS = [
     re.compile(r"post\s+masterclass\s+strategy\s+call", re.IGNORECASE),
 ]
 
+# Scraper "Next Steps" titles — checked BEFORE the generic "Next Steps" exclusion
+INCLUDE_SCRAPER_RE = re.compile(
+    r"vendingpren[eu]+rs?\s*-?\s*next\s+steps"
+    r"|vendingpreneur\s+next\s+steps",
+    re.IGNORECASE
+)
+
 EXCLUDE_TITLE_CONTAINS = [
     "vending quick discovery",
     "follow-up", "follow up", "fallow up", "f/u",
@@ -171,16 +178,27 @@ def is_first_call_meeting(title):
         return False
     t = title.strip()
     tl = t.lower()
+    # 1. Canceled prefix → exclude
     if tl.startswith("canceled:"):
         return False
+    # 2. Vending Quick Discovery → exclude
+    if "vending quick discovery" in tl:
+        return False
+    # 3. Scraper "Next Steps" titles → include (BEFORE generic exclusion)
+    if INCLUDE_SCRAPER_RE.search(t):
+        return True
+    # 4. Generic follow-up/next steps/reschedule → exclude
     for pattern in EXCLUDE_TITLE_CONTAINS:
         if pattern in tl:
             return False
+    # 5. Anthony Q&A → exclude
     if "anthony" in tl and "q&a" in tl:
         return False
+    # 6. Standard include patterns → include
     for regex in INCLUDE_PATTERNS:
         if regex.search(t):
             return True
+    # 7. Default → exclude
     return False
 
 
