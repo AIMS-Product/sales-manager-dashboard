@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-31 03:45 PM PDT",
+  "updated_at": "2026-03-31 04:00 PM PDT",
   "week_label": "Mar 30 \u2013 Apr 03, 2026",
   "monday_str": "2026-03-30",
   "today_str": "2026-03-31",
@@ -36,10 +36,10 @@
   "team_close_rate": 19.4,
   "team_avg_rev_per_deal": 7732.71,
   "team_crm_compliance": 95.8,
-  "team_task_adherence": 94.8,
-  "team_overdue": 26,
-  "team_open_leads": 761,
-  "team_est_pipeline": 1826400,
+  "team_task_adherence": 95.0,
+  "team_overdue": 25,
+  "team_open_leads": 760,
+  "team_est_pipeline": 1824000,
   "funnel_breakdown": [
     {
       "funnel": "Internal Webinar",
@@ -175,6 +175,53 @@
       "is_lead": false
     },
     {
+      "name": "Eric Piccione",
+      "booked": 7,
+      "shown": 2,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 90.0,
+      "crm_filled": 9,
+      "crm_total": 10,
+      "crm_detail": {
+        "show_up": [
+          4,
+          4
+        ],
+        "disposition": [
+          4,
+          4
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Michael Longoria",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 2,
+      "open_leads": 50,
+      "est_pipeline": 120000,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Jason Aaron",
       "booked": 7,
       "shown": 4,
@@ -255,18 +302,18 @@
       "is_lead": false
     },
     {
-      "name": "Eric Piccione",
-      "booked": 7,
-      "shown": 2,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "name": "Jake Skinner",
+      "booked": 6,
+      "shown": 4,
+      "qualified": 3,
+      "deals": 1,
+      "revenue": 5697.0,
+      "close_rate": 16.7,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 90.0,
-      "crm_filled": 9,
-      "crm_total": 10,
+      "avg_rev_per_deal": 5697.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 12,
+      "crm_total": 12,
       "crm_detail": {
         "show_up": [
           4,
@@ -277,27 +324,20 @@
           4
         ],
         "qualified": [
-          1,
-          1
+          2,
+          2
         ],
         "confidence": [
-          0,
-          1
+          2,
+          2
         ],
-        "missing_leads": [
-          {
-            "name": "Michael Longoria",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 2,
-      "open_leads": 50,
-      "est_pipeline": 120000,
+      "task_adherence": 0.0,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 1,
+      "open_leads": 67,
+      "est_pipeline": 160800,
       "is_manager": false,
       "is_lead": false
     },
@@ -338,46 +378,6 @@
       "tasks_incomplete": 1,
       "open_leads": 59,
       "est_pipeline": 141600,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Jake Skinner",
-      "booked": 6,
-      "shown": 4,
-      "qualified": 3,
-      "deals": 1,
-      "revenue": 5697.0,
-      "close_rate": 16.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 5697.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 12,
-      "crm_total": 12,
-      "crm_detail": {
-        "show_up": [
-          4,
-          4
-        ],
-        "disposition": [
-          4,
-          4
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 0.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 1,
-      "open_leads": 67,
-      "est_pipeline": 160800,
       "is_manager": false,
       "is_lead": false
     },
@@ -462,6 +462,46 @@
       "is_lead": true
     },
     {
+      "name": "Lyle Hubbard",
+      "booked": 3,
+      "shown": 2,
+      "qualified": 1,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 33.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 6,
+      "crm_total": 6,
+      "crm_detail": {
+        "show_up": [
+          2,
+          2
+        ],
+        "disposition": [
+          2,
+          2
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 98,
+      "open_leads": 34,
+      "est_pipeline": 81600,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Vince Bartolini",
       "booked": 3,
       "shown": 1,
@@ -498,46 +538,6 @@
       "tasks_incomplete": 27,
       "open_leads": 43,
       "est_pipeline": 103200,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 3,
-      "shown": 2,
-      "qualified": 1,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 33.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 6,
-      "crm_total": 6,
-      "crm_detail": {
-        "show_up": [
-          2,
-          2
-        ],
-        "disposition": [
-          2,
-          2
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 97,
-      "open_leads": 35,
-      "est_pipeline": 84000,
       "is_manager": false,
       "is_lead": false
     },
@@ -580,9 +580,9 @@
           }
         ]
       },
-      "task_adherence": 83.0,
-      "tasks_overdue": 19,
-      "tasks_incomplete": 112,
+      "task_adherence": 84.1,
+      "tasks_overdue": 18,
+      "tasks_incomplete": 113,
       "open_leads": 66,
       "est_pipeline": 158400,
       "is_manager": false,
