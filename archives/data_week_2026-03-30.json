@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-01 01:30 AM PDT",
+  "updated_at": "2026-04-01 01:45 AM PDT",
   "week_label": "Mar 30 \u2013 Apr 03, 2026",
   "monday_str": "2026-03-30",
   "today_str": "2026-04-01",
@@ -28,12 +28,12 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 108,
+  "total_booked": 109,
   "total_shown": 46,
   "total_qualified": 42,
   "total_deals": 17,
   "total_revenue": 128849.0,
-  "team_close_rate": 15.7,
+  "team_close_rate": 15.6,
   "team_avg_rev_per_deal": 7579.35,
   "team_crm_compliance": 93.8,
   "team_task_adherence": 91.7,
@@ -58,12 +58,12 @@
       "count": 14
     },
     {
-      "funnel": "YouTube",
+      "funnel": "Unknown",
       "count": 11
     },
     {
-      "funnel": "Unknown",
-      "count": 10
+      "funnel": "YouTube",
+      "count": 11
     },
     {
       "funnel": "Reactivation Email",
@@ -85,20 +85,20 @@
   "funnel_sources": {
     "in_house": 57,
     "external": 41,
-    "unknown": 10,
-    "in_house_pct": 52.8,
-    "external_pct": 38.0,
-    "unknown_pct": 9.3
+    "unknown": 11,
+    "in_house_pct": 52.3,
+    "external_pct": 37.6,
+    "unknown_pct": 10.1
   },
   "reps": [
     {
       "name": "Robin Perkins",
-      "booked": 15,
+      "booked": 16,
       "shown": 8,
       "qualified": 8,
       "deals": 2,
       "revenue": 11994.0,
-      "close_rate": 13.3,
+      "close_rate": 12.5,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
       "crm_compliance": 100.0,
@@ -128,6 +128,53 @@
       "tasks_incomplete": 60,
       "open_leads": 74,
       "est_pipeline": 177600,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Scott Seymour",
+      "booked": 12,
+      "shown": 5,
+      "qualified": 7,
+      "deals": 5,
+      "revenue": 39485.0,
+      "close_rate": 41.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 7897.0,
+      "crm_compliance": 96.7,
+      "crm_filled": 29,
+      "crm_total": 30,
+      "crm_detail": {
+        "show_up": [
+          8,
+          8
+        ],
+        "disposition": [
+          8,
+          8
+        ],
+        "qualified": [
+          7,
+          7
+        ],
+        "confidence": [
+          6,
+          7
+        ],
+        "missing_leads": [
+          {
+            "name": "Faith Mwangi",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 93.2,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 88,
+      "open_leads": 75,
+      "est_pipeline": 180000,
       "is_manager": false,
       "is_lead": false
     },
@@ -236,53 +283,6 @@
       "tasks_incomplete": 2,
       "open_leads": 50,
       "est_pipeline": 120000,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Scott Seymour",
-      "booked": 12,
-      "shown": 5,
-      "qualified": 7,
-      "deals": 5,
-      "revenue": 39485.0,
-      "close_rate": 41.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 7897.0,
-      "crm_compliance": 96.7,
-      "crm_filled": 29,
-      "crm_total": 30,
-      "crm_detail": {
-        "show_up": [
-          8,
-          8
-        ],
-        "disposition": [
-          8,
-          8
-        ],
-        "qualified": [
-          7,
-          7
-        ],
-        "confidence": [
-          6,
-          7
-        ],
-        "missing_leads": [
-          {
-            "name": "Faith Mwangi",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 93.2,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 88,
-      "open_leads": 75,
-      "est_pipeline": 180000,
       "is_manager": false,
       "is_lead": false
     },
