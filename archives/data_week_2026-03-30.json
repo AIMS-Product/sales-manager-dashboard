@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02 07:15 AM PDT",
+  "updated_at": "2026-04-02 07:30 AM PDT",
   "week_label": "Mar 30 \u2013 Apr 03, 2026",
   "monday_str": "2026-03-30",
   "today_str": "2026-04-02",
@@ -36,8 +36,8 @@
   "team_close_rate": 13.7,
   "team_avg_rev_per_deal": 7202.15,
   "team_crm_compliance": 92.1,
-  "team_task_adherence": 89.5,
-  "team_overdue": 54,
+  "team_task_adherence": 89.9,
+  "team_overdue": 52,
   "team_open_leads": 779,
   "team_est_pipeline": 1869600,
   "funnel_breakdown": [
@@ -176,49 +176,57 @@
       "is_lead": false
     },
     {
-      "name": "Scott Seymour",
+      "name": "Eric Piccione",
       "booked": 15,
-      "shown": 8,
-      "qualified": 10,
-      "deals": 5,
-      "revenue": 39485.0,
-      "close_rate": 33.3,
+      "shown": 5,
+      "qualified": 4,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 6.7,
       "qa_score": null,
-      "avg_rev_per_deal": 7897.0,
-      "crm_compliance": 97.6,
-      "crm_filled": 41,
-      "crm_total": 42,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 87.5,
+      "crm_filled": 28,
+      "crm_total": 32,
       "crm_detail": {
         "show_up": [
           11,
           11
         ],
         "disposition": [
-          11,
+          10,
           11
         ],
         "qualified": [
-          10,
-          10
+          4,
+          5
         ],
         "confidence": [
-          9,
-          10
+          3,
+          5
         ],
         "missing_leads": [
           {
-            "name": "Faith Mwangi",
+            "name": "Michael Longoria",
             "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Ken Tustin",
+            "missing": [
+              "Disposition",
+              "Qualified",
               "Confidence"
             ]
           }
         ]
       },
-      "task_adherence": 86.0,
-      "tasks_overdue": 13,
-      "tasks_incomplete": 93,
-      "open_leads": 78,
-      "est_pipeline": 187200,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 2,
+      "open_leads": 52,
+      "est_pipeline": 124800,
       "is_manager": false,
       "is_lead": false
     },
@@ -297,57 +305,49 @@
       "is_lead": false
     },
     {
-      "name": "Eric Piccione",
+      "name": "Scott Seymour",
       "booked": 15,
-      "shown": 5,
-      "qualified": 4,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 6.7,
+      "shown": 8,
+      "qualified": 10,
+      "deals": 5,
+      "revenue": 39485.0,
+      "close_rate": 33.3,
       "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 87.5,
-      "crm_filled": 28,
-      "crm_total": 32,
+      "avg_rev_per_deal": 7897.0,
+      "crm_compliance": 97.6,
+      "crm_filled": 41,
+      "crm_total": 42,
       "crm_detail": {
         "show_up": [
           11,
           11
         ],
         "disposition": [
-          10,
+          11,
           11
         ],
         "qualified": [
-          4,
-          5
+          10,
+          10
         ],
         "confidence": [
-          3,
-          5
+          9,
+          10
         ],
         "missing_leads": [
           {
-            "name": "Michael Longoria",
+            "name": "Faith Mwangi",
             "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Ken Tustin",
-            "missing": [
-              "Disposition",
-              "Qualified",
               "Confidence"
             ]
           }
         ]
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 2,
-      "open_leads": 52,
-      "est_pipeline": 124800,
+      "task_adherence": 87.9,
+      "tasks_overdue": 11,
+      "tasks_incomplete": 91,
+      "open_leads": 78,
+      "est_pipeline": 187200,
       "is_manager": false,
       "is_lead": false
     },
@@ -448,6 +448,46 @@
       "is_lead": false
     },
     {
+      "name": "John Kirk",
+      "booked": 10,
+      "shown": 5,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 24,
+      "crm_total": 24,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 1,
+      "open_leads": 58,
+      "est_pipeline": 139200,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Lyle Hubbard",
       "booked": 10,
       "shown": 5,
@@ -491,46 +531,6 @@
       "tasks_incomplete": 103,
       "open_leads": 38,
       "est_pipeline": 91200,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "John Kirk",
-      "booked": 10,
-      "shown": 5,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 24,
-      "crm_total": 24,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          7,
-          7
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          5,
-          5
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 1,
-      "open_leads": 58,
-      "est_pipeline": 139200,
       "is_manager": false,
       "is_lead": false
     },
