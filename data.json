@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02 02:00 PM PDT",
+  "updated_at": "2026-04-02 02:15 PM PDT",
   "week_label": "Mar 30 \u2013 Apr 03, 2026",
   "monday_str": "2026-03-30",
   "today_str": "2026-04-02",
@@ -38,8 +38,8 @@
   "team_crm_compliance": 94.9,
   "team_task_adherence": 94.3,
   "team_overdue": 28,
-  "team_open_leads": 783,
-  "team_est_pipeline": 1879200,
+  "team_open_leads": 785,
+  "team_est_pipeline": 1884000,
   "funnel_breakdown": [
     {
       "funnel": "Low Ticket Funnel",
@@ -100,6 +100,46 @@
   },
   "reps": [
     {
+      "name": "Robin Perkins",
+      "booked": 18,
+      "shown": 11,
+      "qualified": 10,
+      "deals": 2,
+      "revenue": 11994.0,
+      "close_rate": 11.1,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 48,
+      "crm_total": 48,
+      "crm_detail": {
+        "show_up": [
+          14,
+          14
+        ],
+        "disposition": [
+          14,
+          14
+        ],
+        "qualified": [
+          10,
+          10
+        ],
+        "confidence": [
+          10,
+          10
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 56,
+      "open_leads": 77,
+      "est_pipeline": 184800,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Jason Aaron",
       "booked": 18,
       "shown": 9,
@@ -136,46 +176,6 @@
       "tasks_incomplete": 91,
       "open_leads": 58,
       "est_pipeline": 139200,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 18,
-      "shown": 11,
-      "qualified": 10,
-      "deals": 2,
-      "revenue": 11994.0,
-      "close_rate": 11.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 48,
-      "crm_total": 48,
-      "crm_detail": {
-        "show_up": [
-          14,
-          14
-        ],
-        "disposition": [
-          14,
-          14
-        ],
-        "qualified": [
-          10,
-          10
-        ],
-        "confidence": [
-          10,
-          10
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 56,
-      "open_leads": 76,
-      "est_pipeline": 182400,
       "is_manager": false,
       "is_lead": false
     },
@@ -348,25 +348,25 @@
       "close_rate": 38.5,
       "qa_score": null,
       "avg_rev_per_deal": 7897.0,
-      "crm_compliance": 97.6,
-      "crm_filled": 41,
-      "crm_total": 42,
+      "crm_compliance": 97.4,
+      "crm_filled": 37,
+      "crm_total": 38,
       "crm_detail": {
         "show_up": [
-          11,
-          11
-        ],
-        "disposition": [
-          11,
-          11
-        ],
-        "qualified": [
           10,
           10
         ],
-        "confidence": [
-          9,
+        "disposition": [
+          10,
           10
+        ],
+        "qualified": [
+          9,
+          9
+        ],
+        "confidence": [
+          8,
+          9
         ],
         "missing_leads": [
           {
@@ -379,49 +379,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 81,
+      "tasks_incomplete": 82,
       "open_leads": 77,
       "est_pipeline": 184800,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 11,
-      "shown": 5,
-      "qualified": 6,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 9.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 20,
-      "crm_total": 20,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          6,
-          6
-        ],
-        "qualified": [
-          4,
-          4
-        ],
-        "confidence": [
-          4,
-          4
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 103,
-      "open_leads": 38,
-      "est_pipeline": 91200,
       "is_manager": false,
       "is_lead": false
     },
@@ -466,6 +426,46 @@
       "is_lead": false
     },
     {
+      "name": "Lyle Hubbard",
+      "booked": 11,
+      "shown": 5,
+      "qualified": 6,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 9.1,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 20,
+      "crm_total": 20,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          6,
+          6
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          4,
+          4
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 103,
+      "open_leads": 38,
+      "est_pipeline": 91200,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Vince Bartolini",
       "booked": 9,
       "shown": 2,
@@ -499,9 +499,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 25,
-      "open_leads": 44,
-      "est_pipeline": 105600,
+      "tasks_incomplete": 26,
+      "open_leads": 45,
+      "est_pipeline": 108000,
       "is_manager": false,
       "is_lead": false
     },
