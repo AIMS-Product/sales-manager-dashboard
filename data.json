@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02 12:30 PM PDT",
+  "updated_at": "2026-04-02 12:45 PM PDT",
   "week_label": "Mar 30 \u2013 Apr 03, 2026",
   "monday_str": "2026-03-30",
   "today_str": "2026-04-02",
@@ -28,12 +28,12 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 141,
-  "total_shown": 71,
+  "total_booked": 140,
+  "total_shown": 72,
   "total_qualified": 73,
   "total_deals": 24,
   "total_revenue": 190031.0,
-  "team_close_rate": 17.0,
+  "team_close_rate": 17.1,
   "team_avg_rev_per_deal": 7917.96,
   "team_crm_compliance": 94.9,
   "team_task_adherence": 92.2,
@@ -63,7 +63,7 @@
     },
     {
       "funnel": "Reactivation Email",
-      "count": 7
+      "count": 6
     },
     {
       "funnel": "Meta Ads",
@@ -91,54 +91,14 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 77,
+    "in_house": 76,
     "external": 62,
     "unknown": 2,
-    "in_house_pct": 54.6,
-    "external_pct": 44.0,
+    "in_house_pct": 54.3,
+    "external_pct": 44.3,
     "unknown_pct": 1.4
   },
   "reps": [
-    {
-      "name": "Jason Aaron",
-      "booked": 18,
-      "shown": 7,
-      "qualified": 7,
-      "deals": 4,
-      "revenue": 46088.0,
-      "close_rate": 22.2,
-      "qa_score": null,
-      "avg_rev_per_deal": 11522.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 32,
-      "crm_total": 32,
-      "crm_detail": {
-        "show_up": [
-          11,
-          11
-        ],
-        "disposition": [
-          11,
-          11
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          5,
-          5
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 89.5,
-      "tasks_overdue": 10,
-      "tasks_incomplete": 95,
-      "open_leads": 58,
-      "est_pipeline": 139200,
-      "is_manager": false,
-      "is_lead": false
-    },
     {
       "name": "Robin Perkins",
       "booked": 18,
@@ -176,6 +136,46 @@
       "tasks_incomplete": 55,
       "open_leads": 76,
       "est_pipeline": 182400,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 18,
+      "shown": 8,
+      "qualified": 7,
+      "deals": 4,
+      "revenue": 46088.0,
+      "close_rate": 22.2,
+      "qa_score": null,
+      "avg_rev_per_deal": 11522.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 32,
+      "crm_total": 32,
+      "crm_detail": {
+        "show_up": [
+          11,
+          11
+        ],
+        "disposition": [
+          11,
+          11
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 89.5,
+      "tasks_overdue": 10,
+      "tasks_incomplete": 95,
+      "open_leads": 58,
+      "est_pipeline": 139200,
       "is_manager": false,
       "is_lead": false
     },
@@ -283,53 +283,6 @@
       "is_lead": false
     },
     {
-      "name": "Scott Seymour",
-      "booked": 14,
-      "shown": 9,
-      "qualified": 11,
-      "deals": 5,
-      "revenue": 39485.0,
-      "close_rate": 35.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 7897.0,
-      "crm_compliance": 97.6,
-      "crm_filled": 41,
-      "crm_total": 42,
-      "crm_detail": {
-        "show_up": [
-          11,
-          11
-        ],
-        "disposition": [
-          11,
-          11
-        ],
-        "qualified": [
-          10,
-          10
-        ],
-        "confidence": [
-          9,
-          10
-        ],
-        "missing_leads": [
-          {
-            "name": "Faith Mwangi",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 81,
-      "open_leads": 77,
-      "est_pipeline": 184800,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Christian Hartwell",
       "booked": 14,
       "shown": 7,
@@ -384,6 +337,53 @@
       "est_pipeline": 254400,
       "is_manager": false,
       "is_lead": true
+    },
+    {
+      "name": "Scott Seymour",
+      "booked": 13,
+      "shown": 9,
+      "qualified": 11,
+      "deals": 5,
+      "revenue": 39485.0,
+      "close_rate": 38.5,
+      "qa_score": null,
+      "avg_rev_per_deal": 7897.0,
+      "crm_compliance": 97.6,
+      "crm_filled": 41,
+      "crm_total": 42,
+      "crm_detail": {
+        "show_up": [
+          11,
+          11
+        ],
+        "disposition": [
+          11,
+          11
+        ],
+        "qualified": [
+          10,
+          10
+        ],
+        "confidence": [
+          9,
+          10
+        ],
+        "missing_leads": [
+          {
+            "name": "Faith Mwangi",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 81,
+      "open_leads": 77,
+      "est_pipeline": 184800,
+      "is_manager": false,
+      "is_lead": false
     },
     {
       "name": "Lyle Hubbard",
