@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-02 05:16 PM PDT",
+  "updated_at": "2026-04-02 05:30 PM PDT",
   "week_label": "Mar 30 \u2013 Apr 03, 2026",
   "monday_str": "2026-03-30",
   "today_str": "2026-04-02",
@@ -31,10 +31,10 @@
   "total_booked": 139,
   "total_shown": 83,
   "total_qualified": 78,
-  "total_deals": 26,
-  "total_revenue": 205025.0,
-  "team_close_rate": 18.7,
-  "team_avg_rev_per_deal": 7885.58,
+  "total_deals": 27,
+  "total_revenue": 214022.0,
+  "team_close_rate": 19.4,
+  "team_avg_rev_per_deal": 7926.74,
   "team_crm_compliance": 94.9,
   "team_task_adherence": 94.4,
   "team_overdue": 28,
@@ -180,6 +180,54 @@
       "is_lead": false
     },
     {
+      "name": "Elvis Ellis",
+      "booked": 15,
+      "shown": 7,
+      "qualified": 6,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": 6.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 94.4,
+      "crm_filled": 34,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          10,
+          11
+        ],
+        "disposition": [
+          11,
+          11
+        ],
+        "qualified": [
+          6,
+          7
+        ],
+        "confidence": [
+          7,
+          7
+        ],
+        "missing_leads": [
+          {
+            "name": "Rick",
+            "missing": [
+              "Show Up",
+              "Qualified"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 39,
+      "est_pipeline": 93600,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Eric Piccione",
       "booked": 15,
       "shown": 7,
@@ -235,63 +283,15 @@
       "is_lead": false
     },
     {
-      "name": "Elvis Ellis",
-      "booked": 15,
-      "shown": 7,
-      "qualified": 6,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": 6.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 94.4,
-      "crm_filled": 34,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          10,
-          11
-        ],
-        "disposition": [
-          11,
-          11
-        ],
-        "qualified": [
-          6,
-          7
-        ],
-        "confidence": [
-          7,
-          7
-        ],
-        "missing_leads": [
-          {
-            "name": "Rick",
-            "missing": [
-              "Show Up",
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 39,
-      "est_pipeline": 93600,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Scott Seymour",
       "booked": 13,
       "shown": 12,
       "qualified": 12,
-      "deals": 6,
-      "revenue": 45482.0,
-      "close_rate": 46.2,
+      "deals": 7,
+      "revenue": 54479.0,
+      "close_rate": 53.8,
       "qa_score": null,
-      "avg_rev_per_deal": 7580.33,
+      "avg_rev_per_deal": 7782.71,
       "crm_compliance": 97.4,
       "crm_filled": 37,
       "crm_total": 38,
@@ -386,46 +386,6 @@
       "is_lead": true
     },
     {
-      "name": "Lyle Hubbard",
-      "booked": 11,
-      "shown": 7,
-      "qualified": 7,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 9.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 24,
-      "crm_total": 24,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          7,
-          7
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          5,
-          5
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 107,
-      "open_leads": 39,
-      "est_pipeline": 93600,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Jake Skinner",
       "booked": 11,
       "shown": 4,
@@ -462,6 +422,46 @@
       "tasks_incomplete": 1,
       "open_leads": 69,
       "est_pipeline": 165600,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Lyle Hubbard",
+      "booked": 11,
+      "shown": 7,
+      "qualified": 7,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 9.1,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 24,
+      "crm_total": 24,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 107,
+      "open_leads": 39,
+      "est_pipeline": 93600,
       "is_manager": false,
       "is_lead": false
     },
