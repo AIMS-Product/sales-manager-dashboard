@@ -128,7 +128,6 @@ REP_QUOTAS = {
     "Eric Piccione": 100_000,
     "Jason Aaron": 75_000,
     "Robin Perkins": 75_000,
-    "Ryan Jones": 75_000,
     "John Kirk": 75_000,
     "Jake Skinner": 75_000,
     "Vince Bartolini": 50_000,
@@ -140,7 +139,7 @@ REP_QUOTAS = {
 EXCLUDE_USERS = {
     "Kristin Nelson", "Spencer Reynolds", "Stephen Olivas",
     "Ahmad Bukhari", "Mallory Kent", "Unknown", "Julia Scaroni",
-    "William Chase", "Jordan Humphrey", "Andrea Shoop",
+    "William Chase", "Jordan Humphrey", "Andrea Shoop", "Ryan Jones",
 }
 MANAGER_USERS = {"Joe Dysert"}
 LEAD_USERS = {"Christian Hartwell"}
@@ -481,7 +480,7 @@ def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
 
         # CRM Compliance — only for past meetings, with special handling per lead status
         disp_lower = str(disposition).strip().lower()
-        is_canceled_call = disp_lower == "canceled"
+        is_canceled_call = disp_lower in ("canceled", "canceled - rescheduled")
         is_reschedule = status_id == RESCHEDULE_LEAD_STATUS
         is_no_show = status_id == NO_SHOW_LEAD_STATUS
 
