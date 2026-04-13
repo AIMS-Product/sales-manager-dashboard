@@ -123,7 +123,6 @@ WEEKLY_TARGETS = {
 REP_QUOTAS = {
     "Christian Hartwell": 100_000,
     "Lyle Hubbard": 100_000,
-    "Ategeka Musinguzi": 100_000,
     "Scott Seymour": 100_000,
     "Eric Piccione": 100_000,
     "Jason Aaron": 75_000,
@@ -140,6 +139,7 @@ EXCLUDE_USERS = {
     "Kristin Nelson", "Spencer Reynolds", "Stephen Olivas",
     "Ahmad Bukhari", "Mallory Kent", "Unknown", "Julia Scaroni",
     "William Chase", "Jordan Humphrey", "Andrea Shoop", "Ryan Jones",
+    "Ategeka Musinguzi",
 }
 MANAGER_USERS = {"Joe Dysert"}
 LEAD_USERS = {"Christian Hartwell"}
