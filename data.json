@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-14 07:00 AM PDT",
+  "updated_at": "2026-04-14 07:15 AM PDT",
   "week_label": "Apr 13 \u2013 Apr 17, 2026",
   "monday_str": "2026-04-13",
   "today_str": "2026-04-14",
@@ -31,15 +31,15 @@
   "total_booked": 92,
   "total_shown": 33,
   "total_qualified": 19,
-  "total_deals": 3,
-  "total_revenue": 34991.0,
-  "team_close_rate": 3.3,
-  "team_avg_rev_per_deal": 11663.67,
+  "total_deals": 4,
+  "total_revenue": 55988.0,
+  "team_close_rate": 4.3,
+  "team_avg_rev_per_deal": 13997.0,
   "team_crm_compliance": 90.1,
   "team_task_adherence": 93.7,
   "team_overdue": 26,
-  "team_open_leads": 741,
-  "team_est_pipeline": 1778400,
+  "team_open_leads": 740,
+  "team_est_pipeline": 1776000,
   "funnel_breakdown": [
     {
       "funnel": "Instagram",
@@ -332,9 +332,49 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 27,
+      "tasks_incomplete": 28,
       "open_leads": 37,
       "est_pipeline": 88800,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Elvis Ellis",
+      "booked": 8,
+      "shown": 3,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 14,
+      "crm_total": 14,
+      "crm_detail": {
+        "show_up": [
+          4,
+          4
+        ],
+        "disposition": [
+          4,
+          4
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 50,
+      "est_pipeline": 120000,
       "is_manager": false,
       "is_lead": false
     },
@@ -386,42 +426,51 @@
       "is_lead": false
     },
     {
-      "name": "Elvis Ellis",
-      "booked": 8,
-      "shown": 3,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "name": "Eric Piccione",
+      "booked": 7,
+      "shown": 5,
+      "qualified": 1,
+      "deals": 1,
+      "revenue": 20997.0,
+      "close_rate": 14.3,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 14,
-      "crm_total": 14,
+      "avg_rev_per_deal": 20997.0,
+      "crm_compliance": 85.0,
+      "crm_filled": 17,
+      "crm_total": 20,
       "crm_detail": {
         "show_up": [
-          4,
-          4
+          5,
+          5
         ],
         "disposition": [
           4,
-          4
+          5
         ],
         "qualified": [
-          3,
-          3
+          4,
+          5
         ],
         "confidence": [
-          3,
-          3
+          4,
+          5
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Michael Beach",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 50,
-      "est_pipeline": 120000,
+      "tasks_incomplete": 2,
+      "open_leads": 63,
+      "est_pipeline": 151200,
       "is_manager": false,
       "is_lead": false
     },
@@ -469,55 +518,6 @@
       "tasks_incomplete": 128,
       "open_leads": 39,
       "est_pipeline": 93600,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Eric Piccione",
-      "booked": 7,
-      "shown": 5,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 85.0,
-      "crm_filled": 17,
-      "crm_total": 20,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          4,
-          5
-        ],
-        "qualified": [
-          4,
-          5
-        ],
-        "confidence": [
-          4,
-          5
-        ],
-        "missing_leads": [
-          {
-            "name": "Michael Beach",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 2,
-      "open_leads": 64,
-      "est_pipeline": 153600,
       "is_manager": false,
       "is_lead": false
     },
