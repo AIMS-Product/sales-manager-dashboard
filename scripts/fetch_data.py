@@ -4,11 +4,10 @@ Fetch WEEK-TO-DATE rep-level metrics from Close CRM.
 Writes data.json for the GitHub Pages dashboard.
 
 Strategy:
-  1. Paginate ALL meetings from /activity/meeting with _skip/_limit=100
-  2. Filter to current week (Monday through today PST) in Python
-  3. Classify titles in Python (include/exclude patterns)
-  4. Fetch lead data only for meetings that survive filtering (with _fields)
-  5. Separately fetch Closed/Won opps for the week
+  1. Query leads where "First Sales Call Booked Date" is within Mon–today (PDT)
+  2. Exclude leads with Canceled/Outside US status, excluded users
+  3. Process lead-level CRM fields for compliance, funnel, shown/qualified
+  4. Separately fetch Closed/Won opps, task adherence, qualified pipeline
 
 Weekly targets per rep:
   Meetings Booked: 20    Close Rate: 30%
@@ -22,7 +21,6 @@ import json
 import os
 import sys
 import time
-import re
 import requests
 from datetime import datetime, timezone, timedelta
 from calendar import monthrange
@@ -94,6 +92,7 @@ CF_LEAD_OWNER_ID           = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
 CF_QUALIFIED_ID            = "cf_ZDx7NBQaDzV1yYrFcBMzt6cIYj81dAcswpNN0CQzCPS"
 CF_CALL_DISPOSITION_ID     = "cf_n2QvikNfeZ0uWObMsyCJmnXnrbWNLGlSvYiKJTwxTqU"
 CF_FUNNEL_NAME_ID          = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
+CF_FIRST_SALES_CALL_BOOKED = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
 
 # Fields to request when fetching individual leads
 LEAD_FIELDS = ",".join([
@@ -103,6 +102,7 @@ LEAD_FIELDS = ",".join([
     f"custom.{CF_QUALIFIED_ID}",
     f"custom.{CF_CALL_DISPOSITION_ID}",
     f"custom.{CF_FUNNEL_NAME_ID}",
+    f"custom.{CF_FIRST_SALES_CALL_BOOKED}",
     "opportunities",
 ])
 
@@ -145,60 +145,237 @@ MANAGER_USERS = {"Joe Dysert"}
 LEAD_USERS = {"Christian Hartwell"}
 
 
-# ── Meeting title classification ─────────────────────────────────────────────
+# ── Fetch booked leads by "First Sales Call Booked Date" field ─────────────
 
-INCLUDE_PATTERNS = [
-    re.compile(r"vending\s+strategy\s+call", re.IGNORECASE),
-    re.compile(r"vendingpren[eu]+rs?\s+consultation", re.IGNORECASE),
-    re.compile(r"vendingpren[eu]+rs?\s+strategy\s+call", re.IGNORECASE),
-    re.compile(r"new\s+vendingpren[eu]+r\s+strategy\s+call", re.IGNORECASE),
-    re.compile(r"vending\s+consult\b", re.IGNORECASE),
-    re.compile(r"post\s+masterclass\s+strategy\s+call", re.IGNORECASE),
-]
+def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
+    """Query leads where 'First Sales Call Booked Date' is within Mon–today.
+    Process each lead for booked/shown/qualified/CRM/funnel counts.
+    Returns the same data structures the old meeting-based approach produced.
+    """
+    query = (f'"First Sales Call Booked Date" >= "{monday_str}" '
+             f'"First Sales Call Booked Date" <= "{today_str}"')
 
-# Scraper "Next Steps" titles — checked BEFORE the generic "Next Steps" exclusion
-INCLUDE_SCRAPER_RE = re.compile(
-    r"vendingpren[eu]+rs?\s*-?\s*next\s+steps"
-    r"|vendingpreneur\s+next\s+steps",
-    re.IGNORECASE
-)
+    all_leads = []
+    skip = 0
+    while True:
+        data = api_get("/lead/", {
+            "query": query,
+            "_fields": LEAD_FIELDS,
+            "_skip": skip,
+            "_limit": 200,
+        })
+        leads = data.get("data", [])
+        all_leads.extend(leads)
+        if not data.get("has_more", False):
+            break
+        skip += 200
 
-EXCLUDE_TITLE_CONTAINS = [
-    "vending quick discovery",
-    "follow-up", "follow up", "fallow up", "f/u",
-    "next steps", "rescheduled", "reschedule",
-    "enrollment", "silver start up", "bronze enrollment",
-    "questions on enrollment",
-]
+    print(f"  Leads with First Sales Call Booked Date in range: {len(all_leads)}", flush=True)
 
+    rep_booked = {}
+    rep_shown = {}
+    rep_qualified = {}
+    rep_crm_filled = {}
+    rep_crm_total = {}
+    # Per-field CRM detail tracking
+    rep_crm_show_up = {}      # {rep: [filled, total]}
+    rep_crm_disposition = {}
+    rep_crm_qualified = {}
+    rep_crm_confidence = {}
+    rep_crm_missing = {}      # {rep: [{name, missing: [...]}, ...]}
+    funnel_counts = {}         # {funnel_name: count}
 
-def is_first_call_meeting(title):
-    if not title:
-        return False
-    t = title.strip()
-    tl = t.lower()
-    # 1. Canceled prefix → exclude
-    if tl.startswith("canceled:"):
-        return False
-    # 2. Vending Quick Discovery → exclude
-    if "vending quick discovery" in tl:
-        return False
-    # 3. Scraper "Next Steps" titles → include (BEFORE generic exclusion)
-    if INCLUDE_SCRAPER_RE.search(t):
-        return True
-    # 4. Generic follow-up/next steps/reschedule → exclude
-    for pattern in EXCLUDE_TITLE_CONTAINS:
-        if pattern in tl:
-            return False
-    # 5. Anthony Q&A → exclude
-    if "anthony" in tl and "q&a" in tl:
-        return False
-    # 6. Standard include patterns → include
-    for regex in INCLUDE_PATTERNS:
-        if regex.search(t):
-            return True
-    # 7. Default → exclude
-    return False
+    crm_skipped_future = 0
+    crm_skipped_canceled = 0
+    crm_skipped_reschedule = 0
+    excluded_status = 0
+    excluded_user = 0
+
+    for lead in all_leads:
+        status_id = lead.get("status_id", "")
+        if status_id in EXCLUDED_LEAD_STATUSES:
+            excluded_status += 1
+            continue
+
+        # Custom fields — try flat first, then nested custom dict
+        show_up = lead.get(f"custom.{CF_FIRST_CALL_SHOW_ID}", "")
+        owner_raw = lead.get(f"custom.{CF_LEAD_OWNER_ID}", "")
+        qualified_val = lead.get(f"custom.{CF_QUALIFIED_ID}", "")
+        disposition = lead.get(f"custom.{CF_CALL_DISPOSITION_ID}", "")
+        booked_date = lead.get(f"custom.{CF_FIRST_SALES_CALL_BOOKED}", "")
+
+        custom = lead.get("custom", {})
+        if not show_up:
+            show_up = custom.get(CF_FIRST_CALL_SHOW_ID, "")
+        if not owner_raw:
+            owner_raw = custom.get(CF_LEAD_OWNER_ID, "")
+        if not qualified_val:
+            qualified_val = custom.get(CF_QUALIFIED_ID, "")
+        if not disposition:
+            disposition = custom.get(CF_CALL_DISPOSITION_ID, "")
+        if not booked_date:
+            booked_date = custom.get(CF_FIRST_SALES_CALL_BOOKED, "")
+
+        # Funnel name
+        funnel_raw = lead.get(f"custom.{CF_FUNNEL_NAME_ID}", "")
+        if not funnel_raw:
+            funnel_raw = custom.get(CF_FUNNEL_NAME_ID, "")
+
+        rep_name = resolve_owner(owner_raw, user_map, name_to_id)
+        if rep_name in EXCLUDE_USERS:
+            excluded_user += 1
+            continue
+
+        # Track funnel
+        funnel_name = str(funnel_raw).strip() if funnel_raw else "Unknown"
+        funnel_counts[funnel_name] = funnel_counts.get(funnel_name, 0) + 1
+
+        rep_booked[rep_name] = rep_booked.get(rep_name, 0) + 1
+
+        if str(show_up).strip().lower() == "yes":
+            rep_shown[rep_name] = rep_shown.get(rep_name, 0) + 1
+
+        if str(qualified_val).strip().lower() == "yes":
+            rep_qualified[rep_name] = rep_qualified.get(rep_name, 0) + 1
+
+        # CRM Compliance — only for past meetings (booked date < today)
+        is_past = str(booked_date)[:10] < today_str if booked_date else False
+        disp_lower = str(disposition).strip().lower()
+        is_canceled_call = disp_lower in ("canceled", "canceled - rescheduled")
+        is_reschedule = status_id == RESCHEDULE_LEAD_STATUS
+        is_no_show = status_id == NO_SHOW_LEAD_STATUS
+
+        if is_past and not is_canceled_call and not is_reschedule:
+
+            # Init per-field tracking for this rep
+            if rep_name not in rep_crm_show_up:
+                rep_crm_show_up[rep_name] = [0, 0]
+                rep_crm_disposition[rep_name] = [0, 0]
+                rep_crm_qualified[rep_name] = [0, 0]
+                rep_crm_confidence[rep_name] = [0, 0]
+
+            # No Show leads: only check Show Up + Disposition (2 fields)
+            # All other leads: check all 4 fields
+            crm_checks = 2 if is_no_show else 4
+            crm_filled = 0
+            missing_fields = []
+
+            # Field 1: Show Up (always checked)
+            rep_crm_show_up[rep_name][1] += 1
+            if is_field_filled(show_up):
+                crm_filled += 1
+                rep_crm_show_up[rep_name][0] += 1
+            else:
+                missing_fields.append("Show Up")
+
+            # Field 2: Disposition (always checked)
+            rep_crm_disposition[rep_name][1] += 1
+            if is_field_filled(disposition):
+                crm_filled += 1
+                rep_crm_disposition[rep_name][0] += 1
+            else:
+                missing_fields.append("Disposition")
+
+            # Field 3: Qualified (skip for No Show)
+            if not is_no_show:
+                rep_crm_qualified[rep_name][1] += 1
+                if is_field_filled(qualified_val):
+                    crm_filled += 1
+                    rep_crm_qualified[rep_name][0] += 1
+                else:
+                    missing_fields.append("Qualified")
+
+            # Field 4: Opp Confidence (skip for No Show)
+            if not is_no_show:
+                rep_crm_confidence[rep_name][1] += 1
+                opp_confidence_filled = False
+                for opp in lead.get("opportunities", []):
+                    if opp.get("pipeline_id") == PIPELINE_ID:
+                        opp_status = opp.get("status_id", "")
+                        if opp_status in LOST_OPP_STATUSES:
+                            opp_confidence_filled = True
+                            break
+                        confidence = opp.get("confidence", 0) or 0
+                        if confidence > 0:
+                            opp_confidence_filled = True
+                            break
+                if opp_confidence_filled:
+                    crm_filled += 1
+                    rep_crm_confidence[rep_name][0] += 1
+                else:
+                    missing_fields.append("Confidence")
+
+            # Track leads with missing fields
+            if missing_fields:
+                lead_display = lead.get("display_name", "") or lead.get("name", "") or lead.get("id", "")
+                if rep_name not in rep_crm_missing:
+                    rep_crm_missing[rep_name] = []
+                rep_crm_missing[rep_name].append({
+                    "name": lead_display,
+                    "missing": missing_fields,
+                })
+
+            rep_crm_filled[rep_name] = rep_crm_filled.get(rep_name, 0) + crm_filled
+            rep_crm_total[rep_name] = rep_crm_total.get(rep_name, 0) + crm_checks
+        elif is_canceled_call:
+            crm_skipped_canceled += 1
+        elif is_reschedule:
+            crm_skipped_reschedule += 1
+        elif not is_past:
+            crm_skipped_future += 1
+
+    print(f"  Excluded: {excluded_status} by lead status, {excluded_user} by user", flush=True)
+    print(f"  Qualifying leads: {sum(rep_booked.values())} across {len(rep_booked)} reps", flush=True)
+    if crm_skipped_future:
+        print(f"  ℹ️ CRM compliance skipped for {crm_skipped_future} leads (meeting today, not yet past)", flush=True)
+    if crm_skipped_canceled:
+        print(f"  ℹ️ CRM compliance skipped for {crm_skipped_canceled} leads (canceled disposition)", flush=True)
+    if crm_skipped_reschedule:
+        print(f"  ℹ️ CRM compliance skipped for {crm_skipped_reschedule} leads (reschedule status)", flush=True)
+
+    crm_detail = {}
+    for rn in rep_crm_show_up:
+        crm_detail[rn] = {
+            "show_up": rep_crm_show_up[rn],
+            "disposition": rep_crm_disposition[rn],
+            "qualified": rep_crm_qualified[rn],
+            "confidence": rep_crm_confidence[rn],
+            "missing_leads": rep_crm_missing.get(rn, []),
+        }
+
+    # Sort funnel breakdown by count descending
+    funnel_breakdown = sorted(funnel_counts.items(), key=lambda x: x[1], reverse=True)
+    funnel_breakdown = [{"funnel": f, "count": c} for f, c in funnel_breakdown]
+
+    # Compute in-house vs external vs unknown percentages
+    total_funnel = sum(fc["count"] for fc in funnel_breakdown)
+    in_house = 0
+    external = 0
+    unknown_src = 0
+    for fc in funnel_breakdown:
+        source = FUNNEL_SOURCE.get(fc["funnel"], None)
+        if source == "In-House":
+            in_house += fc["count"]
+        elif source == "External":
+            external += fc["count"]
+        else:
+            unknown_src += fc["count"]
+
+    funnel_sources = {
+        "in_house": in_house,
+        "external": external,
+        "unknown": unknown_src,
+        "in_house_pct": round(in_house / total_funnel * 100, 1) if total_funnel else 0,
+        "external_pct": round(external / total_funnel * 100, 1) if total_funnel else 0,
+        "unknown_pct": round(unknown_src / total_funnel * 100, 1) if total_funnel else 0,
+    }
+
+    print(f"  Funnel breakdown: {len(funnel_breakdown)} funnels | "
+          f"In-House: {in_house} ({funnel_sources['in_house_pct']}%) | "
+          f"External: {external} ({funnel_sources['external_pct']}%) | "
+          f"Unknown: {unknown_src} ({funnel_sources['unknown_pct']}%)", flush=True)
+
+    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources
 
 
 # ── API helpers ──────────────────────────────────────────────────────────────
@@ -293,331 +470,7 @@ def get_week_range(now_pst):
     return monday.strftime("%Y-%m-%d"), today.strftime("%Y-%m-%d"), dates
 
 
-# ── Step 1: Fetch ALL meetings, filter to this week in Python ────────────────
-
-def fetch_all_meetings_for_week(week_dates):
-    """Paginate all meetings, filter to this week's dates (PST)."""
-    try:
-        from zoneinfo import ZoneInfo
-        pst = ZoneInfo("America/Los_Angeles")
-    except ImportError:
-        pst = timezone(timedelta(hours=-8))
-
-    week_set = set(week_dates)
-
-    all_meetings = []
-    skip = 0
-    limit = 100
-
-    while True:
-        data = api_get("/activity/meeting/", {"_skip": skip, "_limit": limit})
-        meetings = data.get("data", [])
-        all_meetings.extend(meetings)
-
-        if skip % 1000 == 0 and skip > 0:
-            print(f"    Fetched {len(all_meetings)} meetings so far...", flush=True)
-
-        if not data.get("has_more", False):
-            break
-        skip += limit
-
-    print(f"  Total meetings in org: {len(all_meetings)}", flush=True)
-
-    # Filter to this week — convert UTC timestamps to PST
-    week_meetings = []
-    for m in all_meetings:
-        start = m.get("starts_at") or m.get("activity_at") or ""
-        if not start:
-            continue
-        try:
-            dt_str = start.replace("Z", "+00:00")
-            dt = datetime.fromisoformat(dt_str)
-            dt_pst = dt.astimezone(pst)
-            if dt_pst.strftime("%Y-%m-%d") in week_set:
-                week_meetings.append(m)
-        except (ValueError, TypeError):
-            if start[:10] in week_set:
-                week_meetings.append(m)
-
-    print(f"  Meetings this week (Mon-today): {len(week_meetings)}", flush=True)
-    return week_meetings
-
-
-# ── Step 2: Classify by user + title ─────────────────────────────────────────
-
-def classify_meetings(meetings, user_map):
-    excluded_user = 0
-    excluded_title = 0
-    qualifying = []
-
-    for m in meetings:
-        user_id = m.get("user_id", "")
-        rep_name = user_map.get(user_id, "Unknown")
-        if rep_name in EXCLUDE_USERS:
-            excluded_user += 1
-            continue
-
-        title = m.get("title", "") or ""
-
-        if not title.strip():
-            qualifying.append(m)
-        elif is_first_call_meeting(title):
-            qualifying.append(m)
-        else:
-            excluded_title += 1
-
-    print(f"  User excluded: {excluded_user}", flush=True)
-    print(f"  Title excluded: {excluded_title}", flush=True)
-    print(f"  Qualifying first-call meetings: {len(qualifying)}", flush=True)
-    return qualifying
-
-
-# ── Step 3: Fetch lead data for qualifying meetings ──────────────────────────
-
-def fetch_leads_for_meetings(meetings, user_map, name_to_id, today_str):
-    rep_booked = {}
-    rep_shown = {}
-    rep_qualified = {}
-    rep_crm_filled = {}
-    rep_crm_total = {}
-    # Per-field CRM detail tracking
-    rep_crm_show_up = {}      # {rep: [filled, total]}
-    rep_crm_disposition = {}
-    rep_crm_qualified = {}
-    rep_crm_confidence = {}
-    rep_crm_missing = {}      # {rep: [{name, missing: [...]}, ...]}
-    funnel_counts = {}         # {funnel_name: count}
-
-    # Pre-compute which leads have at least one PAST meeting (before today)
-    # CRM compliance only applies to meetings that already happened
-    try:
-        from zoneinfo import ZoneInfo
-        pst = ZoneInfo("America/Los_Angeles")
-    except ImportError:
-        pst = timezone(timedelta(hours=-8))
-
-    leads_with_past_meetings = set()
-    for m in meetings:
-        lead_id = m.get("lead_id", "")
-        if not lead_id:
-            continue
-        start = m.get("starts_at") or m.get("activity_at") or ""
-        if not start:
-            continue
-        try:
-            dt_str = start.replace("Z", "+00:00")
-            dt = datetime.fromisoformat(dt_str)
-            dt_pst = dt.astimezone(pst)
-            if dt_pst.strftime("%Y-%m-%d") < today_str:
-                leads_with_past_meetings.add(lead_id)
-        except (ValueError, TypeError):
-            pass
-
-    seen_leads = set()
-    lead_cache = {}
-    fetch_errors = 0
-    crm_skipped_future = 0
-    crm_skipped_canceled = 0
-    crm_skipped_reschedule = 0
-
-    for m in meetings:
-        lead_id = m.get("lead_id", "")
-        if not lead_id or lead_id in seen_leads:
-            continue
-        seen_leads.add(lead_id)
-
-        if lead_id not in lead_cache:
-            try:
-                lead_data = api_get(f"/lead/{lead_id}/", {"_fields": LEAD_FIELDS})
-                lead_cache[lead_id] = lead_data
-            except Exception as e:
-                print(f"    ⚠️ Failed to fetch lead {lead_id}: {e}", flush=True)
-                fetch_errors += 1
-                continue
-
-        lead = lead_cache[lead_id]
-
-        status_id = lead.get("status_id", "")
-        if status_id in EXCLUDED_LEAD_STATUSES:
-            continue
-
-        # Custom fields
-        show_up = lead.get(f"custom.{CF_FIRST_CALL_SHOW_ID}", "")
-        owner_raw = lead.get(f"custom.{CF_LEAD_OWNER_ID}", "")
-        qualified_val = lead.get(f"custom.{CF_QUALIFIED_ID}", "")
-        disposition = lead.get(f"custom.{CF_CALL_DISPOSITION_ID}", "")
-
-        custom = lead.get("custom", {})
-        if not show_up:
-            show_up = custom.get(CF_FIRST_CALL_SHOW_ID, "")
-        if not owner_raw:
-            owner_raw = custom.get(CF_LEAD_OWNER_ID, "")
-        if not qualified_val:
-            qualified_val = custom.get(CF_QUALIFIED_ID, "")
-        if not disposition:
-            disposition = custom.get(CF_CALL_DISPOSITION_ID, "")
-
-        # Funnel name
-        funnel_raw = lead.get(f"custom.{CF_FUNNEL_NAME_ID}", "")
-        if not funnel_raw:
-            funnel_raw = custom.get(CF_FUNNEL_NAME_ID, "")
-
-        rep_name = resolve_owner(owner_raw, user_map, name_to_id)
-        if rep_name in EXCLUDE_USERS:
-            continue
-
-        # Track funnel (before any rep-level skips since this is a team metric)
-        funnel_name = str(funnel_raw).strip() if funnel_raw else "Unknown"
-        funnel_counts[funnel_name] = funnel_counts.get(funnel_name, 0) + 1
-
-        rep_booked[rep_name] = rep_booked.get(rep_name, 0) + 1
-
-        if str(show_up).strip().lower() == "yes":
-            rep_shown[rep_name] = rep_shown.get(rep_name, 0) + 1
-
-        if str(qualified_val).strip().lower() == "yes":
-            rep_qualified[rep_name] = rep_qualified.get(rep_name, 0) + 1
-
-        # CRM Compliance — only for past meetings, with special handling per lead status
-        disp_lower = str(disposition).strip().lower()
-        is_canceled_call = disp_lower in ("canceled", "canceled - rescheduled")
-        is_reschedule = status_id == RESCHEDULE_LEAD_STATUS
-        is_no_show = status_id == NO_SHOW_LEAD_STATUS
-
-        if lead_id in leads_with_past_meetings and not is_canceled_call and not is_reschedule:
-
-            # Init per-field tracking for this rep
-            if rep_name not in rep_crm_show_up:
-                rep_crm_show_up[rep_name] = [0, 0]
-                rep_crm_disposition[rep_name] = [0, 0]
-                rep_crm_qualified[rep_name] = [0, 0]
-                rep_crm_confidence[rep_name] = [0, 0]
-
-            # No Show leads: only check Show Up + Disposition (2 fields)
-            # All other leads: check all 4 fields
-            crm_checks = 2 if is_no_show else 4
-            crm_filled = 0
-            missing_fields = []
-
-            # Field 1: Show Up (always checked)
-            rep_crm_show_up[rep_name][1] += 1
-            if is_field_filled(show_up):
-                crm_filled += 1
-                rep_crm_show_up[rep_name][0] += 1
-            else:
-                missing_fields.append("Show Up")
-
-            # Field 2: Disposition (always checked)
-            rep_crm_disposition[rep_name][1] += 1
-            if is_field_filled(disposition):
-                crm_filled += 1
-                rep_crm_disposition[rep_name][0] += 1
-            else:
-                missing_fields.append("Disposition")
-
-            # Field 3: Qualified (skip for No Show)
-            if not is_no_show:
-                rep_crm_qualified[rep_name][1] += 1
-                if is_field_filled(qualified_val):
-                    crm_filled += 1
-                    rep_crm_qualified[rep_name][0] += 1
-                else:
-                    missing_fields.append("Qualified")
-
-            # Field 4: Opp Confidence (skip for No Show)
-            if not is_no_show:
-                rep_crm_confidence[rep_name][1] += 1
-                opp_confidence_filled = False
-                for opp in lead.get("opportunities", []):
-                    if opp.get("pipeline_id") == PIPELINE_ID:
-                        opp_status = opp.get("status_id", "")
-                        if opp_status in LOST_OPP_STATUSES:
-                            opp_confidence_filled = True
-                            break
-                        confidence = opp.get("confidence", 0) or 0
-                        if confidence > 0:
-                            opp_confidence_filled = True
-                            break
-                if opp_confidence_filled:
-                    crm_filled += 1
-                    rep_crm_confidence[rep_name][0] += 1
-                else:
-                    missing_fields.append("Confidence")
-
-            # Track leads with missing fields
-            if missing_fields:
-                lead_display = lead.get("display_name", "") or lead.get("name", "") or lead_id
-                if rep_name not in rep_crm_missing:
-                    rep_crm_missing[rep_name] = []
-                rep_crm_missing[rep_name].append({
-                    "name": lead_display,
-                    "missing": missing_fields,
-                })
-
-            rep_crm_filled[rep_name] = rep_crm_filled.get(rep_name, 0) + crm_filled
-            rep_crm_total[rep_name] = rep_crm_total.get(rep_name, 0) + crm_checks
-        elif is_canceled_call:
-            crm_skipped_canceled += 1
-        elif is_reschedule:
-            crm_skipped_reschedule += 1
-        else:
-            crm_skipped_future += 1
-
-    if fetch_errors:
-        print(f"  ⚠️ {fetch_errors} lead fetch errors", flush=True)
-    if crm_skipped_future:
-        print(f"  ℹ️ CRM compliance skipped for {crm_skipped_future} leads (meeting today, not yet past)", flush=True)
-    if crm_skipped_canceled:
-        print(f"  ℹ️ CRM compliance skipped for {crm_skipped_canceled} leads (canceled disposition)", flush=True)
-    if crm_skipped_reschedule:
-        print(f"  ℹ️ CRM compliance skipped for {crm_skipped_reschedule} leads (reschedule status)", flush=True)
-
-    crm_detail = {}
-    for rn in rep_crm_show_up:
-        crm_detail[rn] = {
-            "show_up": rep_crm_show_up[rn],
-            "disposition": rep_crm_disposition[rn],
-            "qualified": rep_crm_qualified[rn],
-            "confidence": rep_crm_confidence[rn],
-            "missing_leads": rep_crm_missing.get(rn, []),
-        }
-
-    # Sort funnel breakdown by count descending
-    funnel_breakdown = sorted(funnel_counts.items(), key=lambda x: x[1], reverse=True)
-    funnel_breakdown = [{"funnel": f, "count": c} for f, c in funnel_breakdown]
-
-    # Compute in-house vs external vs unknown percentages
-    total_funnel = sum(fc["count"] for fc in funnel_breakdown)
-    in_house = 0
-    external = 0
-    unknown_src = 0
-    for fc in funnel_breakdown:
-        source = FUNNEL_SOURCE.get(fc["funnel"], None)
-        if source == "In-House":
-            in_house += fc["count"]
-        elif source == "External":
-            external += fc["count"]
-        else:
-            unknown_src += fc["count"]
-
-    funnel_sources = {
-        "in_house": in_house,
-        "external": external,
-        "unknown": unknown_src,
-        "in_house_pct": round(in_house / total_funnel * 100, 1) if total_funnel else 0,
-        "external_pct": round(external / total_funnel * 100, 1) if total_funnel else 0,
-        "unknown_pct": round(unknown_src / total_funnel * 100, 1) if total_funnel else 0,
-    }
-
-    print(f"  Funnel breakdown: {len(funnel_breakdown)} funnels | "
-          f"In-House: {in_house} ({funnel_sources['in_house_pct']}%) | "
-          f"External: {external} ({funnel_sources['external_pct']}%) | "
-          f"Unknown: {unknown_src} ({funnel_sources['unknown_pct']}%)", flush=True)
-
-    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources
-
-
-# ── Step 4: Fetch Closed/Won opps for the week ──────────────────────────────
+# ── Step 2: Fetch Closed/Won opps for the week ──────────────────────────────
 
 def fetch_closed_won_week(monday_str, today_str):
     all_opps = []
@@ -638,7 +491,7 @@ def fetch_closed_won_week(monday_str, today_str):
     return [o for o in all_opps if o.get("pipeline_id") == PIPELINE_ID]
 
 
-# ── Step 5: Fetch task adherence per rep ─────────────────────────────────────
+# ── Step 3: Fetch task adherence per rep ─────────────────────────────────────
 
 def fetch_task_adherence(user_map, today_str):
     """For each non-manager rep, fetch incomplete tasks and calculate adherence.
@@ -736,7 +589,7 @@ def fetch_task_adherence(user_map, today_str):
     return rep_adherence, rep_overdue, rep_total_incomplete
 
 
-# ── Step 6: Fetch open leads per rep ─────────────────────────────────────────
+# ── Step 4: Fetch open leads per rep ─────────────────────────────────────────
 
 def fetch_open_leads_per_rep(user_map):
     """Count qualified open leads per rep.
@@ -812,7 +665,7 @@ def build_dashboard_data():
     now = now_utc.astimezone(pst)
     today_str = now.strftime("%Y-%m-%d")
 
-    monday_str, today_str, week_dates = get_week_range(now)
+    monday_str, today_str, _ = get_week_range(now)
     day_of_week = now.date().weekday() + 1  # 1=Mon, 5=Fri
 
     print(f"Fetching WTD data: {monday_str} through {today_str} (day {day_of_week} of week)...", flush=True)
@@ -845,17 +698,10 @@ def build_dashboard_data():
             rep_deals[rep_name] = rep_deals.get(rep_name, 0) + 1
             seen_opp_leads.add(lead_key)
 
-    # Meetings: fetch all → filter to this week → classify → fetch leads
-    print("  Fetching all meetings (paginated)...", flush=True)
-    week_meetings = fetch_all_meetings_for_week(week_dates)
-
-    print("  Classifying by user + title...", flush=True)
-    qualifying = classify_meetings(week_meetings, user_map)
-
-    print(f"  Fetching lead data for {len(qualifying)} qualifying meetings...", flush=True)
+    # Booked meetings: query leads by First Sales Call Booked Date field
+    print("  Fetching leads by First Sales Call Booked Date...", flush=True)
     rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources = \
-        fetch_leads_for_meetings(qualifying, user_map, name_to_id, today_str)
-    print(f"  Final counts by {len(rep_booked)} reps.", flush=True)
+        fetch_booked_leads(monday_str, today_str, user_map, name_to_id)
 
     # Task adherence (per rep, excludes managers)
     print("  Fetching task adherence per rep...", flush=True)
