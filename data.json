@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-14 01:00 PM PDT",
+  "updated_at": "2026-04-14 01:15 PM PDT",
   "week_label": "Apr 13 \u2013 Apr 17, 2026",
   "monday_str": "2026-04-13",
   "today_str": "2026-04-14",
@@ -28,12 +28,12 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 84,
-  "total_shown": 39,
-  "total_qualified": 24,
+  "total_booked": 85,
+  "total_shown": 40,
+  "total_qualified": 25,
   "total_deals": 5,
   "total_revenue": 64985.0,
-  "team_close_rate": 6.0,
+  "team_close_rate": 5.9,
   "team_avg_rev_per_deal": 12997.0,
   "team_crm_compliance": 92.3,
   "team_task_adherence": 96.6,
@@ -54,15 +54,15 @@
       "count": 8
     },
     {
+      "funnel": "Internal Webinar",
+      "count": 7
+    },
+    {
       "funnel": "Website",
       "count": 6
     },
     {
       "funnel": "Meta Ads",
-      "count": 6
-    },
-    {
-      "funnel": "Internal Webinar",
       "count": 6
     },
     {
@@ -87,11 +87,11 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 33,
+    "in_house": 34,
     "external": 50,
     "unknown": 1,
-    "in_house_pct": 39.3,
-    "external_pct": 59.5,
+    "in_house_pct": 40.0,
+    "external_pct": 58.8,
     "unknown_pct": 1.2
   },
   "reps": [
@@ -164,12 +164,12 @@
     },
     {
       "name": "Robin Perkins",
-      "booked": 9,
-      "shown": 4,
-      "qualified": 4,
+      "booked": 10,
+      "shown": 5,
+      "qualified": 5,
       "deals": 1,
       "revenue": 11997.0,
-      "close_rate": 11.1,
+      "close_rate": 10.0,
       "qa_score": null,
       "avg_rev_per_deal": 11997.0,
       "crm_compliance": 100.0,
@@ -199,46 +199,6 @@
       "tasks_incomplete": 54,
       "open_leads": 74,
       "est_pipeline": 177600,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Scott Seymour",
-      "booked": 9,
-      "shown": 4,
-      "qualified": 3,
-      "deals": 2,
-      "revenue": 22994.0,
-      "close_rate": 22.2,
-      "qa_score": null,
-      "avg_rev_per_deal": 11497.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 10,
-      "crm_total": 10,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 89,
-      "open_leads": 83,
-      "est_pipeline": 199200,
       "is_manager": false,
       "is_lead": false
     },
@@ -283,26 +243,26 @@
       "is_lead": false
     },
     {
-      "name": "Vince Bartolini",
-      "booked": 8,
-      "shown": 2,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "name": "Scott Seymour",
+      "booked": 9,
+      "shown": 4,
+      "qualified": 3,
+      "deals": 2,
+      "revenue": 22994.0,
+      "close_rate": 22.2,
       "qa_score": null,
-      "avg_rev_per_deal": null,
+      "avg_rev_per_deal": 11497.0,
       "crm_compliance": 100.0,
-      "crm_filled": 14,
-      "crm_total": 14,
+      "crm_filled": 10,
+      "crm_total": 10,
       "crm_detail": {
         "show_up": [
-          5,
-          5
+          3,
+          3
         ],
         "disposition": [
-          5,
-          5
+          3,
+          3
         ],
         "qualified": [
           2,
@@ -316,9 +276,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 22,
-      "open_leads": 41,
-      "est_pipeline": 98400,
+      "tasks_incomplete": 90,
+      "open_leads": 83,
+      "est_pipeline": 199200,
       "is_manager": false,
       "is_lead": false
     },
@@ -359,6 +319,93 @@
       "tasks_incomplete": 0,
       "open_leads": 52,
       "est_pipeline": 124800,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Vince Bartolini",
+      "booked": 8,
+      "shown": 2,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 14,
+      "crm_total": 14,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 22,
+      "open_leads": 41,
+      "est_pipeline": 98400,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Jake Skinner",
+      "booked": 7,
+      "shown": 3,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 91.7,
+      "crm_filled": 11,
+      "crm_total": 12,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          2,
+          3
+        ],
+        "missing_leads": [
+          {
+            "name": "Jeffery Simerson",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 0.0,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 1,
+      "open_leads": 92,
+      "est_pipeline": 220800,
       "is_manager": false,
       "is_lead": false
     },
@@ -408,53 +455,6 @@
       "tasks_incomplete": 2,
       "open_leads": 67,
       "est_pipeline": 160800,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Jake Skinner",
-      "booked": 7,
-      "shown": 3,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 91.7,
-      "crm_filled": 11,
-      "crm_total": 12,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          2,
-          3
-        ],
-        "missing_leads": [
-          {
-            "name": "Jeffery Simerson",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 0.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 1,
-      "open_leads": 92,
-      "est_pipeline": 220800,
       "is_manager": false,
       "is_lead": false
     },
