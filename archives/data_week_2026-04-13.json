@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-14 02:30 PM PDT",
+  "updated_at": "2026-04-14 02:45 PM PDT",
   "week_label": "Apr 13 \u2013 Apr 17, 2026",
   "monday_str": "2026-04-13",
   "today_str": "2026-04-14",
@@ -28,22 +28,22 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 88,
-  "total_shown": 43,
-  "total_qualified": 27,
+  "total_booked": 89,
+  "total_shown": 47,
+  "total_qualified": 30,
   "total_deals": 5,
   "total_revenue": 64985.0,
-  "team_close_rate": 5.7,
+  "team_close_rate": 5.6,
   "team_avg_rev_per_deal": 12997.0,
-  "team_crm_compliance": 90.7,
+  "team_crm_compliance": 90.5,
   "team_task_adherence": 96.8,
   "team_overdue": 13,
-  "team_open_leads": 788,
-  "team_est_pipeline": 1891200,
+  "team_open_leads": 791,
+  "team_est_pipeline": 1898400,
   "funnel_breakdown": [
     {
       "funnel": "Instagram",
-      "count": 36
+      "count": 37
     },
     {
       "funnel": "Low Ticket Funnel",
@@ -54,7 +54,7 @@
       "count": 11
     },
     {
-      "funnel": "Internal Webinar",
+      "funnel": "Meta Ads",
       "count": 6
     },
     {
@@ -62,7 +62,7 @@
       "count": 6
     },
     {
-      "funnel": "Meta Ads",
+      "funnel": "Internal Webinar",
       "count": 6
     },
     {
@@ -88,13 +88,53 @@
   ],
   "funnel_sources": {
     "in_house": 36,
-    "external": 51,
+    "external": 52,
     "unknown": 1,
-    "in_house_pct": 40.9,
-    "external_pct": 58.0,
+    "in_house_pct": 40.4,
+    "external_pct": 58.4,
     "unknown_pct": 1.1
   },
   "reps": [
+    {
+      "name": "Robin Perkins",
+      "booked": 11,
+      "shown": 5,
+      "qualified": 5,
+      "deals": 1,
+      "revenue": 11997.0,
+      "close_rate": 9.1,
+      "qa_score": null,
+      "avg_rev_per_deal": 11997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 16,
+      "crm_total": 16,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 98.1,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 54,
+      "open_leads": 74,
+      "est_pipeline": 177600,
+      "is_manager": false,
+      "is_lead": false
+    },
     {
       "name": "Chris Wanke",
       "booked": 11,
@@ -163,46 +203,6 @@
       "is_lead": false
     },
     {
-      "name": "Robin Perkins",
-      "booked": 11,
-      "shown": 5,
-      "qualified": 5,
-      "deals": 1,
-      "revenue": 11997.0,
-      "close_rate": 9.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 11997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 16,
-      "crm_total": 16,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 98.1,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 54,
-      "open_leads": 74,
-      "est_pipeline": 177600,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Scott Seymour",
       "booked": 9,
       "shown": 5,
@@ -243,10 +243,50 @@
       "is_lead": false
     },
     {
+      "name": "Elvis Ellis",
+      "booked": 9,
+      "shown": 5,
+      "qualified": 5,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 12,
+      "crm_total": 12,
+      "crm_detail": {
+        "show_up": [
+          4,
+          4
+        ],
+        "disposition": [
+          4,
+          4
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 54,
+      "est_pipeline": 129600,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "John Kirk",
       "booked": 9,
-      "shown": 4,
-      "qualified": 4,
+      "shown": 6,
+      "qualified": 5,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
@@ -277,50 +317,50 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 1,
-      "open_leads": 77,
-      "est_pipeline": 184800,
+      "open_leads": 78,
+      "est_pipeline": 187200,
       "is_manager": false,
       "is_lead": false
     },
     {
-      "name": "Christian Hartwell",
+      "name": "Vince Bartolini",
       "booked": 8,
-      "shown": 5,
-      "qualified": 4,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": 12.5,
+      "shown": 2,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
       "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
+      "avg_rev_per_deal": null,
       "crm_compliance": 100.0,
-      "crm_filled": 16,
-      "crm_total": 16,
+      "crm_filled": 14,
+      "crm_total": 14,
       "crm_detail": {
         "show_up": [
-          4,
-          4
+          5,
+          5
         ],
         "disposition": [
-          4,
-          4
+          5,
+          5
         ],
         "qualified": [
-          4,
-          4
+          2,
+          2
         ],
         "confidence": [
-          4,
-          4
+          2,
+          2
         ],
         "missing_leads": []
       },
-      "task_adherence": 90.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 10,
-      "open_leads": 118,
-      "est_pipeline": 283200,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 23,
+      "open_leads": 41,
+      "est_pipeline": 98400,
       "is_manager": false,
-      "is_lead": true
+      "is_lead": false
     },
     {
       "name": "Jake Skinner",
@@ -378,18 +418,18 @@
       "is_lead": false
     },
     {
-      "name": "Elvis Ellis",
+      "name": "Christian Hartwell",
       "booked": 8,
-      "shown": 3,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "shown": 5,
+      "qualified": 4,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": 12.5,
       "qa_score": null,
-      "avg_rev_per_deal": null,
+      "avg_rev_per_deal": 8997.0,
       "crm_compliance": 100.0,
-      "crm_filled": 14,
-      "crm_total": 14,
+      "crm_filled": 16,
+      "crm_total": 16,
       "crm_detail": {
         "show_up": [
           4,
@@ -400,62 +440,22 @@
           4
         ],
         "qualified": [
-          3,
-          3
+          4,
+          4
         ],
         "confidence": [
-          3,
-          3
+          4,
+          4
         ],
         "missing_leads": []
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 52,
-      "est_pipeline": 124800,
+      "task_adherence": 90.0,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 10,
+      "open_leads": 118,
+      "est_pipeline": 283200,
       "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Vince Bartolini",
-      "booked": 8,
-      "shown": 2,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 14,
-      "crm_total": 14,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 23,
-      "open_leads": 41,
-      "est_pipeline": 98400,
-      "is_manager": false,
-      "is_lead": false
+      "is_lead": true
     },
     {
       "name": "Eric Piccione",
