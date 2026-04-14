@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-14 01:45 PM PDT",
+  "updated_at": "2026-04-14 01:57 PM PDT",
   "week_label": "Apr 13 \u2013 Apr 17, 2026",
   "monday_str": "2026-04-13",
   "today_str": "2026-04-14",
@@ -28,18 +28,18 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 86,
-  "total_shown": 40,
-  "total_qualified": 25,
+  "total_booked": 87,
+  "total_shown": 42,
+  "total_qualified": 26,
   "total_deals": 5,
   "total_revenue": 64985.0,
-  "team_close_rate": 5.8,
+  "team_close_rate": 5.7,
   "team_avg_rev_per_deal": 12997.0,
-  "team_crm_compliance": 92.3,
+  "team_crm_compliance": 90.7,
   "team_task_adherence": 96.8,
   "team_overdue": 13,
-  "team_open_leads": 787,
-  "team_est_pipeline": 1888800,
+  "team_open_leads": 788,
+  "team_est_pipeline": 1891200,
   "funnel_breakdown": [
     {
       "funnel": "Instagram",
@@ -51,14 +51,14 @@
     },
     {
       "funnel": "YouTube",
-      "count": 9
-    },
-    {
-      "funnel": "Internal Webinar",
-      "count": 7
+      "count": 11
     },
     {
       "funnel": "Website",
+      "count": 6
+    },
+    {
+      "funnel": "Internal Webinar",
       "count": 6
     },
     {
@@ -87,12 +87,12 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 35,
+    "in_house": 36,
     "external": 50,
     "unknown": 1,
-    "in_house_pct": 40.7,
-    "external_pct": 58.1,
-    "unknown_pct": 1.2
+    "in_house_pct": 41.4,
+    "external_pct": 57.5,
+    "unknown_pct": 1.1
   },
   "reps": [
     {
@@ -133,6 +133,13 @@
             ]
           },
           {
+            "name": "Kiara Harris",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Nick Verdigets",
             "missing": [
               "Qualified",
@@ -143,13 +150,6 @@
             "name": "Ben Barichivich",
             "missing": [
               "Qualified"
-            ]
-          },
-          {
-            "name": "Kiara Harris",
-            "missing": [
-              "Qualified",
-              "Confidence"
             ]
           }
         ]
@@ -276,9 +276,89 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 90,
-      "open_leads": 83,
-      "est_pipeline": 199200,
+      "tasks_incomplete": 91,
+      "open_leads": 84,
+      "est_pipeline": 201600,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Christian Hartwell",
+      "booked": 8,
+      "shown": 5,
+      "qualified": 4,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": 12.5,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 16,
+      "crm_total": 16,
+      "crm_detail": {
+        "show_up": [
+          4,
+          4
+        ],
+        "disposition": [
+          4,
+          4
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          4,
+          4
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 90.0,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 10,
+      "open_leads": 118,
+      "est_pipeline": 283200,
+      "is_manager": false,
+      "is_lead": true
+    },
+    {
+      "name": "Vince Bartolini",
+      "booked": 8,
+      "shown": 2,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 14,
+      "crm_total": 14,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 23,
+      "open_leads": 41,
+      "est_pipeline": 98400,
       "is_manager": false,
       "is_lead": false
     },
@@ -323,131 +403,59 @@
       "is_lead": false
     },
     {
-      "name": "Vince Bartolini",
+      "name": "Jake Skinner",
       "booked": 8,
-      "shown": 2,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 14,
-      "crm_total": 14,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 23,
-      "open_leads": 41,
-      "est_pipeline": 98400,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 7,
       "shown": 4,
-      "qualified": 3,
+      "qualified": 2,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 91.7,
-      "crm_filled": 11,
-      "crm_total": 12,
+      "crm_compliance": 75.0,
+      "crm_filled": 12,
+      "crm_total": 16,
       "crm_detail": {
         "show_up": [
-          3,
-          3
+          4,
+          4
         ],
         "disposition": [
           3,
-          3
+          4
         ],
         "qualified": [
           3,
-          3
+          4
         ],
         "confidence": [
           2,
-          3
+          4
         ],
         "missing_leads": [
           {
-            "name": "Charlie Neuman",
+            "name": "Jeffery Simerson",
             "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Arturo Eligio",
+            "missing": [
+              "Disposition",
+              "Qualified",
               "Confidence"
             ]
           }
         ]
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 130,
-      "open_leads": 45,
-      "est_pipeline": 108000,
+      "task_adherence": 0.0,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 1,
+      "open_leads": 92,
+      "est_pipeline": 220800,
       "is_manager": false,
       "is_lead": false
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 7,
-      "shown": 4,
-      "qualified": 3,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": 14.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 12,
-      "crm_total": 12,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 90.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 10,
-      "open_leads": 118,
-      "est_pipeline": 283200,
-      "is_manager": false,
-      "is_lead": true
     },
     {
       "name": "Eric Piccione",
@@ -499,10 +507,10 @@
       "is_lead": false
     },
     {
-      "name": "Jake Skinner",
+      "name": "Lyle Hubbard",
       "booked": 7,
-      "shown": 3,
-      "qualified": 2,
+      "shown": 4,
+      "qualified": 3,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
@@ -530,24 +538,24 @@
         ],
         "missing_leads": [
           {
-            "name": "Jeffery Simerson",
+            "name": "Charlie Neuman",
             "missing": [
               "Confidence"
             ]
           }
         ]
       },
-      "task_adherence": 0.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 1,
-      "open_leads": 92,
-      "est_pipeline": 220800,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 130,
+      "open_leads": 45,
+      "est_pipeline": 108000,
       "is_manager": false,
       "is_lead": false
     },
     {
       "name": "Erick Aguero",
-      "booked": 3,
+      "booked": 2,
       "shown": 1,
       "qualified": 0,
       "deals": 0,
