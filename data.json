@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-16 03:30 AM PDT",
+  "updated_at": "2026-04-16 03:45 AM PDT",
   "week_label": "Apr 13 \u2013 Apr 17, 2026",
   "monday_str": "2026-04-13",
   "today_str": "2026-04-16",
@@ -322,6 +322,53 @@
       "is_lead": false
     },
     {
+      "name": "Vince Bartolini",
+      "booked": 17,
+      "shown": 4,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 96.4,
+      "crm_filled": 27,
+      "crm_total": 28,
+      "crm_detail": {
+        "show_up": [
+          10,
+          10
+        ],
+        "disposition": [
+          10,
+          10
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          3,
+          4
+        ],
+        "missing_leads": [
+          {
+            "name": "Noah Santana",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 96.6,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 29,
+      "open_leads": 43,
+      "est_pipeline": 103200,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "John Kirk",
       "booked": 17,
       "shown": 9,
@@ -381,49 +428,51 @@
       "is_lead": false
     },
     {
-      "name": "Vince Bartolini",
-      "booked": 17,
-      "shown": 4,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "name": "Scott Seymour",
+      "booked": 14,
+      "shown": 10,
+      "qualified": 9,
+      "deals": 5,
+      "revenue": 40985.0,
+      "close_rate": 35.7,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 96.4,
-      "crm_filled": 27,
-      "crm_total": 28,
+      "avg_rev_per_deal": 8197.0,
+      "crm_compliance": 93.8,
+      "crm_filled": 45,
+      "crm_total": 48,
       "crm_detail": {
         "show_up": [
-          10,
-          10
+          13,
+          13
         ],
         "disposition": [
-          10,
-          10
+          12,
+          13
         ],
         "qualified": [
-          4,
-          4
+          10,
+          11
         ],
         "confidence": [
-          3,
-          4
+          10,
+          11
         ],
         "missing_leads": [
           {
-            "name": "Noah Santana",
+            "name": "Jaden Flicker",
             "missing": [
+              "Disposition",
+              "Qualified",
               "Confidence"
             ]
           }
         ]
       },
-      "task_adherence": 96.6,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 29,
-      "open_leads": 43,
-      "est_pipeline": 103200,
+      "task_adherence": 97.7,
+      "tasks_overdue": 2,
+      "tasks_incomplete": 87,
+      "open_leads": 84,
+      "est_pipeline": 201600,
       "is_manager": false,
       "is_lead": false
     },
@@ -473,55 +522,6 @@
       "tasks_incomplete": 2,
       "open_leads": 67,
       "est_pipeline": 160800,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Scott Seymour",
-      "booked": 14,
-      "shown": 10,
-      "qualified": 9,
-      "deals": 5,
-      "revenue": 40985.0,
-      "close_rate": 35.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 8197.0,
-      "crm_compliance": 93.8,
-      "crm_filled": 45,
-      "crm_total": 48,
-      "crm_detail": {
-        "show_up": [
-          13,
-          13
-        ],
-        "disposition": [
-          12,
-          13
-        ],
-        "qualified": [
-          10,
-          11
-        ],
-        "confidence": [
-          10,
-          11
-        ],
-        "missing_leads": [
-          {
-            "name": "Jaden Flicker",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 97.7,
-      "tasks_overdue": 2,
-      "tasks_incomplete": 87,
-      "open_leads": 84,
-      "est_pipeline": 201600,
       "is_manager": false,
       "is_lead": false
     },
@@ -613,28 +613,6 @@
       "is_lead": true
     },
     {
-      "name": "Jason Aaron",
-      "booked": 8,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 5397.0,
-      "close_rate": 12.5,
-      "qa_score": null,
-      "avg_rev_per_deal": 5397.0,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 92.6,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 81,
-      "open_leads": 67,
-      "est_pipeline": 160800,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Elvis Ellis",
       "booked": 8,
       "shown": 5,
@@ -678,6 +656,28 @@
       "tasks_incomplete": 0,
       "open_leads": 54,
       "est_pipeline": 129600,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 8,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 5397.0,
+      "close_rate": 12.5,
+      "qa_score": null,
+      "avg_rev_per_deal": 5397.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 92.6,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 81,
+      "open_leads": 67,
+      "est_pipeline": 160800,
       "is_manager": false,
       "is_lead": false
     },
