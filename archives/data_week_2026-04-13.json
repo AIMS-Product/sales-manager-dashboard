@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-16 09:30 AM PDT",
+  "updated_at": "2026-04-16 09:45 AM PDT",
   "week_label": "Apr 13 \u2013 Apr 17, 2026",
   "monday_str": "2026-04-13",
   "today_str": "2026-04-16",
@@ -28,22 +28,22 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 164,
+  "total_booked": 163,
   "total_shown": 82,
   "total_qualified": 55,
   "total_deals": 11,
   "total_revenue": 100367.0,
   "team_close_rate": 6.7,
   "team_avg_rev_per_deal": 9124.27,
-  "team_crm_compliance": 90.9,
+  "team_crm_compliance": 90.8,
   "team_task_adherence": 93.3,
   "team_overdue": 28,
-  "team_open_leads": 812,
-  "team_est_pipeline": 1948800,
+  "team_open_leads": 813,
+  "team_est_pipeline": 1951200,
   "funnel_breakdown": [
     {
       "funnel": "Instagram",
-      "count": 61
+      "count": 60
     },
     {
       "funnel": "Low Ticket Funnel",
@@ -92,16 +92,16 @@
   ],
   "funnel_sources": {
     "in_house": 66,
-    "external": 94,
+    "external": 93,
     "unknown": 4,
-    "in_house_pct": 40.2,
-    "external_pct": 57.3,
-    "unknown_pct": 2.4
+    "in_house_pct": 40.5,
+    "external_pct": 57.1,
+    "unknown_pct": 2.5
   },
   "reps": [
     {
       "name": "Chris Wanke",
-      "booked": 23,
+      "booked": 22,
       "shown": 8,
       "qualified": 0,
       "deals": 0,
@@ -130,6 +130,12 @@
           8
         ],
         "missing_leads": [
+          {
+            "name": "Ray Omowale",
+            "missing": [
+              "Qualified"
+            ]
+          },
           {
             "name": "Caitlin Wendler",
             "missing": [
@@ -174,12 +180,6 @@
               "Disposition",
               "Qualified",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Ray Omowale",
-            "missing": [
-              "Qualified"
             ]
           }
         ]
@@ -284,25 +284,25 @@
       "close_rate": 11.1,
       "qa_score": null,
       "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 98.2,
-      "crm_filled": 55,
-      "crm_total": 56,
+      "crm_compliance": 98.1,
+      "crm_filled": 51,
+      "crm_total": 52,
       "crm_detail": {
         "show_up": [
-          16,
-          16
+          15,
+          15
         ],
         "disposition": [
-          16,
-          16
+          15,
+          15
         ],
         "qualified": [
-          12,
-          12
+          11,
+          11
         ],
         "confidence": [
-          11,
-          12
+          10,
+          11
         ],
         "missing_leads": [
           {
@@ -313,9 +313,9 @@
           }
         ]
       },
-      "task_adherence": 88.3,
+      "task_adherence": 88.1,
       "tasks_overdue": 7,
-      "tasks_incomplete": 60,
+      "tasks_incomplete": 59,
       "open_leads": 78,
       "est_pipeline": 187200,
       "is_manager": false,
@@ -470,53 +470,6 @@
       "is_lead": false
     },
     {
-      "name": "Lyle Hubbard",
-      "booked": 13,
-      "shown": 7,
-      "qualified": 7,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 97.2,
-      "crm_filled": 35,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          10,
-          10
-        ],
-        "disposition": [
-          10,
-          10
-        ],
-        "qualified": [
-          8,
-          8
-        ],
-        "confidence": [
-          7,
-          8
-        ],
-        "missing_leads": [
-          {
-            "name": "Charlie Neuman",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 135,
-      "open_leads": 50,
-      "est_pipeline": 120000,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Eric Piccione",
       "booked": 13,
       "shown": 7,
@@ -562,6 +515,53 @@
       "tasks_incomplete": 2,
       "open_leads": 68,
       "est_pipeline": 163200,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Lyle Hubbard",
+      "booked": 13,
+      "shown": 7,
+      "qualified": 7,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 97.2,
+      "crm_filled": 35,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          10,
+          10
+        ],
+        "disposition": [
+          10,
+          10
+        ],
+        "qualified": [
+          8,
+          8
+        ],
+        "confidence": [
+          7,
+          8
+        ],
+        "missing_leads": [
+          {
+            "name": "Charlie Neuman",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 135,
+      "open_leads": 50,
+      "est_pipeline": 120000,
       "is_manager": false,
       "is_lead": false
     },
@@ -622,8 +622,8 @@
       "task_adherence": 92.6,
       "tasks_overdue": 6,
       "tasks_incomplete": 81,
-      "open_leads": 67,
-      "est_pipeline": 160800,
+      "open_leads": 68,
+      "est_pipeline": 163200,
       "is_manager": false,
       "is_lead": false
     },
