@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-16 04:30 PM PDT",
+  "updated_at": "2026-04-16 04:45 PM PDT",
   "week_label": "Apr 13 \u2013 Apr 17, 2026",
   "monday_str": "2026-04-13",
   "today_str": "2026-04-16",
@@ -28,14 +28,14 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 157,
-  "total_shown": 94,
-  "total_qualified": 65,
+  "total_booked": 159,
+  "total_shown": 98,
+  "total_qualified": 67,
   "total_deals": 12,
   "total_revenue": 109364.0,
-  "team_close_rate": 7.6,
+  "team_close_rate": 7.5,
   "team_avg_rev_per_deal": 9113.67,
-  "team_crm_compliance": 90.8,
+  "team_crm_compliance": 90.9,
   "team_task_adherence": 96.0,
   "team_overdue": 17,
   "team_open_leads": 823,
@@ -51,7 +51,7 @@
     },
     {
       "funnel": "YouTube",
-      "count": 23
+      "count": 24
     },
     {
       "funnel": "Internal Webinar",
@@ -71,7 +71,7 @@
     },
     {
       "funnel": "Linkedin",
-      "count": 4
+      "count": 5
     },
     {
       "funnel": "Reactivation Scrapers",
@@ -91,11 +91,11 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 65,
-    "external": 88,
+    "in_house": 66,
+    "external": 89,
     "unknown": 4,
-    "in_house_pct": 41.4,
-    "external_pct": 56.1,
+    "in_house_pct": 41.5,
+    "external_pct": 56.0,
     "unknown_pct": 2.5
   },
   "reps": [
@@ -381,6 +381,46 @@
       "is_lead": false
     },
     {
+      "name": "Vince Bartolini",
+      "booked": 14,
+      "shown": 4,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 28,
+      "crm_total": 28,
+      "crm_detail": {
+        "show_up": [
+          10,
+          10
+        ],
+        "disposition": [
+          10,
+          10
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          4,
+          4
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 29,
+      "open_leads": 43,
+      "est_pipeline": 103200,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Scott Seymour",
       "booked": 14,
       "shown": 10,
@@ -430,42 +470,49 @@
       "is_lead": false
     },
     {
-      "name": "Vince Bartolini",
+      "name": "Lyle Hubbard",
       "booked": 14,
-      "shown": 4,
-      "qualified": 2,
+      "shown": 11,
+      "qualified": 9,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 28,
-      "crm_total": 28,
+      "crm_compliance": 97.5,
+      "crm_filled": 39,
+      "crm_total": 40,
       "crm_detail": {
         "show_up": [
-          10,
-          10
+          11,
+          11
         ],
         "disposition": [
-          10,
-          10
+          11,
+          11
         ],
         "qualified": [
-          4,
-          4
+          9,
+          9
         ],
         "confidence": [
-          4,
-          4
+          8,
+          9
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Charlie Neuman",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 28,
-      "open_leads": 43,
-      "est_pipeline": 103200,
+      "tasks_incomplete": 138,
+      "open_leads": 50,
+      "est_pipeline": 120000,
       "is_manager": false,
       "is_lead": false
     },
@@ -515,53 +562,6 @@
       "tasks_incomplete": 2,
       "open_leads": 69,
       "est_pipeline": 165600,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 12,
-      "shown": 8,
-      "qualified": 8,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 97.2,
-      "crm_filled": 35,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          10,
-          10
-        ],
-        "disposition": [
-          10,
-          10
-        ],
-        "qualified": [
-          8,
-          8
-        ],
-        "confidence": [
-          7,
-          8
-        ],
-        "missing_leads": [
-          {
-            "name": "Charlie Neuman",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 138,
-      "open_leads": 50,
-      "est_pipeline": 120000,
       "is_manager": false,
       "is_lead": false
     },
@@ -655,8 +655,8 @@
     {
       "name": "Jason Aaron",
       "booked": 7,
-      "shown": 3,
-      "qualified": 1,
+      "shown": 4,
+      "qualified": 2,
       "deals": 1,
       "revenue": 5397.0,
       "close_rate": 14.3,
@@ -668,7 +668,7 @@
       "crm_detail": null,
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 85,
+      "tasks_incomplete": 86,
       "open_leads": 68,
       "est_pipeline": 163200,
       "is_manager": false,
