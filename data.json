@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-15 05:15 PM PDT",
+  "updated_at": "2026-04-15 05:30 PM PDT",
   "week_label": "Apr 13 \u2013 Apr 17, 2026",
   "monday_str": "2026-04-13",
   "today_str": "2026-04-15",
@@ -36,8 +36,8 @@
   "team_close_rate": 7.8,
   "team_avg_rev_per_deal": 9497.0,
   "team_crm_compliance": 89.9,
-  "team_task_adherence": 97.1,
-  "team_overdue": 12,
+  "team_task_adherence": 97.3,
+  "team_overdue": 11,
   "team_open_leads": 811,
   "team_est_pipeline": 1946400,
   "funnel_breakdown": [
@@ -103,6 +103,46 @@
     "unknown_pct": 3.1
   },
   "reps": [
+    {
+      "name": "Robin Perkins",
+      "booked": 17,
+      "shown": 12,
+      "qualified": 10,
+      "deals": 2,
+      "revenue": 17994.0,
+      "close_rate": 11.8,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 36,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          11,
+          11
+        ],
+        "disposition": [
+          11,
+          11
+        ],
+        "qualified": [
+          7,
+          7
+        ],
+        "confidence": [
+          7,
+          7
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 98.2,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 57,
+      "open_leads": 78,
+      "est_pipeline": 187200,
+      "is_manager": false,
+      "is_lead": false
+    },
     {
       "name": "Chris Wanke",
       "booked": 17,
@@ -183,46 +223,6 @@
       "is_lead": false
     },
     {
-      "name": "Robin Perkins",
-      "booked": 17,
-      "shown": 12,
-      "qualified": 10,
-      "deals": 2,
-      "revenue": 17994.0,
-      "close_rate": 11.8,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 36,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          11,
-          11
-        ],
-        "disposition": [
-          11,
-          11
-        ],
-        "qualified": [
-          7,
-          7
-        ],
-        "confidence": [
-          7,
-          7
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 98.2,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 57,
-      "open_leads": 78,
-      "est_pipeline": 187200,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Scott Seymour",
       "booked": 14,
       "shown": 10,
@@ -269,9 +269,9 @@
           }
         ]
       },
-      "task_adherence": 98.8,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 86,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 85,
       "open_leads": 84,
       "est_pipeline": 201600,
       "is_manager": false,
@@ -354,53 +354,6 @@
       "is_lead": false
     },
     {
-      "name": "John Kirk",
-      "booked": 11,
-      "shown": 8,
-      "qualified": 7,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 96.7,
-      "crm_filled": 29,
-      "crm_total": 30,
-      "crm_detail": {
-        "show_up": [
-          8,
-          8
-        ],
-        "disposition": [
-          8,
-          8
-        ],
-        "qualified": [
-          7,
-          7
-        ],
-        "confidence": [
-          6,
-          7
-        ],
-        "missing_leads": [
-          {
-            "name": "octavio",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 1,
-      "open_leads": 80,
-      "est_pipeline": 192000,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Lyle Hubbard",
       "booked": 11,
       "shown": 7,
@@ -444,6 +397,53 @@
       "tasks_incomplete": 135,
       "open_leads": 50,
       "est_pipeline": 120000,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "John Kirk",
+      "booked": 11,
+      "shown": 8,
+      "qualified": 7,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 96.7,
+      "crm_filled": 29,
+      "crm_total": 30,
+      "crm_detail": {
+        "show_up": [
+          8,
+          8
+        ],
+        "disposition": [
+          8,
+          8
+        ],
+        "qualified": [
+          7,
+          7
+        ],
+        "confidence": [
+          6,
+          7
+        ],
+        "missing_leads": [
+          {
+            "name": "octavio",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 1,
+      "open_leads": 80,
+      "est_pipeline": 192000,
       "is_manager": false,
       "is_lead": false
     },
