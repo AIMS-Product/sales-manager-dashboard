@@ -85,6 +85,7 @@ FUNNEL_SOURCE = {
 # Lead statuses with special CRM compliance handling
 NO_SHOW_LEAD_STATUS = "stat_5CqIgNJnGYO357zXjSnH6BAkKyoCvYUOBxVvpYfDMZn"
 RESCHEDULE_LEAD_STATUS = "stat_2SmOUMCp1vDFJF0TcJ011hNnpLYWDGwugyo4JyiRMEP"
+LOST_LEAD_STATUS = "stat_aR2jBa8YnTNZmHAnPsnlQuinBdaXpSBCkZGP3UvoBlV"
 
 # Custom field IDs (lead object)
 CF_FIRST_CALL_SHOW_ID     = "cf_OPyvpU45RdvjLqfm8V1VWwNxrGKogEH2IBJmfCj0Uhq"
@@ -93,6 +94,7 @@ CF_QUALIFIED_ID            = "cf_ZDx7NBQaDzV1yYrFcBMzt6cIYj81dAcswpNN0CQzCPS"
 CF_CALL_DISPOSITION_ID     = "cf_n2QvikNfeZ0uWObMsyCJmnXnrbWNLGlSvYiKJTwxTqU"
 CF_FUNNEL_NAME_ID          = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
 CF_FIRST_SALES_CALL_BOOKED = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
+CF_LOST_REASON_ID          = "cf_R4i05fLNOQP8yveAs4ofTMMYGAQnkLLklunP4lov2Bt"
 
 # Fields to request when fetching individual leads
 LEAD_FIELDS = ",".join([
@@ -103,6 +105,7 @@ LEAD_FIELDS = ",".join([
     f"custom.{CF_CALL_DISPOSITION_ID}",
     f"custom.{CF_FUNNEL_NAME_ID}",
     f"custom.{CF_FIRST_SALES_CALL_BOOKED}",
+    f"custom.{CF_LOST_REASON_ID}",
     "opportunities",
 ])
 
@@ -182,7 +185,8 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
     rep_crm_disposition = {}
     rep_crm_qualified = {}
     rep_crm_confidence = {}
-    rep_crm_missing = {}      # {rep: [{name, missing: [...]}, ...]}
+    rep_crm_lost_reason = {}
+    rep_crm_missing = {}      # {rep: [{name, lead_id, missing: [...]}, ...]}
     funnel_counts = {}         # {funnel_name: count}
 
     crm_skipped_future = 0
@@ -203,6 +207,7 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
         qualified_val = lead.get(f"custom.{CF_QUALIFIED_ID}", "")
         disposition = lead.get(f"custom.{CF_CALL_DISPOSITION_ID}", "")
         booked_date = lead.get(f"custom.{CF_FIRST_SALES_CALL_BOOKED}", "")
+        lost_reason = lead.get(f"custom.{CF_LOST_REASON_ID}", "")
 
         custom = lead.get("custom", {})
         if not show_up:
@@ -215,6 +220,8 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
             disposition = custom.get(CF_CALL_DISPOSITION_ID, "")
         if not booked_date:
             booked_date = custom.get(CF_FIRST_SALES_CALL_BOOKED, "")
+        if not lost_reason:
+            lost_reason = custom.get(CF_LOST_REASON_ID, "")
 
         # Funnel name
         funnel_raw = lead.get(f"custom.{CF_FUNNEL_NAME_ID}", "")
@@ -244,6 +251,7 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
         is_canceled_call = disp_lower in ("canceled", "canceled - rescheduled")
         is_reschedule = status_id == RESCHEDULE_LEAD_STATUS
         is_no_show = status_id == NO_SHOW_LEAD_STATUS
+        is_lost = status_id == LOST_LEAD_STATUS
 
         if is_past and not is_canceled_call and not is_reschedule:
 
@@ -253,10 +261,12 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
                 rep_crm_disposition[rep_name] = [0, 0]
                 rep_crm_qualified[rep_name] = [0, 0]
                 rep_crm_confidence[rep_name] = [0, 0]
+                rep_crm_lost_reason[rep_name] = [0, 0]
 
-            # No Show leads: only check Show Up + Disposition (2 fields)
-            # All other leads: check all 4 fields
-            crm_checks = 2 if is_no_show else 4
+            # No Show leads: 2 fields (Show Up + Disposition)
+            # Lost leads: 5 fields (standard 4 + Lost Reason)
+            # All other leads: 4 fields
+            crm_checks = 2 if is_no_show else (5 if is_lost else 4)
             crm_filled = 0
             missing_fields = []
 
@@ -305,13 +315,24 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
                 else:
                     missing_fields.append("Confidence")
 
-            # Track leads with missing fields
+            # Field 5: Lost Reason (only for Lost leads)
+            if is_lost:
+                rep_crm_lost_reason[rep_name][1] += 1
+                if is_field_filled(lost_reason):
+                    crm_filled += 1
+                    rep_crm_lost_reason[rep_name][0] += 1
+                else:
+                    missing_fields.append("Lost Reason")
+
+            # Track leads with missing fields (include lead_id for hyperlinks)
             if missing_fields:
                 lead_display = lead.get("display_name", "") or lead.get("name", "") or lead.get("id", "")
+                lead_id = lead.get("id", "")
                 if rep_name not in rep_crm_missing:
                     rep_crm_missing[rep_name] = []
                 rep_crm_missing[rep_name].append({
                     "name": lead_display,
+                    "lead_id": lead_id,
                     "missing": missing_fields,
                 })
 
@@ -340,6 +361,7 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
             "disposition": rep_crm_disposition[rn],
             "qualified": rep_crm_qualified[rn],
             "confidence": rep_crm_confidence[rn],
+            "lost_reason": rep_crm_lost_reason.get(rn, [0, 0]),
             "missing_leads": rep_crm_missing.get(rn, []),
         }
 
