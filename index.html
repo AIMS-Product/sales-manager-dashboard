@@ -242,17 +242,6 @@
         .crm-field-val.bad { color: var(--red); }
         .crm-field-val.partial { color: var(--amber); }
 
-        .crm-fix-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 12px;
-            margin-left: auto;
-            white-space: nowrap;
-        }
-
-        .crm-fix-link:hover { text-decoration: underline; }
-
         .crm-missing-list {
             width: 100%;
             margin-top: 10px;
@@ -448,7 +437,7 @@
                         <th data-key="close_rate" data-dir="desc" data-type="num" title="Deals closed ÷ meetings booked × 100. Week-to-date conversion rate.">Close %</th>
                         <th data-key="qa_score" data-dir="desc" data-type="num" title="Quality assurance score. Coming soon.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
-                        <th data-key="crm_compliance" data-dir="desc" data-type="num" title="% of key CRM fields filled on booked leads (past meetings only — today's calls excluded). Standard leads: 4 fields — (1) First Call Show Up, (2) Today's Call Disposition, (3) Qualified (Opp), (4) Opportunity Confidence > 0%. No Show leads: only 2 fields — Show Up + Disposition. Canceled and Rescheduled leads are excluded. Click a rep's % to see per-field breakdown.">CRM Compl.</th>
+                        <th data-key="crm_compliance" data-dir="desc" data-type="num" title="% of key CRM fields filled on booked leads (past meetings only — today's calls excluded). Standard leads: 4 fields — (1) First Call Show Up, (2) Today's Call Disposition, (3) Qualified (Opp), (4) Opportunity Confidence > 0%. No Show leads: only 2 fields — Show Up + Disposition. Lost leads: 5 fields — standard 4 + Lost Reason. Canceled and Rescheduled leads are excluded. Click a rep's % to see per-field breakdown.">CRM Compl.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. Tasks on Closed/Won leads are excluded. 100% = fully caught up.">Task Adh.</th>
                         <th data-key="open_leads" data-dir="desc" data-type="num" title="Qualified leads in rep's pipeline — leads where Qualified (Opp) = Yes, excluding Lost, Canceled, Outside US, and Closed/Won. Based on Lead Owner field.">Qual. Pipeline</th>
                         <th data-key="est_pipeline" data-dir="desc" data-type="num" title="Estimated pipeline value: Qualified Leads × $8K avg deal × 30% close rate. Represents potential revenue from the rep's qualified pipeline.">Est. Revenue</th>
@@ -586,7 +575,7 @@
         return `<span class="${cls}">${adherence}%</span>${extra}`;
     }
 
-    const CLOSE_SMART_VIEW_URL = 'https://app.close.com/leads/save_vIX4e18a9Sb1ZjOgu8dN1DDa6lI01O7syYvYwvhiwep/';
+    const SMART_VIEW_URL = 'https://app.close.com/leads/save_vIX4e18a9Sb1ZjOgu8dN1DDa6lI01O7syYvYwvhiwep/'; // kept for reference
 
     function crmFieldHtml(label, filled, total) {
         if (!total) return '';
@@ -665,19 +654,25 @@
                 if (r.crm_detail) {
                     const d = r.crm_detail;
                     const ml = d.missing_leads || [];
+                    const lr = d.lost_reason || [0, 0];
 
                     let missingHtml = '';
                     if (ml.length > 0) {
                         missingHtml = '<div class="crm-missing-list">';
                         missingHtml += `<div class="crm-missing-label">Leads with missing fields (${ml.length}):</div>`;
                         for (const lead of ml) {
+                            const nameLink = lead.lead_id
+                                ? `<a href="https://app.close.com/lead/${lead.lead_id}/" target="_blank" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${lead.name}</a>`
+                                : `<span class="crm-missing-name">${lead.name}</span>`;
                             missingHtml += `<div class="crm-missing-item">
-                                <span class="crm-missing-name">${lead.name}</span>
+                                ${nameLink}
                                 <span class="crm-missing-fields">${lead.missing.join(', ')}</span>
                             </div>`;
                         }
                         missingHtml += '</div>';
                     }
+
+                    const lostReasonHtml = lr[1] > 0 ? crmFieldHtml('Lost Reason', lr[0], lr[1]) : '';
 
                     html += `<tr class="crm-detail-row" id="crm-detail-${i}" style="display:none;">
                         <td colspan="13">
@@ -686,7 +681,7 @@
                                 ${crmFieldHtml('Disposition', d.disposition[0], d.disposition[1])}
                                 ${crmFieldHtml('Qualified', d.qualified[0], d.qualified[1])}
                                 ${crmFieldHtml('Confidence', d.confidence[0], d.confidence[1])}
-                                <a href="${CLOSE_SMART_VIEW_URL}" target="_blank" class="crm-fix-link">Fix in Close →</a>
+                                ${lostReasonHtml}
                             </div>
                             ${missingHtml}
                         </td>
