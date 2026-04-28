@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28 06:15 AM PDT",
+  "updated_at": "2026-04-28 06:30 AM PDT",
   "week_label": "Apr 27 \u2013 May 01, 2026",
   "monday_str": "2026-04-27",
   "today_str": "2026-04-28",
@@ -29,7 +29,7 @@
     "task_adherence": 100
   },
   "total_booked": 75,
-  "total_shown": 23,
+  "total_shown": 24,
   "total_qualified": 18,
   "total_deals": 3,
   "total_revenue": 17991.0,
@@ -43,7 +43,7 @@
   "funnel_breakdown": [
     {
       "funnel": "Instagram",
-      "count": 24
+      "count": 25
     },
     {
       "funnel": "Low Ticket Funnel",
@@ -58,16 +58,16 @@
       "count": 7
     },
     {
-      "funnel": "Unknown",
-      "count": 5
-    },
-    {
       "funnel": "Internal Webinar",
       "count": 5
     },
     {
       "funnel": "VSL",
       "count": 5
+    },
+    {
+      "funnel": "Unknown",
+      "count": 4
     },
     {
       "funnel": "Website",
@@ -88,17 +88,17 @@
   ],
   "funnel_sources": {
     "in_house": 30,
-    "external": 39,
-    "unknown": 6,
+    "external": 40,
+    "unknown": 5,
     "in_house_pct": 40.0,
-    "external_pct": 52.0,
-    "unknown_pct": 8.0
+    "external_pct": 53.3,
+    "unknown_pct": 6.7
   },
   "reps": [
     {
       "name": "Eric Piccione",
       "booked": 10,
-      "shown": 4,
+      "shown": 5,
       "qualified": 4,
       "deals": 1,
       "revenue": 5997.0,
@@ -144,6 +144,58 @@
       "tasks_incomplete": 3,
       "open_leads": 79,
       "est_pipeline": 189600,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Robin Perkins",
+      "booked": 9,
+      "shown": 4,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 94.4,
+      "crm_filled": 17,
+      "crm_total": 18,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          3,
+          4
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Reyna Ch\u00e1vez",
+            "lead_id": "lead_Ubb0p8VgGK8aCqQn0adJvo3Q8cAv7W4tDk9Bib122b6",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 88.1,
+      "tasks_overdue": 8,
+      "tasks_incomplete": 67,
+      "open_leads": 89,
+      "est_pipeline": 213600,
       "is_manager": false,
       "is_lead": false
     },
@@ -207,54 +259,64 @@
       "is_lead": false
     },
     {
-      "name": "Robin Perkins",
-      "booked": 9,
-      "shown": 4,
-      "qualified": 3,
+      "name": "Jake Skinner",
+      "booked": 8,
+      "shown": 1,
+      "qualified": 1,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 94.4,
-      "crm_filled": 17,
-      "crm_total": 18,
+      "crm_compliance": 66.7,
+      "crm_filled": 10,
+      "crm_total": 15,
       "crm_detail": {
         "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          4,
+          2,
           4
         ],
-        "confidence": [
+        "disposition": [
           3,
           4
         ],
+        "qualified": [
+          2,
+          3
+        ],
+        "confidence": [
+          2,
+          3
+        ],
         "lost_reason": [
-          0,
-          0
+          1,
+          1
         ],
         "missing_leads": [
           {
-            "name": "Reyna Ch\u00e1vez",
-            "lead_id": "lead_Ubb0p8VgGK8aCqQn0adJvo3Q8cAv7W4tDk9Bib122b6",
+            "name": "Sonya Franks",
+            "lead_id": "lead_SNfxMYSbGHOUZth1eHLpKlEL5nSC1iHgjnQSTzpRzJ5",
             "missing": [
+              "Show Up"
+            ]
+          },
+          {
+            "name": "Brandon Evans",
+            "lead_id": "lead_cTcuhOcNYbZm60TroYAF9QP4CZLzdoafEFD8mziAFZA",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
               "Confidence"
             ]
           }
         ]
       },
-      "task_adherence": 88.1,
-      "tasks_overdue": 8,
-      "tasks_incomplete": 67,
-      "open_leads": 89,
-      "est_pipeline": 213600,
+      "task_adherence": 76.9,
+      "tasks_overdue": 3,
+      "tasks_incomplete": 13,
+      "open_leads": 102,
+      "est_pipeline": 244800,
       "is_manager": false,
       "is_lead": false
     },
@@ -421,68 +483,6 @@
       "is_lead": false
     },
     {
-      "name": "Jake Skinner",
-      "booked": 8,
-      "shown": 1,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 66.7,
-      "crm_filled": 10,
-      "crm_total": 15,
-      "crm_detail": {
-        "show_up": [
-          2,
-          4
-        ],
-        "disposition": [
-          3,
-          4
-        ],
-        "qualified": [
-          2,
-          3
-        ],
-        "confidence": [
-          2,
-          3
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Sonya Franks",
-            "lead_id": "lead_SNfxMYSbGHOUZth1eHLpKlEL5nSC1iHgjnQSTzpRzJ5",
-            "missing": [
-              "Show Up"
-            ]
-          },
-          {
-            "name": "Brandon Evans",
-            "lead_id": "lead_cTcuhOcNYbZm60TroYAF9QP4CZLzdoafEFD8mziAFZA",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 76.9,
-      "tasks_overdue": 3,
-      "tasks_incomplete": 13,
-      "open_leads": 102,
-      "est_pipeline": 244800,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Scott Seymour",
       "booked": 6,
       "shown": 1,
@@ -622,9 +622,9 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 90.3,
+      "task_adherence": 90.6,
       "tasks_overdue": 3,
-      "tasks_incomplete": 31,
+      "tasks_incomplete": 32,
       "open_leads": 40,
       "est_pipeline": 96000,
       "is_manager": false,
