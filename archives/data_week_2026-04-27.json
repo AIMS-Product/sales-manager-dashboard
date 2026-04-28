@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28 01:45 AM PDT",
+  "updated_at": "2026-04-28 02:00 AM PDT",
   "week_label": "Apr 27 \u2013 May 01, 2026",
   "monday_str": "2026-04-27",
   "today_str": "2026-04-28",
@@ -259,46 +259,64 @@
       "is_lead": false
     },
     {
-      "name": "John Kirk",
+      "name": "Jake Skinner",
       "booked": 8,
-      "shown": 4,
-      "qualified": 2,
+      "shown": 1,
+      "qualified": 1,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 16,
-      "crm_total": 16,
+      "crm_compliance": 66.7,
+      "crm_filled": 10,
+      "crm_total": 15,
       "crm_detail": {
         "show_up": [
-          4,
+          2,
           4
         ],
         "disposition": [
-          4,
+          3,
           4
         ],
         "qualified": [
-          4,
-          4
+          2,
+          3
         ],
         "confidence": [
-          4,
-          4
+          2,
+          3
         ],
         "lost_reason": [
-          0,
-          0
+          1,
+          1
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Sonya Franks",
+            "lead_id": "lead_SNfxMYSbGHOUZth1eHLpKlEL5nSC1iHgjnQSTzpRzJ5",
+            "missing": [
+              "Show Up"
+            ]
+          },
+          {
+            "name": "Brandon Evans",
+            "lead_id": "lead_cTcuhOcNYbZm60TroYAF9QP4CZLzdoafEFD8mziAFZA",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 5,
-      "open_leads": 77,
-      "est_pipeline": 184800,
+      "task_adherence": 76.9,
+      "tasks_overdue": 3,
+      "tasks_incomplete": 13,
+      "open_leads": 102,
+      "est_pipeline": 244800,
       "is_manager": false,
       "is_lead": false
     },
@@ -369,64 +387,46 @@
       "is_lead": false
     },
     {
-      "name": "Jake Skinner",
+      "name": "John Kirk",
       "booked": 8,
-      "shown": 1,
-      "qualified": 1,
+      "shown": 4,
+      "qualified": 2,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 66.7,
-      "crm_filled": 10,
-      "crm_total": 15,
+      "crm_compliance": 100.0,
+      "crm_filled": 16,
+      "crm_total": 16,
       "crm_detail": {
         "show_up": [
-          2,
+          4,
           4
         ],
         "disposition": [
-          3,
+          4,
           4
         ],
         "qualified": [
-          2,
-          3
+          4,
+          4
         ],
         "confidence": [
-          2,
-          3
+          4,
+          4
         ],
         "lost_reason": [
-          1,
-          1
+          0,
+          0
         ],
-        "missing_leads": [
-          {
-            "name": "Sonya Franks",
-            "lead_id": "lead_SNfxMYSbGHOUZth1eHLpKlEL5nSC1iHgjnQSTzpRzJ5",
-            "missing": [
-              "Show Up"
-            ]
-          },
-          {
-            "name": "Brandon Evans",
-            "lead_id": "lead_cTcuhOcNYbZm60TroYAF9QP4CZLzdoafEFD8mziAFZA",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
-      "task_adherence": 76.9,
-      "tasks_overdue": 3,
-      "tasks_incomplete": 13,
-      "open_leads": 102,
-      "est_pipeline": 244800,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 5,
+      "open_leads": 77,
+      "est_pipeline": 184800,
       "is_manager": false,
       "is_lead": false
     },
@@ -609,28 +609,6 @@
       "is_lead": true
     },
     {
-      "name": "Joe Dysert",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": null,
-      "tasks_incomplete": null,
-      "open_leads": null,
-      "est_pipeline": null,
-      "is_manager": true,
-      "is_lead": false
-    },
-    {
       "name": "Vince Bartolini",
       "booked": 0,
       "shown": 0,
@@ -650,6 +628,28 @@
       "open_leads": 40,
       "est_pipeline": 96000,
       "is_manager": false,
+      "is_lead": false
+    },
+    {
+      "name": "Joe Dysert",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": null,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
       "is_lead": false
     }
   ]
