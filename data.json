@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28 03:00 PM PDT",
+  "updated_at": "2026-04-28 03:15 PM PDT",
   "week_label": "Apr 27 \u2013 May 01, 2026",
   "monday_str": "2026-04-27",
   "today_str": "2026-04-28",
@@ -29,8 +29,8 @@
     "task_adherence": 100
   },
   "total_booked": 72,
-  "total_shown": 44,
-  "total_qualified": 35,
+  "total_shown": 46,
+  "total_qualified": 37,
   "total_deals": 6,
   "total_revenue": 45982.0,
   "team_close_rate": 8.3,
@@ -38,8 +38,8 @@
   "team_crm_compliance": 92.9,
   "team_task_adherence": 96.1,
   "team_overdue": 20,
-  "team_open_leads": 811,
-  "team_est_pipeline": 1946400,
+  "team_open_leads": 812,
+  "team_est_pipeline": 1948800,
   "funnel_breakdown": [
     {
       "funnel": "Instagram",
@@ -54,6 +54,10 @@
       "count": 10
     },
     {
+      "funnel": "VSL",
+      "count": 5
+    },
+    {
       "funnel": "Internal Webinar",
       "count": 5
     },
@@ -62,19 +66,15 @@
       "count": 5
     },
     {
-      "funnel": "VSL",
-      "count": 5
-    },
-    {
       "funnel": "Website",
       "count": 3
     },
     {
-      "funnel": "Linkedin",
+      "funnel": "Unknown",
       "count": 2
     },
     {
-      "funnel": "Unknown",
+      "funnel": "Linkedin",
       "count": 2
     },
     {
@@ -263,6 +263,50 @@
       "is_lead": false
     },
     {
+      "name": "John Kirk",
+      "booked": 8,
+      "shown": 6,
+      "qualified": 4,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 16,
+      "crm_total": 16,
+      "crm_detail": {
+        "show_up": [
+          4,
+          4
+        ],
+        "disposition": [
+          4,
+          4
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          4,
+          4
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 6,
+      "open_leads": 80,
+      "est_pipeline": 192000,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Jake Skinner",
       "booked": 8,
       "shown": 5,
@@ -303,50 +347,6 @@
       "tasks_incomplete": 13,
       "open_leads": 105,
       "est_pipeline": 252000,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "John Kirk",
-      "booked": 8,
-      "shown": 5,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 16,
-      "crm_total": 16,
-      "crm_detail": {
-        "show_up": [
-          4,
-          4
-        ],
-        "disposition": [
-          4,
-          4
-        ],
-        "qualified": [
-          4,
-          4
-        ],
-        "confidence": [
-          4,
-          4
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 6,
-      "open_leads": 79,
-      "est_pipeline": 189600,
       "is_manager": false,
       "is_lead": false
     },
@@ -509,8 +509,8 @@
     {
       "name": "Scott Seymour",
       "booked": 5,
-      "shown": 3,
-      "qualified": 3,
+      "shown": 4,
+      "qualified": 4,
       "deals": 1,
       "revenue": 5997.0,
       "close_rate": 20.0,
