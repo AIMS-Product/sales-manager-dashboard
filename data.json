@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-29 02:30 PM PDT",
+  "updated_at": "2026-04-29 02:45 PM PDT",
   "week_label": "Apr 27 \u2013 May 01, 2026",
   "monday_str": "2026-04-27",
   "today_str": "2026-04-29",
@@ -28,12 +28,12 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 111,
+  "total_booked": 110,
   "total_shown": 64,
   "total_qualified": 46,
   "total_deals": 7,
   "total_revenue": 51379.0,
-  "team_close_rate": 6.3,
+  "team_close_rate": 6.4,
   "team_avg_rev_per_deal": 7339.86,
   "team_crm_compliance": 94.3,
   "team_task_adherence": 96.3,
@@ -78,35 +78,35 @@
       "count": 2
     },
     {
-      "funnel": "X",
-      "count": 2
-    },
-    {
       "funnel": "Linkedin",
       "count": 2
     },
     {
       "funnel": "LTF - Quiz Funnel",
       "count": 2
+    },
+    {
+      "funnel": "X",
+      "count": 1
     }
   ],
   "funnel_sources": {
     "in_house": 43,
-    "external": 61,
+    "external": 60,
     "unknown": 7,
-    "in_house_pct": 38.7,
-    "external_pct": 55.0,
-    "unknown_pct": 6.3
+    "in_house_pct": 39.1,
+    "external_pct": 54.5,
+    "unknown_pct": 6.4
   },
   "reps": [
     {
       "name": "Jason Aaron",
-      "booked": 15,
+      "booked": 14,
       "shown": 10,
       "qualified": 7,
       "deals": 1,
       "revenue": 7997.0,
-      "close_rate": 6.7,
+      "close_rate": 7.1,
       "qa_score": null,
       "avg_rev_per_deal": 7997.0,
       "crm_compliance": 94.1,
@@ -259,6 +259,50 @@
       "is_lead": false
     },
     {
+      "name": "Elvis Ellis",
+      "booked": 12,
+      "shown": 6,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 25,
+      "crm_total": 25,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 57,
+      "open_leads": 65,
+      "est_pipeline": 156000,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Chris Wanke",
       "booked": 12,
       "shown": 3,
@@ -317,50 +361,6 @@
       "tasks_incomplete": 8,
       "open_leads": 52,
       "est_pipeline": 124800,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Elvis Ellis",
-      "booked": 12,
-      "shown": 6,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 25,
-      "crm_total": 25,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          7,
-          7
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          5,
-          5
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 57,
-      "open_leads": 65,
-      "est_pipeline": 156000,
       "is_manager": false,
       "is_lead": false
     },
