@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-05 06:30 AM PDT",
+  "updated_at": "2026-05-05 06:46 AM PDT",
   "week_label": "May 04 \u2013 May 08, 2026",
   "monday_str": "2026-05-04",
   "today_str": "2026-05-05",
@@ -28,16 +28,16 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 95,
+  "total_booked": 96,
   "total_shown": 24,
   "total_qualified": 21,
   "total_deals": 3,
   "total_revenue": 24491.0,
-  "team_close_rate": 3.2,
+  "team_close_rate": 3.1,
   "team_avg_rev_per_deal": 8163.67,
   "team_crm_compliance": 84.4,
-  "team_task_adherence": 88.9,
-  "team_overdue": 55,
+  "team_task_adherence": 95.2,
+  "team_overdue": 24,
   "team_open_leads": 923,
   "team_est_pipeline": 2215200,
   "funnel_breakdown": [
@@ -51,7 +51,7 @@
     },
     {
       "funnel": "Low Ticket Funnel",
-      "count": 14
+      "count": 15
     },
     {
       "funnel": "Unknown",
@@ -92,11 +92,11 @@
   ],
   "funnel_sources": {
     "in_house": 23,
-    "external": 38,
+    "external": 39,
     "unknown": 34,
-    "in_house_pct": 24.2,
-    "external_pct": 40.0,
-    "unknown_pct": 35.8
+    "in_house_pct": 24.0,
+    "external_pct": 40.6,
+    "unknown_pct": 35.4
   },
   "reps": [
     {
@@ -388,6 +388,58 @@
       "is_lead": false
     },
     {
+      "name": "Jason Aaron",
+      "booked": 7,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 83.3,
+      "crm_filled": 5,
+      "crm_total": 6,
+      "crm_detail": {
+        "show_up": [
+          2,
+          2
+        ],
+        "disposition": [
+          1,
+          2
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Nadia Miley",
+            "lead_id": "lead_5Op1AAXBPSuoaabVFz9CfIXBYBbR3VuKhXOd4AbTKy3",
+            "missing": [
+              "Disposition"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 104,
+      "open_leads": 81,
+      "est_pipeline": 194400,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Bryan Barcus",
       "booked": 7,
       "shown": 2,
@@ -436,58 +488,6 @@
       "tasks_incomplete": 2,
       "open_leads": 40,
       "est_pipeline": 96000,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 7,
-      "shown": 1,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 83.3,
-      "crm_filled": 5,
-      "crm_total": 6,
-      "crm_detail": {
-        "show_up": [
-          2,
-          2
-        ],
-        "disposition": [
-          1,
-          2
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Nadia Miley",
-            "lead_id": "lead_5Op1AAXBPSuoaabVFz9CfIXBYBbR3VuKhXOd4AbTKy3",
-            "missing": [
-              "Disposition"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 70.2,
-      "tasks_overdue": 31,
-      "tasks_incomplete": 104,
-      "open_leads": 81,
-      "est_pipeline": 194400,
       "is_manager": false,
       "is_lead": false
     },
@@ -609,52 +609,8 @@
       "is_lead": false
     },
     {
-      "name": "Christian Hartwell",
-      "booked": 5,
-      "shown": 1,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 4,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 53.3,
-      "tasks_overdue": 7,
-      "tasks_incomplete": 15,
-      "open_leads": 97,
-      "est_pipeline": 232800,
-      "is_manager": false,
-      "is_lead": true
-    },
-    {
       "name": "Kelly Schrader",
-      "booked": 4,
+      "booked": 5,
       "shown": 0,
       "qualified": 0,
       "deals": 0,
@@ -717,6 +673,50 @@
       "is_lead": false
     },
     {
+      "name": "Christian Hartwell",
+      "booked": 5,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 4,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 53.3,
+      "tasks_overdue": 7,
+      "tasks_incomplete": 15,
+      "open_leads": 97,
+      "est_pipeline": 232800,
+      "is_manager": false,
+      "is_lead": true
+    },
+    {
       "name": "Elvis Ellis",
       "booked": 4,
       "shown": 1,
@@ -761,28 +761,6 @@
       "is_lead": false
     },
     {
-      "name": "Cameron Caswell",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -802,6 +780,28 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
+      "is_lead": false
+    },
+    {
+      "name": "Cameron Caswell",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
       "is_lead": false
     }
   ]
