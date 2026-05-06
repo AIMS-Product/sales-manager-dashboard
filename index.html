@@ -537,11 +537,16 @@
 
     function prog(val, target) {
         if (val === null || val === undefined) return '<span class="prog zero"><span class="val">—</span></span>';
+        if (target === null || target === undefined) return `<span class="prog"><span class="val">${val}</span><span class="sep"> / </span><span class="target">—</span></span>`;
         const state = val >= target ? 'hit' : (val === 0 ? 'zero' : 'miss');
         return `<span class="prog ${state}"><span class="val">${val}</span><span class="sep">/</span><span class="target">${target}</span></span>`;
     }
 
     function progMoney(val, target) {
+        if (target === null || target === undefined) {
+            if (val === null || val === undefined || val === 0) return `<span class="prog"><span class="val">$0</span><span class="sep"> / </span><span class="target">—</span></span>`;
+            return `<span class="prog"><span class="val">${fmtK(val)}</span><span class="sep"> / </span><span class="target">—</span></span>`;
+        }
         if (val === null || val === undefined || val === 0) {
             return `<span class="prog zero"><span class="val">$0</span><span class="sep">/</span><span class="target">${fmtK(target)}</span></span>`;
         }
@@ -550,6 +555,10 @@
     }
 
     function progPct(val, target) {
+        if (target === null || target === undefined) {
+            if (val === null || val === undefined) return '<span class="prog"><span class="val">—</span></span>';
+            return `<span class="prog"><span class="val">${val}%</span><span class="sep"> / </span><span class="target">—</span></span>`;
+        }
         if (val === null || val === undefined) return '<span class="prog zero"><span class="val">—</span><span class="sep">/</span><span class="target">' + target + '%</span></span>';
         const state = val >= target ? 'hit' : 'miss';
         return `<span class="prog ${state}"><span class="val">${val}%</span><span class="sep">/</span><span class="target">${target}%</span></span>`;
@@ -628,22 +637,23 @@
                     <td style="color:var(--text-muted)">—</td>
                 </tr>`;
             } else {
+                const rt = r.lane === 2 ? (DATA.lane_2_targets || t) : t;
                 const ol = r.open_leads || 0;
                 const ep = r.est_pipeline || 0;
                 const crmCell = r.crm_detail
-                    ? `<td class="crm-clickable" data-crm-idx="${i}">${progPct(r.crm_compliance, t.crm_compliance)} <span style="font-size:9px;color:var(--text-muted);">▼</span></td>`
-                    : `<td>${progPct(r.crm_compliance, t.crm_compliance)}</td>`;
+                    ? `<td class="crm-clickable" data-crm-idx="${i}">${progPct(r.crm_compliance, rt.crm_compliance)} <span style="font-size:9px;color:var(--text-muted);">▼</span></td>`
+                    : `<td>${progPct(r.crm_compliance, rt.crm_compliance)}</td>`;
 
                 html += `<tr>
                     <td>${r.name}${mgrTag}${leadTag}</td>
-                    <td class="g-activity-start">${prog(r.booked, t.booked)}</td>
-                    <td>${prog(r.shown, t.shown)}</td>
-                    <td>${prog(r.qualified, t.qualified)}</td>
-                    <td>${prog(r.deals, t.deals)}</td>
-                    <td class="g-activity-end">${progMoney(r.revenue, t.revenue)}</td>
-                    <td>${progPct(r.close_rate, t.close_rate)}</td>
+                    <td class="g-activity-start">${prog(r.booked, rt.booked)}</td>
+                    <td>${prog(r.shown, rt.shown)}</td>
+                    <td>${prog(r.qualified, rt.qualified)}</td>
+                    <td>${prog(r.deals, rt.deals)}</td>
+                    <td class="g-activity-end">${progMoney(r.revenue, rt.revenue)}</td>
+                    <td>${progPct(r.close_rate, rt.close_rate)}</td>
                     <td>${TBD}</td>
-                    <td class="g-perf-end">${progMoney(r.avg_rev_per_deal, t.avg_rev_per_deal)}</td>
+                    <td class="g-perf-end">${progMoney(r.avg_rev_per_deal, rt.avg_rev_per_deal)}</td>
                     ${crmCell}
                     <td>${fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
                     <td>${ol}</td>
