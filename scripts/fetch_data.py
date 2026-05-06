@@ -109,7 +109,7 @@ LEAD_FIELDS = ",".join([
     "opportunities",
 ])
 
-# Weekly targets (per rep)
+# Weekly targets (per rep) — Lane 1 (default)
 WEEKLY_TARGETS = {
     "booked": 15,
     "shown": 11,
@@ -121,6 +121,25 @@ WEEKLY_TARGETS = {
     "avg_rev_per_deal": 8000,
     "crm_compliance": 90,
     "task_adherence": 100,
+}
+
+# Lane 2 targets — None means no goal (show "—")
+LANE_2_TARGETS = {
+    "booked": None,
+    "shown": None,
+    "qualified": None,
+    "deals": 1,
+    "revenue": None,
+    "close_rate": 7,
+    "qa_score": None,
+    "avg_rev_per_deal": None,
+    "crm_compliance": 90,
+    "task_adherence": 100,
+}
+
+LANE_2_REPS = {
+    "Bryan Barcus", "Steven Starnes", "Lyle Hubbard", "Kelly Schrader",
+    "Elvis Ellis", "John Kirk", "Cameron Caswell", "Jason Aaron",
 }
 
 REP_QUOTAS = {
@@ -148,7 +167,7 @@ EXCLUDE_USERS = {
     "Ategeka Musinguzi", "Vince Bartolini",
 }
 MANAGER_USERS = {"Joe Dysert"}
-LEAD_USERS = {"Christian Hartwell"}
+LEAD_USERS = {"Christian Hartwell", "Jason Aaron"}
 
 
 # ── Fetch booked leads by "First Sales Call Booked Date" field ─────────────
@@ -759,6 +778,7 @@ def build_dashboard_data():
         avg_rev = round(revenue / deals, 2) if deals > 0 else None
         is_mgr = name in MANAGER_USERS
         is_lead = name in LEAD_USERS
+        lane = 2 if name in LANE_2_REPS else 1
 
         reps.append({
             "name": name,
@@ -781,6 +801,7 @@ def build_dashboard_data():
             "est_pipeline": round(rep_open_leads.get(name, 0) * AVG_DEAL_VALUE * CLOSE_RATE_ESTIMATE) if not is_mgr else None,
             "is_manager": is_mgr,
             "is_lead": is_lead,
+            "lane": lane,
         })
 
     reps.sort(key=lambda r: r["booked"], reverse=True)
@@ -842,6 +863,7 @@ def build_dashboard_data():
         "day_of_week": day_of_week,
         "num_reps": num_reps,
         "targets": WEEKLY_TARGETS,
+        "lane_2_targets": LANE_2_TARGETS,
         "team_targets": team_targets,
         "total_booked": total_booked,
         "total_shown": total_shown,
