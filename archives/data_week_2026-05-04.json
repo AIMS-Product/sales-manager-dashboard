@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-06 05:15 AM PDT",
+  "updated_at": "2026-05-06 05:30 AM PDT",
   "week_label": "May 04 \u2013 May 08, 2026",
   "monday_str": "2026-05-04",
   "today_str": "2026-05-06",
@@ -28,7 +28,7 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 138,
+  "total_booked": 140,
   "total_shown": 50,
   "total_qualified": 45,
   "total_deals": 5,
@@ -43,7 +43,7 @@
   "funnel_breakdown": [
     {
       "funnel": "LTF - Quiz Funnel",
-      "count": 37
+      "count": 38
     },
     {
       "funnel": "Instagram",
@@ -58,11 +58,11 @@
       "count": 17
     },
     {
-      "funnel": "Meta Ads",
+      "funnel": "Website",
       "count": 8
     },
     {
-      "funnel": "Website",
+      "funnel": "Meta Ads",
       "count": 8
     },
     {
@@ -70,12 +70,12 @@
       "count": 3
     },
     {
-      "funnel": "Reactivation Email",
+      "funnel": "Unknown",
       "count": 3
     },
     {
-      "funnel": "Unknown",
-      "count": 2
+      "funnel": "Reactivation Email",
+      "count": 3
     },
     {
       "funnel": "Linkedin",
@@ -97,15 +97,59 @@
   "funnel_sources": {
     "in_house": 41,
     "external": 57,
-    "unknown": 40,
-    "in_house_pct": 29.7,
-    "external_pct": 41.3,
-    "unknown_pct": 29.0
+    "unknown": 42,
+    "in_house_pct": 29.3,
+    "external_pct": 40.7,
+    "unknown_pct": 30.0
   },
   "reps": [
     {
+      "name": "Robin Perkins",
+      "booked": 14,
+      "shown": 6,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 32,
+      "crm_total": 32,
+      "crm_detail": {
+        "show_up": [
+          10,
+          10
+        ],
+        "disposition": [
+          10,
+          10
+        ],
+        "qualified": [
+          6,
+          6
+        ],
+        "confidence": [
+          6,
+          6
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 66,
+      "open_leads": 96,
+      "est_pipeline": 230400,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Bryan Barcus",
-      "booked": 13,
+      "booked": 14,
       "shown": 6,
       "qualified": 5,
       "deals": 0,
@@ -241,29 +285,29 @@
       "is_lead": false
     },
     {
-      "name": "Robin Perkins",
-      "booked": 13,
-      "shown": 6,
-      "qualified": 3,
+      "name": "Chris Wanke",
+      "booked": 12,
+      "shown": 5,
+      "qualified": 4,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 32,
-      "crm_total": 32,
+      "crm_compliance": 92.0,
+      "crm_filled": 23,
+      "crm_total": 25,
       "crm_detail": {
         "show_up": [
-          10,
-          10
+          6,
+          6
         ],
         "disposition": [
-          10,
-          10
+          5,
+          6
         ],
         "qualified": [
-          6,
+          5,
           6
         ],
         "confidence": [
@@ -271,16 +315,25 @@
           6
         ],
         "lost_reason": [
-          0,
-          0
+          1,
+          1
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Jordan Sinclair",
+            "lead_id": "lead_d60syM8MXr2kO9rfsAZD0t1bfjwSDqEenNNUStugQLv",
+            "missing": [
+              "Disposition",
+              "Qualified"
+            ]
+          }
+        ]
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 66,
-      "open_leads": 96,
-      "est_pipeline": 230400,
+      "task_adherence": 41.7,
+      "tasks_overdue": 7,
+      "tasks_incomplete": 12,
+      "open_leads": 61,
+      "est_pipeline": 146400,
       "is_manager": false,
       "is_lead": false
     },
@@ -333,59 +386,6 @@
       "tasks_incomplete": 125,
       "open_leads": 51,
       "est_pipeline": 122400,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Chris Wanke",
-      "booked": 12,
-      "shown": 5,
-      "qualified": 4,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 92.0,
-      "crm_filled": 23,
-      "crm_total": 25,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          5,
-          6
-        ],
-        "qualified": [
-          5,
-          6
-        ],
-        "confidence": [
-          6,
-          6
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Jordan Sinclair",
-            "lead_id": "lead_d60syM8MXr2kO9rfsAZD0t1bfjwSDqEenNNUStugQLv",
-            "missing": [
-              "Disposition",
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 41.7,
-      "tasks_overdue": 7,
-      "tasks_incomplete": 12,
-      "open_leads": 61,
-      "est_pipeline": 146400,
       "is_manager": false,
       "is_lead": false
     },
@@ -653,6 +653,50 @@
       "is_lead": false
     },
     {
+      "name": "Jake Skinner",
+      "booked": 9,
+      "shown": 4,
+      "qualified": 3,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": 11.1,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 23,
+      "crm_total": 23,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          4,
+          4
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 90.0,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 10,
+      "open_leads": 107,
+      "est_pipeline": 256800,
+      "is_manager": false,
+      "is_lead": false
+    },
+    {
       "name": "Elvis Ellis",
       "booked": 9,
       "shown": 3,
@@ -711,50 +755,6 @@
       "tasks_incomplete": 33,
       "open_leads": 65,
       "est_pipeline": 156000,
-      "is_manager": false,
-      "is_lead": false
-    },
-    {
-      "name": "Jake Skinner",
-      "booked": 9,
-      "shown": 4,
-      "qualified": 3,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": 11.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 23,
-      "crm_total": 23,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          7,
-          7
-        ],
-        "qualified": [
-          4,
-          4
-        ],
-        "confidence": [
-          4,
-          4
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 90.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 10,
-      "open_leads": 107,
-      "est_pipeline": 256800,
       "is_manager": false,
       "is_lead": false
     },
