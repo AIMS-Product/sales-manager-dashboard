@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-07 01:45 AM PDT",
+  "updated_at": "2026-05-07 02:00 AM PDT",
   "week_label": "May 04 \u2013 May 08, 2026",
   "monday_str": "2026-05-04",
   "today_str": "2026-05-07",
@@ -235,6 +235,66 @@
       "lane": 1
     },
     {
+      "name": "John Kirk",
+      "booked": 18,
+      "shown": 6,
+      "qualified": 7,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 5.6,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 94.4,
+      "crm_filled": 34,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          10,
+          10
+        ],
+        "disposition": [
+          10,
+          10
+        ],
+        "qualified": [
+          8,
+          8
+        ],
+        "confidence": [
+          6,
+          8
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Stephanie Taylor",
+            "lead_id": "lead_iFJytsUtexpfmfNWPdmTVjfWY0wf3bNqtMi1nOvOrWa",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Marie Baptiste",
+            "lead_id": "lead_loP7HRwGYCV1cHW7i4iChWpy07wuorlB3Kcrx1VCHhH",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 4,
+      "open_leads": 86,
+      "est_pipeline": 206400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Kelly Schrader",
       "booked": 18,
       "shown": 3,
@@ -403,66 +463,6 @@
       "lane": 2
     },
     {
-      "name": "John Kirk",
-      "booked": 18,
-      "shown": 6,
-      "qualified": 7,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 5.6,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 94.4,
-      "crm_filled": 34,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          10,
-          10
-        ],
-        "disposition": [
-          10,
-          10
-        ],
-        "qualified": [
-          8,
-          8
-        ],
-        "confidence": [
-          6,
-          8
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Stephanie Taylor",
-            "lead_id": "lead_iFJytsUtexpfmfNWPdmTVjfWY0wf3bNqtMi1nOvOrWa",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Marie Baptiste",
-            "lead_id": "lead_loP7HRwGYCV1cHW7i4iChWpy07wuorlB3Kcrx1VCHhH",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 4,
-      "open_leads": 86,
-      "est_pipeline": 206400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Chris Wanke",
       "booked": 17,
       "shown": 7,
@@ -584,51 +584,6 @@
       "lane": 1
     },
     {
-      "name": "Jason Aaron",
-      "booked": 16,
-      "shown": 3,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 30,
-      "crm_total": 30,
-      "crm_detail": {
-        "show_up": [
-          12,
-          12
-        ],
-        "disposition": [
-          12,
-          12
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 105,
-      "open_leads": 82,
-      "est_pipeline": 196800,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
-    },
-    {
       "name": "Bryan Barcus",
       "booked": 16,
       "shown": 8,
@@ -704,6 +659,51 @@
       "est_pipeline": 103200,
       "is_manager": false,
       "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 16,
+      "shown": 3,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 30,
+      "crm_total": 30,
+      "crm_detail": {
+        "show_up": [
+          12,
+          12
+        ],
+        "disposition": [
+          12,
+          12
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 105,
+      "open_leads": 82,
+      "est_pipeline": 196800,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 2
     },
     {
