@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-07 02:00 AM PDT",
+  "updated_at": "2026-05-07 02:15 AM PDT",
   "week_label": "May 04 \u2013 May 08, 2026",
   "monday_str": "2026-05-04",
   "today_str": "2026-05-07",
@@ -190,49 +190,73 @@
       "lane": 2
     },
     {
-      "name": "Robin Perkins",
+      "name": "Lyle Hubbard",
       "booked": 18,
-      "shown": 10,
-      "qualified": 8,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "shown": 9,
+      "qualified": 9,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 5.6,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 52,
-      "crm_total": 52,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 88.6,
+      "crm_filled": 39,
+      "crm_total": 44,
       "crm_detail": {
         "show_up": [
-          15,
-          15
+          12,
+          12
         ],
         "disposition": [
-          15,
-          15
+          11,
+          12
         ],
         "qualified": [
-          11,
-          11
+          9,
+          10
         ],
         "confidence": [
-          11,
-          11
+          7,
+          10
         ],
         "lost_reason": [
           0,
           0
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Kevin Croom",
+            "lead_id": "lead_PmEd51Cz1pBzkTSp7qmxCezarPtFKeAxB9gKwnvFz2M",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Angelo Brown",
+            "lead_id": "lead_InQ31RlxE7Zy66vy0Oi7w947a2k7AAyKuGEYe68z0HR",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Paul Harden",
+            "lead_id": "lead_bjhm2xKittDariy1E7wotAhsA6XVNKF0krE52UpSm5e",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 70,
-      "open_leads": 100,
-      "est_pipeline": 240000,
+      "task_adherence": 91.8,
+      "tasks_overdue": 10,
+      "tasks_incomplete": 122,
+      "open_leads": 53,
+      "est_pipeline": 127200,
       "is_manager": false,
       "is_lead": false,
-      "lane": 1
+      "lane": 2
     },
     {
       "name": "John Kirk",
@@ -293,6 +317,51 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
+    },
+    {
+      "name": "Robin Perkins",
+      "booked": 18,
+      "shown": 10,
+      "qualified": 8,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 52,
+      "crm_total": 52,
+      "crm_detail": {
+        "show_up": [
+          15,
+          15
+        ],
+        "disposition": [
+          15,
+          15
+        ],
+        "qualified": [
+          11,
+          11
+        ],
+        "confidence": [
+          11,
+          11
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 70,
+      "open_leads": 100,
+      "est_pipeline": 240000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Kelly Schrader",
@@ -389,75 +458,6 @@
       "tasks_incomplete": 5,
       "open_leads": 47,
       "est_pipeline": 112800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 18,
-      "shown": 9,
-      "qualified": 9,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 5.6,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 88.6,
-      "crm_filled": 39,
-      "crm_total": 44,
-      "crm_detail": {
-        "show_up": [
-          12,
-          12
-        ],
-        "disposition": [
-          11,
-          12
-        ],
-        "qualified": [
-          9,
-          10
-        ],
-        "confidence": [
-          7,
-          10
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Kevin Croom",
-            "lead_id": "lead_PmEd51Cz1pBzkTSp7qmxCezarPtFKeAxB9gKwnvFz2M",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Angelo Brown",
-            "lead_id": "lead_InQ31RlxE7Zy66vy0Oi7w947a2k7AAyKuGEYe68z0HR",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Paul Harden",
-            "lead_id": "lead_bjhm2xKittDariy1E7wotAhsA6XVNKF0krE52UpSm5e",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 91.8,
-      "tasks_overdue": 10,
-      "tasks_incomplete": 122,
-      "open_leads": 53,
-      "est_pipeline": 127200,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -584,6 +584,51 @@
       "lane": 1
     },
     {
+      "name": "Jason Aaron",
+      "booked": 16,
+      "shown": 3,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 30,
+      "crm_total": 30,
+      "crm_detail": {
+        "show_up": [
+          12,
+          12
+        ],
+        "disposition": [
+          12,
+          12
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 105,
+      "open_leads": 82,
+      "est_pipeline": 196800,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
+    },
+    {
       "name": "Bryan Barcus",
       "booked": 16,
       "shown": 8,
@@ -659,51 +704,6 @@
       "est_pipeline": 103200,
       "is_manager": false,
       "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 16,
-      "shown": 3,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 30,
-      "crm_total": 30,
-      "crm_detail": {
-        "show_up": [
-          12,
-          12
-        ],
-        "disposition": [
-          12,
-          12
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 105,
-      "open_leads": 82,
-      "est_pipeline": 196800,
-      "is_manager": false,
-      "is_lead": true,
       "lane": 2
     },
     {
