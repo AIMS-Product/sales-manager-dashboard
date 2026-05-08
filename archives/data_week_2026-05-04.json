@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08 11:00 AM PDT",
+  "updated_at": "2026-05-08 11:15 AM PDT",
   "week_label": "May 04 \u2013 May 08, 2026",
   "monday_str": "2026-05-04",
   "today_str": "2026-05-08",
@@ -40,18 +40,18 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 260,
+  "total_booked": 261,
   "total_shown": 99,
   "total_qualified": 75,
   "total_deals": 8,
   "total_revenue": 62476.0,
   "team_close_rate": 3.1,
   "team_avg_rev_per_deal": 7809.5,
-  "team_crm_compliance": 86.4,
+  "team_crm_compliance": 86.3,
   "team_task_adherence": 91.9,
   "team_overdue": 43,
-  "team_open_leads": 953,
-  "team_est_pipeline": 2287200,
+  "team_open_leads": 950,
+  "team_est_pipeline": 2280000,
   "funnel_breakdown": [
     {
       "funnel": "LTF - Quiz Funnel",
@@ -62,11 +62,11 @@
       "count": 67
     },
     {
-      "funnel": "YouTube",
-      "count": 25
+      "funnel": "Low Ticket Funnel",
+      "count": 26
     },
     {
-      "funnel": "Low Ticket Funnel",
+      "funnel": "YouTube",
       "count": 25
     },
     {
@@ -82,11 +82,11 @@
       "count": 12
     },
     {
-      "funnel": "X",
+      "funnel": "Unknown",
       "count": 3
     },
     {
-      "funnel": "Unknown",
+      "funnel": "X",
       "count": 3
     },
     {
@@ -100,11 +100,11 @@
   ],
   "funnel_sources": {
     "in_house": 70,
-    "external": 98,
+    "external": 99,
     "unknown": 92,
-    "in_house_pct": 26.9,
-    "external_pct": 37.7,
-    "unknown_pct": 35.4
+    "in_house_pct": 26.8,
+    "external_pct": 37.9,
+    "unknown_pct": 35.2
   },
   "reps": [
     {
@@ -279,6 +279,118 @@
       "lane": 2
     },
     {
+      "name": "Robin Perkins",
+      "booked": 24,
+      "shown": 12,
+      "qualified": 9,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": 4.2,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 62,
+      "crm_total": 62,
+      "crm_detail": {
+        "show_up": [
+          18,
+          18
+        ],
+        "disposition": [
+          18,
+          18
+        ],
+        "qualified": [
+          13,
+          13
+        ],
+        "confidence": [
+          13,
+          13
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 98.7,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 78,
+      "open_leads": 95,
+      "est_pipeline": 228000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Scott Seymour",
+      "booked": 23,
+      "shown": 10,
+      "qualified": 6,
+      "deals": 2,
+      "revenue": 16994.0,
+      "close_rate": 8.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 8497.0,
+      "crm_compliance": 94.4,
+      "crm_filled": 51,
+      "crm_total": 54,
+      "crm_detail": {
+        "show_up": [
+          15,
+          15
+        ],
+        "disposition": [
+          14,
+          15
+        ],
+        "qualified": [
+          9,
+          10
+        ],
+        "confidence": [
+          9,
+          10
+        ],
+        "lost_reason": [
+          4,
+          4
+        ],
+        "missing_leads": [
+          {
+            "name": "Robert Matranga",
+            "lead_id": "lead_eEvigR987acxqhcsCXeLBAK4dgFbiuOigt7jyg7i7Wr",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Michael Lebron",
+            "lead_id": "lead_EQVvBkokrBu1MzrsYfjLciRl8iIBViOpWXgiCOXp3IP",
+            "missing": [
+              "Qualified"
+            ]
+          },
+          {
+            "name": "Coral Richline",
+            "lead_id": "lead_gesu8cyE7tFAK6TwX3o6ev2nRRLTlrwMaiFr1Fyadli",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 115,
+      "open_leads": 78,
+      "est_pipeline": 187200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "John Kirk",
       "booked": 23,
       "shown": 11,
@@ -418,118 +530,6 @@
       "lane": 2
     },
     {
-      "name": "Robin Perkins",
-      "booked": 23,
-      "shown": 12,
-      "qualified": 9,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": 4.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 62,
-      "crm_total": 62,
-      "crm_detail": {
-        "show_up": [
-          18,
-          18
-        ],
-        "disposition": [
-          18,
-          18
-        ],
-        "qualified": [
-          13,
-          13
-        ],
-        "confidence": [
-          13,
-          13
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 98.7,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 78,
-      "open_leads": 97,
-      "est_pipeline": 232800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Scott Seymour",
-      "booked": 23,
-      "shown": 10,
-      "qualified": 6,
-      "deals": 2,
-      "revenue": 16994.0,
-      "close_rate": 8.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 8497.0,
-      "crm_compliance": 94.4,
-      "crm_filled": 51,
-      "crm_total": 54,
-      "crm_detail": {
-        "show_up": [
-          15,
-          15
-        ],
-        "disposition": [
-          14,
-          15
-        ],
-        "qualified": [
-          9,
-          10
-        ],
-        "confidence": [
-          9,
-          10
-        ],
-        "lost_reason": [
-          4,
-          4
-        ],
-        "missing_leads": [
-          {
-            "name": "Robert Matranga",
-            "lead_id": "lead_eEvigR987acxqhcsCXeLBAK4dgFbiuOigt7jyg7i7Wr",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Michael Lebron",
-            "lead_id": "lead_EQVvBkokrBu1MzrsYfjLciRl8iIBViOpWXgiCOXp3IP",
-            "missing": [
-              "Qualified"
-            ]
-          },
-          {
-            "name": "Coral Richline",
-            "lead_id": "lead_gesu8cyE7tFAK6TwX3o6ev2nRRLTlrwMaiFr1Fyadli",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 115,
-      "open_leads": 79,
-      "est_pipeline": 189600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Jason Aaron",
       "booked": 22,
       "shown": 4,
@@ -584,25 +584,25 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 95.7,
-      "crm_filled": 45,
-      "crm_total": 47,
+      "crm_compliance": 95.3,
+      "crm_filled": 41,
+      "crm_total": 43,
       "crm_detail": {
         "show_up": [
-          13,
-          13
+          12,
+          12
         ],
         "disposition": [
-          12,
-          13
+          11,
+          12
         ],
         "qualified": [
-          9,
-          10
+          8,
+          9
         ],
         "confidence": [
-          10,
-          10
+          9,
+          9
         ],
         "lost_reason": [
           1,
