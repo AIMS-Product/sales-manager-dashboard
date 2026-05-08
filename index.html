@@ -297,6 +297,34 @@
         tbody tr.totals-row td { padding: 14px 10px; border-bottom: none; }
         tbody tr.totals-row td:first-child { padding-left: 24px; }
 
+        .lane-header-row td {
+            padding: 10px 12px 4px;
+            border-bottom: none;
+            background: transparent;
+        }
+        .lane-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            background: #f0f1f3;
+            padding: 3px 10px;
+            border-radius: 4px;
+        }
+        .lane-divider-row td {
+            padding: 0;
+            height: 12px;
+            border-bottom: 2px solid var(--border);
+            background: transparent;
+        }
+        .lane-totals-row td {
+            font-weight: 600;
+            border-top: 2px solid var(--border);
+            font-size: 12.5px;
+            color: var(--text-secondary);
+        }
+
         .rate-high { color: var(--green); }
         .rate-mid  { color: var(--teal); }
         .rate-low  { color: var(--amber); }
@@ -594,12 +622,13 @@
     }
 
     function renderTable() {
-        const reps = [...DATA.reps];
+        const allReps = [...DATA.reps];
         const { key, dir } = currentSort;
         const t = T();
+        const t2 = DATA.lane_2_targets || t;
         const tt = DATA.team_targets || {};
 
-        reps.sort((a, b) => {
+        const sortFn = (a, b) => {
             let va = a[key], vb = b[key];
             if (va === null || va === undefined) va = -Infinity;
             if (vb === null || vb === undefined) vb = -Infinity;
@@ -607,21 +636,46 @@
                 return dir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
             }
             return dir === 'asc' ? va - vb : vb - va;
-        });
+        };
 
-        document.getElementById('repCount').textContent = `· ${reps.length} reps`;
+        // Split into lanes (manager goes after Lane 2)
+        const lane1 = allReps.filter(r => r.lane === 1 && !r.is_manager).sort(sortFn);
+        const lane2 = allReps.filter(r => r.lane === 2 && !r.is_manager).sort(sortFn);
+        const mgrs = allReps.filter(r => r.is_manager);
+
+        document.getElementById('repCount').textContent = `· ${allReps.length} reps`;
 
         const TBD = '<span class="tbd-tag">TBD</span>';
-        let html = '';
 
-        for (let i = 0; i < reps.length; i++) {
-            const r = reps[i];
+        // Helper: compute subtotals for a set of reps
+        function laneTotals(reps) {
+            const b = reps.reduce((s, r) => s + (r.booked || 0), 0);
+            const sh = reps.reduce((s, r) => s + (r.shown || 0), 0);
+            const q = reps.reduce((s, r) => s + (r.qualified || 0), 0);
+            const d = reps.reduce((s, r) => s + (r.deals || 0), 0);
+            const rev = reps.reduce((s, r) => s + (r.revenue || 0), 0);
+            const cr = b > 0 ? Math.round(d / b * 1000) / 10 : null;
+            const avg = d > 0 ? Math.round(rev / d) : null;
+            const crmF = reps.reduce((s, r) => s + (r.crm_filled || 0), 0);
+            const crmT = reps.reduce((s, r) => s + (r.crm_total || 0), 0);
+            const crm = crmT > 0 ? Math.round(crmF / crmT * 1000) / 10 : null;
+            const ol = reps.reduce((s, r) => s + (r.open_leads || 0), 0);
+            const ep = reps.reduce((s, r) => s + (r.est_pipeline || 0), 0);
+            const incmplt = reps.filter(r => r.tasks_incomplete != null);
+            const totalInc = incmplt.reduce((s, r) => s + (r.tasks_incomplete || 0), 0);
+            const totalOvd = incmplt.reduce((s, r) => s + (r.tasks_overdue || 0), 0);
+            const taskAdh = totalInc > 0 ? Math.round((totalInc - totalOvd) / totalInc * 1000) / 10 : null;
+            return { booked: b, shown: sh, qualified: q, deals: d, revenue: rev, close_rate: cr, avg, crm, taskAdh, totalOvd, ol, ep };
+        }
+
+        // Helper: render a single rep row
+        function repRow(r, globalIdx) {
             const mgr = r.is_manager;
             const mgrTag = mgr ? '<span class="manager-tag">MGR</span>' : '';
             const leadTag = r.is_lead ? '<span class="lead-tag">Lead</span>' : '';
 
             if (mgr) {
-                html += `<tr>
+                return `<tr>
                     <td>${r.name}${mgrTag}${leadTag}</td>
                     <td class="g-activity-start" style="color:var(--text-muted)">${r.booked}</td>
                     <td style="color:var(--text-muted)">${r.shown}</td>
@@ -636,71 +690,123 @@
                     <td style="color:var(--text-muted)">—</td>
                     <td style="color:var(--text-muted)">—</td>
                 </tr>`;
-            } else {
-                const rt = r.lane === 2 ? (DATA.lane_2_targets || t) : t;
-                const ol = r.open_leads || 0;
-                const ep = r.est_pipeline || 0;
-                const crmCell = r.crm_detail
-                    ? `<td class="crm-clickable" data-crm-idx="${i}">${progPct(r.crm_compliance, rt.crm_compliance)} <span style="font-size:9px;color:var(--text-muted);">▼</span></td>`
-                    : `<td>${progPct(r.crm_compliance, rt.crm_compliance)}</td>`;
-
-                html += `<tr>
-                    <td>${r.name}${mgrTag}${leadTag}</td>
-                    <td class="g-activity-start">${prog(r.booked, rt.booked)}</td>
-                    <td>${prog(r.shown, rt.shown)}</td>
-                    <td>${prog(r.qualified, rt.qualified)}</td>
-                    <td>${prog(r.deals, rt.deals)}</td>
-                    <td class="g-activity-end">${progMoney(r.revenue, rt.revenue)}</td>
-                    <td>${progPct(r.close_rate, rt.close_rate)}</td>
-                    <td>${TBD}</td>
-                    <td class="g-perf-end">${progMoney(r.avg_rev_per_deal, rt.avg_rev_per_deal)}</td>
-                    ${crmCell}
-                    <td>${fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
-                    <td>${ol}</td>
-                    <td>${fmtK(ep)}</td>
-                </tr>`;
-
-                // Hidden CRM detail row
-                if (r.crm_detail) {
-                    const d = r.crm_detail;
-                    const ml = d.missing_leads || [];
-                    const lr = d.lost_reason || [0, 0];
-
-                    let missingHtml = '';
-                    if (ml.length > 0) {
-                        missingHtml = '<div class="crm-missing-list">';
-                        missingHtml += `<div class="crm-missing-label">Leads with missing fields (${ml.length}):</div>`;
-                        for (const lead of ml) {
-                            const nameLink = lead.lead_id
-                                ? `<a href="https://app.close.com/lead/${lead.lead_id}/" target="_blank" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${lead.name}</a>`
-                                : `<span class="crm-missing-name">${lead.name}</span>`;
-                            missingHtml += `<div class="crm-missing-item">
-                                ${nameLink}
-                                <span class="crm-missing-fields">${lead.missing.join(', ')}</span>
-                            </div>`;
-                        }
-                        missingHtml += '</div>';
-                    }
-
-                    const lostReasonHtml = lr[1] > 0 ? crmFieldHtml('Lost Reason', lr[0], lr[1]) : '';
-
-                    html += `<tr class="crm-detail-row" id="crm-detail-${i}" style="display:none;">
-                        <td colspan="13">
-                            <div class="crm-detail">
-                                ${crmFieldHtml('Show Up', d.show_up[0], d.show_up[1])}
-                                ${crmFieldHtml('Disposition', d.disposition[0], d.disposition[1])}
-                                ${crmFieldHtml('Qualified', d.qualified[0], d.qualified[1])}
-                                ${crmFieldHtml('Confidence', d.confidence[0], d.confidence[1])}
-                                ${lostReasonHtml}
-                            </div>
-                            ${missingHtml}
-                        </td>
-                    </tr>`;
-                }
             }
+
+            const rt = r.lane === 2 ? t2 : t;
+            const ol = r.open_leads || 0;
+            const ep = r.est_pipeline || 0;
+            const crmCell = r.crm_detail
+                ? `<td class="crm-clickable" data-crm-idx="${globalIdx}">${progPct(r.crm_compliance, rt.crm_compliance)} <span style="font-size:9px;color:var(--text-muted);">▼</span></td>`
+                : `<td>${progPct(r.crm_compliance, rt.crm_compliance)}</td>`;
+
+            let html = `<tr>
+                <td>${r.name}${mgrTag}${leadTag}</td>
+                <td class="g-activity-start">${prog(r.booked, rt.booked)}</td>
+                <td>${prog(r.shown, rt.shown)}</td>
+                <td>${prog(r.qualified, rt.qualified)}</td>
+                <td>${prog(r.deals, rt.deals)}</td>
+                <td class="g-activity-end">${progMoney(r.revenue, rt.revenue)}</td>
+                <td>${progPct(r.close_rate, rt.close_rate)}</td>
+                <td>${TBD}</td>
+                <td class="g-perf-end">${progMoney(r.avg_rev_per_deal, rt.avg_rev_per_deal)}</td>
+                ${crmCell}
+                <td>${fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
+                <td>${ol}</td>
+                <td>${fmtK(ep)}</td>
+            </tr>`;
+
+            // CRM detail row
+            if (r.crm_detail) {
+                const d = r.crm_detail;
+                const ml = d.missing_leads || [];
+                const lr = d.lost_reason || [0, 0];
+
+                let missingHtml = '';
+                if (ml.length > 0) {
+                    missingHtml = '<div class="crm-missing-list">';
+                    missingHtml += `<div class="crm-missing-label">Leads with missing fields (${ml.length}):</div>`;
+                    for (const lead of ml) {
+                        const nameLink = lead.lead_id
+                            ? `<a href="https://app.close.com/lead/${lead.lead_id}/" target="_blank" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${lead.name}</a>`
+                            : `<span class="crm-missing-name">${lead.name}</span>`;
+                        missingHtml += `<div class="crm-missing-item">
+                            ${nameLink}
+                            <span class="crm-missing-fields">${lead.missing.join(', ')}</span>
+                        </div>`;
+                    }
+                    missingHtml += '</div>';
+                }
+
+                const lostReasonHtml = lr[1] > 0 ? crmFieldHtml('Lost Reason', lr[0], lr[1]) : '';
+
+                html += `<tr class="crm-detail-row" id="crm-detail-${globalIdx}" style="display:none;">
+                    <td colspan="13">
+                        <div class="crm-detail">
+                            ${crmFieldHtml('Show Up', d.show_up[0], d.show_up[1])}
+                            ${crmFieldHtml('Disposition', d.disposition[0], d.disposition[1])}
+                            ${crmFieldHtml('Qualified', d.qualified[0], d.qualified[1])}
+                            ${crmFieldHtml('Confidence', d.confidence[0], d.confidence[1])}
+                            ${lostReasonHtml}
+                        </div>
+                        ${missingHtml}
+                    </td>
+                </tr>`;
+            }
+
+            return html;
         }
 
-        // Totals row with team targets
+        // Helper: render a subtotals row
+        function subtotalRow(label, lt, targets) {
+            return `<tr class="lane-totals-row">
+                <td style="font-weight:700;">${label}</td>
+                <td class="g-activity-start">${prog(lt.booked, targets.booked)}</td>
+                <td>${prog(lt.shown, targets.shown)}</td>
+                <td>${prog(lt.qualified, targets.qualified)}</td>
+                <td>${prog(lt.deals, targets.deals)}</td>
+                <td class="g-activity-end">${progMoney(lt.revenue, targets.revenue)}</td>
+                <td>${progPct(lt.close_rate, targets.close_rate)}</td>
+                <td>${TBD}</td>
+                <td class="g-perf-end">${lt.avg ? fmtK(lt.avg) : '—'}</td>
+                <td>${progPct(lt.crm, targets.crm_compliance)}</td>
+                <td>${fmtAdherence(lt.taskAdh, lt.totalOvd)}</td>
+                <td>${lt.ol}</td>
+                <td>${fmtK(lt.ep)}</td>
+            </tr>`;
+        }
+
+        // Build global index map for CRM detail toggling
+        const globalIdxMap = new Map();
+        allReps.forEach((r, i) => globalIdxMap.set(r, i));
+
+        let html = '';
+
+        // ── Lane 1 ──
+        html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Lane 1</span></td></tr>`;
+        for (const r of lane1) {
+            html += repRow(r, globalIdxMap.get(r));
+        }
+        const lt1 = laneTotals(lane1);
+        const l1Targets = { booked: t.booked * lane1.length, shown: t.shown * lane1.length, qualified: t.qualified * lane1.length, deals: t.deals * lane1.length, revenue: t.revenue * lane1.length, close_rate: t.close_rate, crm_compliance: t.crm_compliance };
+        html += subtotalRow('Lane 1 Totals', lt1, { ...t, booked: null, shown: null, qualified: null, deals: null, revenue: null });
+
+        // ── Divider ──
+        html += `<tr class="lane-divider-row"><td colspan="13"></td></tr>`;
+
+        // ── Lane 2 ──
+        html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Lane 2</span></td></tr>`;
+        for (const r of lane2) {
+            html += repRow(r, globalIdxMap.get(r));
+        }
+        const lt2 = laneTotals(lane2);
+        html += subtotalRow('Lane 2 Totals', lt2, { ...t2, booked: null, shown: null, qualified: null, deals: null, revenue: null });
+
+        // ── Manager ──
+        for (const r of mgrs) {
+            html += repRow(r, globalIdxMap.get(r));
+        }
+
+        // ── Combined Team Totals ──
         html += `<tr class="totals-row">
             <td>Team Totals</td>
             <td class="g-activity-start">${prog(DATA.total_booked, tt.booked)}</td>
