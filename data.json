@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08 04:30 AM PDT",
+  "updated_at": "2026-05-08 04:45 AM PDT",
   "week_label": "May 04 \u2013 May 08, 2026",
   "monday_str": "2026-05-04",
   "today_str": "2026-05-08",
@@ -71,7 +71,7 @@
     },
     {
       "funnel": "Website",
-      "count": 18
+      "count": 19
     },
     {
       "funnel": "Meta Ads",
@@ -90,12 +90,12 @@
       "count": 3
     },
     {
-      "funnel": "Unknown",
+      "funnel": "VSL",
       "count": 2
     },
     {
-      "funnel": "VSL",
-      "count": 2
+      "funnel": "Unknown",
+      "count": 1
     },
     {
       "funnel": "Reactivation Email",
@@ -103,12 +103,12 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 72,
+    "in_house": 73,
     "external": 98,
-    "unknown": 93,
-    "in_house_pct": 27.4,
+    "unknown": 92,
+    "in_house_pct": 27.8,
     "external_pct": 37.3,
-    "unknown_pct": 35.4
+    "unknown_pct": 35.0
   },
   "reps": [
     {
@@ -328,6 +328,73 @@
       "lane": 1
     },
     {
+      "name": "Scott Seymour",
+      "booked": 23,
+      "shown": 9,
+      "qualified": 6,
+      "deals": 2,
+      "revenue": 16994.0,
+      "close_rate": 8.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 8497.0,
+      "crm_compliance": 94.8,
+      "crm_filled": 55,
+      "crm_total": 58,
+      "crm_detail": {
+        "show_up": [
+          16,
+          16
+        ],
+        "disposition": [
+          15,
+          16
+        ],
+        "qualified": [
+          10,
+          11
+        ],
+        "confidence": [
+          10,
+          11
+        ],
+        "lost_reason": [
+          4,
+          4
+        ],
+        "missing_leads": [
+          {
+            "name": "Robert Matranga",
+            "lead_id": "lead_eEvigR987acxqhcsCXeLBAK4dgFbiuOigt7jyg7i7Wr",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Michael Lebron",
+            "lead_id": "lead_EQVvBkokrBu1MzrsYfjLciRl8iIBViOpWXgiCOXp3IP",
+            "missing": [
+              "Qualified"
+            ]
+          },
+          {
+            "name": "Coral Richline",
+            "lead_id": "lead_gesu8cyE7tFAK6TwX3o6ev2nRRLTlrwMaiFr1Fyadli",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 111,
+      "open_leads": 80,
+      "est_pipeline": 192000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Lyle Hubbard",
       "booked": 23,
       "shown": 12,
@@ -398,73 +465,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
-    },
-    {
-      "name": "Scott Seymour",
-      "booked": 23,
-      "shown": 9,
-      "qualified": 6,
-      "deals": 2,
-      "revenue": 16994.0,
-      "close_rate": 8.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 8497.0,
-      "crm_compliance": 94.8,
-      "crm_filled": 55,
-      "crm_total": 58,
-      "crm_detail": {
-        "show_up": [
-          16,
-          16
-        ],
-        "disposition": [
-          15,
-          16
-        ],
-        "qualified": [
-          10,
-          11
-        ],
-        "confidence": [
-          10,
-          11
-        ],
-        "lost_reason": [
-          4,
-          4
-        ],
-        "missing_leads": [
-          {
-            "name": "Robert Matranga",
-            "lead_id": "lead_eEvigR987acxqhcsCXeLBAK4dgFbiuOigt7jyg7i7Wr",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Michael Lebron",
-            "lead_id": "lead_EQVvBkokrBu1MzrsYfjLciRl8iIBViOpWXgiCOXp3IP",
-            "missing": [
-              "Qualified"
-            ]
-          },
-          {
-            "name": "Coral Richline",
-            "lead_id": "lead_gesu8cyE7tFAK6TwX3o6ev2nRRLTlrwMaiFr1Fyadli",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 111,
-      "open_leads": 80,
-      "est_pipeline": 192000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
     },
     {
       "name": "John Kirk",
