@@ -60,6 +60,7 @@ CLOSE_RATE_ESTIMATE = 0.30
 # Funnel source classification: In-House vs External
 FUNNEL_SOURCE = {
     "Low Ticket Funnel": "External",
+    "LTF - Quiz Funnel": "External",
     "Instagram": "External",
     "YouTube": "In-House",
     "YouTube - OG - Cam": "In-House",
