@@ -154,6 +154,7 @@ REP_QUOTAS = {
     "Jake Skinner": 75_000,
     "Elvis Ellis": 50_000,
     "Chris Wanke": 50_000,
+    "Dubem Adindu": 100_000,
     "Bryan Barcus": 0,
     "Kelly Schrader": 0,
     "Steven Starnes": 0,
