@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-13 10:30 AM PDT",
+  "updated_at": "2026-05-13 10:45 AM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-13",
@@ -40,13 +40,13 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 232,
+  "total_booked": 231,
   "total_shown": 44,
   "total_qualified": 35,
-  "total_deals": 2,
+  "total_deals": 3,
   "total_revenue": 11994.0,
-  "team_close_rate": 0.9,
-  "team_avg_rev_per_deal": 5997.0,
+  "team_close_rate": 1.3,
+  "team_avg_rev_per_deal": 3998.0,
   "team_crm_compliance": 91.0,
   "team_task_adherence": 93.7,
   "team_overdue": 34,
@@ -55,7 +55,7 @@
   "funnel_breakdown": [
     {
       "funnel": "LTF - Quiz Funnel",
-      "count": 127
+      "count": 131
     },
     {
       "funnel": "Instagram",
@@ -66,20 +66,20 @@
       "count": 18
     },
     {
-      "funnel": "Unknown",
-      "count": 12
+      "funnel": "Low Ticket Funnel",
+      "count": 11
     },
     {
       "funnel": "Website",
       "count": 11
     },
     {
-      "funnel": "Low Ticket Funnel",
-      "count": 11
-    },
-    {
       "funnel": "Internal Webinar",
       "count": 8
+    },
+    {
+      "funnel": "Unknown",
+      "count": 7
     },
     {
       "funnel": "X",
@@ -104,11 +104,11 @@
   ],
   "funnel_sources": {
     "in_house": 41,
-    "external": 179,
-    "unknown": 12,
+    "external": 183,
+    "unknown": 7,
     "in_house_pct": 17.7,
-    "external_pct": 77.2,
-    "unknown_pct": 5.2
+    "external_pct": 79.2,
+    "unknown_pct": 3.0
   },
   "reps": [
     {
@@ -233,7 +233,7 @@
     },
     {
       "name": "Jason Aaron",
-      "booked": 26,
+      "booked": 27,
       "shown": 4,
       "qualified": 3,
       "deals": 0,
@@ -487,7 +487,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 73,
+      "tasks_incomplete": 74,
       "open_leads": 96,
       "est_pipeline": 230400,
       "is_manager": false,
@@ -632,7 +632,7 @@
       },
       "task_adherence": 99.2,
       "tasks_overdue": 1,
-      "tasks_incomplete": 129,
+      "tasks_incomplete": 128,
       "open_leads": 86,
       "est_pipeline": 206400,
       "is_manager": false,
@@ -730,61 +730,8 @@
       "lane": 1
     },
     {
-      "name": "Chris Wanke",
-      "booked": 9,
-      "shown": 3,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 94.4,
-      "crm_filled": 17,
-      "crm_total": 18,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          4,
-          4
-        ],
-        "confidence": [
-          3,
-          4
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Darko L",
-            "lead_id": "lead_4Vpgc55CQTHsC1rZalBG81aaOMArd9UWulFZGAfNLRR",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 38.5,
-      "tasks_overdue": 8,
-      "tasks_incomplete": 13,
-      "open_leads": 65,
-      "est_pipeline": 156000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Jake Skinner",
-      "booked": 9,
+      "booked": 8,
       "shown": 3,
       "qualified": 3,
       "deals": 0,
@@ -836,24 +783,54 @@
       "lane": 1
     },
     {
-      "name": "Dubem Adindu",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
+      "name": "Chris Wanke",
+      "booked": 8,
+      "shown": 3,
+      "qualified": 3,
       "deals": 0,
       "revenue": 0,
-      "close_rate": null,
+      "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
+      "crm_compliance": 94.4,
+      "crm_filled": 17,
+      "crm_total": 18,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          3,
+          4
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Darko L",
+            "lead_id": "lead_4Vpgc55CQTHsC1rZalBG81aaOMArd9UWulFZGAfNLRR",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 38.5,
+      "tasks_overdue": 8,
+      "tasks_incomplete": 13,
+      "open_leads": 65,
+      "est_pipeline": 156000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -877,6 +854,29 @@
       "tasks_incomplete": 4,
       "open_leads": 75,
       "est_pipeline": 180000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Dubem Adindu",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 0.0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": 0.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
