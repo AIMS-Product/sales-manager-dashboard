@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-13 07:00 AM PDT",
+  "updated_at": "2026-05-13 07:15 AM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-13",
@@ -450,6 +450,61 @@
       "lane": 2
     },
     {
+      "name": "Lyle Hubbard",
+      "booked": 16,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 6.2,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 83.3,
+      "crm_filled": 15,
+      "crm_total": 18,
+      "crm_detail": {
+        "show_up": [
+          8,
+          8
+        ],
+        "disposition": [
+          7,
+          8
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Ashley Lewis",
+            "lead_id": "lead_ETQpjqAn0KbOuqDFxuB0svv2nQuKzE015dWSHyRXHda",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 106,
+      "open_leads": 51,
+      "est_pipeline": 122400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Scott Seymour",
       "booked": 16,
       "shown": 6,
@@ -538,61 +593,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 16,
-      "shown": 1,
-      "qualified": 1,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 6.2,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 83.3,
-      "crm_filled": 15,
-      "crm_total": 18,
-      "crm_detail": {
-        "show_up": [
-          8,
-          8
-        ],
-        "disposition": [
-          7,
-          8
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Ashley Lewis",
-            "lead_id": "lead_ETQpjqAn0KbOuqDFxuB0svv2nQuKzE015dWSHyRXHda",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 106,
-      "open_leads": 51,
-      "est_pipeline": 122400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
     },
     {
       "name": "John Kirk",
@@ -874,29 +874,6 @@
       "lane": 1
     },
     {
-      "name": "Joe Dysert",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": null,
-      "tasks_incomplete": null,
-      "open_leads": null,
-      "est_pipeline": null,
-      "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Dubem Adindu",
       "booked": 0,
       "shown": 0,
@@ -916,6 +893,29 @@
       "open_leads": 0,
       "est_pipeline": 0,
       "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Joe Dysert",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": null,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
       "is_lead": false,
       "lane": 1
     }
