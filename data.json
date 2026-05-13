@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-13 08:30 AM PDT",
+  "updated_at": "2026-05-13 08:45 AM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-13",
@@ -40,7 +40,7 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 233,
+  "total_booked": 234,
   "total_shown": 42,
   "total_qualified": 33,
   "total_deals": 2,
@@ -48,8 +48,8 @@
   "team_close_rate": 0.9,
   "team_avg_rev_per_deal": 5997.0,
   "team_crm_compliance": 90.4,
-  "team_task_adherence": 92.6,
-  "team_overdue": 40,
+  "team_task_adherence": 92.8,
+  "team_overdue": 39,
   "team_open_leads": 978,
   "team_est_pipeline": 2347200,
   "funnel_breakdown": [
@@ -66,11 +66,11 @@
       "count": 17
     },
     {
-      "funnel": "Website",
-      "count": 12
+      "funnel": "Unknown",
+      "count": 13
     },
     {
-      "funnel": "Unknown",
+      "funnel": "Website",
       "count": 12
     },
     {
@@ -105,10 +105,10 @@
   "funnel_sources": {
     "in_house": 41,
     "external": 180,
-    "unknown": 12,
-    "in_house_pct": 17.6,
-    "external_pct": 77.3,
-    "unknown_pct": 5.2
+    "unknown": 13,
+    "in_house_pct": 17.5,
+    "external_pct": 76.9,
+    "unknown_pct": 5.6
   },
   "reps": [
     {
@@ -450,51 +450,6 @@
       "lane": 2
     },
     {
-      "name": "Robin Perkins",
-      "booked": 16,
-      "shown": 8,
-      "qualified": 6,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 6.2,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 37,
-      "crm_total": 37,
-      "crm_detail": {
-        "show_up": [
-          10,
-          10
-        ],
-        "disposition": [
-          10,
-          10
-        ],
-        "qualified": [
-          8,
-          8
-        ],
-        "confidence": [
-          8,
-          8
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 73,
-      "open_leads": 96,
-      "est_pipeline": 230400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Lyle Hubbard",
       "booked": 16,
       "shown": 1,
@@ -585,11 +540,56 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 97.1,
-      "tasks_overdue": 4,
-      "tasks_incomplete": 136,
+      "task_adherence": 97.8,
+      "tasks_overdue": 3,
+      "tasks_incomplete": 135,
       "open_leads": 86,
       "est_pipeline": 206400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Robin Perkins",
+      "booked": 16,
+      "shown": 8,
+      "qualified": 6,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 6.2,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 37,
+      "crm_total": 37,
+      "crm_detail": {
+        "show_up": [
+          10,
+          10
+        ],
+        "disposition": [
+          10,
+          10
+        ],
+        "qualified": [
+          8,
+          8
+        ],
+        "confidence": [
+          8,
+          8
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 72,
+      "open_leads": 96,
+      "est_pipeline": 230400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -656,7 +656,7 @@
     },
     {
       "name": "Cameron Caswell",
-      "booked": 13,
+      "booked": 14,
       "shown": 2,
       "qualified": 1,
       "deals": 0,
@@ -851,6 +851,29 @@
       "lane": 1
     },
     {
+      "name": "Eric Piccione",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 4,
+      "open_leads": 75,
+      "est_pipeline": 180000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Dubem Adindu",
       "booked": 0,
       "shown": 0,
@@ -893,29 +916,6 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Eric Piccione",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 4,
-      "open_leads": 75,
-      "est_pipeline": 180000,
-      "is_manager": false,
       "is_lead": false,
       "lane": 1
     }
