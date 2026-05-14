@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14 01:15 PM PDT",
+  "updated_at": "2026-05-14 01:30 PM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-14",
@@ -47,9 +47,9 @@
   "total_revenue": 67973.0,
   "team_close_rate": 2.9,
   "team_avg_rev_per_deal": 7552.56,
-  "team_crm_compliance": 88.2,
-  "team_task_adherence": 82.1,
-  "team_overdue": 95,
+  "team_crm_compliance": 88.3,
+  "team_task_adherence": 82.7,
+  "team_overdue": 92,
   "team_open_leads": 1005,
   "team_est_pipeline": 2412000,
   "funnel_breakdown": [
@@ -172,51 +172,6 @@
       "lane": 2
     },
     {
-      "name": "Jason Aaron",
-      "booked": 34,
-      "shown": 6,
-      "qualified": 5,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 65,
-      "crm_total": 65,
-      "crm_detail": {
-        "show_up": [
-          27,
-          27
-        ],
-        "disposition": [
-          27,
-          27
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          5,
-          5
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 50.9,
-      "tasks_overdue": 53,
-      "tasks_incomplete": 108,
-      "open_leads": 88,
-      "est_pipeline": 211200,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
-    },
-    {
       "name": "Bryan Barcus",
       "booked": 34,
       "shown": 7,
@@ -251,6 +206,13 @@
           4
         ],
         "missing_leads": [
+          {
+            "name": "Conrad Brooks",
+            "lead_id": "lead_gIaRqaCu0SeM9tx3YuNDuMUma6ATVs3A4602HVZxE3u",
+            "missing": [
+              "Qualified"
+            ]
+          },
           {
             "name": "Malachi Wells",
             "lead_id": "lead_othR8kkxxKOqJVMjonoJZj38Lm2dQQxvKUkrqTCpjS3",
@@ -287,13 +249,6 @@
             ]
           },
           {
-            "name": "Conrad Brooks",
-            "lead_id": "lead_gIaRqaCu0SeM9tx3YuNDuMUma6ATVs3A4602HVZxE3u",
-            "missing": [
-              "Qualified"
-            ]
-          },
-          {
             "name": "Roni Levy",
             "lead_id": "lead_if2n5qBWiewc1nBeHnB9dH2PkxrguVEROIzWREqknDE",
             "missing": [
@@ -324,6 +279,51 @@
       "est_pipeline": 105600,
       "is_manager": false,
       "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 34,
+      "shown": 6,
+      "qualified": 5,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 65,
+      "crm_total": 65,
+      "crm_detail": {
+        "show_up": [
+          27,
+          27
+        ],
+        "disposition": [
+          27,
+          27
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 53.3,
+      "tasks_overdue": 50,
+      "tasks_incomplete": 107,
+      "open_leads": 88,
+      "est_pipeline": 211200,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 2
     },
     {
@@ -590,25 +590,25 @@
       "close_rate": 5.0,
       "qa_score": null,
       "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 98.0,
-      "crm_filled": 48,
-      "crm_total": 49,
+      "crm_compliance": 98.1,
+      "crm_filled": 52,
+      "crm_total": 53,
       "crm_detail": {
         "show_up": [
-          11,
-          12
+          12,
+          13
         ],
         "disposition": [
+          13,
+          13
+        ],
+        "qualified": [
           12,
           12
         ],
-        "qualified": [
-          11,
-          11
-        ],
         "confidence": [
-          11,
-          11
+          12,
+          12
         ],
         "lost_reason": [
           3,
@@ -626,7 +626,7 @@
       },
       "task_adherence": 98.6,
       "tasks_overdue": 2,
-      "tasks_incomplete": 138,
+      "tasks_incomplete": 139,
       "open_leads": 88,
       "est_pipeline": 211200,
       "is_manager": false,
