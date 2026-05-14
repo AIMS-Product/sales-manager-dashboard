@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14 01:00 PM PDT",
+  "updated_at": "2026-05-14 01:15 PM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-14",
@@ -40,18 +40,18 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 315,
+  "total_booked": 314,
   "total_shown": 80,
-  "total_qualified": 69,
+  "total_qualified": 70,
   "total_deals": 9,
   "total_revenue": 67973.0,
   "team_close_rate": 2.9,
   "team_avg_rev_per_deal": 7552.56,
-  "team_crm_compliance": 88.1,
+  "team_crm_compliance": 88.2,
   "team_task_adherence": 82.1,
   "team_overdue": 95,
-  "team_open_leads": 1004,
-  "team_est_pipeline": 2409600,
+  "team_open_leads": 1005,
+  "team_est_pipeline": 2412000,
   "funnel_breakdown": [
     {
       "funnel": "LTF - Quiz Funnel",
@@ -94,11 +94,11 @@
       "count": 3
     },
     {
-      "funnel": "Reactivation Email",
-      "count": 2
+      "funnel": "Linkedin",
+      "count": 1
     },
     {
-      "funnel": "Linkedin",
+      "funnel": "Reactivation Email",
       "count": 1
     },
     {
@@ -107,11 +107,11 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 63,
+    "in_house": 62,
     "external": 246,
     "unknown": 6,
-    "in_house_pct": 20.0,
-    "external_pct": 78.1,
+    "in_house_pct": 19.7,
+    "external_pct": 78.3,
     "unknown_pct": 1.9
   },
   "reps": [
@@ -119,31 +119,31 @@
       "name": "Kelly Schrader",
       "booked": 39,
       "shown": 1,
-      "qualified": 1,
+      "qualified": 2,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 93.8,
-      "crm_filled": 60,
-      "crm_total": 64,
+      "crm_compliance": 94.1,
+      "crm_filled": 64,
+      "crm_total": 68,
       "crm_detail": {
         "show_up": [
-          29,
-          30
+          30,
+          31
         ],
         "disposition": [
-          29,
-          30
+          30,
+          31
         ],
         "qualified": [
-          1,
-          2
+          2,
+          3
         ],
         "confidence": [
-          1,
-          2
+          2,
+          3
         ],
         "lost_reason": [
           0,
@@ -165,8 +165,8 @@
       "task_adherence": 33.3,
       "tasks_overdue": 4,
       "tasks_incomplete": 6,
-      "open_leads": 51,
-      "est_pipeline": 122400,
+      "open_leads": 52,
+      "est_pipeline": 124800,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -460,7 +460,7 @@
     },
     {
       "name": "John Kirk",
-      "booked": 22,
+      "booked": 23,
       "shown": 8,
       "qualified": 7,
       "deals": 0,
@@ -581,6 +581,59 @@
       "lane": 2
     },
     {
+      "name": "Scott Seymour",
+      "booked": 20,
+      "shown": 10,
+      "qualified": 10,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": 5.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 98.0,
+      "crm_filled": 48,
+      "crm_total": 49,
+      "crm_detail": {
+        "show_up": [
+          11,
+          12
+        ],
+        "disposition": [
+          12,
+          12
+        ],
+        "qualified": [
+          11,
+          11
+        ],
+        "confidence": [
+          11,
+          11
+        ],
+        "lost_reason": [
+          3,
+          3
+        ],
+        "missing_leads": [
+          {
+            "name": "David Pounds",
+            "lead_id": "lead_w4RScHUbtn4AQluWnO3VcdfGUmi0TSv1tSfY83L0bTR",
+            "missing": [
+              "Show Up"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 98.6,
+      "tasks_overdue": 2,
+      "tasks_incomplete": 138,
+      "open_leads": 88,
+      "est_pipeline": 211200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Robin Perkins",
       "booked": 20,
       "shown": 13,
@@ -632,59 +685,6 @@
       "tasks_incomplete": 71,
       "open_leads": 98,
       "est_pipeline": 235200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Scott Seymour",
-      "booked": 20,
-      "shown": 10,
-      "qualified": 10,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": 5.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 98.0,
-      "crm_filled": 48,
-      "crm_total": 49,
-      "crm_detail": {
-        "show_up": [
-          11,
-          12
-        ],
-        "disposition": [
-          12,
-          12
-        ],
-        "qualified": [
-          11,
-          11
-        ],
-        "confidence": [
-          11,
-          11
-        ],
-        "lost_reason": [
-          3,
-          3
-        ],
-        "missing_leads": [
-          {
-            "name": "David Pounds",
-            "lead_id": "lead_w4RScHUbtn4AQluWnO3VcdfGUmi0TSv1tSfY83L0bTR",
-            "missing": [
-              "Show Up"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 98.6,
-      "tasks_overdue": 2,
-      "tasks_incomplete": 138,
-      "open_leads": 88,
-      "est_pipeline": 211200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -855,12 +855,12 @@
     },
     {
       "name": "Dubem Adindu",
-      "booked": 16,
+      "booked": 15,
       "shown": 3,
       "qualified": 3,
       "deals": 1,
       "revenue": 5997.0,
-      "close_rate": 6.2,
+      "close_rate": 6.7,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
       "crm_compliance": 45.8,
@@ -1015,7 +1015,7 @@
     },
     {
       "name": "Jake Skinner",
-      "booked": 13,
+      "booked": 12,
       "shown": 5,
       "qualified": 6,
       "deals": 0,
