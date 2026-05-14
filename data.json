@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14 03:00 PM PDT",
+  "updated_at": "2026-05-14 03:15 PM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-14",
@@ -41,14 +41,14 @@
     "task_adherence": 100
   },
   "total_booked": 312,
-  "total_shown": 85,
+  "total_shown": 86,
   "total_qualified": 73,
   "total_deals": 11,
   "total_revenue": 90967.0,
   "team_close_rate": 3.5,
   "team_avg_rev_per_deal": 8269.73,
   "team_crm_compliance": 88.5,
-  "team_task_adherence": 82.8,
+  "team_task_adherence": 82.9,
   "team_overdue": 92,
   "team_open_leads": 1008,
   "team_est_pipeline": 2419200,
@@ -504,6 +504,62 @@
       "lane": 2
     },
     {
+      "name": "Robin Perkins",
+      "booked": 21,
+      "shown": 16,
+      "qualified": 12,
+      "deals": 3,
+      "revenue": 28991.0,
+      "close_rate": 14.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 9663.67,
+      "crm_compliance": 92.7,
+      "crm_filled": 51,
+      "crm_total": 55,
+      "crm_detail": {
+        "show_up": [
+          14,
+          15
+        ],
+        "disposition": [
+          14,
+          15
+        ],
+        "qualified": [
+          11,
+          12
+        ],
+        "confidence": [
+          11,
+          12
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Isaac Viray",
+            "lead_id": "lead_fgyA0QkSObMlKyi4nh6wjcsO1Fk69AXT57N9HXdS5fV",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 98.7,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 77,
+      "open_leads": 99,
+      "est_pipeline": 237600,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Elvis Ellis",
       "booked": 21,
       "shown": 4,
@@ -573,62 +629,6 @@
       "lane": 2
     },
     {
-      "name": "Robin Perkins",
-      "booked": 21,
-      "shown": 15,
-      "qualified": 12,
-      "deals": 3,
-      "revenue": 28991.0,
-      "close_rate": 14.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 9663.67,
-      "crm_compliance": 92.7,
-      "crm_filled": 51,
-      "crm_total": 55,
-      "crm_detail": {
-        "show_up": [
-          14,
-          15
-        ],
-        "disposition": [
-          14,
-          15
-        ],
-        "qualified": [
-          11,
-          12
-        ],
-        "confidence": [
-          11,
-          12
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Isaac Viray",
-            "lead_id": "lead_fgyA0QkSObMlKyi4nh6wjcsO1Fk69AXT57N9HXdS5fV",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 98.7,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 75,
-      "open_leads": 99,
-      "est_pipeline": 237600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Lyle Hubbard",
       "booked": 20,
       "shown": 3,
@@ -664,18 +664,18 @@
         ],
         "missing_leads": [
           {
-            "name": "Cj Johnson",
-            "lead_id": "lead_w4uXKtZsovju04IN4uo4NDQjezPpvA30dxuiidCj84e",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
             "name": "Ashley Lewis",
             "lead_id": "lead_ETQpjqAn0KbOuqDFxuB0svv2nQuKzE015dWSHyRXHda",
             "missing": [
               "Disposition",
               "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Cj Johnson",
+            "lead_id": "lead_w4uXKtZsovju04IN4uo4NDQjezPpvA30dxuiidCj84e",
+            "missing": [
               "Confidence"
             ]
           }
