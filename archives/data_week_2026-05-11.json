@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14 12:00 PM PDT",
+  "updated_at": "2026-05-14 12:15 PM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-14",
@@ -86,11 +86,11 @@
       "count": 4
     },
     {
-      "funnel": "Meta Ads",
+      "funnel": "VSL",
       "count": 3
     },
     {
-      "funnel": "VSL",
+      "funnel": "Meta Ads",
       "count": 3
     },
     {
@@ -169,6 +169,51 @@
       "est_pipeline": 122400,
       "is_manager": false,
       "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 34,
+      "shown": 6,
+      "qualified": 5,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 65,
+      "crm_total": 65,
+      "crm_detail": {
+        "show_up": [
+          27,
+          27
+        ],
+        "disposition": [
+          27,
+          27
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 50.9,
+      "tasks_overdue": 53,
+      "tasks_incomplete": 108,
+      "open_leads": 88,
+      "est_pipeline": 211200,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 2
     },
     {
@@ -279,51 +324,6 @@
       "est_pipeline": 105600,
       "is_manager": false,
       "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 34,
-      "shown": 6,
-      "qualified": 5,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 65,
-      "crm_total": 65,
-      "crm_detail": {
-        "show_up": [
-          27,
-          27
-        ],
-        "disposition": [
-          27,
-          27
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          5,
-          5
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 50.9,
-      "tasks_overdue": 53,
-      "tasks_incomplete": 108,
-      "open_leads": 88,
-      "est_pipeline": 211200,
-      "is_manager": false,
-      "is_lead": true,
       "lane": 2
     },
     {
@@ -682,7 +682,7 @@
       },
       "task_adherence": 98.5,
       "tasks_overdue": 2,
-      "tasks_incomplete": 136,
+      "tasks_incomplete": 137,
       "open_leads": 88,
       "est_pipeline": 211200,
       "is_manager": false,
@@ -961,59 +961,6 @@
       "lane": 1
     },
     {
-      "name": "Jake Skinner",
-      "booked": 14,
-      "shown": 5,
-      "qualified": 6,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 95.5,
-      "crm_filled": 21,
-      "crm_total": 22,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          6,
-          6
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          4,
-          5
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Mohtasib Ahmed",
-            "lead_id": "lead_8D8Y2IzDz42QQskxDam8qA0wbIKw2jueqqJRZ5LyjTq",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 92.3,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 13,
-      "open_leads": 119,
-      "est_pipeline": 285600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Christian Hartwell",
       "booked": 14,
       "shown": 8,
@@ -1064,6 +1011,59 @@
       "est_pipeline": 256800,
       "is_manager": false,
       "is_lead": true,
+      "lane": 1
+    },
+    {
+      "name": "Jake Skinner",
+      "booked": 14,
+      "shown": 5,
+      "qualified": 6,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 95.5,
+      "crm_filled": 21,
+      "crm_total": 22,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          6,
+          6
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          4,
+          5
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Mohtasib Ahmed",
+            "lead_id": "lead_8D8Y2IzDz42QQskxDam8qA0wbIKw2jueqqJRZ5LyjTq",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 92.3,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 13,
+      "open_leads": 119,
+      "est_pipeline": 285600,
+      "is_manager": false,
+      "is_lead": false,
       "lane": 1
     },
     {
