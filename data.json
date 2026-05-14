@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14 02:30 PM PDT",
+  "updated_at": "2026-05-14 02:45 PM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-14",
@@ -40,22 +40,22 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 313,
+  "total_booked": 311,
   "total_shown": 83,
   "total_qualified": 72,
-  "total_deals": 9,
-  "total_revenue": 67973.0,
-  "team_close_rate": 2.9,
-  "team_avg_rev_per_deal": 7552.56,
+  "total_deals": 11,
+  "total_revenue": 90967.0,
+  "team_close_rate": 3.5,
+  "team_avg_rev_per_deal": 8269.73,
   "team_crm_compliance": 88.5,
   "team_task_adherence": 82.7,
   "team_overdue": 92,
-  "team_open_leads": 1006,
-  "team_est_pipeline": 2414400,
+  "team_open_leads": 1007,
+  "team_est_pipeline": 2416800,
   "funnel_breakdown": [
     {
       "funnel": "LTF - Quiz Funnel",
-      "count": 176
+      "count": 174
     },
     {
       "funnel": "Instagram",
@@ -108,16 +108,16 @@
   ],
   "funnel_sources": {
     "in_house": 62,
-    "external": 244,
+    "external": 242,
     "unknown": 7,
-    "in_house_pct": 19.8,
-    "external_pct": 78.0,
-    "unknown_pct": 2.2
+    "in_house_pct": 19.9,
+    "external_pct": 77.8,
+    "unknown_pct": 2.3
   },
   "reps": [
     {
       "name": "Kelly Schrader",
-      "booked": 39,
+      "booked": 38,
       "shown": 1,
       "qualified": 2,
       "deals": 0,
@@ -176,11 +176,11 @@
       "booked": 34,
       "shown": 7,
       "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "deals": 1,
+      "revenue": 13997.0,
+      "close_rate": 2.9,
       "qa_score": null,
-      "avg_rev_per_deal": null,
+      "avg_rev_per_deal": 13997.0,
       "crm_compliance": 86.1,
       "crm_filled": 62,
       "crm_total": 72,
@@ -283,7 +283,7 @@
     },
     {
       "name": "Jason Aaron",
-      "booked": 34,
+      "booked": 33,
       "shown": 6,
       "qualified": 5,
       "deals": 0,
@@ -320,8 +320,8 @@
       "task_adherence": 53.3,
       "tasks_overdue": 50,
       "tasks_incomplete": 107,
-      "open_leads": 88,
-      "est_pipeline": 211200,
+      "open_leads": 89,
+      "est_pipeline": 213600,
       "is_manager": false,
       "is_lead": true,
       "lane": 2
@@ -635,6 +635,59 @@
       "lane": 2
     },
     {
+      "name": "Scott Seymour",
+      "booked": 20,
+      "shown": 10,
+      "qualified": 10,
+      "deals": 2,
+      "revenue": 17994.0,
+      "close_rate": 10.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 98.1,
+      "crm_filled": 52,
+      "crm_total": 53,
+      "crm_detail": {
+        "show_up": [
+          12,
+          13
+        ],
+        "disposition": [
+          13,
+          13
+        ],
+        "qualified": [
+          12,
+          12
+        ],
+        "confidence": [
+          12,
+          12
+        ],
+        "lost_reason": [
+          3,
+          3
+        ],
+        "missing_leads": [
+          {
+            "name": "David Pounds",
+            "lead_id": "lead_w4RScHUbtn4AQluWnO3VcdfGUmi0TSv1tSfY83L0bTR",
+            "missing": [
+              "Show Up"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 98.6,
+      "tasks_overdue": 2,
+      "tasks_incomplete": 138,
+      "open_leads": 87,
+      "est_pipeline": 208800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Robin Perkins",
       "booked": 20,
       "shown": 13,
@@ -683,62 +736,9 @@
       },
       "task_adherence": 98.6,
       "tasks_overdue": 1,
-      "tasks_incomplete": 71,
+      "tasks_incomplete": 72,
       "open_leads": 98,
       "est_pipeline": 235200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Scott Seymour",
-      "booked": 20,
-      "shown": 10,
-      "qualified": 10,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": 5.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 98.1,
-      "crm_filled": 52,
-      "crm_total": 53,
-      "crm_detail": {
-        "show_up": [
-          12,
-          13
-        ],
-        "disposition": [
-          13,
-          13
-        ],
-        "qualified": [
-          12,
-          12
-        ],
-        "confidence": [
-          12,
-          12
-        ],
-        "lost_reason": [
-          3,
-          3
-        ],
-        "missing_leads": [
-          {
-            "name": "David Pounds",
-            "lead_id": "lead_w4RScHUbtn4AQluWnO3VcdfGUmi0TSv1tSfY83L0bTR",
-            "missing": [
-              "Show Up"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 98.6,
-      "tasks_overdue": 2,
-      "tasks_incomplete": 140,
-      "open_leads": 87,
-      "est_pipeline": 208800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
