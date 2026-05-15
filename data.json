@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14 04:45 PM PDT",
+  "updated_at": "2026-05-14 05:00 PM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-14",
@@ -41,17 +41,17 @@
     "task_adherence": 100
   },
   "total_booked": 310,
-  "total_shown": 90,
-  "total_qualified": 76,
+  "total_shown": 92,
+  "total_qualified": 77,
   "total_deals": 13,
   "total_revenue": 110961.0,
   "team_close_rate": 4.2,
   "team_avg_rev_per_deal": 8535.46,
   "team_crm_compliance": 88.8,
-  "team_task_adherence": 85.8,
+  "team_task_adherence": 85.9,
   "team_overdue": 91,
-  "team_open_leads": 1009,
-  "team_est_pipeline": 2421600,
+  "team_open_leads": 1010,
+  "team_est_pipeline": 2424000,
   "funnel_breakdown": [
     {
       "funnel": "LTF - Quiz Funnel",
@@ -118,7 +118,7 @@
     {
       "name": "Kelly Schrader",
       "booked": 38,
-      "shown": 2,
+      "shown": 3,
       "qualified": 2,
       "deals": 0,
       "revenue": 0,
@@ -502,6 +502,66 @@
       "lane": 2
     },
     {
+      "name": "Scott Seymour",
+      "booked": 22,
+      "shown": 13,
+      "qualified": 13,
+      "deals": 3,
+      "revenue": 31991.0,
+      "close_rate": 13.6,
+      "qa_score": null,
+      "avg_rev_per_deal": 10663.67,
+      "crm_compliance": 96.7,
+      "crm_filled": 59,
+      "crm_total": 61,
+      "crm_detail": {
+        "show_up": [
+          14,
+          15
+        ],
+        "disposition": [
+          15,
+          15
+        ],
+        "qualified": [
+          14,
+          14
+        ],
+        "confidence": [
+          13,
+          14
+        ],
+        "lost_reason": [
+          3,
+          3
+        ],
+        "missing_leads": [
+          {
+            "name": "Darko L",
+            "lead_id": "lead_4Vpgc55CQTHsC1rZalBG81aaOMArd9UWulFZGAfNLRR",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "David Pounds",
+            "lead_id": "lead_w4RScHUbtn4AQluWnO3VcdfGUmi0TSv1tSfY83L0bTR",
+            "missing": [
+              "Show Up"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 98.8,
+      "tasks_overdue": 2,
+      "tasks_incomplete": 163,
+      "open_leads": 97,
+      "est_pipeline": 232800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Robin Perkins",
       "booked": 22,
       "shown": 17,
@@ -553,66 +613,6 @@
       "tasks_incomplete": 106,
       "open_leads": 112,
       "est_pipeline": 268800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Scott Seymour",
-      "booked": 22,
-      "shown": 13,
-      "qualified": 13,
-      "deals": 3,
-      "revenue": 31991.0,
-      "close_rate": 13.6,
-      "qa_score": null,
-      "avg_rev_per_deal": 10663.67,
-      "crm_compliance": 96.7,
-      "crm_filled": 59,
-      "crm_total": 61,
-      "crm_detail": {
-        "show_up": [
-          14,
-          15
-        ],
-        "disposition": [
-          15,
-          15
-        ],
-        "qualified": [
-          14,
-          14
-        ],
-        "confidence": [
-          13,
-          14
-        ],
-        "lost_reason": [
-          3,
-          3
-        ],
-        "missing_leads": [
-          {
-            "name": "Darko L",
-            "lead_id": "lead_4Vpgc55CQTHsC1rZalBG81aaOMArd9UWulFZGAfNLRR",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "David Pounds",
-            "lead_id": "lead_w4RScHUbtn4AQluWnO3VcdfGUmi0TSv1tSfY83L0bTR",
-            "missing": [
-              "Show Up"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 98.7,
-      "tasks_overdue": 2,
-      "tasks_incomplete": 159,
-      "open_leads": 97,
-      "est_pipeline": 232800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -960,8 +960,8 @@
     {
       "name": "Christian Hartwell",
       "booked": 14,
-      "shown": 9,
-      "qualified": 9,
+      "shown": 10,
+      "qualified": 10,
       "deals": 3,
       "revenue": 17991.0,
       "close_rate": 21.4,
@@ -1004,8 +1004,8 @@
       "task_adherence": 37.5,
       "tasks_overdue": 10,
       "tasks_incomplete": 16,
-      "open_leads": 107,
-      "est_pipeline": 256800,
+      "open_leads": 108,
+      "est_pipeline": 259200,
       "is_manager": false,
       "is_lead": true,
       "lane": 1
