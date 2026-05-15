@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-15 01:45 PM PDT",
+  "updated_at": "2026-05-15 02:00 PM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-15",
@@ -48,10 +48,10 @@
   "team_close_rate": 4.1,
   "team_avg_rev_per_deal": 8663.67,
   "team_crm_compliance": 87.1,
-  "team_task_adherence": 85.0,
-  "team_overdue": 97,
-  "team_open_leads": 1015,
-  "team_est_pipeline": 2436000,
+  "team_task_adherence": 86.1,
+  "team_overdue": 88,
+  "team_open_leads": 1011,
+  "team_est_pipeline": 2426400,
   "funnel_breakdown": [
     {
       "funnel": "LTF - Quiz Funnel",
@@ -654,69 +654,6 @@
       "lane": 2
     },
     {
-      "name": "Robin Perkins",
-      "booked": 24,
-      "shown": 18,
-      "qualified": 15,
-      "deals": 4,
-      "revenue": 41988.0,
-      "close_rate": 16.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 10497.0,
-      "crm_compliance": 93.7,
-      "crm_filled": 74,
-      "crm_total": 79,
-      "crm_detail": {
-        "show_up": [
-          20,
-          21
-        ],
-        "disposition": [
-          20,
-          21
-        ],
-        "qualified": [
-          17,
-          18
-        ],
-        "confidence": [
-          16,
-          18
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Ana Dama",
-            "lead_id": "lead_9v6e5vEYMbX54NtqBharZtwMzPVa8XQUBFEqOUKJoax",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Isaac Viray",
-            "lead_id": "lead_fgyA0QkSObMlKyi4nh6wjcsO1Fk69AXT57N9HXdS5fV",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 87.5,
-      "tasks_overdue": 15,
-      "tasks_incomplete": 120,
-      "open_leads": 113,
-      "est_pipeline": 271200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Lyle Hubbard",
       "booked": 24,
       "shown": 3,
@@ -794,12 +731,75 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 88,
-      "open_leads": 51,
-      "est_pipeline": 122400,
+      "tasks_incomplete": 87,
+      "open_leads": 50,
+      "est_pipeline": 120000,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
+    },
+    {
+      "name": "Robin Perkins",
+      "booked": 24,
+      "shown": 18,
+      "qualified": 15,
+      "deals": 4,
+      "revenue": 41988.0,
+      "close_rate": 16.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 10497.0,
+      "crm_compliance": 93.7,
+      "crm_filled": 74,
+      "crm_total": 79,
+      "crm_detail": {
+        "show_up": [
+          20,
+          21
+        ],
+        "disposition": [
+          20,
+          21
+        ],
+        "qualified": [
+          17,
+          18
+        ],
+        "confidence": [
+          16,
+          18
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Ana Dama",
+            "lead_id": "lead_9v6e5vEYMbX54NtqBharZtwMzPVa8XQUBFEqOUKJoax",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Isaac Viray",
+            "lead_id": "lead_fgyA0QkSObMlKyi4nh6wjcsO1Fk69AXT57N9HXdS5fV",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 93.3,
+      "tasks_overdue": 7,
+      "tasks_incomplete": 104,
+      "open_leads": 109,
+      "est_pipeline": 261600,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Cameron Caswell",
@@ -1147,8 +1147,8 @@
       "task_adherence": 90.6,
       "tasks_overdue": 3,
       "tasks_incomplete": 32,
-      "open_leads": 130,
-      "est_pipeline": 312000,
+      "open_leads": 131,
+      "est_pipeline": 314400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -1204,8 +1204,8 @@
           }
         ]
       },
-      "task_adherence": 50.0,
-      "tasks_overdue": 6,
+      "task_adherence": 58.3,
+      "tasks_overdue": 5,
       "tasks_incomplete": 12,
       "open_leads": 107,
       "est_pipeline": 256800,
@@ -1254,6 +1254,51 @@
       "tasks_incomplete": 13,
       "open_leads": 9,
       "est_pipeline": 21600,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Eric Piccione",
+      "booked": 1,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 4,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 22,
+      "open_leads": 86,
+      "est_pipeline": 206400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -1309,51 +1354,6 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Eric Piccione",
-      "booked": 1,
-      "shown": 1,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 4,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 22,
-      "open_leads": 86,
-      "est_pipeline": 206400,
-      "is_manager": false,
       "is_lead": false,
       "lane": 1
     }
