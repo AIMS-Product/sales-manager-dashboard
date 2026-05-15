@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14 09:45 PM PDT",
+  "updated_at": "2026-05-14 10:00 PM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-14",
@@ -48,7 +48,7 @@
   "team_close_rate": 4.2,
   "team_avg_rev_per_deal": 8535.46,
   "team_crm_compliance": 88.8,
-  "team_task_adherence": 86.0,
+  "team_task_adherence": 86.1,
   "team_overdue": 91,
   "team_open_leads": 1015,
   "team_est_pipeline": 2436000,
@@ -170,51 +170,6 @@
       "lane": 2
     },
     {
-      "name": "Jason Aaron",
-      "booked": 33,
-      "shown": 6,
-      "qualified": 5,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 65,
-      "crm_total": 65,
-      "crm_detail": {
-        "show_up": [
-          27,
-          27
-        ],
-        "disposition": [
-          27,
-          27
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          5,
-          5
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 53.3,
-      "tasks_overdue": 50,
-      "tasks_incomplete": 107,
-      "open_leads": 89,
-      "est_pipeline": 213600,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
-    },
-    {
       "name": "Bryan Barcus",
       "booked": 33,
       "shown": 7,
@@ -322,6 +277,51 @@
       "est_pipeline": 105600,
       "is_manager": false,
       "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 33,
+      "shown": 6,
+      "qualified": 5,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 65,
+      "crm_total": 65,
+      "crm_detail": {
+        "show_up": [
+          27,
+          27
+        ],
+        "disposition": [
+          27,
+          27
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 53.3,
+      "tasks_overdue": 50,
+      "tasks_incomplete": 107,
+      "open_leads": 89,
+      "est_pipeline": 213600,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 2
     },
     {
@@ -502,6 +502,62 @@
       "lane": 2
     },
     {
+      "name": "Robin Perkins",
+      "booked": 22,
+      "shown": 17,
+      "qualified": 14,
+      "deals": 3,
+      "revenue": 28991.0,
+      "close_rate": 13.6,
+      "qa_score": null,
+      "avg_rev_per_deal": 9663.67,
+      "crm_compliance": 93.2,
+      "crm_filled": 55,
+      "crm_total": 59,
+      "crm_detail": {
+        "show_up": [
+          15,
+          16
+        ],
+        "disposition": [
+          15,
+          16
+        ],
+        "qualified": [
+          12,
+          13
+        ],
+        "confidence": [
+          12,
+          13
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Isaac Viray",
+            "lead_id": "lead_fgyA0QkSObMlKyi4nh6wjcsO1Fk69AXT57N9HXdS5fV",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 99.1,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 109,
+      "open_leads": 112,
+      "est_pipeline": 268800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Scott Seymour",
       "booked": 22,
       "shown": 14,
@@ -557,62 +613,6 @@
       "tasks_incomplete": 166,
       "open_leads": 98,
       "est_pipeline": 235200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 22,
-      "shown": 17,
-      "qualified": 14,
-      "deals": 3,
-      "revenue": 28991.0,
-      "close_rate": 13.6,
-      "qa_score": null,
-      "avg_rev_per_deal": 9663.67,
-      "crm_compliance": 93.2,
-      "crm_filled": 55,
-      "crm_total": 59,
-      "crm_detail": {
-        "show_up": [
-          15,
-          16
-        ],
-        "disposition": [
-          15,
-          16
-        ],
-        "qualified": [
-          12,
-          13
-        ],
-        "confidence": [
-          12,
-          13
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Isaac Viray",
-            "lead_id": "lead_fgyA0QkSObMlKyi4nh6wjcsO1Fk69AXT57N9HXdS5fV",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 99.1,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 108,
-      "open_leads": 112,
-      "est_pipeline": 268800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
