@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-15 02:30 PM PDT",
+  "updated_at": "2026-05-15 02:45 PM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-15",
@@ -40,8 +40,8 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 364,
-  "total_shown": 101,
+  "total_booked": 363,
+  "total_shown": 102,
   "total_qualified": 85,
   "total_deals": 15,
   "total_revenue": 129955.0,
@@ -79,14 +79,14 @@
     },
     {
       "funnel": "Unknown",
-      "count": 7
-    },
-    {
-      "funnel": "X",
-      "count": 5
+      "count": 6
     },
     {
       "funnel": "Meta Ads",
+      "count": 5
+    },
+    {
+      "funnel": "X",
       "count": 5
     },
     {
@@ -109,10 +109,10 @@
   "funnel_sources": {
     "in_house": 74,
     "external": 282,
-    "unknown": 8,
-    "in_house_pct": 20.3,
-    "external_pct": 77.5,
-    "unknown_pct": 2.2
+    "unknown": 7,
+    "in_house_pct": 20.4,
+    "external_pct": 77.7,
+    "unknown_pct": 1.9
   },
   "reps": [
     {
@@ -551,7 +551,7 @@
     {
       "name": "Scott Seymour",
       "booked": 28,
-      "shown": 14,
+      "shown": 15,
       "qualified": 14,
       "deals": 3,
       "revenue": 31991.0,
@@ -654,6 +654,69 @@
       "lane": 2
     },
     {
+      "name": "Robin Perkins",
+      "booked": 24,
+      "shown": 18,
+      "qualified": 15,
+      "deals": 4,
+      "revenue": 41988.0,
+      "close_rate": 16.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 10497.0,
+      "crm_compliance": 93.7,
+      "crm_filled": 74,
+      "crm_total": 79,
+      "crm_detail": {
+        "show_up": [
+          20,
+          21
+        ],
+        "disposition": [
+          20,
+          21
+        ],
+        "qualified": [
+          17,
+          18
+        ],
+        "confidence": [
+          16,
+          18
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Ana Dama",
+            "lead_id": "lead_9v6e5vEYMbX54NtqBharZtwMzPVa8XQUBFEqOUKJoax",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Isaac Viray",
+            "lead_id": "lead_fgyA0QkSObMlKyi4nh6wjcsO1Fk69AXT57N9HXdS5fV",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 97.0,
+      "tasks_overdue": 3,
+      "tasks_incomplete": 100,
+      "open_leads": 108,
+      "est_pipeline": 259200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Lyle Hubbard",
       "booked": 24,
       "shown": 3,
@@ -737,69 +800,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 24,
-      "shown": 18,
-      "qualified": 15,
-      "deals": 4,
-      "revenue": 41988.0,
-      "close_rate": 16.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 10497.0,
-      "crm_compliance": 93.7,
-      "crm_filled": 74,
-      "crm_total": 79,
-      "crm_detail": {
-        "show_up": [
-          20,
-          21
-        ],
-        "disposition": [
-          20,
-          21
-        ],
-        "qualified": [
-          17,
-          18
-        ],
-        "confidence": [
-          16,
-          18
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Ana Dama",
-            "lead_id": "lead_9v6e5vEYMbX54NtqBharZtwMzPVa8XQUBFEqOUKJoax",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Isaac Viray",
-            "lead_id": "lead_fgyA0QkSObMlKyi4nh6wjcsO1Fk69AXT57N9HXdS5fV",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 97.0,
-      "tasks_overdue": 3,
-      "tasks_incomplete": 99,
-      "open_leads": 108,
-      "est_pipeline": 259200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
     },
     {
       "name": "Cameron Caswell",
@@ -948,12 +948,12 @@
     },
     {
       "name": "Dubem Adindu",
-      "booked": 20,
+      "booked": 19,
       "shown": 5,
       "qualified": 5,
       "deals": 1,
       "revenue": 5997.0,
-      "close_rate": 5.0,
+      "close_rate": 5.3,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
       "crm_compliance": 50.0,
