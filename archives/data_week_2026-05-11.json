@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-15 09:00 AM PDT",
+  "updated_at": "2026-05-15 09:15 AM PDT",
   "week_label": "May 11 \u2013 May 15, 2026",
   "monday_str": "2026-05-11",
   "today_str": "2026-05-15",
@@ -41,14 +41,14 @@
     "task_adherence": 100
   },
   "total_booked": 365,
-  "total_shown": 93,
+  "total_shown": 94,
   "total_qualified": 80,
-  "total_deals": 14,
-  "total_revenue": 123958.0,
-  "team_close_rate": 3.8,
-  "team_avg_rev_per_deal": 8854.14,
-  "team_crm_compliance": 85.8,
-  "team_task_adherence": 81.6,
+  "total_deals": 15,
+  "total_revenue": 129955.0,
+  "team_close_rate": 4.1,
+  "team_avg_rev_per_deal": 8663.67,
+  "team_crm_compliance": 85.9,
+  "team_task_adherence": 81.7,
   "team_overdue": 120,
   "team_open_leads": 1012,
   "team_est_pipeline": 2428800,
@@ -120,11 +120,11 @@
       "booked": 45,
       "shown": 3,
       "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 2.2,
       "qa_score": null,
-      "avg_rev_per_deal": null,
+      "avg_rev_per_deal": 5997.0,
       "crm_compliance": 95.1,
       "crm_filled": 78,
       "crm_total": 82,
@@ -550,7 +550,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 6,
+      "tasks_incomplete": 7,
       "open_leads": 99,
       "est_pipeline": 237600,
       "is_manager": false,
@@ -567,25 +567,25 @@
       "close_rate": 10.7,
       "qa_score": null,
       "avg_rev_per_deal": 10663.67,
-      "crm_compliance": 97.6,
-      "crm_filled": 81,
-      "crm_total": 83,
+      "crm_compliance": 97.5,
+      "crm_filled": 77,
+      "crm_total": 79,
       "crm_detail": {
         "show_up": [
-          19,
-          20
-        ],
-        "disposition": [
-          20,
-          20
-        ],
-        "qualified": [
-          19,
-          19
-        ],
-        "confidence": [
           18,
           19
+        ],
+        "disposition": [
+          19,
+          19
+        ],
+        "qualified": [
+          18,
+          18
+        ],
+        "confidence": [
+          17,
+          18
         ],
         "lost_reason": [
           5,
@@ -653,6 +653,15 @@
         ],
         "missing_leads": [
           {
+            "name": "Orwa Almanaseer",
+            "lead_id": "lead_iqZcw7FzB8wmKdtAfPATN8oARb3KOsJx1vFdZqDiCdI",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Esau Galician",
             "lead_id": "lead_1R20U8G9mnuAv5m7ACqxGjgtatIEezQVVipCr3HIIoD",
             "missing": [
@@ -664,15 +673,6 @@
             "lead_id": "lead_iKnXgClPHHp2MI8jd6w8Cd8HYZ3wxFayCIoXE9dUu1W",
             "missing": [
               "Disposition"
-            ]
-          },
-          {
-            "name": "Orwa Almanaseer",
-            "lead_id": "lead_iqZcw7FzB8wmKdtAfPATN8oARb3KOsJx1vFdZqDiCdI",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
             ]
           },
           {
@@ -845,19 +845,19 @@
     {
       "name": "Dubem Adindu",
       "booked": 22,
-      "shown": 4,
+      "shown": 5,
       "qualified": 5,
       "deals": 1,
       "revenue": 5997.0,
       "close_rate": 4.5,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 47.9,
-      "crm_filled": 23,
+      "crm_compliance": 50.0,
+      "crm_filled": 24,
       "crm_total": 48,
       "crm_detail": {
         "show_up": [
-          4,
+          5,
           15
         ],
         "disposition": [
@@ -878,10 +878,17 @@
         ],
         "missing_leads": [
           {
+            "name": "Mario Avila",
+            "lead_id": "lead_OPI5mabhqe4K8SwjR2eVR06BlHExV6JtzcJgGhiyOUY",
+            "missing": [
+              "Disposition",
+              "Qualified"
+            ]
+          },
+          {
             "name": "Enrique Narvaez",
             "lead_id": "lead_QkrqUd83FqvVJ67l68UGvlSwEXnPsXuBrwmismw0bCE",
             "missing": [
-              "Show Up",
               "Confidence"
             ]
           },
@@ -915,14 +922,6 @@
             "missing": [
               "Show Up",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Mario Avila",
-            "lead_id": "lead_OPI5mabhqe4K8SwjR2eVR06BlHExV6JtzcJgGhiyOUY",
-            "missing": [
-              "Disposition",
-              "Qualified"
             ]
           },
           {
