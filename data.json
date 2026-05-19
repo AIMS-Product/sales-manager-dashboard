@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-19 01:30 PM PDT",
+  "updated_at": "2026-05-19 01:45 PM PDT",
   "week_label": "May 18 \u2013 May 22, 2026",
   "monday_str": "2026-05-18",
   "today_str": "2026-05-19",
@@ -48,8 +48,8 @@
   "team_close_rate": 3.4,
   "team_avg_rev_per_deal": 6997.0,
   "team_crm_compliance": 87.3,
-  "team_task_adherence": 86.5,
-  "team_overdue": 88,
+  "team_task_adherence": 86.8,
+  "team_overdue": 86,
   "team_open_leads": 1030,
   "team_est_pipeline": 2472000,
   "funnel_breakdown": [
@@ -78,15 +78,15 @@
       "count": 5
     },
     {
+      "funnel": "X",
+      "count": 4
+    },
+    {
       "funnel": "Internal Webinar",
       "count": 4
     },
     {
       "funnel": "Unknown",
-      "count": 4
-    },
-    {
-      "funnel": "X",
       "count": 4
     },
     {
@@ -247,6 +247,59 @@
       "lane": 1
     },
     {
+      "name": "Scott Seymour",
+      "booked": 10,
+      "shown": 5,
+      "qualified": 4,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": 10.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 94.1,
+      "crm_filled": 16,
+      "crm_total": 17,
+      "crm_detail": {
+        "show_up": [
+          4,
+          4
+        ],
+        "disposition": [
+          4,
+          4
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          3,
+          4
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Kevin Catenacci",
+            "lead_id": "lead_hI4LdDVPdozayAxEw34ibu1vonL2vYjsTS8P9GQZDiO",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 99.3,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 149,
+      "open_leads": 90,
+      "est_pipeline": 216000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Eric Piccione",
       "booked": 10,
       "shown": 8,
@@ -303,54 +356,46 @@
       "lane": 1
     },
     {
-      "name": "Scott Seymour",
-      "booked": 10,
+      "name": "Jake Skinner",
+      "booked": 7,
       "shown": 5,
-      "qualified": 4,
+      "qualified": 3,
       "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": 10.0,
+      "revenue": 5997.0,
+      "close_rate": 14.3,
       "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 94.1,
-      "crm_filled": 16,
-      "crm_total": 17,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 10,
+      "crm_total": 10,
       "crm_detail": {
         "show_up": [
-          4,
-          4
+          3,
+          3
         ],
         "disposition": [
-          4,
-          4
+          3,
+          3
         ],
         "qualified": [
-          4,
-          4
+          2,
+          2
         ],
         "confidence": [
-          3,
-          4
+          2,
+          2
         ],
         "lost_reason": [
-          1,
-          1
+          0,
+          0
         ],
-        "missing_leads": [
-          {
-            "name": "Kevin Catenacci",
-            "lead_id": "lead_hI4LdDVPdozayAxEw34ibu1vonL2vYjsTS8P9GQZDiO",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
-      "task_adherence": 99.3,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 149,
-      "open_leads": 90,
-      "est_pipeline": 216000,
+      "task_adherence": 42.3,
+      "tasks_overdue": 15,
+      "tasks_incomplete": 26,
+      "open_leads": 123,
+      "est_pipeline": 295200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -398,51 +443,6 @@
       "est_pipeline": 261600,
       "is_manager": false,
       "is_lead": true,
-      "lane": 1
-    },
-    {
-      "name": "Jake Skinner",
-      "booked": 7,
-      "shown": 5,
-      "qualified": 3,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 14.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 10,
-      "crm_total": 10,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 42.3,
-      "tasks_overdue": 15,
-      "tasks_incomplete": 26,
-      "open_leads": 123,
-      "est_pipeline": 295200,
-      "is_manager": false,
-      "is_lead": false,
       "lane": 1
     },
     {
@@ -494,6 +494,51 @@
       "tasks_incomplete": 23,
       "open_leads": 61,
       "est_pipeline": 146400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "John Kirk",
+      "booked": 4,
+      "shown": 1,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 2,
+      "crm_total": 2,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          0,
+          0
+        ],
+        "confidence": [
+          0,
+          0
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 23,
+      "open_leads": 106,
+      "est_pipeline": 254400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -559,51 +604,6 @@
       "lane": 2
     },
     {
-      "name": "John Kirk",
-      "booked": 4,
-      "shown": 1,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 2,
-      "crm_total": 2,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          0,
-          0
-        ],
-        "confidence": [
-          0,
-          0
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 23,
-      "open_leads": 106,
-      "est_pipeline": 254400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Jason Aaron",
       "booked": 3,
       "shown": 0,
@@ -639,8 +639,8 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 93.6,
-      "tasks_overdue": 7,
+      "task_adherence": 95.5,
+      "tasks_overdue": 5,
       "tasks_incomplete": 110,
       "open_leads": 91,
       "est_pipeline": 218400,
@@ -815,29 +815,6 @@
       "lane": 2
     },
     {
-      "name": "Chris Wanke",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 20.0,
-      "tasks_overdue": 8,
-      "tasks_incomplete": 10,
-      "open_leads": 11,
-      "est_pipeline": 26400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -857,6 +834,29 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Chris Wanke",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 20.0,
+      "tasks_overdue": 8,
+      "tasks_incomplete": 10,
+      "open_leads": 11,
+      "est_pipeline": 26400,
+      "is_manager": false,
       "is_lead": false,
       "lane": 1
     }
