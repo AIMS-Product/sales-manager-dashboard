@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-19 05:45 AM PDT",
+  "updated_at": "2026-05-19 06:00 AM PDT",
   "week_label": "May 18 \u2013 May 22, 2026",
   "monday_str": "2026-05-18",
   "today_str": "2026-05-19",
@@ -74,11 +74,11 @@
       "count": 9
     },
     {
-      "funnel": "Meta Ads",
+      "funnel": "Unknown",
       "count": 4
     },
     {
-      "funnel": "Unknown",
+      "funnel": "Meta Ads",
       "count": 4
     },
     {
@@ -139,6 +139,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Jordan Davis",
+            "lead_id": "lead_SYLGtIKd4YFuFRJp77pAsAltCmF6SJYhR2GiQ6DzxO3",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
             "name": "Oswald Haynes",
             "lead_id": "lead_XivavI8Lhj4UeD8ZtaBcB96kLXXg6XsL9sSpvBGhqVy",
             "missing": [
@@ -155,13 +162,6 @@
           {
             "name": "Antoinette Golden",
             "lead_id": "lead_w9tmoExY1p4jsLCQP9woq7vTF6d5qKuJfk28rr5bbrJ",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Jordan Davis",
-            "lead_id": "lead_SYLGtIKd4YFuFRJp77pAsAltCmF6SJYhR2GiQ6DzxO3",
             "missing": [
               "Confidence"
             ]
@@ -604,6 +604,51 @@
       "lane": 2
     },
     {
+      "name": "Jason Aaron",
+      "booked": 3,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 6,
+      "crm_total": 6,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          0,
+          0
+        ],
+        "confidence": [
+          0,
+          0
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 48.2,
+      "tasks_overdue": 57,
+      "tasks_incomplete": 110,
+      "open_leads": 89,
+      "est_pipeline": 213600,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
+    },
+    {
       "name": "Elvis Ellis",
       "booked": 3,
       "shown": 1,
@@ -654,51 +699,6 @@
       "est_pipeline": 184800,
       "is_manager": false,
       "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 3,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 6,
-      "crm_total": 6,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          0,
-          0
-        ],
-        "confidence": [
-          0,
-          0
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 48.2,
-      "tasks_overdue": 57,
-      "tasks_incomplete": 110,
-      "open_leads": 89,
-      "est_pipeline": 213600,
-      "is_manager": false,
-      "is_lead": true,
       "lane": 2
     },
     {
@@ -823,29 +823,6 @@
       "lane": 2
     },
     {
-      "name": "Joe Dysert",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": null,
-      "tasks_incomplete": null,
-      "open_leads": null,
-      "est_pipeline": null,
-      "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Chris Wanke",
       "booked": 0,
       "shown": 0,
@@ -865,6 +842,29 @@
       "open_leads": 11,
       "est_pipeline": 26400,
       "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Joe Dysert",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": null,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
       "is_lead": false,
       "lane": 1
     }
