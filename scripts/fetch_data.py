@@ -57,6 +57,9 @@ CLOSED_LEAD_STATUSES = {
 AVG_DEAL_VALUE = 8000
 CLOSE_RATE_ESTIMATE = 0.30
 
+# Funnels to exclude from all metrics (removed from booked/shown/qualified/CRM/everything)
+EXCLUDED_FUNNELS = {"LTF - Quiz Funnel"}
+
 # Funnel source classification: In-House vs External
 FUNNEL_SOURCE = {
     "Low Ticket Funnel": "External",
@@ -139,7 +142,7 @@ LANE_2_TARGETS = {
 }
 
 LANE_2_REPS = {
-    "Bryan Barcus", "Steven Starnes", "Lyle Hubbard", "Kelly Schrader",
+    "Bryan Barcus", "Lyle Hubbard", "Kelly Schrader",
     "Elvis Ellis", "John Kirk", "Cameron Caswell", "Jason Aaron",
 }
 
@@ -153,11 +156,9 @@ REP_QUOTAS = {
     "John Kirk": 75_000,
     "Jake Skinner": 75_000,
     "Elvis Ellis": 50_000,
-    "Chris Wanke": 50_000,
     "Dubem Adindu": 100_000,
     "Bryan Barcus": 0,
     "Kelly Schrader": 0,
-    "Steven Starnes": 0,
     "Cameron Caswell": 0,
     "Joe Dysert": 0,
 }
@@ -166,7 +167,7 @@ EXCLUDE_USERS = {
     "Kristin Nelson", "Spencer Reynolds", "Stephen Olivas",
     "Ahmad Bukhari", "Mallory Kent", "Unknown", "Julia Scaroni",
     "William Chase", "Jordan Humphrey", "Andrea Shoop", "Ryan Jones",
-    "Ategeka Musinguzi", "Vince Bartolini",
+    "Ategeka Musinguzi", "Vince Bartolini", "Steven Starnes", "Chris Wanke",
 }
 MANAGER_USERS = {"Joe Dysert"}
 LEAD_USERS = {"Christian Hartwell", "Jason Aaron"}
@@ -218,6 +219,7 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
     crm_skipped_reschedule = 0
     excluded_status = 0
     excluded_user = 0
+    excluded_funnel = 0
 
     for lead in all_leads:
         status_id = lead.get("status_id", "")
@@ -257,8 +259,13 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
             excluded_user += 1
             continue
 
-        # Track funnel
+        # Funnel name — exclude leads from blacklisted funnels
         funnel_name = str(funnel_raw).strip() if funnel_raw else "Unknown"
+        if funnel_name in EXCLUDED_FUNNELS:
+            excluded_funnel += 1
+            continue
+
+        # Track funnel
         funnel_counts[funnel_name] = funnel_counts.get(funnel_name, 0) + 1
 
         rep_booked[rep_name] = rep_booked.get(rep_name, 0) + 1
@@ -369,7 +376,7 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
         elif not is_past:
             crm_skipped_future += 1
 
-    print(f"  Excluded: {excluded_status} by lead status, {excluded_user} by user", flush=True)
+    print(f"  Excluded: {excluded_status} by lead status, {excluded_user} by user, {excluded_funnel} by funnel", flush=True)
     print(f"  Qualifying leads: {sum(rep_booked.values())} across {len(rep_booked)} reps", flush=True)
     if crm_skipped_future:
         print(f"  ℹ️ CRM compliance skipped for {crm_skipped_future} leads (meeting today, not yet past)", flush=True)
@@ -713,6 +720,17 @@ def build_dashboard_data():
 
     monday_str, today_str, _ = get_week_range(now)
     day_of_week = now.date().weekday() + 1  # 1=Mon, 5=Fri
+
+    # Optional: re-run for a specific past week (set RERUN_WEEK=YYYY-MM-DD of Monday)
+    rerun_week = os.environ.get("RERUN_WEEK", "")
+    if rerun_week:
+        from datetime import date as _date
+        rerun_mon = _date.fromisoformat(rerun_week)
+        rerun_fri = rerun_mon + timedelta(days=4)
+        monday_str = rerun_mon.isoformat()
+        today_str = rerun_fri.isoformat()
+        day_of_week = 5  # treat as full week
+        print(f"⚠️ RERUN MODE: overriding week to {monday_str} through {today_str}", flush=True)
 
     print(f"Fetching WTD data: {monday_str} through {today_str} (day {day_of_week} of week)...", flush=True)
 
