@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22 01:30 PM PDT",
+  "updated_at": "2026-05-22 01:45 PM PDT",
   "week_label": "May 18 \u2013 May 22, 2026",
   "monday_str": "2026-05-18",
   "today_str": "2026-05-22",
@@ -41,8 +41,8 @@
     "task_adherence": 100
   },
   "total_booked": 163,
-  "total_shown": 89,
-  "total_qualified": 78,
+  "total_shown": 90,
+  "total_qualified": 79,
   "total_deals": 15,
   "total_revenue": 91158.0,
   "team_close_rate": 9.2,
@@ -50,8 +50,8 @@
   "team_crm_compliance": 91.8,
   "team_task_adherence": 63.0,
   "team_overdue": 306,
-  "team_open_leads": 1015,
-  "team_est_pipeline": 2436000,
+  "team_open_leads": 1016,
+  "team_est_pipeline": 2438400,
   "funnel_breakdown": [
     {
       "funnel": "Instagram",
@@ -492,8 +492,8 @@
     {
       "name": "Christian Hartwell",
       "booked": 15,
-      "shown": 9,
-      "qualified": 8,
+      "shown": 10,
+      "qualified": 9,
       "deals": 4,
       "revenue": 23988.0,
       "close_rate": 26.7,
@@ -528,8 +528,8 @@
       "task_adherence": 58.3,
       "tasks_overdue": 5,
       "tasks_incomplete": 12,
-      "open_leads": 63,
-      "est_pipeline": 151200,
+      "open_leads": 64,
+      "est_pipeline": 153600,
       "is_manager": false,
       "is_lead": true,
       "lane": 1
@@ -577,6 +577,51 @@
       "est_pipeline": 244800,
       "is_manager": false,
       "is_lead": true,
+      "lane": 2
+    },
+    {
+      "name": "John Kirk",
+      "booked": 4,
+      "shown": 2,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 25.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 8,
+      "crm_total": 8,
+      "crm_detail": {
+        "show_up": [
+          2,
+          2
+        ],
+        "disposition": [
+          2,
+          2
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 36.4,
+      "tasks_overdue": 28,
+      "tasks_incomplete": 44,
+      "open_leads": 115,
+      "est_pipeline": 276000,
+      "is_manager": false,
+      "is_lead": false,
       "lane": 2
     },
     {
@@ -633,46 +678,54 @@
       "lane": 1
     },
     {
-      "name": "John Kirk",
-      "booked": 4,
-      "shown": 2,
+      "name": "Lyle Hubbard",
+      "booked": 2,
+      "shown": 0,
       "qualified": 0,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 25.0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
       "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 8,
-      "crm_total": 8,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 80.0,
+      "crm_filled": 4,
+      "crm_total": 5,
       "crm_detail": {
         "show_up": [
-          2,
-          2
+          1,
+          1
         ],
         "disposition": [
-          2,
-          2
+          1,
+          1
         ],
         "qualified": [
-          2,
-          2
+          0,
+          1
         ],
         "confidence": [
-          2,
-          2
+          1,
+          1
         ],
         "lost_reason": [
-          0,
-          0
+          1,
+          1
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Edna Hernandez",
+            "lead_id": "lead_OcWgnClgq1Tn3ouLQj9bYvibG226TLohbufoOeHldql",
+            "missing": [
+              "Qualified"
+            ]
+          }
+        ]
       },
-      "task_adherence": 36.4,
-      "tasks_overdue": 28,
-      "tasks_incomplete": 44,
-      "open_leads": 115,
-      "est_pipeline": 276000,
+      "task_adherence": 19.9,
+      "tasks_overdue": 109,
+      "tasks_incomplete": 136,
+      "open_leads": 66,
+      "est_pipeline": 158400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -724,59 +777,6 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 0,
-      "open_leads": 66,
-      "est_pipeline": 158400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 2,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 80.0,
-      "crm_filled": 4,
-      "crm_total": 5,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Edna Hernandez",
-            "lead_id": "lead_OcWgnClgq1Tn3ouLQj9bYvibG226TLohbufoOeHldql",
-            "missing": [
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 19.9,
-      "tasks_overdue": 109,
-      "tasks_incomplete": 136,
       "open_leads": 66,
       "est_pipeline": 158400,
       "is_manager": false,
