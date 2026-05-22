@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22 10:00 AM PDT",
+  "updated_at": "2026-05-22 10:15 AM PDT",
   "week_label": "May 18 \u2013 May 22, 2026",
   "monday_str": "2026-05-18",
   "today_str": "2026-05-22",
@@ -40,16 +40,16 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 163,
+  "total_booked": 164,
   "total_shown": 82,
   "total_qualified": 68,
   "total_deals": 13,
   "total_revenue": 79164.0,
-  "team_close_rate": 8.0,
+  "team_close_rate": 7.9,
   "team_avg_rev_per_deal": 6089.54,
   "team_crm_compliance": 88.7,
-  "team_task_adherence": 51.3,
-  "team_overdue": 405,
+  "team_task_adherence": 52.2,
+  "team_overdue": 397,
   "team_open_leads": 1009,
   "team_est_pipeline": 2421600,
   "funnel_breakdown": [
@@ -67,7 +67,7 @@
     },
     {
       "funnel": "YouTube",
-      "count": 20
+      "count": 21
     },
     {
       "funnel": "Low Ticket Funnel",
@@ -99,11 +99,11 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 84,
+    "in_house": 85,
     "external": 77,
     "unknown": 2,
-    "in_house_pct": 51.5,
-    "external_pct": 47.2,
+    "in_house_pct": 51.8,
+    "external_pct": 47.0,
     "unknown_pct": 1.2
   },
   "reps": [
@@ -143,6 +143,14 @@
         ],
         "missing_leads": [
           {
+            "name": "Logan Fuchs",
+            "lead_id": "lead_iFrVbpkUBohpIVnoC5R3MoGbCPI9D3ytuPFiQz98tpi",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Mary Blevins",
             "lead_id": "lead_ZB7SYnAG1TiUf3MMI3njEAz8gyzbkhvtWyBrdCb52pS",
             "missing": [
@@ -156,14 +164,6 @@
               "Show Up",
               "Disposition",
               "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Logan Fuchs",
-            "lead_id": "lead_iFrVbpkUBohpIVnoC5R3MoGbCPI9D3ytuPFiQz98tpi",
-            "missing": [
-              "Disposition",
               "Confidence"
             ]
           },
@@ -371,12 +371,12 @@
     },
     {
       "name": "Robin Perkins",
-      "booked": 26,
+      "booked": 27,
       "shown": 16,
       "qualified": 10,
       "deals": 1,
       "revenue": 8997.0,
-      "close_rate": 3.8,
+      "close_rate": 3.7,
       "qa_score": null,
       "avg_rev_per_deal": 8997.0,
       "crm_compliance": 100.0,
@@ -506,6 +506,14 @@
         ],
         "missing_leads": [
           {
+            "name": "Joel Klug",
+            "lead_id": "lead_mMGBzPBjqAxcsbcM47yEBpNsqTnhhNdtX2KtnFOeJII",
+            "missing": [
+              "Disposition",
+              "Qualified"
+            ]
+          },
+          {
             "name": "Angela Davilmar",
             "lead_id": "lead_vae9SENSaPXGAh9F6LqY09EQk42z9dVHVdgDKSvoIyW",
             "missing": [
@@ -513,14 +521,6 @@
               "Disposition",
               "Qualified",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Joel Klug",
-            "lead_id": "lead_mMGBzPBjqAxcsbcM47yEBpNsqTnhhNdtX2KtnFOeJII",
-            "missing": [
-              "Disposition",
-              "Qualified"
             ]
           },
           {
@@ -642,6 +642,51 @@
       "lane": 2
     },
     {
+      "name": "John Kirk",
+      "booked": 4,
+      "shown": 2,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 25.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 8,
+      "crm_total": 8,
+      "crm_detail": {
+        "show_up": [
+          2,
+          2
+        ],
+        "disposition": [
+          2,
+          2
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 36.4,
+      "tasks_overdue": 28,
+      "tasks_incomplete": 44,
+      "open_leads": 115,
+      "est_pipeline": 276000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Joe Dysert",
       "booked": 4,
       "shown": 2,
@@ -693,51 +738,6 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "John Kirk",
-      "booked": 4,
-      "shown": 2,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 25.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 8,
-      "crm_total": 8,
-      "crm_detail": {
-        "show_up": [
-          2,
-          2
-        ],
-        "disposition": [
-          2,
-          2
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 36.4,
-      "tasks_overdue": 28,
-      "tasks_incomplete": 44,
-      "open_leads": 115,
-      "est_pipeline": 276000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
     },
     {
       "name": "Bryan Barcus",
@@ -859,8 +859,8 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 67.6,
-      "tasks_overdue": 33,
+      "task_adherence": 74.5,
+      "tasks_overdue": 26,
       "tasks_incomplete": 102,
       "open_leads": 89,
       "est_pipeline": 213600,
@@ -882,8 +882,8 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 2.4,
-      "tasks_overdue": 41,
+      "task_adherence": 4.8,
+      "tasks_overdue": 40,
       "tasks_incomplete": 42,
       "open_leads": 31,
       "est_pipeline": 74400,
