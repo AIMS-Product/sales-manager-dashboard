@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-05-27 11:30 AM PDT",
+  "updated_at": "2026-05-27 11:45 AM PDT",
   "week_label": "May 25 \u2013 May 29, 2026",
   "monday_str": "2026-05-25",
   "today_str": "2026-05-27",
   "day_of_week": 3,
-  "num_reps": 13,
+  "num_reps": 12,
   "targets": {
     "booked": 15,
     "shown": 11,
@@ -30,28 +30,28 @@
     "task_adherence": 100
   },
   "team_targets": {
-    "booked": 195,
-    "shown": 143,
-    "qualified": 104,
-    "deals": 39,
-    "revenue": 312000,
+    "booked": 180,
+    "shown": 132,
+    "qualified": 96,
+    "deals": 36,
+    "revenue": 288000,
     "close_rate": 20,
     "avg_rev_per_deal": 8000,
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 54,
+  "total_booked": 53,
   "total_shown": 17,
   "total_qualified": 15,
   "total_deals": 5,
   "total_revenue": 40985.0,
-  "team_close_rate": 9.3,
+  "team_close_rate": 9.4,
   "team_avg_rev_per_deal": 8197.0,
   "team_crm_compliance": 88.9,
   "team_task_adherence": 62.3,
   "team_overdue": 322,
-  "team_open_leads": 1023,
-  "team_est_pipeline": 2455200,
+  "team_open_leads": 958,
+  "team_est_pipeline": 2299200,
   "funnel_breakdown": [
     {
       "funnel": "YouTube",
@@ -62,12 +62,12 @@
       "count": 11
     },
     {
-      "funnel": "Instagram",
+      "funnel": "Internal Webinar",
       "count": 9
     },
     {
-      "funnel": "Internal Webinar",
-      "count": 9
+      "funnel": "Instagram",
+      "count": 8
     },
     {
       "funnel": "Reactivation Email",
@@ -92,10 +92,10 @@
   ],
   "funnel_sources": {
     "in_house": 32,
-    "external": 21,
+    "external": 20,
     "unknown": 1,
-    "in_house_pct": 59.3,
-    "external_pct": 38.9,
+    "in_house_pct": 60.4,
+    "external_pct": 37.7,
     "unknown_pct": 1.9
   },
   "reps": [
@@ -199,7 +199,7 @@
     },
     {
       "name": "Scott Seymour",
-      "booked": 7,
+      "booked": 6,
       "shown": 4,
       "qualified": 3,
       "deals": 0,
@@ -495,24 +495,55 @@
       "lane": 2
     },
     {
-      "name": "John Kirk",
+      "name": "Lyle Hubbard",
       "booked": 1,
       "shown": 0,
       "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "deals": 1,
+      "revenue": 13997.0,
+      "close_rate": 100.0,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 40.0,
-      "tasks_overdue": 24,
-      "tasks_incomplete": 40,
-      "open_leads": 115,
-      "est_pipeline": 276000,
+      "avg_rev_per_deal": 13997.0,
+      "crm_compliance": 50.0,
+      "crm_filled": 2,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Jermain Adams",
+            "lead_id": "lead_LAU6DaAvhgVoCnFKGKKyRu7IgFXb7RqAFR9awxZWgnL",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 11.9,
+      "tasks_overdue": 111,
+      "tasks_incomplete": 126,
+      "open_leads": 66,
+      "est_pipeline": 158400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -571,55 +602,24 @@
       "lane": 2
     },
     {
-      "name": "Lyle Hubbard",
+      "name": "John Kirk",
       "booked": 1,
       "shown": 0,
       "qualified": 0,
-      "deals": 1,
-      "revenue": 13997.0,
-      "close_rate": 100.0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
       "qa_score": null,
-      "avg_rev_per_deal": 13997.0,
-      "crm_compliance": 50.0,
-      "crm_filled": 2,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Jermain Adams",
-            "lead_id": "lead_LAU6DaAvhgVoCnFKGKKyRu7IgFXb7RqAFR9awxZWgnL",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 11.9,
-      "tasks_overdue": 111,
-      "tasks_incomplete": 126,
-      "open_leads": 66,
-      "est_pipeline": 158400,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 40.0,
+      "tasks_overdue": 24,
+      "tasks_incomplete": 40,
+      "open_leads": 115,
+      "est_pipeline": 276000,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -643,29 +643,6 @@
       "tasks_incomplete": 58,
       "open_leads": 69,
       "est_pipeline": 165600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Bryan Barcus",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 65,
-      "est_pipeline": 156000,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
