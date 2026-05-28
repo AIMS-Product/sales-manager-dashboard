@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28 08:00 AM PDT",
+  "updated_at": "2026-05-28 08:15 AM PDT",
   "week_label": "May 25 \u2013 May 29, 2026",
   "monday_str": "2026-05-25",
   "today_str": "2026-05-28",
@@ -47,8 +47,8 @@
   "total_revenue": 52979.0,
   "team_close_rate": 8.5,
   "team_avg_rev_per_deal": 7568.43,
-  "team_crm_compliance": 85.8,
-  "team_task_adherence": 68.6,
+  "team_crm_compliance": 87.5,
+  "team_task_adherence": 68.7,
   "team_overdue": 249,
   "team_open_leads": 955,
   "team_est_pipeline": 2292000,
@@ -264,7 +264,7 @@
       },
       "task_adherence": 97.6,
       "tasks_overdue": 4,
-      "tasks_incomplete": 164,
+      "tasks_incomplete": 165,
       "open_leads": 91,
       "est_pipeline": 218400,
       "is_manager": false,
@@ -550,12 +550,12 @@
       "close_rate": 50.0,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 25.0,
-      "crm_filled": 1,
+      "crm_compliance": 100.0,
+      "crm_filled": 4,
       "crm_total": 4,
       "crm_detail": {
         "show_up": [
-          0,
+          1,
           1
         ],
         "disposition": [
@@ -563,88 +563,24 @@
           1
         ],
         "qualified": [
-          0,
+          1,
           1
         ],
         "confidence": [
-          0,
+          1,
           1
         ],
         "lost_reason": [
           0,
           0
         ],
-        "missing_leads": [
-          {
-            "name": "Dylan Mcconner",
-            "lead_id": "lead_gH2YSxq345NytID6OaZT0glRpRmZMe0n4elfxA6XEn3",
-            "missing": [
-              "Show Up",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": 97.4,
       "tasks_overdue": 4,
       "tasks_incomplete": 151,
       "open_leads": 87,
       "est_pipeline": 208800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 13997.0,
-      "close_rate": 100.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 13997.0,
-      "crm_compliance": 50.0,
-      "crm_filled": 2,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Jermain Adams",
-            "lead_id": "lead_LAU6DaAvhgVoCnFKGKKyRu7IgFXb7RqAFR9awxZWgnL",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 70.1,
-      "tasks_overdue": 20,
-      "tasks_incomplete": 67,
-      "open_leads": 66,
-      "est_pipeline": 158400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -751,6 +687,60 @@
       "tasks_incomplete": 34,
       "open_leads": 31,
       "est_pipeline": 74400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Lyle Hubbard",
+      "booked": 1,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 13997.0,
+      "close_rate": 100.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 13997.0,
+      "crm_compliance": 50.0,
+      "crm_filled": 2,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Jermain Adams",
+            "lead_id": "lead_LAU6DaAvhgVoCnFKGKKyRu7IgFXb7RqAFR9awxZWgnL",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 70.1,
+      "tasks_overdue": 20,
+      "tasks_incomplete": 67,
+      "open_leads": 66,
+      "est_pipeline": 158400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
