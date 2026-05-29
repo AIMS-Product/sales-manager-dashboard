@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28 04:45 PM PDT",
+  "updated_at": "2026-05-28 05:00 PM PDT",
   "week_label": "May 25 \u2013 May 29, 2026",
   "monday_str": "2026-05-25",
   "today_str": "2026-05-28",
@@ -41,17 +41,17 @@
     "task_adherence": 100
   },
   "total_booked": 80,
-  "total_shown": 40,
-  "total_qualified": 32,
+  "total_shown": 41,
+  "total_qualified": 33,
   "total_deals": 8,
   "total_revenue": 58976.0,
   "team_close_rate": 10.0,
   "team_avg_rev_per_deal": 7372.0,
   "team_crm_compliance": 91.3,
-  "team_task_adherence": 75.1,
+  "team_task_adherence": 75.2,
   "team_overdue": 192,
-  "team_open_leads": 962,
-  "team_est_pipeline": 2308800,
+  "team_open_leads": 963,
+  "team_est_pipeline": 2311200,
   "funnel_breakdown": [
     {
       "funnel": "YouTube",
@@ -106,8 +106,8 @@
     {
       "name": "Dubem Adindu",
       "booked": 23,
-      "shown": 7,
-      "qualified": 5,
+      "shown": 8,
+      "qualified": 6,
       "deals": 2,
       "revenue": 14994.0,
       "close_rate": 8.7,
@@ -164,11 +164,11 @@
           }
         ]
       },
-      "task_adherence": 9.1,
+      "task_adherence": 16.7,
       "tasks_overdue": 10,
-      "tasks_incomplete": 11,
-      "open_leads": 33,
-      "est_pipeline": 79200,
+      "tasks_incomplete": 12,
+      "open_leads": 34,
+      "est_pipeline": 81600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -469,6 +469,29 @@
       "lane": 2
     },
     {
+      "name": "John Kirk",
+      "booked": 2,
+      "shown": 1,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 40,
+      "open_leads": 113,
+      "est_pipeline": 271200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Elvis Ellis",
       "booked": 2,
       "shown": 0,
@@ -514,8 +537,8 @@
       "lane": 2
     },
     {
-      "name": "John Kirk",
-      "booked": 2,
+      "name": "Cameron Caswell",
+      "booked": 1,
       "shown": 1,
       "qualified": 0,
       "deals": 0,
@@ -523,15 +546,45 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 40,
-      "open_leads": 113,
-      "est_pipeline": 271200,
+      "crm_compliance": 75.0,
+      "crm_filled": 3,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Jackson Millsaps",
+            "lead_id": "lead_4gOSguzEjacOjccNJDtCYGSY6b1T4LaaB3snRsNC7Oc",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 0.0,
+      "tasks_overdue": 20,
+      "tasks_incomplete": 20,
+      "open_leads": 31,
+      "est_pipeline": 74400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -586,59 +639,6 @@
       "tasks_incomplete": 45,
       "open_leads": 67,
       "est_pipeline": 160800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Cameron Caswell",
-      "booked": 1,
-      "shown": 1,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 75.0,
-      "crm_filled": 3,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Jackson Millsaps",
-            "lead_id": "lead_4gOSguzEjacOjccNJDtCYGSY6b1T4LaaB3snRsNC7Oc",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 0.0,
-      "tasks_overdue": 20,
-      "tasks_incomplete": 20,
-      "open_leads": 31,
-      "est_pipeline": 74400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
