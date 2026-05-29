@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29 12:00 PM PDT",
+  "updated_at": "2026-05-29 12:15 PM PDT",
   "week_label": "May 25 \u2013 May 29, 2026",
   "monday_str": "2026-05-25",
   "today_str": "2026-05-29",
@@ -41,14 +41,14 @@
     "task_adherence": 100
   },
   "total_booked": 109,
-  "total_shown": 54,
+  "total_shown": 55,
   "total_qualified": 42,
   "total_deals": 12,
   "total_revenue": 108964.0,
   "team_close_rate": 11.0,
   "team_avg_rev_per_deal": 9080.33,
   "team_crm_compliance": 93.1,
-  "team_task_adherence": 66.8,
+  "team_task_adherence": 66.9,
   "team_overdue": 257,
   "team_open_leads": 960,
   "team_est_pipeline": 2304000,
@@ -458,6 +458,60 @@
       "lane": 2
     },
     {
+      "name": "Lyle Hubbard",
+      "booked": 3,
+      "shown": 1,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 13997.0,
+      "close_rate": 33.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 13997.0,
+      "crm_compliance": 50.0,
+      "crm_filled": 2,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Jermain Adams",
+            "lead_id": "lead_LAU6DaAvhgVoCnFKGKKyRu7IgFXb7RqAFR9awxZWgnL",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 45,
+      "open_leads": 67,
+      "est_pipeline": 160800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Jason Aaron",
       "booked": 3,
       "shown": 0,
@@ -517,60 +571,6 @@
       "est_pipeline": 242400,
       "is_manager": false,
       "is_lead": true,
-      "lane": 2
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 3,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 13997.0,
-      "close_rate": 33.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 13997.0,
-      "crm_compliance": 50.0,
-      "crm_filled": 2,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Jermain Adams",
-            "lead_id": "lead_LAU6DaAvhgVoCnFKGKKyRu7IgFXb7RqAFR9awxZWgnL",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 43,
-      "open_leads": 67,
-      "est_pipeline": 160800,
-      "is_manager": false,
-      "is_lead": false,
       "lane": 2
     },
     {
