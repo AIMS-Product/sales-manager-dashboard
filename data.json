@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29 10:30 PM PDT",
+  "updated_at": "2026-05-29 10:45 PM PDT",
   "week_label": "May 25 \u2013 May 29, 2026",
   "monday_str": "2026-05-25",
   "today_str": "2026-05-29",
@@ -458,6 +458,59 @@
       "lane": 1
     },
     {
+      "name": "Jason Aaron",
+      "booked": 3,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 87.5,
+      "crm_filled": 7,
+      "crm_total": 8,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Rick Herbel",
+            "lead_id": "lead_pweUKulLs66YNqsCujn4EQKF7OpJ2ZPGxfDyPWfgIyd",
+            "missing": [
+              "Qualified"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 33.8,
+      "tasks_overdue": 98,
+      "tasks_incomplete": 148,
+      "open_leads": 101,
+      "est_pipeline": 242400,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
+    },
+    {
       "name": "Lyle Hubbard",
       "booked": 3,
       "shown": 2,
@@ -509,59 +562,6 @@
       "est_pipeline": 160800,
       "is_manager": false,
       "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 3,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 87.5,
-      "crm_filled": 7,
-      "crm_total": 8,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Rick Herbel",
-            "lead_id": "lead_pweUKulLs66YNqsCujn4EQKF7OpJ2ZPGxfDyPWfgIyd",
-            "missing": [
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 33.8,
-      "tasks_overdue": 98,
-      "tasks_incomplete": 148,
-      "open_leads": 101,
-      "est_pipeline": 242400,
-      "is_manager": false,
-      "is_lead": true,
       "lane": 2
     },
     {
@@ -663,29 +663,6 @@
       "lane": 2
     },
     {
-      "name": "Kelly Schrader",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 57.1,
-      "tasks_overdue": 27,
-      "tasks_incomplete": 63,
-      "open_leads": 70,
-      "est_pipeline": 168000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -707,6 +684,29 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Kelly Schrader",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 57.1,
+      "tasks_overdue": 27,
+      "tasks_incomplete": 63,
+      "open_leads": 70,
+      "est_pipeline": 168000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     }
   ]
 }
