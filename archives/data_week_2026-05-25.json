@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-30 10:15 PM PDT",
+  "updated_at": "2026-05-30 10:30 PM PDT",
   "week_label": "May 25 \u2013 May 29, 2026",
   "monday_str": "2026-05-25",
   "today_str": "2026-05-30",
@@ -331,51 +331,6 @@
       "lane": 1
     },
     {
-      "name": "Jake Skinner",
-      "booked": 10,
-      "shown": 7,
-      "qualified": 6,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 35,
-      "crm_total": 35,
-      "crm_detail": {
-        "show_up": [
-          10,
-          10
-        ],
-        "disposition": [
-          10,
-          10
-        ],
-        "qualified": [
-          7,
-          7
-        ],
-        "confidence": [
-          7,
-          7
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 23.8,
-      "tasks_overdue": 16,
-      "tasks_incomplete": 21,
-      "open_leads": 115,
-      "est_pipeline": 276000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Scott Seymour",
       "booked": 10,
       "shown": 9,
@@ -416,6 +371,51 @@
       "tasks_incomplete": 172,
       "open_leads": 89,
       "est_pipeline": 213600,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Jake Skinner",
+      "booked": 10,
+      "shown": 7,
+      "qualified": 6,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 35,
+      "crm_total": 35,
+      "crm_detail": {
+        "show_up": [
+          10,
+          10
+        ],
+        "disposition": [
+          10,
+          10
+        ],
+        "qualified": [
+          7,
+          7
+        ],
+        "confidence": [
+          7,
+          7
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 23.8,
+      "tasks_overdue": 16,
+      "tasks_incomplete": 21,
+      "open_leads": 115,
+      "est_pipeline": 276000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -564,6 +564,59 @@
       "lane": 2
     },
     {
+      "name": "Jason Aaron",
+      "booked": 3,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 87.5,
+      "crm_filled": 7,
+      "crm_total": 8,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Rick Herbel",
+            "lead_id": "lead_pweUKulLs66YNqsCujn4EQKF7OpJ2ZPGxfDyPWfgIyd",
+            "missing": [
+              "Qualified"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 33.1,
+      "tasks_overdue": 99,
+      "tasks_incomplete": 148,
+      "open_leads": 101,
+      "est_pipeline": 242400,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
+    },
+    {
       "name": "Lyle Hubbard",
       "booked": 3,
       "shown": 2,
@@ -622,59 +675,6 @@
       "est_pipeline": 160800,
       "is_manager": false,
       "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 3,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 87.5,
-      "crm_filled": 7,
-      "crm_total": 8,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Rick Herbel",
-            "lead_id": "lead_pweUKulLs66YNqsCujn4EQKF7OpJ2ZPGxfDyPWfgIyd",
-            "missing": [
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 33.1,
-      "tasks_overdue": 99,
-      "tasks_incomplete": 148,
-      "open_leads": 101,
-      "est_pipeline": 242400,
-      "is_manager": false,
-      "is_lead": true,
       "lane": 2
     },
     {
