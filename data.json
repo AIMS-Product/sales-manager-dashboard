@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-30 11:45 PM PDT",
+  "updated_at": "2026-05-31 12:00 AM PDT",
   "week_label": "May 25 \u2013 May 29, 2026",
   "monday_str": "2026-05-25",
-  "today_str": "2026-05-30",
-  "day_of_week": 6,
+  "today_str": "2026-05-31",
+  "day_of_week": 7,
   "num_reps": 12,
   "targets": {
     "booked": 15,
@@ -40,16 +40,16 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 111,
+  "total_booked": 112,
   "total_shown": 60,
   "total_qualified": 44,
   "total_deals": 18,
   "total_revenue": 144749.0,
-  "team_close_rate": 16.2,
+  "team_close_rate": 16.1,
   "team_avg_rev_per_deal": 8041.61,
-  "team_crm_compliance": 89.4,
-  "team_task_adherence": 67.4,
-  "team_overdue": 258,
+  "team_crm_compliance": 89.0,
+  "team_task_adherence": 66.2,
+  "team_overdue": 268,
   "team_open_leads": 956,
   "team_est_pipeline": 2294400,
   "funnel_breakdown": [
@@ -59,7 +59,7 @@
     },
     {
       "funnel": "Low Ticket Funnel",
-      "count": 26
+      "count": 27
     },
     {
       "funnel": "YouTube",
@@ -92,48 +92,62 @@
   ],
   "funnel_sources": {
     "in_house": 48,
-    "external": 62,
+    "external": 63,
     "unknown": 1,
-    "in_house_pct": 43.2,
-    "external_pct": 55.9,
+    "in_house_pct": 42.9,
+    "external_pct": 56.2,
     "unknown_pct": 0.9
   },
   "reps": [
     {
       "name": "Dubem Adindu",
-      "booked": 33,
+      "booked": 34,
       "shown": 11,
       "qualified": 9,
       "deals": 4,
       "revenue": 28788.0,
-      "close_rate": 12.1,
+      "close_rate": 11.8,
       "qa_score": null,
       "avg_rev_per_deal": 7197.0,
-      "crm_compliance": 79.4,
-      "crm_filled": 81,
-      "crm_total": 102,
+      "crm_compliance": 78.7,
+      "crm_filled": 85,
+      "crm_total": 108,
       "crm_detail": {
         "show_up": [
-          27,
-          31
+          29,
+          33
         ],
         "disposition": [
-          26,
-          31
+          27,
+          33
         ],
         "qualified": [
           14,
-          19
+          20
         ],
         "confidence": [
-          13,
-          19
+          14,
+          20
         ],
         "lost_reason": [
           1,
           2
         ],
         "missing_leads": [
+          {
+            "name": "Norman Calhoun",
+            "lead_id": "lead_sQL0kBsYOpw27suWEO6FISDjrBq8SxYK2zkoQeF4KT9",
+            "missing": [
+              "Qualified"
+            ]
+          },
+          {
+            "name": "Ronald Adamany",
+            "lead_id": "lead_O4jY4gc7UEpwSQAEfI45hjbdVdyDUqrLQP5ZAfNHvFa",
+            "missing": [
+              "Disposition"
+            ]
+          },
           {
             "name": "Ethan Perelman",
             "lead_id": "lead_hMnMwhPcTHZxpEXH50iurRUfwtGh7nj076wsRZXv1vA",
@@ -244,8 +258,8 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
+      "task_adherence": 97.8,
+      "tasks_overdue": 2,
       "tasks_incomplete": 91,
       "open_leads": 106,
       "est_pipeline": 254400,
@@ -411,9 +425,9 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 94.2,
-      "tasks_overdue": 10,
-      "tasks_incomplete": 172,
+      "task_adherence": 90.2,
+      "tasks_overdue": 17,
+      "tasks_incomplete": 173,
       "open_leads": 89,
       "est_pipeline": 213600,
       "is_manager": false,
@@ -580,51 +594,6 @@
       "lane": 2
     },
     {
-      "name": "Elvis Ellis",
-      "booked": 3,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 2,
-      "revenue": 19994.0,
-      "close_rate": 66.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 9997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 4,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 63.4,
-      "tasks_overdue": 56,
-      "tasks_incomplete": 153,
-      "open_leads": 86,
-      "est_pipeline": 206400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Jason Aaron",
       "booked": 3,
       "shown": 0,
@@ -668,13 +637,58 @@
           }
         ]
       },
-      "task_adherence": 33.1,
-      "tasks_overdue": 99,
+      "task_adherence": 32.4,
+      "tasks_overdue": 100,
       "tasks_incomplete": 148,
       "open_leads": 101,
       "est_pipeline": 242400,
       "is_manager": false,
       "is_lead": true,
+      "lane": 2
+    },
+    {
+      "name": "Elvis Ellis",
+      "booked": 3,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 2,
+      "revenue": 19994.0,
+      "close_rate": 66.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 9997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 4,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 63.4,
+      "tasks_overdue": 56,
+      "tasks_incomplete": 153,
+      "open_leads": 86,
+      "est_pipeline": 206400,
+      "is_manager": false,
+      "is_lead": false,
       "lane": 2
     },
     {
