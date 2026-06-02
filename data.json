@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-02 07:45 AM PDT",
+  "updated_at": "2026-06-02 08:00 AM PDT",
   "week_label": "Jun 01 \u2013 Jun 05, 2026",
   "monday_str": "2026-06-01",
   "today_str": "2026-06-02",
@@ -48,7 +48,7 @@
   "team_close_rate": 0.0,
   "team_avg_rev_per_deal": null,
   "team_crm_compliance": 86.8,
-  "team_task_adherence": 42.6,
+  "team_task_adherence": 42.5,
   "team_overdue": 795,
   "team_open_leads": 947,
   "team_est_pipeline": 2272800,
@@ -141,6 +141,51 @@
       "lane": 1
     },
     {
+      "name": "Robin Perkins",
+      "booked": 11,
+      "shown": 6,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 24,
+      "crm_total": 24,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          6,
+          6
+        ],
+        "qualified": [
+          6,
+          6
+        ],
+        "confidence": [
+          6,
+          6
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 98.9,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 87,
+      "open_leads": 66,
+      "est_pipeline": 158400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Scott Seymour",
       "booked": 11,
       "shown": 6,
@@ -193,54 +238,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 157,
-      "open_leads": 61,
-      "est_pipeline": 146400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 11,
-      "shown": 6,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 24,
-      "crm_total": 24,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          6,
-          6
-        ],
-        "qualified": [
-          6,
-          6
-        ],
-        "confidence": [
-          6,
-          6
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 98.9,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 87,
-      "open_leads": 66,
-      "est_pipeline": 158400,
+      "tasks_incomplete": 156,
+      "open_leads": 62,
+      "est_pipeline": 148800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -477,6 +477,29 @@
       "lane": 2
     },
     {
+      "name": "Joe Dysert",
+      "booked": 1,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": null,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Jason Aaron",
       "booked": 1,
       "shown": 0,
@@ -532,29 +555,6 @@
       "lane": 2
     },
     {
-      "name": "Elvis Ellis",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 155,
-      "open_leads": 86,
-      "est_pipeline": 206400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Lyle Hubbard",
       "booked": 1,
       "shown": 0,
@@ -573,6 +573,29 @@
       "tasks_incomplete": 246,
       "open_leads": 145,
       "est_pipeline": 348000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Elvis Ellis",
+      "booked": 1,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 155,
+      "open_leads": 86,
+      "est_pipeline": 206400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -616,8 +639,8 @@
       "task_adherence": 15.9,
       "tasks_overdue": 211,
       "tasks_incomplete": 251,
-      "open_leads": 196,
-      "est_pipeline": 470400,
+      "open_leads": 195,
+      "est_pipeline": 468000,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
