@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-02 02:00 PM PDT",
+  "updated_at": "2026-06-02 02:15 PM PDT",
   "week_label": "Jun 01 \u2013 Jun 05, 2026",
   "monday_str": "2026-06-01",
   "today_str": "2026-06-02",
@@ -40,22 +40,22 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 55,
+  "total_booked": 54,
   "total_shown": 33,
   "total_qualified": 21,
   "total_deals": 1,
   "total_revenue": 8997.0,
-  "team_close_rate": 1.8,
+  "team_close_rate": 1.9,
   "team_avg_rev_per_deal": 8997.0,
   "team_crm_compliance": 92.1,
-  "team_task_adherence": 44.1,
-  "team_overdue": 763,
+  "team_task_adherence": 44.2,
+  "team_overdue": 761,
   "team_open_leads": 952,
   "team_est_pipeline": 2284800,
   "funnel_breakdown": [
     {
       "funnel": "Instagram",
-      "count": 24
+      "count": 23
     },
     {
       "funnel": "Website",
@@ -70,11 +70,11 @@
       "count": 7
     },
     {
-      "funnel": "Reactivation Scrapers",
+      "funnel": "Linkedin",
       "count": 1
     },
     {
-      "funnel": "Linkedin",
+      "funnel": "Reactivation Scrapers",
       "count": 1
     },
     {
@@ -84,11 +84,11 @@
   ],
   "funnel_sources": {
     "in_house": 22,
-    "external": 32,
+    "external": 31,
     "unknown": 1,
-    "in_house_pct": 40.0,
-    "external_pct": 58.2,
-    "unknown_pct": 1.8
+    "in_house_pct": 40.7,
+    "external_pct": 57.4,
+    "unknown_pct": 1.9
   },
   "reps": [
     {
@@ -189,9 +189,54 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 76,
+      "tasks_incomplete": 77,
       "open_leads": 65,
       "est_pipeline": 156000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Dubem Adindu",
+      "booked": 10,
+      "shown": 5,
+      "qualified": 4,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 8,
+      "crm_total": 8,
+      "crm_detail": {
+        "show_up": [
+          2,
+          2
+        ],
+        "disposition": [
+          2,
+          2
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 17.6,
+      "tasks_overdue": 14,
+      "tasks_incomplete": 17,
+      "open_leads": 33,
+      "est_pipeline": 79200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -289,8 +334,8 @@
       "task_adherence": 29.2,
       "tasks_overdue": 17,
       "tasks_incomplete": 24,
-      "open_leads": 33,
-      "est_pipeline": 79200,
+      "open_leads": 32,
+      "est_pipeline": 76800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -379,8 +424,8 @@
       "task_adherence": 9.8,
       "tasks_overdue": 323,
       "tasks_incomplete": 358,
-      "open_leads": 180,
-      "est_pipeline": 432000,
+      "open_leads": 172,
+      "est_pipeline": 412800,
       "is_manager": false,
       "is_lead": true,
       "lane": 2
@@ -430,11 +475,11 @@
           }
         ]
       },
-      "task_adherence": 25.4,
-      "tasks_overdue": 44,
-      "tasks_incomplete": 59,
-      "open_leads": 71,
-      "est_pipeline": 170400,
+      "task_adherence": 26.3,
+      "tasks_overdue": 42,
+      "tasks_incomplete": 57,
+      "open_leads": 75,
+      "est_pipeline": 180000,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -479,31 +524,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 153,
-      "open_leads": 92,
-      "est_pipeline": 220800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Lyle Hubbard",
-      "booked": 2,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 35.7,
-      "tasks_overdue": 157,
-      "tasks_incomplete": 244,
-      "open_leads": 145,
-      "est_pipeline": 348000,
+      "open_leads": 95,
+      "est_pipeline": 228000,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -555,8 +577,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 9,
-      "open_leads": 31,
-      "est_pipeline": 74400,
+      "open_leads": 37,
+      "est_pipeline": 88800,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -578,8 +600,8 @@
       "task_adherence": 35.7,
       "tasks_overdue": 9,
       "tasks_incomplete": 14,
-      "open_leads": 20,
-      "est_pipeline": 48000,
+      "open_leads": 19,
+      "est_pipeline": 45600,
       "is_manager": false,
       "is_lead": true,
       "lane": 1
