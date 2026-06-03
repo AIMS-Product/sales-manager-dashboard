@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-02 07:30 PM PDT",
+  "updated_at": "2026-06-02 07:45 PM PDT",
   "week_label": "Jun 01 \u2013 Jun 05, 2026",
   "monday_str": "2026-06-01",
   "today_str": "2026-06-02",
@@ -431,24 +431,55 @@
       "lane": 2
     },
     {
-      "name": "Lyle Hubbard",
+      "name": "Kelly Schrader",
       "booked": 2,
-      "shown": 0,
+      "shown": 1,
       "qualified": 0,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 36.7,
-      "tasks_overdue": 155,
-      "tasks_incomplete": 245,
-      "open_leads": 145,
-      "est_pipeline": 348000,
+      "crm_compliance": 50.0,
+      "crm_filled": 2,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Young Barlow",
+            "lead_id": "lead_cDqFRP7Z8qAuPPISC0IkEZPwtGit5p7Ia7dg0iGcDOf",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 45.2,
+      "tasks_overdue": 40,
+      "tasks_incomplete": 73,
+      "open_leads": 83,
+      "est_pipeline": 199200,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -507,60 +538,6 @@
       "lane": 2
     },
     {
-      "name": "Kelly Schrader",
-      "booked": 2,
-      "shown": 1,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 50.0,
-      "crm_filled": 2,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Young Barlow",
-            "lead_id": "lead_cDqFRP7Z8qAuPPISC0IkEZPwtGit5p7Ia7dg0iGcDOf",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 45.2,
-      "tasks_overdue": 40,
-      "tasks_incomplete": 73,
-      "open_leads": 83,
-      "est_pipeline": 199200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Elvis Ellis",
       "booked": 1,
       "shown": 0,
@@ -584,29 +561,6 @@
       "lane": 2
     },
     {
-      "name": "Christian Hartwell",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 35.7,
-      "tasks_overdue": 9,
-      "tasks_incomplete": 14,
-      "open_leads": 18,
-      "est_pipeline": 43200,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 1
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -627,6 +581,29 @@
       "est_pipeline": null,
       "is_manager": true,
       "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Christian Hartwell",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 35.7,
+      "tasks_overdue": 9,
+      "tasks_incomplete": 14,
+      "open_leads": 18,
+      "est_pipeline": 43200,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 1
     }
   ]
