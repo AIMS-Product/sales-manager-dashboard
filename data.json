@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-04 12:00 AM PDT",
+  "updated_at": "2026-06-04 12:15 AM PDT",
   "week_label": "Jun 01 \u2013 Jun 05, 2026",
   "monday_str": "2026-06-01",
   "today_str": "2026-06-04",
@@ -48,8 +48,8 @@
   "team_close_rate": 7.3,
   "team_avg_rev_per_deal": 7885.89,
   "team_crm_compliance": 93.1,
-  "team_task_adherence": 41.7,
-  "team_overdue": 865,
+  "team_task_adherence": 42.3,
+  "team_overdue": 856,
   "team_open_leads": 962,
   "team_est_pipeline": 2308800,
   "funnel_breakdown": [
@@ -362,6 +362,51 @@
       "lane": 1
     },
     {
+      "name": "John Kirk",
+      "booked": 8,
+      "shown": 6,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 32,
+      "crm_total": 32,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          6,
+          6
+        ],
+        "confidence": [
+          6,
+          6
+        ],
+        "lost_reason": [
+          6,
+          6
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 13.8,
+      "tasks_overdue": 232,
+      "tasks_incomplete": 269,
+      "open_leads": 190,
+      "est_pipeline": 456000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Christian Hartwell",
       "booked": 8,
       "shown": 3,
@@ -414,51 +459,6 @@
       "is_manager": false,
       "is_lead": true,
       "lane": 1
-    },
-    {
-      "name": "John Kirk",
-      "booked": 8,
-      "shown": 6,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 32,
-      "crm_total": 32,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          7,
-          7
-        ],
-        "qualified": [
-          6,
-          6
-        ],
-        "confidence": [
-          6,
-          6
-        ],
-        "lost_reason": [
-          6,
-          6
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 13.8,
-      "tasks_overdue": 232,
-      "tasks_incomplete": 269,
-      "open_leads": 190,
-      "est_pipeline": 456000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
     },
     {
       "name": "Jason Aaron",
@@ -675,14 +675,37 @@
           }
         ]
       },
-      "task_adherence": 7.1,
-      "tasks_overdue": 26,
+      "task_adherence": 39.3,
+      "tasks_overdue": 17,
       "tasks_incomplete": 28,
       "open_leads": 42,
       "est_pipeline": 100800,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
+    },
+    {
+      "name": "Joe Dysert",
+      "booked": 2,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": null,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Elvis Ellis",
@@ -728,29 +751,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
-    },
-    {
-      "name": "Joe Dysert",
-      "booked": 2,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": null,
-      "tasks_incomplete": null,
-      "open_leads": null,
-      "est_pipeline": null,
-      "is_manager": true,
-      "is_lead": false,
-      "lane": 1
     }
   ]
 }
