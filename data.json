@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09 12:30 PM PDT",
+  "updated_at": "2026-06-09 12:45 PM PDT",
   "week_label": "Jun 08 \u2013 Jun 12, 2026",
   "monday_str": "2026-06-08",
   "today_str": "2026-06-09",
@@ -40,18 +40,18 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 43,
+  "total_booked": 44,
   "total_shown": 25,
   "total_qualified": 23,
   "total_deals": 8,
   "total_revenue": 58976.0,
-  "team_close_rate": 18.6,
+  "team_close_rate": 18.2,
   "team_avg_rev_per_deal": 7372.0,
   "team_crm_compliance": 87.2,
-  "team_task_adherence": 46.6,
-  "team_overdue": 690,
-  "team_open_leads": 997,
-  "team_est_pipeline": 2392800,
+  "team_task_adherence": 46.9,
+  "team_overdue": 682,
+  "team_open_leads": 996,
+  "team_est_pipeline": 2390400,
   "funnel_breakdown": [
     {
       "funnel": "Website",
@@ -72,25 +72,29 @@
     {
       "funnel": "Internal Webinar",
       "count": 2
+    },
+    {
+      "funnel": "Unknown",
+      "count": 1
     }
   ],
   "funnel_sources": {
     "in_house": 30,
     "external": 13,
-    "unknown": 0,
-    "in_house_pct": 69.8,
-    "external_pct": 30.2,
-    "unknown_pct": 0.0
+    "unknown": 1,
+    "in_house_pct": 68.2,
+    "external_pct": 29.5,
+    "unknown_pct": 2.3
   },
   "reps": [
     {
       "name": "Scott Seymour",
-      "booked": 9,
+      "booked": 10,
       "shown": 4,
       "qualified": 4,
       "deals": 2,
       "revenue": 14994.0,
-      "close_rate": 22.2,
+      "close_rate": 20.0,
       "qa_score": null,
       "avg_rev_per_deal": 7497.0,
       "crm_compliance": 87.5,
@@ -182,9 +186,62 @@
       },
       "task_adherence": 93.2,
       "tasks_overdue": 5,
-      "tasks_incomplete": 74,
-      "open_leads": 60,
-      "est_pipeline": 144000,
+      "tasks_incomplete": 73,
+      "open_leads": 59,
+      "est_pipeline": 141600,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Eric Piccione",
+      "booked": 6,
+      "shown": 5,
+      "qualified": 5,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 16.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 18,
+      "crm_total": 18,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          4,
+          4
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Tom",
+            "lead_id": "lead_HKuBsPeDPCHms5NTsfomdW1Oi0PsrBLhj8DmNBS2mZA",
+            "missing": [
+              "Qualified"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 10,
+      "open_leads": 35,
+      "est_pipeline": 84000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -253,51 +310,6 @@
       "tasks_incomplete": 18,
       "open_leads": 34,
       "est_pipeline": 81600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Eric Piccione",
-      "booked": 6,
-      "shown": 5,
-      "qualified": 5,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 16.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 18,
-      "crm_total": 18,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          4,
-          4
-        ],
-        "confidence": [
-          4,
-          4
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 10,
-      "open_leads": 35,
-      "est_pipeline": 84000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -530,29 +542,6 @@
       "lane": 2
     },
     {
-      "name": "Lyle Hubbard",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 21.9,
-      "tasks_overdue": 189,
-      "tasks_incomplete": 242,
-      "open_leads": 152,
-      "est_pipeline": 364800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Cameron Caswell",
       "booked": 1,
       "shown": 1,
@@ -602,6 +591,29 @@
       "tasks_incomplete": 15,
       "open_leads": 52,
       "est_pipeline": 124800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "John Kirk",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 23.0,
+      "tasks_overdue": 181,
+      "tasks_incomplete": 235,
+      "open_leads": 152,
+      "est_pipeline": 364800,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
