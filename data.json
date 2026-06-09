@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09 03:30 AM PDT",
+  "updated_at": "2026-06-09 03:45 AM PDT",
   "week_label": "Jun 08 \u2013 Jun 12, 2026",
   "monday_str": "2026-06-08",
   "today_str": "2026-06-09",
@@ -40,12 +40,12 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 44,
+  "total_booked": 45,
   "total_shown": 20,
   "total_qualified": 19,
   "total_deals": 8,
   "total_revenue": 58976.0,
-  "team_close_rate": 18.2,
+  "team_close_rate": 17.8,
   "team_avg_rev_per_deal": 7372.0,
   "team_crm_compliance": 83.3,
   "team_task_adherence": 43.8,
@@ -70,23 +70,68 @@
       "count": 5
     },
     {
-      "funnel": "Internal Webinar",
+      "funnel": "Unknown",
       "count": 2
     },
     {
-      "funnel": "Unknown",
-      "count": 1
+      "funnel": "Internal Webinar",
+      "count": 2
     }
   ],
   "funnel_sources": {
     "in_house": 28,
     "external": 15,
-    "unknown": 1,
-    "in_house_pct": 63.6,
-    "external_pct": 34.1,
-    "unknown_pct": 2.3
+    "unknown": 2,
+    "in_house_pct": 62.2,
+    "external_pct": 33.3,
+    "unknown_pct": 4.4
   },
   "reps": [
+    {
+      "name": "Robin Perkins",
+      "booked": 9,
+      "shown": 4,
+      "qualified": 4,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 18,
+      "crm_total": 18,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          4,
+          4
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 84.9,
+      "tasks_overdue": 11,
+      "tasks_incomplete": 73,
+      "open_leads": 58,
+      "est_pipeline": 139200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
     {
       "name": "Scott Seymour",
       "booked": 9,
@@ -136,51 +181,6 @@
       "tasks_incomplete": 157,
       "open_leads": 60,
       "est_pipeline": 144000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 9,
-      "shown": 4,
-      "qualified": 4,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 18,
-      "crm_total": 18,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          4,
-          4
-        ],
-        "confidence": [
-          4,
-          4
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 84.9,
-      "tasks_overdue": 11,
-      "tasks_incomplete": 73,
-      "open_leads": 58,
-      "est_pipeline": 139200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -383,6 +383,74 @@
       "lane": 1
     },
     {
+      "name": "Christian Hartwell",
+      "booked": 3,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": 33.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 4,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 3,
+      "open_leads": 20,
+      "est_pipeline": 48000,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 1
+    },
+    {
+      "name": "Kelly Schrader",
+      "booked": 2,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 43.0,
+      "tasks_overdue": 73,
+      "tasks_incomplete": 128,
+      "open_leads": 90,
+      "est_pipeline": 216000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Jake Skinner",
       "booked": 2,
       "shown": 2,
@@ -558,29 +626,6 @@
       "lane": 2
     },
     {
-      "name": "Lyle Hubbard",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 15.4,
-      "tasks_overdue": 219,
-      "tasks_incomplete": 259,
-      "open_leads": 151,
-      "est_pipeline": 362400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "John Kirk",
       "booked": 0,
       "shown": 0,
@@ -647,6 +692,29 @@
       "est_pipeline": 362400,
       "is_manager": false,
       "is_lead": true,
+      "lane": 2
+    },
+    {
+      "name": "Elvis Ellis",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 65.4,
+      "tasks_overdue": 79,
+      "tasks_incomplete": 228,
+      "open_leads": 125,
+      "est_pipeline": 300000,
+      "is_manager": false,
+      "is_lead": false,
       "lane": 2
     }
   ]
