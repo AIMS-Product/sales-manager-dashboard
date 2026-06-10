@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-10 07:00 AM PDT",
+  "updated_at": "2026-06-10 07:15 AM PDT",
   "week_label": "Jun 08 \u2013 Jun 12, 2026",
   "monday_str": "2026-06-08",
   "today_str": "2026-06-10",
@@ -40,12 +40,12 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 69,
+  "total_booked": 70,
   "total_shown": 36,
   "total_qualified": 33,
   "total_deals": 11,
   "total_revenue": 76967.0,
-  "team_close_rate": 15.9,
+  "team_close_rate": 15.7,
   "team_avg_rev_per_deal": 6997.0,
   "team_crm_compliance": 86.4,
   "team_task_adherence": 41.5,
@@ -55,7 +55,7 @@
   "funnel_breakdown": [
     {
       "funnel": "Website",
-      "count": 21
+      "count": 22
     },
     {
       "funnel": "Instagram",
@@ -91,11 +91,11 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 43,
+    "in_house": 44,
     "external": 25,
     "unknown": 1,
-    "in_house_pct": 62.3,
-    "external_pct": 36.2,
+    "in_house_pct": 62.9,
+    "external_pct": 35.7,
     "unknown_pct": 1.4
   },
   "reps": [
@@ -161,12 +161,12 @@
     },
     {
       "name": "Robin Perkins",
-      "booked": 13,
+      "booked": 14,
       "shown": 7,
       "qualified": 7,
       "deals": 2,
       "revenue": 11994.0,
-      "close_rate": 15.4,
+      "close_rate": 14.3,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
       "crm_compliance": 96.4,
@@ -492,62 +492,6 @@
       "lane": 2
     },
     {
-      "name": "Kelly Schrader",
-      "booked": 2,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 0.0,
-      "crm_filled": 0,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          0,
-          1
-        ],
-        "disposition": [
-          0,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Kesha Finister",
-            "lead_id": "lead_Z6sYHG0FiWRB5VbRomOc8gLHkhFFBRgsMop2W0jemZB",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 26.4,
-      "tasks_overdue": 95,
-      "tasks_incomplete": 129,
-      "open_leads": 90,
-      "est_pipeline": 216000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Cameron Caswell",
       "booked": 2,
       "shown": 1,
@@ -668,6 +612,115 @@
       "qa_score": null,
       "avg_rev_per_deal": null,
       "crm_compliance": 50.0,
+      "crm_filled": 1,
+      "crm_total": 2,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          0,
+          1
+        ],
+        "qualified": [
+          0,
+          0
+        ],
+        "confidence": [
+          0,
+          0
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Deshanae Scott",
+            "lead_id": "lead_g2xYCZMkHSgzKsrnVhmGdTvrc4agc3pewEteQN1C6C5",
+            "missing": [
+              "Disposition"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Kelly Schrader",
+      "booked": 2,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 0.0,
+      "crm_filled": 0,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          0,
+          1
+        ],
+        "disposition": [
+          0,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Kesha Finister",
+            "lead_id": "lead_Z6sYHG0FiWRB5VbRomOc8gLHkhFFBRgsMop2W0jemZB",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 26.4,
+      "tasks_overdue": 95,
+      "tasks_incomplete": 129,
+      "open_leads": 90,
+      "est_pipeline": 216000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "John Kirk",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 50.0,
       "crm_filled": 2,
       "crm_total": 4,
       "crm_detail": {
@@ -730,29 +783,6 @@
       "tasks_incomplete": 228,
       "open_leads": 125,
       "est_pipeline": 300000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "John Kirk",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 4.1,
-      "tasks_overdue": 260,
-      "tasks_incomplete": 271,
-      "open_leads": 184,
-      "est_pipeline": 441600,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
