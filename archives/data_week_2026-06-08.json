@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-11 02:00 PM PDT",
+  "updated_at": "2026-06-11 02:15 PM PDT",
   "week_label": "Jun 08 \u2013 Jun 12, 2026",
   "monday_str": "2026-06-08",
   "today_str": "2026-06-11",
@@ -40,22 +40,22 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 91,
+  "total_booked": 92,
   "total_shown": 67,
   "total_qualified": 62,
   "total_deals": 16,
   "total_revenue": 115952.0,
-  "team_close_rate": 17.6,
+  "team_close_rate": 17.4,
   "team_avg_rev_per_deal": 7247.0,
   "team_crm_compliance": 92.0,
-  "team_task_adherence": 49.6,
+  "team_task_adherence": 49.5,
   "team_overdue": 591,
   "team_open_leads": 1022,
   "team_est_pipeline": 2452800,
   "funnel_breakdown": [
     {
       "funnel": "Website",
-      "count": 24
+      "count": 25
     },
     {
       "funnel": "YouTube",
@@ -95,11 +95,11 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 53,
+    "in_house": 54,
     "external": 35,
     "unknown": 3,
-    "in_house_pct": 58.2,
-    "external_pct": 38.5,
+    "in_house_pct": 58.7,
+    "external_pct": 38.0,
     "unknown_pct": 3.3
   },
   "reps": [
@@ -165,12 +165,12 @@
     },
     {
       "name": "Robin Perkins",
-      "booked": 16,
+      "booked": 17,
       "shown": 13,
       "qualified": 12,
       "deals": 2,
       "revenue": 11994.0,
-      "close_rate": 12.5,
+      "close_rate": 11.8,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
       "crm_compliance": 97.6,
@@ -488,6 +488,66 @@
       "lane": 2
     },
     {
+      "name": "Jason Aaron",
+      "booked": 4,
+      "shown": 4,
+      "qualified": 4,
+      "deals": 1,
+      "revenue": 7997.0,
+      "close_rate": 25.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 7997.0,
+      "crm_compliance": 89.5,
+      "crm_filled": 17,
+      "crm_total": 19,
+      "crm_detail": {
+        "show_up": [
+          4,
+          4
+        ],
+        "disposition": [
+          4,
+          4
+        ],
+        "qualified": [
+          4,
+          4
+        ],
+        "confidence": [
+          3,
+          4
+        ],
+        "lost_reason": [
+          2,
+          3
+        ],
+        "missing_leads": [
+          {
+            "name": "Melissa Bleau",
+            "lead_id": "lead_0RgXkldRwFpMAvMKtfVOQcv3OQjujFcQYnWuhvHQOVC",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Lorra Miller",
+            "lead_id": "lead_0Ok8TAUvnJczugvRhhTbCFi4jTJAtzLYKMzG0H9LR80",
+            "missing": [
+              "Lost Reason"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 39.6,
+      "tasks_overdue": 87,
+      "tasks_incomplete": 144,
+      "open_leads": 146,
+      "est_pipeline": 350400,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
+    },
+    {
       "name": "Lyle Hubbard",
       "booked": 4,
       "shown": 4,
@@ -550,66 +610,6 @@
       "lane": 2
     },
     {
-      "name": "Jason Aaron",
-      "booked": 4,
-      "shown": 4,
-      "qualified": 4,
-      "deals": 1,
-      "revenue": 7997.0,
-      "close_rate": 25.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 7997.0,
-      "crm_compliance": 89.5,
-      "crm_filled": 17,
-      "crm_total": 19,
-      "crm_detail": {
-        "show_up": [
-          4,
-          4
-        ],
-        "disposition": [
-          4,
-          4
-        ],
-        "qualified": [
-          4,
-          4
-        ],
-        "confidence": [
-          3,
-          4
-        ],
-        "lost_reason": [
-          2,
-          3
-        ],
-        "missing_leads": [
-          {
-            "name": "Melissa Bleau",
-            "lead_id": "lead_0RgXkldRwFpMAvMKtfVOQcv3OQjujFcQYnWuhvHQOVC",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Lorra Miller",
-            "lead_id": "lead_0Ok8TAUvnJczugvRhhTbCFi4jTJAtzLYKMzG0H9LR80",
-            "missing": [
-              "Lost Reason"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 39.6,
-      "tasks_overdue": 87,
-      "tasks_incomplete": 144,
-      "open_leads": 146,
-      "est_pipeline": 350400,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
-    },
-    {
       "name": "Cameron Caswell",
       "booked": 2,
       "shown": 1,
@@ -656,7 +656,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 9,
+      "tasks_incomplete": 8,
       "open_leads": 57,
       "est_pipeline": 136800,
       "is_manager": false,
