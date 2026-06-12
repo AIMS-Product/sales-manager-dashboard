@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-12 02:45 PM PDT",
+  "updated_at": "2026-06-12 03:00 PM PDT",
   "week_label": "Jun 08 \u2013 Jun 12, 2026",
   "monday_str": "2026-06-08",
   "today_str": "2026-06-12",
   "day_of_week": 5,
-  "num_reps": 15,
+  "num_reps": 14,
   "targets": {
     "booked": 15,
     "shown": 11,
@@ -30,11 +30,11 @@
     "task_adherence": 100
   },
   "team_targets": {
-    "booked": 225,
-    "shown": 165,
-    "qualified": 120,
-    "deals": 45,
-    "revenue": 360000,
+    "booked": 210,
+    "shown": 154,
+    "qualified": 112,
+    "deals": 42,
+    "revenue": 336000,
     "close_rate": 20,
     "avg_rev_per_deal": 8000,
     "crm_compliance": 90,
@@ -48,8 +48,8 @@
   "team_close_rate": 14.0,
   "team_avg_rev_per_deal": 7247.0,
   "team_crm_compliance": 93.9,
-  "team_task_adherence": 52.8,
-  "team_overdue": 530,
+  "team_task_adherence": 52.9,
+  "team_overdue": 527,
   "team_open_leads": 1035,
   "team_est_pipeline": 2484000,
   "funnel_breakdown": [
@@ -288,6 +288,51 @@
       "lane": 1
     },
     {
+      "name": "Eric Piccione",
+      "booked": 11,
+      "shown": 8,
+      "qualified": 9,
+      "deals": 2,
+      "revenue": 11994.0,
+      "close_rate": 18.2,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 36,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          9,
+          9
+        ],
+        "disposition": [
+          9,
+          9
+        ],
+        "qualified": [
+          9,
+          9
+        ],
+        "confidence": [
+          9,
+          9
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 18,
+      "open_leads": 41,
+      "est_pipeline": 98400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Jason Aaron",
       "booked": 11,
       "shown": 10,
@@ -339,51 +384,6 @@
       "is_manager": false,
       "is_lead": true,
       "lane": 2
-    },
-    {
-      "name": "Eric Piccione",
-      "booked": 11,
-      "shown": 8,
-      "qualified": 9,
-      "deals": 2,
-      "revenue": 11994.0,
-      "close_rate": 18.2,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 36,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          9,
-          9
-        ],
-        "disposition": [
-          9,
-          9
-        ],
-        "qualified": [
-          9,
-          9
-        ],
-        "confidence": [
-          9,
-          9
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 18,
-      "open_leads": 41,
-      "est_pipeline": 98400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
     },
     {
       "name": "Kelly Schrader",
@@ -598,9 +598,9 @@
           }
         ]
       },
-      "task_adherence": 28.6,
-      "tasks_overdue": 130,
-      "tasks_incomplete": 182,
+      "task_adherence": 28.9,
+      "tasks_overdue": 128,
+      "tasks_incomplete": 180,
       "open_leads": 157,
       "est_pipeline": 376800,
       "is_manager": false,
@@ -753,30 +753,7 @@
     },
     {
       "name": "Danny Santolaya",
-      "booked": 1,
-      "shown": 1,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 3,
-      "open_leads": 2,
-      "est_pipeline": 4800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Danny Santolaya",
-      "booked": 1,
+      "booked": 2,
       "shown": 1,
       "qualified": 1,
       "deals": 0,
@@ -847,29 +824,6 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Luis Galarza",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 0.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 1,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
       "is_lead": false,
       "lane": 1
     },
