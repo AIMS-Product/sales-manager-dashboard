@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12 01:45 PM PDT",
+  "updated_at": "2026-06-12 02:00 PM PDT",
   "week_label": "Jun 08 \u2013 Jun 12, 2026",
   "monday_str": "2026-06-08",
   "today_str": "2026-06-12",
@@ -41,21 +41,25 @@
     "task_adherence": 100
   },
   "total_booked": 113,
-  "total_shown": 82,
+  "total_shown": 83,
   "total_qualified": 76,
   "total_deals": 16,
   "total_revenue": 115952.0,
   "team_close_rate": 14.2,
   "team_avg_rev_per_deal": 7247.0,
-  "team_crm_compliance": 92.8,
-  "team_task_adherence": 50.7,
-  "team_overdue": 561,
+  "team_crm_compliance": 93.9,
+  "team_task_adherence": 51.3,
+  "team_overdue": 554,
   "team_open_leads": 1034,
   "team_est_pipeline": 2481600,
   "funnel_breakdown": [
     {
       "funnel": "Website",
       "count": 29
+    },
+    {
+      "funnel": "YouTube",
+      "count": 25
     },
     {
       "funnel": "Instagram",
@@ -109,8 +113,8 @@
       "close_rate": 10.0,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 96.4,
-      "crm_filled": 54,
+      "crm_compliance": 100.0,
+      "crm_filled": 56,
       "crm_total": 56,
       "crm_detail": {
         "show_up": [
@@ -122,37 +126,22 @@
           15
         ],
         "qualified": [
-          12,
+          13,
           13
         ],
         "confidence": [
-          12,
+          13,
           13
         ],
         "lost_reason": [
           0,
           0
         ],
-        "missing_leads": [
-          {
-            "name": "Tyler Chilcoat",
-            "lead_id": "lead_dWfTOkR1ylp6rCzNcowmR4EbcNnEpUX0hWdIbY4MAtN",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Tom",
-            "lead_id": "lead_HKuBsPeDPCHms5NTsfomdW1Oi0PsrBLhj8DmNBS2mZA",
-            "missing": [
-              "Qualified"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 65,
+      "tasks_incomplete": 66,
       "open_leads": 65,
       "est_pipeline": 156000,
       "is_manager": false,
@@ -212,7 +201,7 @@
       },
       "task_adherence": 98.7,
       "tasks_overdue": 2,
-      "tasks_incomplete": 153,
+      "tasks_incomplete": 152,
       "open_leads": 65,
       "est_pipeline": 156000,
       "is_manager": false,
@@ -303,51 +292,6 @@
       "lane": 1
     },
     {
-      "name": "Eric Piccione",
-      "booked": 11,
-      "shown": 8,
-      "qualified": 9,
-      "deals": 2,
-      "revenue": 11994.0,
-      "close_rate": 18.2,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 36,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          9,
-          9
-        ],
-        "disposition": [
-          9,
-          9
-        ],
-        "qualified": [
-          9,
-          9
-        ],
-        "confidence": [
-          9,
-          9
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 18,
-      "open_leads": 41,
-      "est_pipeline": 98400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Jason Aaron",
       "booked": 11,
       "shown": 10,
@@ -391,14 +335,59 @@
           }
         ]
       },
-      "task_adherence": 36.9,
-      "tasks_overdue": 94,
-      "tasks_incomplete": 149,
-      "open_leads": 150,
-      "est_pipeline": 360000,
+      "task_adherence": 39.9,
+      "tasks_overdue": 89,
+      "tasks_incomplete": 148,
+      "open_leads": 149,
+      "est_pipeline": 357600,
       "is_manager": false,
       "is_lead": true,
       "lane": 2
+    },
+    {
+      "name": "Eric Piccione",
+      "booked": 11,
+      "shown": 8,
+      "qualified": 9,
+      "deals": 2,
+      "revenue": 11994.0,
+      "close_rate": 18.2,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 36,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          9,
+          9
+        ],
+        "disposition": [
+          9,
+          9
+        ],
+        "qualified": [
+          9,
+          9
+        ],
+        "confidence": [
+          9,
+          9
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 18,
+      "open_leads": 41,
+      "est_pipeline": 98400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Kelly Schrader",
@@ -518,8 +507,8 @@
       "task_adherence": 75.0,
       "tasks_overdue": 1,
       "tasks_incomplete": 4,
-      "open_leads": 21,
-      "est_pipeline": 50400,
+      "open_leads": 22,
+      "est_pipeline": 52800,
       "is_manager": false,
       "is_lead": true,
       "lane": 1
@@ -613,8 +602,8 @@
           }
         ]
       },
-      "task_adherence": 24.5,
-      "tasks_overdue": 151,
+      "task_adherence": 25.5,
+      "tasks_overdue": 149,
       "tasks_incomplete": 200,
       "open_leads": 157,
       "est_pipeline": 376800,
@@ -625,19 +614,19 @@
     {
       "name": "Elvis Ellis",
       "booked": 3,
-      "shown": 0,
+      "shown": 1,
       "qualified": 0,
       "deals": 1,
       "revenue": 8997.0,
       "close_rate": 33.3,
       "qa_score": null,
       "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 80.0,
-      "crm_filled": 8,
+      "crm_compliance": 100.0,
+      "crm_filled": 10,
       "crm_total": 10,
       "crm_detail": {
         "show_up": [
-          1,
+          3,
           3
         ],
         "disposition": [
@@ -656,22 +645,7 @@
           0,
           0
         ],
-        "missing_leads": [
-          {
-            "name": "Sheetal Patel",
-            "lead_id": "lead_MgaF5CyZVOSm1pypibjplTu2JFtUFmgc0fAXGNSBAYp",
-            "missing": [
-              "Show Up"
-            ]
-          },
-          {
-            "name": "Patrick Mertilus",
-            "lead_id": "lead_uRnT6cXUfzjb71kkDbkHXacno315oG4L8MrafmLPtIp",
-            "missing": [
-              "Show Up"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": 85.8,
       "tasks_overdue": 32,
@@ -782,29 +756,6 @@
       "lane": 2
     },
     {
-      "name": "Luis Galarza",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 0.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 1,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Joe Dysert",
       "booked": 1,
       "shown": 0,
@@ -854,6 +805,29 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Luis Galarza",
+      "booked": 1,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 0.0,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 1,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
       "is_lead": false,
       "lane": 1
     },
