@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12 11:15 AM PDT",
+  "updated_at": "2026-06-12 11:30 AM PDT",
   "week_label": "Jun 08 \u2013 Jun 12, 2026",
   "monday_str": "2026-06-08",
   "today_str": "2026-06-12",
@@ -41,17 +41,17 @@
     "task_adherence": 100
   },
   "total_booked": 114,
-  "total_shown": 77,
-  "total_qualified": 71,
+  "total_shown": 78,
+  "total_qualified": 72,
   "total_deals": 16,
   "total_revenue": 115952.0,
   "team_close_rate": 14.0,
   "team_avg_rev_per_deal": 7247.0,
   "team_crm_compliance": 90.8,
-  "team_task_adherence": 49.4,
-  "team_overdue": 586,
-  "team_open_leads": 1028,
-  "team_est_pipeline": 2467200,
+  "team_task_adherence": 50.0,
+  "team_overdue": 573,
+  "team_open_leads": 1030,
+  "team_est_pipeline": 2472000,
   "funnel_breakdown": [
     {
       "funnel": "Website",
@@ -67,15 +67,11 @@
     },
     {
       "funnel": "Reactivation Scrapers",
-      "count": 20
+      "count": 21
     },
     {
       "funnel": "Low Ticket Funnel",
       "count": 6
-    },
-    {
-      "funnel": "Unknown",
-      "count": 3
     },
     {
       "funnel": "Internal Webinar",
@@ -83,6 +79,10 @@
     },
     {
       "funnel": "Meta Ads",
+      "count": 2
+    },
+    {
+      "funnel": "Unknown",
       "count": 2
     },
     {
@@ -307,59 +307,6 @@
       "lane": 1
     },
     {
-      "name": "Jason Aaron",
-      "booked": 11,
-      "shown": 7,
-      "qualified": 7,
-      "deals": 1,
-      "revenue": 7997.0,
-      "close_rate": 9.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 7997.0,
-      "crm_compliance": 97.1,
-      "crm_filled": 33,
-      "crm_total": 34,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          7,
-          7
-        ],
-        "qualified": [
-          7,
-          7
-        ],
-        "confidence": [
-          7,
-          7
-        ],
-        "lost_reason": [
-          5,
-          6
-        ],
-        "missing_leads": [
-          {
-            "name": "Lorra Miller",
-            "lead_id": "lead_0Ok8TAUvnJczugvRhhTbCFi4jTJAtzLYKMzG0H9LR80",
-            "missing": [
-              "Lost Reason"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 34.7,
-      "tasks_overdue": 98,
-      "tasks_incomplete": 150,
-      "open_leads": 147,
-      "est_pipeline": 352800,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
-    },
-    {
       "name": "Eric Piccione",
       "booked": 11,
       "shown": 8,
@@ -403,6 +350,59 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 11,
+      "shown": 8,
+      "qualified": 8,
+      "deals": 1,
+      "revenue": 7997.0,
+      "close_rate": 9.1,
+      "qa_score": null,
+      "avg_rev_per_deal": 7997.0,
+      "crm_compliance": 97.1,
+      "crm_filled": 33,
+      "crm_total": 34,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          7,
+          7
+        ],
+        "confidence": [
+          7,
+          7
+        ],
+        "lost_reason": [
+          5,
+          6
+        ],
+        "missing_leads": [
+          {
+            "name": "Lorra Miller",
+            "lead_id": "lead_0Ok8TAUvnJczugvRhhTbCFi4jTJAtzLYKMzG0H9LR80",
+            "missing": [
+              "Lost Reason"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 34.7,
+      "tasks_overdue": 98,
+      "tasks_incomplete": 150,
+      "open_leads": 149,
+      "est_pipeline": 357600,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
     },
     {
       "name": "Kelly Schrader",
@@ -617,9 +617,9 @@
           }
         ]
       },
-      "task_adherence": 21.2,
-      "tasks_overdue": 171,
-      "tasks_incomplete": 217,
+      "task_adherence": 23.3,
+      "tasks_overdue": 158,
+      "tasks_incomplete": 206,
       "open_leads": 157,
       "est_pipeline": 376800,
       "is_manager": false,
@@ -797,29 +797,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
-    },
-    {
-      "name": "Luis Galarza",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 0.0,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 1,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
     },
     {
       "name": "Joe Dysert",
