@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12 06:30 PM PDT",
+  "updated_at": "2026-06-12 06:45 PM PDT",
   "week_label": "Jun 08 \u2013 Jun 12, 2026",
   "monday_str": "2026-06-08",
   "today_str": "2026-06-12",
@@ -240,24 +240,9 @@
         ],
         "missing_leads": [
           {
-            "name": "Richred Baptiste",
-            "lead_id": "lead_0pkXtexLZgFRtGkOS1DbT0ZHDJ1N288aoMz8HxRch4i",
-            "missing": [
-              "Qualified"
-            ]
-          },
-          {
             "name": "Ryan McCormick",
             "lead_id": "lead_kFu5La0HYuftMZO8YKh0lp9RwlUXxIM9S3hUrWjY16z",
             "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "David Walton",
-            "lead_id": "lead_7wuOAiQBWXvrvZmBLndgzG2AoY3cjVv3VDebyWq2GVk",
-            "missing": [
-              "Disposition",
               "Confidence"
             ]
           },
@@ -266,6 +251,21 @@
             "lead_id": "lead_3cxgfdDbvACZkgQf5HkuUzbax6bgyFRVXYLowuizKFG",
             "missing": [
               "Disposition"
+            ]
+          },
+          {
+            "name": "Richred Baptiste",
+            "lead_id": "lead_0pkXtexLZgFRtGkOS1DbT0ZHDJ1N288aoMz8HxRch4i",
+            "missing": [
+              "Qualified"
+            ]
+          },
+          {
+            "name": "David Walton",
+            "lead_id": "lead_7wuOAiQBWXvrvZmBLndgzG2AoY3cjVv3VDebyWq2GVk",
+            "missing": [
+              "Disposition",
+              "Confidence"
             ]
           },
           {
@@ -283,6 +283,51 @@
       "tasks_incomplete": 18,
       "open_leads": 42,
       "est_pipeline": 100800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Eric Piccione",
+      "booked": 11,
+      "shown": 8,
+      "qualified": 9,
+      "deals": 2,
+      "revenue": 11994.0,
+      "close_rate": 18.2,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 36,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          9,
+          9
+        ],
+        "disposition": [
+          9,
+          9
+        ],
+        "qualified": [
+          9,
+          9
+        ],
+        "confidence": [
+          9,
+          9
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 18,
+      "open_leads": 41,
+      "est_pipeline": 98400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -608,7 +653,7 @@
       "lane": 2
     },
     {
-      "name": "Danny Santolaya",
+      "name": "Joe Vaughan",
       "booked": 2,
       "shown": 1,
       "qualified": 1,
@@ -617,15 +662,37 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 4,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 3,
-      "open_leads": 2,
-      "est_pipeline": 4800,
+      "tasks_incomplete": 0,
+      "open_leads": 1,
+      "est_pipeline": 2400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -706,6 +773,29 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
+    },
+    {
+      "name": "Danny Santolaya",
+      "booked": 2,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 3,
+      "open_leads": 2,
+      "est_pipeline": 4800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Joe Dysert",
