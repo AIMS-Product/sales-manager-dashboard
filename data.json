@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16 09:15 AM PDT",
+  "updated_at": "2026-06-16 09:30 AM PDT",
   "week_label": "Jun 15 \u2013 Jun 19, 2026",
   "monday_str": "2026-06-15",
   "today_str": "2026-06-16",
@@ -41,8 +41,8 @@
     "task_adherence": 100
   },
   "total_booked": 39,
-  "total_shown": 17,
-  "total_qualified": 15,
+  "total_shown": 18,
+  "total_qualified": 16,
   "total_deals": 3,
   "total_revenue": 15494.0,
   "team_close_rate": 7.7,
@@ -78,6 +78,10 @@
       "count": 2
     },
     {
+      "funnel": "LTF - In-House",
+      "count": 1
+    },
+    {
       "funnel": "Unknown",
       "count": 1
     },
@@ -88,19 +92,15 @@
     {
       "funnel": "Internal Webinar",
       "count": 1
-    },
-    {
-      "funnel": "Low Ticket Funnel",
-      "count": 1
     }
   ],
   "funnel_sources": {
     "in_house": 15,
-    "external": 11,
-    "unknown": 13,
+    "external": 10,
+    "unknown": 14,
     "in_house_pct": 38.5,
-    "external_pct": 28.2,
-    "unknown_pct": 33.3
+    "external_pct": 25.6,
+    "unknown_pct": 35.9
   },
   "reps": [
     {
@@ -239,8 +239,8 @@
     {
       "name": "Jake Skinner",
       "booked": 6,
-      "shown": 3,
-      "qualified": 3,
+      "shown": 4,
+      "qualified": 4,
       "deals": 1,
       "revenue": 5997.0,
       "close_rate": 16.7,
@@ -381,6 +381,29 @@
       "lane": 1
     },
     {
+      "name": "Kelly Schrader",
+      "booked": 2,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 42.9,
+      "tasks_overdue": 28,
+      "tasks_incomplete": 49,
+      "open_leads": 107,
+      "est_pipeline": 256800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Jason Aaron",
       "booked": 2,
       "shown": 1,
@@ -423,29 +446,6 @@
       "est_pipeline": 357600,
       "is_manager": false,
       "is_lead": true,
-      "lane": 2
-    },
-    {
-      "name": "Kelly Schrader",
-      "booked": 2,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 41.7,
-      "tasks_overdue": 28,
-      "tasks_incomplete": 48,
-      "open_leads": 107,
-      "est_pipeline": 256800,
-      "is_manager": false,
-      "is_lead": false,
       "lane": 2
     },
     {
@@ -506,14 +506,14 @@
       "name": "Danny Santolaya",
       "booked": 1,
       "shown": 1,
-      "qualified": 0,
+      "qualified": 1,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 75.0,
-      "crm_filled": 3,
+      "crm_compliance": 100.0,
+      "crm_filled": 4,
       "crm_total": 4,
       "crm_detail": {
         "show_up": [
@@ -529,106 +529,22 @@
           1
         ],
         "confidence": [
-          0,
+          1,
           1
         ],
         "lost_reason": [
           0,
           0
         ],
-        "missing_leads": [
-          {
-            "name": "DeAndre Henry",
-            "lead_id": "lead_uDBxN2nXxgy2WsWIBuSM0H6HVM6CwmhaZtYkMGXagpd",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
-      "task_adherence": 87.5,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 8,
-      "open_leads": 22,
-      "est_pipeline": 52800,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 1
-    },
-    {
-      "name": "John Kirk",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 3.0,
-      "tasks_overdue": 259,
-      "tasks_incomplete": 267,
-      "open_leads": 179,
-      "est_pipeline": 429600,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 5,
+      "open_leads": 3,
+      "est_pipeline": 7200,
       "is_manager": false,
       "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 1,
-      "shown": 1,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 75.0,
-      "crm_filled": 3,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "DeAndre Henry",
-            "lead_id": "lead_uDBxN2nXxgy2WsWIBuSM0H6HVM6CwmhaZtYkMGXagpd",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 87.5,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 8,
-      "open_leads": 22,
-      "est_pipeline": 52800,
-      "is_manager": false,
-      "is_lead": true,
       "lane": 1
     },
     {
@@ -688,6 +604,82 @@
       "lane": 1
     },
     {
+      "name": "Christian Hartwell",
+      "booked": 1,
+      "shown": 1,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 75.0,
+      "crm_filled": 3,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "DeAndre Henry",
+            "lead_id": "lead_uDBxN2nXxgy2WsWIBuSM0H6HVM6CwmhaZtYkMGXagpd",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 87.5,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 8,
+      "open_leads": 22,
+      "est_pipeline": 52800,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 1
+    },
+    {
+      "name": "Elvis Ellis",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 38.5,
+      "tasks_overdue": 139,
+      "tasks_incomplete": 226,
+      "open_leads": 125,
+      "est_pipeline": 300000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "John Kirk",
       "booked": 0,
       "shown": 0,
@@ -711,7 +703,7 @@
       "lane": 2
     },
     {
-      "name": "Joe Dysert",
+      "name": "Lyle Hubbard",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -724,34 +716,11 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": null,
-      "tasks_incomplete": null,
-      "open_leads": null,
-      "est_pipeline": null,
-      "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Elvis Ellis",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 38.5,
-      "tasks_overdue": 139,
-      "tasks_incomplete": 226,
-      "open_leads": 125,
-      "est_pipeline": 300000,
+      "task_adherence": 71.9,
+      "tasks_overdue": 27,
+      "tasks_incomplete": 96,
+      "open_leads": 166,
+      "est_pipeline": 398400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -780,7 +749,7 @@
       "lane": 2
     },
     {
-      "name": "Lyle Hubbard",
+      "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -793,14 +762,14 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 71.9,
-      "tasks_overdue": 27,
-      "tasks_incomplete": 96,
-      "open_leads": 166,
-      "est_pipeline": 398400,
-      "is_manager": false,
+      "task_adherence": null,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
       "is_lead": false,
-      "lane": 2
+      "lane": 1
     }
   ]
 }
