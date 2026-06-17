@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-17 04:30 AM PDT",
+  "updated_at": "2026-06-17 04:45 AM PDT",
   "week_label": "Jun 15 \u2013 Jun 19, 2026",
   "monday_str": "2026-06-15",
   "today_str": "2026-06-17",
@@ -50,8 +50,8 @@
   "team_crm_compliance": 73.8,
   "team_task_adherence": 59.5,
   "team_overdue": 530,
-  "team_open_leads": 1051,
-  "team_est_pipeline": 2522400,
+  "team_open_leads": 1052,
+  "team_est_pipeline": 2524800,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -403,8 +403,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 16,
-      "open_leads": 44,
-      "est_pipeline": 105600,
+      "open_leads": 45,
+      "est_pipeline": 108000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -879,6 +879,59 @@
       "lane": 1
     },
     {
+      "name": "Lyle Hubbard",
+      "booked": 1,
+      "shown": 1,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 80.0,
+      "crm_filled": 4,
+      "crm_total": 5,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Samuel",
+            "lead_id": "lead_M6HdVVMCihVIjZ9kIjbW9lIGsrdf2ZrIOY9awfuCzqA",
+            "missing": [
+              "Qualified"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 62,
+      "open_leads": 165,
+      "est_pipeline": 396000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "John Kirk",
       "booked": 0,
       "shown": 0,
@@ -923,6 +976,29 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Cameron Caswell",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 4,
+      "open_leads": 59,
+      "est_pipeline": 141600,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     }
   ]
 }
