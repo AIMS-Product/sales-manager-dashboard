@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-17 05:00 AM PDT",
+  "updated_at": "2026-06-17 05:15 AM PDT",
   "week_label": "Jun 15 \u2013 Jun 19, 2026",
   "monday_str": "2026-06-15",
   "today_str": "2026-06-17",
@@ -572,6 +572,62 @@
       "lane": 1
     },
     {
+      "name": "Elvis Ellis",
+      "booked": 2,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 0.0,
+      "crm_filled": 0,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          0,
+          1
+        ],
+        "disposition": [
+          0,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Christopher Ewins",
+            "lead_id": "lead_6LX8X5nc1IWUBDWC37tb3HTGA4ErN1kSa3q97IqER3F",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 40.6,
+      "tasks_overdue": 133,
+      "tasks_incomplete": 224,
+      "open_leads": 124,
+      "est_pipeline": 297600,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Kelly Schrader",
       "booked": 2,
       "shown": 0,
@@ -694,8 +750,8 @@
       "lane": 2
     },
     {
-      "name": "Elvis Ellis",
-      "booked": 2,
+      "name": "Shreya Bechra",
+      "booked": 1,
       "shown": 0,
       "qualified": 0,
       "deals": 0,
@@ -703,51 +759,18 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 0.0,
+      "crm_compliance": null,
       "crm_filled": 0,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          0,
-          1
-        ],
-        "disposition": [
-          0,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Christopher Ewins",
-            "lead_id": "lead_6LX8X5nc1IWUBDWC37tb3HTGA4ErN1kSa3q97IqER3F",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 40.6,
-      "tasks_overdue": 133,
-      "tasks_incomplete": 224,
-      "open_leads": 124,
-      "est_pipeline": 297600,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 1,
+      "est_pipeline": 2400,
       "is_manager": false,
       "is_lead": false,
-      "lane": 2
+      "lane": 1
     },
     {
       "name": "Shreya Bechra",
@@ -879,52 +902,6 @@
       "lane": 1
     },
     {
-      "name": "John Kirk",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 3.0,
-      "tasks_overdue": 258,
-      "tasks_incomplete": 266,
-      "open_leads": 110,
-      "est_pipeline": 264000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Cameron Caswell",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 4,
-      "open_leads": 59,
-      "est_pipeline": 141600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -946,6 +923,29 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "John Kirk",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 3.0,
+      "tasks_overdue": 258,
+      "tasks_incomplete": 266,
+      "open_leads": 110,
+      "est_pipeline": 264000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     },
     {
       "name": "Cameron Caswell",
