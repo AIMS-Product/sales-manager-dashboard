@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-17 06:15 AM PDT",
+  "updated_at": "2026-06-17 06:30 AM PDT",
   "week_label": "Jun 15 \u2013 Jun 19, 2026",
   "monday_str": "2026-06-15",
   "today_str": "2026-06-17",
@@ -217,6 +217,51 @@
       "lane": 1
     },
     {
+      "name": "Jake Skinner",
+      "booked": 9,
+      "shown": 6,
+      "qualified": 6,
+      "deals": 2,
+      "revenue": 14994.0,
+      "close_rate": 22.2,
+      "qa_score": null,
+      "avg_rev_per_deal": 7497.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 20,
+      "crm_total": 20,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 28,
+      "est_pipeline": 67200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Dubem Adindu",
       "booked": 9,
       "shown": 7,
@@ -315,51 +360,6 @@
       "tasks_incomplete": 19,
       "open_leads": 45,
       "est_pipeline": 108000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Jake Skinner",
-      "booked": 9,
-      "shown": 6,
-      "qualified": 6,
-      "deals": 2,
-      "revenue": 14994.0,
-      "close_rate": 22.2,
-      "qa_score": null,
-      "avg_rev_per_deal": 7497.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 20,
-      "crm_total": 20,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          5,
-          5
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 28,
-      "est_pipeline": 67200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -750,56 +750,26 @@
       "lane": 2
     },
     {
-      "name": "Christian Hartwell",
+      "name": "Shreya Bechra",
       "booked": 1,
-      "shown": 1,
+      "shown": 0,
       "qualified": 0,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 75.0,
-      "crm_filled": 3,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "DeAndre Henry",
-            "lead_id": "lead_uDBxN2nXxgy2WsWIBuSM0H6HVM6CwmhaZtYkMGXagpd",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 75.0,
-      "tasks_overdue": 2,
-      "tasks_incomplete": 8,
-      "open_leads": 22,
-      "est_pipeline": 52800,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 1,
+      "est_pipeline": 2400,
       "is_manager": false,
-      "is_lead": true,
+      "is_lead": false,
       "lane": 1
     },
     {
@@ -856,8 +826,61 @@
       "lane": 2
     },
     {
-      "name": "Shreya Bechra",
+      "name": "Christian Hartwell",
       "booked": 1,
+      "shown": 1,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 75.0,
+      "crm_filled": 3,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "DeAndre Henry",
+            "lead_id": "lead_uDBxN2nXxgy2WsWIBuSM0H6HVM6CwmhaZtYkMGXagpd",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 75.0,
+      "tasks_overdue": 2,
+      "tasks_incomplete": 8,
+      "open_leads": 22,
+      "est_pipeline": 52800,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 1
+    },
+    {
+      "name": "John Kirk",
+      "booked": 0,
       "shown": 0,
       "qualified": 0,
       "deals": 0,
@@ -879,7 +902,7 @@
       "lane": 1
     },
     {
-      "name": "John Kirk",
+      "name": "Cameron Caswell",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -892,11 +915,11 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 3.0,
-      "tasks_overdue": 258,
-      "tasks_incomplete": 266,
-      "open_leads": 110,
-      "est_pipeline": 264000,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 4,
+      "open_leads": 59,
+      "est_pipeline": 141600,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -923,29 +946,6 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "Cameron Caswell",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 4,
-      "open_leads": 59,
-      "est_pipeline": 141600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
     }
   ]
 }
