@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19 08:30 AM PDT",
+  "updated_at": "2026-06-19 08:45 AM PDT",
   "week_label": "Jun 15 \u2013 Jun 19, 2026",
   "monday_str": "2026-06-15",
   "today_str": "2026-06-19",
@@ -48,8 +48,8 @@
   "team_close_rate": 7.5,
   "team_avg_rev_per_deal": 6697.6,
   "team_crm_compliance": 79.7,
-  "team_task_adherence": 48.8,
-  "team_overdue": 746,
+  "team_task_adherence": 48.7,
+  "team_overdue": 745,
   "team_open_leads": 1062,
   "team_est_pipeline": 2548800,
   "funnel_breakdown": [
@@ -169,9 +169,9 @@
           }
         ]
       },
-      "task_adherence": 98.2,
-      "tasks_overdue": 3,
-      "tasks_incomplete": 166,
+      "task_adherence": 98.8,
+      "tasks_overdue": 2,
+      "tasks_incomplete": 163,
       "open_leads": 54,
       "est_pipeline": 129600,
       "is_manager": false,
@@ -216,7 +216,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 65,
+      "tasks_incomplete": 63,
       "open_leads": 74,
       "est_pipeline": 177600,
       "is_manager": false,
@@ -233,34 +233,108 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 92.5,
-      "crm_filled": 37,
-      "crm_total": 40,
+      "crm_compliance": 100.0,
+      "crm_filled": 36,
+      "crm_total": 36,
       "crm_detail": {
         "show_up": [
-          12,
-          12
+          11,
+          11
         ],
         "disposition": [
           11,
-          12
+          11
         ],
         "qualified": [
           6,
-          7
+          6
         ],
         "confidence": [
           6,
-          7
+          6
         ],
         "lost_reason": [
           2,
           2
         ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 218,
+      "open_leads": 40,
+      "est_pipeline": 96000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Joe Vaughan",
+      "booked": 13,
+      "shown": 5,
+      "qualified": 5,
+      "deals": 2,
+      "revenue": 1000.0,
+      "close_rate": 15.4,
+      "qa_score": null,
+      "avg_rev_per_deal": 500.0,
+      "crm_compliance": 63.6,
+      "crm_filled": 14,
+      "crm_total": 22,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          3,
+          6
+        ],
+        "qualified": [
+          3,
+          5
+        ],
+        "confidence": [
+          2,
+          5
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
         "missing_leads": [
           {
-            "name": "Martin Castaneda",
-            "lead_id": "lead_YuMAO4rY8lUns0FwL4qMpFYgDWaWzcMmYCPbD4QPkYp",
+            "name": "Isaiah Cavaco",
+            "lead_id": "lead_tOvFRwOn3R7vDKTtFOfNxjZpDxK5PigMNckgh96CFId",
+            "missing": [
+              "Disposition",
+              "Qualified"
+            ]
+          },
+          {
+            "name": "Bobby Triola",
+            "lead_id": "lead_4KcQzNzGt8dTwRvi80X4bzhu9DnSNdISlarGeAVh65H",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Michael Mooradian",
+            "lead_id": "lead_ScvekB2meOLuK0ELiNSCKAGAYjXqwLOT84werAl5DDK",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Tamika Andrews",
+            "lead_id": "lead_szDgVZTj1riYHyYa5eUVexRkzOTqPGoIiJflr1iUA1E",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Patrick Daugherty",
+            "lead_id": "lead_YBFJqgOzsyiYZnJyBvUBZQ8CSWt7pAUhFIY6pBwYkbc",
             "missing": [
               "Disposition",
               "Qualified",
@@ -269,11 +343,11 @@
           }
         ]
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 218,
-      "open_leads": 40,
-      "est_pipeline": 96000,
+      "task_adherence": 0.0,
+      "tasks_overdue": 206,
+      "tasks_incomplete": 206,
+      "open_leads": 39,
+      "est_pipeline": 93600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -397,90 +471,6 @@
       "lane": 1
     },
     {
-      "name": "Joe Vaughan",
-      "booked": 13,
-      "shown": 5,
-      "qualified": 5,
-      "deals": 2,
-      "revenue": 1000.0,
-      "close_rate": 15.4,
-      "qa_score": null,
-      "avg_rev_per_deal": 500.0,
-      "crm_compliance": 63.6,
-      "crm_filled": 14,
-      "crm_total": 22,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          3,
-          6
-        ],
-        "qualified": [
-          3,
-          5
-        ],
-        "confidence": [
-          2,
-          5
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Isaiah Cavaco",
-            "lead_id": "lead_tOvFRwOn3R7vDKTtFOfNxjZpDxK5PigMNckgh96CFId",
-            "missing": [
-              "Disposition",
-              "Qualified"
-            ]
-          },
-          {
-            "name": "Bobby Triola",
-            "lead_id": "lead_4KcQzNzGt8dTwRvi80X4bzhu9DnSNdISlarGeAVh65H",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Michael Mooradian",
-            "lead_id": "lead_ScvekB2meOLuK0ELiNSCKAGAYjXqwLOT84werAl5DDK",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Tamika Andrews",
-            "lead_id": "lead_szDgVZTj1riYHyYa5eUVexRkzOTqPGoIiJflr1iUA1E",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Patrick Daugherty",
-            "lead_id": "lead_YBFJqgOzsyiYZnJyBvUBZQ8CSWt7pAUhFIY6pBwYkbc",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 0.0,
-      "tasks_overdue": 206,
-      "tasks_incomplete": 206,
-      "open_leads": 40,
-      "est_pipeline": 96000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Jake Skinner",
       "booked": 10,
       "shown": 7,
@@ -538,7 +528,7 @@
     },
     {
       "name": "Eric Piccione",
-      "booked": 8,
+      "booked": 9,
       "shown": 5,
       "qualified": 5,
       "deals": 0,
@@ -546,31 +536,40 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 95.0,
-      "crm_filled": 19,
-      "crm_total": 20,
+      "crm_compliance": 83.3,
+      "crm_filled": 20,
+      "crm_total": 24,
       "crm_detail": {
         "show_up": [
-          6,
-          6
+          7,
+          7
         ],
         "disposition": [
           6,
-          6
+          7
         ],
         "qualified": [
           4,
-          4
+          5
         ],
         "confidence": [
           3,
-          4
+          5
         ],
         "lost_reason": [
           0,
           0
         ],
         "missing_leads": [
+          {
+            "name": "Martin Castaneda",
+            "lead_id": "lead_YuMAO4rY8lUns0FwL4qMpFYgDWaWzcMmYCPbD4QPkYp",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
           {
             "name": "Kylen Norman",
             "lead_id": "lead_V14Kq35wHuaXafyzqB6ZMvPqf6mLKkZw9omgNMBM1We",
@@ -643,8 +642,8 @@
       "task_adherence": 88.9,
       "tasks_overdue": 1,
       "tasks_incomplete": 9,
-      "open_leads": 23,
-      "est_pipeline": 55200,
+      "open_leads": 24,
+      "est_pipeline": 57600,
       "is_manager": false,
       "is_lead": true,
       "lane": 1
@@ -698,73 +697,6 @@
       "tasks_incomplete": 0,
       "open_leads": 4,
       "est_pipeline": 9600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "user_vyiPzY0qxbLwnW5Ubwae8vY2MLviPuozSTIsEKcyrFE",
-      "booked": 5,
-      "shown": 1,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 62.5,
-      "crm_filled": 5,
-      "crm_total": 8,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          0,
-          3
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Shay Q",
-            "lead_id": "lead_DgxlsJfCybWCI8dWnoF7YXraieOl4GJB2pJSF1B2aUo",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Amanda Reed",
-            "lead_id": "lead_k1ZqEk3tPIuBd9JTDJ87yTo3siMlYF0Bkg98vXb3OPU",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Patricia Saralegui-Carr",
-            "lead_id": "lead_Ux7B4e67lSa6d5rEtHVwVyZLK422UWVhEGDr88qY5RA",
-            "missing": [
-              "Disposition"
-            ]
-          }
-        ]
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -916,6 +848,62 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 5,
+      "shown": 2,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 77.8,
+      "crm_filled": 14,
+      "crm_total": 18,
+      "crm_detail": {
+        "show_up": [
+          3,
+          4
+        ],
+        "disposition": [
+          3,
+          4
+        ],
+        "qualified": [
+          3,
+          4
+        ],
+        "confidence": [
+          3,
+          4
+        ],
+        "lost_reason": [
+          2,
+          2
+        ],
+        "missing_leads": [
+          {
+            "name": "Marlin Randle",
+            "lead_id": "lead_AWCyfyWHyFI3p8ywrheyMXWlMHRjwpu4DcDVesA6c7a",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 40.1,
+      "tasks_overdue": 82,
+      "tasks_incomplete": 137,
+      "open_leads": 148,
+      "est_pipeline": 355200,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
     },
     {
       "name": "Kelly Schrader",
@@ -1122,6 +1110,29 @@
       "lane": 2
     },
     {
+      "name": "Joe Dysert",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 2.0,
+      "tasks_overdue": 251,
+      "tasks_incomplete": 256,
+      "open_leads": 98,
+      "est_pipeline": 235200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Cameron Caswell",
       "booked": 0,
       "shown": 0,
@@ -1143,29 +1154,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
-    },
-    {
-      "name": "Joe Dysert",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": null,
-      "tasks_incomplete": null,
-      "open_leads": null,
-      "est_pipeline": null,
-      "is_manager": true,
-      "is_lead": false,
-      "lane": 1
     }
   ]
 }
