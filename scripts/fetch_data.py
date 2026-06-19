@@ -143,7 +143,7 @@ LANE_2_TARGETS = {
 
 LANE_2_REPS = {
     "Lyle Hubbard", "Kelly Schrader",
-    "John Kirk", "Jason Aaron",
+    "Jason Aaron", "Jacob Hepner",
 }
 
 REP_QUOTAS = {
@@ -153,10 +153,10 @@ REP_QUOTAS = {
     "Eric Piccione": 100_000,
     "Jason Aaron": 75_000,
     "Robin Perkins": 75_000,
-    "John Kirk": 75_000,
     "Jake Skinner": 75_000,
     "Dubem Adindu": 100_000,
     "Zac Clover": 0,
+    "Jacob Hepner": 0,
     "Kelly Schrader": 0,
     "Joe Dysert": 0,
 }
@@ -166,7 +166,7 @@ EXCLUDE_USERS = {
     "Ahmad Bukhari", "Mallory Kent", "Unknown", "Julia Scaroni",
     "William Chase", "Jordan Humphrey", "Andrea Shoop", "Ryan Jones",
     "Ategeka Musinguzi", "Vince Bartolini", "Steven Starnes", "Chris Wanke",
-    "Bryan Barcus", "Elvis Ellis", "Cameron Caswell",
+    "Bryan Barcus", "Elvis Ellis", "Cameron Caswell", "John Kirk",
 }
 MANAGER_USERS = {"Joe Dysert"}
 LEAD_USERS = {"Christian Hartwell", "Jason Aaron"}
