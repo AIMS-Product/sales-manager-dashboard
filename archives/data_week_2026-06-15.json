@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19 03:00 PM PDT",
+  "updated_at": "2026-06-19 03:15 PM PDT",
   "week_label": "Jun 15 \u2013 Jun 19, 2026",
   "monday_str": "2026-06-15",
   "today_str": "2026-06-19",
@@ -41,7 +41,7 @@
     "task_adherence": 100
   },
   "total_booked": 137,
-  "total_shown": 74,
+  "total_shown": 75,
   "total_qualified": 66,
   "total_deals": 12,
   "total_revenue": 103473.0,
@@ -49,7 +49,7 @@
   "team_avg_rev_per_deal": 8622.75,
   "team_crm_compliance": 80.6,
   "team_task_adherence": 53.1,
-  "team_overdue": 722,
+  "team_overdue": 716,
   "team_open_leads": 962,
   "team_est_pipeline": 2308800,
   "funnel_breakdown": [
@@ -106,7 +106,7 @@
     {
       "name": "Scott Seymour",
       "booked": 21,
-      "shown": 9,
+      "shown": 10,
       "qualified": 7,
       "deals": 3,
       "revenue": 29991.0,
@@ -379,6 +379,62 @@
       "lane": 1
     },
     {
+      "name": "Jake Skinner",
+      "booked": 12,
+      "shown": 7,
+      "qualified": 9,
+      "deals": 2,
+      "revenue": 14994.0,
+      "close_rate": 16.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 7497.0,
+      "crm_compliance": 88.9,
+      "crm_filled": 32,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          8,
+          9
+        ],
+        "disposition": [
+          8,
+          9
+        ],
+        "qualified": [
+          8,
+          9
+        ],
+        "confidence": [
+          8,
+          9
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Susan Backlund",
+            "lead_id": "lead_Il5BOq82PndClzizWnbxCwbZPNktLCD2ttbEmqt7sVP",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 30,
+      "est_pipeline": 72000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Joe Vaughan",
       "booked": 12,
       "shown": 7,
@@ -458,62 +514,6 @@
       "tasks_incomplete": 240,
       "open_leads": 57,
       "est_pipeline": 136800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Jake Skinner",
-      "booked": 12,
-      "shown": 7,
-      "qualified": 9,
-      "deals": 2,
-      "revenue": 14994.0,
-      "close_rate": 16.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 7497.0,
-      "crm_compliance": 88.9,
-      "crm_filled": 32,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          8,
-          9
-        ],
-        "disposition": [
-          8,
-          9
-        ],
-        "qualified": [
-          8,
-          9
-        ],
-        "confidence": [
-          8,
-          9
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Susan Backlund",
-            "lead_id": "lead_Il5BOq82PndClzizWnbxCwbZPNktLCD2ttbEmqt7sVP",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 30,
-      "est_pipeline": 72000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -680,6 +680,129 @@
       "tasks_incomplete": 0,
       "open_leads": 5,
       "est_pipeline": 12000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 5,
+      "shown": 2,
+      "qualified": 2,
+      "deals": 1,
+      "revenue": 15000.0,
+      "close_rate": 20.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 15000.0,
+      "crm_compliance": 77.8,
+      "crm_filled": 14,
+      "crm_total": 18,
+      "crm_detail": {
+        "show_up": [
+          3,
+          4
+        ],
+        "disposition": [
+          3,
+          4
+        ],
+        "qualified": [
+          3,
+          4
+        ],
+        "confidence": [
+          3,
+          4
+        ],
+        "lost_reason": [
+          2,
+          2
+        ],
+        "missing_leads": [
+          {
+            "name": "Marlin Randle",
+            "lead_id": "lead_AWCyfyWHyFI3p8ywrheyMXWlMHRjwpu4DcDVesA6c7a",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 41.5,
+      "tasks_overdue": 79,
+      "tasks_incomplete": 135,
+      "open_leads": 146,
+      "est_pipeline": 350400,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
+    },
+    {
+      "name": "user_vyiPzY0qxbLwnW5Ubwae8vY2MLviPuozSTIsEKcyrFE",
+      "booked": 5,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 62.5,
+      "crm_filled": 5,
+      "crm_total": 8,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          0,
+          3
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Patricia Saralegui-Carr",
+            "lead_id": "lead_Ux7B4e67lSa6d5rEtHVwVyZLK422UWVhEGDr88qY5RA",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Shay Q",
+            "lead_id": "lead_DgxlsJfCybWCI8dWnoF7YXraieOl4GJB2pJSF1B2aUo",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Amanda Reed",
+            "lead_id": "lead_k1ZqEk3tPIuBd9JTDJ87yTo3siMlYF0Bkg98vXb3OPU",
+            "missing": [
+              "Disposition"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -953,9 +1076,9 @@
           }
         ]
       },
-      "task_adherence": 28.8,
-      "tasks_overdue": 37,
-      "tasks_incomplete": 52,
+      "task_adherence": 22.5,
+      "tasks_overdue": 31,
+      "tasks_incomplete": 40,
       "open_leads": 114,
       "est_pipeline": 273600,
       "is_manager": false,
