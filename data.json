@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19 05:45 PM PDT",
+  "updated_at": "2026-06-19 06:00 PM PDT",
   "week_label": "Jun 15 \u2013 Jun 19, 2026",
   "monday_str": "2026-06-15",
   "today_str": "2026-06-19",
@@ -47,7 +47,7 @@
   "total_revenue": 103473.0,
   "team_close_rate": 8.8,
   "team_avg_rev_per_deal": 8622.75,
-  "team_crm_compliance": 81.4,
+  "team_crm_compliance": 80.7,
   "team_task_adherence": 72.9,
   "team_overdue": 435,
   "team_open_leads": 871,
@@ -113,9 +113,9 @@
       "close_rate": 13.6,
       "qa_score": null,
       "avg_rev_per_deal": 9997.0,
-      "crm_compliance": 93.2,
-      "crm_filled": 41,
-      "crm_total": 44,
+      "crm_compliance": 91.3,
+      "crm_filled": 42,
+      "crm_total": 46,
       "crm_detail": {
         "show_up": [
           13,
@@ -127,17 +127,24 @@
         ],
         "qualified": [
           9,
-          9
+          10
         ],
         "confidence": [
-          6,
-          9
+          7,
+          10
         ],
         "lost_reason": [
           0,
           0
         ],
         "missing_leads": [
+          {
+            "name": "Keisha Allen",
+            "lead_id": "lead_0LTX2YE7BUMiTFZWn3wvKxDBHyTGZTm0tK4cMRDZCTU",
+            "missing": [
+              "Qualified"
+            ]
+          },
           {
             "name": "John Pepelnak",
             "lead_id": "lead_1lfroMxk9SqYGiKxs2nspOk3nGLGFaztELmPJ9LTmqt",
@@ -682,6 +689,75 @@
       "lane": 1
     },
     {
+      "name": "user_vyiPzY0qxbLwnW5Ubwae8vY2MLviPuozSTIsEKcyrFE",
+      "booked": 5,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 50.0,
+      "crm_filled": 5,
+      "crm_total": 10,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          0,
+          3
+        ],
+        "qualified": [
+          1,
+          2
+        ],
+        "confidence": [
+          1,
+          2
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Amanda Reed",
+            "lead_id": "lead_k1ZqEk3tPIuBd9JTDJ87yTo3siMlYF0Bkg98vXb3OPU",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Patricia Saralegui-Carr",
+            "lead_id": "lead_Ux7B4e67lSa6d5rEtHVwVyZLK422UWVhEGDr88qY5RA",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Shay Q",
+            "lead_id": "lead_DgxlsJfCybWCI8dWnoF7YXraieOl4GJB2pJSF1B2aUo",
+            "missing": [
+              "Disposition"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Luis Galarza",
       "booked": 5,
       "shown": 0,
@@ -758,73 +834,6 @@
       "tasks_incomplete": 214,
       "open_leads": 28,
       "est_pipeline": 67200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "user_vyiPzY0qxbLwnW5Ubwae8vY2MLviPuozSTIsEKcyrFE",
-      "booked": 5,
-      "shown": 1,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 62.5,
-      "crm_filled": 5,
-      "crm_total": 8,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          0,
-          3
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Amanda Reed",
-            "lead_id": "lead_k1ZqEk3tPIuBd9JTDJ87yTo3siMlYF0Bkg98vXb3OPU",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Patricia Saralegui-Carr",
-            "lead_id": "lead_Ux7B4e67lSa6d5rEtHVwVyZLK422UWVhEGDr88qY5RA",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Shay Q",
-            "lead_id": "lead_DgxlsJfCybWCI8dWnoF7YXraieOl4GJB2pJSF1B2aUo",
-            "missing": [
-              "Disposition"
-            ]
-          }
-        ]
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -1067,29 +1076,6 @@
       "lane": 2
     },
     {
-      "name": "Zac Clover",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -1109,6 +1095,29 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Zac Clover",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
       "is_lead": false,
       "lane": 1
     }
