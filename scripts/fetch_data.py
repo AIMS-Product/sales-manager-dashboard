@@ -458,21 +458,26 @@ def api_get(endpoint, params=None):
 
 
 def fetch_org_users():
-    data = api_get("/user/")
     users = {}
     seen_names = {}  # name -> first user_id (to detect duplicates)
-    for u in data.get("data", []):
-        first = u.get("first_name", "")
-        last = u.get("last_name", "")
-        # Normalize: collapse all whitespace types to single space, strip
-        full = " ".join(f"{first} {last}".split())
-        uid = u["id"]
-        users[uid] = full
-        if full in seen_names:
-            print(f"  ⚠️ Duplicate user name: '{full}' — "
-                  f"{seen_names[full]} and {uid}", flush=True)
-        else:
-            seen_names[full] = uid
+    skip = 0
+    while True:
+        data = api_get("/user/", {"_skip": skip, "_limit": 100})
+        for u in data.get("data", []):
+            first = u.get("first_name", "")
+            last = u.get("last_name", "")
+            # Normalize: collapse all whitespace types to single space, strip
+            full = " ".join(f"{first} {last}".split())
+            uid = u["id"]
+            users[uid] = full
+            if full in seen_names:
+                print(f"  ⚠️ Duplicate user name: '{full}' — "
+                      f"{seen_names[full]} and {uid}", flush=True)
+            else:
+                seen_names[full] = uid
+        if not data.get("has_more", False):
+            break
+        skip += 100
     return users
 
 
@@ -563,6 +568,10 @@ def fetch_task_adherence(user_map, today_str):
 
     name_to_id = {v: k for k, v in user_map.items()}
 
+    # Only check reps in REP_QUOTAS — skip non-sales org users
+    active_reps = {name: uid for name, uid in name_to_id.items()
+                   if name in REP_QUOTAS and name not in EXCLUDE_USERS and name not in MANAGER_USERS}
+
     # Cache lead lookups — many tasks may share the same lead
     lead_won_cache = {}  # lead_id -> bool (True if has Closed/Won opp)
     won_tasks_skipped = 0
@@ -585,9 +594,7 @@ def fetch_task_adherence(user_map, today_str):
             lead_won_cache[lead_id] = False
             return False
 
-    for rep_name, user_id in name_to_id.items():
-        if rep_name in EXCLUDE_USERS or rep_name in MANAGER_USERS:
-            continue
+    for rep_name, user_id in active_reps.items():
 
         try:
             # Fetch all incomplete tasks for this rep
@@ -654,9 +661,11 @@ def fetch_open_leads_per_rep(user_map):
     rep_open_leads = {}
     won_opp_skipped = 0
 
-    for rep_name in name_to_id:
-        if rep_name in EXCLUDE_USERS or rep_name in MANAGER_USERS:
-            continue
+    # Only check reps in REP_QUOTAS — skip non-sales org users
+    active_reps = {name for name in name_to_id
+                   if name in REP_QUOTAS and name not in EXCLUDE_USERS and name not in MANAGER_USERS}
+
+    for rep_name in active_reps:
 
         try:
             count = 0
@@ -734,15 +743,17 @@ def build_dashboard_data():
     print(f"Fetching WTD data: {monday_str} through {today_str} (day {day_of_week} of week)...", flush=True)
 
     # Users
+    t0 = time.time()
     print("  Fetching org users...", flush=True)
     user_map = fetch_org_users()
     name_to_id = {v: k for k, v in user_map.items()}
-    print(f"  Found {len(user_map)} users.", flush=True)
+    print(f"  Found {len(user_map)} users. ({time.time()-t0:.1f}s)", flush=True)
 
     # Closed/Won opps this week
+    t0 = time.time()
     print("  Fetching Closed/Won opportunities for the week...", flush=True)
     opps = fetch_closed_won_week(monday_str, today_str)
-    print(f"  Found {len(opps)} Closed/Won opportunities this week.", flush=True)
+    print(f"  Found {len(opps)} Closed/Won opportunities this week. ({time.time()-t0:.1f}s)", flush=True)
 
     rep_revenue = {}
     rep_deals = {}
@@ -762,17 +773,23 @@ def build_dashboard_data():
             seen_opp_leads.add(lead_key)
 
     # Booked meetings: query leads by First Sales Call Booked Date field
+    t0 = time.time()
     print("  Fetching leads by First Sales Call Booked Date...", flush=True)
     rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources = \
         fetch_booked_leads(monday_str, today_str, user_map, name_to_id)
+    print(f"  Booked leads done. ({time.time()-t0:.1f}s)", flush=True)
 
     # Task adherence (per rep, excludes managers)
+    t0 = time.time()
     print("  Fetching task adherence per rep...", flush=True)
     rep_adherence, rep_overdue, rep_total_incomplete = fetch_task_adherence(user_map, today_str)
+    print(f"  Task adherence done. ({time.time()-t0:.1f}s)", flush=True)
 
     # Open leads per rep (excludes managers)
+    t0 = time.time()
     print("  Fetching open leads per rep...", flush=True)
     rep_open_leads = fetch_open_leads_per_rep(user_map)
+    print(f"  Open leads done. ({time.time()-t0:.1f}s)", flush=True)
 
     # Build per-rep data
     all_rep_names = set()
