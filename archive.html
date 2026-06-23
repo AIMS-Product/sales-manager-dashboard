@@ -44,6 +44,36 @@
         .empty { padding: 40px 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
         .footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: 12px; }
 
+        .lane-header-row td {
+            padding: 8px 12px;
+            background: #e2e4e8;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        }
+        .lane-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #4a4f5c;
+        }
+        .lane-divider-row td {
+            padding: 0;
+            height: 8px;
+            background: #8b90a0;
+            border-bottom: none;
+        }
+        .lane-totals-row td {
+            font-weight: 600;
+            border-top: 2px solid var(--border);
+            font-size: 12.5px;
+            color: var(--text-secondary);
+        }
+        .lead-tag {
+            font-size: 10px; background: #dbeafe; color: #2563eb;
+            padding: 2px 7px; border-radius: 4px; margin-left: 6px; font-weight: 500;
+        }
+
         .funnel-toggle {
             text-align: center;
             padding: 12px 24px;
@@ -248,12 +278,17 @@
     };
 
     function renderSnapshot(data) {
-        const reps = (data.reps || []).sort((a, b) => (b.booked || 0) - (a.booked || 0));
-        let html = '';
+        const allReps = (data.reps || []);
+        const lane1 = allReps.filter(r => r.lane === 1 && !r.is_manager).sort((a, b) => (b.booked || 0) - (a.booked || 0));
+        const lane2 = allReps.filter(r => r.lane === 2 && !r.is_manager).sort((a, b) => (b.booked || 0) - (a.booked || 0));
+        // Fallback: if no lane data (older archives), show all reps in one group
+        const hasLanes = lane1.length > 0 || lane2.length > 0;
 
-        for (const r of reps) {
-            html += `<tr>
-                <td>${r.name}${r.is_manager ? ' <span style="font-size:10px;color:#9ca0ad;">(MGR)</span>' : ''}</td>
+        function repRow(r) {
+            const leadTag = r.is_lead ? '<span class="lead-tag">Lead</span>' : '';
+            const mgrTag = r.is_manager ? ' <span style="font-size:10px;color:#9ca0ad;">(MGR)</span>' : '';
+            return `<tr>
+                <td>${r.name}${mgrTag}${leadTag}</td>
                 <td>${r.booked}</td>
                 <td>${r.shown}</td>
                 <td>${r.qualified}</td>
@@ -268,8 +303,59 @@
             </tr>`;
         }
 
+        function laneSubtotal(label, reps) {
+            const b = reps.reduce((s, r) => s + (r.booked || 0), 0);
+            const sh = reps.reduce((s, r) => s + (r.shown || 0), 0);
+            const q = reps.reduce((s, r) => s + (r.qualified || 0), 0);
+            const d = reps.reduce((s, r) => s + (r.deals || 0), 0);
+            const rev = reps.reduce((s, r) => s + (r.revenue || 0), 0);
+            const cr = b > 0 ? Math.round(d / b * 1000) / 10 : null;
+            const avg = d > 0 ? Math.round(rev / d) : null;
+            const crmF = reps.reduce((s, r) => s + (r.crm_filled || 0), 0);
+            const crmT = reps.reduce((s, r) => s + (r.crm_total || 0), 0);
+            const crm = crmT > 0 ? Math.round(crmF / crmT * 1000) / 10 : null;
+            const ol = reps.reduce((s, r) => s + (r.open_leads || 0), 0);
+            const ep = reps.reduce((s, r) => s + (r.est_pipeline || 0), 0);
+            const incmplt = reps.filter(r => r.tasks_incomplete != null);
+            const totalInc = incmplt.reduce((s, r) => s + (r.tasks_incomplete || 0), 0);
+            const totalOvd = incmplt.reduce((s, r) => s + (r.tasks_overdue || 0), 0);
+            const taskAdh = totalInc > 0 ? Math.round((totalInc - totalOvd) / totalInc * 1000) / 10 : null;
+            return `<tr class="lane-totals-row">
+                <td style="font-weight:700;">${label}</td>
+                <td>${b}</td><td>${sh}</td><td>${q}</td><td>${d}</td>
+                <td>${fmtMoney(rev)}</td>
+                <td class="${rateClass(cr)}">${fmtPct(cr)}</td>
+                <td>${avg ? fmtMoney(avg) : '—'}</td>
+                <td class="${rateClass(crm)}">${fmtPct(crm)}</td>
+                <td>${fmtAdherence(taskAdh, totalOvd)}</td>
+                <td>${ol}</td><td>${fmtK(ep)}</td>
+            </tr>`;
+        }
+
+        let html = '';
+
+        if (hasLanes) {
+            // Lane 1
+            html += `<tr class="lane-header-row"><td colspan="12"><span class="lane-label">Lane 1</span></td></tr>`;
+            for (const r of lane1) html += repRow(r);
+            if (lane1.length > 0) html += laneSubtotal('Lane 1 Totals', lane1);
+
+            // Divider
+            html += `<tr class="lane-divider-row"><td colspan="12"></td></tr>`;
+
+            // Lane 2
+            html += `<tr class="lane-header-row"><td colspan="12"><span class="lane-label">Lane 2</span></td></tr>`;
+            for (const r of lane2) html += repRow(r);
+            if (lane2.length > 0) html += laneSubtotal('Lane 2 Totals', lane2);
+        } else {
+            // Older archives without lane data — render flat
+            const sorted = allReps.sort((a, b) => (b.booked || 0) - (a.booked || 0));
+            for (const r of sorted) html += repRow(r);
+        }
+
+        // Team Totals
         html += `<tr class="totals-row">
-            <td>Totals</td>
+            <td>Team Totals</td>
             <td>${data.total_booked}</td>
             <td>${data.total_shown}</td>
             <td>${data.total_qualified}</td>
