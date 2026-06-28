@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-06-27 11:45 PM PDT",
+  "updated_at": "2026-06-28 12:00 AM PDT",
   "week_label": "Jun 22 \u2013 Jun 26, 2026",
   "monday_str": "2026-06-22",
-  "today_str": "2026-06-27",
-  "day_of_week": 6,
+  "today_str": "2026-06-28",
+  "day_of_week": 7,
   "num_reps": 16,
   "targets": {
     "booked": 15,
@@ -48,8 +48,8 @@
   "team_close_rate": 9.7,
   "team_avg_rev_per_deal": 7323.92,
   "team_crm_compliance": 82.1,
-  "team_task_adherence": 49.9,
-  "team_overdue": 357,
+  "team_task_adherence": 49.0,
+  "team_overdue": 363,
   "team_open_leads": 773,
   "team_est_pipeline": 1855200,
   "funnel_breakdown": [
@@ -285,13 +285,66 @@
           }
         ]
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
+      "task_adherence": 98.5,
+      "tasks_overdue": 1,
       "tasks_incomplete": 66,
       "open_leads": 79,
       "est_pipeline": 189600,
       "is_manager": false,
       "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Christian Hartwell",
+      "booked": 11,
+      "shown": 10,
+      "qualified": 10,
+      "deals": 4,
+      "revenue": 29988.0,
+      "close_rate": 36.4,
+      "qa_score": null,
+      "avg_rev_per_deal": 7497.0,
+      "crm_compliance": 97.8,
+      "crm_filled": 45,
+      "crm_total": 46,
+      "crm_detail": {
+        "show_up": [
+          11,
+          11
+        ],
+        "disposition": [
+          11,
+          11
+        ],
+        "qualified": [
+          10,
+          11
+        ],
+        "confidence": [
+          11,
+          11
+        ],
+        "lost_reason": [
+          2,
+          2
+        ],
+        "missing_leads": [
+          {
+            "name": "Jessica Anderson",
+            "lead_id": "lead_BbVUEVFrkbhvaAAFqSGKUDqXZRpPGWJCAT5oAEneRfD",
+            "missing": [
+              "Qualified"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 50.0,
+      "tasks_overdue": 9,
+      "tasks_incomplete": 18,
+      "open_leads": 31,
+      "est_pipeline": 74400,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 1
     },
     {
@@ -398,59 +451,6 @@
       "est_pipeline": 74400,
       "is_manager": false,
       "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 11,
-      "shown": 10,
-      "qualified": 10,
-      "deals": 4,
-      "revenue": 29988.0,
-      "close_rate": 36.4,
-      "qa_score": null,
-      "avg_rev_per_deal": 7497.0,
-      "crm_compliance": 97.8,
-      "crm_filled": 45,
-      "crm_total": 46,
-      "crm_detail": {
-        "show_up": [
-          11,
-          11
-        ],
-        "disposition": [
-          11,
-          11
-        ],
-        "qualified": [
-          10,
-          11
-        ],
-        "confidence": [
-          11,
-          11
-        ],
-        "lost_reason": [
-          2,
-          2
-        ],
-        "missing_leads": [
-          {
-            "name": "Jessica Anderson",
-            "lead_id": "lead_BbVUEVFrkbhvaAAFqSGKUDqXZRpPGWJCAT5oAEneRfD",
-            "missing": [
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 50.0,
-      "tasks_overdue": 9,
-      "tasks_incomplete": 18,
-      "open_leads": 31,
-      "est_pipeline": 74400,
-      "is_manager": false,
-      "is_lead": true,
       "lane": 1
     },
     {
@@ -657,46 +657,72 @@
       "lane": 1
     },
     {
-      "name": "Luke Herman",
+      "name": "Jake Skinner",
       "booked": 8,
-      "shown": 4,
-      "qualified": 8,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "shown": 3,
+      "qualified": 3,
+      "deals": 1,
+      "revenue": 14247.0,
+      "close_rate": 12.5,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 22,
-      "crm_total": 22,
+      "avg_rev_per_deal": 14247.0,
+      "crm_compliance": 75.0,
+      "crm_filled": 21,
+      "crm_total": 28,
       "crm_detail": {
         "show_up": [
           6,
-          6
+          8
         ],
         "disposition": [
-          6,
-          6
+          7,
+          8
         ],
         "qualified": [
-          5,
-          5
+          3,
+          6
         ],
         "confidence": [
           5,
-          5
+          6
         ],
         "lost_reason": [
           0,
           0
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "John Fogu",
+            "lead_id": "lead_F9PbiGcR0k0uPzylYrL2GB09FHOFoZhZIaRyvgc3PQ0",
+            "missing": [
+              "Show Up",
+              "Qualified"
+            ]
+          },
+          {
+            "name": "Vik Di'moan",
+            "lead_id": "lead_KIjxNJ8gH7BhjWFuD5C2QrMxSFyP2ho7EW7L9AAuUts",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Tommy Eason jr",
+            "lead_id": "lead_voQXDoAwGqb36vxhBNkWnhWDmCqoSc071RxgCOZ95fd",
+            "missing": [
+              "Qualified"
+            ]
+          }
+        ]
       },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
+      "task_adherence": 12.5,
+      "tasks_overdue": 28,
+      "tasks_incomplete": 32,
+      "open_leads": 27,
+      "est_pipeline": 64800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -730,6 +756,51 @@
         "confidence": [
           3,
           3
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Luke Herman",
+      "booked": 8,
+      "shown": 4,
+      "qualified": 8,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 22,
+      "crm_total": 22,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          6,
+          6
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
         ],
         "lost_reason": [
           0,
@@ -805,77 +876,6 @@
       "is_manager": false,
       "is_lead": true,
       "lane": 2
-    },
-    {
-      "name": "Jake Skinner",
-      "booked": 8,
-      "shown": 3,
-      "qualified": 3,
-      "deals": 1,
-      "revenue": 14247.0,
-      "close_rate": 12.5,
-      "qa_score": null,
-      "avg_rev_per_deal": 14247.0,
-      "crm_compliance": 75.0,
-      "crm_filled": 21,
-      "crm_total": 28,
-      "crm_detail": {
-        "show_up": [
-          6,
-          8
-        ],
-        "disposition": [
-          7,
-          8
-        ],
-        "qualified": [
-          3,
-          6
-        ],
-        "confidence": [
-          5,
-          6
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "John Fogu",
-            "lead_id": "lead_F9PbiGcR0k0uPzylYrL2GB09FHOFoZhZIaRyvgc3PQ0",
-            "missing": [
-              "Show Up",
-              "Qualified"
-            ]
-          },
-          {
-            "name": "Vik Di'moan",
-            "lead_id": "lead_KIjxNJ8gH7BhjWFuD5C2QrMxSFyP2ho7EW7L9AAuUts",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Tommy Eason jr",
-            "lead_id": "lead_voQXDoAwGqb36vxhBNkWnhWDmCqoSc071RxgCOZ95fd",
-            "missing": [
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 12.5,
-      "tasks_overdue": 28,
-      "tasks_incomplete": 32,
-      "open_leads": 27,
-      "est_pipeline": 64800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
     },
     {
       "name": "Eric Piccione",
@@ -958,8 +958,8 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 82.8,
-      "tasks_overdue": 27,
+      "task_adherence": 80.3,
+      "tasks_overdue": 31,
       "tasks_incomplete": 157,
       "open_leads": 53,
       "est_pipeline": 127200,
@@ -1011,8 +1011,8 @@
           }
         ]
       },
-      "task_adherence": 72.1,
-      "tasks_overdue": 12,
+      "task_adherence": 69.8,
+      "tasks_overdue": 13,
       "tasks_incomplete": 43,
       "open_leads": 174,
       "est_pipeline": 417600,
