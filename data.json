@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04 09:45 AM PDT",
+  "updated_at": "2026-07-04 10:00 AM PDT",
   "week_label": "Jun 29 \u2013 Jul 03, 2026",
   "monday_str": "2026-06-29",
   "today_str": "2026-07-04",
@@ -43,10 +43,10 @@
   "total_booked": 168,
   "total_shown": 73,
   "total_qualified": 80,
-  "total_deals": 13,
-  "total_revenue": 107961.0,
-  "team_close_rate": 7.7,
-  "team_avg_rev_per_deal": 8304.69,
+  "total_deals": 14,
+  "total_revenue": 113958.0,
+  "team_close_rate": 8.3,
+  "team_avg_rev_per_deal": 8139.86,
   "team_crm_compliance": 81.0,
   "team_task_adherence": 48.3,
   "team_overdue": 353,
@@ -236,6 +236,14 @@
         ],
         "missing_leads": [
           {
+            "name": "Zendre Goodlett",
+            "lead_id": "lead_skdb6MB2PPTrCjqp46JgMtZmIs9pjL7Xok6vj2QosYm",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Ezra Thomas",
             "lead_id": "lead_G4UQyHUMDoH0ouijHn6igxjBFAVGgwd4xi5iWGfoagK",
             "missing": [
@@ -246,14 +254,6 @@
             "name": "Tiffanie English",
             "lead_id": "lead_59SMcjfEs1C86MjWb6FCHiW59iOzzcrmXNMqa23c5cv",
             "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Zendre Goodlett",
-            "lead_id": "lead_skdb6MB2PPTrCjqp46JgMtZmIs9pjL7Xok6vj2QosYm",
-            "missing": [
-              "Disposition",
               "Confidence"
             ]
           },
@@ -493,11 +493,11 @@
       "booked": 15,
       "shown": 8,
       "qualified": 8,
-      "deals": 2,
-      "revenue": 14994.0,
-      "close_rate": 13.3,
+      "deals": 3,
+      "revenue": 20991.0,
+      "close_rate": 20.0,
       "qa_score": null,
-      "avg_rev_per_deal": 7497.0,
+      "avg_rev_per_deal": 6997.0,
       "crm_compliance": 95.5,
       "crm_filled": 42,
       "crm_total": 44,
@@ -1138,6 +1138,29 @@
       "lane": 1
     },
     {
+      "name": "Jacob Hepner",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 15,
+      "open_leads": 21,
+      "est_pipeline": 50400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
       "name": "Lyle Hubbard",
       "booked": 0,
       "shown": 0,
@@ -1182,29 +1205,6 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "Jacob Hepner",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 15,
-      "open_leads": 21,
-      "est_pipeline": 50400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
     }
   ]
 }
