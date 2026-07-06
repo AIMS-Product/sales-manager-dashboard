@@ -734,10 +734,10 @@ def build_dashboard_data():
     if rerun_week:
         from datetime import date as _date
         rerun_mon = _date.fromisoformat(rerun_week)
-        rerun_fri = rerun_mon + timedelta(days=4)
+        rerun_sun = rerun_mon + timedelta(days=6)
         monday_str = rerun_mon.isoformat()
-        today_str = rerun_fri.isoformat()
-        day_of_week = 5  # treat as full week
+        today_str = rerun_sun.isoformat()
+        day_of_week = 7  # treat as full week (Mon-Sun)
         print(f"⚠️ RERUN MODE: overriding week to {monday_str} through {today_str}", flush=True)
 
     print(f"Fetching WTD data: {monday_str} through {today_str} (day {day_of_week} of week)...", flush=True)
@@ -886,10 +886,10 @@ def build_dashboard_data():
         "task_adherence": WEEKLY_TARGETS["task_adherence"],
     }
 
-    # Week label: "Mar 2 – Mar 7, 2026"
+    # Week label: "Jun 29 – Jul 5, 2026" (Mon-Sun)
     mon_dt = datetime.strptime(monday_str, "%Y-%m-%d")
-    fri_dt = mon_dt + timedelta(days=4)
-    week_label = f"{mon_dt.strftime('%b %d')} – {fri_dt.strftime('%b %d, %Y')}"
+    sun_dt = mon_dt + timedelta(days=6)
+    week_label = f"{mon_dt.strftime('%b %d')} – {sun_dt.strftime('%b %d, %Y')}"
 
     return {
         "updated_at": now.strftime("%Y-%m-%d %I:%M %p %Z"),
