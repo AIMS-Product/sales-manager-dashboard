@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-09 02:00 PM PDT",
+  "updated_at": "2026-07-09 02:15 PM PDT",
   "week_label": "Jul 06 \u2013 Jul 12, 2026",
   "monday_str": "2026-07-06",
   "today_str": "2026-07-09",
@@ -41,17 +41,17 @@
     "task_adherence": 100
   },
   "total_booked": 111,
-  "total_shown": 54,
-  "total_qualified": 53,
+  "total_shown": 56,
+  "total_qualified": 56,
   "total_deals": 14,
   "total_revenue": 94661.0,
   "team_close_rate": 12.6,
   "team_avg_rev_per_deal": 6761.5,
   "team_crm_compliance": 73.5,
-  "team_task_adherence": 53.1,
-  "team_overdue": 336,
-  "team_open_leads": 822,
-  "team_est_pipeline": 1972800,
+  "team_task_adherence": 53.5,
+  "team_overdue": 334,
+  "team_open_leads": 823,
+  "team_est_pipeline": 1975200,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -95,6 +95,87 @@
     "unknown_pct": 38.7
   },
   "reps": [
+    {
+      "name": "Zac Clover",
+      "booked": 16,
+      "shown": 5,
+      "qualified": 9,
+      "deals": 1,
+      "revenue": 8000.0,
+      "close_rate": 6.2,
+      "qa_score": null,
+      "avg_rev_per_deal": 8000.0,
+      "crm_compliance": 74.4,
+      "crm_filled": 32,
+      "crm_total": 43,
+      "crm_detail": {
+        "show_up": [
+          10,
+          11
+        ],
+        "disposition": [
+          8,
+          11
+        ],
+        "qualified": [
+          7,
+          10
+        ],
+        "confidence": [
+          6,
+          10
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Steve Galarza",
+            "lead_id": "lead_RfRtf1q79mpWtj5gzSaHNNINQu7AGhFFGoUoWwJ6V7W",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Micah Carpenter",
+            "lead_id": "lead_9M6r6ZKmpn6vVjcECiSIkT7oepo2P7TCEA9WWfFdRmY",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Ray SANTAMARIA",
+            "lead_id": "lead_FHt20z5V3r4qljtXtpoNnMUqyH0zHzREjYJWhmlo92x",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Steve Pac",
+            "lead_id": "lead_6Lu7flT4M3OtRKMEmt2iq0s32oezTAawkPewml7OuVd",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 3.2,
+      "tasks_overdue": 211,
+      "tasks_incomplete": 218,
+      "open_leads": 72,
+      "est_pipeline": 172800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
     {
       "name": "Shreya Bechra",
       "booked": 16,
@@ -171,87 +252,6 @@
       "tasks_incomplete": 0,
       "open_leads": 0,
       "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Zac Clover",
-      "booked": 16,
-      "shown": 5,
-      "qualified": 9,
-      "deals": 1,
-      "revenue": 8000.0,
-      "close_rate": 6.2,
-      "qa_score": null,
-      "avg_rev_per_deal": 8000.0,
-      "crm_compliance": 74.4,
-      "crm_filled": 32,
-      "crm_total": 43,
-      "crm_detail": {
-        "show_up": [
-          10,
-          11
-        ],
-        "disposition": [
-          8,
-          11
-        ],
-        "qualified": [
-          7,
-          10
-        ],
-        "confidence": [
-          6,
-          10
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Steve Galarza",
-            "lead_id": "lead_RfRtf1q79mpWtj5gzSaHNNINQu7AGhFFGoUoWwJ6V7W",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Micah Carpenter",
-            "lead_id": "lead_9M6r6ZKmpn6vVjcECiSIkT7oepo2P7TCEA9WWfFdRmY",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Ray SANTAMARIA",
-            "lead_id": "lead_FHt20z5V3r4qljtXtpoNnMUqyH0zHzREjYJWhmlo92x",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Steve Pac",
-            "lead_id": "lead_6Lu7flT4M3OtRKMEmt2iq0s32oezTAawkPewml7OuVd",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 2.8,
-      "tasks_overdue": 212,
-      "tasks_incomplete": 218,
-      "open_leads": 72,
-      "est_pipeline": 172800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -420,8 +420,8 @@
     {
       "name": "Robin Perkins",
       "booked": 11,
-      "shown": 8,
-      "qualified": 7,
+      "shown": 9,
+      "qualified": 9,
       "deals": 1,
       "revenue": 5997.0,
       "close_rate": 9.1,
@@ -662,13 +662,69 @@
           }
         ]
       },
-      "task_adherence": 97.1,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 35,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 36,
       "open_leads": 152,
       "est_pipeline": 364800,
       "is_manager": false,
       "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 7,
+      "shown": 4,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 78.9,
+      "crm_filled": 15,
+      "crm_total": 19,
+      "crm_detail": {
+        "show_up": [
+          3,
+          4
+        ],
+        "disposition": [
+          3,
+          4
+        ],
+        "qualified": [
+          3,
+          4
+        ],
+        "confidence": [
+          3,
+          4
+        ],
+        "lost_reason": [
+          3,
+          3
+        ],
+        "missing_leads": [
+          {
+            "name": "Samantha Sylla",
+            "lead_id": "lead_kuXAVBBLpKf131YDHXbpY8SBM7shf9w6sQXHI1w6VVt",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 80.0,
+      "tasks_overdue": 25,
+      "tasks_incomplete": 125,
+      "open_leads": 140,
+      "est_pipeline": 336000,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 2
     },
     {
@@ -715,62 +771,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 7,
-      "shown": 3,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 78.9,
-      "crm_filled": 15,
-      "crm_total": 19,
-      "crm_detail": {
-        "show_up": [
-          3,
-          4
-        ],
-        "disposition": [
-          3,
-          4
-        ],
-        "qualified": [
-          3,
-          4
-        ],
-        "confidence": [
-          3,
-          4
-        ],
-        "lost_reason": [
-          3,
-          3
-        ],
-        "missing_leads": [
-          {
-            "name": "Samantha Sylla",
-            "lead_id": "lead_kuXAVBBLpKf131YDHXbpY8SBM7shf9w6sQXHI1w6VVt",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 80.0,
-      "tasks_overdue": 25,
-      "tasks_incomplete": 125,
-      "open_leads": 139,
-      "est_pipeline": 333600,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
     },
     {
       "name": "Eric Piccione",
