@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10 11:30 PM PDT",
+  "updated_at": "2026-07-10 11:45 PM PDT",
   "week_label": "Jul 06 \u2013 Jul 12, 2026",
   "monday_str": "2026-07-06",
   "today_str": "2026-07-10",
@@ -50,8 +50,8 @@
   "team_crm_compliance": 89.6,
   "team_task_adherence": 53.2,
   "team_overdue": 338,
-  "team_open_leads": 829,
-  "team_est_pipeline": 1989600,
+  "team_open_leads": 830,
+  "team_est_pipeline": 1992000,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -156,6 +156,67 @@
       "lane": 1
     },
     {
+      "name": "Christian Hartwell",
+      "booked": 18,
+      "shown": 11,
+      "qualified": 10,
+      "deals": 3,
+      "revenue": 20691.0,
+      "close_rate": 16.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 6897.0,
+      "crm_compliance": 93.9,
+      "crm_filled": 46,
+      "crm_total": 49,
+      "crm_detail": {
+        "show_up": [
+          13,
+          13
+        ],
+        "disposition": [
+          13,
+          13
+        ],
+        "qualified": [
+          9,
+          11
+        ],
+        "confidence": [
+          10,
+          11
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Monica Howie",
+            "lead_id": "lead_0VQhIhmaVZFybNsuz6KdDGvwDKUjirjlZHjZUQg5IKO",
+            "missing": [
+              "Qualified"
+            ]
+          },
+          {
+            "name": "LaNicha Taylor-Stubbs",
+            "lead_id": "lead_JUGogF0KQGv0nVtGDd48o8x4iiOuuoXUIlVyJEIfS5B",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 16,
+      "open_leads": 32,
+      "est_pipeline": 76800,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 1
+    },
+    {
       "name": "Shreya Bechra",
       "booked": 18,
       "shown": 14,
@@ -238,64 +299,48 @@
       "lane": 1
     },
     {
-      "name": "Christian Hartwell",
-      "booked": 18,
-      "shown": 11,
+      "name": "Robin Perkins",
+      "booked": 14,
+      "shown": 10,
       "qualified": 10,
-      "deals": 3,
-      "revenue": 20691.0,
-      "close_rate": 16.7,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 7.1,
       "qa_score": null,
-      "avg_rev_per_deal": 6897.0,
-      "crm_compliance": 93.9,
-      "crm_filled": 46,
-      "crm_total": 49,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 36,
+      "crm_total": 36,
       "crm_detail": {
         "show_up": [
-          13,
-          13
+          10,
+          10
         ],
         "disposition": [
-          13,
-          13
+          10,
+          10
         ],
         "qualified": [
-          9,
-          11
+          8,
+          8
         ],
         "confidence": [
-          10,
-          11
+          8,
+          8
         ],
         "lost_reason": [
-          1,
-          1
+          0,
+          0
         ],
-        "missing_leads": [
-          {
-            "name": "Monica Howie",
-            "lead_id": "lead_0VQhIhmaVZFybNsuz6KdDGvwDKUjirjlZHjZUQg5IKO",
-            "missing": [
-              "Qualified"
-            ]
-          },
-          {
-            "name": "LaNicha Taylor-Stubbs",
-            "lead_id": "lead_JUGogF0KQGv0nVtGDd48o8x4iiOuuoXUIlVyJEIfS5B",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 16,
-      "open_leads": 32,
-      "est_pipeline": 76800,
+      "tasks_incomplete": 70,
+      "open_leads": 81,
+      "est_pipeline": 194400,
       "is_manager": false,
-      "is_lead": true,
+      "is_lead": false,
       "lane": 1
     },
     {
@@ -405,121 +450,40 @@
       "lane": 1
     },
     {
-      "name": "Robin Perkins",
-      "booked": 14,
-      "shown": 10,
-      "qualified": 10,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 7.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 36,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          10,
-          10
-        ],
-        "disposition": [
-          10,
-          10
-        ],
-        "qualified": [
-          8,
-          8
-        ],
-        "confidence": [
-          8,
-          8
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 70,
-      "open_leads": 81,
-      "est_pipeline": 194400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Luis Galarza",
+      "name": "Danny Santolaya",
       "booked": 8,
-      "shown": 4,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "shown": 5,
+      "qualified": 4,
+      "deals": 2,
+      "revenue": 14094.0,
+      "close_rate": 25.0,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 80.0,
-      "crm_filled": 20,
-      "crm_total": 25,
+      "avg_rev_per_deal": 7047.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 21,
+      "crm_total": 21,
       "crm_detail": {
         "show_up": [
-          7,
-          7
+          5,
+          5
         ],
         "disposition": [
-          7,
-          7
+          5,
+          5
         ],
         "qualified": [
-          4,
+          5,
           5
         ],
         "confidence": [
-          2,
+          5,
           5
         ],
         "lost_reason": [
-          0,
+          1,
           1
         ],
-        "missing_leads": [
-          {
-            "name": "Daphanie Simmons",
-            "lead_id": "lead_KWm5PPPvea4rPjXcCxWMeVJLd0SHbyH3uDh6ajz4rAV",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Natalia Kennedy",
-            "lead_id": "lead_ZRg09EXeDmR8OKDMxLmc2xkcvXuFxZ6Mv1lvP94Xuln",
-            "missing": [
-              "Lost Reason"
-            ]
-          },
-          {
-            "name": "MerCarla Williams",
-            "lead_id": "lead_O1qZqfFkayw0PsLZOQDNLdMY34EvqERQqZanQmvhoMo",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Richard Surpris",
-            "lead_id": "lead_77RGoz2GBWffMQF3nnWPElDh7l4DyKSZmGRpJc4mT7A",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Emmanuel Asamoah-Frimpong",
-            "lead_id": "lead_9OeP5pRt2rvaLdoEQ8PHnY25FJhTF0XxVIRicbmflIJ",
-            "missing": [
-              "Qualified"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": null,
       "tasks_overdue": 0,
@@ -607,40 +571,76 @@
       "lane": 2
     },
     {
-      "name": "Danny Santolaya",
+      "name": "Luis Galarza",
       "booked": 8,
-      "shown": 5,
-      "qualified": 4,
-      "deals": 2,
-      "revenue": 14094.0,
-      "close_rate": 25.0,
+      "shown": 4,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
       "qa_score": null,
-      "avg_rev_per_deal": 7047.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 21,
-      "crm_total": 21,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 80.0,
+      "crm_filled": 20,
+      "crm_total": 25,
       "crm_detail": {
         "show_up": [
-          5,
-          5
+          7,
+          7
         ],
         "disposition": [
-          5,
-          5
+          7,
+          7
         ],
         "qualified": [
-          5,
+          4,
           5
         ],
         "confidence": [
-          5,
+          2,
           5
         ],
         "lost_reason": [
-          1,
+          0,
           1
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Daphanie Simmons",
+            "lead_id": "lead_KWm5PPPvea4rPjXcCxWMeVJLd0SHbyH3uDh6ajz4rAV",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Natalia Kennedy",
+            "lead_id": "lead_ZRg09EXeDmR8OKDMxLmc2xkcvXuFxZ6Mv1lvP94Xuln",
+            "missing": [
+              "Lost Reason"
+            ]
+          },
+          {
+            "name": "MerCarla Williams",
+            "lead_id": "lead_O1qZqfFkayw0PsLZOQDNLdMY34EvqERQqZanQmvhoMo",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Richard Surpris",
+            "lead_id": "lead_77RGoz2GBWffMQF3nnWPElDh7l4DyKSZmGRpJc4mT7A",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Emmanuel Asamoah-Frimpong",
+            "lead_id": "lead_9OeP5pRt2rvaLdoEQ8PHnY25FJhTF0XxVIRicbmflIJ",
+            "missing": [
+              "Qualified"
+            ]
+          }
+        ]
       },
       "task_adherence": null,
       "tasks_overdue": 0,
@@ -797,8 +797,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 7,
-      "open_leads": 56,
-      "est_pipeline": 134400,
+      "open_leads": 57,
+      "est_pipeline": 136800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
