@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16 11:15 AM PDT",
+  "updated_at": "2026-07-16 11:30 AM PDT",
   "week_label": "Jul 13 \u2013 Jul 19, 2026",
   "monday_str": "2026-07-13",
   "today_str": "2026-07-16",
@@ -48,7 +48,7 @@
   "team_close_rate": 8.7,
   "team_avg_rev_per_deal": 7551.82,
   "team_crm_compliance": 89.9,
-  "team_task_adherence": 68.6,
+  "team_task_adherence": 68.5,
   "team_overdue": 153,
   "team_open_leads": 857,
   "team_est_pipeline": 2056800,
@@ -349,7 +349,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 59,
+      "tasks_incomplete": 57,
       "open_leads": 87,
       "est_pipeline": 208800,
       "is_manager": false,
@@ -576,68 +576,14 @@
           }
         ]
       },
-      "task_adherence": 98.4,
+      "task_adherence": 98.5,
       "tasks_overdue": 1,
-      "tasks_incomplete": 64,
+      "tasks_incomplete": 65,
       "open_leads": 151,
       "est_pipeline": 362400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 5,
-      "shown": 2,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 88.2,
-      "crm_filled": 15,
-      "crm_total": 17,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          2,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "lost_reason": [
-          0,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Yong Kim",
-            "lead_id": "lead_JP0mFaeZ8kGm2i3dkx7mnwnGXRGmte3LoNvoVYjrHWY",
-            "missing": [
-              "Qualified",
-              "Lost Reason"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 77.8,
-      "tasks_overdue": 4,
-      "tasks_incomplete": 18,
-      "open_leads": 34,
-      "est_pipeline": 81600,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 1
     },
     {
       "name": "Jason Aaron",
@@ -701,29 +647,29 @@
       "lane": 2
     },
     {
-      "name": "Scott Seymour",
-      "booked": 3,
+      "name": "Christian Hartwell",
+      "booked": 5,
       "shown": 2,
-      "qualified": 2,
+      "qualified": 1,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 12,
-      "crm_total": 12,
+      "crm_compliance": 88.2,
+      "crm_filled": 15,
+      "crm_total": 17,
       "crm_detail": {
         "show_up": [
-          3,
-          3
+          5,
+          5
         ],
         "disposition": [
-          3,
-          3
+          5,
+          5
         ],
         "qualified": [
-          3,
+          2,
           3
         ],
         "confidence": [
@@ -732,17 +678,26 @@
         ],
         "lost_reason": [
           0,
-          0
+          1
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Yong Kim",
+            "lead_id": "lead_JP0mFaeZ8kGm2i3dkx7mnwnGXRGmte3LoNvoVYjrHWY",
+            "missing": [
+              "Qualified",
+              "Lost Reason"
+            ]
+          }
+        ]
       },
-      "task_adherence": 98.2,
-      "tasks_overdue": 2,
-      "tasks_incomplete": 111,
-      "open_leads": 38,
-      "est_pipeline": 91200,
+      "task_adherence": 77.8,
+      "tasks_overdue": 4,
+      "tasks_incomplete": 18,
+      "open_leads": 34,
+      "est_pipeline": 81600,
       "is_manager": false,
-      "is_lead": false,
+      "is_lead": true,
       "lane": 1
     },
     {
@@ -786,6 +741,51 @@
       "tasks_incomplete": 0,
       "open_leads": 0,
       "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Scott Seymour",
+      "booked": 3,
+      "shown": 2,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 12,
+      "crm_total": 12,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 98.2,
+      "tasks_overdue": 2,
+      "tasks_incomplete": 111,
+      "open_leads": 38,
+      "est_pipeline": 91200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -912,29 +912,6 @@
       "lane": 1
     },
     {
-      "name": "Jacob Hepner",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 90.9,
-      "tasks_overdue": 3,
-      "tasks_incomplete": 33,
-      "open_leads": 22,
-      "est_pipeline": 52800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Jake Skinner",
       "booked": 0,
       "shown": 0,
@@ -956,6 +933,29 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Jacob Hepner",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 90.9,
+      "tasks_overdue": 3,
+      "tasks_incomplete": 33,
+      "open_leads": 22,
+      "est_pipeline": 52800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     }
   ]
 }
