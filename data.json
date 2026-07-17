@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17 03:30 PM PDT",
+  "updated_at": "2026-07-17 03:45 PM PDT",
   "week_label": "Jul 13 \u2013 Jul 19, 2026",
   "monday_str": "2026-07-13",
   "today_str": "2026-07-17",
@@ -48,8 +48,8 @@
   "team_close_rate": 9.3,
   "team_avg_rev_per_deal": 6887.14,
   "team_crm_compliance": 86.6,
-  "team_task_adherence": 67.5,
-  "team_overdue": 162,
+  "team_task_adherence": 67.7,
+  "team_overdue": 161,
   "team_open_leads": 863,
   "team_est_pipeline": 2071200,
   "funnel_breakdown": [
@@ -371,8 +371,8 @@
           }
         ]
       },
-      "task_adherence": 98.4,
-      "tasks_overdue": 1,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
       "tasks_incomplete": 62,
       "open_leads": 85,
       "est_pipeline": 204000,
@@ -711,6 +711,51 @@
       "lane": 1
     },
     {
+      "name": "Luke Herman",
+      "booked": 5,
+      "shown": 4,
+      "qualified": 4,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 8,
+      "crm_total": 8,
+      "crm_detail": {
+        "show_up": [
+          2,
+          2
+        ],
+        "disposition": [
+          2,
+          2
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Christian Hartwell",
       "booked": 5,
       "shown": 2,
@@ -762,51 +807,6 @@
       "est_pipeline": 81600,
       "is_manager": false,
       "is_lead": true,
-      "lane": 1
-    },
-    {
-      "name": "Luke Herman",
-      "booked": 5,
-      "shown": 4,
-      "qualified": 4,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 8,
-      "crm_total": 8,
-      "crm_detail": {
-        "show_up": [
-          2,
-          2
-        ],
-        "disposition": [
-          2,
-          2
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
       "lane": 1
     },
     {
@@ -953,29 +953,6 @@
       "lane": 2
     },
     {
-      "name": "Jacob Hepner",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 32,
-      "open_leads": 22,
-      "est_pipeline": 52800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -1020,6 +997,29 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Jacob Hepner",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 32,
+      "open_leads": 22,
+      "est_pipeline": 52800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     }
   ]
 }
