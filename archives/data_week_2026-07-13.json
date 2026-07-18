@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18 04:15 PM PDT",
+  "updated_at": "2026-07-18 04:30 PM PDT",
   "week_label": "Jul 13 \u2013 Jul 19, 2026",
   "monday_str": "2026-07-13",
   "today_str": "2026-07-18",
@@ -47,7 +47,7 @@
   "total_revenue": 105417.0,
   "team_close_rate": 8.6,
   "team_avg_rev_per_deal": 7529.79,
-  "team_crm_compliance": 85.0,
+  "team_crm_compliance": 84.7,
   "team_task_adherence": 66.7,
   "team_overdue": 168,
   "team_open_leads": 866,
@@ -345,9 +345,9 @@
       "close_rate": 16.7,
       "qa_score": null,
       "avg_rev_per_deal": 7497.75,
-      "crm_compliance": 94.3,
-      "crm_filled": 66,
-      "crm_total": 70,
+      "crm_compliance": 91.8,
+      "crm_filled": 67,
+      "crm_total": 73,
       "crm_detail": {
         "show_up": [
           19,
@@ -359,17 +359,25 @@
         ],
         "qualified": [
           14,
-          15
+          16
         ],
         "confidence": [
-          14,
-          15
+          15,
+          16
         ],
         "lost_reason": [
           0,
-          0
+          1
         ],
         "missing_leads": [
+          {
+            "name": "robert harrell",
+            "lead_id": "lead_IRzzbzVkgS8pQLoEwbu3GPUZ4MlRCd3r5OzJrzGWEcr",
+            "missing": [
+              "Qualified",
+              "Lost Reason"
+            ]
+          },
           {
             "name": "Seth Williamson",
             "lead_id": "lead_jgBNQBTwCXFFIMqBHQ2FBKGZ9U6U1AGMTVsA5fc85x1",
@@ -378,6 +386,59 @@
               "Disposition",
               "Qualified",
               "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Danny Santolaya",
+      "booked": 12,
+      "shown": 8,
+      "qualified": 7,
+      "deals": 2,
+      "revenue": 14647.0,
+      "close_rate": 16.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 7323.5,
+      "crm_compliance": 97.1,
+      "crm_filled": 34,
+      "crm_total": 35,
+      "crm_detail": {
+        "show_up": [
+          10,
+          10
+        ],
+        "disposition": [
+          9,
+          10
+        ],
+        "qualified": [
+          7,
+          7
+        ],
+        "confidence": [
+          7,
+          7
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Michael Smith",
+            "lead_id": "lead_COxRrhfljEkxthLmLjjuSGPFhZazIsVeZF9x5tTbCaD",
+            "missing": [
+              "Disposition"
             ]
           }
         ]
@@ -445,59 +506,6 @@
       "lane": 1
     },
     {
-      "name": "Danny Santolaya",
-      "booked": 12,
-      "shown": 8,
-      "qualified": 7,
-      "deals": 2,
-      "revenue": 14647.0,
-      "close_rate": 16.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 7323.5,
-      "crm_compliance": 97.1,
-      "crm_filled": 34,
-      "crm_total": 35,
-      "crm_detail": {
-        "show_up": [
-          10,
-          10
-        ],
-        "disposition": [
-          9,
-          10
-        ],
-        "qualified": [
-          7,
-          7
-        ],
-        "confidence": [
-          7,
-          7
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Michael Smith",
-            "lead_id": "lead_COxRrhfljEkxthLmLjjuSGPFhZazIsVeZF9x5tTbCaD",
-            "missing": [
-              "Disposition"
-            ]
-          }
-        ]
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Eric Piccione",
       "booked": 10,
       "shown": 8,
@@ -549,84 +557,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 9,
-      "shown": 6,
-      "qualified": 3,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": 11.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 80.0,
-      "crm_filled": 32,
-      "crm_total": 40,
-      "crm_detail": {
-        "show_up": [
-          8,
-          9
-        ],
-        "disposition": [
-          8,
-          9
-        ],
-        "qualified": [
-          6,
-          8
-        ],
-        "confidence": [
-          6,
-          8
-        ],
-        "lost_reason": [
-          4,
-          6
-        ],
-        "missing_leads": [
-          {
-            "name": "Adriana Nevarez",
-            "lead_id": "lead_6EojSTezQ7lUCb86VfZvpkrCganCtn4egx5ftzzqYld",
-            "missing": [
-              "Lost Reason"
-            ]
-          },
-          {
-            "name": "John Picudella",
-            "lead_id": "lead_ZyTdmQT6xcVQud3MqdrwTva5BKWI3ngA1p9ImQ5C6V6",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Cassidy Matthew",
-            "lead_id": "lead_CcnH5dNIUS75Cd6asSeu40dWH0fWbz46Tjy9orcX1PA",
-            "missing": [
-              "Qualified",
-              "Lost Reason"
-            ]
-          },
-          {
-            "name": "Antonio Vrban\u010di\u0107",
-            "lead_id": "lead_Ee5MlUYdJ5iFzcy7W0vtTHeJtkKnQ1Wz649xxh1lqLa",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 33.3,
-      "tasks_overdue": 64,
-      "tasks_incomplete": 96,
-      "open_leads": 142,
-      "est_pipeline": 340800,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
     },
     {
       "name": "Kelly Schrader",
@@ -717,6 +647,84 @@
       "est_pipeline": 364800,
       "is_manager": false,
       "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 9,
+      "shown": 6,
+      "qualified": 3,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": 11.1,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 80.0,
+      "crm_filled": 32,
+      "crm_total": 40,
+      "crm_detail": {
+        "show_up": [
+          8,
+          9
+        ],
+        "disposition": [
+          8,
+          9
+        ],
+        "qualified": [
+          6,
+          8
+        ],
+        "confidence": [
+          6,
+          8
+        ],
+        "lost_reason": [
+          4,
+          6
+        ],
+        "missing_leads": [
+          {
+            "name": "Cassidy Matthew",
+            "lead_id": "lead_CcnH5dNIUS75Cd6asSeu40dWH0fWbz46Tjy9orcX1PA",
+            "missing": [
+              "Qualified",
+              "Lost Reason"
+            ]
+          },
+          {
+            "name": "Adriana Nevarez",
+            "lead_id": "lead_6EojSTezQ7lUCb86VfZvpkrCganCtn4egx5ftzzqYld",
+            "missing": [
+              "Lost Reason"
+            ]
+          },
+          {
+            "name": "John Picudella",
+            "lead_id": "lead_ZyTdmQT6xcVQud3MqdrwTva5BKWI3ngA1p9ImQ5C6V6",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Antonio Vrban\u010di\u0107",
+            "lead_id": "lead_Ee5MlUYdJ5iFzcy7W0vtTHeJtkKnQ1Wz649xxh1lqLa",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 33.3,
+      "tasks_overdue": 64,
+      "tasks_incomplete": 96,
+      "open_leads": 142,
+      "est_pipeline": 340800,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 2
     },
     {
