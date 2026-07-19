@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19 10:30 AM PDT",
+  "updated_at": "2026-07-19 10:45 AM PDT",
   "week_label": "Jul 13 \u2013 Jul 19, 2026",
   "monday_str": "2026-07-13",
   "today_str": "2026-07-19",
@@ -40,18 +40,18 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 168,
+  "total_booked": 169,
   "total_shown": 89,
   "total_qualified": 76,
   "total_deals": 14,
   "total_revenue": 105417.0,
   "team_close_rate": 8.3,
   "team_avg_rev_per_deal": 7529.79,
-  "team_crm_compliance": 85.6,
+  "team_crm_compliance": 85.3,
   "team_task_adherence": 65.9,
   "team_overdue": 173,
-  "team_open_leads": 867,
-  "team_est_pipeline": 2080800,
+  "team_open_leads": 868,
+  "team_est_pipeline": 2083200,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -79,7 +79,7 @@
     },
     {
       "funnel": "Unknown",
-      "count": 8
+      "count": 9
     },
     {
       "funnel": "Sales Reactivation",
@@ -109,10 +109,10 @@
   "funnel_sources": {
     "in_house": 78,
     "external": 22,
-    "unknown": 68,
-    "in_house_pct": 46.4,
-    "external_pct": 13.1,
-    "unknown_pct": 40.5
+    "unknown": 69,
+    "in_house_pct": 46.2,
+    "external_pct": 13.0,
+    "unknown_pct": 40.8
   },
   "reps": [
     {
@@ -262,23 +262,23 @@
           }
         ]
       },
-      "task_adherence": 66.7,
+      "task_adherence": 68.4,
       "tasks_overdue": 6,
-      "tasks_incomplete": 18,
-      "open_leads": 93,
-      "est_pipeline": 223200,
+      "tasks_incomplete": 19,
+      "open_leads": 94,
+      "est_pipeline": 225600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
     },
     {
       "name": "Joe Vaughan",
-      "booked": 26,
+      "booked": 27,
       "shown": 8,
       "qualified": 10,
       "deals": 2,
       "revenue": 17994.0,
-      "close_rate": 7.7,
+      "close_rate": 7.4,
       "qa_score": null,
       "avg_rev_per_deal": 8997.0,
       "crm_compliance": 100.0,
@@ -326,9 +326,9 @@
       "close_rate": 16.7,
       "qa_score": null,
       "avg_rev_per_deal": 7497.75,
-      "crm_compliance": 89.5,
-      "crm_filled": 68,
-      "crm_total": 76,
+      "crm_compliance": 87.3,
+      "crm_filled": 69,
+      "crm_total": 79,
       "crm_detail": {
         "show_up": [
           19,
@@ -340,17 +340,25 @@
         ],
         "qualified": [
           14,
-          17
+          18
         ],
         "confidence": [
-          16,
-          17
+          17,
+          18
         ],
         "lost_reason": [
           0,
-          2
+          3
         ],
         "missing_leads": [
+          {
+            "name": "Joshua Goetz",
+            "lead_id": "lead_Gs0SX12ZYwH5Y5Do8hnp3fztmbIvooVuFnlmLN7MTcH",
+            "missing": [
+              "Qualified",
+              "Lost Reason"
+            ]
+          },
           {
             "name": "robert harrell",
             "lead_id": "lead_IRzzbzVkgS8pQLoEwbu3GPUZ4MlRCd3r5OzJrzGWEcr",
@@ -375,59 +383,6 @@
               "Disposition",
               "Qualified",
               "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Danny Santolaya",
-      "booked": 12,
-      "shown": 8,
-      "qualified": 7,
-      "deals": 2,
-      "revenue": 14647.0,
-      "close_rate": 16.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 7323.5,
-      "crm_compliance": 97.6,
-      "crm_filled": 40,
-      "crm_total": 41,
-      "crm_detail": {
-        "show_up": [
-          11,
-          11
-        ],
-        "disposition": [
-          10,
-          11
-        ],
-        "qualified": [
-          9,
-          9
-        ],
-        "confidence": [
-          9,
-          9
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Michael Smith",
-            "lead_id": "lead_COxRrhfljEkxthLmLjjuSGPFhZazIsVeZF9x5tTbCaD",
-            "missing": [
-              "Disposition"
             ]
           }
         ]
@@ -503,55 +458,45 @@
       "lane": 1
     },
     {
-      "name": "Luke Herman",
-      "booked": 10,
-      "shown": 6,
-      "qualified": 6,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "name": "Danny Santolaya",
+      "booked": 12,
+      "shown": 8,
+      "qualified": 7,
+      "deals": 2,
+      "revenue": 14647.0,
+      "close_rate": 16.7,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 85.3,
-      "crm_filled": 29,
-      "crm_total": 34,
+      "avg_rev_per_deal": 7323.5,
+      "crm_compliance": 97.6,
+      "crm_filled": 40,
+      "crm_total": 41,
       "crm_detail": {
         "show_up": [
-          7,
-          8
+          11,
+          11
         ],
         "disposition": [
-          7,
-          8
+          10,
+          11
         ],
         "qualified": [
-          7,
-          8
+          9,
+          9
         ],
         "confidence": [
-          7,
-          8
+          9,
+          9
         ],
         "lost_reason": [
           1,
-          2
+          1
         ],
         "missing_leads": [
           {
-            "name": "Nancy B",
-            "lead_id": "lead_Q9fYHPTiTIkTq5CJiqJbFPydJWTKIYRvA8EPvDBSbPu",
+            "name": "Michael Smith",
+            "lead_id": "lead_COxRrhfljEkxthLmLjjuSGPFhZazIsVeZF9x5tTbCaD",
             "missing": [
-              "Lost Reason"
-            ]
-          },
-          {
-            "name": "Dean Deihl-Manges",
-            "lead_id": "lead_bPelGv8DsNy99W6xgafgiZ7tqFoOWRV6oWKT0KakUYz",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
+              "Disposition"
             ]
           }
         ]
@@ -614,6 +559,69 @@
       "tasks_incomplete": 4,
       "open_leads": 63,
       "est_pipeline": 151200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Luke Herman",
+      "booked": 10,
+      "shown": 6,
+      "qualified": 6,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 85.3,
+      "crm_filled": 29,
+      "crm_total": 34,
+      "crm_detail": {
+        "show_up": [
+          7,
+          8
+        ],
+        "disposition": [
+          7,
+          8
+        ],
+        "qualified": [
+          7,
+          8
+        ],
+        "confidence": [
+          7,
+          8
+        ],
+        "lost_reason": [
+          1,
+          2
+        ],
+        "missing_leads": [
+          {
+            "name": "Nancy B",
+            "lead_id": "lead_Q9fYHPTiTIkTq5CJiqJbFPydJWTKIYRvA8EPvDBSbPu",
+            "missing": [
+              "Lost Reason"
+            ]
+          },
+          {
+            "name": "Dean Deihl-Manges",
+            "lead_id": "lead_bPelGv8DsNy99W6xgafgiZ7tqFoOWRV6oWKT0KakUYz",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
