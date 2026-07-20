@@ -142,21 +142,18 @@ LANE_2_TARGETS = {
 }
 
 LANE_2_REPS = {
-    "Lyle Hubbard", "Kelly Schrader",
-    "Jason Aaron", "Jacob Hepner",
+    "Kelly Schrader",
+    "Jason Aaron", "Dubem Adindu",
 }
 
 REP_QUOTAS = {
     "Christian Hartwell": 100_000,
-    "Lyle Hubbard": 100_000,
     "Scott Seymour": 100_000,
     "Eric Piccione": 100_000,
     "Jason Aaron": 75_000,
     "Robin Perkins": 75_000,
-    "Jake Skinner": 75_000,
     "Dubem Adindu": 100_000,
     "Zac Clover": 0,
-    "Jacob Hepner": 0,
     "Kelly Schrader": 0,
     "Joe Dysert": 0,
 }
@@ -167,6 +164,7 @@ EXCLUDE_USERS = {
     "William Chase", "Jordan Humphrey", "Andrea Shoop", "Ryan Jones",
     "Ategeka Musinguzi", "Vince Bartolini", "Steven Starnes", "Chris Wanke",
     "Bryan Barcus", "Elvis Ellis", "Cameron Caswell", "John Kirk",
+    "Jake Skinner", "Lyle Hubbard", "Jacob Hepner",
 }
 MANAGER_USERS = {"Joe Dysert"}
 LEAD_USERS = {"Christian Hartwell", "Jason Aaron"}
@@ -843,14 +841,16 @@ def build_dashboard_data():
     reps.sort(key=lambda r: r["booked"], reverse=True)
 
     # Team totals — manager excluded from CRM/tasks,
-    # but included for booked/shown/qualified/revenue/deals (counts toward team volume)
+    # but included for revenue/deals (counts toward team volume)
     non_mgr = [r for r in reps if not r["is_manager"]]
+    lane1_reps = [r for r in reps if r.get("lane") == 1 and not r["is_manager"]]
     num_reps = len(non_mgr)
 
-    # Booked/shown/qualified include everyone (manager takes calls that count)
-    total_booked = sum(r["booked"] for r in reps)
-    total_shown = sum(r["shown"] for r in reps)
-    total_qualified = sum(r["qualified"] for r in reps)
+    # Booked/shown/qualified — Lane 1 only for team show rate
+    # (Lane 2's lower show rates don't drag down team metrics)
+    total_booked = sum(r["booked"] for r in lane1_reps) + sum(r["booked"] for r in reps if r["is_manager"])
+    total_shown = sum(r["shown"] for r in lane1_reps) + sum(r["shown"] for r in reps if r["is_manager"])
+    total_qualified = sum(r["qualified"] for r in lane1_reps) + sum(r["qualified"] for r in reps if r["is_manager"])
 
     # CRM still excludes manager
     total_crm_filled = sum(r["crm_filled"] for r in non_mgr)
