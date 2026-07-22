@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-21 11:45 PM PDT",
+  "updated_at": "2026-07-22 12:00 AM PDT",
   "week_label": "Jul 20 \u2013 Jul 26, 2026",
   "monday_str": "2026-07-20",
-  "today_str": "2026-07-21",
-  "day_of_week": 2,
+  "today_str": "2026-07-22",
+  "day_of_week": 3,
   "num_reps": 12,
   "targets": {
     "booked": 15,
@@ -40,30 +40,30 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 50,
+  "total_booked": 72,
   "total_shown": 26,
   "total_qualified": 25,
   "total_deals": 4,
   "total_revenue": 24791.0,
-  "team_close_rate": 8.0,
+  "team_close_rate": 5.6,
   "team_avg_rev_per_deal": 6197.75,
-  "team_crm_compliance": 74.4,
-  "team_task_adherence": 80.2,
-  "team_overdue": 79,
+  "team_crm_compliance": 77.2,
+  "team_task_adherence": 72.7,
+  "team_overdue": 109,
   "team_open_leads": 660,
   "team_est_pipeline": 1584000,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
-      "count": 20
-    },
-    {
-      "funnel": "Meta Ads",
-      "count": 11
+      "count": 30
     },
     {
       "funnel": "Website",
-      "count": 10
+      "count": 16
+    },
+    {
+      "funnel": "Meta Ads",
+      "count": 14
     },
     {
       "funnel": "Instagram",
@@ -71,7 +71,11 @@
     },
     {
       "funnel": "YouTube",
-      "count": 4
+      "count": 7
+    },
+    {
+      "funnel": "Unknown",
+      "count": 3
     },
     {
       "funnel": "Internal Webinar",
@@ -82,22 +86,22 @@
       "count": 2
     },
     {
-      "funnel": "Unknown",
+      "funnel": "LTF - In-House",
       "count": 1
     }
   ],
   "funnel_sources": {
-    "in_house": 27,
+    "in_house": 39,
     "external": 10,
-    "unknown": 21,
-    "in_house_pct": 46.6,
-    "external_pct": 17.2,
-    "unknown_pct": 36.2
+    "unknown": 34,
+    "in_house_pct": 47.0,
+    "external_pct": 12.0,
+    "unknown_pct": 41.0
   },
   "reps": [
     {
       "name": "Robin Perkins",
-      "booked": 8,
+      "booked": 11,
       "shown": 6,
       "qualified": 6,
       "deals": 0,
@@ -105,25 +109,25 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 88.2,
-      "crm_filled": 15,
-      "crm_total": 17,
+      "crm_compliance": 93.5,
+      "crm_filled": 29,
+      "crm_total": 31,
       "crm_detail": {
         "show_up": [
-          4,
-          4
+          8,
+          8
         ],
         "disposition": [
-          4,
-          4
+          8,
+          8
         ],
         "qualified": [
-          3,
-          4
+          6,
+          7
         ],
         "confidence": [
-          4,
-          4
+          7,
+          7
         ],
         "lost_reason": [
           0,
@@ -150,45 +154,53 @@
       "lane": 1
     },
     {
-      "name": "Luke Herman",
-      "booked": 7,
-      "shown": 3,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "name": "Joe Vaughan",
+      "booked": 11,
+      "shown": 1,
+      "qualified": 4,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 9.1,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 90.0,
-      "crm_filled": 9,
-      "crm_total": 10,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 83.3,
+      "crm_filled": 15,
+      "crm_total": 18,
       "crm_detail": {
         "show_up": [
           3,
-          3
+          5
         ],
         "disposition": [
-          2,
-          3
+          5,
+          5
         ],
         "qualified": [
-          2,
-          2
+          3,
+          3
         ],
         "confidence": [
           2,
-          2
+          3
         ],
         "lost_reason": [
-          0,
-          0
+          2,
+          2
         ],
         "missing_leads": [
           {
-            "name": "Tawanna Eaton",
-            "lead_id": "lead_Sl2SG85LrVBg1Pjr5NHKS6YD7QRhQUpEHuEoqpYEm3E",
+            "name": "James Canada",
+            "lead_id": "lead_JdF3rZ3tz6PcmBXUtOfnT9QMpZpdkq8VVTT0aTbBZWf",
             "missing": [
-              "Disposition"
+              "Show Up"
+            ]
+          },
+          {
+            "name": "Robert Langston",
+            "lead_id": "lead_0wUujLpxIFxti3fj9aAVbWS26CsdejigVZHAyBRt8vL",
+            "missing": [
+              "Show Up",
+              "Confidence"
             ]
           }
         ]
@@ -203,166 +215,8 @@
       "lane": 1
     },
     {
-      "name": "Joe Vaughan",
-      "booked": 7,
-      "shown": 1,
-      "qualified": 4,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 14.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 9,
-      "crm_total": 9,
-      "crm_detail": {
-        "show_up": [
-          2,
-          2
-        ],
-        "disposition": [
-          2,
-          2
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Eric Piccione",
-      "booked": 7,
-      "shown": 2,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 4,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          2,
-          2
-        ],
-        "disposition": [
-          2,
-          2
-        ],
-        "qualified": [
-          0,
-          0
-        ],
-        "confidence": [
-          0,
-          0
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 6,
-      "open_leads": 64,
-      "est_pipeline": 153600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Danny Santolaya",
-      "booked": 5,
-      "shown": 3,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 2,
-      "crm_total": 2,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          1,
-          1
-        ],
-        "qualified": [
-          0,
-          0
-        ],
-        "confidence": [
-          0,
-          0
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 5,
-      "shown": 5,
-      "qualified": 5,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 20.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 90.9,
-      "tasks_overdue": 2,
-      "tasks_incomplete": 22,
-      "open_leads": 38,
-      "est_pipeline": 91200,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 1
-    },
-    {
       "name": "Shreya Bechra",
-      "booked": 5,
+      "booked": 10,
       "shown": 3,
       "qualified": 2,
       "deals": 0,
@@ -370,29 +224,29 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 90.0,
-      "crm_filled": 9,
-      "crm_total": 10,
+      "crm_compliance": 94.1,
+      "crm_filled": 16,
+      "crm_total": 17,
       "crm_detail": {
         "show_up": [
-          3,
-          3
+          5,
+          5
         ],
         "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
           3,
           3
         ],
-        "qualified": [
-          2,
-          2
-        ],
         "confidence": [
-          1,
-          2
+          2,
+          3
         ],
         "lost_reason": [
-          0,
-          0
+          1,
+          1
         ],
         "missing_leads": [
           {
@@ -414,34 +268,34 @@
       "lane": 1
     },
     {
-      "name": "Kelly Schrader",
-      "booked": 4,
-      "shown": 0,
-      "qualified": 0,
+      "name": "Eric Piccione",
+      "booked": 10,
+      "shown": 2,
+      "qualified": 1,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 25.0,
-      "crm_filled": 2,
-      "crm_total": 8,
+      "crm_compliance": 75.0,
+      "crm_filled": 15,
+      "crm_total": 20,
       "crm_detail": {
         "show_up": [
-          1,
-          3
+          6,
+          7
         ],
         "disposition": [
-          1,
-          3
+          6,
+          7
         ],
         "qualified": [
-          0,
-          1
+          2,
+          3
         ],
         "confidence": [
-          0,
-          1
+          1,
+          3
         ],
         "lost_reason": [
           0,
@@ -449,26 +303,19 @@
         ],
         "missing_leads": [
           {
-            "name": "Hilderbrand Hilderbrand",
-            "lead_id": "lead_3PQLF9BoOdOCsZHeg3a6M13roXvxIG2xQ3Zc6G59AuZ",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Monica Valenzuela",
-            "lead_id": "lead_OF3tS8JUM2USLhAyUB2Law85MdqUp7raMK4BX21DxvV",
-            "missing": [
-              "Show Up"
-            ]
-          },
-          {
-            "name": "Staycie carson",
-            "lead_id": "lead_2nhI5EIUFM0bgZYatuf8FwuiiYhATJaUldWYBix33PX",
+            "name": "Joey Carter",
+            "lead_id": "lead_JKtWpUjCPB8JjECBS0hn8lGbOKCUq8Tt1Z2pHTOBWtl",
             "missing": [
               "Show Up",
               "Disposition",
               "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Hope Brown",
+            "lead_id": "lead_tHzLCT5xedKeY3arvfBpLfmIAqDcXMjyBkJHJX4eh5n",
+            "missing": [
               "Confidence"
             ]
           }
@@ -476,16 +323,178 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 74,
-      "open_leads": 155,
-      "est_pipeline": 372000,
+      "tasks_incomplete": 6,
+      "open_leads": 64,
+      "est_pipeline": 153600,
       "is_manager": false,
       "is_lead": false,
-      "lane": 2
+      "lane": 1
+    },
+    {
+      "name": "Christian Hartwell",
+      "booked": 9,
+      "shown": 5,
+      "qualified": 5,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 11.1,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 20,
+      "crm_total": 20,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 86.4,
+      "tasks_overdue": 3,
+      "tasks_incomplete": 22,
+      "open_leads": 38,
+      "est_pipeline": 91200,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 1
+    },
+    {
+      "name": "Danny Santolaya",
+      "booked": 8,
+      "shown": 3,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 15,
+      "crm_total": 15,
+      "crm_detail": {
+        "show_up": [
+          4,
+          4
+        ],
+        "disposition": [
+          4,
+          4
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Luke Herman",
+      "booked": 7,
+      "shown": 3,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 63.6,
+      "crm_filled": 14,
+      "crm_total": 22,
+      "crm_detail": {
+        "show_up": [
+          5,
+          6
+        ],
+        "disposition": [
+          3,
+          6
+        ],
+        "qualified": [
+          3,
+          5
+        ],
+        "confidence": [
+          3,
+          5
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Jeff Bennett",
+            "lead_id": "lead_pFhMHYCfIZbYUb7lYpTHFmJ62ym2QLuJ9XN5U1EY4ax",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Erica Lamca",
+            "lead_id": "lead_VZu5O0J6XfHoAjsZsBrVwO8iJRVXmxIEeKnXY2GxGoY",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Tawanna Eaton",
+            "lead_id": "lead_Sl2SG85LrVBg1Pjr5NHKS6YD7QRhQUpEHuEoqpYEm3E",
+            "missing": [
+              "Disposition"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Jason Aaron",
-      "booked": 4,
+      "booked": 6,
       "shown": 0,
       "qualified": 0,
       "deals": 0,
@@ -537,13 +546,93 @@
           }
         ]
       },
-      "task_adherence": 31.4,
-      "tasks_overdue": 72,
+      "task_adherence": 28.6,
+      "tasks_overdue": 75,
       "tasks_incomplete": 105,
       "open_leads": 144,
       "est_pipeline": 345600,
       "is_manager": false,
       "is_lead": true,
+      "lane": 2
+    },
+    {
+      "name": "Kelly Schrader",
+      "booked": 5,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 16.7,
+      "crm_filled": 2,
+      "crm_total": 12,
+      "crm_detail": {
+        "show_up": [
+          1,
+          4
+        ],
+        "disposition": [
+          1,
+          4
+        ],
+        "qualified": [
+          0,
+          2
+        ],
+        "confidence": [
+          0,
+          2
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Hilderbrand Hilderbrand",
+            "lead_id": "lead_3PQLF9BoOdOCsZHeg3a6M13roXvxIG2xQ3Zc6G59AuZ",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Monica Valenzuela",
+            "lead_id": "lead_OF3tS8JUM2USLhAyUB2Law85MdqUp7raMK4BX21DxvV",
+            "missing": [
+              "Show Up"
+            ]
+          },
+          {
+            "name": "Janie rodriguez",
+            "lead_id": "lead_AZjlEGwFB9jW06nTDS3fVhDVKMFmFP9gXnYRHT2N4eJ",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Staycie carson",
+            "lead_id": "lead_2nhI5EIUFM0bgZYatuf8FwuiiYhATJaUldWYBix33PX",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 74.3,
+      "tasks_overdue": 19,
+      "tasks_incomplete": 74,
+      "open_leads": 155,
+      "est_pipeline": 372000,
+      "is_manager": false,
+      "is_lead": false,
       "lane": 2
     },
     {
@@ -556,31 +645,40 @@
       "close_rate": 66.7,
       "qa_score": null,
       "avg_rev_per_deal": 6398.5,
-      "crm_compliance": 0.0,
-      "crm_filled": 0,
-      "crm_total": 4,
+      "crm_compliance": 41.7,
+      "crm_filled": 5,
+      "crm_total": 12,
       "crm_detail": {
         "show_up": [
-          0,
-          1
+          2,
+          3
         ],
         "disposition": [
-          0,
-          1
+          1,
+          3
         ],
         "qualified": [
-          0,
-          1
+          1,
+          3
         ],
         "confidence": [
-          0,
-          1
+          1,
+          3
         ],
         "lost_reason": [
           0,
           0
         ],
         "missing_leads": [
+          {
+            "name": "Damian Twine",
+            "lead_id": "lead_a1Ok8PS8Aw8aGObG74f6RtRUGOl9AW9RvguudNTCWUz",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
           {
             "name": "Kezia Wodesso",
             "lead_id": "lead_gM6Ab3DzmDwOdSgASNhxL2hbPOch0M64xZbXyymfP8e",
@@ -593,8 +691,8 @@
           }
         ]
       },
-      "task_adherence": 66.7,
-      "tasks_overdue": 5,
+      "task_adherence": 53.3,
+      "tasks_overdue": 7,
       "tasks_incomplete": 15,
       "open_leads": 92,
       "est_pipeline": 220800,
@@ -612,25 +710,25 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 75.0,
-      "crm_filled": 6,
-      "crm_total": 8,
+      "crm_compliance": 83.3,
+      "crm_filled": 10,
+      "crm_total": 12,
       "crm_detail": {
         "show_up": [
-          2,
-          2
+          3,
+          3
         ],
         "disposition": [
-          2,
-          2
+          3,
+          3
         ],
         "qualified": [
-          1,
-          2
+          2,
+          3
         ],
         "confidence": [
-          1,
-          2
+          2,
+          3
         ],
         "lost_reason": [
           0,
@@ -653,9 +751,9 @@
           }
         ]
       },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 107,
+      "task_adherence": 95.4,
+      "tasks_overdue": 5,
+      "tasks_incomplete": 108,
       "open_leads": 37,
       "est_pipeline": 88800,
       "is_manager": false,
