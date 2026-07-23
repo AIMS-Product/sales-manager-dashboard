@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-23 07:45 AM PDT",
+  "updated_at": "2026-07-23 08:00 AM PDT",
   "week_label": "Jul 20 \u2013 Jul 26, 2026",
   "monday_str": "2026-07-20",
   "today_str": "2026-07-23",
@@ -40,15 +40,15 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 92,
-  "total_shown": 37,
+  "total_booked": 90,
+  "total_shown": 35,
   "total_qualified": 35,
   "total_deals": 7,
   "total_revenue": 55097.0,
-  "team_close_rate": 7.6,
+  "team_close_rate": 7.8,
   "team_avg_rev_per_deal": 7871.0,
   "team_crm_compliance": 82.9,
-  "team_task_adherence": 69.8,
+  "team_task_adherence": 69.9,
   "team_overdue": 121,
   "team_open_leads": 664,
   "team_est_pipeline": 1593600,
@@ -261,37 +261,37 @@
     },
     {
       "name": "Eric Piccione",
-      "booked": 13,
-      "shown": 4,
+      "booked": 12,
+      "shown": 3,
       "qualified": 2,
       "deals": 1,
       "revenue": 5997.0,
-      "close_rate": 7.7,
+      "close_rate": 8.3,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 79.4,
-      "crm_filled": 27,
-      "crm_total": 34,
+      "crm_compliance": 75.9,
+      "crm_filled": 22,
+      "crm_total": 29,
       "crm_detail": {
         "show_up": [
-          9,
-          10
+          8,
+          9
         ],
         "disposition": [
-          8,
-          10
+          7,
+          9
         ],
         "qualified": [
-          4,
-          6
+          3,
+          5
         ],
         "confidence": [
-          4,
-          6
+          3,
+          5
         ],
         "lost_reason": [
-          2,
-          2
+          1,
+          1
         ],
         "missing_leads": [
           {
@@ -325,38 +325,128 @@
       "lane": 1
     },
     {
-      "name": "Shreya Bechra",
-      "booked": 11,
+      "name": "Jason Aaron",
+      "booked": 10,
       "shown": 3,
-      "qualified": 2,
-      "deals": 1,
-      "revenue": 9312.0,
-      "close_rate": 9.1,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
       "qa_score": null,
-      "avg_rev_per_deal": 9312.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 25,
-      "crm_total": 25,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 63.2,
+      "crm_filled": 24,
+      "crm_total": 38,
       "crm_detail": {
         "show_up": [
-          8,
+          6,
           8
         ],
         "disposition": [
-          8,
+          6,
           8
         ],
         "qualified": [
           4,
-          4
+          8
         ],
         "confidence": [
           4,
-          4
+          8
         ],
         "lost_reason": [
-          1,
-          1
+          4,
+          6
+        ],
+        "missing_leads": [
+          {
+            "name": "JeannetteJr Wheeler",
+            "lead_id": "lead_b5ylno8qIGJiRPfYIIBmspE8gcZe5wrxJ8GFRud4Jdu",
+            "missing": [
+              "Qualified",
+              "Lost Reason"
+            ]
+          },
+          {
+            "name": "Elizabeth Carstens",
+            "lead_id": "lead_IoJkZdwzWxEVlWmNIGyGUG93TBJHV1HqjeAmk4aT0PT",
+            "missing": [
+              "Qualified",
+              "Confidence",
+              "Lost Reason"
+            ]
+          },
+          {
+            "name": "Tanikka McKnight",
+            "lead_id": "lead_UtZd4NsdFkcwL5DmJjSTvIp722kNwf8GcBV3tNW8Mwd",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Robert Langston",
+            "lead_id": "lead_0wUujLpxIFxti3fj9aAVbWS26CsdejigVZHAyBRt8vL",
+            "missing": [
+              "Show Up",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "James Moore",
+            "lead_id": "lead_IL3Pqxi3KVkJAz5B7Sa2zyegJN26KTQgAZv0udf1GwM",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 28.4,
+      "tasks_overdue": 78,
+      "tasks_incomplete": 109,
+      "open_leads": 143,
+      "est_pipeline": 343200,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
+    },
+    {
+      "name": "Shreya Bechra",
+      "booked": 10,
+      "shown": 2,
+      "qualified": 2,
+      "deals": 1,
+      "revenue": 9312.0,
+      "close_rate": 10.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 9312.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 20,
+      "crm_total": 20,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "lost_reason": [
+          0,
+          0
         ],
         "missing_leads": []
       },
@@ -494,96 +584,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 8,
-      "shown": 1,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 50.0,
-      "crm_filled": 14,
-      "crm_total": 28,
-      "crm_detail": {
-        "show_up": [
-          4,
-          6
-        ],
-        "disposition": [
-          4,
-          6
-        ],
-        "qualified": [
-          2,
-          6
-        ],
-        "confidence": [
-          2,
-          6
-        ],
-        "lost_reason": [
-          2,
-          4
-        ],
-        "missing_leads": [
-          {
-            "name": "JeannetteJr Wheeler",
-            "lead_id": "lead_b5ylno8qIGJiRPfYIIBmspE8gcZe5wrxJ8GFRud4Jdu",
-            "missing": [
-              "Qualified",
-              "Lost Reason"
-            ]
-          },
-          {
-            "name": "Elizabeth Carstens",
-            "lead_id": "lead_IoJkZdwzWxEVlWmNIGyGUG93TBJHV1HqjeAmk4aT0PT",
-            "missing": [
-              "Qualified",
-              "Confidence",
-              "Lost Reason"
-            ]
-          },
-          {
-            "name": "Tanikka McKnight",
-            "lead_id": "lead_UtZd4NsdFkcwL5DmJjSTvIp722kNwf8GcBV3tNW8Mwd",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Robert Langston",
-            "lead_id": "lead_0wUujLpxIFxti3fj9aAVbWS26CsdejigVZHAyBRt8vL",
-            "missing": [
-              "Show Up",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "James Moore",
-            "lead_id": "lead_IL3Pqxi3KVkJAz5B7Sa2zyegJN26KTQgAZv0udf1GwM",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 27.1,
-      "tasks_overdue": 78,
-      "tasks_incomplete": 107,
-      "open_leads": 143,
-      "est_pipeline": 343200,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
     },
     {
       "name": "Kelly Schrader",
