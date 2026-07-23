@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-23 04:00 PM PDT",
+  "updated_at": "2026-07-23 04:15 PM PDT",
   "week_label": "Jul 20 \u2013 Jul 26, 2026",
   "monday_str": "2026-07-20",
   "today_str": "2026-07-23",
@@ -41,14 +41,14 @@
     "task_adherence": 100
   },
   "total_booked": 90,
-  "total_shown": 43,
-  "total_qualified": 43,
+  "total_shown": 45,
+  "total_qualified": 46,
   "total_deals": 9,
   "total_revenue": 72691.0,
   "team_close_rate": 10.0,
   "team_avg_rev_per_deal": 8076.78,
   "team_crm_compliance": 88.3,
-  "team_task_adherence": 76.5,
+  "team_task_adherence": 76.6,
   "team_overdue": 93,
   "team_open_leads": 667,
   "team_est_pipeline": 1600800,
@@ -167,8 +167,8 @@
     {
       "name": "Joe Vaughan",
       "booked": 16,
-      "shown": 4,
-      "qualified": 8,
+      "shown": 6,
+      "qualified": 11,
       "deals": 2,
       "revenue": 14994.0,
       "close_rate": 12.5,
@@ -309,6 +309,51 @@
       "lane": 1
     },
     {
+      "name": "Shreya Bechra",
+      "booked": 10,
+      "shown": 3,
+      "qualified": 3,
+      "deals": 1,
+      "revenue": 9312.0,
+      "close_rate": 10.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 9312.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 20,
+      "crm_total": 20,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Jason Aaron",
       "booked": 10,
       "shown": 3,
@@ -389,59 +434,14 @@
           }
         ]
       },
-      "task_adherence": 28.4,
+      "task_adherence": 29.1,
       "tasks_overdue": 78,
-      "tasks_incomplete": 109,
+      "tasks_incomplete": 110,
       "open_leads": 143,
       "est_pipeline": 343200,
       "is_manager": false,
       "is_lead": true,
       "lane": 2
-    },
-    {
-      "name": "Shreya Bechra",
-      "booked": 10,
-      "shown": 3,
-      "qualified": 3,
-      "deals": 1,
-      "revenue": 9312.0,
-      "close_rate": 10.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 9312.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 20,
-      "crm_total": 20,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          7,
-          7
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
     },
     {
       "name": "Luke Herman",
@@ -728,29 +728,6 @@
       "lane": 1
     },
     {
-      "name": "Dubem Adindu",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 40,
-      "est_pipeline": 96000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -772,6 +749,29 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Dubem Adindu",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 40,
+      "est_pipeline": 96000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     }
   ]
 }
