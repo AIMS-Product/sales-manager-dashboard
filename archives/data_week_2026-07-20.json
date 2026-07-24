@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24 01:00 PM PDT",
+  "updated_at": "2026-07-24 01:15 PM PDT",
   "week_label": "Jul 20 \u2013 Jul 26, 2026",
   "monday_str": "2026-07-20",
   "today_str": "2026-07-24",
@@ -41,14 +41,14 @@
     "task_adherence": 100
   },
   "total_booked": 112,
-  "total_shown": 50,
+  "total_shown": 51,
   "total_qualified": 51,
   "total_deals": 11,
   "total_revenue": 79876.0,
   "team_close_rate": 9.8,
   "team_avg_rev_per_deal": 7261.45,
   "team_crm_compliance": 86.2,
-  "team_task_adherence": 75.1,
+  "team_task_adherence": 75.0,
   "team_overdue": 94,
   "team_open_leads": 664,
   "team_est_pipeline": 1593600,
@@ -243,7 +243,7 @@
     {
       "name": "Robin Perkins",
       "booked": 17,
-      "shown": 10,
+      "shown": 11,
       "qualified": 8,
       "deals": 1,
       "revenue": 8597.0,
@@ -287,7 +287,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 61,
+      "tasks_incomplete": 60,
       "open_leads": 92,
       "est_pipeline": 220800,
       "is_manager": false,
@@ -337,6 +337,51 @@
             ]
           }
         ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Luke Herman",
+      "booked": 13,
+      "shown": 6,
+      "qualified": 6,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 26,
+      "crm_total": 26,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          6,
+          6
+        ],
+        "confidence": [
+          6,
+          6
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
       },
       "task_adherence": null,
       "tasks_overdue": 0,
@@ -403,51 +448,6 @@
       "tasks_incomplete": 7,
       "open_leads": 71,
       "est_pipeline": 170400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Luke Herman",
-      "booked": 13,
-      "shown": 6,
-      "qualified": 6,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 26,
-      "crm_total": 26,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          7,
-          7
-        ],
-        "qualified": [
-          6,
-          6
-        ],
-        "confidence": [
-          6,
-          6
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -551,60 +551,6 @@
       "lane": 2
     },
     {
-      "name": "Danny Santolaya",
-      "booked": 8,
-      "shown": 4,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 91.7,
-      "crm_filled": 22,
-      "crm_total": 24,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          7,
-          7
-        ],
-        "qualified": [
-          4,
-          5
-        ],
-        "confidence": [
-          4,
-          5
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Shawntay Cook",
-            "lead_id": "lead_FQ2sr2uOKijHVeaId7xLljYVOwoRjYi1fbszOfrxaME",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Kelly Schrader",
       "booked": 8,
       "shown": 0,
@@ -697,6 +643,60 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
+    },
+    {
+      "name": "Danny Santolaya",
+      "booked": 8,
+      "shown": 4,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 91.7,
+      "crm_filled": 22,
+      "crm_total": 24,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          4,
+          5
+        ],
+        "confidence": [
+          4,
+          5
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Shawntay Cook",
+            "lead_id": "lead_FQ2sr2uOKijHVeaId7xLljYVOwoRjYi1fbszOfrxaME",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Zac Clover",
@@ -814,29 +814,6 @@
       "lane": 1
     },
     {
-      "name": "Dubem Adindu",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 1188.0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": 1188.0,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 40,
-      "est_pipeline": 96000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -858,6 +835,29 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Dubem Adindu",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 1188.0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": 1188.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 40,
+      "est_pipeline": 96000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     }
   ]
 }
