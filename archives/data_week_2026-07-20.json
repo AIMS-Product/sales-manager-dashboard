@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-23 05:00 PM PDT",
+  "updated_at": "2026-07-23 05:15 PM PDT",
   "week_label": "Jul 20 \u2013 Jul 26, 2026",
   "monday_str": "2026-07-20",
   "today_str": "2026-07-23",
@@ -41,13 +41,13 @@
     "task_adherence": 100
   },
   "total_booked": 91,
-  "total_shown": 45,
+  "total_shown": 46,
   "total_qualified": 46,
   "total_deals": 9,
   "total_revenue": 72691.0,
   "team_close_rate": 9.9,
   "team_avg_rev_per_deal": 8076.78,
-  "team_crm_compliance": 88.3,
+  "team_crm_compliance": 87.8,
   "team_task_adherence": 76.6,
   "team_overdue": 93,
   "team_open_leads": 667,
@@ -86,6 +86,10 @@
       "count": 2
     },
     {
+      "funnel": "Anthony X",
+      "count": 1
+    },
+    {
       "funnel": "Reactivation Email",
       "count": 1
     },
@@ -95,10 +99,6 @@
     },
     {
       "funnel": "Unknown",
-      "count": 1
-    },
-    {
-      "funnel": "Anthony X",
       "count": 1
     }
   ],
@@ -159,16 +159,16 @@
     {
       "name": "Christian Hartwell",
       "booked": 16,
-      "shown": 10,
+      "shown": 11,
       "qualified": 9,
       "deals": 1,
       "revenue": 5997.0,
       "close_rate": 6.2,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 97.1,
-      "crm_filled": 33,
-      "crm_total": 34,
+      "crm_compliance": 91.9,
+      "crm_filled": 34,
+      "crm_total": 37,
       "crm_detail": {
         "show_up": [
           10,
@@ -180,17 +180,25 @@
         ],
         "qualified": [
           6,
-          7
+          8
         ],
         "confidence": [
-          7,
-          7
+          8,
+          8
         ],
         "lost_reason": [
           0,
-          0
+          1
         ],
         "missing_leads": [
+          {
+            "name": "Shawna Fox",
+            "lead_id": "lead_CgjODIJsz0SrJo22Q9GjbquKFogdekrm2J8x0J8oZVm",
+            "missing": [
+              "Qualified",
+              "Lost Reason"
+            ]
+          },
           {
             "name": "Darren Jones",
             "lead_id": "lead_TGIfQAjKeQLpsekvBAJBFz9oIMqG1WR6hnZOEy4yF0o",
@@ -274,8 +282,8 @@
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
       "crm_compliance": 100.0,
-      "crm_filled": 25,
-      "crm_total": 25,
+      "crm_filled": 27,
+      "crm_total": 27,
       "crm_detail": {
         "show_up": [
           8,
@@ -286,12 +294,12 @@
           8
         ],
         "qualified": [
-          4,
-          4
+          5,
+          5
         ],
         "confidence": [
-          4,
-          4
+          5,
+          5
         ],
         "lost_reason": [
           1,
@@ -728,29 +736,6 @@
       "lane": 1
     },
     {
-      "name": "Dubem Adindu",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 40,
-      "est_pipeline": 96000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -772,6 +757,29 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Dubem Adindu",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 40,
+      "est_pipeline": 96000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     }
   ]
 }
