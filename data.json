@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24 05:00 PM PDT",
+  "updated_at": "2026-07-24 05:15 PM PDT",
   "week_label": "Jul 20 \u2013 Jul 26, 2026",
   "monday_str": "2026-07-20",
   "today_str": "2026-07-24",
@@ -43,10 +43,10 @@
   "total_booked": 113,
   "total_shown": 56,
   "total_qualified": 57,
-  "total_deals": 16,
-  "total_revenue": 115761.0,
-  "team_close_rate": 14.2,
-  "team_avg_rev_per_deal": 7235.06,
+  "total_deals": 15,
+  "total_revenue": 109764.0,
+  "team_close_rate": 13.3,
+  "team_avg_rev_per_deal": 7317.6,
   "team_crm_compliance": 85.0,
   "team_task_adherence": 75.6,
   "team_overdue": 93,
@@ -116,9 +116,9 @@
       "booked": 20,
       "shown": 12,
       "qualified": 11,
-      "deals": 2,
-      "revenue": 11994.0,
-      "close_rate": 10.0,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 5.0,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
       "crm_compliance": 84.5,
@@ -716,6 +716,61 @@
       "lane": 2
     },
     {
+      "name": "Zac Clover",
+      "booked": 3,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 5,
+      "revenue": 39788.0,
+      "close_rate": 166.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 7957.6,
+      "crm_compliance": 70.0,
+      "crm_filled": 7,
+      "crm_total": 10,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          2,
+          3
+        ],
+        "qualified": [
+          1,
+          2
+        ],
+        "confidence": [
+          1,
+          2
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Malik Amande",
+            "lead_id": "lead_Zd2j7snTAIZQ53cJIcukRNbJ2v4w21y5kaVHt0Opf4P",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 50.0,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 12,
+      "open_leads": 87,
+      "est_pipeline": 208800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Scott Seymour",
       "booked": 3,
       "shown": 2,
@@ -776,59 +831,27 @@
       "lane": 1
     },
     {
-      "name": "Zac Clover",
-      "booked": 3,
-      "shown": 1,
-      "qualified": 1,
-      "deals": 5,
-      "revenue": 39788.0,
-      "close_rate": 166.7,
+      "name": "Dubem Adindu",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 1188.0,
+      "close_rate": null,
       "qa_score": null,
-      "avg_rev_per_deal": 7957.6,
-      "crm_compliance": 70.0,
-      "crm_filled": 7,
-      "crm_total": 10,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          2,
-          3
-        ],
-        "qualified": [
-          1,
-          2
-        ],
-        "confidence": [
-          1,
-          2
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Malik Amande",
-            "lead_id": "lead_Zd2j7snTAIZQ53cJIcukRNbJ2v4w21y5kaVHt0Opf4P",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 50.0,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 12,
-      "open_leads": 87,
-      "est_pipeline": 208800,
+      "avg_rev_per_deal": 1188.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 40,
+      "est_pipeline": 96000,
       "is_manager": false,
       "is_lead": false,
-      "lane": 1
+      "lane": 2
     },
     {
       "name": "Joe Dysert",
@@ -852,29 +875,6 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "Dubem Adindu",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 1188.0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": 1188.0,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 40,
-      "est_pipeline": 96000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
     }
   ]
 }
