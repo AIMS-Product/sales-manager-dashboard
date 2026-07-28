@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-28 12:15 PM PDT",
+  "updated_at": "2026-07-28 12:30 PM PDT",
   "week_label": "Jul 27 \u2013 Aug 02, 2026",
   "monday_str": "2026-07-27",
   "today_str": "2026-07-28",
@@ -40,15 +40,15 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 63,
+  "total_booked": 62,
   "total_shown": 24,
   "total_qualified": 24,
   "total_deals": 4,
   "total_revenue": 42888.0,
-  "team_close_rate": 6.3,
+  "team_close_rate": 6.5,
   "team_avg_rev_per_deal": 10722.0,
-  "team_crm_compliance": 77.6,
-  "team_task_adherence": 61.9,
+  "team_crm_compliance": 86.8,
+  "team_task_adherence": 62.0,
   "team_overdue": 144,
   "team_open_leads": 667,
   "team_est_pipeline": 1600800,
@@ -59,7 +59,7 @@
     },
     {
       "funnel": "Reactivation Scrapers",
-      "count": 20
+      "count": 19
     },
     {
       "funnel": "Website",
@@ -93,84 +93,47 @@
   "funnel_sources": {
     "in_house": 23,
     "external": 23,
-    "unknown": 22,
-    "in_house_pct": 33.8,
-    "external_pct": 33.8,
-    "unknown_pct": 32.4
+    "unknown": 21,
+    "in_house_pct": 34.3,
+    "external_pct": 34.3,
+    "unknown_pct": 31.3
   },
   "reps": [
     {
       "name": "Luke Herman",
-      "booked": 14,
+      "booked": 13,
       "shown": 6,
       "qualified": 5,
       "deals": 1,
       "revenue": 14997.0,
-      "close_rate": 7.1,
+      "close_rate": 7.7,
       "qa_score": null,
       "avg_rev_per_deal": 14997.0,
-      "crm_compliance": 50.0,
-      "crm_filled": 12,
-      "crm_total": 24,
+      "crm_compliance": 100.0,
+      "crm_filled": 20,
+      "crm_total": 20,
       "crm_detail": {
         "show_up": [
-          4,
-          6
+          5,
+          5
         ],
         "disposition": [
-          3,
-          6
+          5,
+          5
         ],
         "qualified": [
-          3,
-          6
+          5,
+          5
         ],
         "confidence": [
-          2,
-          6
+          5,
+          5
         ],
         "lost_reason": [
           0,
           0
         ],
-        "missing_leads": [
-          {
-            "name": "Donna Williams",
-            "lead_id": "lead_M1sRLTqSdGdwiIm2Wcwl4VzQyCRlxDoTgA5g2YFLGne",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Donna Williams",
-            "lead_id": "lead_EHntIP1zdYtVL09yr5IjCbW1LB45BBF8DV3IomsRtQO",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "joshua petho",
-            "lead_id": "lead_ukQEUknr2b4aU9ZkM6j5jMydsQX9h4o7BALb20zlPJ5",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Rebekah Bowen",
-            "lead_id": "lead_Guq0gcUiaJmlPZ8yCkrEE5UktxJ2uLh8S5lCLf1xX2v",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": null,
       "tasks_overdue": 0,
@@ -489,7 +452,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 84,
+      "tasks_incomplete": 85,
       "open_leads": 29,
       "est_pipeline": 69600,
       "is_manager": false,
