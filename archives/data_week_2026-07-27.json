@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29 03:00 PM PDT",
+  "updated_at": "2026-07-29 03:15 PM PDT",
   "week_label": "Jul 27 \u2013 Aug 02, 2026",
   "monday_str": "2026-07-27",
   "today_str": "2026-07-29",
@@ -41,24 +41,24 @@
     "task_adherence": 100
   },
   "total_booked": 80,
-  "total_shown": 38,
-  "total_qualified": 41,
+  "total_shown": 39,
+  "total_qualified": 43,
   "total_deals": 7,
   "total_revenue": 70779.0,
   "team_close_rate": 8.8,
   "team_avg_rev_per_deal": 10111.29,
   "team_crm_compliance": 96.9,
-  "team_task_adherence": 66.8,
+  "team_task_adherence": 66.9,
   "team_overdue": 114,
-  "team_open_leads": 669,
-  "team_est_pipeline": 1605600,
+  "team_open_leads": 670,
+  "team_est_pipeline": 1608000,
   "funnel_breakdown": [
     {
-      "funnel": "Reactivation Scrapers",
-      "count": 29
+      "funnel": "Instagram",
+      "count": 27
     },
     {
-      "funnel": "Instagram",
+      "funnel": "Reactivation Scrapers",
       "count": 27
     },
     {
@@ -68,6 +68,10 @@
     {
       "funnel": "YouTube",
       "count": 5
+    },
+    {
+      "funnel": "Internal Webinar",
+      "count": 4
     },
     {
       "funnel": "Meta Ads",
@@ -82,10 +86,6 @@
       "count": 2
     },
     {
-      "funnel": "Internal Webinar",
-      "count": 2
-    },
-    {
       "funnel": "LTF - In-House",
       "count": 1
     },
@@ -95,12 +95,12 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 24,
+    "in_house": 26,
     "external": 29,
-    "unknown": 33,
-    "in_house_pct": 27.9,
+    "unknown": 31,
+    "in_house_pct": 30.2,
     "external_pct": 33.7,
-    "unknown_pct": 38.4
+    "unknown_pct": 36.0
   },
   "reps": [
     {
@@ -196,8 +196,8 @@
     {
       "name": "Robin Perkins",
       "booked": 14,
-      "shown": 8,
-      "qualified": 7,
+      "shown": 9,
+      "qualified": 8,
       "deals": 1,
       "revenue": 5997.0,
       "close_rate": 7.1,
@@ -231,9 +231,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 67,
-      "open_leads": 92,
-      "est_pipeline": 220800,
+      "tasks_incomplete": 68,
+      "open_leads": 93,
+      "est_pipeline": 223200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -242,7 +242,7 @@
       "name": "Christian Hartwell",
       "booked": 11,
       "shown": 4,
-      "qualified": 5,
+      "qualified": 6,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
@@ -427,51 +427,6 @@
       "lane": 1
     },
     {
-      "name": "Jason Aaron",
-      "booked": 3,
-      "shown": 2,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 12,
-      "crm_total": 12,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "lost_reason": [
-          2,
-          2
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 10.9,
-      "tasks_overdue": 106,
-      "tasks_incomplete": 119,
-      "open_leads": 141,
-      "est_pipeline": 338400,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
-    },
-    {
       "name": "Kelly Schrader",
       "booked": 3,
       "shown": 1,
@@ -525,6 +480,51 @@
       "est_pipeline": 367200,
       "is_manager": false,
       "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 3,
+      "shown": 2,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 12,
+      "crm_total": 12,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "lost_reason": [
+          2,
+          2
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 10.9,
+      "tasks_overdue": 106,
+      "tasks_incomplete": 119,
+      "open_leads": 141,
+      "est_pipeline": 338400,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 2
     },
     {
