@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29 08:45 AM PDT",
+  "updated_at": "2026-07-29 09:00 AM PDT",
   "week_label": "Jul 27 \u2013 Aug 02, 2026",
   "monday_str": "2026-07-27",
   "today_str": "2026-07-29",
@@ -40,14 +40,14 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 81,
-  "total_shown": 33,
+  "total_booked": 79,
+  "total_shown": 32,
   "total_qualified": 34,
   "total_deals": 5,
   "total_revenue": 54885.0,
-  "team_close_rate": 6.2,
+  "team_close_rate": 6.3,
   "team_avg_rev_per_deal": 10977.0,
-  "team_crm_compliance": 92.3,
+  "team_crm_compliance": 92.1,
   "team_task_adherence": 66.1,
   "team_overdue": 117,
   "team_open_leads": 665,
@@ -63,14 +63,14 @@
     },
     {
       "funnel": "Website",
-      "count": 15
-    },
-    {
-      "funnel": "Meta Ads",
-      "count": 6
+      "count": 14
     },
     {
       "funnel": "YouTube",
+      "count": 5
+    },
+    {
+      "funnel": "Meta Ads",
       "count": 5
     },
     {
@@ -95,12 +95,12 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 28,
+    "in_house": 26,
     "external": 29,
     "unknown": 30,
-    "in_house_pct": 32.2,
-    "external_pct": 33.3,
-    "unknown_pct": 34.5
+    "in_house_pct": 30.6,
+    "external_pct": 34.1,
+    "unknown_pct": 35.3
   },
   "reps": [
     {
@@ -240,7 +240,7 @@
     },
     {
       "name": "Christian Hartwell",
-      "booked": 12,
+      "booked": 11,
       "shown": 3,
       "qualified": 4,
       "deals": 0,
@@ -383,37 +383,37 @@
     },
     {
       "name": "Eric Piccione",
-      "booked": 6,
-      "shown": 4,
+      "booked": 5,
+      "shown": 3,
       "qualified": 4,
       "deals": 1,
       "revenue": 11997.0,
-      "close_rate": 16.7,
+      "close_rate": 20.0,
       "qa_score": null,
       "avg_rev_per_deal": 11997.0,
       "crm_compliance": 100.0,
-      "crm_filled": 21,
-      "crm_total": 21,
+      "crm_filled": 16,
+      "crm_total": 16,
       "crm_detail": {
         "show_up": [
-          5,
-          5
+          4,
+          4
         ],
         "disposition": [
-          5,
-          5
+          4,
+          4
         ],
         "qualified": [
-          5,
-          5
+          4,
+          4
         ],
         "confidence": [
-          5,
-          5
+          4,
+          4
         ],
         "lost_reason": [
-          1,
-          1
+          0,
+          0
         ],
         "missing_leads": []
       },
@@ -492,62 +492,6 @@
       "lane": 2
     },
     {
-      "name": "Kelly Schrader",
-      "booked": 2,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 0.0,
-      "crm_filled": 0,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          0,
-          1
-        ],
-        "disposition": [
-          0,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Leilani Flores",
-            "lead_id": "lead_0FAJaUyN0HbrKSRSu3je3p1Elcf0JBtzn05e3xWBwU4",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 37,
-      "open_leads": 152,
-      "est_pipeline": 364800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Zac Clover",
       "booked": 2,
       "shown": 0,
@@ -602,6 +546,62 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Kelly Schrader",
+      "booked": 2,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 0.0,
+      "crm_filled": 0,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          0,
+          1
+        ],
+        "disposition": [
+          0,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Leilani Flores",
+            "lead_id": "lead_0FAJaUyN0HbrKSRSu3je3p1Elcf0JBtzn05e3xWBwU4",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 37,
+      "open_leads": 152,
+      "est_pipeline": 364800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     },
     {
       "name": "Joe Dysert",
