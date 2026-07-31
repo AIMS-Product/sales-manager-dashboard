@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31 12:45 PM PDT",
+  "updated_at": "2026-07-31 01:00 PM PDT",
   "week_label": "Jul 27 \u2013 Aug 02, 2026",
   "monday_str": "2026-07-27",
   "today_str": "2026-07-31",
@@ -41,13 +41,13 @@
     "task_adherence": 100
   },
   "total_booked": 130,
-  "total_shown": 68,
-  "total_qualified": 72,
+  "total_shown": 69,
+  "total_qualified": 73,
   "total_deals": 14,
   "total_revenue": 124161.0,
   "team_close_rate": 10.8,
   "team_avg_rev_per_deal": 8868.64,
-  "team_crm_compliance": 89.9,
+  "team_crm_compliance": 91.5,
   "team_task_adherence": 88.2,
   "team_overdue": 27,
   "team_open_leads": 686,
@@ -106,8 +106,8 @@
     {
       "name": "Shreya Bechra",
       "booked": 28,
-      "shown": 13,
-      "qualified": 13,
+      "shown": 14,
+      "qualified": 14,
       "deals": 4,
       "revenue": 29688.0,
       "close_rate": 14.3,
@@ -139,6 +139,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Ryan Brown",
+            "lead_id": "lead_JoyOB29pBOUGdyixbV4reG51KRdkZx49cVtaQ48eZUQ",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
             "name": "Jessica Rivas",
             "lead_id": "lead_FKfJ7U0xSMToiItwCjM9xgHSK2zOusmE7bxie0QByrf",
             "missing": [
@@ -153,13 +160,6 @@
             "lead_id": "lead_kH0uOdre4oDwqwUydeVwGn4j4AeNZNpJ5LJ4jadY22j",
             "missing": [
               "Show Up",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Ryan Brown",
-            "lead_id": "lead_JoyOB29pBOUGdyixbV4reG51KRdkZx49cVtaQ48eZUQ",
-            "missing": [
               "Confidence"
             ]
           },
@@ -273,82 +273,6 @@
       "lane": 1
     },
     {
-      "name": "Joe Vaughan",
-      "booked": 17,
-      "shown": 6,
-      "qualified": 10,
-      "deals": 2,
-      "revenue": 23994.0,
-      "close_rate": 11.8,
-      "qa_score": null,
-      "avg_rev_per_deal": 11997.0,
-      "crm_compliance": 72.1,
-      "crm_filled": 31,
-      "crm_total": 43,
-      "crm_detail": {
-        "show_up": [
-          9,
-          12
-        ],
-        "disposition": [
-          9,
-          12
-        ],
-        "qualified": [
-          6,
-          9
-        ],
-        "confidence": [
-          6,
-          9
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Roy Adams",
-            "lead_id": "lead_aWoXjID2RlwmRtCQav9LwEyW9m7CCsOYAziCXGMtWXf",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Alina Niromand",
-            "lead_id": "lead_70lXiv8PRT1Qqucz18ZlGoarU84JbLGzNDqBxYFn0bh",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Sean Jusko",
-            "lead_id": "lead_mhceITmHls64C0GWjg5KdKHHb5nBmvFWOz1VRCgCdL0",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Robin Perkins",
       "booked": 17,
       "shown": 11,
@@ -397,6 +321,69 @@
       "tasks_incomplete": 65,
       "open_leads": 96,
       "est_pipeline": 230400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Joe Vaughan",
+      "booked": 17,
+      "shown": 6,
+      "qualified": 10,
+      "deals": 2,
+      "revenue": 23994.0,
+      "close_rate": 11.8,
+      "qa_score": null,
+      "avg_rev_per_deal": 11997.0,
+      "crm_compliance": 88.1,
+      "crm_filled": 37,
+      "crm_total": 42,
+      "crm_detail": {
+        "show_up": [
+          10,
+          12
+        ],
+        "disposition": [
+          11,
+          12
+        ],
+        "qualified": [
+          7,
+          8
+        ],
+        "confidence": [
+          7,
+          8
+        ],
+        "lost_reason": [
+          2,
+          2
+        ],
+        "missing_leads": [
+          {
+            "name": "Roy Adams",
+            "lead_id": "lead_aWoXjID2RlwmRtCQav9LwEyW9m7CCsOYAziCXGMtWXf",
+            "missing": [
+              "Show Up"
+            ]
+          },
+          {
+            "name": "Sean Jusko",
+            "lead_id": "lead_mhceITmHls64C0GWjg5KdKHHb5nBmvFWOz1VRCgCdL0",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
