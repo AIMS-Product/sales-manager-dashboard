@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31 10:45 AM PDT",
+  "updated_at": "2026-07-31 11:00 AM PDT",
   "week_label": "Jul 27 \u2013 Aug 02, 2026",
   "monday_str": "2026-07-27",
   "today_str": "2026-07-31",
@@ -41,8 +41,8 @@
     "task_adherence": 100
   },
   "total_booked": 131,
-  "total_shown": 66,
-  "total_qualified": 71,
+  "total_shown": 67,
+  "total_qualified": 72,
   "total_deals": 14,
   "total_revenue": 124161.0,
   "team_close_rate": 10.7,
@@ -70,11 +70,11 @@
       "count": 14
     },
     {
-      "funnel": "Meta Ads",
+      "funnel": "Internal Webinar",
       "count": 9
     },
     {
-      "funnel": "Internal Webinar",
+      "funnel": "Meta Ads",
       "count": 9
     },
     {
@@ -106,8 +106,8 @@
     {
       "name": "Shreya Bechra",
       "booked": 28,
-      "shown": 12,
-      "qualified": 12,
+      "shown": 13,
+      "qualified": 13,
       "deals": 4,
       "revenue": 29688.0,
       "close_rate": 14.3,
@@ -273,6 +273,59 @@
       "lane": 1
     },
     {
+      "name": "Robin Perkins",
+      "booked": 17,
+      "shown": 11,
+      "qualified": 11,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 5.9,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 98.3,
+      "crm_filled": 57,
+      "crm_total": 58,
+      "crm_detail": {
+        "show_up": [
+          16,
+          16
+        ],
+        "disposition": [
+          16,
+          16
+        ],
+        "qualified": [
+          12,
+          12
+        ],
+        "confidence": [
+          11,
+          12
+        ],
+        "lost_reason": [
+          2,
+          2
+        ],
+        "missing_leads": [
+          {
+            "name": "Ricky McCravy",
+            "lead_id": "lead_tWdnGeAsI9uYq4QcxFrfxoNQwaMRolV0F0YmKi2QDUQ",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 96.9,
+      "tasks_overdue": 2,
+      "tasks_incomplete": 65,
+      "open_leads": 96,
+      "est_pipeline": 230400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Joe Vaughan",
       "booked": 17,
       "shown": 6,
@@ -344,59 +397,6 @@
       "tasks_incomplete": 0,
       "open_leads": 0,
       "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 17,
-      "shown": 11,
-      "qualified": 11,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 5.9,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 98.3,
-      "crm_filled": 57,
-      "crm_total": 58,
-      "crm_detail": {
-        "show_up": [
-          16,
-          16
-        ],
-        "disposition": [
-          16,
-          16
-        ],
-        "qualified": [
-          12,
-          12
-        ],
-        "confidence": [
-          11,
-          12
-        ],
-        "lost_reason": [
-          2,
-          2
-        ],
-        "missing_leads": [
-          {
-            "name": "Ricky McCravy",
-            "lead_id": "lead_tWdnGeAsI9uYq4QcxFrfxoNQwaMRolV0F0YmKi2QDUQ",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 96.9,
-      "tasks_overdue": 2,
-      "tasks_incomplete": 65,
-      "open_leads": 96,
-      "est_pipeline": 230400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -755,29 +755,6 @@
       "lane": 1
     },
     {
-      "name": "Dubem Adindu",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 41,
-      "est_pipeline": 98400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -799,6 +776,29 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Dubem Adindu",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 41,
+      "est_pipeline": 98400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     }
   ]
 }
