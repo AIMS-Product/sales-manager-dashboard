@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31 07:45 AM PDT",
+  "updated_at": "2026-07-31 08:00 AM PDT",
   "week_label": "Jul 27 \u2013 Aug 02, 2026",
   "monday_str": "2026-07-27",
   "today_str": "2026-07-31",
@@ -40,18 +40,18 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 135,
-  "total_shown": 67,
-  "total_qualified": 71,
+  "total_booked": 132,
+  "total_shown": 65,
+  "total_qualified": 70,
   "total_deals": 12,
   "total_revenue": 106167.0,
-  "team_close_rate": 8.9,
+  "team_close_rate": 9.1,
   "team_avg_rev_per_deal": 8847.25,
   "team_crm_compliance": 90.2,
-  "team_task_adherence": 72.0,
+  "team_task_adherence": 72.3,
   "team_overdue": 82,
-  "team_open_leads": 683,
-  "team_est_pipeline": 1639200,
+  "team_open_leads": 684,
+  "team_est_pipeline": 1641600,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -105,33 +105,33 @@
   "reps": [
     {
       "name": "Shreya Bechra",
-      "booked": 28,
-      "shown": 13,
+      "booked": 27,
+      "shown": 12,
       "qualified": 12,
       "deals": 3,
       "revenue": 20691.0,
-      "close_rate": 10.7,
+      "close_rate": 11.1,
       "qa_score": null,
       "avg_rev_per_deal": 6897.0,
-      "crm_compliance": 93.1,
-      "crm_filled": 67,
-      "crm_total": 72,
+      "crm_compliance": 92.6,
+      "crm_filled": 63,
+      "crm_total": 68,
       "crm_detail": {
         "show_up": [
-          19,
-          20
+          18,
+          19
         ],
         "disposition": [
-          20,
-          20
+          19,
+          19
         ],
         "qualified": [
-          14,
-          15
+          13,
+          14
         ],
         "confidence": [
-          13,
-          15
+          12,
+          14
         ],
         "lost_reason": [
           1,
@@ -264,46 +264,39 @@
     },
     {
       "name": "Joe Vaughan",
-      "booked": 19,
-      "shown": 7,
-      "qualified": 11,
+      "booked": 18,
+      "shown": 6,
+      "qualified": 10,
       "deals": 2,
       "revenue": 23994.0,
-      "close_rate": 10.5,
+      "close_rate": 11.1,
       "qa_score": null,
       "avg_rev_per_deal": 11997.0,
-      "crm_compliance": 70.0,
-      "crm_filled": 35,
-      "crm_total": 50,
+      "crm_compliance": 68.9,
+      "crm_filled": 31,
+      "crm_total": 45,
       "crm_detail": {
         "show_up": [
-          10,
-          14
+          9,
+          13
         ],
         "disposition": [
-          10,
-          14
+          9,
+          13
         ],
         "qualified": [
-          7,
-          10
+          6,
+          9
         ],
         "confidence": [
-          7,
-          10
+          6,
+          9
         ],
         "lost_reason": [
           1,
-          2
+          1
         ],
         "missing_leads": [
-          {
-            "name": "Justin Kim",
-            "lead_id": "lead_Vsaf4BPyeEsfk0FiV43t7JskXxtmMwQFBmpf9ZaZ1zj",
-            "missing": [
-              "Lost Reason"
-            ]
-          },
           {
             "name": "Roy Adams",
             "lead_id": "lead_aWoXjID2RlwmRtCQav9LwEyW9m7CCsOYAziCXGMtWXf",
@@ -445,11 +438,74 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 4,
-      "open_leads": 75,
-      "est_pipeline": 180000,
+      "open_leads": 76,
+      "est_pipeline": 182400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 8,
+      "shown": 5,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 86.1,
+      "crm_filled": 31,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          7,
+          8
+        ],
+        "disposition": [
+          7,
+          8
+        ],
+        "qualified": [
+          6,
+          7
+        ],
+        "confidence": [
+          6,
+          7
+        ],
+        "lost_reason": [
+          5,
+          6
+        ],
+        "missing_leads": [
+          {
+            "name": "Justin Kim",
+            "lead_id": "lead_Vsaf4BPyeEsfk0FiV43t7JskXxtmMwQFBmpf9ZaZ1zj",
+            "missing": [
+              "Lost Reason"
+            ]
+          },
+          {
+            "name": "Tanya Gutierrez",
+            "lead_id": "lead_cbHXtDPjUrhx7LrtHVZ3AWYTCXjCQC1vXoe9FOMxazA",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 13.1,
+      "tasks_overdue": 53,
+      "tasks_incomplete": 61,
+      "open_leads": 140,
+      "est_pipeline": 336000,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
     },
     {
       "name": "Scott Seymour",
@@ -585,107 +641,6 @@
       "lane": 2
     },
     {
-      "name": "Jason Aaron",
-      "booked": 5,
-      "shown": 3,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 81.0,
-      "crm_filled": 17,
-      "crm_total": 21,
-      "crm_detail": {
-        "show_up": [
-          4,
-          5
-        ],
-        "disposition": [
-          4,
-          5
-        ],
-        "qualified": [
-          3,
-          4
-        ],
-        "confidence": [
-          3,
-          4
-        ],
-        "lost_reason": [
-          3,
-          3
-        ],
-        "missing_leads": [
-          {
-            "name": "Tanya Gutierrez",
-            "lead_id": "lead_cbHXtDPjUrhx7LrtHVZ3AWYTCXjCQC1vXoe9FOMxazA",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 8.6,
-      "tasks_overdue": 53,
-      "tasks_incomplete": 58,
-      "open_leads": 140,
-      "est_pipeline": 336000,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
-    },
-    {
-      "name": "Danny Santolaya",
-      "booked": 5,
-      "shown": 2,
-      "qualified": 2,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": 20.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 13,
-      "crm_total": 13,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Zac Clover",
       "booked": 4,
       "shown": 2,
@@ -748,6 +703,51 @@
       "tasks_incomplete": 12,
       "open_leads": 93,
       "est_pipeline": 223200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Danny Santolaya",
+      "booked": 4,
+      "shown": 2,
+      "qualified": 2,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": 25.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 8,
+      "crm_total": 8,
+      "crm_detail": {
+        "show_up": [
+          2,
+          2
+        ],
+        "disposition": [
+          2,
+          2
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
