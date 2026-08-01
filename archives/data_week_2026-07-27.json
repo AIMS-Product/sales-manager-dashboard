@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-01 12:00 PM PDT",
+  "updated_at": "2026-08-01 12:15 PM PDT",
   "week_label": "Jul 27 \u2013 Aug 02, 2026",
   "monday_str": "2026-07-27",
   "today_str": "2026-08-01",
@@ -47,7 +47,7 @@
   "total_revenue": 148149.0,
   "team_close_rate": 12.6,
   "team_avg_rev_per_deal": 8230.5,
-  "team_crm_compliance": 90.2,
+  "team_crm_compliance": 90.1,
   "team_task_adherence": 77.2,
   "team_overdue": 54,
   "team_open_leads": 688,
@@ -581,9 +581,9 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 87.0,
-      "crm_filled": 20,
-      "crm_total": 23,
+      "crm_compliance": 84.0,
+      "crm_filled": 21,
+      "crm_total": 25,
       "crm_detail": {
         "show_up": [
           6,
@@ -595,17 +595,24 @@
         ],
         "qualified": [
           3,
-          5
+          6
         ],
         "confidence": [
-          4,
-          5
+          5,
+          6
         ],
         "lost_reason": [
           1,
           1
         ],
         "missing_leads": [
+          {
+            "name": "Ryland Williams",
+            "lead_id": "lead_BK3qYXaMgTcuRHbwjrZbZl1is0WlUsx3SHgivHxBAzW",
+            "missing": [
+              "Qualified"
+            ]
+          },
           {
             "name": "Alejandro Tolentino",
             "lead_id": "lead_0QGWWdtGvN6lfs5sF0MRxFdKVw8ODufZxfGG0agaest",
@@ -721,6 +728,51 @@
       "lane": 2
     },
     {
+      "name": "Danny Santolaya",
+      "booked": 4,
+      "shown": 3,
+      "qualified": 3,
+      "deals": 2,
+      "revenue": 17994.0,
+      "close_rate": 50.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 13,
+      "crm_total": 13,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Zac Clover",
       "booked": 4,
       "shown": 2,
@@ -783,51 +835,6 @@
       "tasks_incomplete": 12,
       "open_leads": 93,
       "est_pipeline": 223200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Danny Santolaya",
-      "booked": 4,
-      "shown": 3,
-      "qualified": 3,
-      "deals": 2,
-      "revenue": 17994.0,
-      "close_rate": 50.0,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 13,
-      "crm_total": 13,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
