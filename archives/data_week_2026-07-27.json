@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-02 09:00 AM PDT",
+  "updated_at": "2026-08-02 09:15 AM PDT",
   "week_label": "Jul 27 \u2013 Aug 02, 2026",
   "monday_str": "2026-07-27",
   "today_str": "2026-08-02",
   "day_of_week": 7,
-  "num_reps": 12,
+  "num_reps": 13,
   "targets": {
     "booked": 15,
     "shown": 11,
@@ -30,11 +30,11 @@
     "task_adherence": 100
   },
   "team_targets": {
-    "booked": 180,
-    "shown": 132,
-    "qualified": 96,
-    "deals": 36,
-    "revenue": 288000,
+    "booked": 195,
+    "shown": 143,
+    "qualified": 104,
+    "deals": 39,
+    "revenue": 312000,
     "close_rate": 20,
     "avg_rev_per_deal": 8000,
     "crm_compliance": 90,
@@ -47,7 +47,7 @@
   "total_revenue": 148149.0,
   "team_close_rate": 12.2,
   "team_avg_rev_per_deal": 8230.5,
-  "team_crm_compliance": 91.2,
+  "team_crm_compliance": 90.8,
   "team_task_adherence": 76.1,
   "team_overdue": 58,
   "team_open_leads": 692,
@@ -356,47 +356,39 @@
     },
     {
       "name": "Luke Herman",
-      "booked": 25,
+      "booked": 24,
       "shown": 12,
       "qualified": 10,
       "deals": 2,
       "revenue": 20397.0,
-      "close_rate": 8.0,
+      "close_rate": 8.3,
       "qa_score": null,
       "avg_rev_per_deal": 10198.5,
-      "crm_compliance": 98.9,
-      "crm_filled": 86,
-      "crm_total": 87,
+      "crm_compliance": 100.0,
+      "crm_filled": 83,
+      "crm_total": 83,
       "crm_detail": {
         "show_up": [
-          23,
-          23
+          22,
+          22
         ],
         "disposition": [
-          23,
-          23
+          22,
+          22
         ],
         "qualified": [
-          18,
-          18
+          17,
+          17
         ],
         "confidence": [
           17,
-          18
+          17
         ],
         "lost_reason": [
           5,
           5
         ],
-        "missing_leads": [
-          {
-            "name": "Dudley Mcewen",
-            "lead_id": "lead_lxC2mDb5HKPsU741HHdyL3zMqwSeSbzUXSVMl4Zf0Ek",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": null,
       "tasks_overdue": 0,
@@ -593,9 +585,9 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 87.0,
+      "crm_compliance": 80.0,
       "crm_filled": 20,
-      "crm_total": 23,
+      "crm_total": 25,
       "crm_detail": {
         "show_up": [
           6,
@@ -607,17 +599,25 @@
         ],
         "qualified": [
           3,
-          5
+          6
         ],
         "confidence": [
           4,
-          5
+          6
         ],
         "lost_reason": [
           1,
           1
         ],
         "missing_leads": [
+          {
+            "name": "Ryland Williams",
+            "lead_id": "lead_BK3qYXaMgTcuRHbwjrZbZl1is0WlUsx3SHgivHxBAzW",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          },
           {
             "name": "Rania Mohamed",
             "lead_id": "lead_wBIZPvsvSOMfBMAaCUohRNQuRPtwrB9tYgAdUylETFy",
@@ -845,27 +845,57 @@
       "lane": 1
     },
     {
-      "name": "Dubem Adindu",
-      "booked": 0,
+      "name": "William Nowak",
+      "booked": 1,
       "shown": 0,
       "qualified": 0,
       "deals": 0,
       "revenue": 0,
-      "close_rate": null,
+      "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
+      "crm_compliance": 75.0,
+      "crm_filled": 3,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          1,
+          1
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Dudley Mcewen",
+            "lead_id": "lead_lxC2mDb5HKPsU741HHdyL3zMqwSeSbzUXSVMl4Zf0Ek",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
       "tasks_overdue": 0,
       "tasks_incomplete": 0,
-      "open_leads": 41,
-      "est_pipeline": 98400,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
-      "lane": 2
+      "lane": 1
     },
     {
       "name": "Joe Dysert",
@@ -889,6 +919,29 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Dubem Adindu",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 41,
+      "est_pipeline": 98400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
     }
   ]
 }
