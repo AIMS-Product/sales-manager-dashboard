@@ -218,6 +218,11 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
     excluded_user = 0
     excluded_funnel = 0
 
+    # Team-wide totals (before owner exclusions, so Team Totals match MTD funnel dashboard)
+    all_booked = 0
+    all_shown = 0
+    all_qualified = 0
+
     for lead in all_leads:
         status_id = lead.get("status_id", "")
         if status_id in EXCLUDED_LEAD_STATUSES:
@@ -252,9 +257,6 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
             funnel_raw = custom.get(CF_FUNNEL_NAME_ID, "")
 
         rep_name = resolve_owner(owner_raw, user_map, name_to_id)
-        if rep_name in EXCLUDE_USERS:
-            excluded_user += 1
-            continue
 
         # Funnel name — exclude leads from blacklisted funnels
         funnel_name = str(funnel_raw).strip() if funnel_raw else "Unknown"
@@ -262,8 +264,19 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
             excluded_funnel += 1
             continue
 
-        # Track funnel
+        # Track team-wide totals BEFORE owner exclusions (so Team Totals match MTD funnel dashboard)
+        all_booked += 1
+        if str(show_up).strip().lower() == "yes":
+            all_shown += 1
+        if str(qualified_val).strip().lower() == "yes":
+            all_qualified += 1
+
+        # Track funnel (all leads, not just active reps)
         funnel_counts[funnel_name] = funnel_counts.get(funnel_name, 0) + 1
+
+        if rep_name in EXCLUDE_USERS:
+            excluded_user += 1
+            continue
 
         rep_booked[rep_name] = rep_booked.get(rep_name, 0) + 1
 
@@ -425,7 +438,9 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
           f"External: {external} ({funnel_sources['external_pct']}%) | "
           f"Unknown: {unknown_src} ({funnel_sources['unknown_pct']}%)", flush=True)
 
-    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources
+    team_totals = {"booked": all_booked, "shown": all_shown, "qualified": all_qualified}
+
+    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources, team_totals
 
 
 # ── API helpers ──────────────────────────────────────────────────────────────
@@ -773,7 +788,7 @@ def build_dashboard_data():
     # Booked meetings: query leads by First Sales Call Booked Date field
     t0 = time.time()
     print("  Fetching leads by First Sales Call Booked Date...", flush=True)
-    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources = \
+    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources, raw_team_totals = \
         fetch_booked_leads(monday_str, today_str, user_map, name_to_id)
     print(f"  Booked leads done. ({time.time()-t0:.1f}s)", flush=True)
 
@@ -841,16 +856,15 @@ def build_dashboard_data():
     reps.sort(key=lambda r: r["booked"], reverse=True)
 
     # Team totals — manager excluded from CRM/tasks,
-    # but included for revenue/deals (counts toward team volume)
+    # but included for booked/shown/qualified/revenue/deals (counts toward team volume)
     non_mgr = [r for r in reps if not r["is_manager"]]
-    lane1_reps = [r for r in reps if r.get("lane") == 1 and not r["is_manager"]]
     num_reps = len(non_mgr)
 
-    # Booked/shown/qualified — Lane 1 only for team show rate
-    # (Lane 2's lower show rates don't drag down team metrics)
-    total_booked = sum(r["booked"] for r in lane1_reps) + sum(r["booked"] for r in reps if r["is_manager"])
-    total_shown = sum(r["shown"] for r in lane1_reps) + sum(r["shown"] for r in reps if r["is_manager"])
-    total_qualified = sum(r["qualified"] for r in lane1_reps) + sum(r["qualified"] for r in reps if r["is_manager"])
+    # Booked/shown/qualified — use unfiltered totals (includes all owners)
+    # so Team Totals match the MTD funnel dashboard
+    total_booked = raw_team_totals["booked"]
+    total_shown = raw_team_totals["shown"]
+    total_qualified = raw_team_totals["qualified"]
 
     # CRM still excludes manager
     total_crm_filled = sum(r["crm_filled"] for r in non_mgr)
