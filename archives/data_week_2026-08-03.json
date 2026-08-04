@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 10:15 AM PDT",
+  "updated_at": "2026-08-04 10:30 AM PDT",
   "week_label": "Aug 03 \u2013 Aug 09, 2026",
   "monday_str": "2026-08-03",
   "today_str": "2026-08-04",
@@ -48,10 +48,10 @@
   "team_close_rate": 7.3,
   "team_avg_rev_per_deal": 7997.0,
   "team_crm_compliance": 88.5,
-  "team_task_adherence": 71.7,
+  "team_task_adherence": 71.8,
   "team_overdue": 71,
-  "team_open_leads": 694,
-  "team_est_pipeline": 1665600,
+  "team_open_leads": 695,
+  "team_est_pipeline": 1668000,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -133,9 +133,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 34,
-      "open_leads": 60,
-      "est_pipeline": 144000,
+      "tasks_incomplete": 35,
+      "open_leads": 61,
+      "est_pipeline": 146400,
       "is_manager": false,
       "is_lead": true,
       "lane": 1
@@ -231,60 +231,49 @@
       "lane": 1
     },
     {
-      "name": "Jason Aaron",
+      "name": "Shreya Bechra",
       "booked": 4,
-      "shown": 1,
-      "qualified": 0,
+      "shown": 2,
+      "qualified": 2,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 71.4,
-      "crm_filled": 10,
-      "crm_total": 14,
+      "crm_compliance": 100.0,
+      "crm_filled": 6,
+      "crm_total": 6,
       "crm_detail": {
         "show_up": [
           2,
-          3
+          2
         ],
         "disposition": [
           2,
-          3
-        ],
-        "qualified": [
-          2,
-          3
-        ],
-        "confidence": [
-          2,
-          3
-        ],
-        "lost_reason": [
-          2,
           2
         ],
-        "missing_leads": [
-          {
-            "name": "Randall",
-            "lead_id": "lead_96Jn808WsWha3dobGtgZwUTNm36kjciJQNl6j1oG9AC",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
       },
-      "task_adherence": 40.0,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 10,
-      "open_leads": 139,
-      "est_pipeline": 333600,
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
-      "is_lead": true,
-      "lane": 2
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Luke Herman",
@@ -386,49 +375,60 @@
       "lane": 1
     },
     {
-      "name": "Shreya Bechra",
+      "name": "Jason Aaron",
       "booked": 4,
-      "shown": 2,
-      "qualified": 2,
+      "shown": 1,
+      "qualified": 0,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 6,
-      "crm_total": 6,
+      "crm_compliance": 71.4,
+      "crm_filled": 10,
+      "crm_total": 14,
       "crm_detail": {
         "show_up": [
           2,
-          2
+          3
         ],
         "disposition": [
           2,
-          2
+          3
         ],
         "qualified": [
-          1,
-          1
+          2,
+          3
         ],
         "confidence": [
-          1,
-          1
+          2,
+          3
         ],
         "lost_reason": [
-          0,
-          0
+          2,
+          2
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Randall",
+            "lead_id": "lead_96Jn808WsWha3dobGtgZwUTNm36kjciJQNl6j1oG9AC",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
       },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
+      "task_adherence": 40.0,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 10,
+      "open_leads": 139,
+      "est_pipeline": 333600,
       "is_manager": false,
-      "is_lead": false,
-      "lane": 1
+      "is_lead": true,
+      "lane": 2
     },
     {
       "name": "Kelly Schrader",
@@ -472,29 +472,6 @@
       "tasks_incomplete": 12,
       "open_leads": 93,
       "est_pipeline": 223200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 74.3,
-      "tasks_overdue": 19,
-      "tasks_incomplete": 74,
-      "open_leads": 95,
-      "est_pipeline": 228000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -544,6 +521,29 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
+    },
+    {
+      "name": "Robin Perkins",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 74.3,
+      "tasks_overdue": 19,
+      "tasks_incomplete": 74,
+      "open_leads": 95,
+      "est_pipeline": 228000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Scott Seymour",
