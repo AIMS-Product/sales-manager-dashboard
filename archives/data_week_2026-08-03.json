@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 12:00 AM PDT",
+  "updated_at": "2026-08-05 12:15 AM PDT",
   "week_label": "Aug 03 \u2013 Aug 09, 2026",
   "monday_str": "2026-08-03",
   "today_str": "2026-08-05",
@@ -48,7 +48,7 @@
   "team_close_rate": 6.6,
   "team_avg_rev_per_deal": 9747.0,
   "team_crm_compliance": 79.7,
-  "team_task_adherence": 68.8,
+  "team_task_adherence": 69.0,
   "team_overdue": 81,
   "team_open_leads": 702,
   "team_est_pipeline": 1684800,
@@ -208,74 +208,6 @@
       "lane": 1
     },
     {
-      "name": "Shreya Bechra",
-      "booked": 7,
-      "shown": 3,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 76.5,
-      "crm_filled": 13,
-      "crm_total": 17,
-      "crm_detail": {
-        "show_up": [
-          4,
-          4
-        ],
-        "disposition": [
-          4,
-          4
-        ],
-        "qualified": [
-          3,
-          4
-        ],
-        "confidence": [
-          2,
-          4
-        ],
-        "lost_reason": [
-          0,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Logan Jacobs",
-            "lead_id": "lead_d4hQPeETNDOSya0sJCaPoRFW4BBa8Eyi9PQwutQ1O5G",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Dimitri Woods",
-            "lead_id": "lead_lOVPlQ27O4lxNkyp7TiP9M4VzrWqbXxlnhl84nUzwz1",
-            "missing": [
-              "Qualified",
-              "Lost Reason"
-            ]
-          },
-          {
-            "name": "Rob Anderson",
-            "lead_id": "lead_2tc0yYhxELvpxDnGDGRvsfx9ody344weOiKSP0Yvl2r",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Danny Santolaya",
       "booked": 7,
       "shown": 0,
@@ -388,6 +320,74 @@
       "tasks_incomplete": 5,
       "open_leads": 80,
       "est_pipeline": 192000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Shreya Bechra",
+      "booked": 7,
+      "shown": 3,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 76.5,
+      "crm_filled": 13,
+      "crm_total": 17,
+      "crm_detail": {
+        "show_up": [
+          4,
+          4
+        ],
+        "disposition": [
+          4,
+          4
+        ],
+        "qualified": [
+          3,
+          4
+        ],
+        "confidence": [
+          2,
+          4
+        ],
+        "lost_reason": [
+          0,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Logan Jacobs",
+            "lead_id": "lead_d4hQPeETNDOSya0sJCaPoRFW4BBa8Eyi9PQwutQ1O5G",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Dimitri Woods",
+            "lead_id": "lead_lOVPlQ27O4lxNkyp7TiP9M4VzrWqbXxlnhl84nUzwz1",
+            "missing": [
+              "Qualified",
+              "Lost Reason"
+            ]
+          },
+          {
+            "name": "Rob Anderson",
+            "lead_id": "lead_2tc0yYhxELvpxDnGDGRvsfx9ody344weOiKSP0Yvl2r",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -634,6 +634,29 @@
       "lane": 2
     },
     {
+      "name": "Robin Perkins",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 8997.0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": 8997.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 72.0,
+      "tasks_overdue": 21,
+      "tasks_incomplete": 75,
+      "open_leads": 95,
+      "est_pipeline": 228000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -653,29 +676,6 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 8997.0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": 8997.0,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 71.6,
-      "tasks_overdue": 21,
-      "tasks_incomplete": 74,
-      "open_leads": 95,
-      "est_pipeline": 228000,
-      "is_manager": false,
       "is_lead": false,
       "lane": 1
     },
