@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 09:15 AM PDT",
+  "updated_at": "2026-08-05 09:30 AM PDT",
   "week_label": "Aug 03 \u2013 Aug 09, 2026",
   "monday_str": "2026-08-03",
   "today_str": "2026-08-05",
@@ -48,10 +48,10 @@
   "team_close_rate": 8.2,
   "team_avg_rev_per_deal": 8997.0,
   "team_crm_compliance": 83.5,
-  "team_task_adherence": 70.2,
-  "team_overdue": 77,
-  "team_open_leads": 702,
-  "team_est_pipeline": 1684800,
+  "team_task_adherence": 70.4,
+  "team_overdue": 76,
+  "team_open_leads": 704,
+  "team_est_pipeline": 1689600,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -135,8 +135,8 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 94.7,
-      "tasks_overdue": 2,
+      "task_adherence": 97.4,
+      "tasks_overdue": 1,
       "tasks_incomplete": 38,
       "open_leads": 65,
       "est_pipeline": 156000,
@@ -196,6 +196,59 @@
       "tasks_incomplete": 0,
       "open_leads": 0,
       "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Eric Piccione",
+      "booked": 7,
+      "shown": 4,
+      "qualified": 4,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 93.8,
+      "crm_filled": 15,
+      "crm_total": 16,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          2,
+          3
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Harry Hatziyannakis",
+            "lead_id": "lead_Dq0QKTXyZAsO8NExndApkg74Y7x7tRwWqvJZhoCN0Xo",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 5,
+      "open_leads": 81,
+      "est_pipeline": 194400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -318,59 +371,6 @@
       "tasks_incomplete": 0,
       "open_leads": 0,
       "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Eric Piccione",
-      "booked": 7,
-      "shown": 4,
-      "qualified": 4,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 93.8,
-      "crm_filled": 15,
-      "crm_total": 16,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          2,
-          3
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Harry Hatziyannakis",
-            "lead_id": "lead_Dq0QKTXyZAsO8NExndApkg74Y7x7tRwWqvJZhoCN0Xo",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 5,
-      "open_leads": 81,
-      "est_pipeline": 194400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -530,9 +530,9 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 98.7,
+      "task_adherence": 98.6,
       "tasks_overdue": 1,
-      "tasks_incomplete": 76,
+      "tasks_incomplete": 73,
       "open_leads": 33,
       "est_pipeline": 79200,
       "is_manager": false,
@@ -584,37 +584,14 @@
           }
         ]
       },
-      "task_adherence": 12.2,
+      "task_adherence": 16.3,
       "tasks_overdue": 36,
-      "tasks_incomplete": 41,
-      "open_leads": 155,
-      "est_pipeline": 372000,
+      "tasks_incomplete": 43,
+      "open_leads": 157,
+      "est_pipeline": 376800,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
-    },
-    {
-      "name": "Joe Dysert",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": null,
-      "tasks_incomplete": null,
-      "open_leads": null,
-      "est_pipeline": null,
-      "is_manager": true,
-      "is_lead": false,
-      "lane": 1
     },
     {
       "name": "Dubem Adindu",
@@ -682,6 +659,29 @@
       "open_leads": 93,
       "est_pipeline": 223200,
       "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Joe Dysert",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": null,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
       "is_lead": false,
       "lane": 1
     }
