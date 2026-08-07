@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 10:30 AM PDT",
+  "updated_at": "2026-08-07 10:45 AM PDT",
   "week_label": "Aug 03 \u2013 Aug 09, 2026",
   "monday_str": "2026-08-03",
   "today_str": "2026-08-07",
@@ -41,7 +41,7 @@
     "task_adherence": 100
   },
   "total_booked": 104,
-  "total_shown": 48,
+  "total_shown": 50,
   "total_qualified": 45,
   "total_deals": 8,
   "total_revenue": 66876.0,
@@ -110,7 +110,7 @@
     {
       "name": "Christian Hartwell",
       "booked": 19,
-      "shown": 10,
+      "shown": 11,
       "qualified": 12,
       "deals": 2,
       "revenue": 14994.0,
@@ -145,7 +145,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 37,
+      "tasks_incomplete": 36,
       "open_leads": 71,
       "est_pipeline": 170400,
       "is_manager": false,
@@ -324,9 +324,54 @@
       "lane": 1
     },
     {
+      "name": "Luke Herman",
+      "booked": 13,
+      "shown": 5,
+      "qualified": 5,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 28,
+      "crm_total": 28,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          7,
+          7
+        ],
+        "qualified": [
+          7,
+          7
+        ],
+        "confidence": [
+          7,
+          7
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Eric Piccione",
       "booked": 13,
-      "shown": 8,
+      "shown": 9,
       "qualified": 8,
       "deals": 0,
       "revenue": 0,
@@ -377,54 +422,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 6,
+      "tasks_incomplete": 7,
       "open_leads": 84,
       "est_pipeline": 201600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Luke Herman",
-      "booked": 13,
-      "shown": 5,
-      "qualified": 5,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 28,
-      "crm_total": 28,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          7,
-          7
-        ],
-        "qualified": [
-          7,
-          7
-        ],
-        "confidence": [
-          7,
-          7
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -552,29 +552,6 @@
       "lane": 1
     },
     {
-      "name": "Zac Clover",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 25.0,
-      "tasks_overdue": 9,
-      "tasks_incomplete": 12,
-      "open_leads": 93,
-      "est_pipeline": 223200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -619,6 +596,29 @@
       "is_manager": false,
       "is_lead": true,
       "lane": 2
+    },
+    {
+      "name": "Zac Clover",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 25.0,
+      "tasks_overdue": 9,
+      "tasks_incomplete": 12,
+      "open_leads": 93,
+      "est_pipeline": 223200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Dubem Adindu",
