@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11 08:00 AM PDT",
+  "updated_at": "2026-08-11 08:15 AM PDT",
   "week_label": "Aug 10 \u2013 Aug 16, 2026",
   "monday_str": "2026-08-10",
   "today_str": "2026-08-11",
@@ -48,10 +48,10 @@
   "team_close_rate": 2.8,
   "team_avg_rev_per_deal": 5000.0,
   "team_crm_compliance": 72.0,
-  "team_task_adherence": 54.9,
-  "team_overdue": 115,
-  "team_open_leads": 545,
-  "team_est_pipeline": 1308000,
+  "team_task_adherence": 55.8,
+  "team_overdue": 111,
+  "team_open_leads": 542,
+  "team_est_pipeline": 1300800,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -227,11 +227,65 @@
           }
         ]
       },
-      "task_adherence": 63.0,
-      "tasks_overdue": 27,
-      "tasks_incomplete": 73,
-      "open_leads": 96,
-      "est_pipeline": 230400,
+      "task_adherence": 66.7,
+      "tasks_overdue": 23,
+      "tasks_incomplete": 69,
+      "open_leads": 93,
+      "est_pipeline": 223200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Shreya Bechra",
+      "booked": 5,
+      "shown": 3,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 88.2,
+      "crm_filled": 15,
+      "crm_total": 17,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          4,
+          5
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          2,
+          3
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Chris Tubiolo",
+            "lead_id": "lead_Ubh8fXu2U4rirAGNZ6R049jqd0sbAAcfA1lS60T0G6P",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -305,57 +359,48 @@
       "lane": 1
     },
     {
-      "name": "Shreya Bechra",
-      "booked": 5,
+      "name": "Christian Hartwell",
+      "booked": 4,
       "shown": 3,
-      "qualified": 2,
+      "qualified": 3,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 88.2,
-      "crm_filled": 15,
-      "crm_total": 17,
+      "crm_compliance": 100.0,
+      "crm_filled": 12,
+      "crm_total": 12,
       "crm_detail": {
         "show_up": [
-          5,
-          5
+          3,
+          3
         ],
         "disposition": [
-          4,
-          5
+          3,
+          3
         ],
         "qualified": [
           3,
           3
         ],
         "confidence": [
-          2,
+          3,
           3
         ],
         "lost_reason": [
-          1,
-          1
+          0,
+          0
         ],
-        "missing_leads": [
-          {
-            "name": "Chris Tubiolo",
-            "lead_id": "lead_Ubh8fXu2U4rirAGNZ6R049jqd0sbAAcfA1lS60T0G6P",
-            "missing": [
-              "Disposition",
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
+      "task_adherence": 80.0,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 30,
+      "open_leads": 78,
+      "est_pipeline": 187200,
       "is_manager": false,
-      "is_lead": false,
+      "is_lead": true,
       "lane": 1
     },
     {
@@ -404,51 +449,6 @@
       "lane": 1
     },
     {
-      "name": "Christian Hartwell",
-      "booked": 4,
-      "shown": 3,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 12,
-      "crm_total": 12,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 80.0,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 30,
-      "open_leads": 78,
-      "est_pipeline": 187200,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 1
-    },
-    {
       "name": "Danny Santolaya",
       "booked": 2,
       "shown": 0,
@@ -470,29 +470,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "Kelly Schrader",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 7.7,
-      "tasks_overdue": 48,
-      "tasks_incomplete": 52,
-      "open_leads": 160,
-      "est_pipeline": 384000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
     },
     {
       "name": "Dubem Adindu",
@@ -518,7 +495,7 @@
       "lane": 2
     },
     {
-      "name": "Scott Seymour",
+      "name": "Jason Aaron",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -531,14 +508,14 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 82.9,
+      "task_adherence": 7.7,
       "tasks_overdue": 12,
-      "tasks_incomplete": 70,
-      "open_leads": 33,
-      "est_pipeline": 79200,
+      "tasks_incomplete": 13,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
-      "is_lead": false,
-      "lane": 1
+      "is_lead": true,
+      "lane": 2
     },
     {
       "name": "Joe Dysert",
@@ -587,7 +564,30 @@
       "lane": 1
     },
     {
-      "name": "Jason Aaron",
+      "name": "Scott Seymour",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 82.9,
+      "tasks_overdue": 12,
+      "tasks_incomplete": 70,
+      "open_leads": 33,
+      "est_pipeline": 79200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Kelly Schrader",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -601,12 +601,12 @@
       "crm_total": 0,
       "crm_detail": null,
       "task_adherence": 7.7,
-      "tasks_overdue": 12,
-      "tasks_incomplete": 13,
-      "open_leads": 0,
-      "est_pipeline": 0,
+      "tasks_overdue": 48,
+      "tasks_incomplete": 52,
+      "open_leads": 160,
+      "est_pipeline": 384000,
       "is_manager": false,
-      "is_lead": true,
+      "is_lead": false,
       "lane": 2
     }
   ]
