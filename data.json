@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11 05:30 PM PDT",
+  "updated_at": "2026-08-11 05:45 PM PDT",
   "week_label": "Aug 10 \u2013 Aug 16, 2026",
   "monday_str": "2026-08-10",
   "today_str": "2026-08-11",
@@ -223,6 +223,51 @@
       "lane": 1
     },
     {
+      "name": "Robin Perkins",
+      "booked": 6,
+      "shown": 4,
+      "qualified": 4,
+      "deals": 1,
+      "revenue": 5000.0,
+      "close_rate": 16.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 5000.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 12,
+      "crm_total": 12,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          3,
+          3
+        ],
+        "confidence": [
+          3,
+          3
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 69,
+      "open_leads": 93,
+      "est_pipeline": 223200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Eric Piccione",
       "booked": 6,
       "shown": 4,
@@ -286,51 +331,6 @@
       "tasks_incomplete": 5,
       "open_leads": 86,
       "est_pipeline": 206400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 6,
-      "shown": 4,
-      "qualified": 4,
-      "deals": 1,
-      "revenue": 5000.0,
-      "close_rate": 16.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 5000.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 12,
-      "crm_total": 12,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          3,
-          3
-        ],
-        "confidence": [
-          3,
-          3
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 69,
-      "open_leads": 93,
-      "est_pipeline": 223200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -449,29 +449,6 @@
       "lane": 1
     },
     {
-      "name": "Scott Seymour",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 83.3,
-      "tasks_overdue": 12,
-      "tasks_incomplete": 72,
-      "open_leads": 33,
-      "est_pipeline": 79200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
@@ -493,52 +470,6 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "Zac Clover",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 16.7,
-      "tasks_overdue": 10,
-      "tasks_incomplete": 12,
-      "open_leads": 93,
-      "est_pipeline": 223200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 7.7,
-      "tasks_overdue": 12,
-      "tasks_incomplete": 13,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
     },
     {
       "name": "Kelly Schrader",
@@ -564,6 +495,29 @@
       "lane": 2
     },
     {
+      "name": "Zac Clover",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 16.7,
+      "tasks_overdue": 10,
+      "tasks_incomplete": 12,
+      "open_leads": 93,
+      "est_pipeline": 223200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Dubem Adindu",
       "booked": 0,
       "shown": 0,
@@ -584,6 +538,52 @@
       "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Scott Seymour",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 83.3,
+      "tasks_overdue": 12,
+      "tasks_incomplete": 72,
+      "open_leads": 33,
+      "est_pipeline": 79200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 7.7,
+      "tasks_overdue": 12,
+      "tasks_incomplete": 13,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 2
     }
   ]
