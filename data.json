@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13 05:00 AM PDT",
+  "updated_at": "2026-08-13 05:15 AM PDT",
   "week_label": "Aug 10 \u2013 Aug 16, 2026",
   "monday_str": "2026-08-10",
   "today_str": "2026-08-13",
@@ -47,7 +47,7 @@
   "total_revenue": 43988.0,
   "team_close_rate": 6.3,
   "team_avg_rev_per_deal": 7331.33,
-  "team_crm_compliance": 81.7,
+  "team_crm_compliance": 83.2,
   "team_task_adherence": 69.0,
   "team_overdue": 76,
   "team_open_leads": 456,
@@ -74,11 +74,11 @@
       "count": 7
     },
     {
-      "funnel": "Meta Ads",
+      "funnel": "Google Ads",
       "count": 6
     },
     {
-      "funnel": "Google Ads",
+      "funnel": "Meta Ads",
       "count": 6
     },
     {
@@ -200,6 +200,14 @@
         ],
         "missing_leads": [
           {
+            "name": "Lia Lagarde",
+            "lead_id": "lead_0cM3nDJCEbGPwZxVjV9vo78hVaQ2GZrOlcisB2Xqxc0",
+            "missing": [
+              "Show Up",
+              "Lost Reason"
+            ]
+          },
+          {
             "name": "Luis Ortega",
             "lead_id": "lead_0xy094EmBbHw6N1BUKREnsyLVzZCt8KpxWyXHqgPfEg",
             "missing": [
@@ -240,14 +248,6 @@
             "missing": [
               "Qualified",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Lia Lagarde",
-            "lead_id": "lead_0cM3nDJCEbGPwZxVjV9vo78hVaQ2GZrOlcisB2Xqxc0",
-            "missing": [
-              "Show Up",
-              "Lost Reason"
             ]
           },
           {
@@ -402,8 +402,8 @@
       "close_rate": 10.0,
       "qa_score": null,
       "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 86.4,
-      "crm_filled": 19,
+      "crm_compliance": 100.0,
+      "crm_filled": 22,
       "crm_total": 22,
       "crm_detail": {
         "show_up": [
@@ -411,32 +411,22 @@
           7
         ],
         "disposition": [
-          6,
+          7,
           7
         ],
         "qualified": [
-          3,
+          4,
           4
         ],
         "confidence": [
-          3,
+          4,
           4
         ],
         "lost_reason": [
           0,
           0
         ],
-        "missing_leads": [
-          {
-            "name": "Melvin Musgrove",
-            "lead_id": "lead_PyDVUDobXP5728P02RZXCwplajlYrzsmjSfFwAvwgoW",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": null,
       "tasks_overdue": 0,
@@ -631,25 +621,25 @@
       "lane": 1
     },
     {
-      "name": "Joe Dysert",
+      "name": "Adam Wolfe",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
       "deals": 1,
-      "revenue": 4000.0,
+      "revenue": 10997.0,
       "close_rate": null,
       "qa_score": null,
-      "avg_rev_per_deal": 4000.0,
+      "avg_rev_per_deal": 10997.0,
       "crm_compliance": null,
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
       "task_adherence": null,
-      "tasks_overdue": null,
-      "tasks_incomplete": null,
-      "open_leads": null,
-      "est_pipeline": null,
-      "is_manager": true,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
       "is_lead": false,
       "lane": 1
     },
@@ -677,29 +667,6 @@
       "lane": 1
     },
     {
-      "name": "Kelly Schrader",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 5.7,
-      "tasks_overdue": 50,
-      "tasks_incomplete": 53,
-      "open_leads": 162,
-      "est_pipeline": 388800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Jason Aaron",
       "booked": 0,
       "shown": 0,
@@ -720,6 +687,29 @@
       "est_pipeline": 0,
       "is_manager": false,
       "is_lead": true,
+      "lane": 2
+    },
+    {
+      "name": "Kelly Schrader",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 5.7,
+      "tasks_overdue": 50,
+      "tasks_incomplete": 53,
+      "open_leads": 162,
+      "est_pipeline": 388800,
+      "is_manager": false,
+      "is_lead": false,
       "lane": 2
     },
     {
@@ -746,25 +736,25 @@
       "lane": 2
     },
     {
-      "name": "Adam Wolfe",
+      "name": "Joe Dysert",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
       "deals": 1,
-      "revenue": 10997.0,
+      "revenue": 4000.0,
       "close_rate": null,
       "qa_score": null,
-      "avg_rev_per_deal": 10997.0,
+      "avg_rev_per_deal": 4000.0,
       "crm_compliance": null,
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
       "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
       "is_lead": false,
       "lane": 1
     }
