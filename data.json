@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13 07:00 AM PDT",
+  "updated_at": "2026-08-13 07:15 AM PDT",
   "week_label": "Aug 10 \u2013 Aug 16, 2026",
   "monday_str": "2026-08-10",
   "today_str": "2026-08-13",
@@ -47,7 +47,7 @@
   "total_revenue": 43988.0,
   "team_close_rate": 6.4,
   "team_avg_rev_per_deal": 7331.33,
-  "team_crm_compliance": 83.2,
+  "team_crm_compliance": 83.7,
   "team_task_adherence": 69.0,
   "team_overdue": 76,
   "team_open_leads": 455,
@@ -74,11 +74,11 @@
       "count": 7
     },
     {
-      "funnel": "Google Ads",
+      "funnel": "Meta Ads",
       "count": 6
     },
     {
-      "funnel": "Meta Ads",
+      "funnel": "Google Ads",
       "count": 6
     },
     {
@@ -447,9 +447,9 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 55.0,
-      "crm_filled": 11,
-      "crm_total": 20,
+      "crm_compliance": 61.9,
+      "crm_filled": 13,
+      "crm_total": 21,
       "crm_detail": {
         "show_up": [
           4,
@@ -464,21 +464,14 @@
           4
         ],
         "confidence": [
-          0,
+          1,
           4
         ],
         "lost_reason": [
-          0,
-          0
+          1,
+          1
         ],
         "missing_leads": [
-          {
-            "name": "Brenesha Conner",
-            "lead_id": "lead_b0A8fZaZ3mhbi484KcuC5WeIlhcIyqwGqiGlTv8o2BY",
-            "missing": [
-              "Confidence"
-            ]
-          },
           {
             "name": "Mourashi Rahman",
             "lead_id": "lead_FTmVNRLBsX5dukurqxr3jbnNkVBYDbNRYizrX6lKKop",
@@ -644,75 +637,6 @@
       "lane": 2
     },
     {
-      "name": "Adam Wolfe",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 10997.0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": 10997.0,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Joe Dysert",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 4000.0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": 4000.0,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": null,
-      "tasks_incomplete": null,
-      "open_leads": null,
-      "est_pipeline": null,
-      "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 7.7,
-      "tasks_overdue": 12,
-      "tasks_incomplete": 13,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
-    },
-    {
       "name": "Zac Clover",
       "booked": 0,
       "shown": 0,
@@ -757,6 +681,75 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 7.7,
+      "tasks_overdue": 12,
+      "tasks_incomplete": 13,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
+    },
+    {
+      "name": "Joe Dysert",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 4000.0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": 4000.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": null,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Adam Wolfe",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 10997.0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": 10997.0,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
     }
   ]
 }
