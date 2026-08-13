@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13 02:30 PM PDT",
+  "updated_at": "2026-08-13 02:45 PM PDT",
   "week_label": "Aug 10 \u2013 Aug 16, 2026",
   "monday_str": "2026-08-10",
   "today_str": "2026-08-13",
@@ -42,13 +42,13 @@
   },
   "total_booked": 94,
   "total_shown": 53,
-  "total_qualified": 37,
+  "total_qualified": 36,
   "total_deals": 8,
   "total_revenue": 56882.0,
   "team_close_rate": 8.5,
   "team_avg_rev_per_deal": 7110.25,
   "team_crm_compliance": 83.6,
-  "team_task_adherence": 73.4,
+  "team_task_adherence": 73.5,
   "team_overdue": 68,
   "team_open_leads": 458,
   "team_est_pipeline": 1099200,
@@ -272,6 +272,60 @@
       "lane": 1
     },
     {
+      "name": "Robin Perkins",
+      "booked": 12,
+      "shown": 9,
+      "qualified": 8,
+      "deals": 2,
+      "revenue": 13997.0,
+      "close_rate": 16.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 6998.5,
+      "crm_compliance": 94.1,
+      "crm_filled": 32,
+      "crm_total": 34,
+      "crm_detail": {
+        "show_up": [
+          9,
+          9
+        ],
+        "disposition": [
+          9,
+          9
+        ],
+        "qualified": [
+          7,
+          8
+        ],
+        "confidence": [
+          7,
+          8
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Slava Test",
+            "lead_id": "lead_rKevjAKAscK6ZZ25PUlhVvGVhnopUEjn3uR0afdQm6N",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 71,
+      "open_leads": 96,
+      "est_pipeline": 230400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Christian Hartwell",
       "booked": 12,
       "shown": 7,
@@ -336,60 +390,6 @@
       "est_pipeline": 189600,
       "is_manager": false,
       "is_lead": true,
-      "lane": 1
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 12,
-      "shown": 9,
-      "qualified": 8,
-      "deals": 2,
-      "revenue": 13997.0,
-      "close_rate": 16.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 6998.5,
-      "crm_compliance": 94.1,
-      "crm_filled": 32,
-      "crm_total": 34,
-      "crm_detail": {
-        "show_up": [
-          9,
-          9
-        ],
-        "disposition": [
-          9,
-          9
-        ],
-        "qualified": [
-          7,
-          8
-        ],
-        "confidence": [
-          7,
-          8
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Slava Test",
-            "lead_id": "lead_rKevjAKAscK6ZZ25PUlhVvGVhnopUEjn3uR0afdQm6N",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 71,
-      "open_leads": 96,
-      "est_pipeline": 230400,
-      "is_manager": false,
-      "is_lead": false,
       "lane": 1
     },
     {
@@ -624,7 +624,7 @@
       "name": "Scott Seymour",
       "booked": 3,
       "shown": 2,
-      "qualified": 1,
+      "qualified": 0,
       "deals": 1,
       "revenue": 5997.0,
       "close_rate": 33.3,
@@ -666,7 +666,7 @@
       "lane": 1
     },
     {
-      "name": "Jason Aaron",
+      "name": "Kelly Schrader",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -679,14 +679,37 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 7.7,
-      "tasks_overdue": 12,
-      "tasks_incomplete": 13,
+      "task_adherence": 25.0,
+      "tasks_overdue": 45,
+      "tasks_incomplete": 60,
+      "open_leads": 162,
+      "est_pipeline": 388800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Zac Clover",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 16.7,
+      "tasks_overdue": 10,
+      "tasks_incomplete": 12,
       "open_leads": 0,
       "est_pipeline": 0,
       "is_manager": false,
-      "is_lead": true,
-      "lane": 2
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Adam Wolfe",
@@ -735,7 +758,7 @@
       "lane": 1
     },
     {
-      "name": "Kelly Schrader",
+      "name": "Jason Aaron",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -748,13 +771,13 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 23.7,
-      "tasks_overdue": 45,
-      "tasks_incomplete": 59,
-      "open_leads": 162,
-      "est_pipeline": 388800,
+      "task_adherence": 7.7,
+      "tasks_overdue": 12,
+      "tasks_incomplete": 13,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
-      "is_lead": false,
+      "is_lead": true,
       "lane": 2
     },
     {
@@ -779,29 +802,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
-    },
-    {
-      "name": "Zac Clover",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 16.7,
-      "tasks_overdue": 10,
-      "tasks_incomplete": 12,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
     }
   ]
 }
