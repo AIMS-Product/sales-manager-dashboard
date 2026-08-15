@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15 09:15 AM PDT",
+  "updated_at": "2026-08-15 09:30 AM PDT",
   "week_label": "Aug 10 \u2013 Aug 16, 2026",
   "monday_str": "2026-08-10",
   "today_str": "2026-08-15",
@@ -62,11 +62,11 @@
       "count": 19
     },
     {
-      "funnel": "Website",
+      "funnel": "YouTube",
       "count": 11
     },
     {
-      "funnel": "YouTube",
+      "funnel": "Website",
       "count": 11
     },
     {
@@ -503,6 +503,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Michael V",
+            "lead_id": "lead_vT8MGAMJNxrrwAXw5pf72vF39kpm4CIuFgXflwecT1D",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Josh Bennett",
             "lead_id": "lead_lyUjF2d9K2BUno6hwvyNQ7mvZNuDfzv50hrFgXp05pR",
             "missing": [
@@ -522,13 +529,6 @@
             "lead_id": "lead_NHH6A9UGuVdCtqEogccN6njM4OnEmyf318jKhoP61Ue",
             "missing": [
               "Confidence"
-            ]
-          },
-          {
-            "name": "Michael V",
-            "lead_id": "lead_vT8MGAMJNxrrwAXw5pf72vF39kpm4CIuFgXflwecT1D",
-            "missing": [
-              "Disposition"
             ]
           },
           {
@@ -641,51 +641,6 @@
       "lane": 1
     },
     {
-      "name": "Scott Seymour",
-      "booked": 3,
-      "shown": 2,
-      "qualified": 0,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 33.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 10,
-      "crm_total": 10,
-      "crm_detail": {
-        "show_up": [
-          3,
-          3
-        ],
-        "disposition": [
-          3,
-          3
-        ],
-        "qualified": [
-          2,
-          2
-        ],
-        "confidence": [
-          2,
-          2
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 98.4,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 63,
-      "open_leads": 31,
-      "est_pipeline": 74400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "William Nowak",
       "booked": 3,
       "shown": 2,
@@ -746,6 +701,51 @@
       "tasks_incomplete": 0,
       "open_leads": 0,
       "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Scott Seymour",
+      "booked": 3,
+      "shown": 2,
+      "qualified": 0,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 33.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 10,
+      "crm_total": 10,
+      "crm_detail": {
+        "show_up": [
+          3,
+          3
+        ],
+        "disposition": [
+          3,
+          3
+        ],
+        "qualified": [
+          2,
+          2
+        ],
+        "confidence": [
+          2,
+          2
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 98.4,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 63,
+      "open_leads": 31,
+      "est_pipeline": 74400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -849,6 +849,29 @@
       "lane": 1
     },
     {
+      "name": "Jason Aaron",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 0.0,
+      "tasks_overdue": 13,
+      "tasks_incomplete": 13,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
+    },
+    {
       "name": "Dubem Adindu",
       "booked": 0,
       "shown": 0,
@@ -895,7 +918,7 @@
       "lane": 1
     },
     {
-      "name": "Jason Aaron",
+      "name": "Kelly Schrader",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -908,13 +931,13 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 0.0,
-      "tasks_overdue": 13,
-      "tasks_incomplete": 13,
-      "open_leads": 0,
-      "est_pipeline": 0,
+      "task_adherence": 66.7,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 18,
+      "open_leads": 162,
+      "est_pipeline": 388800,
       "is_manager": false,
-      "is_lead": true,
+      "is_lead": false,
       "lane": 2
     },
     {
@@ -939,29 +962,6 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
-    },
-    {
-      "name": "Kelly Schrader",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 66.7,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 18,
-      "open_leads": 162,
-      "est_pipeline": 388800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
     }
   ]
 }
