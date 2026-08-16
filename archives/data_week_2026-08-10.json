@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15 09:30 PM PDT",
+  "updated_at": "2026-08-15 09:45 PM PDT",
   "week_label": "Aug 10 \u2013 Aug 16, 2026",
   "monday_str": "2026-08-10",
   "today_str": "2026-08-15",
@@ -302,6 +302,60 @@
       "lane": 1
     },
     {
+      "name": "Robin Perkins",
+      "booked": 16,
+      "shown": 12,
+      "qualified": 11,
+      "deals": 2,
+      "revenue": 13997.0,
+      "close_rate": 12.5,
+      "qa_score": null,
+      "avg_rev_per_deal": 6998.5,
+      "crm_compliance": 96.3,
+      "crm_filled": 52,
+      "crm_total": 54,
+      "crm_detail": {
+        "show_up": [
+          15,
+          15
+        ],
+        "disposition": [
+          15,
+          15
+        ],
+        "qualified": [
+          11,
+          12
+        ],
+        "confidence": [
+          11,
+          12
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Slava Test",
+            "lead_id": "lead_rKevjAKAscK6ZZ25PUlhVvGVhnopUEjn3uR0afdQm6N",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 94.7,
+      "tasks_overdue": 4,
+      "tasks_incomplete": 76,
+      "open_leads": 98,
+      "est_pipeline": 235200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Luke Herman",
       "booked": 16,
       "shown": 8,
@@ -411,60 +465,6 @@
       "est_pipeline": 204000,
       "is_manager": false,
       "is_lead": true,
-      "lane": 1
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 16,
-      "shown": 12,
-      "qualified": 11,
-      "deals": 2,
-      "revenue": 13997.0,
-      "close_rate": 12.5,
-      "qa_score": null,
-      "avg_rev_per_deal": 6998.5,
-      "crm_compliance": 96.3,
-      "crm_filled": 52,
-      "crm_total": 54,
-      "crm_detail": {
-        "show_up": [
-          15,
-          15
-        ],
-        "disposition": [
-          15,
-          15
-        ],
-        "qualified": [
-          11,
-          12
-        ],
-        "confidence": [
-          11,
-          12
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Slava Test",
-            "lead_id": "lead_rKevjAKAscK6ZZ25PUlhVvGVhnopUEjn3uR0afdQm6N",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 94.7,
-      "tasks_overdue": 4,
-      "tasks_incomplete": 76,
-      "open_leads": 98,
-      "est_pipeline": 235200,
-      "is_manager": false,
-      "is_lead": false,
       "lane": 1
     },
     {
@@ -849,7 +849,7 @@
       "lane": 1
     },
     {
-      "name": "Jason Aaron",
+      "name": "Kelly Schrader",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -862,13 +862,36 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 0.0,
-      "tasks_overdue": 13,
-      "tasks_incomplete": 13,
+      "task_adherence": 66.7,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 18,
+      "open_leads": 162,
+      "est_pipeline": 388800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Dubem Adindu",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
       "open_leads": 0,
       "est_pipeline": 0,
       "is_manager": false,
-      "is_lead": true,
+      "is_lead": false,
       "lane": 2
     },
     {
@@ -895,29 +918,6 @@
       "lane": 1
     },
     {
-      "name": "Dubem Adindu",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
       "name": "Zac Clover",
       "booked": 0,
       "shown": 0,
@@ -941,7 +941,7 @@
       "lane": 1
     },
     {
-      "name": "Kelly Schrader",
+      "name": "Jason Aaron",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -954,13 +954,13 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 66.7,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 18,
-      "open_leads": 162,
-      "est_pipeline": 388800,
+      "task_adherence": 0.0,
+      "tasks_overdue": 13,
+      "tasks_incomplete": 13,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
-      "is_lead": false,
+      "is_lead": true,
       "lane": 2
     }
   ]
