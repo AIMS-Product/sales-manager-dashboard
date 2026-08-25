@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25 07:15 AM PDT",
+  "updated_at": "2026-08-25 07:30 AM PDT",
   "week_label": "Aug 24 \u2013 Aug 30, 2026",
   "monday_str": "2026-08-24",
   "today_str": "2026-08-25",
@@ -41,14 +41,14 @@
     "task_adherence": 100
   },
   "total_booked": 45,
-  "total_shown": 12,
-  "total_qualified": 9,
+  "total_shown": 13,
+  "total_qualified": 10,
   "total_deals": 2,
   "total_revenue": 30997.0,
   "team_close_rate": 4.4,
   "team_avg_rev_per_deal": 15498.5,
   "team_crm_compliance": 79.7,
-  "team_task_adherence": 79.3,
+  "team_task_adherence": 79.5,
   "team_overdue": 41,
   "team_open_leads": 449,
   "team_est_pipeline": 1077600,
@@ -123,6 +123,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Zakaria Archane",
+            "lead_id": "lead_wZunVM74x13MTOcl1bzpKUkFQwZtF7DBspwJFTFDHHI",
+            "missing": [
+              "Qualified"
+            ]
+          },
+          {
             "name": "Lautaro Brehm",
             "lead_id": "lead_R4CtutGv46W8Mc8lrljNPWLEQr6tIcsC9lpGEnVwIpt",
             "missing": [
@@ -155,13 +162,6 @@
               "Disposition",
               "Qualified",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Zakaria Archane",
-            "lead_id": "lead_wZunVM74x13MTOcl1bzpKUkFQwZtF7DBspwJFTFDHHI",
-            "missing": [
-              "Qualified"
             ]
           }
         ]
@@ -232,8 +232,8 @@
     {
       "name": "Shreya Bechra",
       "booked": 7,
-      "shown": 2,
-      "qualified": 2,
+      "shown": 3,
+      "qualified": 3,
       "deals": 1,
       "revenue": 22000.0,
       "close_rate": 14.3,
@@ -448,32 +448,9 @@
       "crm_detail": null,
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 49,
+      "tasks_incomplete": 51,
       "open_leads": 26,
       "est_pipeline": 62400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Zac Clover",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 0.0,
-      "tasks_overdue": 11,
-      "tasks_incomplete": 11,
-      "open_leads": 0,
-      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -523,6 +500,29 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 2
+    },
+    {
+      "name": "Zac Clover",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 0.0,
+      "tasks_overdue": 11,
+      "tasks_incomplete": 11,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
     },
     {
       "name": "Kelly Schrader",
