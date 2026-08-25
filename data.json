@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25 02:30 PM PDT",
+  "updated_at": "2026-08-25 02:45 PM PDT",
   "week_label": "Aug 24 \u2013 Aug 30, 2026",
   "monday_str": "2026-08-24",
   "today_str": "2026-08-25",
@@ -66,11 +66,11 @@
       "count": 6
     },
     {
-      "funnel": "Unknown",
+      "funnel": "Internal Webinar",
       "count": 5
     },
     {
-      "funnel": "Internal Webinar",
+      "funnel": "Unknown",
       "count": 5
     },
     {
@@ -176,18 +176,18 @@
         ],
         "missing_leads": [
           {
+            "name": "Lautaro Brehm",
+            "lead_id": "lead_R4CtutGv46W8Mc8lrljNPWLEQr6tIcsC9lpGEnVwIpt",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
             "name": "Collin Brown",
             "lead_id": "lead_QmLQZ0Ej2dh0u6iAj4Ac9I9TlocNIHDV23ka20SJXyU",
             "missing": [
               "Disposition",
               "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Lautaro Brehm",
-            "lead_id": "lead_R4CtutGv46W8Mc8lrljNPWLEQr6tIcsC9lpGEnVwIpt",
-            "missing": [
               "Confidence"
             ]
           }
@@ -424,29 +424,6 @@
       "lane": 1
     },
     {
-      "name": "Joe Dysert",
-      "booked": 2,
-      "shown": 1,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": null,
-      "tasks_overdue": null,
-      "tasks_incomplete": null,
-      "open_leads": null,
-      "est_pipeline": null,
-      "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Eric Piccione",
       "booked": 2,
       "shown": 2,
@@ -492,6 +469,29 @@
       "lane": 1
     },
     {
+      "name": "Joe Dysert",
+      "booked": 2,
+      "shown": 1,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": null,
+      "tasks_overdue": null,
+      "tasks_incomplete": null,
+      "open_leads": null,
+      "est_pipeline": null,
+      "is_manager": true,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Connor George",
       "booked": 1,
       "shown": 0,
@@ -508,52 +508,6 @@
       "task_adherence": null,
       "tasks_overdue": 0,
       "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 0.0,
-      "tasks_overdue": 13,
-      "tasks_incomplete": 13,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
-    },
-    {
-      "name": "Zac Clover",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 0.0,
-      "tasks_overdue": 11,
-      "tasks_incomplete": 11,
       "open_leads": 0,
       "est_pipeline": 0,
       "is_manager": false,
@@ -584,7 +538,7 @@
       "lane": 1
     },
     {
-      "name": "Kelly Schrader",
+      "name": "Zac Clover",
       "booked": 0,
       "shown": 0,
       "qualified": 0,
@@ -597,13 +551,36 @@
       "crm_filled": 0,
       "crm_total": 0,
       "crm_detail": null,
-      "task_adherence": 41.7,
-      "tasks_overdue": 7,
-      "tasks_incomplete": 12,
-      "open_leads": 156,
-      "est_pipeline": 374400,
+      "task_adherence": 0.0,
+      "tasks_overdue": 11,
+      "tasks_incomplete": 11,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 0.0,
+      "tasks_overdue": 13,
+      "tasks_incomplete": 13,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": true,
       "lane": 2
     },
     {
@@ -625,6 +602,29 @@
       "tasks_incomplete": 0,
       "open_leads": 0,
       "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Kelly Schrader",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 41.7,
+      "tasks_overdue": 7,
+      "tasks_incomplete": 12,
+      "open_leads": 156,
+      "est_pipeline": 374400,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
