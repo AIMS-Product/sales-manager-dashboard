@@ -788,16 +788,16 @@
         const l1Targets = { booked: t.booked * lane1.length, shown: t.shown * lane1.length, qualified: t.qualified * lane1.length, deals: t.deals * lane1.length, revenue: t.revenue * lane1.length, close_rate: t.close_rate, crm_compliance: t.crm_compliance };
         html += subtotalRow('Lane 1 Totals', lt1, { ...t, booked: null, shown: null, qualified: null, deals: null, revenue: null });
 
-        // ── Divider ──
-        html += `<tr class="lane-divider-row"><td colspan="13"></td></tr>`;
-
-        // ── Lane 2 ──
-        html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Lane 2</span></td></tr>`;
-        for (const r of lane2) {
-            html += repRow(r, globalIdxMap.get(r));
+        // ── Lane 2 (only if there are Lane 2 reps) ──
+        if (lane2.length > 0) {
+            html += `<tr class="lane-divider-row"><td colspan="13"></td></tr>`;
+            html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Lane 2</span></td></tr>`;
+            for (const r of lane2) {
+                html += repRow(r, globalIdxMap.get(r));
+            }
+            const lt2 = laneTotals(lane2);
+            html += subtotalRow('Lane 2 Totals', lt2, { ...t2, booked: null, shown: null, qualified: null, deals: null, revenue: null });
         }
-        const lt2 = laneTotals(lane2);
-        html += subtotalRow('Lane 2 Totals', lt2, { ...t2, booked: null, shown: null, qualified: null, deals: null, revenue: null });
 
         // ── Combined Team Totals ──
         html += `<tr class="totals-row">
