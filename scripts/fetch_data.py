@@ -163,6 +163,8 @@ EXCLUDE_USERS = {
     "Jake Skinner", "Lyle Hubbard", "Jacob Hepner",
     "Jason Aaron", "Dubem Adindu", "Zac Clover", "Kelly Schrader",
     "Danny Santolaya", "Luis Galarza", "William Nowak",
+    "Charlie Ingram", "Pearl Sathekge", "Connor George",
+    "August Young", "Cassie Caraballo",
 }
 MANAGER_USERS = {"Joe Dysert"}
 LEAD_USERS = set()  # No lead tags
