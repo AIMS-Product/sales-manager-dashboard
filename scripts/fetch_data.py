@@ -141,20 +141,16 @@ LANE_2_TARGETS = {
     "task_adherence": 100,
 }
 
-LANE_2_REPS = {
-    "Kelly Schrader",
-    "Jason Aaron", "Dubem Adindu",
-}
+LANE_2_REPS = set()  # No Lane 2 reps on this dashboard
 
 REP_QUOTAS = {
     "Christian Hartwell": 100_000,
     "Scott Seymour": 100_000,
     "Eric Piccione": 100_000,
-    "Jason Aaron": 75_000,
     "Robin Perkins": 75_000,
-    "Dubem Adindu": 100_000,
-    "Zac Clover": 0,
-    "Kelly Schrader": 0,
+    "Shreya Bechra": 0,
+    "Luke Herman": 0,
+    "Joe Vaughan": 0,
     "Joe Dysert": 0,
 }
 
@@ -165,9 +161,11 @@ EXCLUDE_USERS = {
     "Ategeka Musinguzi", "Vince Bartolini", "Steven Starnes", "Chris Wanke",
     "Bryan Barcus", "Elvis Ellis", "Cameron Caswell", "John Kirk",
     "Jake Skinner", "Lyle Hubbard", "Jacob Hepner",
+    "Jason Aaron", "Dubem Adindu", "Zac Clover", "Kelly Schrader",
+    "Danny Santolaya", "Luis Galarza", "William Nowak",
 }
 MANAGER_USERS = {"Joe Dysert"}
-LEAD_USERS = {"Christian Hartwell", "Jason Aaron"}
+LEAD_USERS = set()  # No lead tags
 
 
 # ── Fetch booked leads by "First Sales Call Booked Date" field ─────────────
