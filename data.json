@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26 12:00 PM PDT",
+  "updated_at": "2026-08-26 12:15 PM PDT",
   "week_label": "Aug 24 \u2013 Aug 30, 2026",
   "monday_str": "2026-08-24",
   "today_str": "2026-08-26",
@@ -41,8 +41,8 @@
     "task_adherence": 100
   },
   "total_booked": 90,
-  "total_shown": 33,
-  "total_qualified": 32,
+  "total_shown": 34,
+  "total_qualified": 33,
   "total_deals": 9,
   "total_revenue": 89776.0,
   "team_close_rate": 10.0,
@@ -239,8 +239,8 @@
     {
       "name": "Shreya Bechra",
       "booked": 12,
-      "shown": 6,
-      "qualified": 5,
+      "shown": 7,
+      "qualified": 6,
       "deals": 3,
       "revenue": 35794.0,
       "close_rate": 25.0,
@@ -657,6 +657,67 @@
       "lane": 1
     },
     {
+      "name": "Connor George",
+      "booked": 2,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 50.0,
+      "crm_filled": 3,
+      "crm_total": 6,
+      "crm_detail": {
+        "show_up": [
+          2,
+          2
+        ],
+        "disposition": [
+          1,
+          2
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          0,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Jerry Reyes",
+            "lead_id": "lead_ImT422flgOQX97tiiqR7SZFKZjlPs58HikPePbFuqiO",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Julie Lewis",
+            "lead_id": "lead_HS1DuSasET2y5hz02XAplbmI30knLJTOonwCQ3ScN0x",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": null,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "August Young",
       "booked": 2,
       "shown": 0,
@@ -725,67 +786,6 @@
       "lane": 1
     },
     {
-      "name": "Connor George",
-      "booked": 2,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 50.0,
-      "crm_filled": 3,
-      "crm_total": 6,
-      "crm_detail": {
-        "show_up": [
-          2,
-          2
-        ],
-        "disposition": [
-          1,
-          2
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          0,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Jerry Reyes",
-            "lead_id": "lead_ImT422flgOQX97tiiqR7SZFKZjlPs58HikPePbFuqiO",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Julie Lewis",
-            "lead_id": "lead_HS1DuSasET2y5hz02XAplbmI30knLJTOonwCQ3ScN0x",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": null,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Cassie Caraballo",
       "booked": 1,
       "shown": 0,
@@ -840,52 +840,6 @@
       "lane": 1
     },
     {
-      "name": "Dubem Adindu",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 2
-    },
-    {
-      "name": "Jason Aaron",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 0.0,
-      "tasks_overdue": 13,
-      "tasks_incomplete": 13,
-      "open_leads": 0,
-      "est_pipeline": 0,
-      "is_manager": false,
-      "is_lead": true,
-      "lane": 2
-    },
-    {
       "name": "Kelly Schrader",
       "booked": 0,
       "shown": 0,
@@ -904,6 +858,29 @@
       "tasks_incomplete": 12,
       "open_leads": 156,
       "est_pipeline": 374400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 2
+    },
+    {
+      "name": "Dubem Adindu",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 0,
+      "est_pipeline": 0,
       "is_manager": false,
       "is_lead": false,
       "lane": 2
@@ -930,6 +907,29 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1
+    },
+    {
+      "name": "Jason Aaron",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 0.0,
+      "tasks_overdue": 13,
+      "tasks_incomplete": 13,
+      "open_leads": 0,
+      "est_pipeline": 0,
+      "is_manager": false,
+      "is_lead": true,
+      "lane": 2
     },
     {
       "name": "Scott Seymour",
