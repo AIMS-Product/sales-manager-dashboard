@@ -165,6 +165,7 @@ EXCLUDE_USERS = {
     "Danny Santolaya", "Luis Galarza", "William Nowak",
     "Charlie Ingram", "Pearl Sathekge", "Connor George",
     "August Young", "Cassie Caraballo", "Ariella Irvine",
+    "Jessica Zatkin", "Dana Lesiuk",
 }
 MANAGER_USERS = {"Joe Dysert"}
 LEAD_USERS = set()  # No lead tags
@@ -804,12 +805,9 @@ def build_dashboard_data():
     rep_open_leads = fetch_open_leads_per_rep(user_map)
     print(f"  Open leads done. ({time.time()-t0:.1f}s)", flush=True)
 
-    # Build per-rep data
-    all_rep_names = set()
-    all_rep_names.update(rep_revenue.keys())
-    all_rep_names.update(rep_booked.keys())
-    all_rep_names.update(REP_QUOTAS.keys())
-    all_rep_names -= EXCLUDE_USERS
+    # Build per-rep data — ONLY show approved closers in REP_QUOTAS
+    # (anyone not in this list is invisible on the dashboard, regardless of data)
+    all_rep_names = set(REP_QUOTAS.keys())
 
     # Debug: check for near-duplicate names
     name_list = sorted(all_rep_names)
