@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03 03:00 PM PDT",
+  "updated_at": "2026-09-03 03:15 PM PDT",
   "week_label": "Aug 31 \u2013 Sep 06, 2026",
   "monday_str": "2026-08-31",
   "today_str": "2026-09-03",
@@ -41,8 +41,8 @@
     "task_adherence": 100
   },
   "total_booked": 84,
-  "total_shown": 52,
-  "total_qualified": 35,
+  "total_shown": 53,
+  "total_qualified": 36,
   "total_deals": 9,
   "total_revenue": 57026.0,
   "team_close_rate": 10.7,
@@ -50,8 +50,8 @@
   "team_crm_compliance": 89.2,
   "team_task_adherence": 31.1,
   "team_overdue": 353,
-  "team_open_leads": 563,
-  "team_est_pipeline": 1351200,
+  "team_open_leads": 564,
+  "team_est_pipeline": 1353600,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -110,8 +110,8 @@
     {
       "name": "Luke Herman",
       "booked": 19,
-      "shown": 9,
-      "qualified": 7,
+      "shown": 10,
+      "qualified": 8,
       "deals": 1,
       "revenue": 5997.0,
       "close_rate": 5.3,
@@ -163,8 +163,75 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 75,
-      "open_leads": 34,
-      "est_pipeline": 81600,
+      "open_leads": 35,
+      "est_pipeline": 84000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Shreya Bechra",
+      "booked": 15,
+      "shown": 13,
+      "qualified": 9,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 6.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 91.7,
+      "crm_filled": 33,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          9,
+          9
+        ],
+        "disposition": [
+          9,
+          9
+        ],
+        "qualified": [
+          8,
+          8
+        ],
+        "confidence": [
+          5,
+          8
+        ],
+        "lost_reason": [
+          2,
+          2
+        ],
+        "missing_leads": [
+          {
+            "name": "Brian Ward",
+            "lead_id": "lead_jEy8DlL5kGcpOwuJFBoLryZ5d9zEbpLYaJ7AEqeT0tG",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "AJ BRANDENSTEIN",
+            "lead_id": "lead_OXbfY5NjVALCCW3tRGu4y7lcGl0VeA5mjDmDA59PE9T",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Lisandro Pugliese",
+            "lead_id": "lead_99W9CgLE4wlyknh9yvo3mQNOfqQbUjfZaukd9pmC1Ol",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 5.2,
+      "tasks_overdue": 91,
+      "tasks_incomplete": 96,
+      "open_leads": 79,
+      "est_pipeline": 189600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -221,73 +288,6 @@
       "tasks_incomplete": 35,
       "open_leads": 111,
       "est_pipeline": 266400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Shreya Bechra",
-      "booked": 15,
-      "shown": 13,
-      "qualified": 9,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 6.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 91.7,
-      "crm_filled": 33,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          9,
-          9
-        ],
-        "disposition": [
-          9,
-          9
-        ],
-        "qualified": [
-          8,
-          8
-        ],
-        "confidence": [
-          5,
-          8
-        ],
-        "lost_reason": [
-          2,
-          2
-        ],
-        "missing_leads": [
-          {
-            "name": "AJ BRANDENSTEIN",
-            "lead_id": "lead_OXbfY5NjVALCCW3tRGu4y7lcGl0VeA5mjDmDA59PE9T",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Brian Ward",
-            "lead_id": "lead_jEy8DlL5kGcpOwuJFBoLryZ5d9zEbpLYaJ7AEqeT0tG",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Lisandro Pugliese",
-            "lead_id": "lead_99W9CgLE4wlyknh9yvo3mQNOfqQbUjfZaukd9pmC1Ol",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 5.2,
-      "tasks_overdue": 91,
-      "tasks_incomplete": 96,
-      "open_leads": 79,
-      "est_pipeline": 189600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
