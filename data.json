@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03 07:30 AM PDT",
+  "updated_at": "2026-09-03 07:45 AM PDT",
   "week_label": "Aug 31 \u2013 Sep 06, 2026",
   "monday_str": "2026-08-31",
   "today_str": "2026-09-03",
@@ -48,7 +48,7 @@
   "team_close_rate": 9.1,
   "team_avg_rev_per_deal": 6378.62,
   "team_crm_compliance": 87.6,
-  "team_task_adherence": 29.8,
+  "team_task_adherence": 30.0,
   "team_overdue": 354,
   "team_open_leads": 557,
   "team_est_pipeline": 1336800,
@@ -82,15 +82,15 @@
       "count": 3
     },
     {
+      "funnel": "Google Ads",
+      "count": 1
+    },
+    {
       "funnel": "LTF - In-House",
       "count": 1
     },
     {
       "funnel": "VSL",
-      "count": 1
-    },
-    {
-      "funnel": "Google Ads",
       "count": 1
     },
     {
@@ -162,7 +162,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 67,
+      "tasks_incomplete": 69,
       "open_leads": 34,
       "est_pipeline": 81600,
       "is_manager": false,
@@ -246,6 +246,62 @@
       "lane": 1
     },
     {
+      "name": "Christian Hartwell",
+      "booked": 14,
+      "shown": 9,
+      "qualified": 7,
+      "deals": 2,
+      "revenue": 11694.0,
+      "close_rate": 14.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 5847.0,
+      "crm_compliance": 88.9,
+      "crm_filled": 32,
+      "crm_total": 36,
+      "crm_detail": {
+        "show_up": [
+          9,
+          10
+        ],
+        "disposition": [
+          9,
+          10
+        ],
+        "qualified": [
+          7,
+          8
+        ],
+        "confidence": [
+          7,
+          8
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Joy Gwendo",
+            "lead_id": "lead_2CStvmNI5C7EhnTrGHdPLkFl55Sn9j8Lub3z1kR88pC",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 71.4,
+      "tasks_overdue": 10,
+      "tasks_incomplete": 35,
+      "open_leads": 110,
+      "est_pipeline": 264000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Joe Vaughan",
       "booked": 14,
       "shown": 5,
@@ -317,62 +373,6 @@
       "tasks_incomplete": 177,
       "open_leads": 131,
       "est_pipeline": 314400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 14,
-      "shown": 9,
-      "qualified": 7,
-      "deals": 2,
-      "revenue": 11694.0,
-      "close_rate": 14.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 5847.0,
-      "crm_compliance": 88.9,
-      "crm_filled": 32,
-      "crm_total": 36,
-      "crm_detail": {
-        "show_up": [
-          9,
-          10
-        ],
-        "disposition": [
-          9,
-          10
-        ],
-        "qualified": [
-          7,
-          8
-        ],
-        "confidence": [
-          7,
-          8
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Joy Gwendo",
-            "lead_id": "lead_2CStvmNI5C7EhnTrGHdPLkFl55Sn9j8Lub3z1kR88pC",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 71.4,
-      "tasks_overdue": 10,
-      "tasks_incomplete": 35,
-      "open_leads": 110,
-      "est_pipeline": 264000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -477,29 +477,6 @@
       "lane": 1
     },
     {
-      "name": "Robin Perkins",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 16.0,
-      "tasks_overdue": 68,
-      "tasks_incomplete": 81,
-      "open_leads": 88,
-      "est_pipeline": 211200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Scott Seymour",
       "booked": 0,
       "shown": 0,
@@ -518,6 +495,29 @@
       "tasks_incomplete": 48,
       "open_leads": 24,
       "est_pipeline": 57600,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Robin Perkins",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 16.0,
+      "tasks_overdue": 68,
+      "tasks_incomplete": 81,
+      "open_leads": 88,
+      "est_pipeline": 211200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
