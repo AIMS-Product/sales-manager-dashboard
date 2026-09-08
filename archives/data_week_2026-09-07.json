@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08 01:30 PM PDT",
+  "updated_at": "2026-09-08 01:45 PM PDT",
   "week_label": "Sep 07 \u2013 Sep 13, 2026",
   "monday_str": "2026-09-07",
   "today_str": "2026-09-08",
@@ -47,8 +47,8 @@
   "total_revenue": 37788.0,
   "team_close_rate": 8.5,
   "team_avg_rev_per_deal": 9447.0,
-  "team_crm_compliance": 83.6,
-  "team_task_adherence": 32.4,
+  "team_crm_compliance": 84.5,
+  "team_task_adherence": 32.5,
   "team_overdue": 344,
   "team_open_leads": 572,
   "team_est_pipeline": 1372800,
@@ -192,7 +192,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 76,
+      "tasks_incomplete": 77,
       "open_leads": 35,
       "est_pipeline": 84000,
       "is_manager": false,
@@ -209,9 +209,9 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 92.9,
-      "crm_filled": 13,
-      "crm_total": 14,
+      "crm_compliance": 100.0,
+      "crm_filled": 12,
+      "crm_total": 12,
       "crm_detail": {
         "show_up": [
           4,
@@ -223,31 +223,84 @@
         ],
         "qualified": [
           2,
-          3
+          2
         ],
         "confidence": [
-          3,
-          3
+          2,
+          2
         ],
         "lost_reason": [
           0,
           0
         ],
-        "missing_leads": [
-          {
-            "name": "Eric Garner",
-            "lead_id": "lead_XfrcULWpWZELzivwFkb6PkMuOsE8NpafwzXoaz1HLjf",
-            "missing": [
-              "Qualified"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": 96.8,
       "tasks_overdue": 1,
       "tasks_incomplete": 31,
       "open_leads": 117,
       "est_pipeline": 280800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Shreya Bechra",
+      "booked": 7,
+      "shown": 5,
+      "qualified": 3,
+      "deals": 1,
+      "revenue": 6897.0,
+      "close_rate": 14.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 6897.0,
+      "crm_compliance": 84.2,
+      "crm_filled": 16,
+      "crm_total": 19,
+      "crm_detail": {
+        "show_up": [
+          5,
+          5
+        ],
+        "disposition": [
+          5,
+          5
+        ],
+        "qualified": [
+          3,
+          4
+        ],
+        "confidence": [
+          2,
+          4
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Isabel Arceo",
+            "lead_id": "lead_OUs2VkzaOQLxlZuzEWXaGUwSluoyzradV21OvU7SiIi",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Tammy A",
+            "lead_id": "lead_ulD9c6ktLHfZKrNCoOv6t5UzOS2QsKWpgtadpAOoq9O",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 6.9,
+      "tasks_overdue": 94,
+      "tasks_incomplete": 101,
+      "open_leads": 78,
+      "est_pipeline": 187200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -315,67 +368,6 @@
       "tasks_incomplete": 177,
       "open_leads": 137,
       "est_pipeline": 328800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Shreya Bechra",
-      "booked": 7,
-      "shown": 5,
-      "qualified": 3,
-      "deals": 1,
-      "revenue": 6897.0,
-      "close_rate": 14.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 6897.0,
-      "crm_compliance": 84.2,
-      "crm_filled": 16,
-      "crm_total": 19,
-      "crm_detail": {
-        "show_up": [
-          5,
-          5
-        ],
-        "disposition": [
-          5,
-          5
-        ],
-        "qualified": [
-          3,
-          4
-        ],
-        "confidence": [
-          2,
-          4
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Isabel Arceo",
-            "lead_id": "lead_OUs2VkzaOQLxlZuzEWXaGUwSluoyzradV21OvU7SiIi",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Tammy A",
-            "lead_id": "lead_ulD9c6ktLHfZKrNCoOv6t5UzOS2QsKWpgtadpAOoq9O",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 6.9,
-      "tasks_overdue": 94,
-      "tasks_incomplete": 101,
-      "open_leads": 78,
-      "est_pipeline": 187200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
