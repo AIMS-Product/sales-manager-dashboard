@@ -43,6 +43,13 @@
 
         .empty { padding: 40px 24px; text-align: center; color: var(--text-muted); font-size: 14px; }
         .footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: 12px; }
+        .dl-btn {
+            display: inline-block; padding: 6px 16px; font-size: 12px; font-weight: 600;
+            color: #555; background: #fff; border: 1px solid #d0d3d9;
+            border-radius: 6px; cursor: pointer; text-decoration: none;
+            transition: background 0.15s, border-color 0.15s;
+        }
+        .dl-btn:hover { background: #f0f1f3; border-color: #aaa; }
 
         .lane-header-row td {
             padding: 8px 12px;
@@ -150,7 +157,10 @@
         <div class="section">
             <div class="snapshot-header">
                 <div class="snapshot-title" id="snapshotTitle">—</div>
-                <span class="snapshot-back" id="snapshotBack">← Back to all weeks</span>
+                <div>
+                    <button class="dl-btn" id="archiveDownloadBtn" onclick="downloadArchiveCSV()" style="margin-right:12px;">⬇ Download CSV</button>
+                    <span class="snapshot-back" id="snapshotBack">← Back to all weeks</span>
+                </div>
             </div>
             <div class="table-wrap">
                 <table>
@@ -426,6 +436,70 @@
     });
 
     loadIndex();
+
+    // Store current snapshot for CSV download
+    var _currentSnapshot = null;
+    var _currentWeekLabel = '';
+
+    // Intercept renderSnapshot to capture data
+    var _origRender = renderSnapshot;
+    renderSnapshot = function(data) {
+        _currentSnapshot = data;
+        _currentWeekLabel = document.getElementById('snapshotTitle').textContent || 'archive';
+        _origRender(data);
+    };
+
+    window.downloadArchiveCSV = function() {
+        if (!_currentSnapshot || !_currentSnapshot.reps) return;
+        const data = _currentSnapshot;
+        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Avg/Deal', 'CRM Compl.', 'Task Adh.', 'Qual. Pipeline', 'Est. Revenue'];
+        const rows = data.reps
+            .filter(r => !r.is_manager)
+            .sort((a, b) => (b.booked || 0) - (a.booked || 0))
+            .map(r => [
+                r.name,
+                r.lane || 1,
+                r.booked || 0,
+                r.shown || 0,
+                r.qualified || 0,
+                r.deals || 0,
+                r.revenue || 0,
+                r.close_rate != null ? r.close_rate + '%' : '',
+                r.avg_rev_per_deal || 0,
+                r.crm_compliance != null ? r.crm_compliance + '%' : '',
+                r.task_adherence != null ? r.task_adherence + '%' : '',
+                r.open_leads || 0,
+                r.est_pipeline || 0,
+            ]);
+
+        rows.push([
+            'Team Totals', '',
+            data.total_booked || 0,
+            data.total_shown || 0,
+            data.total_qualified || 0,
+            data.total_deals || 0,
+            data.total_revenue || 0,
+            data.team_close_rate != null ? data.team_close_rate + '%' : '',
+            data.team_avg_rev_per_deal || 0,
+            data.team_crm_compliance != null ? data.team_crm_compliance + '%' : '',
+            data.team_task_adherence != null ? data.team_task_adherence + '%' : '',
+            data.team_open_leads || 0,
+            data.team_est_pipeline || 0,
+        ]);
+
+        const csv = [headers, ...rows].map(r => r.map(v => {
+            const s = String(v);
+            return s.includes(',') ? '"' + s + '"' : s;
+        }).join(',')).join('\n');
+
+        const blob = new Blob([csv], { type: 'text/csv' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'sales-manager-' + (data.monday_str || 'archive') + '.csv';
+        a.click();
+        URL.revokeObjectURL(url);
+    };
 })();
 </script>
 </body>
