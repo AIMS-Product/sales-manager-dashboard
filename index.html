@@ -332,6 +332,13 @@
         .footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: 12px; }
         .footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
         .footer a:hover { text-decoration: underline; }
+        .dl-btn {
+            display: inline-block; padding: 6px 16px; font-size: 12px; font-weight: 600;
+            color: var(--text-secondary); background: #fff; border: 1px solid #d0d3d9;
+            border-radius: 6px; cursor: pointer; text-decoration: none;
+            transition: background 0.15s, border-color 0.15s;
+        }
+        .dl-btn:hover { background: #f0f1f3; border-color: #aaa; }
 
         .funnel-toggle {
             text-align: center;
@@ -481,7 +488,7 @@
 <div class="funnel-panel" id="funnelPanel"></div>
 
 <div class="footer">
-    Data from Close CRM &nbsp;·&nbsp; <a href="archive.html">📅 View Archive →</a>
+    Data from Close CRM &nbsp;·&nbsp; <a href="archive.html">📅 View Archive →</a> &nbsp;·&nbsp; <button class="dl-btn" onclick="downloadCSV()">⬇ Download CSV</button>
 </div>
 
 <script>
@@ -849,6 +856,58 @@
 
     fetchData();
     setInterval(fetchData, 5 * 60 * 1000);
+
+    window.downloadCSV = function() {
+        if (!DATA || !DATA.reps) return;
+        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Avg/Deal', 'CRM Compl.', 'Task Adh.', 'Qual. Pipeline', 'Est. Revenue'];
+        const rows = DATA.reps
+            .filter(r => !r.is_manager)
+            .sort((a, b) => (b.booked || 0) - (a.booked || 0))
+            .map(r => [
+                r.name,
+                r.lane || 1,
+                r.booked || 0,
+                r.shown || 0,
+                r.qualified || 0,
+                r.deals || 0,
+                r.revenue || 0,
+                r.close_rate != null ? r.close_rate + '%' : '',
+                r.avg_rev_per_deal || 0,
+                r.crm_compliance != null ? r.crm_compliance + '%' : '',
+                r.task_adherence != null ? r.task_adherence + '%' : '',
+                r.open_leads || 0,
+                r.est_pipeline || 0,
+            ]);
+
+        // Add totals row
+        rows.push([
+            'Team Totals', '',
+            DATA.total_booked || 0,
+            DATA.total_shown || 0,
+            DATA.total_qualified || 0,
+            DATA.total_deals || 0,
+            DATA.total_revenue || 0,
+            DATA.team_close_rate != null ? DATA.team_close_rate + '%' : '',
+            DATA.team_avg_rev_per_deal || 0,
+            DATA.team_crm_compliance != null ? DATA.team_crm_compliance + '%' : '',
+            DATA.team_task_adherence != null ? DATA.team_task_adherence + '%' : '',
+            DATA.team_open_leads || 0,
+            DATA.team_est_pipeline || 0,
+        ]);
+
+        const csv = [headers, ...rows].map(r => r.map(v => {
+            const s = String(v);
+            return s.includes(',') ? '"' + s + '"' : s;
+        }).join(',')).join('\n');
+
+        const blob = new Blob([csv], { type: 'text/csv' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'sales-manager-wtd-' + (DATA.monday_str || 'export') + '.csv';
+        a.click();
+        URL.revokeObjectURL(url);
+    };
 })();
 </script>
 </body>
