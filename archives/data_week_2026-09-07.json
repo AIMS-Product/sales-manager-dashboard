@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-09-12 11:45 PM PDT",
+  "updated_at": "2026-09-13 12:00 AM PDT",
   "week_label": "Sep 07 \u2013 Sep 13, 2026",
   "monday_str": "2026-09-07",
-  "today_str": "2026-09-12",
-  "day_of_week": 6,
+  "today_str": "2026-09-13",
+  "day_of_week": 7,
   "num_reps": 7,
   "targets": {
     "booked": 15,
@@ -40,22 +40,22 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 150,
+  "total_booked": 158,
   "total_shown": 79,
   "total_qualified": 54,
   "total_deals": 9,
   "total_revenue": 68764.0,
-  "team_close_rate": 6.0,
+  "team_close_rate": 5.7,
   "team_avg_rev_per_deal": 7640.44,
-  "team_crm_compliance": 81.3,
-  "team_task_adherence": 33.8,
-  "team_overdue": 356,
+  "team_crm_compliance": 79.2,
+  "team_task_adherence": 33.6,
+  "team_overdue": 357,
   "team_open_leads": 597,
   "team_est_pipeline": 1432800,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
-      "count": 61
+      "count": 69
     },
     {
       "funnel": "Internal Webinar",
@@ -85,47 +85,64 @@
   "funnel_sources": {
     "in_house": 64,
     "external": 15,
-    "unknown": 71,
-    "in_house_pct": 42.7,
-    "external_pct": 10.0,
-    "unknown_pct": 47.3
+    "unknown": 79,
+    "in_house_pct": 40.5,
+    "external_pct": 9.5,
+    "unknown_pct": 50.0
   },
   "reps": [
     {
       "name": "Luke Herman",
-      "booked": 32,
+      "booked": 35,
       "shown": 21,
       "qualified": 14,
       "deals": 2,
       "revenue": 13794.0,
-      "close_rate": 6.2,
+      "close_rate": 5.7,
       "qa_score": null,
       "avg_rev_per_deal": 6897.0,
-      "crm_compliance": 93.5,
-      "crm_filled": 86,
-      "crm_total": 92,
+      "crm_compliance": 89.7,
+      "crm_filled": 96,
+      "crm_total": 107,
       "crm_detail": {
         "show_up": [
-          26,
-          27
+          29,
+          31
         ],
         "disposition": [
-          26,
-          27
+          29,
+          31
         ],
         "qualified": [
-          18,
-          19
+          20,
+          22
         ],
         "confidence": [
-          16,
-          19
+          18,
+          22
         ],
         "lost_reason": [
           0,
-          0
+          1
         ],
         "missing_leads": [
+          {
+            "name": "Chelliah Sridhar",
+            "lead_id": "lead_TfYvgAWY7zwvBft3cqYSVaMNjiEkdJAyrZ44auhM3ZN",
+            "missing": [
+              "Lost Reason"
+            ]
+          },
+          {
+            "name": "Wanda Wallace",
+            "lead_id": "lead_dotaToKhoriuv7zuFl5SbOlxG460sHs7kq1S6Neu48P",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
           {
             "name": "Lauren Somerville",
             "lead_id": "lead_ToF9ycgwBVXsUXTrbrRjrinH1rYAXdYI0CqOPnImXWO",
@@ -171,31 +188,40 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 98.7,
-      "crm_filled": 76,
-      "crm_total": 77,
+      "crm_compliance": 95.2,
+      "crm_filled": 80,
+      "crm_total": 84,
       "crm_detail": {
         "show_up": [
-          25,
-          25
+          26,
+          27
         ],
         "disposition": [
-          25,
-          25
+          26,
+          27
         ],
         "qualified": [
           13,
-          13
+          14
         ],
         "confidence": [
-          12,
-          13
+          13,
+          14
         ],
         "lost_reason": [
-          1,
-          1
+          2,
+          2
         ],
         "missing_leads": [
+          {
+            "name": "John Salvatore",
+            "lead_id": "lead_uZbQezCy2qX2eqbqIRKc8IUzm6FByMDomU7aexJxDLJ",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified"
+            ]
+          },
           {
             "name": "Sean Cody",
             "lead_id": "lead_WZiKhicyRoj7lYkByHogmJgTXfWKasZBctMgVShT4PW",
@@ -224,31 +250,40 @@
       "close_rate": 4.0,
       "qa_score": null,
       "avg_rev_per_deal": 10897.0,
-      "crm_compliance": 51.8,
-      "crm_filled": 43,
-      "crm_total": 83,
+      "crm_compliance": 50.6,
+      "crm_filled": 44,
+      "crm_total": 87,
       "crm_detail": {
         "show_up": [
-          20,
-          24
+          21,
+          25
         ],
         "disposition": [
           15,
-          24
+          25
         ],
         "qualified": [
           6,
-          17
+          18
         ],
         "confidence": [
           2,
-          17
+          18
         ],
         "lost_reason": [
           0,
           1
         ],
         "missing_leads": [
+          {
+            "name": "Ashley Smithson",
+            "lead_id": "lead_NhDalgBXqH4eAHNEuOPy1cpi5OtWpw7INVrjSLDdrID",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
           {
             "name": "Siddharth Prem",
             "lead_id": "lead_CmfbGDbNL79qsOrByLcF7Boy0sQfiCaHaNgMfdgQq4e",
@@ -508,25 +543,25 @@
       "close_rate": 10.0,
       "qa_score": null,
       "avg_rev_per_deal": 6447.0,
-      "crm_compliance": 73.8,
-      "crm_filled": 45,
-      "crm_total": 61,
+      "crm_compliance": 69.6,
+      "crm_filled": 48,
+      "crm_total": 69,
       "crm_detail": {
         "show_up": [
-          16,
-          16
+          18,
+          18
         ],
         "disposition": [
           14,
-          16
+          18
         ],
         "qualified": [
-          10,
-          14
+          11,
+          16
         ],
         "confidence": [
           4,
-          14
+          16
         ],
         "lost_reason": [
           1,
@@ -545,6 +580,23 @@
             "lead_id": "lead_Eg2khFpAqZ4HZ3TU7eN1iyK2Da5FUgQcPD88LLTgHey",
             "missing": [
               "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Terry Mccann",
+            "lead_id": "lead_TzbWHcTDL6AHRd6EXploZpYQ8LufHCv0np3seSXno7P",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Derek Pitts",
+            "lead_id": "lead_nUZyNabbyDDyLZsgShZELuCMPmaHVDqHMk6qnDswjOS",
+            "missing": [
+              "Disposition",
               "Confidence"
             ]
           },
@@ -636,17 +688,17 @@
       "close_rate": 33.3,
       "qa_score": null,
       "avg_rev_per_deal": 8997.0,
-      "crm_compliance": 50.0,
-      "crm_filled": 3,
-      "crm_total": 6,
+      "crm_compliance": 62.5,
+      "crm_filled": 5,
+      "crm_total": 8,
       "crm_detail": {
         "show_up": [
-          2,
-          2
+          3,
+          3
         ],
         "disposition": [
-          1,
-          2
+          2,
+          3
         ],
         "qualified": [
           0,
@@ -717,8 +769,8 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 91.7,
-      "tasks_overdue": 4,
+      "task_adherence": 89.6,
+      "tasks_overdue": 5,
       "tasks_incomplete": 48,
       "open_leads": 21,
       "est_pipeline": 50400,
