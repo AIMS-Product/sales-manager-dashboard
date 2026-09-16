@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16 10:45 AM PDT",
+  "updated_at": "2026-09-16 11:00 AM PDT",
   "week_label": "Sep 14 \u2013 Sep 20, 2026",
   "monday_str": "2026-09-14",
   "today_str": "2026-09-16",
@@ -48,7 +48,7 @@
   "team_close_rate": 7.7,
   "team_avg_rev_per_deal": 6644.0,
   "team_crm_compliance": 88.5,
-  "team_task_adherence": 43.1,
+  "team_task_adherence": 43.3,
   "team_overdue": 283,
   "team_open_leads": 595,
   "team_est_pipeline": 1428000,
@@ -78,6 +78,14 @@
       "count": 4
     },
     {
+      "funnel": "VSL",
+      "count": 1
+    },
+    {
+      "funnel": "LTF - In-House",
+      "count": 1
+    },
+    {
       "funnel": "Mike Newsletter",
       "count": 1
     },
@@ -87,14 +95,6 @@
     },
     {
       "funnel": "Linkedin",
-      "count": 1
-    },
-    {
-      "funnel": "VSL",
-      "count": 1
-    },
-    {
-      "funnel": "LTF - In-House",
       "count": 1
     }
   ],
@@ -448,32 +448,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 42,
+      "tasks_incomplete": 44,
       "open_leads": 21,
       "est_pipeline": 50400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Joe Vaughan",
-      "booked": 0,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": null,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 0.0,
-      "tasks_overdue": 175,
-      "tasks_incomplete": 175,
-      "open_leads": 138,
-      "est_pipeline": 331200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -498,6 +475,29 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Joe Vaughan",
+      "booked": 0,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": null,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 0.0,
+      "tasks_overdue": 175,
+      "tasks_incomplete": 175,
+      "open_leads": 138,
+      "est_pipeline": 331200,
+      "is_manager": false,
       "is_lead": false,
       "lane": 1
     }
