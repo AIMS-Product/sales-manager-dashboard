@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18 09:00 AM PDT",
+  "updated_at": "2026-09-18 09:15 AM PDT",
   "week_label": "Sep 14 \u2013 Sep 20, 2026",
   "monday_str": "2026-09-14",
   "today_str": "2026-09-18",
@@ -40,12 +40,12 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 140,
+  "total_booked": 139,
   "total_shown": 72,
   "total_qualified": 47,
   "total_deals": 9,
   "total_revenue": 58058.0,
-  "team_close_rate": 6.4,
+  "team_close_rate": 6.5,
   "team_avg_rev_per_deal": 6450.89,
   "team_crm_compliance": 87.9,
   "team_task_adherence": 42.5,
@@ -79,7 +79,7 @@
     },
     {
       "funnel": "Unknown",
-      "count": 2
+      "count": 1
     },
     {
       "funnel": "WWWS",
@@ -105,10 +105,10 @@
   "funnel_sources": {
     "in_house": 58,
     "external": 13,
-    "unknown": 69,
-    "in_house_pct": 41.4,
-    "external_pct": 9.3,
-    "unknown_pct": 49.3
+    "unknown": 68,
+    "in_house_pct": 41.7,
+    "external_pct": 9.4,
+    "unknown_pct": 48.9
   },
   "reps": [
     {
@@ -259,6 +259,66 @@
       "lane": 1
     },
     {
+      "name": "Eric Piccione",
+      "booked": 19,
+      "shown": 9,
+      "qualified": 5,
+      "deals": 3,
+      "revenue": 27991.0,
+      "close_rate": 15.8,
+      "qa_score": null,
+      "avg_rev_per_deal": 9330.33,
+      "crm_compliance": 94.6,
+      "crm_filled": 35,
+      "crm_total": 37,
+      "crm_detail": {
+        "show_up": [
+          11,
+          11
+        ],
+        "disposition": [
+          9,
+          11
+        ],
+        "qualified": [
+          7,
+          7
+        ],
+        "confidence": [
+          7,
+          7
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Joseph Sharp",
+            "lead_id": "lead_jzFbHlj7QzsS0wCTPNDIapujb8lq7R3suSKxgArC2iM",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Danilo Lins Vital",
+            "lead_id": "lead_EF5s59yKrR2ueYx0VhQmuE7x8cTH2BTC5Ovy9OapKeN",
+            "missing": [
+              "Disposition"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 4,
+      "open_leads": 98,
+      "est_pipeline": 235200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Shreya Bechra",
       "booked": 19,
       "shown": 12,
@@ -347,66 +407,6 @@
       "tasks_incomplete": 103,
       "open_leads": 93,
       "est_pipeline": 223200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Eric Piccione",
-      "booked": 19,
-      "shown": 9,
-      "qualified": 5,
-      "deals": 3,
-      "revenue": 27991.0,
-      "close_rate": 15.8,
-      "qa_score": null,
-      "avg_rev_per_deal": 9330.33,
-      "crm_compliance": 94.6,
-      "crm_filled": 35,
-      "crm_total": 37,
-      "crm_detail": {
-        "show_up": [
-          11,
-          11
-        ],
-        "disposition": [
-          9,
-          11
-        ],
-        "qualified": [
-          7,
-          7
-        ],
-        "confidence": [
-          7,
-          7
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Joseph Sharp",
-            "lead_id": "lead_jzFbHlj7QzsS0wCTPNDIapujb8lq7R3suSKxgArC2iM",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Danilo Lins Vital",
-            "lead_id": "lead_EF5s59yKrR2ueYx0VhQmuE7x8cTH2BTC5Ovy9OapKeN",
-            "missing": [
-              "Disposition"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 4,
-      "open_leads": 98,
-      "est_pipeline": 235200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
