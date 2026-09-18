@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18 01:45 PM PDT",
+  "updated_at": "2026-09-18 02:00 PM PDT",
   "week_label": "Sep 14 \u2013 Sep 20, 2026",
   "monday_str": "2026-09-14",
   "today_str": "2026-09-18",
@@ -42,7 +42,7 @@
   },
   "total_booked": 137,
   "total_shown": 79,
-  "total_qualified": 50,
+  "total_qualified": 51,
   "total_deals": 9,
   "total_revenue": 58058.0,
   "team_close_rate": 6.6,
@@ -156,7 +156,7 @@
       "name": "Robin Perkins",
       "booked": 21,
       "shown": 11,
-      "qualified": 10,
+      "qualified": 11,
       "deals": 1,
       "revenue": 6897.0,
       "close_rate": 4.8,
@@ -469,6 +469,68 @@
       "lane": 1
     },
     {
+      "name": "Scott Seymour",
+      "booked": 6,
+      "shown": 5,
+      "qualified": 3,
+      "deals": 1,
+      "revenue": 9497.0,
+      "close_rate": 16.7,
+      "qa_score": null,
+      "avg_rev_per_deal": 9497.0,
+      "crm_compliance": 81.8,
+      "crm_filled": 18,
+      "crm_total": 22,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          5,
+          6
+        ],
+        "qualified": [
+          4,
+          5
+        ],
+        "confidence": [
+          3,
+          5
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Tom Mulligan",
+            "lead_id": "lead_ZgUakaMasTJJAD8Gu4493wQ2rM6lHruMyhEEAx77NDY",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Steve Moog",
+            "lead_id": "lead_tL744SNsOBkN5AneRKtcf4pXY9X85xWglSZI653H6Os",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 40,
+      "open_leads": 22,
+      "est_pipeline": 52800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Joe Vaughan",
       "booked": 6,
       "shown": 2,
@@ -528,68 +590,6 @@
       "tasks_incomplete": 175,
       "open_leads": 138,
       "est_pipeline": 331200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Scott Seymour",
-      "booked": 6,
-      "shown": 5,
-      "qualified": 3,
-      "deals": 1,
-      "revenue": 9497.0,
-      "close_rate": 16.7,
-      "qa_score": null,
-      "avg_rev_per_deal": 9497.0,
-      "crm_compliance": 81.8,
-      "crm_filled": 18,
-      "crm_total": 22,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          5,
-          6
-        ],
-        "qualified": [
-          4,
-          5
-        ],
-        "confidence": [
-          3,
-          5
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Tom Mulligan",
-            "lead_id": "lead_ZgUakaMasTJJAD8Gu4493wQ2rM6lHruMyhEEAx77NDY",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Steve Moog",
-            "lead_id": "lead_tL744SNsOBkN5AneRKtcf4pXY9X85xWglSZI653H6Os",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 40,
-      "open_leads": 22,
-      "est_pipeline": 52800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
