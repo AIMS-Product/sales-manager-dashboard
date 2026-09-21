@@ -152,6 +152,8 @@ REP_QUOTAS = {
     "Luke Herman": 0,
     "Joe Vaughan": 0,
     "Joe Dysert": 0,
+    "Oscar Pugh": 0,
+    "Ariella Irvine": 0,
 }
 
 EXCLUDE_USERS = {
@@ -164,7 +166,7 @@ EXCLUDE_USERS = {
     "Jason Aaron", "Dubem Adindu", "Zac Clover", "Kelly Schrader",
     "Danny Santolaya", "Luis Galarza", "William Nowak",
     "Charlie Ingram", "Pearl Sathekge", "Connor George",
-    "August Young", "Cassie Caraballo", "Ariella Irvine",
+    "August Young", "Cassie Caraballo",
     "Jessica Zatkin", "Dana Lesiuk",
 }
 MANAGER_USERS = {"Joe Dysert"}
