@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24 01:00 PM PDT",
+  "updated_at": "2026-09-24 01:15 PM PDT",
   "week_label": "Sep 21 \u2013 Sep 27, 2026",
   "monday_str": "2026-09-21",
   "today_str": "2026-09-24",
@@ -127,6 +127,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Luke Olsen",
+            "lead_id": "lead_f4lDvK3L3A795Ci8XmEwkddNOwkKF57DtMRnPLCAP6i",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
             "name": "Marc Yanniello",
             "lead_id": "lead_vsAY76O4Pn6qLTMP2J60ir6l3IbV3oAfe3TbC1CzomA",
             "missing": [
@@ -158,13 +165,6 @@
             "lead_id": "lead_XAdWVpNYYRhkxbVlFPopWMQBS9F3JxYuyeowkE82UPx",
             "missing": [
               "Disposition"
-            ]
-          },
-          {
-            "name": "Luke Olsen",
-            "lead_id": "lead_f4lDvK3L3A795Ci8XmEwkddNOwkKF57DtMRnPLCAP6i",
-            "missing": [
-              "Confidence"
             ]
           },
           {
@@ -247,6 +247,51 @@
       "lane": 1
     },
     {
+      "name": "Eric Piccione",
+      "booked": 12,
+      "shown": 8,
+      "qualified": 5,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 8.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 30,
+      "crm_total": 30,
+      "crm_detail": {
+        "show_up": [
+          8,
+          8
+        ],
+        "disposition": [
+          8,
+          8
+        ],
+        "qualified": [
+          6,
+          6
+        ],
+        "confidence": [
+          6,
+          6
+        ],
+        "lost_reason": [
+          2,
+          2
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 3,
+      "open_leads": 76,
+      "est_pipeline": 182400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Robin Perkins",
       "booked": 12,
       "shown": 1,
@@ -295,51 +340,6 @@
       "tasks_incomplete": 37,
       "open_leads": 74,
       "est_pipeline": 177600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Eric Piccione",
-      "booked": 12,
-      "shown": 8,
-      "qualified": 5,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 8.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 30,
-      "crm_total": 30,
-      "crm_detail": {
-        "show_up": [
-          8,
-          8
-        ],
-        "disposition": [
-          8,
-          8
-        ],
-        "qualified": [
-          6,
-          6
-        ],
-        "confidence": [
-          6,
-          6
-        ],
-        "lost_reason": [
-          2,
-          2
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 3,
-      "open_leads": 76,
-      "est_pipeline": 182400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
