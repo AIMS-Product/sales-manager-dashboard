@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24 01:15 PM PDT",
+  "updated_at": "2026-09-24 01:30 PM PDT",
   "week_label": "Sep 21 \u2013 Sep 27, 2026",
   "monday_str": "2026-09-21",
   "today_str": "2026-09-24",
@@ -41,15 +41,15 @@
     "task_adherence": 100
   },
   "total_booked": 92,
-  "total_shown": 32,
-  "total_qualified": 30,
+  "total_shown": 33,
+  "total_qualified": 31,
   "total_deals": 6,
   "total_revenue": 38682.0,
   "team_close_rate": 6.5,
   "team_avg_rev_per_deal": 6447.0,
-  "team_crm_compliance": 75.2,
-  "team_task_adherence": 42.5,
-  "team_overdue": 309,
+  "team_crm_compliance": 75.7,
+  "team_task_adherence": 43.0,
+  "team_overdue": 306,
   "team_open_leads": 702,
   "team_est_pipeline": 1684800,
   "funnel_breakdown": [
@@ -127,18 +127,18 @@
         ],
         "missing_leads": [
           {
-            "name": "Luke Olsen",
-            "lead_id": "lead_f4lDvK3L3A795Ci8XmEwkddNOwkKF57DtMRnPLCAP6i",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
             "name": "Marc Yanniello",
             "lead_id": "lead_vsAY76O4Pn6qLTMP2J60ir6l3IbV3oAfe3TbC1CzomA",
             "missing": [
               "Disposition",
               "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Luke Olsen",
+            "lead_id": "lead_f4lDvK3L3A795Ci8XmEwkddNOwkKF57DtMRnPLCAP6i",
+            "missing": [
               "Confidence"
             ]
           },
@@ -247,51 +247,6 @@
       "lane": 1
     },
     {
-      "name": "Eric Piccione",
-      "booked": 12,
-      "shown": 8,
-      "qualified": 5,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 8.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 30,
-      "crm_total": 30,
-      "crm_detail": {
-        "show_up": [
-          8,
-          8
-        ],
-        "disposition": [
-          8,
-          8
-        ],
-        "qualified": [
-          6,
-          6
-        ],
-        "confidence": [
-          6,
-          6
-        ],
-        "lost_reason": [
-          2,
-          2
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 3,
-      "open_leads": 76,
-      "est_pipeline": 182400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Robin Perkins",
       "booked": 12,
       "shown": 1,
@@ -345,10 +300,55 @@
       "lane": 1
     },
     {
+      "name": "Eric Piccione",
+      "booked": 12,
+      "shown": 8,
+      "qualified": 5,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 8.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 30,
+      "crm_total": 30,
+      "crm_detail": {
+        "show_up": [
+          8,
+          8
+        ],
+        "disposition": [
+          8,
+          8
+        ],
+        "qualified": [
+          6,
+          6
+        ],
+        "confidence": [
+          6,
+          6
+        ],
+        "lost_reason": [
+          2,
+          2
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 3,
+      "open_leads": 76,
+      "est_pipeline": 182400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Luke Herman",
       "booked": 11,
-      "shown": 4,
-      "qualified": 4,
+      "shown": 5,
+      "qualified": 5,
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
@@ -382,9 +382,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 88,
-      "open_leads": 44,
-      "est_pipeline": 105600,
+      "tasks_incomplete": 91,
+      "open_leads": 45,
+      "est_pipeline": 108000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -507,8 +507,8 @@
       "close_rate": 0.0,
       "qa_score": null,
       "avg_rev_per_deal": null,
-      "crm_compliance": 52.0,
-      "crm_filled": 13,
+      "crm_compliance": 56.0,
+      "crm_filled": 14,
       "crm_total": 25,
       "crm_detail": {
         "show_up": [
@@ -524,7 +524,7 @@
           6
         ],
         "confidence": [
-          1,
+          2,
           6
         ],
         "lost_reason": [
@@ -534,10 +534,9 @@
         "missing_leads": [
           {
             "name": "Mark Mock",
-            "lead_id": "lead_5iGuGmO4jqyf3pc4jL9HLZfmfJeRI8ApXA3lLXisxYd",
+            "lead_id": "lead_15DNuDfl9HLY79CtZZObYFhnGB6NDQZ4FyOJjNghhYS",
             "missing": [
-              "Disposition",
-              "Confidence"
+              "Disposition"
             ]
           },
           {
@@ -585,8 +584,8 @@
       "task_adherence": 47.2,
       "tasks_overdue": 19,
       "tasks_incomplete": 36,
-      "open_leads": 115,
-      "est_pipeline": 276000,
+      "open_leads": 114,
+      "est_pipeline": 273600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -688,9 +687,9 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 93.3,
-      "tasks_overdue": 3,
-      "tasks_incomplete": 45,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 42,
       "open_leads": 22,
       "est_pipeline": 52800,
       "is_manager": false,
