@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25 01:45 PM PDT",
+  "updated_at": "2026-09-25 02:00 PM PDT",
   "week_label": "Sep 21 \u2013 Sep 27, 2026",
   "monday_str": "2026-09-21",
   "today_str": "2026-09-25",
@@ -50,8 +50,8 @@
   "team_crm_compliance": 88.4,
   "team_task_adherence": 44.8,
   "team_overdue": 301,
-  "team_open_leads": 656,
-  "team_est_pipeline": 1574400,
+  "team_open_leads": 654,
+  "team_est_pipeline": 1569600,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -91,6 +91,61 @@
     "unknown_pct": 56.5
   },
   "reps": [
+    {
+      "name": "Robin Perkins",
+      "booked": 16,
+      "shown": 3,
+      "qualified": 5,
+      "deals": 2,
+      "revenue": 13794.0,
+      "close_rate": 12.5,
+      "qa_score": null,
+      "avg_rev_per_deal": 6897.0,
+      "crm_compliance": 91.9,
+      "crm_filled": 34,
+      "crm_total": 37,
+      "crm_detail": {
+        "show_up": [
+          12,
+          12
+        ],
+        "disposition": [
+          11,
+          12
+        ],
+        "qualified": [
+          5,
+          6
+        ],
+        "confidence": [
+          5,
+          6
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Herman Brown",
+            "lead_id": "lead_60O6Jw94yVC0ajZ6pdOm0uwJIP6UXFHRJ4cDGyJatvc",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 37,
+      "open_leads": 47,
+      "est_pipeline": 112800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
     {
       "name": "Joe Vaughan",
       "booked": 16,
@@ -198,63 +253,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 86,
-      "open_leads": 39,
-      "est_pipeline": 93600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Robin Perkins",
-      "booked": 16,
-      "shown": 3,
-      "qualified": 5,
-      "deals": 2,
-      "revenue": 13794.0,
-      "close_rate": 12.5,
-      "qa_score": null,
-      "avg_rev_per_deal": 6897.0,
-      "crm_compliance": 91.9,
-      "crm_filled": 34,
-      "crm_total": 37,
-      "crm_detail": {
-        "show_up": [
-          12,
-          12
-        ],
-        "disposition": [
-          11,
-          12
-        ],
-        "qualified": [
-          5,
-          6
-        ],
-        "confidence": [
-          5,
-          6
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Herman Brown",
-            "lead_id": "lead_60O6Jw94yVC0ajZ6pdOm0uwJIP6UXFHRJ4cDGyJatvc",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 37,
-      "open_leads": 47,
-      "est_pipeline": 112800,
+      "open_leads": 37,
+      "est_pipeline": 88800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
