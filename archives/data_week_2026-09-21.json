@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25 09:45 AM PDT",
+  "updated_at": "2026-09-25 10:00 AM PDT",
   "week_label": "Sep 21 \u2013 Sep 27, 2026",
   "monday_str": "2026-09-21",
   "today_str": "2026-09-25",
@@ -40,26 +40,26 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 119,
-  "total_shown": 39,
+  "total_booked": 115,
+  "total_shown": 41,
   "total_qualified": 38,
   "total_deals": 9,
   "total_revenue": 59676.0,
-  "team_close_rate": 7.6,
+  "team_close_rate": 7.8,
   "team_avg_rev_per_deal": 6630.67,
   "team_crm_compliance": 76.0,
   "team_task_adherence": 43.0,
   "team_overdue": 303,
-  "team_open_leads": 650,
-  "team_est_pipeline": 1560000,
+  "team_open_leads": 651,
+  "team_est_pipeline": 1562400,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
-      "count": 60
+      "count": 59
     },
     {
       "funnel": "Internal Webinar",
-      "count": 37
+      "count": 34
     },
     {
       "funnel": "YouTube",
@@ -83,18 +83,18 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 48,
+    "in_house": 45,
     "external": 5,
-    "unknown": 66,
-    "in_house_pct": 40.3,
-    "external_pct": 4.2,
-    "unknown_pct": 55.5
+    "unknown": 65,
+    "in_house_pct": 39.1,
+    "external_pct": 4.3,
+    "unknown_pct": 56.5
   },
   "reps": [
     {
       "name": "Joe Vaughan",
       "booked": 17,
-      "shown": 4,
+      "shown": 5,
       "qualified": 6,
       "deals": 2,
       "revenue": 12894.0,
@@ -127,6 +127,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Markus Specks",
+            "lead_id": "lead_hN7OP6pPj881k3STttAy5RpSraKj6Tp6kqUsmYqGYNI",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
             "name": "Yolonda Sanders",
             "lead_id": "lead_V4zH0u47Pvl3Q3viGKNL8FswnrIgWVnCrpLY2cnsSJl",
             "missing": [
@@ -152,13 +159,6 @@
             "lead_id": "lead_uAd7u35xleBRHXyFoerByKmPo7JE984IGQokdRSIHSC",
             "missing": [
               "Disposition",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Markus Specks",
-            "lead_id": "lead_hN7OP6pPj881k3STttAy5RpSraKj6Tp6kqUsmYqGYNI",
-            "missing": [
               "Confidence"
             ]
           },
@@ -219,51 +219,6 @@
       "tasks_incomplete": 178,
       "open_leads": 144,
       "est_pipeline": 345600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 17,
-      "shown": 4,
-      "qualified": 2,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 35,
-      "crm_total": 35,
-      "crm_detail": {
-        "show_up": [
-          12,
-          12
-        ],
-        "disposition": [
-          12,
-          12
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          5,
-          5
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 80.0,
-      "tasks_overdue": 7,
-      "tasks_incomplete": 35,
-      "open_leads": 131,
-      "est_pipeline": 314400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -435,9 +390,54 @@
       "lane": 1
     },
     {
+      "name": "Christian Hartwell",
+      "booked": 13,
+      "shown": 4,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 35,
+      "crm_total": 35,
+      "crm_detail": {
+        "show_up": [
+          12,
+          12
+        ],
+        "disposition": [
+          12,
+          12
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 80.0,
+      "tasks_overdue": 7,
+      "tasks_incomplete": 35,
+      "open_leads": 131,
+      "est_pipeline": 314400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Oscar Pugh",
       "booked": 13,
-      "shown": 3,
+      "shown": 4,
       "qualified": 2,
       "deals": 0,
       "revenue": 0,
@@ -555,8 +555,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 0,
-      "open_leads": 10,
-      "est_pipeline": 24000,
+      "open_leads": 11,
+      "est_pipeline": 26400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
