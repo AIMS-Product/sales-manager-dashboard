@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25 04:00 PM PDT",
+  "updated_at": "2026-09-25 04:15 PM PDT",
   "week_label": "Sep 21 \u2013 Sep 27, 2026",
   "monday_str": "2026-09-21",
   "today_str": "2026-09-25",
@@ -48,7 +48,7 @@
   "team_close_rate": 10.5,
   "team_avg_rev_per_deal": 6472.5,
   "team_crm_compliance": 88.9,
-  "team_task_adherence": 45.1,
+  "team_task_adherence": 45.2,
   "team_overdue": 301,
   "team_open_leads": 655,
   "team_est_pipeline": 1572000,
@@ -91,51 +91,6 @@
     "unknown_pct": 57.0
   },
   "reps": [
-    {
-      "name": "Luke Herman",
-      "booked": 16,
-      "shown": 6,
-      "qualified": 6,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 27,
-      "crm_total": 27,
-      "crm_detail": {
-        "show_up": [
-          8,
-          8
-        ],
-        "disposition": [
-          8,
-          8
-        ],
-        "qualified": [
-          5,
-          5
-        ],
-        "confidence": [
-          5,
-          5
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 88,
-      "open_leads": 37,
-      "est_pipeline": 88800,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
     {
       "name": "Joe Vaughan",
       "booked": 16,
@@ -187,11 +142,56 @@
           }
         ]
       },
-      "task_adherence": 1.1,
+      "task_adherence": 1.7,
       "tasks_overdue": 177,
-      "tasks_incomplete": 179,
+      "tasks_incomplete": 180,
       "open_leads": 144,
       "est_pipeline": 345600,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Luke Herman",
+      "booked": 16,
+      "shown": 6,
+      "qualified": 6,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 27,
+      "crm_total": 27,
+      "crm_detail": {
+        "show_up": [
+          8,
+          8
+        ],
+        "disposition": [
+          8,
+          8
+        ],
+        "qualified": [
+          5,
+          5
+        ],
+        "confidence": [
+          5,
+          5
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 87,
+      "open_leads": 37,
+      "est_pipeline": 88800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -244,7 +244,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 37,
+      "tasks_incomplete": 38,
       "open_leads": 48,
       "est_pipeline": 115200,
       "is_manager": false,
@@ -365,6 +365,81 @@
       "lane": 1
     },
     {
+      "name": "Oscar Pugh",
+      "booked": 12,
+      "shown": 5,
+      "qualified": 4,
+      "deals": 1,
+      "revenue": 6000.0,
+      "close_rate": 8.3,
+      "qa_score": null,
+      "avg_rev_per_deal": 6000.0,
+      "crm_compliance": 82.1,
+      "crm_filled": 23,
+      "crm_total": 28,
+      "crm_detail": {
+        "show_up": [
+          9,
+          9
+        ],
+        "disposition": [
+          9,
+          9
+        ],
+        "qualified": [
+          4,
+          5
+        ],
+        "confidence": [
+          1,
+          5
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Jae Choi",
+            "lead_id": "lead_Mr6gdU8cJyodgGnFC4WUB1DH3tht47RCaJ4z7njI0Cb",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Alex Heckaman",
+            "lead_id": "lead_hssmgnPmxM4uc2tInhLZKIlkdBDuLvoO8eUNfvD0zS4",
+            "missing": [
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Patrick Finney",
+            "lead_id": "lead_jGS43ny7JUaezsx7OpZXeGg93B3LEvFvx5wNkD1x3VZ",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Lino Persi",
+            "lead_id": "lead_4V4mmteYG0eeghCRNrGPvtvsRXEmH3q7dfCj834NU5o",
+            "missing": [
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 0,
+      "open_leads": 14,
+      "est_pipeline": 33600,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Ariella Irvine",
       "booked": 12,
       "shown": 5,
@@ -470,81 +545,6 @@
       "tasks_incomplete": 48,
       "open_leads": 115,
       "est_pipeline": 276000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Oscar Pugh",
-      "booked": 12,
-      "shown": 5,
-      "qualified": 4,
-      "deals": 1,
-      "revenue": 6000.0,
-      "close_rate": 8.3,
-      "qa_score": null,
-      "avg_rev_per_deal": 6000.0,
-      "crm_compliance": 82.1,
-      "crm_filled": 23,
-      "crm_total": 28,
-      "crm_detail": {
-        "show_up": [
-          9,
-          9
-        ],
-        "disposition": [
-          9,
-          9
-        ],
-        "qualified": [
-          4,
-          5
-        ],
-        "confidence": [
-          1,
-          5
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Jae Choi",
-            "lead_id": "lead_Mr6gdU8cJyodgGnFC4WUB1DH3tht47RCaJ4z7njI0Cb",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Alex Heckaman",
-            "lead_id": "lead_hssmgnPmxM4uc2tInhLZKIlkdBDuLvoO8eUNfvD0zS4",
-            "missing": [
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Patrick Finney",
-            "lead_id": "lead_jGS43ny7JUaezsx7OpZXeGg93B3LEvFvx5wNkD1x3VZ",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Lino Persi",
-            "lead_id": "lead_4V4mmteYG0eeghCRNrGPvtvsRXEmH3q7dfCj834NU5o",
-            "missing": [
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 0,
-      "open_leads": 14,
-      "est_pipeline": 33600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
