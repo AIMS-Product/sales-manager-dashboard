@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25 01:15 PM PDT",
+  "updated_at": "2026-09-25 01:30 PM PDT",
   "week_label": "Sep 21 \u2013 Sep 27, 2026",
   "monday_str": "2026-09-21",
   "today_str": "2026-09-25",
@@ -41,7 +41,7 @@
     "task_adherence": 100
   },
   "total_booked": 115,
-  "total_shown": 45,
+  "total_shown": 44,
   "total_qualified": 43,
   "total_deals": 10,
   "total_revenue": 65676.0,
@@ -92,46 +92,56 @@
   },
   "reps": [
     {
-      "name": "Luke Herman",
+      "name": "Robin Perkins",
       "booked": 16,
-      "shown": 6,
-      "qualified": 6,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "shown": 3,
+      "qualified": 5,
+      "deals": 2,
+      "revenue": 13794.0,
+      "close_rate": 12.5,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 100.0,
-      "crm_filled": 27,
-      "crm_total": 27,
+      "avg_rev_per_deal": 6897.0,
+      "crm_compliance": 91.9,
+      "crm_filled": 34,
+      "crm_total": 37,
       "crm_detail": {
         "show_up": [
-          8,
-          8
+          12,
+          12
         ],
         "disposition": [
-          8,
-          8
+          11,
+          12
         ],
         "qualified": [
           5,
-          5
+          6
         ],
         "confidence": [
           5,
-          5
+          6
         ],
         "lost_reason": [
           1,
           1
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Herman Brown",
+            "lead_id": "lead_60O6Jw94yVC0ajZ6pdOm0uwJIP6UXFHRJ4cDGyJatvc",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          }
+        ]
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 87,
-      "open_leads": 39,
-      "est_pipeline": 93600,
+      "tasks_incomplete": 37,
+      "open_leads": 47,
+      "est_pipeline": 112800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -139,7 +149,7 @@
     {
       "name": "Joe Vaughan",
       "booked": 16,
-      "shown": 6,
+      "shown": 5,
       "qualified": 6,
       "deals": 2,
       "revenue": 12894.0,
@@ -205,56 +215,46 @@
       "lane": 1
     },
     {
-      "name": "Robin Perkins",
+      "name": "Luke Herman",
       "booked": 16,
-      "shown": 3,
-      "qualified": 5,
-      "deals": 2,
-      "revenue": 13794.0,
-      "close_rate": 12.5,
+      "shown": 6,
+      "qualified": 6,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
       "qa_score": null,
-      "avg_rev_per_deal": 6897.0,
-      "crm_compliance": 91.9,
-      "crm_filled": 34,
-      "crm_total": 37,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 100.0,
+      "crm_filled": 27,
+      "crm_total": 27,
       "crm_detail": {
         "show_up": [
-          12,
-          12
+          8,
+          8
         ],
         "disposition": [
-          11,
-          12
+          8,
+          8
         ],
         "qualified": [
           5,
-          6
+          5
         ],
         "confidence": [
           5,
-          6
+          5
         ],
         "lost_reason": [
           1,
           1
         ],
-        "missing_leads": [
-          {
-            "name": "Herman Brown",
-            "lead_id": "lead_60O6Jw94yVC0ajZ6pdOm0uwJIP6UXFHRJ4cDGyJatvc",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 37,
-      "open_leads": 47,
-      "est_pipeline": 112800,
+      "tasks_incomplete": 87,
+      "open_leads": 39,
+      "est_pipeline": 93600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
