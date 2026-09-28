@@ -724,6 +724,34 @@ def fetch_open_leads_per_rep(user_map):
     return rep_open_leads
 
 
+# ── MTD Funnel Dashboard Integration ─────────────────────────────────────────
+
+MTD_WEEKLY_JSON_URL = "https://aims-product.github.io/mtd-funnel-dashboard/archives/data-week-{monday}.json"
+
+def fetch_mtd_weekly_totals(monday_str):
+    """
+    Fetch the MTD Funnel Dashboard's weekly JSON for the given Monday.
+    Returns dict with booked/showed/qualified/closed/revenue or None on failure.
+    The MTD dashboard is the source of truth for team-wide funnel totals.
+    """
+    url = MTD_WEEKLY_JSON_URL.format(monday=monday_str)
+    try:
+        resp = requests.get(url, timeout=10)
+        if resp.status_code == 200:
+            data = resp.json()
+            grand = data.get("grand", {})
+            print(f"  ✅ MTD weekly JSON loaded: booked={grand.get('booked')}, "
+                  f"showed={grand.get('showed')}, qualified={grand.get('qualified')}", flush=True)
+            return grand
+        else:
+            print(f"  ⚠️ MTD weekly JSON not available (HTTP {resp.status_code}), "
+                  f"using local totals", flush=True)
+            return None
+    except Exception as e:
+        print(f"  ⚠️ MTD weekly JSON fetch failed ({e}), using local totals", flush=True)
+        return None
+
+
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 def build_dashboard_data():
@@ -860,11 +888,18 @@ def build_dashboard_data():
     non_mgr = [r for r in reps if not r["is_manager"]]
     num_reps = len(non_mgr)
 
-    # Booked/shown/qualified — use unfiltered totals (includes all owners)
-    # so Team Totals match the MTD funnel dashboard
-    total_booked = raw_team_totals["booked"]
-    total_shown = raw_team_totals["shown"]
-    total_qualified = raw_team_totals["qualified"]
+    # Booked/shown/qualified — try to pull from the MTD funnel dashboard's
+    # weekly JSON so Team Totals match EXACTLY. Fall back to local unfiltered
+    # totals if the MTD JSON isn't available yet (e.g. first build of a new week).
+    mtd_grand = fetch_mtd_weekly_totals(monday_str)
+    if mtd_grand:
+        total_booked = mtd_grand.get("booked", raw_team_totals["booked"])
+        total_shown = mtd_grand.get("showed", raw_team_totals["shown"])
+        total_qualified = mtd_grand.get("qualified", raw_team_totals["qualified"])
+    else:
+        total_booked = raw_team_totals["booked"]
+        total_shown = raw_team_totals["shown"]
+        total_qualified = raw_team_totals["qualified"]
 
     # CRM still excludes manager
     total_crm_filled = sum(r["crm_filled"] for r in non_mgr)
