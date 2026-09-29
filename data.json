@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29 09:30 AM PDT",
+  "updated_at": "2026-09-29 09:45 AM PDT",
   "week_label": "Sep 28 \u2013 Oct 04, 2026",
   "monday_str": "2026-09-28",
   "today_str": "2026-09-29",
@@ -50,8 +50,8 @@
   "team_crm_compliance": 63.6,
   "team_task_adherence": 38.9,
   "team_overdue": 323,
-  "team_open_leads": 651,
-  "team_est_pipeline": 1562400,
+  "team_open_leads": 650,
+  "team_est_pipeline": 1560000,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -66,11 +66,11 @@
       "count": 5
     },
     {
-      "funnel": "Website",
+      "funnel": "Google Ads",
       "count": 3
     },
     {
-      "funnel": "Google Ads",
+      "funnel": "Website",
       "count": 3
     },
     {
@@ -126,8 +126,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 73,
-      "open_leads": 39,
-      "est_pipeline": 93600,
+      "open_leads": 38,
+      "est_pipeline": 91200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -286,6 +286,15 @@
         ],
         "missing_leads": [
           {
+            "name": "Dale Bucklen",
+            "lead_id": "lead_7qR0amwqYVLAd5PjtHgskOi1wQxK9KmkVJSP8Rnqcto",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Terri Sconiers",
             "lead_id": "lead_N6vStdIru9mfguku2vcGrOOoTtSbiewEnqtNZ4ppuGC",
             "missing": [
@@ -297,15 +306,6 @@
           {
             "name": "Tino Perez",
             "lead_id": "lead_4c4iCLhNbSfJbz2mZ6AWxZ1hw1Z2ylDA7Z98Xlnf8CU",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Dale Bucklen",
-            "lead_id": "lead_7qR0amwqYVLAd5PjtHgskOi1wQxK9KmkVJSP8Rnqcto",
             "missing": [
               "Disposition",
               "Qualified",
@@ -369,29 +369,6 @@
       "lane": 1
     },
     {
-      "name": "Oscar Pugh",
-      "booked": 3,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 8,
-      "open_leads": 14,
-      "est_pipeline": 33600,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Eric Piccione",
       "booked": 3,
       "shown": 1,
@@ -410,6 +387,29 @@
       "tasks_incomplete": 2,
       "open_leads": 62,
       "est_pipeline": 148800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Oscar Pugh",
+      "booked": 3,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 8,
+      "open_leads": 14,
+      "est_pipeline": 33600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -469,29 +469,6 @@
       "lane": 1
     },
     {
-      "name": "Scott Seymour",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "task_adherence": 97.1,
-      "tasks_overdue": 1,
-      "tasks_incomplete": 35,
-      "open_leads": 18,
-      "est_pipeline": 43200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Joe Dysert",
       "booked": 1,
       "shown": 1,
@@ -542,6 +519,29 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Scott Seymour",
+      "booked": 1,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "task_adherence": 97.1,
+      "tasks_overdue": 1,
+      "tasks_incomplete": 35,
+      "open_leads": 18,
+      "est_pipeline": 43200,
+      "is_manager": false,
       "is_lead": false,
       "lane": 1
     }
