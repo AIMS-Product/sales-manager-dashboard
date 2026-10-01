@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01 12:15 PM PDT",
+  "updated_at": "2026-10-01 12:30 PM PDT",
   "week_label": "Sep 28 \u2013 Oct 04, 2026",
   "monday_str": "2026-09-28",
   "today_str": "2026-10-01",
@@ -48,7 +48,7 @@
   "team_close_rate": 11.3,
   "team_avg_rev_per_deal": 9613.92,
   "team_crm_compliance": 79.6,
-  "team_task_adherence": 38.5,
+  "team_task_adherence": 38.6,
   "team_overdue": 326,
   "team_open_leads": 653,
   "team_est_pipeline": 1567200,
@@ -59,7 +59,7 @@
     },
     {
       "funnel": "Internal Webinar",
-      "count": 22
+      "count": 21
     },
     {
       "funnel": "Website",
@@ -87,22 +87,22 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 37,
+    "in_house": 36,
     "external": 4,
     "unknown": 52,
-    "in_house_pct": 39.8,
+    "in_house_pct": 39.1,
     "external_pct": 4.3,
-    "unknown_pct": 55.9
+    "unknown_pct": 56.5
   },
   "reps": [
     {
       "name": "Joe Vaughan",
-      "booked": 19,
+      "booked": 18,
       "shown": 7,
       "qualified": 2,
       "deals": 1,
       "revenue": 14997.0,
-      "close_rate": 5.3,
+      "close_rate": 5.6,
       "qa_score": null,
       "avg_rev_per_deal": 14997.0,
       "crm_compliance": 66.7,
@@ -365,75 +365,46 @@
       "lane": 1
     },
     {
-      "name": "Oscar Pugh",
+      "name": "Christian Hartwell",
       "booked": 9,
-      "shown": 2,
-      "qualified": 1,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "shown": 4,
+      "qualified": 6,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 11.1,
       "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 54.5,
-      "crm_filled": 12,
-      "crm_total": 22,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 25,
+      "crm_total": 25,
       "crm_detail": {
         "show_up": [
-          5,
+          6,
           6
         ],
         "disposition": [
-          3,
+          6,
           6
         ],
         "qualified": [
-          1,
-          4
+          6,
+          6
         ],
         "confidence": [
-          2,
-          4
+          6,
+          6
         ],
         "lost_reason": [
           1,
-          2
+          1
         ],
-        "missing_leads": [
-          {
-            "name": "Terrell Williams Moore",
-            "lead_id": "lead_dgmx5LVaFTuYRrmYp3YCyJLQu0Vc3qWQ4zMcGXHyiAd",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Elesieya Dunn",
-            "lead_id": "lead_MyNXbhrMHJpwJFFVvaIL1jCo240WMvlfaUp1WfDGn4z",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Daniel Lawrence Lawrence",
-            "lead_id": "lead_wBqBNtR5riEMhIRF2MEuIJvvHZedvjcgs4FLrbNpyEi",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Lost Reason"
-            ]
-          }
-        ]
+        "missing_leads": []
       },
-      "task_adherence": 28.6,
-      "tasks_overdue": 5,
-      "tasks_incomplete": 7,
-      "open_leads": 14,
-      "est_pipeline": 33600,
+      "task_adherence": 79.3,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 29,
+      "open_leads": 129,
+      "est_pipeline": 309600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -540,46 +511,75 @@
       "lane": 1
     },
     {
-      "name": "Christian Hartwell",
+      "name": "Oscar Pugh",
       "booked": 9,
-      "shown": 4,
-      "qualified": 6,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 11.1,
+      "shown": 2,
+      "qualified": 2,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
       "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 25,
-      "crm_total": 25,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 54.5,
+      "crm_filled": 12,
+      "crm_total": 22,
       "crm_detail": {
         "show_up": [
-          6,
+          5,
           6
         ],
         "disposition": [
-          6,
+          3,
           6
         ],
         "qualified": [
-          6,
-          6
+          1,
+          4
         ],
         "confidence": [
-          6,
-          6
+          2,
+          4
         ],
         "lost_reason": [
           1,
-          1
+          2
         ],
-        "missing_leads": []
+        "missing_leads": [
+          {
+            "name": "Terrell Williams Moore",
+            "lead_id": "lead_dgmx5LVaFTuYRrmYp3YCyJLQu0Vc3qWQ4zMcGXHyiAd",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Elesieya Dunn",
+            "lead_id": "lead_MyNXbhrMHJpwJFFVvaIL1jCo240WMvlfaUp1WfDGn4z",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Daniel Lawrence Lawrence",
+            "lead_id": "lead_wBqBNtR5riEMhIRF2MEuIJvvHZedvjcgs4FLrbNpyEi",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Lost Reason"
+            ]
+          }
+        ]
       },
-      "task_adherence": 79.3,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 29,
-      "open_leads": 129,
-      "est_pipeline": 309600,
+      "task_adherence": 28.6,
+      "tasks_overdue": 5,
+      "tasks_incomplete": 7,
+      "open_leads": 14,
+      "est_pipeline": 33600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -674,9 +674,9 @@
           }
         ]
       },
-      "task_adherence": 8.3,
+      "task_adherence": 9.1,
       "tasks_overdue": 100,
-      "tasks_incomplete": 109,
+      "tasks_incomplete": 110,
       "open_leads": 80,
       "est_pipeline": 192000,
       "is_manager": false,
