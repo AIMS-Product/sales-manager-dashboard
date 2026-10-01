@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01 03:45 AM PDT",
+  "updated_at": "2026-10-01 04:00 AM PDT",
   "week_label": "Sep 28 \u2013 Oct 04, 2026",
   "monday_str": "2026-09-28",
   "today_str": "2026-10-01",
@@ -43,15 +43,15 @@
   "total_booked": 110,
   "total_shown": 43,
   "total_qualified": 31,
-  "total_deals": 11,
-  "total_revenue": 109370.0,
-  "team_close_rate": 10.0,
-  "team_avg_rev_per_deal": 9942.73,
+  "total_deals": 12,
+  "total_revenue": 115367.0,
+  "team_close_rate": 10.9,
+  "team_avg_rev_per_deal": 9613.92,
   "team_crm_compliance": 77.6,
   "team_task_adherence": 38.2,
   "team_overdue": 331,
-  "team_open_leads": 649,
-  "team_est_pipeline": 1557600,
+  "team_open_leads": 648,
+  "team_est_pipeline": 1555200,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -414,9 +414,9 @@
       "booked": 10,
       "shown": 3,
       "qualified": 2,
-      "deals": 3,
-      "revenue": 17991.0,
-      "close_rate": 30.0,
+      "deals": 4,
+      "revenue": 23988.0,
+      "close_rate": 40.0,
       "qa_score": null,
       "avg_rev_per_deal": 5997.0,
       "crm_compliance": 92.9,
@@ -456,8 +456,62 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 1,
-      "open_leads": 61,
-      "est_pipeline": 146400,
+      "open_leads": 60,
+      "est_pipeline": 144000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Christian Hartwell",
+      "booked": 9,
+      "shown": 4,
+      "qualified": 6,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 11.1,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 92.0,
+      "crm_filled": 23,
+      "crm_total": 25,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          5,
+          6
+        ],
+        "qualified": [
+          6,
+          6
+        ],
+        "confidence": [
+          5,
+          6
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Travis Brown",
+            "lead_id": "lead_PWiFcfHqlvysJXEmf2E3wd0QDRQYjm13nQvpA9lq6vc",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 79.3,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 29,
+      "open_leads": 130,
+      "est_pipeline": 312000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -532,60 +586,6 @@
       "tasks_incomplete": 7,
       "open_leads": 13,
       "est_pipeline": 31200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 9,
-      "shown": 4,
-      "qualified": 6,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 11.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 92.0,
-      "crm_filled": 23,
-      "crm_total": 25,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          5,
-          6
-        ],
-        "qualified": [
-          6,
-          6
-        ],
-        "confidence": [
-          5,
-          6
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Travis Brown",
-            "lead_id": "lead_PWiFcfHqlvysJXEmf2E3wd0QDRQYjm13nQvpA9lq6vc",
-            "missing": [
-              "Disposition",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 79.3,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 29,
-      "open_leads": 130,
-      "est_pipeline": 312000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
