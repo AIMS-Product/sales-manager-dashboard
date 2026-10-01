@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01 04:30 AM PDT",
+  "updated_at": "2026-10-01 04:45 AM PDT",
   "week_label": "Sep 28 \u2013 Oct 04, 2026",
   "monday_str": "2026-09-28",
   "today_str": "2026-10-01",
@@ -50,8 +50,8 @@
   "team_crm_compliance": 77.6,
   "team_task_adherence": 38.2,
   "team_overdue": 331,
-  "team_open_leads": 648,
-  "team_est_pipeline": 1555200,
+  "team_open_leads": 649,
+  "team_est_pipeline": 1557600,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -62,24 +62,20 @@
       "count": 24
     },
     {
+      "funnel": "Website",
+      "count": 7
+    },
+    {
       "funnel": "YouTube",
       "count": 7
     },
     {
-      "funnel": "Website",
-      "count": 6
+      "funnel": "Instagram",
+      "count": 3
     },
     {
       "funnel": "Google Ads",
       "count": 3
-    },
-    {
-      "funnel": "Instagram",
-      "count": 2
-    },
-    {
-      "funnel": "Unknown",
-      "count": 2
     },
     {
       "funnel": "LTF - In-House",
@@ -91,12 +87,12 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 37,
-    "external": 3,
-    "unknown": 55,
-    "in_house_pct": 38.9,
-    "external_pct": 3.2,
-    "unknown_pct": 57.9
+    "in_house": 38,
+    "external": 4,
+    "unknown": 53,
+    "in_house_pct": 40.0,
+    "external_pct": 4.2,
+    "unknown_pct": 55.8
   },
   "reps": [
     {
@@ -344,6 +340,21 @@
         ],
         "missing_leads": [
           {
+            "name": "Tyler McKnight",
+            "lead_id": "lead_kOkD4NZt7eiN84bUMapj0J0QhGjoVWLPVMf1GyOQjz3",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "David DeStefano",
+            "lead_id": "lead_4bBbmTzMXUgvd0eAWbm3dq3XqMLn7INYeOqEutixD9d",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
             "name": "Dale Bucklen",
             "lead_id": "lead_7qR0amwqYVLAd5PjtHgskOi1wQxK9KmkVJSP8Rnqcto",
             "missing": [
@@ -359,23 +370,8 @@
             ]
           },
           {
-            "name": "Tyler McKnight",
-            "lead_id": "lead_kOkD4NZt7eiN84bUMapj0J0QhGjoVWLPVMf1GyOQjz3",
-            "missing": [
-              "Disposition",
-              "Confidence"
-            ]
-          },
-          {
             "name": "Tony Lindner",
             "lead_id": "lead_X2ouizPvGYe694EfhPAxYQrJlAwX3KInlQlyfKK9S9D",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "David DeStefano",
-            "lead_id": "lead_4bBbmTzMXUgvd0eAWbm3dq3XqMLn7INYeOqEutixD9d",
             "missing": [
               "Confidence"
             ]
@@ -412,8 +408,8 @@
     {
       "name": "Eric Piccione",
       "booked": 10,
-      "shown": 3,
-      "qualified": 2,
+      "shown": 4,
+      "qualified": 3,
       "deals": 4,
       "revenue": 23988.0,
       "close_rate": 40.0,
@@ -456,8 +452,62 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 1,
-      "open_leads": 60,
-      "est_pipeline": 144000,
+      "open_leads": 61,
+      "est_pipeline": 146400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Christian Hartwell",
+      "booked": 9,
+      "shown": 4,
+      "qualified": 6,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 11.1,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 92.0,
+      "crm_filled": 23,
+      "crm_total": 25,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          5,
+          6
+        ],
+        "qualified": [
+          6,
+          6
+        ],
+        "confidence": [
+          5,
+          6
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Travis Brown",
+            "lead_id": "lead_PWiFcfHqlvysJXEmf2E3wd0QDRQYjm13nQvpA9lq6vc",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 79.3,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 29,
+      "open_leads": 130,
+      "est_pipeline": 312000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -532,60 +582,6 @@
       "tasks_incomplete": 7,
       "open_leads": 13,
       "est_pipeline": 31200,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 9,
-      "shown": 4,
-      "qualified": 6,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 11.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 92.0,
-      "crm_filled": 23,
-      "crm_total": 25,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          5,
-          6
-        ],
-        "qualified": [
-          6,
-          6
-        ],
-        "confidence": [
-          5,
-          6
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Travis Brown",
-            "lead_id": "lead_PWiFcfHqlvysJXEmf2E3wd0QDRQYjm13nQvpA9lq6vc",
-            "missing": [
-              "Disposition",
-              "Confidence"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 79.3,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 29,
-      "open_leads": 130,
-      "est_pipeline": 312000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
