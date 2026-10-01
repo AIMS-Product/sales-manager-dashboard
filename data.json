@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30 06:45 PM PDT",
+  "updated_at": "2026-09-30 07:00 PM PDT",
   "week_label": "Sep 28 \u2013 Oct 04, 2026",
   "monday_str": "2026-09-28",
   "today_str": "2026-09-30",
@@ -48,18 +48,18 @@
   "team_close_rate": 13.6,
   "team_avg_rev_per_deal": 9942.73,
   "team_crm_compliance": 79.7,
-  "team_task_adherence": 40.3,
+  "team_task_adherence": 40.5,
   "team_overdue": 319,
   "team_open_leads": 649,
   "team_est_pipeline": 1557600,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
-      "count": 34
+      "count": 36
     },
     {
       "funnel": "Internal Webinar",
-      "count": 21
+      "count": 19
     },
     {
       "funnel": "YouTube",
@@ -87,12 +87,12 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 33,
+    "in_house": 31,
     "external": 1,
-    "unknown": 40,
-    "in_house_pct": 44.6,
+    "unknown": 42,
+    "in_house_pct": 41.9,
     "external_pct": 1.4,
-    "unknown_pct": 54.1
+    "unknown_pct": 56.8
   },
   "reps": [
     {
@@ -213,7 +213,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 81,
+      "tasks_incomplete": 82,
       "open_leads": 36,
       "est_pipeline": 86400,
       "is_manager": false,
@@ -301,18 +301,18 @@
         ],
         "missing_leads": [
           {
+            "name": "Tony Lindner",
+            "lead_id": "lead_X2ouizPvGYe694EfhPAxYQrJlAwX3KInlQlyfKK9S9D",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
             "name": "Dale Bucklen",
             "lead_id": "lead_7qR0amwqYVLAd5PjtHgskOi1wQxK9KmkVJSP8Rnqcto",
             "missing": [
               "Disposition",
               "Qualified"
-            ]
-          },
-          {
-            "name": "Tony Lindner",
-            "lead_id": "lead_X2ouizPvGYe694EfhPAxYQrJlAwX3KInlQlyfKK9S9D",
-            "missing": [
-              "Confidence"
             ]
           },
           {
@@ -342,9 +342,9 @@
           }
         ]
       },
-      "task_adherence": 42.6,
+      "task_adherence": 43.6,
       "tasks_overdue": 31,
-      "tasks_incomplete": 54,
+      "tasks_incomplete": 55,
       "open_leads": 119,
       "est_pipeline": 285600,
       "is_manager": false,
@@ -541,60 +541,6 @@
       "lane": 1
     },
     {
-      "name": "Shreya Bechra",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 50.0,
-      "crm_filled": 2,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          0,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Renold Paul",
-            "lead_id": "lead_89Vwtpp77csqqExZF5iIdDg75oLhPavl3OvVWyyKlUk",
-            "missing": [
-              "Disposition",
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 13.0,
-      "tasks_overdue": 100,
-      "tasks_incomplete": 115,
-      "open_leads": 80,
-      "est_pipeline": 192000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Joe Dysert",
       "booked": 1,
       "shown": 1,
@@ -645,6 +591,60 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Shreya Bechra",
+      "booked": 1,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 50.0,
+      "crm_filled": 2,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          0,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Renold Paul",
+            "lead_id": "lead_89Vwtpp77csqqExZF5iIdDg75oLhPavl3OvVWyyKlUk",
+            "missing": [
+              "Disposition",
+              "Qualified"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 13.0,
+      "tasks_overdue": 100,
+      "tasks_incomplete": 115,
+      "open_leads": 80,
+      "est_pipeline": 192000,
+      "is_manager": false,
       "is_lead": false,
       "lane": 1
     }
