@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01 04:45 PM PDT",
+  "updated_at": "2026-10-01 05:00 PM PDT",
   "week_label": "Sep 28 \u2013 Oct 04, 2026",
   "monday_str": "2026-09-28",
   "today_str": "2026-10-01",
@@ -42,16 +42,16 @@
   },
   "total_booked": 103,
   "total_shown": 57,
-  "total_qualified": 43,
+  "total_qualified": 44,
   "total_deals": 12,
   "total_revenue": 115367.0,
   "team_close_rate": 11.7,
   "team_avg_rev_per_deal": 9613.92,
   "team_crm_compliance": 81.1,
-  "team_task_adherence": 40.6,
+  "team_task_adherence": 40.9,
   "team_overdue": 325,
-  "team_open_leads": 655,
-  "team_est_pipeline": 1572000,
+  "team_open_leads": 656,
+  "team_est_pipeline": 1574400,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -312,6 +312,51 @@
       "lane": 1
     },
     {
+      "name": "Christian Hartwell",
+      "booked": 10,
+      "shown": 7,
+      "qualified": 9,
+      "deals": 1,
+      "revenue": 5997.0,
+      "close_rate": 10.0,
+      "qa_score": null,
+      "avg_rev_per_deal": 5997.0,
+      "crm_compliance": 100.0,
+      "crm_filled": 25,
+      "crm_total": 25,
+      "crm_detail": {
+        "show_up": [
+          6,
+          6
+        ],
+        "disposition": [
+          6,
+          6
+        ],
+        "qualified": [
+          6,
+          6
+        ],
+        "confidence": [
+          6,
+          6
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": []
+      },
+      "task_adherence": 84.6,
+      "tasks_overdue": 6,
+      "tasks_incomplete": 39,
+      "open_leads": 133,
+      "est_pipeline": 319200,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Eric Piccione",
       "booked": 10,
       "shown": 6,
@@ -360,51 +405,6 @@
       "tasks_incomplete": 2,
       "open_leads": 65,
       "est_pipeline": 156000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Christian Hartwell",
-      "booked": 9,
-      "shown": 6,
-      "qualified": 7,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 11.1,
-      "qa_score": null,
-      "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 100.0,
-      "crm_filled": 25,
-      "crm_total": 25,
-      "crm_detail": {
-        "show_up": [
-          6,
-          6
-        ],
-        "disposition": [
-          6,
-          6
-        ],
-        "qualified": [
-          6,
-          6
-        ],
-        "confidence": [
-          6,
-          6
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": []
-      },
-      "task_adherence": 83.8,
-      "tasks_overdue": 6,
-      "tasks_incomplete": 37,
-      "open_leads": 132,
-      "est_pipeline": 316800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -610,11 +610,65 @@
         ],
         "missing_leads": []
       },
-      "task_adherence": 97.6,
+      "task_adherence": 97.7,
       "tasks_overdue": 1,
-      "tasks_incomplete": 42,
+      "tasks_incomplete": 43,
       "open_leads": 22,
       "est_pipeline": 52800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Shreya Bechra",
+      "booked": 1,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 50.0,
+      "crm_filled": 2,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          0,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Renold Paul",
+            "lead_id": "lead_89Vwtpp77csqqExZF5iIdDg75oLhPavl3OvVWyyKlUk",
+            "missing": [
+              "Disposition",
+              "Qualified"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 9.1,
+      "tasks_overdue": 100,
+      "tasks_incomplete": 110,
+      "open_leads": 80,
+      "est_pipeline": 192000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
@@ -670,60 +724,6 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Shreya Bechra",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 50.0,
-      "crm_filled": 2,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          0,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Renold Paul",
-            "lead_id": "lead_89Vwtpp77csqqExZF5iIdDg75oLhPavl3OvVWyyKlUk",
-            "missing": [
-              "Disposition",
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 9.1,
-      "tasks_overdue": 100,
-      "tasks_incomplete": 110,
-      "open_leads": 80,
-      "est_pipeline": 192000,
-      "is_manager": false,
       "is_lead": false,
       "lane": 1
     }
