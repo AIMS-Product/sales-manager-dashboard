@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-02 02:15 PM PDT",
+  "updated_at": "2026-10-02 02:30 PM PDT",
   "week_label": "Sep 28 \u2013 Oct 04, 2026",
   "monday_str": "2026-09-28",
   "today_str": "2026-10-02",
@@ -78,11 +78,11 @@
       "count": 4
     },
     {
-      "funnel": "Linkedin",
+      "funnel": "Unknown",
       "count": 2
     },
     {
-      "funnel": "Unknown",
+      "funnel": "Linkedin",
       "count": 2
     },
     {
@@ -210,16 +210,22 @@
       "metric_details": {
         "booked": [
           {
-            "lead_id": "lead_GnHDunDnlkP0mlsi8xdCdU9H5FlHI81Wg6pVkzyo4By",
-            "name": "JC Best",
-            "date": "2026-10-02",
-            "funnel": "Reactivation Scrapers"
-          },
-          {
             "lead_id": "lead_eZ7fFoOREzGS8SNTKZfp4PLN19izSR4IwwPzb35wsgY",
             "name": "Shawn Thomas",
             "date": "2026-10-02",
             "funnel": "Website"
+          },
+          {
+            "lead_id": "lead_7wRy4p5sGPRE6g2QAYgbSeYBRCdIHV1aG7F1Y1xUwDo",
+            "name": "Yelena Sinigova",
+            "date": "2026-10-02",
+            "funnel": "Unknown"
+          },
+          {
+            "lead_id": "lead_GnHDunDnlkP0mlsi8xdCdU9H5FlHI81Wg6pVkzyo4By",
+            "name": "JC Best",
+            "date": "2026-10-02",
+            "funnel": "Reactivation Scrapers"
           },
           {
             "lead_id": "lead_SMYxTSrNaR93rDsaqDVnPle9MAiTMBLahTeY6VP8vXJ",
@@ -230,12 +236,6 @@
           {
             "lead_id": "lead_c7bpSubN2MljFGVYjsLoRwoiJOxsWRbFTXXsOeaQkjj",
             "name": "Schant Choulakian",
-            "date": "2026-10-02",
-            "funnel": "Unknown"
-          },
-          {
-            "lead_id": "lead_7wRy4p5sGPRE6g2QAYgbSeYBRCdIHV1aG7F1Y1xUwDo",
-            "name": "Yelena Sinigova",
             "date": "2026-10-02",
             "funnel": "Unknown"
           },
@@ -1790,7 +1790,7 @@
     {
       "name": "Oscar Pugh",
       "booked": 11,
-      "shown": 6,
+      "shown": 7,
       "qualified": 3,
       "deals": 1,
       "revenue": 0.0,
@@ -1917,6 +1917,12 @@
           }
         ],
         "shown": [
+          {
+            "lead_id": "lead_dU4IMYMV82M8j8ibvwLC7g1U2yRqdHVFGN5aHyR61X0",
+            "name": "Rukiya Hicks",
+            "date": "2026-10-02",
+            "funnel": "Website"
+          },
           {
             "lead_id": "lead_KsqW4UKWkWZmP16XAp5gaxuvC4dzLtNqPfU4LQ3ruOQ",
             "name": "Nick Mannor",
@@ -2393,6 +2399,81 @@
       "lane": 1
     },
     {
+      "name": "Shreya Bechra",
+      "booked": 1,
+      "shown": 0,
+      "qualified": 0,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 50.0,
+      "crm_filled": 2,
+      "crm_total": 4,
+      "crm_detail": {
+        "show_up": [
+          1,
+          1
+        ],
+        "disposition": [
+          0,
+          1
+        ],
+        "qualified": [
+          0,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          0,
+          0
+        ],
+        "missing_leads": [
+          {
+            "name": "Renold Paul",
+            "lead_id": "lead_89Vwtpp77csqqExZF5iIdDg75oLhPavl3OvVWyyKlUk",
+            "missing": [
+              "Disposition",
+              "Qualified"
+            ]
+          }
+        ]
+      },
+      "metric_details": {
+        "booked": [
+          {
+            "lead_id": "lead_89Vwtpp77csqqExZF5iIdDg75oLhPavl3OvVWyyKlUk",
+            "name": "Renold Paul",
+            "date": "2026-09-28",
+            "funnel": "Reactivation Scrapers"
+          }
+        ],
+        "shown": [],
+        "no_shows": [
+          {
+            "lead_id": "lead_89Vwtpp77csqqExZF5iIdDg75oLhPavl3OvVWyyKlUk",
+            "name": "Renold Paul",
+            "date": "2026-09-28",
+            "funnel": "Reactivation Scrapers"
+          }
+        ],
+        "qualified": [],
+        "deals": []
+      },
+      "task_adherence": 2.8,
+      "tasks_overdue": 105,
+      "tasks_incomplete": 108,
+      "open_leads": 80,
+      "est_pipeline": 192000,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
       "name": "Joe Dysert",
       "booked": 1,
       "shown": 1,
@@ -2486,81 +2567,6 @@
       "open_leads": null,
       "est_pipeline": null,
       "is_manager": true,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
-      "name": "Shreya Bechra",
-      "booked": 1,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 50.0,
-      "crm_filled": 2,
-      "crm_total": 4,
-      "crm_detail": {
-        "show_up": [
-          1,
-          1
-        ],
-        "disposition": [
-          0,
-          1
-        ],
-        "qualified": [
-          0,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          0,
-          0
-        ],
-        "missing_leads": [
-          {
-            "name": "Renold Paul",
-            "lead_id": "lead_89Vwtpp77csqqExZF5iIdDg75oLhPavl3OvVWyyKlUk",
-            "missing": [
-              "Disposition",
-              "Qualified"
-            ]
-          }
-        ]
-      },
-      "metric_details": {
-        "booked": [
-          {
-            "lead_id": "lead_89Vwtpp77csqqExZF5iIdDg75oLhPavl3OvVWyyKlUk",
-            "name": "Renold Paul",
-            "date": "2026-09-28",
-            "funnel": "Reactivation Scrapers"
-          }
-        ],
-        "shown": [],
-        "no_shows": [
-          {
-            "lead_id": "lead_89Vwtpp77csqqExZF5iIdDg75oLhPavl3OvVWyyKlUk",
-            "name": "Renold Paul",
-            "date": "2026-09-28",
-            "funnel": "Reactivation Scrapers"
-          }
-        ],
-        "qualified": [],
-        "deals": []
-      },
-      "task_adherence": 2.8,
-      "tasks_overdue": 105,
-      "tasks_incomplete": 108,
-      "open_leads": 80,
-      "est_pipeline": 192000,
-      "is_manager": false,
       "is_lead": false,
       "lane": 1
     }
