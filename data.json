@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-02 12:00 AM PDT",
+  "updated_at": "2026-10-02 12:15 AM PDT",
   "week_label": "Sep 28 \u2013 Oct 04, 2026",
   "monday_str": "2026-09-28",
   "today_str": "2026-10-02",
@@ -40,12 +40,12 @@
     "crm_compliance": 90,
     "task_adherence": 100
   },
-  "total_booked": 104,
+  "total_booked": 140,
   "total_shown": 59,
-  "total_qualified": 45,
+  "total_qualified": 46,
   "total_deals": 13,
   "total_revenue": 122367.0,
-  "team_close_rate": 12.5,
+  "team_close_rate": 9.3,
   "team_avg_rev_per_deal": 9412.85,
   "team_crm_compliance": 81.9,
   "team_task_adherence": 36.3,
@@ -391,84 +391,6 @@
       "lane": 1
     },
     {
-      "name": "Oscar Pugh",
-      "booked": 14,
-      "shown": 4,
-      "qualified": 3,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 69.2,
-      "crm_filled": 18,
-      "crm_total": 26,
-      "crm_detail": {
-        "show_up": [
-          7,
-          7
-        ],
-        "disposition": [
-          5,
-          7
-        ],
-        "qualified": [
-          3,
-          5
-        ],
-        "confidence": [
-          2,
-          5
-        ],
-        "lost_reason": [
-          1,
-          2
-        ],
-        "missing_leads": [
-          {
-            "name": "Marcus Hargrove",
-            "lead_id": "lead_XknxlEdh1CL4auYrBVnWOBOXsqsUOWxre572FFlj9MD",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Thomas Skoch",
-            "lead_id": "lead_IGSkeOYF5Si4P5ZU38HPlYdiJBuuMYwX64PbDiqJwed",
-            "missing": [
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Elesieya Dunn",
-            "lead_id": "lead_MyNXbhrMHJpwJFFVvaIL1jCo240WMvlfaUp1WfDGn4z",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Daniel Lawrence Lawrence",
-            "lead_id": "lead_wBqBNtR5riEMhIRF2MEuIJvvHZedvjcgs4FLrbNpyEi",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Lost Reason"
-            ]
-          }
-        ]
-      },
-      "task_adherence": 0.0,
-      "tasks_overdue": 7,
-      "tasks_incomplete": 7,
-      "open_leads": 15,
-      "est_pipeline": 36000,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1
-    },
-    {
       "name": "Ariella Irvine",
       "booked": 14,
       "shown": 5,
@@ -574,6 +496,84 @@
       "tasks_incomplete": 58,
       "open_leads": 117,
       "est_pipeline": 280800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1
+    },
+    {
+      "name": "Oscar Pugh",
+      "booked": 14,
+      "shown": 4,
+      "qualified": 3,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 69.2,
+      "crm_filled": 18,
+      "crm_total": 26,
+      "crm_detail": {
+        "show_up": [
+          7,
+          7
+        ],
+        "disposition": [
+          5,
+          7
+        ],
+        "qualified": [
+          3,
+          5
+        ],
+        "confidence": [
+          2,
+          5
+        ],
+        "lost_reason": [
+          1,
+          2
+        ],
+        "missing_leads": [
+          {
+            "name": "Marcus Hargrove",
+            "lead_id": "lead_XknxlEdh1CL4auYrBVnWOBOXsqsUOWxre572FFlj9MD",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Thomas Skoch",
+            "lead_id": "lead_IGSkeOYF5Si4P5ZU38HPlYdiJBuuMYwX64PbDiqJwed",
+            "missing": [
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Elesieya Dunn",
+            "lead_id": "lead_MyNXbhrMHJpwJFFVvaIL1jCo240WMvlfaUp1WfDGn4z",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Daniel Lawrence Lawrence",
+            "lead_id": "lead_wBqBNtR5riEMhIRF2MEuIJvvHZedvjcgs4FLrbNpyEi",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Lost Reason"
+            ]
+          }
+        ]
+      },
+      "task_adherence": 0.0,
+      "tasks_overdue": 7,
+      "tasks_incomplete": 7,
+      "open_leads": 15,
+      "est_pipeline": 36000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
