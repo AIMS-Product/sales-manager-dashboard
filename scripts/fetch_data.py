@@ -203,6 +203,7 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
     rep_booked = {}
     rep_shown = {}
     rep_qualified = {}
+    rep_meeting_details = {}
     rep_crm_filled = {}
     rep_crm_total = {}
     # Per-field CRM detail tracking
@@ -283,11 +284,27 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
 
         rep_booked[rep_name] = rep_booked.get(rep_name, 0) + 1
 
-        if str(show_up).strip().lower() == "yes":
+        detail = {
+            "lead_id": lead.get("id", ""),
+            "name": lead.get("display_name") or lead.get("name") or lead.get("id") or "Unknown lead",
+            "date": str(booked_date)[:10],
+            "funnel": funnel_name,
+        }
+        details = rep_meeting_details.setdefault(
+            rep_name, {"booked": [], "shown": [], "no_shows": [], "qualified": []}
+        )
+        details["booked"].append(detail)
+
+        show_up_value = str(show_up).strip().lower()
+        if show_up_value == "yes":
             rep_shown[rep_name] = rep_shown.get(rep_name, 0) + 1
+            details["shown"].append(detail)
+        elif show_up_value == "no" or status_id == NO_SHOW_LEAD_STATUS:
+            details["no_shows"].append(detail)
 
         if str(qualified_val).strip().lower() == "yes":
             rep_qualified[rep_name] = rep_qualified.get(rep_name, 0) + 1
+            details["qualified"].append(detail)
 
         # CRM Compliance — only for past meetings (booked date < today)
         is_past = str(booked_date)[:10] < today_str if booked_date else False
@@ -443,7 +460,7 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
 
     team_totals = {"booked": all_booked, "shown": all_shown, "qualified": all_qualified}
 
-    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources, team_totals
+    return rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources, team_totals, rep_meeting_details
 
 
 # ── API helpers ──────────────────────────────────────────────────────────────
@@ -802,6 +819,7 @@ def build_dashboard_data():
     rep_revenue = {}
     rep_deals = {}
     seen_opp_leads = set()
+    rep_deal_details = {}
 
     for opp in opps:
         user_id = opp.get("user_id")
@@ -815,11 +833,23 @@ def build_dashboard_data():
         if lead_key not in seen_opp_leads:
             rep_deals[rep_name] = rep_deals.get(rep_name, 0) + 1
             seen_opp_leads.add(lead_key)
+            rep_deal_details.setdefault(rep_name, {})[lead_key] = {
+                "lead_id": lead_id,
+                "name": opp.get("lead_name") or opp.get("contact_name") or lead_id or "Unknown lead",
+                "date": opp.get("date_won") or "",
+                "value": value_dollars,
+                "opportunity_count": 1,
+            }
+        else:
+            detail = rep_deal_details[rep_name][lead_key]
+            detail["value"] += value_dollars
+            detail["opportunity_count"] += 1
+            detail["date"] = max(detail["date"], opp.get("date_won") or "")
 
     # Booked meetings: query leads by First Sales Call Booked Date field
     t0 = time.time()
     print("  Fetching leads by First Sales Call Booked Date...", flush=True)
-    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources, raw_team_totals = \
+    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources, raw_team_totals, rep_meeting_details = \
         fetch_booked_leads(monday_str, today_str, user_map, name_to_id)
     print(f"  Booked leads done. ({time.time()-t0:.1f}s)", flush=True)
 
@@ -871,6 +901,12 @@ def build_dashboard_data():
             "crm_filled": crm_filled,
             "crm_total": crm_total,
             "crm_detail": crm_detail.get(name, None),
+            "metric_details": {
+                metric: sorted(rep_meeting_details.get(name, {}).get(metric, []), key=lambda item: item["date"], reverse=True)
+                for metric in ("booked", "shown", "no_shows", "qualified")
+            } | {
+                "deals": sorted(rep_deal_details.get(name, {}).values(), key=lambda item: item["date"], reverse=True)
+            },
             "task_adherence": rep_adherence.get(name) if not is_mgr else None,
             "tasks_overdue": rep_overdue.get(name, 0) if not is_mgr else None,
             "tasks_incomplete": rep_total_incomplete.get(name, 0) if not is_mgr else None,

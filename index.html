@@ -329,6 +329,65 @@
         .rate-bad  { color: var(--red); }
         .rate-na   { color: var(--text-muted); }
 
+        .metric-detail-trigger {
+            border: 0;
+            border-bottom: 1px dashed #a8afbd;
+            background: none;
+            color: inherit;
+            font: inherit;
+            padding: 1px 2px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .metric-detail-trigger:hover { color: var(--accent); border-color: var(--accent); }
+        .metric-detail-trigger:hover .prog .val { color: var(--accent); }
+        .metric-detail-trigger:focus-visible, .metric-drawer button:focus-visible, .metric-drawer a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 3px;
+        }
+        .metric-backdrop {
+            position: fixed; inset: 0; z-index: 20;
+            background: rgba(18, 26, 42, 0.4);
+        }
+        .metric-drawer {
+            position: fixed; top: 0; right: 0; z-index: 21;
+            width: min(480px, 100vw); height: 100vh; height: 100dvh;
+            display: flex; flex-direction: column;
+            background: var(--surface); box-shadow: -12px 0 36px rgba(18, 26, 42, 0.15);
+        }
+        .metric-backdrop[hidden], .metric-drawer[hidden] { display: none; }
+        .metric-drawer-header {
+            display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+            padding: 24px; border-bottom: 1px solid var(--border);
+        }
+        .metric-drawer-kicker {
+            color: var(--accent); font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.08em;
+        }
+        .metric-drawer h2 { margin-top: 5px; font-size: 20px; line-height: 1.3; }
+        .metric-drawer-close {
+            flex: none; width: 32px; height: 32px; border: 1px solid var(--border);
+            border-radius: 8px; background: #fff; color: var(--text-secondary);
+            cursor: pointer; font-size: 22px; line-height: 1;
+        }
+        .metric-drawer-close:hover { color: var(--text); background: var(--bg); }
+        .metric-drawer-summary {
+            padding: 18px 24px; border-bottom: 1px solid var(--border);
+            color: var(--text-secondary); font-size: 13px;
+        }
+        .metric-drawer-summary strong { display: block; color: var(--text); font-size: 24px; }
+        .metric-drawer-list { overflow-y: auto; padding: 8px 24px 24px; }
+        .metric-drawer-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
+        .metric-drawer-item:last-child { border-bottom: 0; }
+        .metric-drawer-section { padding-top: 20px; }
+        .metric-drawer-section-title { color: var(--text-secondary); font-size: 11px; font-weight: 750; letter-spacing: 0.08em; text-transform: uppercase; }
+        .metric-drawer-item a { color: var(--accent); font-weight: 650; text-decoration: none; }
+        .metric-drawer-item a:hover { text-decoration: underline; }
+        .metric-drawer-item-name { font-weight: 650; }
+        .metric-drawer-item-meta { margin-top: 5px; color: var(--text-secondary); font-size: 12px; }
+        .metric-drawer-empty { padding: 28px 0; color: var(--text-secondary); font-size: 13px; }
+
         .footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: 12px; }
         .footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
         .footer a:hover { text-decoration: underline; }
@@ -434,7 +493,7 @@
     <div class="table-section">
         <div class="table-header">
             <div class="table-title">Rep Breakdown — WTD <span id="repCount"></span></div>
-            <div style="font-size: 12px; color: var(--text-muted);">Click any column header to sort</div>
+            <div style="font-size: 12px; color: var(--text-muted);">Click a number for its records · Click a header to sort</div>
         </div>
         <div class="table-wrap">
             <table>
@@ -491,16 +550,129 @@
     Data from Close CRM &nbsp;·&nbsp; <a href="archive.html">📅 View Archive →</a> &nbsp;·&nbsp; <button class="dl-btn" onclick="downloadCSV()">⬇ Download CSV</button>
 </div>
 
+<div class="metric-backdrop" id="metricBackdrop" hidden></div>
+<aside class="metric-drawer" id="metricDrawer" role="dialog" aria-modal="true" aria-labelledby="metricDrawerTitle" hidden>
+    <div class="metric-drawer-header">
+        <div>
+            <div class="metric-drawer-kicker">Week-to-date records</div>
+            <h2 id="metricDrawerTitle"></h2>
+        </div>
+        <button class="metric-drawer-close" id="metricDrawerClose" type="button" aria-label="Close details">×</button>
+    </div>
+    <div class="metric-drawer-summary" id="metricDrawerSummary"></div>
+    <div class="metric-drawer-list" id="metricDrawerList"></div>
+</aside>
+
 <script>
 (function () {
     'use strict';
 
     let DATA = null;
     let currentSort = { key: 'booked', dir: 'desc' };
+    let lastMetricTrigger = null;
+    const metricLabels = { booked: 'Booked', shown: 'Shown', qualified: 'Qualified', deals: 'Closed Won' };
+    const metricDescriptions = {
+        booked: 'Leads with a first sales call booked this week.',
+        shown: 'Booked leads marked as shown or no show in Close. Pending calls are excluded from the no-show list.',
+        qualified: 'Booked leads marked as qualified in Close.',
+        deals: 'Unique leads with Closed/Won opportunities this week.',
+    };
+    const metricDrawer = document.getElementById('metricDrawer');
+    const metricBackdrop = document.getElementById('metricBackdrop');
+    const metricDrawerClose = document.getElementById('metricDrawerClose');
+
+    function escapeHtml(value) {
+        return String(value ?? '').replace(/[&<>"']/g, char => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        })[char]);
+    }
+
+    function metricButton(repIndex, metric, content, repName) {
+        return `<button type="button" class="metric-detail-trigger" data-rep-index="${repIndex}" data-metric="${metric}" aria-label="View ${metricLabels[metric]} records for ${escapeHtml(repName)}">${content}</button>`;
+    }
+
+    function closeMetricDrawer() {
+        if (metricDrawer.hidden) return;
+        metricDrawer.hidden = true;
+        metricBackdrop.hidden = true;
+        document.body.style.overflow = '';
+        lastMetricTrigger?.focus();
+        lastMetricTrigger = null;
+    }
+
+    function metricRecordHtml(record, metric) {
+        const leadId = String(record.lead_id || '');
+        const name = escapeHtml(record.name || leadId || 'Unknown lead');
+        const nameHtml = /^lead_[A-Za-z0-9]+$/.test(leadId)
+            ? `<a href="https://app.close.com/lead/${leadId}/" target="_blank" rel="noopener noreferrer">${name} ↗</a>`
+            : `<span class="metric-drawer-item-name">${name}</span>`;
+        const status = metric === 'deals' ? 'Won' : metric === 'no_shows' ? 'No show' : metric === 'shown' ? 'Shown' : 'Booked';
+        const parts = [status, escapeHtml(record.date || 'Date unavailable')];
+        if (metric === 'deals') {
+            const amount = Number(record.value || 0);
+            parts.push(new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(amount));
+            if (record.opportunity_count > 1) parts.push(`${record.opportunity_count} opportunities on this lead`);
+        } else if (record.funnel) {
+            parts.push(escapeHtml(record.funnel));
+        }
+        return `<div class="metric-drawer-item">${nameHtml}<div class="metric-drawer-item-meta">${parts.join(' · ')}</div></div>`;
+    }
+
+    function openMetricDrawer(repIndex, metric, trigger) {
+        const rep = DATA?.reps?.[repIndex];
+        if (!rep || !Object.hasOwn(metricLabels, metric)) return;
+        lastMetricTrigger = trigger;
+        const records = rep.metric_details?.[metric];
+        const noShows = metric === 'shown' ? rep.metric_details?.no_shows : [];
+        document.getElementById('metricDrawerTitle').textContent = `${rep.name} · ${metricLabels[metric]}`;
+        document.getElementById('metricDrawerSummary').innerHTML =
+            metric === 'shown' && Array.isArray(noShows)
+                ? `<strong>${rep.shown} shown · ${noShows.length} no show${noShows.length === 1 ? '' : 's'}</strong>${metricDescriptions[metric]}`
+                : `<strong>${rep[metric]} ${rep[metric] === 1 ? 'record' : 'records'}</strong>${metricDescriptions[metric]}`;
+
+        let listHtml;
+        if (!Array.isArray(records)) {
+            listHtml = '<div class="metric-drawer-empty">Record details are unavailable for this saved dashboard snapshot.</div>';
+        } else if (metric === 'shown' && Array.isArray(noShows)) {
+            const section = (title, items, type) => `<section class="metric-drawer-section"><div class="metric-drawer-section-title">${title}</div>${items.length
+                ? items.map(record => metricRecordHtml(record, type)).join('')
+                : '<div class="metric-drawer-empty">None this week.</div>'}</section>`;
+            listHtml = section(`Shown (${records.length})`, records, 'shown') + section(`No shows (${noShows.length})`, noShows, 'no_shows');
+        } else if (records.length === 0) {
+            listHtml = `<div class="metric-drawer-empty">No ${metricLabels[metric].toLowerCase()} records for this rep this week.</div>`;
+        } else {
+            listHtml = records.map(record => metricRecordHtml(record, metric)).join('');
+        }
+        document.getElementById('metricDrawerList').innerHTML = listHtml;
+        metricBackdrop.hidden = false;
+        metricDrawer.hidden = false;
+        document.body.style.overflow = 'hidden';
+        metricDrawerClose.focus();
+    }
+
+    metricDrawerClose.addEventListener('click', closeMetricDrawer);
+    metricBackdrop.addEventListener('click', closeMetricDrawer);
+    document.addEventListener('keydown', event => {
+        if (metricDrawer.hidden) return;
+        if (event.key === 'Escape') closeMetricDrawer();
+        if (event.key !== 'Tab') return;
+        const focusable = [...metricDrawer.querySelectorAll('button, a[href]')];
+        const first = focusable[0], last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault(); last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault(); first.focus();
+        }
+    });
+    document.getElementById('tableBody').addEventListener('click', event => {
+        const trigger = event.target.closest('.metric-detail-trigger');
+        if (trigger) openMetricDrawer(Number(trigger.dataset.repIndex), trigger.dataset.metric, trigger);
+    });
 
     async function fetchData() {
         try {
             const resp = await fetch('data.json?t=' + Date.now());
+            closeMetricDrawer();
             DATA = await resp.json();
             render();
         } catch (e) {
@@ -682,12 +854,12 @@
             if (mgr) {
                 return `<tr>
                     <td>${r.name}${mgrTag}${leadTag}</td>
-                    <td class="g-activity-start" style="color:var(--text-muted)">${r.booked}</td>
-                    <td style="color:var(--text-muted)">${r.shown}</td>
-                    <td style="color:var(--text-muted)">${r.qualified}</td>
-                    <td>${r.deals}</td>
+                    <td class="g-activity-start">${metricButton(globalIdx, 'booked', r.booked, r.name)}</td>
+                    <td>${metricButton(globalIdx, 'shown', r.shown, r.name)}</td>
+                    <td>${metricButton(globalIdx, 'qualified', r.qualified, r.name)}</td>
+                    <td>${metricButton(globalIdx, 'deals', r.deals, r.name)}</td>
                     <td class="g-activity-end">${r.revenue ? fmtK(r.revenue) : '—'}</td>
-                    <td style="color:var(--text-muted)">—</td>
+                    <td>${r.close_rate != null ? r.close_rate + '%' : '—'}</td>
                     <td>${TBD}</td>
                     <td class="g-perf-end">${r.avg_rev_per_deal ? fmtK(r.avg_rev_per_deal) : '—'}</td>
                     <td style="color:var(--text-muted)">—</td>
@@ -706,10 +878,10 @@
 
             let html = `<tr>
                 <td>${r.name}${mgrTag}${leadTag}</td>
-                <td class="g-activity-start">${prog(r.booked, rt.booked)}</td>
-                <td>${prog(r.shown, rt.shown)}</td>
-                <td>${prog(r.qualified, rt.qualified)}</td>
-                <td>${prog(r.deals, rt.deals)}</td>
+                <td class="g-activity-start">${metricButton(globalIdx, 'booked', prog(r.booked, rt.booked), r.name)}</td>
+                <td>${metricButton(globalIdx, 'shown', prog(r.shown, rt.shown), r.name)}</td>
+                <td>${metricButton(globalIdx, 'qualified', prog(r.qualified, rt.qualified), r.name)}</td>
+                <td>${metricButton(globalIdx, 'deals', prog(r.deals, rt.deals), r.name)}</td>
                 <td class="g-activity-end">${progMoney(r.revenue, rt.revenue)}</td>
                 <td>${progPct(r.close_rate, rt.close_rate)}</td>
                 <td>${TBD}</td>
@@ -804,6 +976,14 @@
             }
             const lt2 = laneTotals(lane2);
             html += subtotalRow('Lane 2 Totals', lt2, { ...t2, booked: null, shown: null, qualified: null, deals: null, revenue: null });
+        }
+
+        if (mgrs.length > 0) {
+            html += `<tr class="lane-divider-row"><td colspan="13"></td></tr>`;
+            html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Manager</span></td></tr>`;
+            for (const r of mgrs) {
+                html += repRow(r, globalIdxMap.get(r));
+            }
         }
 
         // ── Combined Team Totals ──
