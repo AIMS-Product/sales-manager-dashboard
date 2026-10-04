@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04 01:15 PM PDT",
+  "updated_at": "2026-10-04 01:30 PM PDT",
   "week_label": "Sep 28 \u2013 Oct 04, 2026",
   "monday_str": "2026-09-28",
   "today_str": "2026-10-04",
@@ -41,8 +41,8 @@
     "task_adherence": 100
   },
   "total_booked": 146,
-  "total_shown": 79,
-  "total_qualified": 60,
+  "total_shown": 81,
+  "total_qualified": 61,
   "total_deals": 16,
   "total_revenue": 139464.0,
   "team_close_rate": 11.0,
@@ -50,8 +50,8 @@
   "team_crm_compliance": 82.5,
   "team_task_adherence": 34.8,
   "team_overdue": 346,
-  "team_open_leads": 659,
-  "team_est_pipeline": 1581600,
+  "team_open_leads": 660,
+  "team_est_pipeline": 1584000,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -1425,24 +1425,30 @@
         ],
         "missing_leads": [
           {
+            "name": "Curtis Parker",
+            "lead_id": "lead_XZAUtrt4ej1thOMjSXhwn6xf7CQ7w32FlZRLsH8lhwB",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Hunter Hoffner",
             "lead_id": "lead_rjeBJu38jGIq2k9mDP8WoEoEgn1CX1gB0RlT0oqTj9t",
             "missing": [
               "Qualified",
               "Confidence"
             ]
-          },
-          {
-            "name": "Curtis Parker",
-            "lead_id": "lead_XZAUtrt4ej1thOMjSXhwn6xf7CQ7w32FlZRLsH8lhwB",
-            "missing": [
-              "Disposition"
-            ]
           }
         ]
       },
       "metric_details": {
         "booked": [
+          {
+            "lead_id": "lead_XZAUtrt4ej1thOMjSXhwn6xf7CQ7w32FlZRLsH8lhwB",
+            "name": "Curtis Parker",
+            "date": "2026-10-02",
+            "funnel": "Internal Webinar"
+          },
           {
             "lead_id": "lead_JwZ6BUyj7p7jGPUFlNb5PxHbBimMeR11RqN5uHdtbRq",
             "name": "Zach Downey",
@@ -1454,12 +1460,6 @@
             "name": "Hunter Hoffner",
             "date": "2026-10-02",
             "funnel": "Reactivation Scrapers"
-          },
-          {
-            "lead_id": "lead_XZAUtrt4ej1thOMjSXhwn6xf7CQ7w32FlZRLsH8lhwB",
-            "name": "Curtis Parker",
-            "date": "2026-10-02",
-            "funnel": "Internal Webinar"
           },
           {
             "lead_id": "lead_nXdbA0nSXikfTO9sHo1hWf8pMIoauRn0DaYbSBwiogX",
@@ -2283,8 +2283,8 @@
       "task_adherence": 40.0,
       "tasks_overdue": 36,
       "tasks_incomplete": 60,
-      "open_leads": 119,
-      "est_pipeline": 285600,
+      "open_leads": 120,
+      "est_pipeline": 288000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1
