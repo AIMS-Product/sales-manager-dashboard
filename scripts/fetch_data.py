@@ -222,7 +222,8 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
     excluded_user = 0
     excluded_funnel = 0
 
-    # Team-wide totals (before owner exclusions, so Team Totals match MTD funnel dashboard)
+    # Raw all-owner totals are retained for diagnostics. The scorecard totals
+    # shown to users are calculated from the displayed Lane 1 roster below.
     all_booked = 0
     all_shown = 0
     all_qualified = 0
@@ -741,34 +742,6 @@ def fetch_open_leads_per_rep(user_map):
     return rep_open_leads
 
 
-# ── MTD Funnel Dashboard Integration ─────────────────────────────────────────
-
-MTD_WEEKLY_JSON_URL = "https://aims-product.github.io/mtd-funnel-dashboard/archives/data-week-{monday}.json"
-
-def fetch_mtd_weekly_totals(monday_str):
-    """
-    Fetch the MTD Funnel Dashboard's weekly JSON for the given Monday.
-    Returns dict with booked/showed/qualified/closed/revenue or None on failure.
-    The MTD dashboard is the source of truth for team-wide funnel totals.
-    """
-    url = MTD_WEEKLY_JSON_URL.format(monday=monday_str)
-    try:
-        resp = requests.get(url, timeout=10)
-        if resp.status_code == 200:
-            data = resp.json()
-            grand = data.get("grand", {})
-            print(f"  ✅ MTD weekly JSON loaded: booked={grand.get('booked')}, "
-                  f"showed={grand.get('showed')}, qualified={grand.get('qualified')}", flush=True)
-            return grand
-        else:
-            print(f"  ⚠️ MTD weekly JSON not available (HTTP {resp.status_code}), "
-                  f"using local totals", flush=True)
-            return None
-    except Exception as e:
-        print(f"  ⚠️ MTD weekly JSON fetch failed ({e}), using local totals", flush=True)
-        return None
-
-
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 def build_dashboard_data():
@@ -849,7 +822,7 @@ def build_dashboard_data():
     # Booked meetings: query leads by First Sales Call Booked Date field
     t0 = time.time()
     print("  Fetching leads by First Sales Call Booked Date...", flush=True)
-    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources, raw_team_totals, rep_meeting_details = \
+    rep_booked, rep_shown, rep_qualified, rep_crm_filled, rep_crm_total, crm_detail, funnel_breakdown, funnel_sources, _raw_team_totals, rep_meeting_details = \
         fetch_booked_leads(monday_str, today_str, user_map, name_to_id)
     print(f"  Booked leads done. ({time.time()-t0:.1f}s)", flush=True)
 
@@ -919,23 +892,19 @@ def build_dashboard_data():
 
     reps.sort(key=lambda r: r["booked"], reverse=True)
 
-    # Team totals — manager excluded from CRM/tasks,
-    # but included for booked/shown/qualified/revenue/deals (counts toward team volume)
+    # Managers are excluded from CRM/tasks, but Joe's activity remains in the
+    # scorecard's booked/shown/qualified totals alongside the displayed Lane 1 reps.
     non_mgr = [r for r in reps if not r["is_manager"]]
     num_reps = len(non_mgr)
 
-    # Booked/shown/qualified — try to pull from the MTD funnel dashboard's
-    # weekly JSON so Team Totals match EXACTLY. Fall back to local unfiltered
-    # totals if the MTD JSON isn't available yet (e.g. first build of a new week).
-    mtd_grand = fetch_mtd_weekly_totals(monday_str)
-    if mtd_grand:
-        total_booked = mtd_grand.get("booked", raw_team_totals["booked"])
-        total_shown = mtd_grand.get("showed", raw_team_totals["shown"])
-        total_qualified = mtd_grand.get("qualified", raw_team_totals["qualified"])
-    else:
-        total_booked = raw_team_totals["booked"]
-        total_shown = raw_team_totals["shown"]
-        total_qualified = raw_team_totals["qualified"]
+    # Scorecard activity totals must match the displayed Lane 1 roster plus
+    # managers. Do not import the MTD funnel's all-owner totals: that dashboard
+    # counts Reactivation Scrapers Next Steps meetings in addition to booked
+    # leads, and can include owners who are not on this scorecard.
+    scorecard_reps = [r for r in reps if r["lane"] == 1 or r["is_manager"]]
+    total_booked = sum(r["booked"] for r in scorecard_reps)
+    total_shown = sum(r["shown"] for r in scorecard_reps)
+    total_qualified = sum(r["qualified"] for r in scorecard_reps)
 
     # CRM still excludes manager
     total_crm_filled = sum(r["crm_filled"] for r in non_mgr)
