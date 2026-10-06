@@ -275,6 +275,41 @@
             font-size: 11px;
         }
 
+        .post-call-detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .post-call-step {
+            min-width: 0;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .post-call-step-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .post-call-step-title { color: var(--text-secondary); font-weight: 600; }
+        .post-call-step-meta { margin-top: 4px; color: var(--text-muted); font-size: 11px; }
+        .post-call-step-cohorts {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+        .post-call-step-cohort { min-width: 0; max-height: 180px; overflow-y: auto; }
+        .post-call-step-cohort .crm-missing-list { margin-top: 8px; }
+
+        @media (max-width: 900px) {
+            .post-call-detail-grid { grid-template-columns: 1fr; }
+        }
+
         .tbd-tag {
             font-size: 10px; background: #f5f3ff; color: var(--purple);
             padding: 2px 7px; border-radius: 4px; font-weight: 600;
@@ -529,7 +564,7 @@
                         <th data-key="close_rate" data-dir="desc" data-type="num" title="Deals closed ÷ meetings booked × 100. Week-to-date conversion rate.">Close %</th>
                         <th data-key="qa_score" data-dir="desc" data-type="num" title="Quality assurance score. Coming soon.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
-                        <th data-key="crm_compliance" data-dir="desc" data-type="num" title="% of key CRM fields filled on booked leads (past meetings only — today's calls excluded). Standard leads: 4 fields — (1) First Call Show Up, (2) Today's Call Disposition, (3) Qualified (Opp), (4) Opportunity Confidence > 0%. No Show leads: only 2 fields — Show Up + Disposition. Lost leads: 5 fields — standard 4 + Lost Reason. Canceled and Rescheduled leads are excluded. Click a rep's % to see per-field breakdown.">CRM Compl.</th>
+                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="WTD post-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Next Steps Set and Post-call Follow-up percentages, using the same eligibility and rounding rules as the Rep Dashboard. Next Steps Completed is excluded from this dashboard total. Click a rep's score for step details.">Post-Call Adh.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. Tasks on Closed/Won leads are excluded. 100% = fully caught up.">Task Adh.</th>
                         <th data-key="open_leads" data-dir="desc" data-type="num" title="Qualified leads in rep's pipeline — leads where Qualified (Opp) = Yes, excluding Lost, Canceled, Outside US, and Closed/Won. Based on Lead Owner field.">Qual. Pipeline</th>
                         <th data-key="est_pipeline" data-dir="desc" data-type="num" title="Estimated pipeline value: Qualified Leads × $8K avg deal × 30% close rate. Represents potential revenue from the rep's qualified pipeline.">Est. Revenue</th>
@@ -671,12 +706,14 @@
 
     async function fetchData() {
         try {
-            const resp = await fetch('data.json?t=' + Date.now());
+            const preview = new URLSearchParams(window.location.search).get('preview') === 'post-call';
+            const dataFile = preview ? 'data.preview.json' : 'data.json';
+            const resp = await fetch(dataFile + '?t=' + Date.now());
             closeMetricDrawer();
             DATA = await resp.json();
             render();
         } catch (e) {
-            console.error('Failed to fetch data.json:', e);
+            console.error('Failed to fetch dashboard data:', e);
         }
     }
 
@@ -833,16 +870,15 @@
             const rev = reps.reduce((s, r) => s + (r.revenue || 0), 0);
             const cr = b > 0 ? Math.round(d / b * 1000) / 10 : null;
             const avg = d > 0 ? Math.round(rev / d) : null;
-            const crmF = reps.reduce((s, r) => s + (r.crm_filled || 0), 0);
-            const crmT = reps.reduce((s, r) => s + (r.crm_total || 0), 0);
-            const crm = crmT > 0 ? Math.round(crmF / crmT * 1000) / 10 : null;
+            const lane = String(reps[0]?.lane || 1);
+            const postCall = DATA.lane_post_call_adherence?.[lane] ?? null;
             const ol = reps.reduce((s, r) => s + (r.open_leads || 0), 0);
             const ep = reps.reduce((s, r) => s + (r.est_pipeline || 0), 0);
             const incmplt = reps.filter(r => r.tasks_incomplete != null);
             const totalInc = incmplt.reduce((s, r) => s + (r.tasks_incomplete || 0), 0);
             const totalOvd = incmplt.reduce((s, r) => s + (r.tasks_overdue || 0), 0);
             const taskAdh = totalInc > 0 ? Math.round((totalInc - totalOvd) / totalInc * 1000) / 10 : null;
-            return { booked: b, shown: sh, qualified: q, deals: d, revenue: rev, close_rate: cr, avg, crm, taskAdh, totalOvd, ol, ep };
+            return { booked: b, shown: sh, qualified: q, deals: d, revenue: rev, close_rate: cr, avg, postCall, taskAdh, totalOvd, ol, ep };
         }
 
         // Helper: render a single rep row
@@ -872,9 +908,9 @@
             const rt = r.lane === 2 ? t2 : t;
             const ol = r.open_leads || 0;
             const ep = r.est_pipeline || 0;
-            const crmCell = r.crm_detail
-                ? `<td class="crm-clickable" data-crm-idx="${globalIdx}">${progPct(r.crm_compliance, rt.crm_compliance)} <span style="font-size:9px;color:var(--text-muted);">▼</span></td>`
-                : `<td>${progPct(r.crm_compliance, rt.crm_compliance)}</td>`;
+            const crmCell = r.adherence
+                ? `<td class="crm-clickable" data-crm-idx="${globalIdx}">${progPct(r.post_call_adherence, rt.post_call_adherence)} <span style="font-size:9px;color:var(--text-muted);">▼</span></td>`
+                : `<td>${progPct(r.post_call_adherence, rt.post_call_adherence)}</td>`;
 
             let html = `<tr>
                 <td>${r.name}${mgrTag}${leadTag}</td>
@@ -892,40 +928,33 @@
                 <td>${fmtK(ep)}</td>
             </tr>`;
 
-            // CRM detail row
-            if (r.crm_detail) {
-                const d = r.crm_detail;
-                const ml = d.missing_leads || [];
-                const lr = d.lost_reason || [0, 0];
-
-                let missingHtml = '';
-                if (ml.length > 0) {
-                    missingHtml = '<div class="crm-missing-list">';
-                    missingHtml += `<div class="crm-missing-label">Leads with missing fields (${ml.length}):</div>`;
-                    for (const lead of ml) {
-                        const nameLink = lead.lead_id
-                            ? `<a href="https://app.close.com/lead/${lead.lead_id}/" target="_blank" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${lead.name}</a>`
-                            : `<span class="crm-missing-name">${lead.name}</span>`;
-                        missingHtml += `<div class="crm-missing-item">
-                            ${nameLink}
-                            <span class="crm-missing-fields">${lead.missing.join(', ')}</span>
-                        </div>`;
-                    }
-                    missingHtml += '</div>';
-                }
-
-                const lostReasonHtml = lr[1] > 0 ? crmFieldHtml('Lost Reason', lr[0], lr[1]) : '';
+            // Post-call process detail row, backed by the same eligible cohorts as Process Adherence.
+            if (r.adherence) {
+                const steps = r.adherence.steps || {};
+                const cohorts = r.adherence.lead_cohorts || {};
+                const postCallSteps = [
+                    ['followup_task', 'Next steps set'],
+                    ['recap_email', 'Post-call follow-up'],
+                ];
+                const stepHtml = postCallSteps.map(([key, label]) => {
+                    const step = steps[key] || {};
+                    const pct = step.pct == null ? '—' : `${step.pct}%`;
+                    const done = step.done || 0;
+                    const eligible = step.eligible || 0;
+                    const completed = cohorts[key]?.completed || [];
+                    const missed = cohorts[key]?.missed || [];
+                    const renderCohort = (title, leads) => `<div class="post-call-step-cohort"><div class="crm-missing-list"><div class="crm-missing-label">${title} (${leads.length})</div>${leads.length
+                        ? leads.map(lead => `<div class="crm-missing-item"><a href="https://app.close.com/lead/${lead.id}/" target="_blank" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${lead.name}</a></div>`).join('')
+                        : '<div class="crm-missing-item">None</div>'}</div></div>`;
+                    const cohortHtml = `<div class="post-call-step-cohorts">${renderCohort('Completed', completed)}${renderCohort('Not completed', missed)}</div>`;
+                    return `<section class="post-call-step"><div class="post-call-step-head"><span class="post-call-step-title">${label}</span><span class="crm-field-val ${step.pct == null ? '' : step.pct >= 90 ? 'good' : step.pct >= 50 ? 'partial' : 'bad'}">${pct}</span></div><div class="post-call-step-meta">${done} of ${eligible} eligible${step.exempt ? ` · ${step.exempt} exempt` : ''}</div>${cohortHtml}</section>`;
+                }).join('');
 
                 html += `<tr class="crm-detail-row" id="crm-detail-${globalIdx}" style="display:none;">
                     <td colspan="13">
-                        <div class="crm-detail">
-                            ${crmFieldHtml('Show Up', d.show_up[0], d.show_up[1])}
-                            ${crmFieldHtml('Disposition', d.disposition[0], d.disposition[1])}
-                            ${crmFieldHtml('Qualified', d.qualified[0], d.qualified[1])}
-                            ${crmFieldHtml('Confidence', d.confidence[0], d.confidence[1])}
-                            ${lostReasonHtml}
+                        <div class="post-call-detail-grid">
+                            ${stepHtml}
                         </div>
-                        ${missingHtml}
                     </td>
                 </tr>`;
             }
@@ -945,14 +974,14 @@
                 <td>${progPct(lt.close_rate, targets.close_rate)}</td>
                 <td>${TBD}</td>
                 <td class="g-perf-end">${lt.avg ? fmtK(lt.avg) : '—'}</td>
-                <td>${progPct(lt.crm, targets.crm_compliance)}</td>
+                <td>${progPct(lt.postCall, targets.post_call_adherence)}</td>
                 <td>${fmtAdherence(lt.taskAdh, lt.totalOvd)}</td>
                 <td>${lt.ol}</td>
                 <td>${fmtK(lt.ep)}</td>
             </tr>`;
         }
 
-        // Build global index map for CRM detail toggling
+        // Build global index map for post-call adherence detail toggling
         const globalIdxMap = new Map();
         allReps.forEach((r, i) => globalIdxMap.set(r, i));
 
@@ -964,7 +993,6 @@
             html += repRow(r, globalIdxMap.get(r));
         }
         const lt1 = laneTotals(lane1);
-        const l1Targets = { booked: t.booked * lane1.length, shown: t.shown * lane1.length, qualified: t.qualified * lane1.length, deals: t.deals * lane1.length, revenue: t.revenue * lane1.length, close_rate: t.close_rate, crm_compliance: t.crm_compliance };
         html += subtotalRow('Lane 1 Totals', lt1, { ...t, booked: null, shown: null, qualified: null, deals: null, revenue: null });
 
         // ── Lane 2 (only if there are Lane 2 reps) ──
@@ -997,7 +1025,7 @@
             <td>${progPct(DATA.team_close_rate, tt.close_rate)}</td>
             <td>${TBD}</td>
             <td class="g-perf-end">${DATA.team_avg_rev_per_deal ? fmtK(DATA.team_avg_rev_per_deal) : '—'}</td>
-            <td>${progPct(DATA.team_crm_compliance, tt.crm_compliance)}</td>
+            <td>${progPct(DATA.team_post_call_adherence, tt.post_call_adherence)}</td>
             <td>${fmtAdherence(DATA.team_task_adherence, DATA.team_overdue)}</td>
             <td>${DATA.team_open_leads || 0}</td>
             <td>${fmtK(DATA.team_est_pipeline)}</td>
@@ -1039,7 +1067,7 @@
 
     window.downloadCSV = function() {
         if (!DATA || !DATA.reps) return;
-        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Avg/Deal', 'CRM Compl.', 'Task Adh.', 'Qual. Pipeline', 'Est. Revenue'];
+        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Avg/Deal', 'Post-Call Adherence', 'Task Adh.', 'Qual. Pipeline', 'Est. Revenue'];
         const rows = DATA.reps
             .filter(r => !r.is_manager)
             .sort((a, b) => (b.booked || 0) - (a.booked || 0))
@@ -1053,7 +1081,7 @@
                 r.revenue || 0,
                 r.close_rate != null ? r.close_rate + '%' : '',
                 r.avg_rev_per_deal || 0,
-                r.crm_compliance != null ? r.crm_compliance + '%' : '',
+                r.post_call_adherence != null ? r.post_call_adherence + '%' : '',
                 r.task_adherence != null ? r.task_adherence + '%' : '',
                 r.open_leads || 0,
                 r.est_pipeline || 0,
@@ -1069,7 +1097,7 @@
             DATA.total_revenue || 0,
             DATA.team_close_rate != null ? DATA.team_close_rate + '%' : '',
             DATA.team_avg_rev_per_deal || 0,
-            DATA.team_crm_compliance != null ? DATA.team_crm_compliance + '%' : '',
+            DATA.team_post_call_adherence != null ? DATA.team_post_call_adherence + '%' : '',
             DATA.team_task_adherence != null ? DATA.team_task_adherence + '%' : '',
             DATA.team_open_leads || 0,
             DATA.team_est_pipeline || 0,

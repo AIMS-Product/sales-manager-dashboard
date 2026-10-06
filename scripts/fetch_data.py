@@ -13,7 +13,7 @@ Weekly targets per rep:
   Meetings Booked: 20    Close Rate: 30%
   Meetings Shown: 15     QA Score: >7 (TBD)
   Opps Qualified: 10     Avg/Deal: $8k
-  Opps Closed Won: 3     CRM Compliance: 100%
+  Opps Closed Won: 3     Post-call Process Adherence: 90%
   Revenue Booked: $24k   Task Adherence: 100% (TBD)
 """
 
@@ -24,6 +24,10 @@ import time
 import requests
 from datetime import datetime, timezone, timedelta
 from calendar import monthrange
+# Reuse the canonical rep-dashboard per-lead evidence rules over this dashboard's
+# Monday-through-today cohort. The vendored rules module is copied verbatim.
+from build_adherence_preview import add_adherence_to_dashboard  # noqa: E402
+from dashboard_adherence import apply_dashboard_post_call_scores  # noqa: E402
 
 # ── Config ───────────────────────────────────────────────────────────────────
 
@@ -123,7 +127,7 @@ WEEKLY_TARGETS = {
     "close_rate": 20,
     "qa_score": 7,
     "avg_rev_per_deal": 8000,
-    "crm_compliance": 90,
+    "post_call_adherence": 90,
     "task_adherence": 100,
 }
 
@@ -137,7 +141,7 @@ LANE_2_TARGETS = {
     "close_rate": 7,
     "qa_score": None,
     "avg_rev_per_deal": None,
-    "crm_compliance": 90,
+    "post_call_adherence": 90,
     "task_adherence": 100,
 }
 
@@ -936,7 +940,7 @@ def build_dashboard_data():
         "revenue": WEEKLY_TARGETS["revenue"] * num_reps,
         "close_rate": WEEKLY_TARGETS["close_rate"],
         "avg_rev_per_deal": WEEKLY_TARGETS["avg_rev_per_deal"],
-        "crm_compliance": WEEKLY_TARGETS["crm_compliance"],
+        "post_call_adherence": WEEKLY_TARGETS["post_call_adherence"],
         "task_adherence": WEEKLY_TARGETS["task_adherence"],
     }
 
@@ -975,6 +979,13 @@ def build_dashboard_data():
 
 if __name__ == "__main__":
     data = build_dashboard_data()
+    data = add_adherence_to_dashboard(
+        data,
+        date_range=(data["monday_str"], data["today_str"]),
+        source="close_crm",
+        preview_only=False,
+    )
+    apply_dashboard_post_call_scores(data)
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     repo_root = os.path.dirname(script_dir)
