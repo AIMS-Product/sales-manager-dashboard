@@ -50,7 +50,6 @@ ACTIVITY_ENDPOINTS = {
     "sms": "/activity/sms/",
     "notes": "/activity/note/",
     "meetings": "/activity/meeting/",
-    "task_completions": "/activity/task_completed/",
 }
 
 
@@ -439,7 +438,7 @@ def add_adherence_to_dashboard(
     if extract is None:
         print("  Fetching cohort activities in lead-ID batches", flush=True)
         activity = fetch_activities(
-            client, lead_ids, kinds=("emails", "sms", "notes", "task_completions")
+            client, lead_ids, kinds=("emails", "sms", "notes")
         )
         activity["meetings"] = meetings_by_lead
         print("  Fetching cohort tasks", flush=True)
@@ -469,7 +468,6 @@ def add_adherence_to_dashboard(
             notes=activity["notes"].get(lead_id, []),
             meetings=activity["meetings"].get(lead_id, []),
             tasks=tasks_by_lead.get(lead_id, []),
-            task_completions=activity["task_completions"].get(lead_id, []),
             now=now,
         )
         evidence_by_rep[lead["rep_id"]].append(evidence)
@@ -522,7 +520,7 @@ def add_adherence_to_dashboard(
     else:
         period_meta["month"] = f"{year}-{month_number:02d}"
     dashboard["adherence_meta"] = {
-        "schema_version": 7 if preview_only else 4,
+        "schema_version": 8 if preview_only else 5,
         "source": source,
         "generated_at": now.isoformat(),
         "period": period_meta,

@@ -20,6 +20,13 @@ A GitHub Pages dashboard that tracks **meeting funnel metrics and close rates** 
 ### Team Summary (KPI cards):
 All of the above aggregated across the full team.
 
+### Process adherence
+
+The Post-Call Adh. score is the equal-weight average of Task created, FU meeting created, and
+Recap email sent. It uses the same scoring rules as `rep-dashboard/scripts/adherence_rules.py`.
+Click a rep's score to see the completed and missed lead cohorts for each step. Closed/Won and Lost
+leads are exempt from post-call scoring, and show-up outcome does not affect eligibility.
+
 ## Setup
 
 ### 1. Create a new GitHub repo

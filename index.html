@@ -277,7 +277,7 @@
 
         .post-call-detail-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 12px;
         }
 
@@ -564,7 +564,7 @@
                         <th data-key="close_rate" data-dir="desc" data-type="num" title="Deals closed ÷ meetings booked × 100. Week-to-date conversion rate.">Close %</th>
                         <th data-key="qa_score" data-dir="desc" data-type="num" title="Quality assurance score. Coming soon.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
-                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="WTD post-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Next Steps Set and Post-call Follow-up percentages, using the same eligibility and rounding rules as the Rep Dashboard. Next Steps Completed is excluded from this dashboard total. Click a rep's score for step details.">Post-Call Adh.</th>
+                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="WTD post-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Task created, FU meeting created, and Recap email sent percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Post-Call Adh.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. Tasks on Closed/Won leads are excluded. 100% = fully caught up.">Task Adh.</th>
                         <th data-key="open_leads" data-dir="desc" data-type="num" title="Qualified leads in rep's pipeline — leads where Qualified (Opp) = Yes, excluding Lost, Canceled, Outside US, and Closed/Won. Based on Lead Owner field.">Qual. Pipeline</th>
                         <th data-key="est_pipeline" data-dir="desc" data-type="num" title="Estimated pipeline value: Qualified Leads × $8K avg deal × 30% close rate. Represents potential revenue from the rep's qualified pipeline.">Est. Revenue</th>
@@ -933,8 +933,9 @@
                 const steps = r.adherence.steps || {};
                 const cohorts = r.adherence.lead_cohorts || {};
                 const postCallSteps = [
-                    ['followup_task', 'Next steps set'],
-                    ['recap_email', 'Post-call follow-up'],
+                    ['task_created', 'Task created'],
+                    ['fu_meeting_created', 'FU meeting created'],
+                    ['recap_email', 'Recap email sent'],
                 ];
                 const stepHtml = postCallSteps.map(([key, label]) => {
                     const step = steps[key] || {};
@@ -946,7 +947,7 @@
                     const renderCohort = (title, leads) => `<div class="post-call-step-cohort"><div class="crm-missing-list"><div class="crm-missing-label">${title} (${leads.length})</div>${leads.length
                         ? leads.map(lead => `<div class="crm-missing-item"><a href="https://app.close.com/lead/${lead.id}/" target="_blank" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${lead.name}</a></div>`).join('')
                         : '<div class="crm-missing-item">None</div>'}</div></div>`;
-                    const cohortHtml = `<div class="post-call-step-cohorts">${renderCohort('Completed', completed)}${renderCohort('Not completed', missed)}</div>`;
+                    const cohortHtml = `<div class="post-call-step-cohorts">${renderCohort('Completed', completed)}${renderCohort('Missed', missed)}</div>`;
                     return `<section class="post-call-step"><div class="post-call-step-head"><span class="post-call-step-title">${label}</span><span class="crm-field-val ${step.pct == null ? '' : step.pct >= 90 ? 'good' : step.pct >= 50 ? 'partial' : 'bad'}">${pct}</span></div><div class="post-call-step-meta">${done} of ${eligible} eligible${step.exempt ? ` · ${step.exempt} exempt` : ''}</div>${cohortHtml}</section>`;
                 }).join('');
 
