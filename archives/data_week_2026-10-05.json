@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07 04:45 AM PDT",
+  "updated_at": "2026-10-07 05:00 AM PDT",
   "week_label": "Oct 05 \u2013 Oct 11, 2026",
   "monday_str": "2026-10-05",
   "today_str": "2026-10-07",
@@ -48,7 +48,7 @@
   "team_close_rate": 2.8,
   "team_avg_rev_per_deal": 9122.0,
   "team_crm_compliance": 73.8,
-  "team_task_adherence": 36.5,
+  "team_task_adherence": 36.6,
   "team_overdue": 345,
   "team_open_leads": 665,
   "team_est_pipeline": 1596000,
@@ -870,6 +870,12 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_IdG4eBEsTHsxFd26a9yQArdu8BoUweOJnTcpiLlHVp1",
+            "name": "Apollonia Felix",
+            "date": "2026-10-07",
+            "funnel": "Reactivation Scrapers"
+          },
+          {
             "lead_id": "lead_VlpsdJorfSqdnVje8eNHbe2rIzt9PTefybDolbZa3J3",
             "name": "Niem Robinson",
             "date": "2026-10-07",
@@ -898,12 +904,6 @@
             "name": "Katina Scott",
             "date": "2026-10-07",
             "funnel": "LTF - In-House"
-          },
-          {
-            "lead_id": "lead_IdG4eBEsTHsxFd26a9yQArdu8BoUweOJnTcpiLlHVp1",
-            "name": "Apollonia Felix",
-            "date": "2026-10-07",
-            "funnel": "Reactivation Scrapers"
           },
           {
             "lead_id": "lead_8RdquiDY28KzNF5geCVBbWAXaShXSu44J1ocjT0elvm",
@@ -1451,16 +1451,16 @@
       "metric_details": {
         "booked": [
           {
-            "lead_id": "lead_hOAeVFAUjCOEUdzVgqd5A2Z4ByzSqzObsL7k9CWve5Q",
-            "name": "Darrell Willis",
-            "date": "2026-10-07",
-            "funnel": "Reactivation Scrapers"
-          },
-          {
             "lead_id": "lead_PfOE8Xts769OaSS4FP0ftvoW62i5CQmynvNUVfqIAEa",
             "name": "Elvis Cruz",
             "date": "2026-10-07",
             "funnel": "Internal Webinar"
+          },
+          {
+            "lead_id": "lead_hOAeVFAUjCOEUdzVgqd5A2Z4ByzSqzObsL7k9CWve5Q",
+            "name": "Darrell Willis",
+            "date": "2026-10-07",
+            "funnel": "Reactivation Scrapers"
           },
           {
             "lead_id": "lead_hVI4UNocUNSDxj7imGv6NbgwLTELRwJDBC539k6qF5z",
@@ -1571,7 +1571,7 @@
       "rep_owner_id": "user_wF5aATmDljO6g6AHqehRPVmfCmH5j9VszbO6Q6Pjzm4",
       "adherence": {
         "pre_call_pct": 63,
-        "post_call_pct": 37,
+        "post_call_pct": 33,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -1617,9 +1617,9 @@
             "label": "Recap email sent",
             "phase": "post_call",
             "done": 6,
-            "eligible": 7,
+            "eligible": 8,
             "exempt": 0,
-            "pct": 86
+            "pct": 75
           }
         },
         "lead_cohorts": {
@@ -2035,13 +2035,21 @@
                 "scored_call_at": "2026-10-05T03:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_3LJPFocdqKzMYsrgiNjFyRTKL2t2COJto5RDnqpxxHI/",
                 "status_label": "\ud83d\udc7b No Show"
+              },
+              {
+                "id": "lead_IKqyj8jQZ48vi5ga0zDEDX3JYAPF4XeP0hvEvJMYG5W",
+                "name": "Amin Al-nemer",
+                "booked_date": "2026-10-06",
+                "scored_call_at": "2026-10-06T05:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_IKqyj8jQZ48vi5ga0zDEDX3JYAPF4XeP0hvEvJMYG5W/",
+                "status_label": "\u260e\ufe0f Call Booked"
               }
             ],
             "exempt": []
           }
         }
       },
-      "post_call_adherence": 37
+      "post_call_adherence": 33
     },
     {
       "name": "Luke Herman",
@@ -2206,7 +2214,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 72,
+      "tasks_incomplete": 73,
       "open_leads": 38,
       "est_pipeline": 91200,
       "is_manager": false,
@@ -4375,7 +4383,7 @@
   ],
   "team_adherence": {
     "pre_call_pct": 80,
-    "post_call_pct": 59,
+    "post_call_pct": 58,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -4421,16 +4429,16 @@
         "label": "Recap email sent",
         "phase": "post_call",
         "done": 29,
-        "eligible": 31,
+        "eligible": 32,
         "exempt": 7,
-        "pct": 94
+        "pct": 91
       }
     }
   },
   "lane_adherence": {
     "1": {
       "pre_call_pct": 80,
-      "post_call_pct": 59,
+      "post_call_pct": 58,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -4476,9 +4484,9 @@
           "label": "Recap email sent",
           "phase": "post_call",
           "done": 29,
-          "eligible": 31,
+          "eligible": 32,
           "exempt": 7,
-          "pct": 94
+          "pct": 91
         }
       }
     }
@@ -4486,7 +4494,7 @@
   "adherence_meta": {
     "schema_version": 5,
     "source": "close_crm",
-    "generated_at": "2026-10-07T04:51:36.948447-07:00",
+    "generated_at": "2026-10-07T05:06:32.647023-07:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "first_sales_call_booked_date",
@@ -4509,8 +4517,8 @@
     "api_requests": 88,
     "preview_only": false
   },
-  "team_post_call_adherence": 59,
+  "team_post_call_adherence": 58,
   "lane_post_call_adherence": {
-    "1": 59
+    "1": 58
   }
 }
