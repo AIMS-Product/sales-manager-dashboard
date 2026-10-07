@@ -26,6 +26,9 @@ The Post-Call Adh. score is the equal-weight average of Task created, FU meeting
 Recap email sent. It uses the same scoring rules as `rep-dashboard/scripts/adherence_rules.py`.
 Click a rep's score to see the completed and missed lead cohorts for each step. Closed/Won and Lost
 leads are exempt from post-call scoring, and show-up outcome does not affect eligibility.
+The shared pre-call Day-of confirmation step also accepts a current-owner outbound call lasting at
+least 45 seconds on the meeting's Pacific date before it begins, alongside an owner-sent outbound
+SMS with a message body.
 
 ## Setup
 
