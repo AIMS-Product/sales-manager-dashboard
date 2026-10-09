@@ -217,7 +217,7 @@ def fetch_process_cohort(client: CloseClient, start: str, end: str) -> list[dict
 
 
 def fetch_qualifying_process_cohort(client: CloseClient, start: str, end: str) -> list[dict[str, Any]]:
-    """Select FSCBD leads by qualifying meeting dates within the report period."""
+    """Select leads by qualifying meeting dates, independent of booked-date fields."""
     dates = latest_qualifying_dates_in_period(client.paginate("/activity/meeting/"), start, end)
 
     leads = {
@@ -234,7 +234,6 @@ def fetch_qualifying_process_cohort(client: CloseClient, start: str, end: str) -
     return [
         dict(lead, _process_candidate_date=dates[lead_id])
         for lead_id, lead in leads.items()
-        if custom_value(lead, CF_FIRST_SALES_CALL_BOOKED_ID, CF_FIRST_SALES_CALL_BOOKED_NAME)
     ]
 
 

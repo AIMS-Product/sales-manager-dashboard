@@ -62,6 +62,22 @@ class DashboardAdherenceTests(unittest.TestCase):
         self.assertEqual(process_candidate_date(selected[0], "2026-10-05", "2026-10-08"),
                          ("2026-10-07", "meeting_activity"))
 
+    def test_wtd_activity_cohort_includes_colby_without_booked_date_fields(self):
+        meeting = {
+            "id": "acti_2xjDGyXxoCe1f1yyaOST56dyf04tTdEwRrRFVf1RIhU",
+            "lead_id": "lead_8fpI1TR6OA0rHUsnW14u917HD4ya5qqg1wxhftIYBht",
+            "title": "Vendingpreneurs Keystone - Next Steps with Colby and Joseph Vaughan",
+            "starts_at": "2026-10-08T22:00:00+00:00", "status": "completed",
+            "user_id": "user_7HSxi55O8q5jO11khvrTcAGoL2nlcoa3kZ6loAY6i78",
+        }
+        lead = {"id": meeting["lead_id"], "display_name": "Colby Anderson"}
+        client = Mock()
+        client.paginate.side_effect = [iter([meeting]), iter([]), iter([])]
+        client.get.return_value = lead
+        self.assertEqual(fetch_qualifying_process_cohort(client, "2026-10-05", "2026-10-08"), [
+            lead | {"_process_candidate_date": "2026-10-08"},
+        ])
+
     def test_historical_process_candidates_keep_first_date_when_latest_moves(self):
         first = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
         latest = LATEST_BOOKED_DATE_FIELD[0]
