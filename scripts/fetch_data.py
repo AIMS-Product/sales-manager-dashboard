@@ -26,7 +26,7 @@ from datetime import datetime, timezone, timedelta
 from calendar import monthrange
 # Reuse the canonical rep-dashboard per-lead evidence rules over this dashboard's
 # Monday-through-today cohort. The vendored rules module is copied verbatim.
-from build_adherence_preview import add_adherence_to_dashboard  # noqa: E402
+from build_adherence_preview import LATEST_BOOKED_DATE_FIELD, add_adherence_to_dashboard  # noqa: E402
 from dashboard_adherence import apply_dashboard_post_call_scores  # noqa: E402
 
 # ── Config ───────────────────────────────────────────────────────────────────
@@ -984,6 +984,8 @@ if __name__ == "__main__":
         date_range=(data["monday_str"], data["today_str"]),
         source="close_crm",
         preview_only=False,
+        candidate_booked_date_field=LATEST_BOOKED_DATE_FIELD,
+        include_canceled_by_lead_status=True,
     )
     apply_dashboard_post_call_scores(data)
 

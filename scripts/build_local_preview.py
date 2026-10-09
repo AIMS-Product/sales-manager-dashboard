@@ -4,7 +4,7 @@
 import json
 from pathlib import Path
 
-from build_adherence_preview import add_adherence_to_dashboard
+from build_adherence_preview import LATEST_BOOKED_DATE_FIELD, add_adherence_to_dashboard
 from dashboard_adherence import apply_dashboard_post_call_scores
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -23,6 +23,8 @@ def build_preview():
         date_range=date_range,
         source="close_wtd_preview",
         preview_only=True,
+        candidate_booked_date_field=LATEST_BOOKED_DATE_FIELD,
+        include_canceled_by_lead_status=True,
     )
     apply_dashboard_post_call_scores(dashboard)
     dashboard["post_call_preview_meta"] = {
