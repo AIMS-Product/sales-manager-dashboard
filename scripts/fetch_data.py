@@ -1096,6 +1096,10 @@ if __name__ == "__main__":
         include_canceled_by_lead_status=True,
     )
     apply_dashboard_post_call_scores(data)
+    # Version the archive presentation independently from historical snapshots.
+    # Schema 2 replaces CRM/pipeline columns with process adherence and stores
+    # the metric/adherence lead cohorts used by the archive drilldowns.
+    data["dashboard_schema_version"] = 2
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     repo_root = os.path.dirname(script_dir)

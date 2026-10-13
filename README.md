@@ -40,6 +40,8 @@ field does not override it.
 The local-only preview can be built with `python3 scripts/build_local_preview.py` and opened at
 `index.html?preview=process-adherence`. It writes `data.preview.json`; the normal dashboard continues
 to read `data.json`. The table omits the qualified-pipeline count and estimated-pipeline revenue.
+Current and future weekly archive snapshots use the same adherence columns and include clickable
+metric and process-adherence lead cohorts. Older snapshots retain their original layout.
 
 ## Setup
 

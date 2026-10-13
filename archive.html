@@ -111,14 +111,60 @@
 
         .table-wrap { overflow-x: auto; }
         table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        thead th { background: var(--bg); padding: 10px 12px; text-align: right; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+        thead th { background: var(--bg); padding: 10px 12px; text-align: center; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
         thead th:first-child { text-align: left; padding-left: 24px; }
-        tbody td { padding: 11px 12px; text-align: right; font-variant-numeric: tabular-nums; }
+        tbody td { padding: 11px 12px; text-align: center; font-variant-numeric: tabular-nums; }
         tbody td:first-child { text-align: left; padding-left: 24px; font-weight: 600; }
         tbody tr:not(:last-child) td { border-bottom: 1px solid #f0f1f3; }
         tbody tr:hover { background: #f8f9fb; }
         tbody tr.totals-row { background: var(--bg); font-weight: 700; border-top: 2px solid var(--border); }
         tbody tr.totals-row td { border-bottom: none; }
+
+        .metric-detail-trigger {
+            display: inline-flex; align-items: center; justify-content: center;
+            min-width: 34px; padding: 1px 2px; border: 0;
+            border-bottom: 1px dashed #a8afbd;
+            background: transparent; color: inherit; font: inherit;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .metric-detail-trigger:hover { color: var(--accent); border-color: var(--accent); }
+        .metric-detail-trigger:focus-visible, .metric-drawer button:focus-visible,
+        .metric-drawer a:focus-visible, .adherence-clickable:focus-visible {
+            outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px;
+        }
+        .adherence-clickable { cursor: pointer; white-space: nowrap; }
+        .adherence-clickable:hover { color: var(--accent); }
+        .clickable-caret { margin-left: 2px; font-size: 9px; color: var(--text-muted); }
+        .adherence-detail-row td { background: #fafbfc; padding: 12px 24px !important; text-align: left !important; }
+        .adherence-detail-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+        .adherence-step { min-width: 0; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: #fff; }
+        .adherence-step-head { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; font-weight: 700; }
+        .adherence-step-meta { margin-top: 4px; color: var(--text-secondary); font-size: 11px; }
+        .adherence-cohorts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+        .adherence-cohort-title { color: var(--text-secondary); font-size: 10px; font-weight: 750; letter-spacing: .05em; text-transform: uppercase; }
+        .adherence-lead { padding-top: 5px; overflow-wrap: anywhere; font-size: 11px; }
+        .adherence-lead a { color: var(--accent); text-decoration: none; }
+        .adherence-lead a:hover { text-decoration: underline; }
+
+        .metric-backdrop { position: fixed; inset: 0; z-index: 20; background: rgba(24,28,38,.42); }
+        .metric-backdrop[hidden], .metric-drawer[hidden] { display: none; }
+        .metric-drawer { position: fixed; z-index: 21; inset: 0 0 0 auto; display: flex; flex-direction: column; width: min(480px, 100%); background: #fff; box-shadow: -8px 0 28px rgba(15,23,42,.16); }
+        .metric-drawer-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 20px 24px; border-bottom: 1px solid var(--border); }
+        .metric-drawer-kicker { color: var(--accent); font-size: 10px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+        .metric-drawer h2 { margin-top: 5px; font-size: 20px; line-height: 1.3; }
+        .metric-drawer-close { width: 34px; height: 34px; border: 1px solid var(--border); border-radius: 8px; background: #fff; color: var(--text-secondary); font-size: 22px; cursor: pointer; }
+        .metric-drawer-close:hover { background: var(--bg); color: var(--text); }
+        .metric-drawer-summary { padding: 16px 24px; border-bottom: 1px solid var(--border); color: var(--text-secondary); font-size: 12px; }
+        .metric-drawer-summary strong { display: block; color: var(--text); font-size: 19px; }
+        .metric-drawer-list { overflow-y: auto; padding: 8px 24px 24px; }
+        .metric-drawer-section { padding-top: 20px; }
+        .metric-drawer-section-title { color: var(--text-secondary); font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+        .metric-drawer-item { padding: 14px 0; border-bottom: 1px solid var(--border); }
+        .metric-drawer-item a { color: var(--accent); font-weight: 650; text-decoration: none; }
+        .metric-drawer-item a:hover { text-decoration: underline; }
+        .metric-drawer-item-meta { margin-top: 5px; color: var(--text-secondary); font-size: 12px; }
+        .metric-drawer-empty { padding: 24px 0; color: var(--text-secondary); font-size: 13px; }
 
         .rate-high { color: var(--green); }
         .rate-mid { color: var(--teal); }
@@ -127,6 +173,7 @@
         .rate-na { color: var(--text-muted); }
 
         .loading { padding: 60px 20px; text-align: center; color: var(--text-muted); }
+        @media (max-width: 760px) { .adherence-detail-grid { grid-template-columns: 1fr; } .content { padding: 16px; } }
     </style>
 </head>
 <body>
@@ -165,20 +212,7 @@
             <div class="table-wrap">
                 <table>
                     <thead>
-                        <tr>
-                            <th>Rep Name</th>
-                            <th>Booked</th>
-                            <th>Shown</th>
-                            <th>Qualified</th>
-                            <th>Closed Won</th>
-                            <th>Revenue</th>
-                            <th>Close %</th>
-                            <th>Avg/Deal</th>
-                            <th>CRM Compl.</th>
-                            <th>Task Adh.</th>
-                            <th>Qual. Pipeline</th>
-                            <th>Est. Revenue</th>
-                        </tr>
+                        <tr id="snapshotHead"></tr>
                     </thead>
                     <tbody id="snapshotBody"></tbody>
                 </table>
@@ -188,6 +222,16 @@
         <div class="funnel-panel" id="archiveFunnelPanel"></div>
     </div>
 </div>
+
+<div class="metric-backdrop" id="metricBackdrop" hidden></div>
+<aside class="metric-drawer" id="metricDrawer" role="dialog" aria-modal="true" aria-labelledby="metricDrawerTitle" hidden>
+    <div class="metric-drawer-header">
+        <div><div class="metric-drawer-kicker">Snapshot cohort</div><h2 id="metricDrawerTitle"></h2></div>
+        <button class="metric-drawer-close" id="metricDrawerClose" type="button" aria-label="Close details">×</button>
+    </div>
+    <div class="metric-drawer-summary" id="metricDrawerSummary"></div>
+    <div class="metric-drawer-list" id="metricDrawerList"></div>
+</aside>
 
 <div class="footer">Historical weekly snapshots &nbsp;·&nbsp; Data from Close CRM</div>
 
@@ -262,6 +306,83 @@
         return adherence + '%' + extra;
     }
 
+    function escapeHtml(value) {
+        return String(value ?? '').replace(/[&<>"']/g, char => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        })[char]);
+    }
+
+    const metricLabels = { booked: 'Booked', shown: 'Shown', qualified: 'Qualified', deals: 'Closed Won' };
+    let currentSnapshot = null;
+    let lastMetricTrigger = null;
+
+    function closeMetricDrawer() {
+        const drawer = document.getElementById('metricDrawer');
+        if (drawer.hidden) return;
+        drawer.hidden = true;
+        document.getElementById('metricBackdrop').hidden = true;
+        document.body.style.overflow = '';
+        lastMetricTrigger?.focus();
+        lastMetricTrigger = null;
+    }
+
+    function metricRecordHtml(record, metric) {
+        const leadId = String(record.lead_id || record.id || '');
+        const name = escapeHtml(record.name || record.lead_name || leadId || 'Unknown lead');
+        const safeUrl = /^https:\/\/app\.close\.com\/lead\/lead_[A-Za-z0-9]+\/$/.test(record.url || '')
+            ? record.url
+            : (/^lead_[A-Za-z0-9]+$/.test(leadId) ? `https://app.close.com/lead/${leadId}/` : '');
+        const nameHtml = safeUrl
+            ? `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${name} ↗</a>`
+            : `<span>${name}</span>`;
+        const status = metric === 'deals' ? 'Won'
+            : metric === 'shown' ? (record.meeting_outcome || 'Completed')
+            : metric === 'no_shows' ? (record.meeting_outcome || 'No Show')
+            : metric === 'upcoming' ? (record.meeting_outcome || 'Upcoming')
+            : metric === 'no_outcome' ? (record.meeting_outcome || 'No outcome')
+            : metric === 'booked' ? 'Booked'
+            : 'Qualified';
+        const meta = [status, record.date || record.booked_date || 'Date unavailable'];
+        if (record.funnel) meta.push(record.funnel);
+        if (metric === 'deals' && record.value != null) meta.push(fmtMoney(record.value));
+        return `<div class="metric-drawer-item">${nameHtml}<div class="metric-drawer-item-meta">${meta.map(escapeHtml).join(' · ')}</div></div>`;
+    }
+
+    function openMetricDrawer(repIndex, metric, trigger) {
+        const rep = currentSnapshot?.reps?.[repIndex];
+        if (!rep || !Object.hasOwn(metricLabels, metric)) return;
+        lastMetricTrigger = trigger;
+        const details = rep.metric_details || {};
+        const records = details[metric];
+        const noShows = metric === 'shown' ? (details.no_shows || []) : [];
+        const noOutcome = metric === 'shown' ? (details.no_outcome || []) : [];
+        const upcoming = metric === 'shown' ? (details.upcoming || []) : [];
+        document.getElementById('metricDrawerTitle').textContent = `${rep.name} · ${metricLabels[metric]}`;
+        document.getElementById('metricDrawerSummary').innerHTML = metric === 'shown'
+            ? `<strong>${records?.length ?? rep.shown ?? 0} shown · ${noShows.length} no show${noShows.length === 1 ? '' : 's'} · ${noOutcome.length} no outcome · ${upcoming.length} upcoming</strong>Groups use the selected meeting outcome.`
+            : `<strong>${records?.length ?? 0} ${metricLabels[metric].toLowerCase()} records</strong>Leads in this week’s saved cohort.`;
+        let html;
+        if (!Array.isArray(records)) {
+            html = '<div class="metric-drawer-empty">Lead records are unavailable in this snapshot.</div>';
+        } else if (metric === 'shown') {
+            const section = (title, items, type) => `<section class="metric-drawer-section"><div class="metric-drawer-section-title">${title} (${items.length})</div>${items.length
+                ? items.map(record => metricRecordHtml(record, type)).join('')
+                : '<div class="metric-drawer-empty">None this week.</div>'}</section>`;
+            html = section('Shown', records, 'shown')
+                + section('No shows', noShows, 'no_shows')
+                + section('No outcome', noOutcome, 'no_outcome')
+                + section('Upcoming', upcoming, 'upcoming');
+        } else {
+            html = records.length ? records.map(record => metricRecordHtml(record, metric)).join('')
+                : '<div class="metric-drawer-empty">No leads in this cohort.</div>';
+        }
+        document.getElementById('metricDrawerList').innerHTML = html;
+        document.getElementById('metricBackdrop').hidden = false;
+        document.getElementById('metricDrawer').hidden = false;
+        document.body.style.overflow = 'hidden';
+        document.getElementById('metricDrawerClose').focus();
+    }
+
     function rateClass(v) {
         if (v === null || v === undefined) return 'rate-na';
         if (v >= 80) return 'rate-high';
@@ -275,7 +396,7 @@
         document.getElementById('snapshotView').style.display = 'block';
         document.getElementById('snapshotTitle').textContent = formatWeek(mondayStr);
         document.getElementById('snapshotBody').innerHTML =
-            '<tr><td colspan="12" class="loading">Loading…</td></tr>';
+            '<tr><td colspan="11" class="loading">Loading…</td></tr>';
 
         try {
             const resp = await fetch(`archives/data_week_${mondayStr}.json?t=${Date.now()}`);
@@ -283,21 +404,74 @@
             renderSnapshot(data);
         } catch (e) {
             document.getElementById('snapshotBody').innerHTML =
-                '<tr><td colspan="12" class="loading">Failed to load snapshot.</td></tr>';
+                '<tr><td colspan="11" class="loading">Failed to load snapshot.</td></tr>';
         }
     };
 
     function renderSnapshot(data) {
+        currentSnapshot = data;
         const allReps = (data.reps || []);
+        const modernSchema = Number(data.dashboard_schema_version || 0) >= 2;
+        const columnCount = modernSchema ? 11 : 12;
+        document.getElementById('snapshotHead').innerHTML = modernSchema
+            ? '<th>Rep Name</th><th>Booked</th><th>Shown</th><th>Qualified</th><th>Closed Won</th><th>Revenue</th><th>Close %</th><th>Avg/Deal</th><th>Pre-Call Adh.</th><th>Post-Call Adh.</th><th>Task Adh.</th>'
+            : '<th>Rep Name</th><th>Booked</th><th>Shown</th><th>Qualified</th><th>Closed Won</th><th>Revenue</th><th>Close %</th><th>Avg/Deal</th><th>CRM Compl.</th><th>Task Adh.</th><th>Qual. Pipeline</th><th>Est. Revenue</th>';
         const lane1 = allReps.filter(r => r.lane === 1 && !r.is_manager).sort((a, b) => (b.booked || 0) - (a.booked || 0));
         const lane2 = allReps.filter(r => r.lane === 2 && !r.is_manager).sort((a, b) => (b.booked || 0) - (a.booked || 0));
         // Fallback: if no lane data (older archives), show all reps in one group
         const hasLanes = lane1.length > 0 || lane2.length > 0;
 
+        function metricButton(r, metric, value) {
+            const repIndex = allReps.indexOf(r);
+            const hasRecords = Array.isArray(r.metric_details?.[metric]);
+            if (!modernSchema || !hasRecords) return value ?? 0;
+            return `<button type="button" class="metric-detail-trigger" data-rep-index="${repIndex}" data-metric="${metric}" aria-label="View ${metricLabels[metric]} records for ${escapeHtml(r.name)}" title="Click to view ${metricLabels[metric].toLowerCase()} leads">${value ?? 0}</button>`;
+        }
+
+        const phaseSteps = {
+            pre: [
+                ['loom_usage', 'Pre-Call Loom'],
+                ['precall_text', 'Pre-call text'],
+                ['day_of_confirmation_text', 'Day-of confirmation'],
+            ],
+            post: [
+                ['task_created', 'Task created'],
+                ['fu_meeting_created', 'FU meeting created'],
+                ['recap_email', 'Recap email sent'],
+            ],
+        };
+
+        function adherenceDetailRows(r) {
+            if (!modernSchema || !r.adherence) return '';
+            const repIndex = allReps.indexOf(r);
+            return ['pre', 'post'].map(phase => {
+                const stepHtml = phaseSteps[phase].map(([key, label]) => {
+                    const step = r.adherence.steps?.[key] || {};
+                    const cohorts = r.adherence.lead_cohorts?.[key] || {};
+                    const renderCohort = (title, records) => `<div><div class="adherence-cohort-title">${title} (${records.length})</div>${records.length
+                        ? records.map(lead => {
+                            const id = String(lead.id || '');
+                            const url = /^https:\/\/app\.close\.com\/lead\/lead_[A-Za-z0-9]+\/$/.test(lead.url || '')
+                                ? lead.url
+                                : (/^lead_[A-Za-z0-9]+$/.test(id) ? `https://app.close.com/lead/${id}/` : '');
+                            const name = escapeHtml(lead.name || id || 'Unknown lead');
+                            return `<div class="adherence-lead">${url ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${name} ↗</a>` : name}</div>`;
+                        }).join('')
+                        : '<div class="adherence-lead">None</div>'}</div>`;
+                    const completed = cohorts.completed || [];
+                    const missed = cohorts.missed || [];
+                    const pct = step.pct == null ? '—' : `${step.pct}%`;
+                    const tone = step.pct == null ? 'rate-na' : rateClass(step.pct);
+                    return `<section class="adherence-step"><div class="adherence-step-head"><span>${label}</span><span class="${tone}">${pct}</span></div><div class="adherence-step-meta">${step.done || 0} of ${step.eligible || 0} eligible${step.exempt ? ` · ${step.exempt} exempt` : ''}</div><div class="adherence-cohorts">${renderCohort('Completed', completed)}${renderCohort('Missed', missed)}</div></section>`;
+                }).join('');
+                return `<tr class="adherence-detail-row" id="adherence-${phase}-${repIndex}" style="display:none"><td colspan="${columnCount}"><div class="adherence-detail-grid">${stepHtml}</div></td></tr>`;
+            }).join('');
+        }
+
         function repRow(r) {
             const leadTag = r.is_lead ? '<span class="lead-tag">Lead</span>' : '';
             const mgrTag = r.is_manager ? ' <span style="font-size:10px;color:#9ca0ad;">(MGR)</span>' : '';
-            return `<tr>
+            if (!modernSchema) return `<tr>
                 <td>${r.name}${mgrTag}${leadTag}</td>
                 <td>${r.booked}</td>
                 <td>${r.shown}</td>
@@ -311,9 +485,27 @@
                 <td>${r.open_leads != null ? r.open_leads : '—'}</td>
                 <td>${r.est_pipeline != null ? fmtK(r.est_pipeline) : '—'}</td>
             </tr>`;
+
+            const repIndex = allReps.indexOf(r);
+            const adherenceCell = (phase, value) => r.adherence
+                ? `<td class="adherence-clickable" data-phase="${phase}" data-rep-index="${repIndex}" role="button" tabindex="0" aria-label="Show ${phase}-call adherence lead cohorts for ${escapeHtml(r.name)}" title="Click to view ${phase}-call adherence leads">${fmtPct(value)} <span class="clickable-caret" aria-hidden="true">▼</span></td>`
+                : `<td>${fmtPct(value)}</td>`;
+            return `<tr>
+                <td>${escapeHtml(r.name)}${mgrTag}${leadTag}</td>
+                <td>${metricButton(r, 'booked', r.booked)}</td>
+                <td>${metricButton(r, 'shown', r.shown)}</td>
+                <td>${metricButton(r, 'qualified', r.qualified)}</td>
+                <td>${metricButton(r, 'deals', r.deals)}</td>
+                <td>${fmtMoney(r.revenue)}</td>
+                <td class="${rateClass(r.close_rate)}">${fmtPct(r.close_rate)}</td>
+                <td>${fmtMoney(r.avg_rev_per_deal)}</td>
+                ${adherenceCell('pre', r.pre_call_adherence)}
+                ${adherenceCell('post', r.post_call_adherence)}
+                <td>${fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
+            </tr>${adherenceDetailRows(r)}`;
         }
 
-        function laneSubtotal(label, reps) {
+        function laneSubtotal(label, reps, lane) {
             const b = reps.reduce((s, r) => s + (r.booked || 0), 0);
             const sh = reps.reduce((s, r) => s + (r.shown || 0), 0);
             const q = reps.reduce((s, r) => s + (r.qualified || 0), 0);
@@ -330,6 +522,16 @@
             const totalInc = incmplt.reduce((s, r) => s + (r.tasks_incomplete || 0), 0);
             const totalOvd = incmplt.reduce((s, r) => s + (r.tasks_overdue || 0), 0);
             const taskAdh = totalInc > 0 ? Math.round((totalInc - totalOvd) / totalInc * 1000) / 10 : null;
+            if (modernSchema) return `<tr class="lane-totals-row">
+                <td style="font-weight:700;">${label}</td>
+                <td>${b}</td><td>${sh}</td><td>${q}</td><td>${d}</td>
+                <td>${fmtMoney(rev)}</td>
+                <td class="${rateClass(cr)}">${fmtPct(cr)}</td>
+                <td>${avg ? fmtMoney(avg) : '—'}</td>
+                <td>${fmtPct(data.lane_pre_call_adherence?.[lane] ?? null)}</td>
+                <td>${fmtPct(data.lane_post_call_adherence?.[lane] ?? null)}</td>
+                <td>${fmtAdherence(taskAdh, totalOvd)}</td>
+            </tr>`;
             return `<tr class="lane-totals-row">
                 <td style="font-weight:700;">${label}</td>
                 <td>${b}</td><td>${sh}</td><td>${q}</td><td>${d}</td>
@@ -346,17 +548,17 @@
 
         if (hasLanes) {
             // Lane 1
-            html += `<tr class="lane-header-row"><td colspan="12"><span class="lane-label">Lane 1</span></td></tr>`;
+            html += `<tr class="lane-header-row"><td colspan="${columnCount}"><span class="lane-label">Lane 1</span></td></tr>`;
             for (const r of lane1) html += repRow(r);
-            if (lane1.length > 0) html += laneSubtotal('Lane 1 Totals', lane1);
+            if (lane1.length > 0) html += laneSubtotal('Lane 1 Totals', lane1, 1);
 
-            // Divider
-            html += `<tr class="lane-divider-row"><td colspan="12"></td></tr>`;
-
-            // Lane 2
-            html += `<tr class="lane-header-row"><td colspan="12"><span class="lane-label">Lane 2</span></td></tr>`;
-            for (const r of lane2) html += repRow(r);
-            if (lane2.length > 0) html += laneSubtotal('Lane 2 Totals', lane2);
+            if (lane2.length > 0) {
+                // Divider and Lane 2 only appear when the snapshot has Lane 2 reps.
+                html += `<tr class="lane-divider-row"><td colspan="${columnCount}"></td></tr>`;
+                html += `<tr class="lane-header-row"><td colspan="${columnCount}"><span class="lane-label">Lane 2</span></td></tr>`;
+                for (const r of lane2) html += repRow(r);
+                html += laneSubtotal('Lane 2 Totals', lane2, 2);
+            }
         } else {
             // Older archives without lane data — render flat
             const sorted = allReps.sort((a, b) => (b.booked || 0) - (a.booked || 0));
@@ -364,7 +566,19 @@
         }
 
         // Team Totals
-        html += `<tr class="totals-row">
+        html += modernSchema ? `<tr class="totals-row">
+            <td>Team Totals</td>
+            <td>${data.total_booked}</td>
+            <td>${data.total_shown}</td>
+            <td>${data.total_qualified}</td>
+            <td>${data.total_deals}</td>
+            <td>${fmtMoney(data.total_revenue)}</td>
+            <td class="${rateClass(data.team_close_rate)}">${fmtPct(data.team_close_rate)}</td>
+            <td>${fmtMoney(data.team_avg_rev_per_deal)}</td>
+            <td>${fmtPct(data.team_pre_call_adherence)}</td>
+            <td>${fmtPct(data.team_post_call_adherence)}</td>
+            <td>${fmtAdherence(data.team_task_adherence, data.team_overdue)}</td>
+        </tr>` : `<tr class="totals-row">
             <td>Team Totals</td>
             <td>${data.total_booked}</td>
             <td>${data.total_shown}</td>
@@ -414,6 +628,17 @@
             funnelToggle.style.display = 'none';
             funnelPanel.style.display = 'none';
         }
+
+        document.querySelectorAll('.adherence-clickable').forEach(cell => {
+            const toggle = () => {
+                const row = document.getElementById(`adherence-${cell.dataset.phase}-${cell.dataset.repIndex}`);
+                if (row) row.style.display = row.style.display === 'none' ? '' : 'none';
+            };
+            cell.onclick = toggle;
+            cell.onkeydown = event => {
+                if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggle(); }
+            };
+        });
     }
 
     document.getElementById('archiveFunnelToggle').addEventListener('click', () => {
@@ -426,6 +651,21 @@
             panel.style.display = 'none';
             toggle.textContent = '▶ Funnel Breakdown';
         }
+    });
+
+    document.getElementById('snapshotBody').addEventListener('click', event => {
+        const button = event.target.closest('.metric-detail-trigger');
+        if (button) {
+            openMetricDrawer(Number(button.dataset.repIndex), button.dataset.metric, button);
+            return;
+        }
+        const detailRow = event.target.closest('.adherence-detail-row');
+        if (detailRow) event.stopPropagation();
+    });
+    document.getElementById('metricDrawerClose').addEventListener('click', closeMetricDrawer);
+    document.getElementById('metricBackdrop').addEventListener('click', closeMetricDrawer);
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') closeMetricDrawer();
     });
 
     document.getElementById('snapshotBack').addEventListener('click', () => {
@@ -452,11 +692,27 @@
     window.downloadArchiveCSV = function() {
         if (!_currentSnapshot || !_currentSnapshot.reps) return;
         const data = _currentSnapshot;
-        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Avg/Deal', 'CRM Compl.', 'Task Adh.', 'Qual. Pipeline', 'Est. Revenue'];
+        const modernSchema = Number(data.dashboard_schema_version || 0) >= 2;
+        const headers = modernSchema
+            ? ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Avg/Deal', 'Pre-Call Adh.', 'Post-Call Adh.', 'Task Adh.']
+            : ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Avg/Deal', 'CRM Compl.', 'Task Adh.', 'Qual. Pipeline', 'Est. Revenue'];
         const rows = data.reps
             .filter(r => !r.is_manager)
             .sort((a, b) => (b.booked || 0) - (a.booked || 0))
-            .map(r => [
+            .map(r => modernSchema ? [
+                r.name,
+                r.lane || 1,
+                r.booked || 0,
+                r.shown || 0,
+                r.qualified || 0,
+                r.deals || 0,
+                r.revenue || 0,
+                r.close_rate != null ? r.close_rate + '%' : '',
+                r.avg_rev_per_deal || 0,
+                r.pre_call_adherence != null ? r.pre_call_adherence + '%' : '',
+                r.post_call_adherence != null ? r.post_call_adherence + '%' : '',
+                r.task_adherence != null ? r.task_adherence + '%' : '',
+            ] : [
                 r.name,
                 r.lane || 1,
                 r.booked || 0,
@@ -472,7 +728,19 @@
                 r.est_pipeline || 0,
             ]);
 
-        rows.push([
+        rows.push(modernSchema ? [
+            'Team Totals', '',
+            data.total_booked || 0,
+            data.total_shown || 0,
+            data.total_qualified || 0,
+            data.total_deals || 0,
+            data.total_revenue || 0,
+            data.team_close_rate != null ? data.team_close_rate + '%' : '',
+            data.team_avg_rev_per_deal || 0,
+            data.team_pre_call_adherence != null ? data.team_pre_call_adherence + '%' : '',
+            data.team_post_call_adherence != null ? data.team_post_call_adherence + '%' : '',
+            data.team_task_adherence != null ? data.team_task_adherence + '%' : '',
+        ] : [
             'Team Totals', '',
             data.total_booked || 0,
             data.total_shown || 0,
