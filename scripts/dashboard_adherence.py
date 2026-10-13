@@ -4,6 +4,7 @@ from adherence_rules import round_mean
 
 
 POST_CALL_DASHBOARD_STEPS = ("task_created", "fu_meeting_created", "recap_email")
+PRE_CALL_DASHBOARD_STEPS = ("loom_usage", "precall_text", "day_of_confirmation_text")
 
 
 def dashboard_post_call_pct(adherence):
@@ -17,14 +18,31 @@ def dashboard_post_call_pct(adherence):
     ])
 
 
+def dashboard_pre_call_pct(adherence):
+    """Average Pre-Call Loom, Pre-call text, and Day-of confirmation."""
+    if not adherence:
+        return None
+    steps = adherence.get("steps") or {}
+    return round_mean([
+        (steps.get(key) or {}).get("pct")
+        for key in PRE_CALL_DASHBOARD_STEPS
+    ])
+
+
 def apply_dashboard_post_call_scores(data):
-    """Set dashboard display scores while preserving canonical adherence details."""
+    """Set dashboard phase scores while preserving canonical adherence details."""
     for rep in data.get("reps") or []:
+        rep["pre_call_adherence"] = dashboard_pre_call_pct(rep.get("adherence"))
         rep["post_call_adherence"] = dashboard_post_call_pct(rep.get("adherence"))
 
     team = data.get("team_adherence")
+    data["team_pre_call_adherence"] = dashboard_pre_call_pct(team)
     data["team_post_call_adherence"] = dashboard_post_call_pct(team)
 
+    data["lane_pre_call_adherence"] = {
+        lane: dashboard_pre_call_pct(scores)
+        for lane, scores in (data.get("lane_adherence") or {}).items()
+    }
     data["lane_post_call_adherence"] = {
         lane: dashboard_post_call_pct(scores)
         for lane, scores in (data.get("lane_adherence") or {}).items()

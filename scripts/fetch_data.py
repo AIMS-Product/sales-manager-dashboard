@@ -24,6 +24,7 @@ import time
 import requests
 from datetime import datetime, timezone, timedelta
 from calendar import monthrange
+from zoneinfo import ZoneInfo
 # Reuse the canonical rep-dashboard per-lead evidence rules over this dashboard's
 # Monday-through-today cohort. The vendored rules module is copied verbatim.
 from build_adherence_preview import LATEST_BOOKED_DATE_FIELD, add_adherence_to_dashboard  # noqa: E402
@@ -127,6 +128,7 @@ WEEKLY_TARGETS = {
     "close_rate": 20,
     "qa_score": 7,
     "avg_rev_per_deal": 8000,
+    "pre_call_adherence": 90,
     "post_call_adherence": 90,
     "task_adherence": 100,
 }
@@ -141,6 +143,7 @@ LANE_2_TARGETS = {
     "close_rate": 7,
     "qa_score": None,
     "avg_rev_per_deal": None,
+    "pre_call_adherence": 90,
     "post_call_adherence": 90,
     "task_adherence": 100,
 }
@@ -179,6 +182,80 @@ LEAD_USERS = set()  # No lead tags
 
 # ── Fetch booked leads by "First Sales Call Booked Date" field ─────────────
 
+PACIFIC = ZoneInfo("America/Los_Angeles")
+
+
+def fetch_meetings_for_leads(lead_ids):
+    """Fetch meeting activities for lead IDs in Close's supported batch size."""
+    rows = []
+    for offset in range(0, len(lead_ids), 25):
+        batch = lead_ids[offset:offset + 25]
+        skip = 0
+        while True:
+            data = api_get("/activity/meeting/", {
+                "lead_id": ",".join(batch),
+                "_skip": skip,
+                "_limit": 100,
+            })
+            page = data.get("data", [])
+            rows.extend(page)
+            if not data.get("has_more", False):
+                break
+            skip += len(page) or 100
+    return rows
+
+
+def fetch_meeting_outcome_names():
+    """Return Close outcome IDs mapped to their display names."""
+    data = api_get("/outcome/")
+    return {
+        outcome.get("id"): str(outcome.get("label") or outcome.get("name") or "").strip()
+        for outcome in data.get("data", [])
+        if outcome.get("id")
+    }
+
+
+def _meeting_local_date(meeting):
+    starts_at = meeting.get("starts_at")
+    if not starts_at:
+        return ""
+    try:
+        parsed = datetime.fromisoformat(str(starts_at).replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(PACIFIC).date().isoformat()
+    except (TypeError, ValueError):
+        return ""
+
+
+def classify_meeting_outcome(booked_date, meetings, outcome_names, today_str):
+    """Classify a booked lead by selected meeting outcome and future status."""
+    matching = [meeting for meeting in meetings if _meeting_local_date(meeting) == booked_date]
+    if not matching:
+        matching = [
+            meeting for meeting in meetings
+            if str(meeting.get("status", "")).lower() in {"upcoming", "in-progress"}
+            and _meeting_local_date(meeting) >= today_str
+        ]
+
+    labeled = [
+        (meeting, outcome_names.get(meeting.get("outcome_id"), ""))
+        for meeting in matching
+    ]
+    completed = next(((meeting, label) for meeting, label in labeled if label.lower() == "completed"), None)
+    if completed:
+        return "shown", completed[1], completed[0].get("status", "")
+    no_show = next(((meeting, label) for meeting, label in labeled if label.lower() == "no show"), None)
+    if no_show:
+        return "no_shows", no_show[1], no_show[0].get("status", "")
+    upcoming = next((meeting for meeting, _ in labeled if str(meeting.get("status", "")).lower() in {"upcoming", "in-progress"}), None)
+    if upcoming or (not matching and booked_date >= today_str):
+        label = outcome_names.get(upcoming.get("outcome_id"), "") if upcoming else ""
+        return "upcoming", label, upcoming.get("status", "upcoming") if upcoming else "upcoming"
+    other = next(((meeting, label) for meeting, label in labeled if label), None)
+    return "no_outcome", other[1] if other else "", other[0].get("status", "") if other else ""
+
+
 def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
     """Query leads where 'First Sales Call Booked Date' is within Mon–today.
     Process each lead for booked/shown/qualified/CRM/funnel counts.
@@ -203,6 +280,23 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
         skip += 200
 
     print(f"  Leads with First Sales Call Booked Date in range: {len(all_leads)}", flush=True)
+
+    # The lead's First Call Show Up field can be stale or disagree with the
+    # meeting itself. Use Close's selected meeting outcome as the source for
+    # Shown/No Show, and keep future meetings with no outcome separate.
+    eligible_lead_ids = []
+    for lead in all_leads:
+        custom = lead.get("custom", {})
+        funnel = lead.get(f"custom.{CF_FUNNEL_NAME_ID}", custom.get(CF_FUNNEL_NAME_ID, ""))
+        if lead.get("status_id", "") not in EXCLUDED_LEAD_STATUSES and str(funnel).strip() not in EXCLUDED_FUNNELS:
+            eligible_lead_ids.append(lead.get("id", ""))
+    meeting_rows = fetch_meetings_for_leads([lead_id for lead_id in eligible_lead_ids if lead_id])
+    outcome_names = fetch_meeting_outcome_names()
+    meetings_by_lead = {}
+    for meeting in meeting_rows:
+        lead_id = meeting.get("lead_id")
+        if lead_id:
+            meetings_by_lead.setdefault(lead_id, []).append(meeting)
 
     rep_booked = {}
     rep_shown = {}
@@ -275,7 +369,10 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
 
         # Track team-wide totals BEFORE owner exclusions (so Team Totals match MTD funnel dashboard)
         all_booked += 1
-        if str(show_up).strip().lower() == "yes":
+        outcome_bucket, meeting_outcome, meeting_status = classify_meeting_outcome(
+            str(booked_date)[:10], meetings_by_lead.get(lead.get("id", ""), []), outcome_names, today_str
+        )
+        if outcome_bucket == "shown":
             all_shown += 1
         if str(qualified_val).strip().lower() == "yes":
             all_qualified += 1
@@ -294,18 +391,28 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
             "name": lead.get("display_name") or lead.get("name") or lead.get("id") or "Unknown lead",
             "date": str(booked_date)[:10],
             "funnel": funnel_name,
+            "meeting_outcome": meeting_outcome,
+            "meeting_status": meeting_status,
         }
-        details = rep_meeting_details.setdefault(
-            rep_name, {"booked": [], "shown": [], "no_shows": [], "qualified": []}
-        )
+        details = rep_meeting_details.setdefault(rep_name, {
+            "booked": [],
+            "shown": [],
+            "no_shows": [],
+            "no_outcome": [],
+            "upcoming": [],
+            "qualified": [],
+        })
         details["booked"].append(detail)
 
-        show_up_value = str(show_up).strip().lower()
-        if show_up_value == "yes":
+        if outcome_bucket == "shown":
             rep_shown[rep_name] = rep_shown.get(rep_name, 0) + 1
             details["shown"].append(detail)
-        elif show_up_value == "no" or status_id == NO_SHOW_LEAD_STATUS:
+        elif outcome_bucket == "no_shows":
             details["no_shows"].append(detail)
+        elif outcome_bucket == "upcoming":
+            details["upcoming"].append(detail)
+        else:
+            details["no_outcome"].append(detail)
 
         if str(qualified_val).strip().lower() == "yes":
             rep_qualified[rep_name] = rep_qualified.get(rep_name, 0) + 1
@@ -880,7 +987,7 @@ def build_dashboard_data():
             "crm_detail": crm_detail.get(name, None),
             "metric_details": {
                 metric: sorted(rep_meeting_details.get(name, {}).get(metric, []), key=lambda item: item["date"], reverse=True)
-                for metric in ("booked", "shown", "no_shows", "qualified")
+                for metric in ("booked", "shown", "no_shows", "no_outcome", "upcoming", "qualified")
             } | {
                 "deals": sorted(rep_deal_details.get(name, {}).values(), key=lambda item: item["date"], reverse=True)
             },
@@ -940,6 +1047,7 @@ def build_dashboard_data():
         "revenue": WEEKLY_TARGETS["revenue"] * num_reps,
         "close_rate": WEEKLY_TARGETS["close_rate"],
         "avg_rev_per_deal": WEEKLY_TARGETS["avg_rev_per_deal"],
+        "pre_call_adherence": WEEKLY_TARGETS["pre_call_adherence"],
         "post_call_adherence": WEEKLY_TARGETS["post_call_adherence"],
         "task_adherence": WEEKLY_TARGETS["task_adherence"],
     }

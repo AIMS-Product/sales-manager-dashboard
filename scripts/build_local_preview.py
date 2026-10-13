@@ -16,6 +16,7 @@ def build_preview():
     dashboard = json.loads(manager_path.read_text())
     for target_key in ("targets", "lane_2_targets", "team_targets"):
         targets = dashboard.get(target_key) or {}
+        targets["pre_call_adherence"] = targets.get("crm_compliance", 90)
         targets["post_call_adherence"] = targets.get("crm_compliance", 90)
     date_range = (dashboard["monday_str"], dashboard["today_str"])
     dashboard = add_adherence_to_dashboard(
@@ -27,7 +28,7 @@ def build_preview():
         include_canceled_by_lead_status=True,
     )
     apply_dashboard_post_call_scores(dashboard)
-    dashboard["post_call_preview_meta"] = {
+    dashboard["process_adherence_preview_meta"] = {
         "source": "Close CRM WTD read-only pull",
         "period_start": date_range[0],
         "period_end": date_range[1],
@@ -37,7 +38,7 @@ def build_preview():
     output_path = DASHBOARD_DIR / "data.preview.json"
     output_path.write_text(json.dumps(dashboard, indent=2) + "\n")
     print(f"Wrote {output_path}")
-    print(f"Using Close Process Adherence rules for {date_range[0]} through {date_range[1]}")
+    print(f"Using Rep Dashboard process-adherence rules for {date_range[0]} through {date_range[1]}")
 
 
 if __name__ == "__main__":

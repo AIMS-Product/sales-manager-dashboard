@@ -8,8 +8,10 @@ from unittest.mock import Mock
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from dashboard_adherence import (  # noqa: E402
+    PRE_CALL_DASHBOARD_STEPS,
     POST_CALL_DASHBOARD_STEPS,
     apply_dashboard_post_call_scores,
+    dashboard_pre_call_pct,
     dashboard_post_call_pct,
 )
 from build_adherence_preview import (  # noqa: E402
@@ -162,6 +164,17 @@ class DashboardAdherenceTests(unittest.TestCase):
         }}
         self.assertEqual(dashboard_post_call_pct(adherence), 75)
 
+    def test_pre_call_score_averages_all_three_canonical_steps(self):
+        adherence = {"steps": {
+            "loom_usage": {"pct": 100},
+            "precall_text": {"pct": 50},
+            "day_of_confirmation_text": {"pct": 0},
+        }}
+        self.assertEqual(PRE_CALL_DASHBOARD_STEPS, (
+            "loom_usage", "precall_text", "day_of_confirmation_text"
+        ))
+        self.assertEqual(dashboard_pre_call_pct(adherence), 50)
+
     def test_apply_scores_for_reps_team_and_lanes(self):
         adherence = {"steps": {
             "task_created": {"pct": 100},
@@ -173,10 +186,22 @@ class DashboardAdherenceTests(unittest.TestCase):
             "team_adherence": adherence,
             "lane_adherence": {"1": adherence},
         }
+        pre_call_steps = {
+            "loom_usage": {"pct": 100},
+            "precall_text": {"pct": 50},
+            "day_of_confirmation_text": {"pct": 0},
+        }
+        pre_call = {"steps": pre_call_steps}
+        combined = {"steps": {**adherence["steps"], **pre_call_steps}}
+        data["reps"].append({"adherence": pre_call})
+        data["team_adherence"] = combined
+        data["lane_adherence"] = {"1": combined}
         apply_dashboard_post_call_scores(data)
         self.assertEqual(data["reps"][0]["post_call_adherence"], 50)
+        self.assertEqual(data["reps"][1]["pre_call_adherence"], 50)
+        self.assertEqual(data["team_pre_call_adherence"], 50)
+        self.assertEqual(data["lane_pre_call_adherence"], {"1": 50})
         self.assertEqual(data["team_post_call_adherence"], 50)
-        self.assertEqual(data["lane_post_call_adherence"], {"1": 50})
 
 
 if __name__ == "__main__":

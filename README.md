@@ -8,9 +8,10 @@ A GitHub Pages dashboard that tracks **meeting funnel metrics and close rates** 
 | Metric | Description |
 |--------|-------------|
 | **Meetings Booked** | Leads with "First Call Booked Date" in current month |
-| **Shown (Yes)** | Booked leads where "First Call Show Up (Opp)" = "Yes" |
-| **No-Show (No)** | Booked leads where "First Call Show Up (Opp)" = "No" |
-| **No Entry (Blank)** | Booked leads where "First Call Show Up (Opp)" is blank |
+| **Shown** | Booked leads whose meeting outcome is "Completed" |
+| **No-Show** | Booked leads whose meeting outcome is "No Show" |
+| **No Outcome** | Past booked leads without a Completed or No Show meeting outcome |
+| **Upcoming** | Future meetings without a Completed or No Show outcome |
 | **Qualified (Yes)** | Booked leads where "Qualified (Opp)" = "Yes" |
 | **Show Rate %** | Shown / Booked × 100 |
 | **Booked → Close %** | Deals / Booked × 100 |
@@ -22,17 +23,23 @@ All of the above aggregated across the full team.
 
 ### Process adherence
 
-The Post-Call Adh. score is the equal-weight average of Task created, FU meeting created, and
-Recap email sent. It uses the same scoring rules as `rep-dashboard/scripts/adherence_rules.py`.
-Click a rep's score to see the completed and missed lead cohorts for each step. Closed/Won and Lost
-leads are exempt from post-call scoring, and show-up outcome does not affect eligibility.
+The Pre-Call Adh. score is the equal-weight average of Pre-Call Loom, Pre-call text, and Day-of
+confirmation. Post-Call Adh. averages Task created, FU meeting created, and Recap email sent.
+Both use the same scoring rules as `rep-dashboard/scripts/adherence_rules.py`. Click either score
+to see completed and missed lead cohorts for each step. Closed/Won and Lost leads are exempt from
+post-call scoring, and show-up outcome does not affect eligibility.
 The shared pre-call Day-of confirmation step also accepts any current-owner outbound dial on the
 meeting's Pacific date before it begins, alongside an owner-sent outbound
 SMS with a message body.
 Process candidates come from active meetings in the Pacific reporting period that
 match the updater's qualifying sales-call titles, even when First and Latest Sales
-Call Booked Date are blank. Booked, shown, and qualified metrics keep their existing
-field-based definitions.
+Call Booked Date are blank. Booked and qualified metrics retain their lead-field
+definitions. Shown and No-Show use the selected meeting outcome; the lead's show-up
+field does not override it.
+
+The local-only preview can be built with `python3 scripts/build_local_preview.py` and opened at
+`index.html?preview=process-adherence`. It writes `data.preview.json`; the normal dashboard continues
+to read `data.json`. The table omits the qualified-pipeline count and estimated-pipeline revenue.
 
 ## Setup
 
