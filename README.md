@@ -72,6 +72,7 @@ rep-metrics/
 
 Go to **Settings → Secrets → Actions** and add:
 - `CLOSE_API_KEY` — your Close CRM API key
+- `AVOMA_API_KEY` — Avoma API key used for the month-to-date VP Closing Call Scorecard average
 
 ### 4. Enable GitHub Pages
 

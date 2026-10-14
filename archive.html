@@ -412,9 +412,10 @@
         currentSnapshot = data;
         const allReps = (data.reps || []);
         const modernSchema = Number(data.dashboard_schema_version || 0) >= 2;
-        const columnCount = modernSchema ? 11 : 12;
+        const hasQaScores = Number(data.dashboard_schema_version || 0) >= 3;
+        const columnCount = modernSchema ? (hasQaScores ? 12 : 11) : 12;
         document.getElementById('snapshotHead').innerHTML = modernSchema
-            ? '<th>Rep Name</th><th>Booked</th><th>Shown</th><th>Qualified</th><th>Closed Won</th><th>Revenue</th><th>Close %</th><th>Avg/Deal</th><th>Pre-Call Adh.</th><th>Post-Call Adh.</th><th>Task Adh.</th>'
+            ? `<th>Rep Name</th><th>Booked</th><th>Shown</th><th>Qualified</th><th>Closed Won</th><th>Revenue</th><th>Close %</th>${hasQaScores ? '<th title="Month-to-date Avoma VP Closing Call Scorecard average; count of scored calls shown below.">QA Score MTD</th>' : ''}<th>Avg/Deal</th><th>Pre-Call Adh.</th><th>Post-Call Adh.</th><th>Task Adh.</th>`
             : '<th>Rep Name</th><th>Booked</th><th>Shown</th><th>Qualified</th><th>Closed Won</th><th>Revenue</th><th>Close %</th><th>Avg/Deal</th><th>CRM Compl.</th><th>Task Adh.</th><th>Qual. Pipeline</th><th>Est. Revenue</th>';
         const lane1 = allReps.filter(r => r.lane === 1 && !r.is_manager).sort((a, b) => (b.booked || 0) - (a.booked || 0));
         const lane2 = allReps.filter(r => r.lane === 2 && !r.is_manager).sort((a, b) => (b.booked || 0) - (a.booked || 0));
@@ -426,6 +427,27 @@
             const hasRecords = Array.isArray(r.metric_details?.[metric]);
             if (!modernSchema || !hasRecords) return value ?? 0;
             return `<button type="button" class="metric-detail-trigger" data-rep-index="${repIndex}" data-metric="${metric}" aria-label="View ${metricLabels[metric]} records for ${escapeHtml(r.name)}" title="Click to view ${metricLabels[metric].toLowerCase()} leads">${value ?? 0}</button>`;
+        }
+
+        function qaScoreCell(rep) {
+            if (!hasQaScores) return '';
+            const score = rep.qa_score ?? rep.score;
+            const count = Number(rep.qa_score_count ?? rep.count ?? 0);
+            return score == null || count < 1
+                ? '<td title="No scored Avoma calls this month">—</td>'
+                : `<td title="${count} scored Avoma calls this month">${Number(score).toFixed(2)} / 5<small style="display:block;color:var(--text-muted);font-size:10px;">${count} ${count === 1 ? 'call' : 'calls'}</small></td>`;
+        }
+
+        function aggregateQaScore(reps) {
+            let total = 0;
+            let count = 0;
+            for (const rep of reps) {
+                const repCount = Number(rep.qa_score_count || 0);
+                if (!repCount || rep.qa_score == null) continue;
+                total += Number(rep.qa_score) * repCount;
+                count += repCount;
+            }
+            return { score: count ? total / count : null, count };
         }
 
         const phaseSteps = {
@@ -497,6 +519,7 @@
                 <td>${metricButton(r, 'deals', r.deals)}</td>
                 <td>${fmtMoney(r.revenue)}</td>
                 <td class="${rateClass(r.close_rate)}">${fmtPct(r.close_rate)}</td>
+                ${qaScoreCell(r)}
                 <td>${fmtMoney(r.avg_rev_per_deal)}</td>
                 ${adherenceCell('pre', r.pre_call_adherence)}
                 ${adherenceCell('post', r.post_call_adherence)}
@@ -526,6 +549,7 @@
                 <td>${b}</td><td>${sh}</td><td>${q}</td><td>${d}</td>
                 <td>${fmtMoney(rev)}</td>
                 <td class="${rateClass(cr)}">${fmtPct(cr)}</td>
+                ${hasQaScores ? (() => { const qa = aggregateQaScore(reps); return qaScoreCell(qa); })() : ''}
                 <td>${avg ? fmtMoney(avg) : '—'}</td>
                 <td>${fmtPct(data.lane_pre_call_adherence?.[lane] ?? null)}</td>
                 <td>${fmtPct(data.lane_post_call_adherence?.[lane] ?? null)}</td>
@@ -573,6 +597,7 @@
             <td>${data.total_deals}</td>
             <td>${fmtMoney(data.total_revenue)}</td>
             <td class="${rateClass(data.team_close_rate)}">${fmtPct(data.team_close_rate)}</td>
+            ${hasQaScores ? (() => { const qa = aggregateQaScore(allReps); return qaScoreCell(qa); })() : ''}
             <td>${fmtMoney(data.team_avg_rev_per_deal)}</td>
             <td>${fmtPct(data.team_pre_call_adherence)}</td>
             <td>${fmtPct(data.team_post_call_adherence)}</td>
@@ -692,8 +717,20 @@
         if (!_currentSnapshot || !_currentSnapshot.reps) return;
         const data = _currentSnapshot;
         const modernSchema = Number(data.dashboard_schema_version || 0) >= 2;
+        const hasQaScores = Number(data.dashboard_schema_version || 0) >= 3;
+        const aggregateQaScore = reps => {
+            let total = 0;
+            let count = 0;
+            for (const rep of reps) {
+                const repCount = Number(rep.qa_score_count || 0);
+                if (!repCount || rep.qa_score == null) continue;
+                total += Number(rep.qa_score) * repCount;
+                count += repCount;
+            }
+            return { score: count ? total / count : null, count };
+        };
         const headers = modernSchema
-            ? ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Avg/Deal', 'Pre-Call Adh.', 'Post-Call Adh.', 'Task Adh.']
+            ? ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', ...(hasQaScores ? ['QA Score MTD (/5)', 'QA Scored Calls MTD'] : []), 'Avg/Deal', 'Pre-Call Adh.', 'Post-Call Adh.', 'Task Adh.']
             : ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Avg/Deal', 'CRM Compl.', 'Task Adh.', 'Qual. Pipeline', 'Est. Revenue'];
         const rows = data.reps
             .filter(r => !r.is_manager)
@@ -707,6 +744,7 @@
                 r.deals || 0,
                 r.revenue || 0,
                 r.close_rate != null ? r.close_rate + '%' : '',
+                ...(hasQaScores ? [r.qa_score != null ? Number(r.qa_score).toFixed(2) : '', r.qa_score_count || 0] : []),
                 r.avg_rev_per_deal || 0,
                 r.pre_call_adherence != null ? r.pre_call_adherence + '%' : '',
                 r.post_call_adherence != null ? r.post_call_adherence + '%' : '',
@@ -735,6 +773,7 @@
             data.total_deals || 0,
             data.total_revenue || 0,
             data.team_close_rate != null ? data.team_close_rate + '%' : '',
+            ...(hasQaScores ? [(() => { const qa = aggregateQaScore(data.reps); return qa.score != null ? qa.score.toFixed(2) : ''; })(), aggregateQaScore(data.reps).count] : []),
             data.team_avg_rev_per_deal || 0,
             data.team_pre_call_adherence != null ? data.team_pre_call_adherence + '%' : '',
             data.team_post_call_adherence != null ? data.team_post_call_adherence + '%' : '',

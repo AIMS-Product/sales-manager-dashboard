@@ -425,6 +425,8 @@
         .opp-status-cell { display:flex; flex-direction:column; align-items:center; gap:1px; white-space:nowrap; }
         .opp-status-link { padding:1px 4px; color:var(--accent); font:inherit; font-size:11px; line-height:1.2; text-decoration:underline dotted; text-underline-offset:2px; border-radius:4px; }
         .opp-status-link:hover { background:#edf4ff; text-decoration:underline; }
+        .qa-score-cell { display:flex; flex-direction:column; align-items:center; gap:2px; white-space:nowrap; font-weight:650; }
+        .qa-score-cell small { color:var(--text-muted); font-size:9px; font-weight:500; }
         .metric-drawer-empty { padding: 28px 0; color: var(--text-secondary); font-size: 13px; }
 
         .footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: 12px; }
@@ -566,7 +568,7 @@
                         <th data-key="deals" data-dir="desc" data-type="num" title="Unique Closed/Won deals this week. One deal per lead per rep. Based on date_won in the Sales Pipeline.">Closed Won</th>
                         <th data-key="revenue" data-dir="desc" data-type="num" class="g-activity-end" title="Total dollar value of Closed/Won opportunities this week. Includes all opps per lead (not deduplicated by value).">Revenue</th>
                         <th data-key="close_rate" data-dir="desc" data-type="num" title="Deals closed ÷ meetings booked × 100. Week-to-date conversion rate.">Close %</th>
-                        <th data-key="qa_score" data-dir="desc" data-type="num" title="Quality assurance score. Coming soon.">QA Score</th>
+                        <th data-key="qa_score" data-dir="desc" data-type="num" title="Month-to-date mean Avoma VP Closing Call Scorecard score, based on meetings held this month in Pacific time. Scores are out of 5; the number of scored calls is shown below.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
                         <th data-key="pre_call_adherence" data-dir="desc" data-type="num" title="WTD pre-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Pre-Call Loom, Pre-call text, and Day-of confirmation percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Pre-Call Adh.</th>
                         <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="WTD post-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Task or follow-up meeting and Recap email sent percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Post-Call Adh.</th>
@@ -643,6 +645,24 @@
             const label = status[0].toUpperCase() + status.slice(1);
             return `<a class="opp-status-link" href="${opportunityStatusUrls[status]}" target="_blank" rel="noopener noreferrer" aria-label="Open ${label} Close saved view; ${count} active opportunities">${label} ${count}</a>`;
         }).join('')}</div></td>`;
+    }
+
+    function qaScoreCell(score, count) {
+        if (score == null || !count) return '<td><span title="No scored Avoma calls this month">—</span></td>';
+        const value = Number(score).toFixed(2);
+        return `<td><div class="qa-score-cell" aria-label="MTD Avoma score ${value} out of 5 from ${count} scored calls"><span>${value} / 5</span><small>${count} ${count === 1 ? 'call' : 'calls'}</small></div></td>`;
+    }
+
+    function aggregateQaScore(reps) {
+        let weightedScore = 0;
+        let count = 0;
+        for (const rep of reps) {
+            const repCount = Number(rep.qa_score_count || 0);
+            if (!repCount || rep.qa_score == null) continue;
+            weightedScore += Number(rep.qa_score) * repCount;
+            count += repCount;
+        }
+        return { score: count ? weightedScore / count : null, count };
     }
 
     function closeMetricDrawer() {
@@ -957,8 +977,6 @@
 
         document.getElementById('repCount').textContent = `· ${lane1.length + lane2.length} reps`;
 
-        const TBD = '<span class="tbd-tag">TBD</span>';
-
         function aggregateOpportunityStatuses(reps) {
             const result = Object.fromEntries(['hot', 'warm', 'general'].map(status => [status, { count: 0 }]));
             for (const rep of reps) {
@@ -1004,7 +1022,7 @@
                     <td>${metricButton(globalIdx, 'deals', r.deals, r.name)}</td>
                     <td class="g-activity-end">${r.revenue ? fmtK(r.revenue) : '—'}</td>
                     <td>${r.close_rate != null ? r.close_rate + '%' : '—'}</td>
-                    <td>${TBD}</td>
+                    ${qaScoreCell(r.qa_score, r.qa_score_count)}
                     <td class="g-perf-end">${r.avg_rev_per_deal ? fmtK(r.avg_rev_per_deal) : '—'}</td>
                     <td style="color:var(--text-muted)">—</td>
                     <td style="color:var(--text-muted)">—</td>
@@ -1026,7 +1044,7 @@
                 <td>${metricButton(globalIdx, 'deals', prog(r.deals, rt.deals), r.name)}</td>
                 <td class="g-activity-end">${progMoney(r.revenue, rt.revenue)}</td>
                 <td>${progPct(r.close_rate, rt.close_rate)}</td>
-                <td>${TBD}</td>
+                ${qaScoreCell(r.qa_score, r.qa_score_count)}
                 <td class="g-perf-end">${progMoney(r.avg_rev_per_deal, rt.avg_rev_per_deal)}</td>
                 ${adherenceCell('pre', r.pre_call_adherence, rt.pre_call_adherence)}
                 ${adherenceCell('post', adherencePhasePct(r.adherence, 'post'), rt.post_call_adherence)}
@@ -1083,7 +1101,7 @@
                 <td>${prog(lt.deals, targets.deals)}</td>
                 <td class="g-activity-end">${progMoney(lt.revenue, targets.revenue)}</td>
                 <td>${progPct(lt.close_rate, targets.close_rate)}</td>
-                <td>${TBD}</td>
+                ${(() => { const qa = aggregateQaScore(reps); return qaScoreCell(qa.score, qa.count); })()}
                 <td class="g-perf-end">${lt.avg ? fmtK(lt.avg) : '—'}</td>
                 <td>${progPct(lt.preCall, targets.pre_call_adherence)}</td>
                 <td>${progPct(lt.postCall, targets.post_call_adherence)}</td>
@@ -1134,7 +1152,7 @@
             <td>${prog(DATA.total_deals, tt.deals)}</td>
             <td class="g-activity-end">${progMoney(DATA.total_revenue, tt.revenue)}</td>
             <td>${progPct(DATA.team_close_rate, tt.close_rate)}</td>
-            <td>${TBD}</td>
+            ${(() => { const qa = aggregateQaScore([...lane1, ...lane2, ...mgrs]); return qaScoreCell(qa.score, qa.count); })()}
             <td class="g-perf-end">${DATA.team_avg_rev_per_deal ? fmtK(DATA.team_avg_rev_per_deal) : '—'}</td>
             <td>${progPct(DATA.team_pre_call_adherence, tt.pre_call_adherence)}</td>
             <td>${progPct(aggregatePhasePct([...lane1, ...lane2], 'post'), tt.post_call_adherence)}</td>
@@ -1178,7 +1196,9 @@
 
     window.downloadCSV = function() {
         if (!DATA || !DATA.reps) return;
-        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Avg/Deal', 'Pre-Call Adherence', 'Post-Call Adherence', 'Task Adh.'];
+        const scorecardReps = DATA.reps.filter(r => r.lane === 1 || r.lane === 2 || r.is_manager);
+        const salesReps = scorecardReps.filter(r => !r.is_manager);
+        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'QA Score MTD (/5)', 'QA Scored Calls MTD', 'Avg/Deal', 'Pre-Call Adherence', 'Post-Call Adherence', 'Task Adh.'];
         const rows = DATA.reps
             .filter(r => !r.is_manager)
             .sort((a, b) => (b.booked || 0) - (a.booked || 0))
@@ -1191,6 +1211,8 @@
                 r.deals || 0,
                 r.revenue || 0,
                 r.close_rate != null ? r.close_rate + '%' : '',
+                r.qa_score != null ? Number(r.qa_score).toFixed(2) : '',
+                r.qa_score_count || 0,
                 r.avg_rev_per_deal || 0,
                 r.pre_call_adherence != null ? r.pre_call_adherence + '%' : '',
                 adherencePhasePct(r.adherence, 'post') != null ? adherencePhasePct(r.adherence, 'post') + '%' : '',
@@ -1206,9 +1228,11 @@
             DATA.total_deals || 0,
             DATA.total_revenue || 0,
             DATA.team_close_rate != null ? DATA.team_close_rate + '%' : '',
+            (() => { const qa = aggregateQaScore(scorecardReps); return qa.score != null ? qa.score.toFixed(2) : ''; })(),
+            aggregateQaScore(scorecardReps).count,
             DATA.team_avg_rev_per_deal || 0,
             DATA.team_pre_call_adherence != null ? DATA.team_pre_call_adherence + '%' : '',
-            aggregatePhasePct([...lane1, ...lane2], 'post') != null ? aggregatePhasePct([...lane1, ...lane2], 'post') + '%' : '',
+            aggregatePhasePct(salesReps, 'post') != null ? aggregatePhasePct(salesReps, 'post') + '%' : '',
             DATA.team_task_adherence != null ? DATA.team_task_adherence + '%' : '',
         ]);
 

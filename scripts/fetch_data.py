@@ -7,11 +7,12 @@ Strategy:
   1. Query leads where "First Sales Call Booked Date" is within Mon–today (PDT)
   2. Exclude leads with Canceled/Outside US status, excluded users
   3. Process lead-level CRM fields for compliance, funnel, shown/qualified
-  4. Separately fetch Closed/Won opps, task adherence, qualified pipeline
+  4. Separately fetch Closed/Won opps, task adherence, qualified pipeline,
+     and the Avoma month-to-date scorecard average
 
 Weekly targets per rep:
   Meetings Booked: 20    Close Rate: 30%
-  Meetings Shown: 15     QA Score: >7 (TBD)
+  Meetings Shown: 15     QA Score: Avoma MTD average (/5)
   Opps Qualified: 10     Avg/Deal: $8k
   Opps Closed Won: 3     Post-call Process Adherence: 90%
   Revenue Booked: $24k   Task Adherence: 100% (TBD)
@@ -29,6 +30,7 @@ from zoneinfo import ZoneInfo
 # Monday-through-today cohort. The vendored rules module is copied verbatim.
 from build_adherence_preview import LATEST_BOOKED_DATE_FIELD, add_adherence_to_dashboard  # noqa: E402
 from dashboard_adherence import apply_dashboard_post_call_scores  # noqa: E402
+from avoma_scores import fetch_avoma_mtd_scores  # noqa: E402
 
 # ── Config ───────────────────────────────────────────────────────────────────
 
@@ -126,7 +128,7 @@ WEEKLY_TARGETS = {
     "deals": 3,
     "revenue": 24000,
     "close_rate": 20,
-    "qa_score": 7,
+    "qa_score": None,
     "avg_rev_per_deal": 8000,
     "pre_call_adherence": 90,
     "post_call_adherence": 90,
@@ -604,6 +606,7 @@ def api_get(endpoint, params=None):
 
 def fetch_org_users():
     users = {}
+    user_emails = {}
     seen_names = {}  # name -> first user_id (to detect duplicates)
     skip = 0
     while True:
@@ -615,6 +618,8 @@ def fetch_org_users():
             full = " ".join(f"{first} {last}".split())
             uid = u["id"]
             users[uid] = full
+            if u.get("email"):
+                user_emails[uid] = str(u["email"]).strip().casefold()
             if full in seen_names:
                 print(f"  ⚠️ Duplicate user name: '{full}' — "
                       f"{seen_names[full]} and {uid}", flush=True)
@@ -623,7 +628,7 @@ def fetch_org_users():
         if not data.get("has_more", False):
             break
         skip += 100
-    return users
+    return users, user_emails
 
 
 def resolve_owner(raw_owner, user_map, name_to_id):
@@ -890,9 +895,15 @@ def build_dashboard_data():
     # Users
     t0 = time.time()
     print("  Fetching org users...", flush=True)
-    user_map = fetch_org_users()
+    user_map, user_emails = fetch_org_users()
     name_to_id = {v: k for k, v in user_map.items()}
     print(f"  Found {len(user_map)} users. ({time.time()-t0:.1f}s)", flush=True)
+
+    avoma_scores_by_email, avoma_score_meta = fetch_avoma_mtd_scores(os.environ.get("AVOMA_API_KEY", ""))
+    avoma_scores_by_name = {
+        name: avoma_scores_by_email.get(user_emails.get(user_id, ""), {})
+        for user_id, name in user_map.items()
+    }
 
     # Closed/Won opps this week
     t0 = time.time()
@@ -979,7 +990,8 @@ def build_dashboard_data():
             "deals": deals,
             "revenue": round(revenue, 2),
             "close_rate": safe_pct(deals, booked),
-            "qa_score": None,
+            "qa_score": avoma_scores_by_name.get(name, {}).get("score"),
+            "qa_score_count": avoma_scores_by_name.get(name, {}).get("count", 0),
             "avg_rev_per_deal": avg_rev,
             "crm_compliance": safe_pct(crm_filled, crm_total),
             "crm_filled": crm_filled,
@@ -1076,6 +1088,7 @@ def build_dashboard_data():
         "team_avg_rev_per_deal": total_avg_rev,
         "team_crm_compliance": safe_pct(total_crm_filled, total_crm_total),
         "team_task_adherence": team_task_adherence,
+        "qa_score_meta": avoma_score_meta,
         "team_overdue": total_overdue,
         "team_open_leads": total_open_leads,
         "team_est_pipeline": total_est_pipeline,
@@ -1097,8 +1110,7 @@ if __name__ == "__main__":
     )
     apply_dashboard_post_call_scores(data)
     # Version the archive presentation independently from historical snapshots.
-    # Schema 2 replaces CRM/pipeline columns with process adherence and stores
-    # the metric/adherence lead cohorts used by the archive drilldowns.
+    # Schema 2 adds adherence and lead cohorts; schema 3 adds Avoma MTD scores.
     data["dashboard_schema_version"] = 3
 
     script_dir = os.path.dirname(os.path.abspath(__file__))

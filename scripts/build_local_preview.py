@@ -11,6 +11,7 @@ from build_adherence_preview import (
     load_env_value,
 )
 from dashboard_adherence import apply_dashboard_post_call_scores
+from avoma_scores import fetch_avoma_mtd_scores
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 DASHBOARD_DIR = SCRIPT_DIR.parent
@@ -35,6 +36,11 @@ def fetch_opportunity_statuses(dashboard):
         rep.get("rep_owner_id"): rep
         for rep in dashboard.get("reps", [])
         if rep.get("rep_owner_id")
+    }
+    close_user_emails = {
+        user["id"]: str(user.get("email") or "").strip().casefold()
+        for user in client.paginate("/user/", {"_fields": "id,email"})
+        if user.get("id") and user.get("email")
     }
     cohorts = {
         rep["name"]: {status: set() for status in ("hot", "warm", "general")}
@@ -67,12 +73,26 @@ def fetch_opportunity_statuses(dashboard):
         }
         rep["opportunity_status_total"] = sum(group["count"] for group in rep["opportunity_status"].values())
     print(f"Fetched active opportunity statuses for {len(rep_by_owner)} Sales Manager reps", flush=True)
+    return close_user_emails
+
+
+def add_avoma_mtd_scores(dashboard, close_user_emails):
+    workspace_root = DASHBOARD_DIR.parent
+    api_key = load_env_value([workspace_root / ".env", DASHBOARD_DIR / ".env"], "AVOMA_API_KEY")
+    scores_by_email, metadata = fetch_avoma_mtd_scores(api_key)
+    for rep in dashboard.get("reps", []):
+        email = close_user_emails.get(rep.get("rep_owner_id"), "")
+        score = scores_by_email.get(email.casefold(), {})
+        rep["qa_score"] = score.get("score")
+        rep["qa_score_count"] = score.get("count", 0)
+    dashboard["qa_score_meta"] = metadata
 
 
 def build_preview():
     manager_path = DASHBOARD_DIR / "data.json"
     dashboard = json.loads(manager_path.read_text())
-    fetch_opportunity_statuses(dashboard)
+    close_user_emails = fetch_opportunity_statuses(dashboard)
+    add_avoma_mtd_scores(dashboard, close_user_emails)
     for target_key in ("targets", "lane_2_targets", "team_targets"):
         targets = dashboard.get(target_key) or {}
         targets["pre_call_adherence"] = targets.get("crm_compliance", 90)
