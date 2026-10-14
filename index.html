@@ -112,12 +112,13 @@
 
         .table-wrap { overflow-x: auto; }
 
-        table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
+        table { width: 100%; min-width: 1450px; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
 
         col.col-name  { width: 170px; }
         col.col-prog  { width: 95px; }
         col.col-money { width: 115px; }
         col.col-rate  { width: 105px; }
+        col.col-opp-status { width: 145px; }
 
         thead tr.group-header th {
             background: #e8e9ec;
@@ -421,6 +422,9 @@
         .metric-drawer-item a:hover { text-decoration: underline; }
         .metric-drawer-item-name { font-weight: 650; }
         .metric-drawer-item-meta { margin-top: 5px; color: var(--text-secondary); font-size: 12px; }
+        .opp-status-cell { display:flex; flex-direction:column; align-items:center; gap:1px; white-space:nowrap; }
+        .opp-status-link { padding:1px 4px; color:var(--accent); font:inherit; font-size:11px; line-height:1.2; text-decoration:underline dotted; text-underline-offset:2px; border-radius:4px; }
+        .opp-status-link:hover { background:#edf4ff; text-decoration:underline; }
         .metric-drawer-empty { padding: 28px 0; color: var(--text-secondary); font-size: 13px; }
 
         .footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: 12px; }
@@ -541,17 +545,18 @@
                     <col class="col-money">
                     <col class="col-rate">
                     <col class="col-rate">
-                    <col class="col-rate">
                     <col class="col-money">
                     <col class="col-rate">
                     <col class="col-rate">
+                    <col class="col-rate">
+                    <col class="col-opp-status">
                 </colgroup>
                 <thead>
                     <tr class="group-header">
                         <th></th>
                         <th class="group-activity" colspan="5">Week-to-Date Activity</th>
                         <th class="group-performance" colspan="3">Performance</th>
-                        <th class="group-quality" colspan="3">Quality</th>
+                        <th class="group-quality" colspan="4">Quality</th>
                     </tr>
                     <tr class="sort-header" id="tableHead">
                         <th data-key="name" data-dir="asc" data-type="string">Rep Name</th>
@@ -566,10 +571,11 @@
                         <th data-key="pre_call_adherence" data-dir="desc" data-type="num" title="WTD pre-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Pre-Call Loom, Pre-call text, and Day-of confirmation percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Pre-Call Adh.</th>
                         <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="WTD post-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Task or follow-up meeting and Recap email sent percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Post-Call Adh.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. Tasks on Closed/Won leads are excluded. 100% = fully caught up.">Task Adh.</th>
+                        <th data-key="opportunity_status_total" data-dir="desc" data-type="num" title="Active Sales Pipeline opportunities grouped by status. Open a saved Close view for each status.">Opp Status</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <tr><td colspan="12" class="loading"><div class="spinner"></div> Loading data…</td></tr>
+                    <tr><td colspan="13" class="loading"><div class="spinner"></div> Loading data…</td></tr>
                 </tbody>
             </table>
         </div>
@@ -622,6 +628,21 @@
 
     function metricButton(repIndex, metric, content, repName) {
         return `<button type="button" class="metric-detail-trigger" data-rep-index="${repIndex}" data-metric="${metric}" aria-label="View ${metricLabels[metric]} records for ${escapeHtml(repName)}">${content}</button>`;
+    }
+
+    const opportunityStatusUrls = {
+        hot: 'https://app.close.com/leads/save_YLwbv4g1XMIAuvUswnoGigPrFziYRdQmWw7jzo8qqLf/',
+        warm: 'https://app.close.com/leads/save_FzNy95cneDBzzgngZZZQtK4IaA97dtJGMRuFv1gBOLc/',
+        general: 'https://app.close.com/leads/save_PbeF7qlnEERSHb1a9P2S4iJVwpGOEGyhyYJWJMSnUjB/'
+    };
+
+    function opportunityStatusCell(rep) {
+        const groups = rep.opportunity_status || {};
+        return `<td><div class="opp-status-cell">${['hot', 'warm', 'general'].map(status => {
+            const count = groups[status]?.count || 0;
+            const label = status[0].toUpperCase() + status.slice(1);
+            return `<a class="opp-status-link" href="${opportunityStatusUrls[status]}" target="_blank" rel="noopener noreferrer" aria-label="Open ${label} Close saved view; ${count} active opportunities">${label} ${count}</a>`;
+        }).join('')}</div></td>`;
     }
 
     function closeMetricDrawer() {
@@ -938,6 +959,17 @@
 
         const TBD = '<span class="tbd-tag">TBD</span>';
 
+        function aggregateOpportunityStatuses(reps) {
+            const result = Object.fromEntries(['hot', 'warm', 'general'].map(status => [status, { count: 0 }]));
+            for (const rep of reps) {
+                for (const status of Object.keys(result)) {
+                    const group = rep.opportunity_status?.[status] || {};
+                    result[status].count += Number(group.count || 0);
+                }
+            }
+            return result;
+        }
+
         // Helper: compute subtotals for a set of reps
         function laneTotals(reps) {
             const b = reps.reduce((s, r) => s + (r.booked || 0), 0);
@@ -977,6 +1009,7 @@
                     <td style="color:var(--text-muted)">—</td>
                     <td style="color:var(--text-muted)">—</td>
                     <td style="color:var(--text-muted)">—</td>
+                    ${opportunityStatusCell(r)}
                 </tr>`;
             }
 
@@ -998,6 +1031,7 @@
                 ${adherenceCell('pre', r.pre_call_adherence, rt.pre_call_adherence)}
                 ${adherenceCell('post', adherencePhasePct(r.adherence, 'post'), rt.post_call_adherence)}
                 <td>${fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
+                ${opportunityStatusCell(r)}
             </tr>`;
 
             // Process detail rows use the same eligible cohorts as Rep Dashboard adherence.
@@ -1030,7 +1064,7 @@
                         return `<section class="post-call-step"><div class="post-call-step-head"><span class="post-call-step-title">${label}</span><span class="crm-field-val ${step.pct == null ? '' : step.pct >= 90 ? 'good' : step.pct >= 50 ? 'partial' : 'bad'}">${pct}</span></div><div class="post-call-step-meta">${done} of ${eligible} eligible${step.exempt ? ` · ${step.exempt} exempt` : ''}</div>${cohortHtml}</section>`;
                     }).join('');
                     return `<tr class="crm-detail-row" id="crm-detail-${phase}-${globalIdx}" style="display:none;">
-                        <td colspan="12"><div class="post-call-detail-grid">${stepHtml}</div></td>
+                        <td colspan="13"><div class="post-call-detail-grid">${stepHtml}</div></td>
                     </tr>`;
                 };
                 html += renderDetail('pre') + renderDetail('post');
@@ -1040,7 +1074,7 @@
         }
 
         // Helper: render a subtotals row
-        function subtotalRow(label, lt, targets) {
+        function subtotalRow(label, lt, targets, reps) {
             return `<tr class="lane-totals-row">
                 <td style="font-weight:700;">${label}</td>
                 <td class="g-activity-start">${prog(lt.booked, targets.booked)}</td>
@@ -1054,6 +1088,7 @@
                 <td>${progPct(lt.preCall, targets.pre_call_adherence)}</td>
                 <td>${progPct(lt.postCall, targets.post_call_adherence)}</td>
                 <td>${fmtAdherence(lt.taskAdh, lt.totalOvd)}</td>
+                ${opportunityStatusCell({ opportunity_status: aggregateOpportunityStatuses(reps) })}
             </tr>`;
         }
 
@@ -1064,27 +1099,27 @@
         let html = '';
 
         // ── Lane 1 ──
-        html += `<tr class="lane-header-row"><td colspan="12"><span class="lane-label">Lane 1</span></td></tr>`;
+        html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Lane 1</span></td></tr>`;
         for (const r of lane1) {
             html += repRow(r, globalIdxMap.get(r));
         }
         const lt1 = laneTotals(lane1);
-        html += subtotalRow('Lane 1 Totals', lt1, { ...t, booked: null, shown: null, qualified: null, deals: null, revenue: null });
+        html += subtotalRow('Lane 1 Totals', lt1, { ...t, booked: null, shown: null, qualified: null, deals: null, revenue: null }, lane1);
 
         // ── Lane 2 (only if there are Lane 2 reps) ──
         if (lane2.length > 0) {
-            html += `<tr class="lane-divider-row"><td colspan="12"></td></tr>`;
-            html += `<tr class="lane-header-row"><td colspan="12"><span class="lane-label">Lane 2</span></td></tr>`;
+            html += `<tr class="lane-divider-row"><td colspan="13"></td></tr>`;
+            html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Lane 2</span></td></tr>`;
             for (const r of lane2) {
                 html += repRow(r, globalIdxMap.get(r));
             }
             const lt2 = laneTotals(lane2);
-            html += subtotalRow('Lane 2 Totals', lt2, { ...t2, booked: null, shown: null, qualified: null, deals: null, revenue: null });
+            html += subtotalRow('Lane 2 Totals', lt2, { ...t2, booked: null, shown: null, qualified: null, deals: null, revenue: null }, lane2);
         }
 
         if (mgrs.length > 0) {
-            html += `<tr class="lane-divider-row"><td colspan="12"></td></tr>`;
-            html += `<tr class="lane-header-row"><td colspan="12"><span class="lane-label">Manager</span></td></tr>`;
+            html += `<tr class="lane-divider-row"><td colspan="13"></td></tr>`;
+            html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Manager</span></td></tr>`;
             for (const r of mgrs) {
                 html += repRow(r, globalIdxMap.get(r));
             }
@@ -1104,6 +1139,7 @@
             <td>${progPct(DATA.team_pre_call_adherence, tt.pre_call_adherence)}</td>
             <td>${progPct(aggregatePhasePct([...lane1, ...lane2], 'post'), tt.post_call_adherence)}</td>
             <td>${fmtAdherence(DATA.team_task_adherence, DATA.team_overdue)}</td>
+            ${opportunityStatusCell({ opportunity_status: aggregateOpportunityStatuses([...lane1, ...lane2, ...mgrs]) })}
         </tr>`;
 
         document.getElementById('tableBody').innerHTML = html;
