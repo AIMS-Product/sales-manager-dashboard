@@ -24,7 +24,8 @@ All of the above aggregated across the full team.
 ### Process adherence
 
 The Pre-Call Adh. score is the equal-weight average of Pre-Call Loom, Pre-call text, and Day-of
-confirmation. Post-Call Adh. averages Task created, FU meeting created, and Recap email sent.
+confirmation. Post-Call Adh. averages Task or follow-up meeting and Recap email sent. A qualifying
+task or later qualifying meeting completes the combined next-step check.
 Both use the same scoring rules as `rep-dashboard/scripts/adherence_rules.py`. Click either score
 to see completed and missed lead cohorts for each step. Closed/Won and Lost leads are exempt from
 post-call scoring, and show-up outcome does not affect eligibility.
@@ -41,7 +42,9 @@ The local-only preview can be built with `python3 scripts/build_local_preview.py
 `index.html?preview=process-adherence`. It writes `data.preview.json`; the normal dashboard continues
 to read `data.json`. The table omits the qualified-pipeline count and estimated-pipeline revenue.
 Current and future weekly archive snapshots use the same adherence columns and include clickable
-metric and process-adherence lead cohorts. Older snapshots retain their original layout.
+metric and process-adherence lead cohorts. Post-call step one is complete when the credited rep has
+either a qualifying follow-up task or a later eligible meeting. Older snapshots retain their
+original layout.
 
 ## Setup
 

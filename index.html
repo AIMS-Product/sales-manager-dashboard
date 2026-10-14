@@ -277,7 +277,7 @@
 
         .post-call-detail-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 12px;
         }
 
@@ -564,7 +564,7 @@
                         <th data-key="qa_score" data-dir="desc" data-type="num" title="Quality assurance score. Coming soon.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
                         <th data-key="pre_call_adherence" data-dir="desc" data-type="num" title="WTD pre-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Pre-Call Loom, Pre-call text, and Day-of confirmation percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Pre-Call Adh.</th>
-                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="WTD post-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Task created, FU meeting created, and Recap email sent percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Post-Call Adh.</th>
+                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="WTD post-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Task or follow-up meeting and Recap email sent percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Post-Call Adh.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. Tasks on Closed/Won leads are excluded. 100% = fully caught up.">Task Adh.</th>
                     </tr>
                 </thead>
@@ -845,6 +845,64 @@
         return `<span class="${cls}">${adherence}%</span>${extra}`;
     }
 
+    function cohortKey(lead) {
+        return String(lead.id || lead.url || `${lead.name || ''}|${lead.booked_date || ''}`);
+    }
+
+    function adherenceStep(adherence, key) {
+        const steps = adherence?.steps || {};
+        if (steps[key]) return steps[key];
+        if (key !== 'follow_up_created') return null;
+        const task = adherence?.lead_cohorts?.task_created;
+        const meeting = adherence?.lead_cohorts?.fu_meeting_created;
+        if (!task && !meeting) return null;
+        const buckets = { completed: new Map(), missed: new Map(), exempt: new Map() };
+        for (const source of [task, meeting]) {
+            if (!source) continue;
+            for (const bucket of Object.keys(buckets)) {
+                for (const lead of source[bucket] || []) buckets[bucket].set(cohortKey(lead), lead);
+            }
+        }
+        for (const id of buckets.completed.keys()) buckets.missed.delete(id);
+        for (const id of buckets.exempt.keys()) {
+            buckets.completed.delete(id);
+            buckets.missed.delete(id);
+        }
+        const completed = [...buckets.completed.values()];
+        const missed = [...buckets.missed.values()];
+        const exempt = [...buckets.exempt.values()];
+        const eligible = completed.length + missed.length;
+        return {
+            label: 'Task or follow-up meeting', done: completed.length, eligible,
+            exempt: exempt.length,
+            pct: eligible ? Math.floor(completed.length / eligible * 100 + 0.5) : null,
+            leadCohorts: { completed, missed, exempt },
+        };
+    }
+
+    function adherencePhasePct(adherence, phase) {
+        const steps = phase === 'pre' ? ['loom_usage', 'precall_text', 'day_of_confirmation_text']
+            : ['follow_up_created', 'recap_email'];
+        const values = steps.map(key => adherenceStep(adherence, key)?.pct).filter(value => value != null);
+        return values.length ? Math.floor(values.reduce((sum, value) => sum + value, 0) / values.length + 0.5) : null;
+    }
+
+    function aggregatePhasePct(reps, phase) {
+        const keys = phase === 'pre' ? ['loom_usage', 'precall_text', 'day_of_confirmation_text']
+            : ['follow_up_created', 'recap_email'];
+        const values = keys.map(key => {
+            let done = 0;
+            let eligible = 0;
+            for (const rep of reps) {
+                const step = adherenceStep(rep.adherence, key);
+                done += step?.done || 0;
+                eligible += step?.eligible || 0;
+            }
+            return eligible ? Math.floor(done / eligible * 100 + 0.5) : null;
+        }).filter(value => value != null);
+        return values.length ? Math.floor(values.reduce((sum, value) => sum + value, 0) / values.length + 0.5) : null;
+    }
+
     const SMART_VIEW_URL = 'https://app.close.com/leads/save_vIX4e18a9Sb1ZjOgu8dN1DDa6lI01O7syYvYwvhiwep/'; // kept for reference
 
     function crmFieldHtml(label, filled, total) {
@@ -890,7 +948,7 @@
             const cr = b > 0 ? Math.round(d / b * 1000) / 10 : null;
             const avg = d > 0 ? Math.round(rev / d) : null;
             const lane = String(reps[0]?.lane || 1);
-            const postCall = DATA.lane_post_call_adherence?.[lane] ?? null;
+            const postCall = aggregatePhasePct(reps, 'post');
             const preCall = DATA.lane_pre_call_adherence?.[lane] ?? null;
             const incmplt = reps.filter(r => r.tasks_incomplete != null);
             const totalInc = incmplt.reduce((s, r) => s + (r.tasks_incomplete || 0), 0);
@@ -938,18 +996,16 @@
                 <td>${TBD}</td>
                 <td class="g-perf-end">${progMoney(r.avg_rev_per_deal, rt.avg_rev_per_deal)}</td>
                 ${adherenceCell('pre', r.pre_call_adherence, rt.pre_call_adherence)}
-                ${adherenceCell('post', r.post_call_adherence, rt.post_call_adherence)}
+                ${adherenceCell('post', adherencePhasePct(r.adherence, 'post'), rt.post_call_adherence)}
                 <td>${fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
             </tr>`;
 
             // Process detail rows use the same eligible cohorts as Rep Dashboard adherence.
             if (r.adherence) {
-                const steps = r.adherence.steps || {};
                 const cohorts = r.adherence.lead_cohorts || {};
                 const phaseSteps = {
                     post: [
-                        ['task_created', 'Task created'],
-                        ['fu_meeting_created', 'FU meeting created'],
+                        ['follow_up_created', 'Task or follow-up meeting'],
                         ['recap_email', 'Recap email sent'],
                     ],
                     pre: [
@@ -960,12 +1016,13 @@
                 };
                 const renderDetail = (phase) => {
                     const stepHtml = phaseSteps[phase].map(([key, label]) => {
-                        const step = steps[key] || {};
+                        const step = adherenceStep(r.adherence, key) || {};
                         const pct = step.pct == null ? '—' : `${step.pct}%`;
                         const done = step.done || 0;
                         const eligible = step.eligible || 0;
-                        const completed = cohorts[key]?.completed || [];
-                        const missed = cohorts[key]?.missed || [];
+                        const stepCohorts = step.leadCohorts || cohorts[key] || {};
+                        const completed = stepCohorts.completed || [];
+                        const missed = stepCohorts.missed || [];
                         const renderCohort = (title, leads) => `<div class="post-call-step-cohort"><div class="crm-missing-list"><div class="crm-missing-label">${title} (${leads.length})</div>${leads.length
                             ? leads.map(lead => `<div class="crm-missing-item"><a href="https://app.close.com/lead/${lead.id}/" target="_blank" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${lead.name}</a></div>`).join('')
                             : '<div class="crm-missing-item">None</div>'}</div></div>`;
@@ -1045,7 +1102,7 @@
             <td>${TBD}</td>
             <td class="g-perf-end">${DATA.team_avg_rev_per_deal ? fmtK(DATA.team_avg_rev_per_deal) : '—'}</td>
             <td>${progPct(DATA.team_pre_call_adherence, tt.pre_call_adherence)}</td>
-            <td>${progPct(DATA.team_post_call_adherence, tt.post_call_adherence)}</td>
+            <td>${progPct(aggregatePhasePct([...lane1, ...lane2], 'post'), tt.post_call_adherence)}</td>
             <td>${fmtAdherence(DATA.team_task_adherence, DATA.team_overdue)}</td>
         </tr>`;
 
@@ -1100,7 +1157,7 @@
                 r.close_rate != null ? r.close_rate + '%' : '',
                 r.avg_rev_per_deal || 0,
                 r.pre_call_adherence != null ? r.pre_call_adherence + '%' : '',
-                r.post_call_adherence != null ? r.post_call_adherence + '%' : '',
+                adherencePhasePct(r.adherence, 'post') != null ? adherencePhasePct(r.adherence, 'post') + '%' : '',
                 r.task_adherence != null ? r.task_adherence + '%' : '',
             ]);
 
@@ -1115,7 +1172,7 @@
             DATA.team_close_rate != null ? DATA.team_close_rate + '%' : '',
             DATA.team_avg_rev_per_deal || 0,
             DATA.team_pre_call_adherence != null ? DATA.team_pre_call_adherence + '%' : '',
-            DATA.team_post_call_adherence != null ? DATA.team_post_call_adherence + '%' : '',
+            aggregatePhasePct([...lane1, ...lane2], 'post') != null ? aggregatePhasePct([...lane1, ...lane2], 'post') + '%' : '',
             DATA.team_task_adherence != null ? DATA.team_task_adherence + '%' : '',
         ]);
 

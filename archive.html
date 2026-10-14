@@ -137,7 +137,7 @@
         .adherence-clickable:hover { color: var(--accent); }
         .clickable-caret { margin-left: 2px; font-size: 9px; color: var(--text-muted); }
         .adherence-detail-row td { background: #fafbfc; padding: 12px 24px !important; text-align: left !important; }
-        .adherence-detail-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+        .adherence-detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
         .adherence-step { min-width: 0; padding: 12px; border: 1px solid var(--border); border-radius: 8px; background: #fff; }
         .adherence-step-head { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; font-weight: 700; }
         .adherence-step-meta { margin-top: 4px; color: var(--text-secondary); font-size: 11px; }
@@ -435,8 +435,7 @@
                 ['day_of_confirmation_text', 'Day-of confirmation'],
             ],
             post: [
-                ['task_created', 'Task created'],
-                ['fu_meeting_created', 'FU meeting created'],
+                ['follow_up_created', 'Task or follow-up meeting'],
                 ['recap_email', 'Recap email sent'],
             ],
         };

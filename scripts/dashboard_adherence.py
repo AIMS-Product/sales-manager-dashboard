@@ -3,12 +3,12 @@
 from adherence_rules import round_mean
 
 
-POST_CALL_DASHBOARD_STEPS = ("task_created", "fu_meeting_created", "recap_email")
+POST_CALL_DASHBOARD_STEPS = ("follow_up_created", "recap_email")
 PRE_CALL_DASHBOARD_STEPS = ("loom_usage", "precall_text", "day_of_confirmation_text")
 
 
 def dashboard_post_call_pct(adherence):
-    """Average Task created, FU meeting created, and Recap email sent."""
+    """Average Task or follow-up meeting and Recap email sent."""
     if not adherence:
         return None
     steps = adherence.get("steps") or {}

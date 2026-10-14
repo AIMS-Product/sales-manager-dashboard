@@ -145,21 +145,17 @@ class DashboardAdherenceTests(unittest.TestCase):
                      '"Latest Sales Call Booked Date" <= "2026-10-08"',
         })
 
-    def test_post_call_score_averages_all_three_canonical_steps(self):
+    def test_post_call_score_averages_combined_follow_up_and_recap_steps(self):
         adherence = {"steps": {
-            "task_created": {"pct": 100},
-            "fu_meeting_created": {"pct": 50},
+            "follow_up_created": {"pct": 100},
             "recap_email": {"pct": 0},
         }}
-        self.assertEqual(POST_CALL_DASHBOARD_STEPS, (
-            "task_created", "fu_meeting_created", "recap_email"
-        ))
+        self.assertEqual(POST_CALL_DASHBOARD_STEPS, ("follow_up_created", "recap_email"))
         self.assertEqual(dashboard_post_call_pct(adherence), 50)
 
     def test_post_call_score_averages_available_percentages_only(self):
         adherence = {"steps": {
-            "task_created": {"pct": 100},
-            "fu_meeting_created": {"pct": None},
+            "follow_up_created": {"pct": 100},
             "recap_email": {"pct": 50},
         }}
         self.assertEqual(dashboard_post_call_pct(adherence), 75)
@@ -177,8 +173,7 @@ class DashboardAdherenceTests(unittest.TestCase):
 
     def test_apply_scores_for_reps_team_and_lanes(self):
         adherence = {"steps": {
-            "task_created": {"pct": 100},
-            "fu_meeting_created": {"pct": 50},
+            "follow_up_created": {"pct": 100},
             "recap_email": {"pct": 0},
         }}
         data = {
