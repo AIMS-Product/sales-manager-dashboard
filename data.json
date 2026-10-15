@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 05:01 AM PDT",
+  "updated_at": "2026-10-15 06:16 AM PDT",
   "week_label": "Oct 12 \u2013 Oct 18, 2026",
   "monday_str": "2026-10-12",
   "today_str": "2026-10-15",
@@ -51,7 +51,7 @@
   "team_close_rate": 9.5,
   "team_avg_rev_per_deal": 9898.0,
   "team_crm_compliance": 51.9,
-  "team_task_adherence": 47.7,
+  "team_task_adherence": 48.3,
   "qa_score_meta": {
     "available": true,
     "source": "Avoma scorecard evaluations",
@@ -61,11 +61,11 @@
     "period_end": "2026-10-15",
     "scale_max": 5,
     "evaluation_count": 257,
-    "generated_at": "2026-10-15T05:01:40-07:00"
+    "generated_at": "2026-10-15T06:16:33-07:00"
   },
-  "team_overdue": 263,
-  "team_open_leads": 604,
-  "team_est_pipeline": 1449600,
+  "team_overdue": 261,
+  "team_open_leads": 603,
+  "team_est_pipeline": 1447200,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -210,20 +210,20 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu",
+            "name": "Leeana Arroyo",
+            "date": "2026-10-15",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
             "lead_id": "lead_g0rHDArnRRFYpwnJKWwi1T7tYkEj3WxzLxWVnUBJwEC",
             "name": "Deandre Lindsey",
             "date": "2026-10-15",
             "funnel": "Google Ads",
             "meeting_outcome": "",
             "meeting_status": ""
-          },
-          {
-            "lead_id": "lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu",
-            "name": "Leeana Arroyo",
-            "date": "2026-10-15",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
           },
           {
             "lead_id": "lead_Xwo2m25LKFOLt2myfGzdakCan40lMRoo2o73AzrkBqU",
@@ -360,6 +360,14 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu",
+            "name": "Leeana Arroyo",
+            "date": "2026-10-15",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
             "lead_id": "lead_g0rHDArnRRFYpwnJKWwi1T7tYkEj3WxzLxWVnUBJwEC",
             "name": "Deandre Lindsey",
             "date": "2026-10-15",
@@ -401,14 +409,6 @@
           }
         ],
         "upcoming": [
-          {
-            "lead_id": "lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu",
-            "name": "Leeana Arroyo",
-            "date": "2026-10-15",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
           {
             "lead_id": "lead_Xwo2m25LKFOLt2myfGzdakCan40lMRoo2o73AzrkBqU",
             "name": "SARAH BELLOT",
@@ -480,30 +480,30 @@
       "lane": 1,
       "rep_owner_id": "user_wF5aATmDljO6g6AHqehRPVmfCmH5j9VszbO6Q6Pjzm4",
       "adherence": {
-        "pre_call_pct": 37,
-        "post_call_pct": 67,
+        "pre_call_pct": 36,
+        "post_call_pct": 65,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
             "phase": "pre_call",
-            "done": 8,
-            "eligible": 10,
+            "done": 9,
+            "eligible": 11,
             "exempt": 0,
-            "pct": 80
+            "pct": 82
           },
           "precall_text": {
             "label": "Pre-call text",
             "phase": "pre_call",
             "done": 3,
-            "eligible": 10,
+            "eligible": 11,
             "exempt": 0,
-            "pct": 30
+            "pct": 27
           },
           "day_of_confirmation_text": {
             "label": "Day-of confirmation",
             "phase": "pre_call",
             "done": 0,
-            "eligible": 10,
+            "eligible": 11,
             "exempt": 0,
             "pct": 0
           },
@@ -511,15 +511,15 @@
             "label": "Task or follow-up meeting",
             "phase": "post_call",
             "done": 3,
-            "eligible": 9,
+            "eligible": 10,
             "exempt": 1,
-            "pct": 33
+            "pct": 30
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 8,
-            "eligible": 8,
+            "done": 9,
+            "eligible": 9,
             "exempt": 1,
             "pct": 100
           }
@@ -590,6 +590,14 @@
                 "scored_call_at": "2026-10-15T03:30:00-07:00",
                 "url": "https://app.close.com/lead/lead_g0rHDArnRRFYpwnJKWwi1T7tYkEj3WxzLxWVnUBJwEC/",
                 "status_label": "Reschedule Requested"
+              },
+              {
+                "id": "lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu",
+                "name": "Leeana Arroyo",
+                "booked_date": "2026-10-15",
+                "scored_call_at": "2026-10-15T05:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu/",
+                "status_label": "\ud83d\udc7b No Show"
               }
             ],
             "missed": [
@@ -695,6 +703,14 @@
                 "scored_call_at": "2026-10-14T08:30:00-07:00",
                 "url": "https://app.close.com/lead/lead_AmEfplQgJI3LcLmsvr0yptHyGsUkrPf4FpvxlDjH578/",
                 "status_label": "WARM - Follow up"
+              },
+              {
+                "id": "lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu",
+                "name": "Leeana Arroyo",
+                "booked_date": "2026-10-15",
+                "scored_call_at": "2026-10-15T05:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu/",
+                "status_label": "\ud83d\udc7b No Show"
               }
             ],
             "exempt": []
@@ -781,6 +797,14 @@
                 "scored_call_at": "2026-10-15T03:30:00-07:00",
                 "url": "https://app.close.com/lead/lead_g0rHDArnRRFYpwnJKWwi1T7tYkEj3WxzLxWVnUBJwEC/",
                 "status_label": "Reschedule Requested"
+              },
+              {
+                "id": "lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu",
+                "name": "Leeana Arroyo",
+                "booked_date": "2026-10-15",
+                "scored_call_at": "2026-10-15T05:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu/",
+                "status_label": "\ud83d\udc7b No Show"
               }
             ],
             "exempt": []
@@ -860,6 +884,14 @@
                 "scored_call_at": "2026-10-15T03:30:00-07:00",
                 "url": "https://app.close.com/lead/lead_g0rHDArnRRFYpwnJKWwi1T7tYkEj3WxzLxWVnUBJwEC/",
                 "status_label": "Reschedule Requested"
+              },
+              {
+                "id": "lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu",
+                "name": "Leeana Arroyo",
+                "booked_date": "2026-10-15",
+                "scored_call_at": "2026-10-15T05:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu/",
+                "status_label": "\ud83d\udc7b No Show"
               }
             ],
             "exempt": [
@@ -938,6 +970,14 @@
                 "scored_call_at": "2026-10-15T03:30:00-07:00",
                 "url": "https://app.close.com/lead/lead_g0rHDArnRRFYpwnJKWwi1T7tYkEj3WxzLxWVnUBJwEC/",
                 "status_label": "Reschedule Requested"
+              },
+              {
+                "id": "lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu",
+                "name": "Leeana Arroyo",
+                "booked_date": "2026-10-15",
+                "scored_call_at": "2026-10-15T05:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_kLz7W1CQLE3XYGFiFYFiGXtsreZPLqFgcGGcF7TiKQu/",
+                "status_label": "\ud83d\udc7b No Show"
               }
             ],
             "missed": [],
@@ -954,8 +994,8 @@
           }
         }
       },
-      "pre_call_adherence": 37,
-      "post_call_adherence": 67,
+      "pre_call_adherence": 36,
+      "post_call_adherence": 65,
       "opportunity_status": {
         "hot": {
           "count": 34
@@ -3540,9 +3580,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 86,
-      "open_leads": 42,
-      "est_pipeline": 100800,
+      "tasks_incomplete": 88,
+      "open_leads": 41,
+      "est_pipeline": 98400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -4833,7 +4873,7 @@
             "date": "2026-10-15",
             "funnel": "Google Ads",
             "meeting_outcome": "",
-            "meeting_status": "upcoming"
+            "meeting_status": "in-progress"
           },
           {
             "lead_id": "lead_8JDOgWt4FO5dO9dv6WJwkTswzO45c8bPEbNUJBkBC3b",
@@ -4896,14 +4936,14 @@
             "date": "2026-10-15",
             "funnel": "Google Ads",
             "meeting_outcome": "",
-            "meeting_status": "upcoming"
+            "meeting_status": "in-progress"
           }
         ],
         "qualified": [],
         "deals": []
       },
-      "task_adherence": 0.0,
-      "tasks_overdue": 2,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
       "tasks_incomplete": 2,
       "open_leads": 22,
       "est_pipeline": 52800,
@@ -4912,48 +4952,48 @@
       "lane": 1,
       "rep_owner_id": "user_rJngzi4LOFXzpNb0bLi1ZtKRlRkga2fYuf4QrYpAmIc",
       "adherence": {
-        "pre_call_pct": 53,
+        "pre_call_pct": 61,
         "post_call_pct": 50,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
             "phase": "pre_call",
-            "done": 2,
-            "eligible": 5,
+            "done": 3,
+            "eligible": 6,
             "exempt": 0,
-            "pct": 40
+            "pct": 50
           },
           "precall_text": {
             "label": "Pre-call text",
             "phase": "pre_call",
-            "done": 3,
-            "eligible": 5,
+            "done": 4,
+            "eligible": 6,
             "exempt": 0,
-            "pct": 60
+            "pct": 67
           },
           "day_of_confirmation_text": {
             "label": "Day-of confirmation",
             "phase": "pre_call",
-            "done": 3,
-            "eligible": 5,
+            "done": 4,
+            "eligible": 6,
             "exempt": 0,
-            "pct": 60
+            "pct": 67
           },
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
             "done": 1,
-            "eligible": 5,
+            "eligible": 6,
             "exempt": 0,
-            "pct": 20
+            "pct": 17
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 4,
-            "eligible": 5,
+            "done": 5,
+            "eligible": 6,
             "exempt": 0,
-            "pct": 80
+            "pct": 83
           }
         },
         "lead_cohorts": {
@@ -4974,6 +5014,14 @@
                 "scored_call_at": "2026-10-13T07:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_8JDOgWt4FO5dO9dv6WJwkTswzO45c8bPEbNUJBkBC3b/",
                 "status_label": "\ud83d\udc7b No Show"
+              },
+              {
+                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
+                "name": "Rubens Nore",
+                "booked_date": "2026-10-15",
+                "scored_call_at": "2026-10-15T06:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
+                "status_label": "\u260e\ufe0f Call Booked"
               }
             ],
             "missed": [
@@ -5029,6 +5077,14 @@
                 "scored_call_at": "2026-10-13T07:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_8JDOgWt4FO5dO9dv6WJwkTswzO45c8bPEbNUJBkBC3b/",
                 "status_label": "\ud83d\udc7b No Show"
+              },
+              {
+                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
+                "name": "Rubens Nore",
+                "booked_date": "2026-10-15",
+                "scored_call_at": "2026-10-15T06:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
+                "status_label": "\u260e\ufe0f Call Booked"
               }
             ],
             "missed": [
@@ -5076,6 +5132,14 @@
                 "scored_call_at": "2026-10-13T07:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_8JDOgWt4FO5dO9dv6WJwkTswzO45c8bPEbNUJBkBC3b/",
                 "status_label": "\ud83d\udc7b No Show"
+              },
+              {
+                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
+                "name": "Rubens Nore",
+                "booked_date": "2026-10-15",
+                "scored_call_at": "2026-10-15T06:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
+                "status_label": "\u260e\ufe0f Call Booked"
               }
             ],
             "missed": [
@@ -5141,6 +5205,14 @@
                 "scored_call_at": "2026-10-13T07:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_8JDOgWt4FO5dO9dv6WJwkTswzO45c8bPEbNUJBkBC3b/",
                 "status_label": "\ud83d\udc7b No Show"
+              },
+              {
+                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
+                "name": "Rubens Nore",
+                "booked_date": "2026-10-15",
+                "scored_call_at": "2026-10-15T06:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
+                "status_label": "\u260e\ufe0f Call Booked"
               }
             ],
             "exempt": []
@@ -5178,6 +5250,14 @@
                 "scored_call_at": "2026-10-13T07:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_8JDOgWt4FO5dO9dv6WJwkTswzO45c8bPEbNUJBkBC3b/",
                 "status_label": "\ud83d\udc7b No Show"
+              },
+              {
+                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
+                "name": "Rubens Nore",
+                "booked_date": "2026-10-15",
+                "scored_call_at": "2026-10-15T06:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
+                "status_label": "\u260e\ufe0f Call Booked"
               }
             ],
             "missed": [
@@ -5194,7 +5274,7 @@
           }
         }
       },
-      "pre_call_adherence": 53,
+      "pre_call_adherence": 61,
       "post_call_adherence": 50,
       "opportunity_status": {
         "hot": {
@@ -5864,94 +5944,94 @@
   ],
   "team_adherence": {
     "pre_call_pct": 73,
-    "post_call_pct": 75,
+    "post_call_pct": 74,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
         "phase": "pre_call",
-        "done": 48,
-        "eligible": 67,
+        "done": 50,
+        "eligible": 69,
         "exempt": 0,
         "pct": 72
       },
       "precall_text": {
         "label": "Pre-call text",
         "phase": "pre_call",
-        "done": 52,
-        "eligible": 67,
+        "done": 53,
+        "eligible": 69,
         "exempt": 0,
-        "pct": 78
+        "pct": 77
       },
       "day_of_confirmation_text": {
         "label": "Day-of confirmation",
         "phase": "pre_call",
-        "done": 46,
-        "eligible": 66,
+        "done": 47,
+        "eligible": 68,
         "exempt": 0,
-        "pct": 70
+        "pct": 69
       },
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
         "done": 38,
-        "eligible": 61,
+        "eligible": 63,
         "exempt": 6,
-        "pct": 62
+        "pct": 60
       },
       "recap_email": {
         "label": "Recap email sent",
         "phase": "post_call",
-        "done": 48,
-        "eligible": 55,
+        "done": 50,
+        "eligible": 57,
         "exempt": 6,
-        "pct": 87
+        "pct": 88
       }
     }
   },
   "lane_adherence": {
     "1": {
       "pre_call_pct": 73,
-      "post_call_pct": 75,
+      "post_call_pct": 74,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
           "phase": "pre_call",
-          "done": 48,
-          "eligible": 67,
+          "done": 50,
+          "eligible": 69,
           "exempt": 0,
           "pct": 72
         },
         "precall_text": {
           "label": "Pre-call text",
           "phase": "pre_call",
-          "done": 52,
-          "eligible": 67,
+          "done": 53,
+          "eligible": 69,
           "exempt": 0,
-          "pct": 78
+          "pct": 77
         },
         "day_of_confirmation_text": {
           "label": "Day-of confirmation",
           "phase": "pre_call",
-          "done": 46,
-          "eligible": 66,
+          "done": 47,
+          "eligible": 68,
           "exempt": 0,
-          "pct": 70
+          "pct": 69
         },
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
           "done": 38,
-          "eligible": 61,
+          "eligible": 63,
           "exempt": 6,
-          "pct": 62
+          "pct": 60
         },
         "recap_email": {
           "label": "Recap email sent",
           "phase": "post_call",
-          "done": 48,
-          "eligible": 55,
+          "done": 50,
+          "eligible": 57,
           "exempt": 6,
-          "pct": 87
+          "pct": 88
         }
       }
     }
@@ -5959,7 +6039,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-10-15T05:10:50.845296-07:00",
+    "generated_at": "2026-10-15T06:25:09.834468-07:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -5982,12 +6062,12 @@
     "preview_only": false
   },
   "team_pre_call_adherence": 73,
-  "team_post_call_adherence": 75,
+  "team_post_call_adherence": 74,
   "lane_pre_call_adherence": {
     "1": 73
   },
   "lane_post_call_adherence": {
-    "1": 75
+    "1": 74
   },
   "dashboard_schema_version": 3
 }
