@@ -47,6 +47,9 @@ EXCLUDED_LEAD_STATUSES = {
     "stat_p3oblSTnbsyDAw4rWqZDePGYMOlKBgV2FjbqIMDrfvF": "disqualified",
     "stat_YV4ZngDB4IGjLjlOf0YTFEWuKZJ6fhNxVkzQkvKYfdB": "outside_us",
     "stat_U9MI7pqsvIjceTv3pCU7b1EghO8Q83h1HUcL6fGVyi6": "do_not_contact",
+    NO_SHOW_STATUS_ID: "no_show",
+    WON_STATUS_ID: "closed_won",
+    LOST_STATUS_ID: "closed_lost",
 }
 EXCLUDED_FUNNELS = {"LTF - Quiz Funnel"}
 ACTIVITY_ENDPOINTS = {
@@ -342,6 +345,27 @@ def normalize_status_label(value: Any) -> str:
     return " ".join(str(value or "").lower().replace("-", " ").replace("_", " ").split())
 
 
+def process_status_exclusion(status_id: Any, *labels: Any) -> str | None:
+    """Return the exclusion reason for lead or opportunity statuses outside adherence."""
+    if status_id in EXCLUDED_LEAD_STATUSES:
+        return EXCLUDED_LEAD_STATUSES[status_id]
+    for label in labels:
+        normalized = normalize_status_label(label)
+        if "closed / won" in normalized or "closed won" in normalized:
+            return "closed_won"
+        if "closed lost" in normalized or normalized.endswith(" lost") or normalized == "lost":
+            return "closed_lost"
+        if "no show" in normalized:
+            return "no_show"
+        if "disqualified" in normalized:
+            return "disqualified"
+        if "do not contact" in normalized or normalized == "dnc":
+            return "do_not_contact"
+        if "canceled" in normalized or "cancelled" in normalized:
+            return "canceled_by_lead"
+    return None
+
+
 def build_lead_cohorts(
     scored_leads: list[tuple[dict[str, Any], dict[str, dict[str, bool]]]],
     aggregate: dict[str, Any],
@@ -411,7 +435,6 @@ def add_adherence_to_dashboard(
     preview_only: bool = False,
     extract: dict[str, Any] | None = None,
     candidate_booked_date_field: tuple[str, str] | None = None,
-    include_canceled_by_lead_status: bool = False,
 ) -> dict[str, Any]:
     repo_root = Path(__file__).resolve().parents[1]
     workspace_root = repo_root.parent
@@ -469,13 +492,11 @@ def add_adherence_to_dashboard(
     exclusion_counts = defaultdict(int)
     for lead in raw_cohort:
         status_id = lead.get("status_id")
-        status_exclusion = EXCLUDED_LEAD_STATUSES.get(status_id)
-        post_call_only_status = status_id in {
-            DISQUALIFIED_LEAD_STATUS_ID,
-            DO_NOT_CONTACT_LEAD_STATUS_ID,
-        }
-        include_canceled = include_canceled_by_lead_status and status_exclusion == "canceled_by_lead"
-        if status_exclusion and not (post_call_only_status or include_canceled):
+        opp_status_label = opportunity_status_label(lead)
+        status_exclusion = process_status_exclusion(
+            status_id, lead.get("status_label"), opp_status_label
+        )
+        if status_exclusion:
             exclusion_counts[status_exclusion] += 1
             continue
         funnel = str(custom_value(lead, CF_FUNNEL_NAME_DEAL_ID, "Funnel Name DEAL (Opp)") or "").strip()
@@ -503,13 +524,13 @@ def add_adherence_to_dashboard(
             "name": str(lead.get("display_name") or lead.get("name") or "Unnamed lead"),
             "url": close_lead_url(lead),
             "status_label": str(lead.get("status_label") or ""),
-            "opportunity_status_label": opportunity_status_label(lead),
+            "opportunity_status_label": opp_status_label,
             "closed_won": lead.get("status_id") == WON_STATUS_ID
             or "closed / won" in str(lead.get("status_label") or "").lower()
-            or "closed / won" in opportunity_status_label(lead).lower(),
+            or "closed / won" in opp_status_label.lower(),
             "closed_lost": lead.get("status_id") == LOST_STATUS_ID
             or str(lead.get("status_label") or "").strip().lower().endswith("lost")
-            or opportunity_status_label(lead).strip().lower().endswith("lost"),
+            or opp_status_label.strip().lower().endswith("lost"),
             "post_call_exempt": (
                 lead.get("status_id") in {
                     CANCELED_LEAD_STATUS_ID,
@@ -698,7 +719,6 @@ def build_preview(args: argparse.Namespace) -> dict[str, Any]:
         source="close_local_baseline",
         preview_only=True,
         candidate_booked_date_field=LATEST_BOOKED_DATE_FIELD,
-        include_canceled_by_lead_status=True,
     )
 
 
@@ -727,7 +747,6 @@ if __name__ == "__main__":
                 limit_leads=cli_args.limit_leads, source="close_fixed_extract",
                 preview_only=True, extract=extract,
                 candidate_booked_date_field=LATEST_BOOKED_DATE_FIELD,
-                include_canceled_by_lead_status=True,
             )
         else:
             preview = build_preview(cli_args)

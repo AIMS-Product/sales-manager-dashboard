@@ -1230,7 +1230,6 @@ if __name__ == "__main__":
         source="close_crm",
         preview_only=False,
         candidate_booked_date_field=LATEST_BOOKED_DATE_FIELD,
-        include_canceled_by_lead_status=True,
     )
     apply_dashboard_post_call_scores(data)
     fetch_opportunity_statuses(data)

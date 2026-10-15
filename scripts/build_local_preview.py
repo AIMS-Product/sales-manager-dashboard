@@ -132,7 +132,6 @@ def build_preview():
         source="close_wtd_preview",
         preview_only=True,
         candidate_booked_date_field=LATEST_BOOKED_DATE_FIELD,
-        include_canceled_by_lead_status=True,
     )
     apply_dashboard_post_call_scores(dashboard)
     annotate_adherence_opportunity_statuses(dashboard, opportunity_status_by_rep_lead)

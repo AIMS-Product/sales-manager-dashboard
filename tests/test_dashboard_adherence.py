@@ -97,7 +97,7 @@ class DashboardAdherenceTests(unittest.TestCase):
             {"starts_at": "2026-10-07T11:30:00Z", "status": "declined-by-org"},
         ], "2026-10-07"))
 
-    def test_latest_process_candidates_include_completed_rebooking_and_canceled_lead_status(self):
+    def test_latest_process_candidates_exclude_canceled_lead_status(self):
         first = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
         latest = LATEST_BOOKED_DATE_FIELD[0]
         leads = [
@@ -127,10 +127,9 @@ class DashboardAdherenceTests(unittest.TestCase):
             {"month_label": "October 2026", "reps": [{"name": "Scott Seymour"}]},
             preview_only=True, extract=extract,
             candidate_booked_date_field=LATEST_BOOKED_DATE_FIELD,
-            include_canceled_by_lead_status=True,
         )
         scored = result["reps"][0]["adherence"]["lead_results"]
-        self.assertEqual({row["name"] for row in scored}, {"Vyomesh Mistry", "Milton Hunt"})
+        self.assertEqual({row["name"] for row in scored}, {"Vyomesh Mistry"})
         self.assertEqual({row["booked_date"] for row in scored}, {"2026-10-07"})
 
     def test_latest_process_cohort_query_uses_lscbd(self):
