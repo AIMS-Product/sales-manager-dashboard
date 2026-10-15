@@ -1089,9 +1089,10 @@
                                 const id = String(lead.id || '');
                                 const leadUrl = /^lead_[A-Za-z0-9]+$/.test(id) ? `https://app.close.com/lead/${id}/` : '';
                                 const name = escapeHtml(lead.name || id || 'Unknown lead');
-                                const status = lead.opportunity_status;
+                                const status = String(lead.opportunity_status || '').trim();
+                                const statusGroup = /^(hot|warm|general)\b/i.exec(status)?.[1];
                                 const statusHtml = status
-                                    ? `<span class="adherence-opportunity-status" data-status="${escapeHtml(status)}">${escapeHtml(status)}</span>`
+                                    ? `<span class="adherence-opportunity-status" data-status="${statusGroup ? statusGroup[0].toUpperCase() + statusGroup.slice(1).toLowerCase() : ''}">${escapeHtml(status)}</span>`
                                     : '';
                                 const leadName = leadUrl
                                     ? `<a href="${leadUrl}" target="_blank" rel="noopener noreferrer" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${name}</a>`

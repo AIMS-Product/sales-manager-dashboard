@@ -358,6 +358,7 @@ def build_lead_cohorts(
             "scored_call_at": lead.get("scored_call_at") or "",
             "url": lead.get("url") or "",
             "status_label": lead.get("status_label") or "",
+            "opportunity_status": lead.get("opportunity_status_label") or "",
         }
         for key in STEP_META:
             cell = evidence[key]
