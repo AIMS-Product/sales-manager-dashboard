@@ -25,10 +25,11 @@ import time
 import requests
 from datetime import datetime, timezone, timedelta
 from calendar import monthrange
+from pathlib import Path
 from zoneinfo import ZoneInfo
 # Reuse the canonical rep-dashboard per-lead evidence rules over this dashboard's
 # Monday-through-today cohort. The vendored rules module is copied verbatim.
-from build_adherence_preview import LATEST_BOOKED_DATE_FIELD, add_adherence_to_dashboard  # noqa: E402
+from build_adherence_preview import LATEST_BOOKED_DATE_FIELD, add_adherence_to_dashboard, load_env_value  # noqa: E402
 from dashboard_adherence import apply_dashboard_post_call_scores  # noqa: E402
 from avoma_scores import fetch_avoma_mtd_scores  # noqa: E402
 
@@ -604,6 +605,93 @@ def api_get(endpoint, params=None):
     raise Exception(f"Failed after 5 retries: {url}")
 
 
+def api_paginate(endpoint, params=None):
+    query = dict(params or {})
+    query.setdefault("_limit", 200)
+    skip = 0
+    while True:
+        page = api_get(endpoint, {**query, "_skip": skip})
+        rows = page.get("data") or []
+        yield from rows
+        if not page.get("has_more") or not rows:
+            return
+        skip += len(rows)
+
+
+def fetch_opportunity_statuses(dashboard):
+    """Add active Hot, Warm, and General opportunity counts per Close owner."""
+    status_kinds = ("hot", "warm", "general")
+    status_ids = {}
+    for item in api_paginate("/status/opportunity/"):
+        if item.get("type") != "active" or not item.get("id"):
+            continue
+        label = str(item.get("label") or item.get("name") or "").strip().casefold()
+        kind = next((value for value in status_kinds if value in label), None)
+        if kind:
+            status_ids[item["id"]] = kind
+
+    reps_by_owner = {
+        rep["rep_owner_id"]: rep
+        for rep in dashboard.get("reps", [])
+        if rep.get("rep_owner_id")
+    }
+    latest_by_owner_lead = {}
+    for status_id, kind in status_ids.items():
+        for opportunity in api_paginate("/opportunity/", {
+            "pipeline_id": PIPELINE_ID,
+            "status_id": status_id,
+        }):
+            owner_id = opportunity.get("user_id")
+            lead_id = opportunity.get("lead_id")
+            if owner_id not in reps_by_owner or not lead_id:
+                continue
+            key = (owner_id, lead_id)
+            updated = str(opportunity.get("updated_at") or opportunity.get("date_created") or "")
+            previous = latest_by_owner_lead.get(key)
+            if previous and previous["updated"] >= updated:
+                continue
+            latest_by_owner_lead[key] = {"updated": updated, "status": kind}
+
+    counts = {
+        owner_id: {status: 0 for status in status_kinds}
+        for owner_id in reps_by_owner
+    }
+    for (owner_id, _lead_id), opportunity in latest_by_owner_lead.items():
+        counts[owner_id][opportunity["status"]] += 1
+
+    for owner_id, rep in reps_by_owner.items():
+        rep["opportunity_status"] = {
+            status: {"count": counts[owner_id][status]}
+            for status in status_kinds
+        }
+        rep["opportunity_status_total"] = sum(counts[owner_id].values())
+    print(
+        f"  Active opportunity statuses: {sum(sum(statuses.values()) for statuses in counts.values())} "
+        f"status cohorts across {len(reps_by_owner)} reps",
+        flush=True,
+    )
+
+
+def previous_month_score_fallback(current_month_start):
+    """Reuse this month's last successful MTD pull if the refresh key is unavailable."""
+    path = Path(__file__).resolve().parents[1] / "data.json"
+    try:
+        previous = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return {}, None
+    metadata = previous.get("qa_score_meta") or {}
+    if not metadata.get("available") or metadata.get("period_start") != current_month_start:
+        return {}, None
+    scores = {
+        rep["name"]: {"score": rep.get("qa_score"), "count": rep.get("qa_score_count", 0)}
+        for rep in previous.get("reps", [])
+        if rep.get("name") and rep.get("qa_score") is not None and rep.get("qa_score_count")
+    }
+    carried_metadata = dict(metadata)
+    carried_metadata["stale"] = True
+    return scores, carried_metadata
+
+
 def fetch_org_users():
     users = {}
     user_emails = {}
@@ -899,11 +987,20 @@ def build_dashboard_data():
     name_to_id = {v: k for k, v in user_map.items()}
     print(f"  Found {len(user_map)} users. ({time.time()-t0:.1f}s)", flush=True)
 
-    avoma_scores_by_email, avoma_score_meta = fetch_avoma_mtd_scores(os.environ.get("AVOMA_API_KEY", ""))
+    workspace_env = Path(__file__).resolve().parents[2] / ".env"
+    avoma_api_key = load_env_value([workspace_env], "AVOMA_API_KEY")
+    avoma_scores_by_email, avoma_score_meta = fetch_avoma_mtd_scores(avoma_api_key)
     avoma_scores_by_name = {
         name: avoma_scores_by_email.get(user_emails.get(user_id, ""), {})
         for user_id, name in user_map.items()
     }
+    if not avoma_score_meta.get("available"):
+        current_month_start = now.replace(day=1).date().isoformat()
+        carried_scores, carried_meta = previous_month_score_fallback(current_month_start)
+        if carried_meta:
+            avoma_scores_by_name.update(carried_scores)
+            avoma_score_meta = carried_meta
+            print("  Avoma refresh unavailable; keeping this month's last successful MTD scores", flush=True)
 
     # Closed/Won opps this week
     t0 = time.time()
@@ -1109,6 +1206,7 @@ if __name__ == "__main__":
         include_canceled_by_lead_status=True,
     )
     apply_dashboard_post_call_scores(data)
+    fetch_opportunity_statuses(data)
     # Version the archive presentation independently from historical snapshots.
     # Schema 2 adds adherence and lead cohorts; schema 3 adds Avoma MTD scores.
     data["dashboard_schema_version"] = 3
