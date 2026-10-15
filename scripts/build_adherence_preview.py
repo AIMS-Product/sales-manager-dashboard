@@ -24,7 +24,7 @@ from urllib.parse import urlencode, urlparse
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
-from adherence_rules import LOST_STATUS_ID, STEP_META, WON_STATUS_ID, aggregate_rep_scores, first_call_deadline, parse_datetime, score_lead, validate_aggregate
+from adherence_rules import CANCELED_LEAD_STATUS_ID, DISQUALIFIED_LEAD_STATUS_ID, DO_NOT_CONTACT_LEAD_STATUS_ID, LOST_STATUS_ID, NO_SHOW_STATUS_ID, STEP_META, WON_STATUS_ID, aggregate_rep_scores, first_call_deadline, parse_datetime, score_lead, validate_aggregate
 from qualifying_meeting_rules import latest_qualifying_dates_in_period
 
 
@@ -322,6 +322,26 @@ def close_lead_url(lead: dict[str, Any]) -> str:
     return ""
 
 
+def opportunity_status_label(lead: dict[str, Any]) -> str:
+    """Return the most recently updated opportunity status attached to a lead."""
+    opportunities = lead.get("opportunities") or []
+    if not opportunities:
+        return ""
+    latest = max(
+        opportunities,
+        key=lambda opportunity: (
+            str(opportunity.get("date_updated") or ""),
+            str(opportunity.get("date_created") or ""),
+            str(opportunity.get("id") or ""),
+        ),
+    )
+    return str(latest.get("status_label") or "")
+
+
+def normalize_status_label(value: Any) -> str:
+    return " ".join(str(value or "").lower().replace("-", " ").replace("_", " ").split())
+
+
 def build_lead_cohorts(
     scored_leads: list[tuple[dict[str, Any], dict[str, dict[str, bool]]]],
     aggregate: dict[str, Any],
@@ -447,10 +467,14 @@ def add_adherence_to_dashboard(
     candidates = []
     exclusion_counts = defaultdict(int)
     for lead in raw_cohort:
-        status_exclusion = EXCLUDED_LEAD_STATUSES.get(lead.get("status_id"))
-        if status_exclusion and not (
-            include_canceled_by_lead_status and status_exclusion == "canceled_by_lead"
-        ):
+        status_id = lead.get("status_id")
+        status_exclusion = EXCLUDED_LEAD_STATUSES.get(status_id)
+        post_call_only_status = status_id in {
+            DISQUALIFIED_LEAD_STATUS_ID,
+            DO_NOT_CONTACT_LEAD_STATUS_ID,
+        }
+        include_canceled = include_canceled_by_lead_status and status_exclusion == "canceled_by_lead"
+        if status_exclusion and not (post_call_only_status or include_canceled):
             exclusion_counts[status_exclusion] += 1
             continue
         funnel = str(custom_value(lead, CF_FUNNEL_NAME_DEAL_ID, "Funnel Name DEAL (Opp)") or "").strip()
@@ -478,10 +502,28 @@ def add_adherence_to_dashboard(
             "name": str(lead.get("display_name") or lead.get("name") or "Unnamed lead"),
             "url": close_lead_url(lead),
             "status_label": str(lead.get("status_label") or ""),
+            "opportunity_status_label": opportunity_status_label(lead),
             "closed_won": lead.get("status_id") == WON_STATUS_ID
-            or "closed / won" in str(lead.get("status_label") or "").lower(),
+            or "closed / won" in str(lead.get("status_label") or "").lower()
+            or "closed / won" in opportunity_status_label(lead).lower(),
             "closed_lost": lead.get("status_id") == LOST_STATUS_ID
-            or str(lead.get("status_label") or "").strip().lower().endswith("lost"),
+            or str(lead.get("status_label") or "").strip().lower().endswith("lost")
+            or opportunity_status_label(lead).strip().lower().endswith("lost"),
+            "post_call_exempt": (
+                lead.get("status_id") in {
+                    CANCELED_LEAD_STATUS_ID,
+                    DISQUALIFIED_LEAD_STATUS_ID,
+                    DO_NOT_CONTACT_LEAD_STATUS_ID,
+                    NO_SHOW_STATUS_ID,
+                }
+                or any(
+                    normalize_status_label(label) in {
+                        "no show", "cancelled", "canceled", "disqualified",
+                        "do not contact", "dnc",
+                    }
+                    for label in (lead.get("status_label"), opportunity_status_label(lead))
+                )
+            ),
             "current_owner_id": owner_id,
             "booked_date": booked_date,
             "date_source": date_source,
@@ -555,6 +597,7 @@ def add_adherence_to_dashboard(
             lead_owner_id=lead["current_owner_id"],
             closed_won=lead["closed_won"],
             closed_lost=lead["closed_lost"],
+            post_call_exempt=lead["post_call_exempt"],
             emails=activity["emails"].get(lead_id, []),
             sms=activity["sms"].get(lead_id, []),
             calls=activity.get("calls", {}).get(lead_id, []),

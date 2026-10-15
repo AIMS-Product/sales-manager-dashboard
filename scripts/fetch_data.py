@@ -619,16 +619,20 @@ def api_paginate(endpoint, params=None):
 
 
 def fetch_opportunity_statuses(dashboard):
-    """Add active Hot, Warm, and General opportunity counts per Close owner."""
+    """Add active Hot/Warm/General counts and status labels to adherence leads."""
     status_kinds = ("hot", "warm", "general")
-    status_ids = {}
+    statuses = {}
     for item in api_paginate("/status/opportunity/"):
-        if item.get("type") != "active" or not item.get("id"):
+        status_id = item.get("id")
+        if not status_id:
             continue
-        label = str(item.get("label") or item.get("name") or "").strip().casefold()
-        kind = next((value for value in status_kinds if value in label), None)
-        if kind:
-            status_ids[item["id"]] = kind
+        label = str(item.get("label") or item.get("name") or "").strip()
+        if label:
+            kind = next((value for value in status_kinds if value in label.casefold()), None)
+            statuses[status_id] = {
+                "label": label,
+                "kind": kind if item.get("type") == "active" else None,
+            }
 
     reps_by_owner = {
         rep["rep_owner_id"]: rep
@@ -636,7 +640,8 @@ def fetch_opportunity_statuses(dashboard):
         if rep.get("rep_owner_id")
     }
     latest_by_owner_lead = {}
-    for status_id, kind in status_ids.items():
+    latest_active_by_owner_lead = {}
+    for status_id, status in statuses.items():
         for opportunity in api_paginate("/opportunity/", {
             "pipeline_id": PIPELINE_ID,
             "status_id": status_id,
@@ -647,17 +652,21 @@ def fetch_opportunity_statuses(dashboard):
                 continue
             key = (owner_id, lead_id)
             updated = str(opportunity.get("updated_at") or opportunity.get("date_created") or "")
+            record = {"updated": updated, "label": status["label"], "kind": status["kind"]}
             previous = latest_by_owner_lead.get(key)
-            if previous and previous["updated"] >= updated:
-                continue
-            latest_by_owner_lead[key] = {"updated": updated, "status": kind}
+            if not previous or previous["updated"] < updated:
+                latest_by_owner_lead[key] = record
+            if status["kind"]:
+                previous_active = latest_active_by_owner_lead.get(key)
+                if not previous_active or previous_active["updated"] < updated:
+                    latest_active_by_owner_lead[key] = record
 
     counts = {
         owner_id: {status: 0 for status in status_kinds}
         for owner_id in reps_by_owner
     }
-    for (owner_id, _lead_id), opportunity in latest_by_owner_lead.items():
-        counts[owner_id][opportunity["status"]] += 1
+    for (owner_id, _lead_id), opportunity in latest_active_by_owner_lead.items():
+        counts[owner_id][opportunity["kind"]] += 1
 
     for owner_id, rep in reps_by_owner.items():
         rep["opportunity_status"] = {
@@ -665,9 +674,27 @@ def fetch_opportunity_statuses(dashboard):
             for status in status_kinds
         }
         rep["opportunity_status_total"] = sum(counts[owner_id].values())
+
+    status_by_owner_lead = {
+        key: opportunity["label"]
+        for key, opportunity in latest_by_owner_lead.items()
+    }
+    annotated = set()
+    for rep in dashboard.get("reps", []):
+        owner_id = rep.get("rep_owner_id")
+        for step_cohorts in (rep.get("adherence") or {}).get("lead_cohorts", {}).values():
+            for leads in step_cohorts.values():
+                for lead in leads:
+                    lead_id = str(lead.get("id") or "")
+                    if not lead_id:
+                        continue
+                    lead["opportunity_status"] = status_by_owner_lead.get(
+                        (owner_id, lead_id), "No active opp"
+                    )
+                    annotated.add(lead_id)
     print(
         f"  Active opportunity statuses: {sum(sum(statuses.values()) for statuses in counts.values())} "
-        f"status cohorts across {len(reps_by_owner)} reps",
+        f"status cohorts across {len(reps_by_owner)} reps; annotated {len(annotated)} adherence leads",
         flush=True,
     )
 

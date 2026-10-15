@@ -306,6 +306,15 @@
         }
         .post-call-step-cohort { min-width: 0; max-height: 180px; overflow-y: auto; }
         .post-call-step-cohort .crm-missing-list { margin-top: 8px; }
+        .adherence-lead-entry { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+        .adherence-opportunity-status {
+            display: inline-flex; align-items: center; border-radius: 999px; padding: 1px 7px;
+            background: #f1f5f9; color: #475569; font-size: 10px; line-height: 1.5; font-weight: 700;
+            white-space: nowrap;
+        }
+        .adherence-opportunity-status[data-status="Hot"] { background: #fef2f2; color: #b91c1c; }
+        .adherence-opportunity-status[data-status="Warm"] { background: #fff7ed; color: #c2410c; }
+        .adherence-opportunity-status[data-status="General"] { background: #eff6ff; color: #1d4ed8; }
 
         @media (max-width: 900px) {
             .post-call-detail-grid { grid-template-columns: 1fr; }
@@ -1076,7 +1085,19 @@
                         const completed = stepCohorts.completed || [];
                         const missed = stepCohorts.missed || [];
                         const renderCohort = (title, leads) => `<div class="post-call-step-cohort"><div class="crm-missing-list"><div class="crm-missing-label">${title} (${leads.length})</div>${leads.length
-                            ? leads.map(lead => `<div class="crm-missing-item"><a href="https://app.close.com/lead/${lead.id}/" target="_blank" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${lead.name}</a></div>`).join('')
+                            ? leads.map(lead => {
+                                const id = String(lead.id || '');
+                                const leadUrl = /^lead_[A-Za-z0-9]+$/.test(id) ? `https://app.close.com/lead/${id}/` : '';
+                                const name = escapeHtml(lead.name || id || 'Unknown lead');
+                                const status = lead.opportunity_status;
+                                const statusHtml = status
+                                    ? `<span class="adherence-opportunity-status" data-status="${escapeHtml(status)}">${escapeHtml(status)}</span>`
+                                    : '';
+                                const leadName = leadUrl
+                                    ? `<a href="${leadUrl}" target="_blank" rel="noopener noreferrer" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${name}</a>`
+                                    : `<span class="crm-missing-name">${name}</span>`;
+                                return `<div class="crm-missing-item adherence-lead-entry">${leadName}${statusHtml}</div>`;
+                            }).join('')
                             : '<div class="crm-missing-item">None</div>'}</div></div>`;
                         const cohortHtml = `<div class="post-call-step-cohorts">${renderCohort('Completed', completed)}${renderCohort('Missed', missed)}</div>`;
                         return `<section class="post-call-step"><div class="post-call-step-head"><span class="post-call-step-title">${label}</span><span class="crm-field-val ${step.pct == null ? '' : step.pct >= 90 ? 'good' : step.pct >= 50 ? 'partial' : 'bad'}">${pct}</span></div><div class="post-call-step-meta">${done} of ${eligible} eligible${step.exempt ? ` · ${step.exempt} exempt` : ''}</div>${cohortHtml}</section>`;

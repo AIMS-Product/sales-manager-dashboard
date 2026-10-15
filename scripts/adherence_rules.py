@@ -18,6 +18,10 @@ from zoneinfo import ZoneInfo
 PACIFIC = ZoneInfo("America/Los_Angeles")
 WON_STATUS_ID = "stat_WnFc0uhjcjV0cc3bVzdFVqDz7av6rbsOmOvHUsO6s03"
 LOST_STATUS_ID = "stat_aR2jBa8YnTNZmHAnPsnlQuinBdaXpSBCkZGP3UvoBlV"
+CANCELED_LEAD_STATUS_ID = "stat_hWIGHjzyNpl4YjIFSFz3VK4fp2ny10SFJLKAihmo4KT"
+DISQUALIFIED_LEAD_STATUS_ID = "stat_p3oblSTnbsyDAw4rWqZDePGYMOlKBgV2FjbqIMDrfvF"
+DO_NOT_CONTACT_LEAD_STATUS_ID = "stat_U9MI7pqsvIjceTv3pCU7b1EghO8Q83h1HUcL6fGVyi6"
+NO_SHOW_STATUS_ID = "stat_NCXVjokjo3VXirJx2eSAcRoKlEDg1WsO1sjeLfU8udO"
 CANCELED_MEETING_STATUSES = {"canceled", "declined-by-lead", "declined-by-org"}
 OUTBOUND_DIRECTIONS = {"outbound", "outgoing"}
 SENT_ACTIVITY_WEBHOOK_ROLLOUT_AT = datetime(2026, 7, 23, 18, 42, 25, tzinfo=ZoneInfo("UTC"))
@@ -178,6 +182,7 @@ def score_lead(
     owner_id: str | None,
     closed_won: bool = False,
     closed_lost: bool = False,
+    post_call_exempt: bool = False,
     lead_owner_id: str | None = None,
     emails: Iterable[dict[str, Any]] = (),
     sms: Iterable[dict[str, Any]] = (),
@@ -197,7 +202,7 @@ def score_lead(
     deadline, first_meeting = first_call_deadline(
         booked_date, meetings, show_state=show_state
     )
-    exempt_post_call = closed_won or closed_lost
+    exempt_post_call = closed_won or closed_lost or post_call_exempt
     result = {key: {"eligible": False, "done": False} for key in STEP_META}
     if not deadline:
         return result
