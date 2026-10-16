@@ -24,7 +24,7 @@ from urllib.parse import urlencode, urlparse
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
-from adherence_rules import CANCELED_LEAD_STATUS_ID, DISQUALIFIED_LEAD_STATUS_ID, DO_NOT_CONTACT_LEAD_STATUS_ID, LOST_STATUS_ID, NO_SHOW_STATUS_ID, STEP_META, WON_STATUS_ID, aggregate_rep_scores, first_call_deadline, parse_datetime, score_lead, validate_aggregate
+from adherence_rules import LOST_STATUS_ID, STEP_META, WON_STATUS_ID, aggregate_rep_scores, first_call_deadline, is_post_call_exempt_status, parse_datetime, score_lead, validate_aggregate
 from qualifying_meeting_rules import latest_qualifying_dates_in_period
 
 
@@ -43,13 +43,7 @@ CF_LEAD_OWNER_NAME = "Lead Owner"
 CF_FUNNEL_NAME_DEAL_ID = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
 
 EXCLUDED_LEAD_STATUSES = {
-    "stat_hWIGHjzyNpl4YjIFSFz3VK4fp2ny10SFJLKAihmo4KT": "canceled_by_lead",
-    "stat_p3oblSTnbsyDAw4rWqZDePGYMOlKBgV2FjbqIMDrfvF": "disqualified",
     "stat_YV4ZngDB4IGjLjlOf0YTFEWuKZJ6fhNxVkzQkvKYfdB": "outside_us",
-    "stat_U9MI7pqsvIjceTv3pCU7b1EghO8Q83h1HUcL6fGVyi6": "do_not_contact",
-    NO_SHOW_STATUS_ID: "no_show",
-    WON_STATUS_ID: "closed_won",
-    LOST_STATUS_ID: "closed_lost",
 }
 EXCLUDED_FUNNELS = {"LTF - Quiz Funnel"}
 ACTIVITY_ENDPOINTS = {
@@ -346,23 +340,13 @@ def normalize_status_label(value: Any) -> str:
 
 
 def process_status_exclusion(status_id: Any, *labels: Any) -> str | None:
-    """Return the exclusion reason for lead or opportunity statuses outside adherence."""
+    """Exclude only records outside the dashboard's geographic scope."""
     if status_id in EXCLUDED_LEAD_STATUSES:
         return EXCLUDED_LEAD_STATUSES[status_id]
     for label in labels:
         normalized = normalize_status_label(label)
-        if "closed / won" in normalized or "closed won" in normalized:
-            return "closed_won"
-        if "closed lost" in normalized or normalized.endswith(" lost") or normalized == "lost":
-            return "closed_lost"
-        if "no show" in normalized:
-            return "no_show"
-        if "disqualified" in normalized:
-            return "disqualified"
-        if "do not contact" in normalized or normalized == "dnc":
-            return "do_not_contact"
-        if "canceled" in normalized or "cancelled" in normalized:
-            return "canceled_by_lead"
+        if "outside us" in normalized or "outside the us" in normalized:
+            return "outside_us"
     return None
 
 
@@ -531,20 +515,10 @@ def add_adherence_to_dashboard(
             "closed_lost": lead.get("status_id") == LOST_STATUS_ID
             or str(lead.get("status_label") or "").strip().lower().endswith("lost")
             or opp_status_label.strip().lower().endswith("lost"),
-            "post_call_exempt": (
-                lead.get("status_id") in {
-                    CANCELED_LEAD_STATUS_ID,
-                    DISQUALIFIED_LEAD_STATUS_ID,
-                    DO_NOT_CONTACT_LEAD_STATUS_ID,
-                    NO_SHOW_STATUS_ID,
-                }
-                or any(
-                    normalize_status_label(label) in {
-                        "no show", "cancelled", "canceled", "disqualified",
-                        "do not contact", "dnc",
-                    }
-                    for label in (lead.get("status_label"), opportunity_status_label(lead))
-                )
+            "status_id": lead.get("status_id"),
+            "post_call_exempt": is_post_call_exempt_status(
+                lead.get("status_id"), lead.get("status_label"),
+                opp_status_label,
             ),
             "current_owner_id": owner_id,
             "booked_date": booked_date,
@@ -569,6 +543,11 @@ def add_adherence_to_dashboard(
         first_call_at, first_meeting = first_call_deadline(
             lead["booked_date"], meetings_by_lead.get(lead["id"], []),
             show_state=lead["show_state"],
+        )
+        lead["post_call_exempt"] = lead["post_call_exempt"] or is_post_call_exempt_status(
+            lead.get("status_id"), lead.get("status_label"),
+            lead.get("opportunity_status_label"),
+            meeting_outcome_id=(first_meeting or {}).get("outcome_id"),
         )
         rep_id, reason = scoring_rep_for_meeting(
             first_meeting, lead["current_owner_id"], visible_rep_ids
