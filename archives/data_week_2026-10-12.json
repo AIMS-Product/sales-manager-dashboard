@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 12:07 PM PDT",
+  "updated_at": "2026-10-18 01:37 PM PDT",
   "week_label": "Oct 12 \u2013 Oct 18, 2026",
   "monday_str": "2026-10-12",
   "today_str": "2026-10-18",
@@ -51,7 +51,7 @@
   "team_close_rate": 18.2,
   "team_avg_rev_per_deal": 8661.06,
   "team_crm_compliance": 54.3,
-  "team_task_adherence": 52.7,
+  "team_task_adherence": 52.8,
   "qa_score_meta": {
     "available": true,
     "source": "Avoma scorecard evaluations",
@@ -60,8 +60,8 @@
     "period_start": "2026-10-01",
     "period_end": "2026-10-18",
     "scale_max": 5,
-    "evaluation_count": 313,
-    "generated_at": "2026-10-18T12:07:03-07:00"
+    "evaluation_count": 314,
+    "generated_at": "2026-10-18T13:37:12-07:00"
   },
   "team_overdue": 209,
   "team_open_leads": 553,
@@ -1609,8 +1609,8 @@
       "deals": 3,
       "revenue": 28494.0,
       "close_rate": 17.6,
-      "qa_score": 1.93,
-      "qa_score_count": 55,
+      "qa_score": 1.94,
+      "qa_score_count": 56,
       "avg_rev_per_deal": 9498.0,
       "crm_compliance": 35.4,
       "crm_filled": 17,
@@ -1638,19 +1638,19 @@
         ],
         "missing_leads": [
           {
+            "name": "Alec Gamboa",
+            "lead_id": "lead_kXYgpfBleLUzqAZWBVghMg5khcDRvoTqCWvwRaopywp",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Bolaji Ojo",
             "lead_id": "lead_usDDoWggShtl6OcPqtOvZJ7mrGxPjjLow8DmnIoeDCE",
             "missing": [
               "Disposition",
               "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Alec Gamboa",
-            "lead_id": "lead_kXYgpfBleLUzqAZWBVghMg5khcDRvoTqCWvwRaopywp",
-            "missing": [
-              "Disposition",
               "Confidence"
             ]
           },
@@ -1745,20 +1745,12 @@
       "metric_details": {
         "booked": [
           {
-            "lead_id": "lead_LqgK7B7ACOhxchZiBC21kq4i3HFpKpumamXfIMIqwqh",
-            "name": "Delaney Coleman",
-            "date": "2026-10-18",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
-          {
             "lead_id": "lead_2CCnsNdm1ob2wdyoOb25LvONahxS0v61DrDXZ2uVplO",
             "name": "Lidia Asres",
             "date": "2026-10-18",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
-            "meeting_status": "in-progress"
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_xpQ7LwPgfq6YnPKKbegXmzJI4JhL65BmpTkwEQAA4mE",
@@ -1767,6 +1759,14 @@
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": ""
+          },
+          {
+            "lead_id": "lead_LqgK7B7ACOhxchZiBC21kq4i3HFpKpumamXfIMIqwqh",
+            "name": "Delaney Coleman",
+            "date": "2026-10-18",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": "upcoming"
           },
           {
             "lead_id": "lead_ClXwJb3iOXDINqaUW2SdkzoCBMcMSNGnsGnMqMdhg8r",
@@ -1950,6 +1950,14 @@
         "no_shows": [],
         "no_outcome": [
           {
+            "lead_id": "lead_2CCnsNdm1ob2wdyoOb25LvONahxS0v61DrDXZ2uVplO",
+            "name": "Lidia Asres",
+            "date": "2026-10-18",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
             "lead_id": "lead_xpQ7LwPgfq6YnPKKbegXmzJI4JhL65BmpTkwEQAA4mE",
             "name": "Skyler Hamilton",
             "date": "2026-10-18",
@@ -2014,14 +2022,6 @@
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
-          },
-          {
-            "lead_id": "lead_2CCnsNdm1ob2wdyoOb25LvONahxS0v61DrDXZ2uVplO",
-            "name": "Lidia Asres",
-            "date": "2026-10-18",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
           }
         ],
         "qualified": [
@@ -9643,9 +9643,9 @@
           }
         ]
       },
-      "task_adherence": 75.4,
+      "task_adherence": 75.8,
       "tasks_overdue": 16,
-      "tasks_incomplete": 65,
+      "tasks_incomplete": 66,
       "open_leads": 16,
       "est_pipeline": 38400,
       "is_manager": false,
@@ -10116,7 +10116,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-10-18T12:15:14.297236-07:00",
+    "generated_at": "2026-10-18T13:45:08.248533-07:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
