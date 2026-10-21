@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-21 11:25 AM PDT",
+  "updated_at": "2026-10-21 12:51 PM PDT",
   "week_label": "Oct 19 \u2013 Oct 25, 2026",
   "monday_str": "2026-10-19",
   "today_str": "2026-10-21",
@@ -43,15 +43,15 @@
     "post_call_adherence": 90,
     "task_adherence": 100
   },
-  "total_booked": 51,
-  "total_shown": 15,
-  "total_qualified": 13,
+  "total_booked": 52,
+  "total_shown": 16,
+  "total_qualified": 14,
   "total_deals": 3,
   "total_revenue": 20994.0,
-  "team_close_rate": 5.9,
+  "team_close_rate": 5.8,
   "team_avg_rev_per_deal": 6998.0,
   "team_crm_compliance": 45.6,
-  "team_task_adherence": 58.0,
+  "team_task_adherence": 58.2,
   "qa_score_meta": {
     "available": true,
     "source": "Avoma scorecard evaluations",
@@ -60,16 +60,16 @@
     "period_start": "2026-10-01",
     "period_end": "2026-10-21",
     "scale_max": 5,
-    "evaluation_count": 364,
-    "generated_at": "2026-10-21T11:25:50-07:00"
+    "evaluation_count": 369,
+    "generated_at": "2026-10-21T12:51:46-07:00"
   },
-  "team_overdue": 168,
-  "team_open_leads": 526,
-  "team_est_pipeline": 1262400,
+  "team_overdue": 167,
+  "team_open_leads": 524,
+  "team_est_pipeline": 1257600,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
-      "count": 48
+      "count": 47
     },
     {
       "funnel": "Internal Webinar",
@@ -99,10 +99,10 @@
   "funnel_sources": {
     "in_house": 20,
     "external": 3,
-    "unknown": 55,
-    "in_house_pct": 25.6,
-    "external_pct": 3.8,
-    "unknown_pct": 70.5
+    "unknown": 54,
+    "in_house_pct": 26.0,
+    "external_pct": 3.9,
+    "unknown_pct": 70.1
   },
   "reps": [
     {
@@ -114,7 +114,7 @@
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": 2.36,
-      "qa_score_count": 30,
+      "qa_score_count": 31,
       "avg_rev_per_deal": null,
       "crm_compliance": 53.3,
       "crm_filled": 16,
@@ -214,20 +214,20 @@
       "metric_details": {
         "booked": [
           {
-            "lead_id": "lead_S6aph8pzBUuj6iCoG3uXSiR7tdln662Y7Y7Wm4Xwsg8",
-            "name": "Jon",
-            "date": "2026-10-21",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          },
-          {
             "lead_id": "lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht",
             "name": "Brad Jones",
             "date": "2026-10-21",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
-            "meeting_status": "upcoming"
+            "meeting_status": ""
+          },
+          {
+            "lead_id": "lead_S6aph8pzBUuj6iCoG3uXSiR7tdln662Y7Y7Wm4Xwsg8",
+            "name": "Jon",
+            "date": "2026-10-21",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_TSZN5cNvVqFgnC7g7pnUN2mkA3djMk10zo5B07JT74q",
@@ -356,6 +356,22 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht",
+            "name": "Brad Jones",
+            "date": "2026-10-21",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
+            "lead_id": "lead_S6aph8pzBUuj6iCoG3uXSiR7tdln662Y7Y7Wm4Xwsg8",
+            "name": "Jon",
+            "date": "2026-10-21",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
             "lead_id": "lead_TsMAZ187zjGEl93zoydipyFsibhp7hYKB42p4vjGwYc",
             "name": "Eduardo Chenu",
             "date": "2026-10-19",
@@ -389,22 +405,6 @@
           }
         ],
         "upcoming": [
-          {
-            "lead_id": "lead_S6aph8pzBUuj6iCoG3uXSiR7tdln662Y7Y7Wm4Xwsg8",
-            "name": "Jon",
-            "date": "2026-10-21",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          },
-          {
-            "lead_id": "lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht",
-            "name": "Brad Jones",
-            "date": "2026-10-21",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
           {
             "lead_id": "lead_TSZN5cNvVqFgnC7g7pnUN2mkA3djMk10zo5B07JT74q",
             "name": "Ricardo Caldera",
@@ -444,7 +444,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 39,
+      "tasks_incomplete": 40,
       "open_leads": 35,
       "est_pipeline": 84000,
       "is_manager": false,
@@ -453,45 +453,45 @@
       "rep_owner_id": "user_7F059xEinVentOEvkRMP77fWZyvwUiTRTUOuhD11J0e",
       "adherence": {
         "pre_call_pct": 100,
-        "post_call_pct": 90,
+        "post_call_pct": 92,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
             "phase": "pre_call",
-            "done": 8,
-            "eligible": 8,
+            "done": 9,
+            "eligible": 9,
             "exempt": 0,
             "pct": 100
           },
           "precall_text": {
             "label": "Pre-call text",
             "phase": "pre_call",
-            "done": 8,
-            "eligible": 8,
+            "done": 9,
+            "eligible": 9,
             "exempt": 0,
             "pct": 100
           },
           "day_of_confirmation_text": {
             "label": "Day-of confirmation",
             "phase": "pre_call",
-            "done": 8,
-            "eligible": 8,
+            "done": 9,
+            "eligible": 9,
             "exempt": 0,
             "pct": 100
           },
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 4,
-            "eligible": 5,
+            "done": 5,
+            "eligible": 6,
             "exempt": 3,
-            "pct": 80
+            "pct": 83
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 5,
-            "eligible": 5,
+            "done": 6,
+            "eligible": 6,
             "exempt": 3,
             "pct": 100
           }
@@ -563,6 +563,15 @@
                 "opportunity_status": "HOT - Follow Up"
               },
               {
+                "id": "lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht",
+                "name": "Brad Jones",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T12:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              },
+              {
                 "id": "lead_S6aph8pzBUuj6iCoG3uXSiR7tdln662Y7Y7Wm4Xwsg8",
                 "name": "Jon",
                 "booked_date": "2026-10-21",
@@ -639,6 +648,15 @@
                 "url": "https://app.close.com/lead/lead_4JRov1aB5M1m63FpptH0qQFkwoONXjy4a7FHHCqHg3m/",
                 "status_label": "\ud83d\udcde HOT- Follow Up",
                 "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht",
+                "name": "Brad Jones",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T12:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
               },
               {
                 "id": "lead_S6aph8pzBUuj6iCoG3uXSiR7tdln662Y7Y7Wm4Xwsg8",
@@ -719,6 +737,15 @@
                 "opportunity_status": "HOT - Follow Up"
               },
               {
+                "id": "lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht",
+                "name": "Brad Jones",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T12:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              },
+              {
                 "id": "lead_S6aph8pzBUuj6iCoG3uXSiR7tdln662Y7Y7Wm4Xwsg8",
                 "name": "Jon",
                 "booked_date": "2026-10-21",
@@ -768,15 +795,24 @@
                 "url": "https://app.close.com/lead/lead_4JRov1aB5M1m63FpptH0qQFkwoONXjy4a7FHHCqHg3m/",
                 "status_label": "\ud83d\udcde HOT- Follow Up",
                 "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "missed": [
+              },
               {
                 "id": "lead_S6aph8pzBUuj6iCoG3uXSiR7tdln662Y7Y7Wm4Xwsg8",
                 "name": "Jon",
                 "booked_date": "2026-10-21",
                 "scored_call_at": "2026-10-21T11:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_S6aph8pzBUuj6iCoG3uXSiR7tdln662Y7Y7Wm4Xwsg8/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              }
+            ],
+            "missed": [
+              {
+                "id": "lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht",
+                "name": "Brad Jones",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T12:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "Call Booked"
               }
@@ -850,6 +886,15 @@
                 "opportunity_status": "HOT - Follow Up"
               },
               {
+                "id": "lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht",
+                "name": "Brad Jones",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T12:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_IOmXN92PnA3aU5A3xVrGpCkt7gztBq4SMVFwkvJULht/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              },
+              {
                 "id": "lead_S6aph8pzBUuj6iCoG3uXSiR7tdln662Y7Y7Wm4Xwsg8",
                 "name": "Jon",
                 "booked_date": "2026-10-21",
@@ -893,7 +938,7 @@
         }
       },
       "pre_call_adherence": 100,
-      "post_call_adherence": 90,
+      "post_call_adherence": 92,
       "opportunity_status": {
         "hot": {
           "count": 12
@@ -915,8 +960,8 @@
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
-      "qa_score": 2.24,
-      "qa_score_count": 37,
+      "qa_score": 2.25,
+      "qa_score_count": 38,
       "avg_rev_per_deal": null,
       "crm_compliance": 56.2,
       "crm_filled": 9,
@@ -991,20 +1036,20 @@
       "metric_details": {
         "booked": [
           {
-            "lead_id": "lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs",
-            "name": "Ebo Nunoo",
-            "date": "2026-10-21",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          },
-          {
             "lead_id": "lead_RdIxkcxzhTSyyfS48H3U819OWVNAgRMC0dGoWS48Rbt",
             "name": "Craig Utt",
             "date": "2026-10-21",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "Completed",
             "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs",
+            "name": "Ebo Nunoo",
+            "date": "2026-10-21",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_MVvBKRlNmMeuRgMPKppEOBwMSU2apgFb1fmAuGJDTsc",
@@ -1117,6 +1162,14 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs",
+            "name": "Ebo Nunoo",
+            "date": "2026-10-21",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
             "lead_id": "lead_ZBTKJ5VV9LZ3ZvwYjSXplqeOlJE11HsbVhXWt1vGLph",
             "name": "Reshella Selders",
             "date": "2026-10-20",
@@ -1133,25 +1186,8 @@
             "meeting_status": ""
           }
         ],
-        "upcoming": [
-          {
-            "lead_id": "lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs",
-            "name": "Ebo Nunoo",
-            "date": "2026-10-21",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          }
-        ],
+        "upcoming": [],
         "qualified": [
-          {
-            "lead_id": "lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs",
-            "name": "Ebo Nunoo",
-            "date": "2026-10-21",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          },
           {
             "lead_id": "lead_RdIxkcxzhTSyyfS48H3U819OWVNAgRMC0dGoWS48Rbt",
             "name": "Craig Utt",
@@ -1159,6 +1195,14 @@
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "Completed",
             "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs",
+            "name": "Ebo Nunoo",
+            "date": "2026-10-21",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_MVvBKRlNmMeuRgMPKppEOBwMSU2apgFb1fmAuGJDTsc",
@@ -1198,7 +1242,7 @@
       "rep_owner_id": "user_wF5aATmDljO6g6AHqehRPVmfCmH5j9VszbO6Q6Pjzm4",
       "adherence": {
         "pre_call_pct": 30,
-        "post_call_pct": 47,
+        "post_call_pct": 55,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -1227,10 +1271,10 @@
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 1,
+            "done": 2,
             "eligible": 7,
             "exempt": 5,
-            "pct": 14
+            "pct": 29
           },
           "recap_email": {
             "label": "Recap email sent",
@@ -1331,8 +1375,8 @@
                 "booked_date": "2026-10-21",
                 "scored_call_at": "2026-10-21T11:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
               }
             ],
             "missed": [
@@ -1466,8 +1510,8 @@
                 "booked_date": "2026-10-21",
                 "scored_call_at": "2026-10-21T11:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
               }
             ],
             "exempt": []
@@ -1580,8 +1624,8 @@
                 "booked_date": "2026-10-21",
                 "scored_call_at": "2026-10-21T11:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
               }
             ],
             "exempt": []
@@ -1596,6 +1640,15 @@
                 "url": "https://app.close.com/lead/lead_Tjb04kRHJK9IFYTYsA9xWEjLePS5iqSH95q5eZmWRkL/",
                 "status_label": "WARM - Follow up",
                 "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs",
+                "name": "Ebo Nunoo",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T11:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
               }
             ],
             "missed": [
@@ -1643,15 +1696,6 @@
                 "url": "https://app.close.com/lead/lead_RdIxkcxzhTSyyfS48H3U819OWVNAgRMC0dGoWS48Rbt/",
                 "status_label": "WARM - Follow up",
                 "opportunity_status": "WARM - Follow Up"
-              },
-              {
-                "id": "lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs",
-                "name": "Ebo Nunoo",
-                "booked_date": "2026-10-21",
-                "scored_call_at": "2026-10-21T11:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_RQoEr5vSOIRoi7BVXElqcz3U0V4b28lPAchI6kfNaSs/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
               }
             ],
             "exempt": [
@@ -1803,10 +1847,10 @@
         }
       },
       "pre_call_adherence": 30,
-      "post_call_adherence": 47,
+      "post_call_adherence": 55,
       "opportunity_status": {
         "hot": {
-          "count": 5
+          "count": 6
         },
         "warm": {
           "count": 10
@@ -1815,7 +1859,7 @@
           "count": 47
         }
       },
-      "opportunity_status_total": 62
+      "opportunity_status_total": 63
     },
     {
       "name": "Joe Vaughan",
@@ -1826,7 +1870,7 @@
       "revenue": 0,
       "close_rate": 0.0,
       "qa_score": 1.91,
-      "qa_score_count": 46,
+      "qa_score_count": 47,
       "avg_rev_per_deal": null,
       "crm_compliance": 27.8,
       "crm_filled": 5,
@@ -1901,20 +1945,20 @@
       "metric_details": {
         "booked": [
           {
-            "lead_id": "lead_3utP1gNxHoOHZ8lCIojW0gS11rfzJSiqjmc6ZOVjOle",
-            "name": "David Moultry",
-            "date": "2026-10-21",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          },
-          {
             "lead_id": "lead_osKJR9PN5Lv9JiwTZ01bDaJlqJM7DOydq3l4HTTKyfs",
             "name": "Elizabeth Mboya",
             "date": "2026-10-21",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
+          },
+          {
+            "lead_id": "lead_3utP1gNxHoOHZ8lCIojW0gS11rfzJSiqjmc6ZOVjOle",
+            "name": "David Moultry",
+            "date": "2026-10-21",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_XWCYI3lSYGWZbDUl8KV9qKb670OqIw1dP6jTmJttjbS",
@@ -1970,6 +2014,14 @@
         "no_shows": [],
         "no_outcome": [
           {
+            "lead_id": "lead_3utP1gNxHoOHZ8lCIojW0gS11rfzJSiqjmc6ZOVjOle",
+            "name": "David Moultry",
+            "date": "2026-10-21",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
             "lead_id": "lead_XWCYI3lSYGWZbDUl8KV9qKb670OqIw1dP6jTmJttjbS",
             "name": "Timothy -",
             "date": "2026-10-19",
@@ -2003,14 +2055,6 @@
           }
         ],
         "upcoming": [
-          {
-            "lead_id": "lead_3utP1gNxHoOHZ8lCIojW0gS11rfzJSiqjmc6ZOVjOle",
-            "name": "David Moultry",
-            "date": "2026-10-21",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          },
           {
             "lead_id": "lead_osKJR9PN5Lv9JiwTZ01bDaJlqJM7DOydq3l4HTTKyfs",
             "name": "Elizabeth Mboya",
@@ -2643,11 +2687,11 @@
           }
         ]
       },
-      "task_adherence": 76.3,
-      "tasks_overdue": 9,
-      "tasks_incomplete": 38,
-      "open_leads": 62,
-      "est_pipeline": 148800,
+      "task_adherence": 78.4,
+      "tasks_overdue": 8,
+      "tasks_incomplete": 37,
+      "open_leads": 61,
+      "est_pipeline": 146400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -3010,13 +3054,13 @@
       "post_call_adherence": 84,
       "opportunity_status": {
         "hot": {
-          "count": 14
+          "count": 13
         },
         "warm": {
           "count": 6
         },
         "general": {
-          "count": 113
+          "count": 114
         }
       },
       "opportunity_status_total": 133
@@ -3089,7 +3133,7 @@
             "date": "2026-10-21",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "No Show",
-            "meeting_status": "in-progress"
+            "meeting_status": "completed"
           },
           {
             "lead_id": "lead_NPZX4nXfNrHIAYnsjzVOlSajndSjyj47JwI4SeCcWMd",
@@ -3149,7 +3193,7 @@
             "date": "2026-10-21",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "No Show",
-            "meeting_status": "in-progress"
+            "meeting_status": "completed"
           },
           {
             "lead_id": "lead_NPZX4nXfNrHIAYnsjzVOlSajndSjyj47JwI4SeCcWMd",
@@ -3185,9 +3229,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 67,
-      "open_leads": 39,
-      "est_pipeline": 93600,
+      "tasks_incomplete": 66,
+      "open_leads": 38,
+      "est_pipeline": 91200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -3464,10 +3508,10 @@
           "count": 12
         },
         "general": {
-          "count": 57
+          "count": 55
         }
       },
-      "opportunity_status_total": 73
+      "opportunity_status_total": 71
     },
     {
       "name": "Joe Dysert",
@@ -3727,6 +3771,629 @@
       "opportunity_status_total": 46
     },
     {
+      "name": "Scott Seymour",
+      "booked": 3,
+      "shown": 1,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": 1.91,
+      "qa_score_count": 37,
+      "avg_rev_per_deal": null,
+      "crm_compliance": null,
+      "crm_filled": 0,
+      "crm_total": 0,
+      "crm_detail": null,
+      "metric_details": {
+        "booked": [
+          {
+            "lead_id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
+            "name": "Matt McCauley",
+            "date": "2026-10-21",
+            "funnel": "Website",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y",
+            "name": "Helen Alzate",
+            "date": "2026-10-21",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": "upcoming"
+          },
+          {
+            "lead_id": "lead_Bo70ZBWbhSXN7lAdODxNiSp1OXhBbiuttOYIANL3KbD",
+            "name": "Jonathan Aguilar",
+            "date": "2026-10-21",
+            "funnel": "Internal Webinar",
+            "meeting_outcome": "",
+            "meeting_status": "upcoming"
+          }
+        ],
+        "shown": [
+          {
+            "lead_id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
+            "name": "Matt McCauley",
+            "date": "2026-10-21",
+            "funnel": "Website",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          }
+        ],
+        "no_shows": [],
+        "no_outcome": [],
+        "upcoming": [
+          {
+            "lead_id": "lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y",
+            "name": "Helen Alzate",
+            "date": "2026-10-21",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": "upcoming"
+          },
+          {
+            "lead_id": "lead_Bo70ZBWbhSXN7lAdODxNiSp1OXhBbiuttOYIANL3KbD",
+            "name": "Jonathan Aguilar",
+            "date": "2026-10-21",
+            "funnel": "Internal Webinar",
+            "meeting_outcome": "",
+            "meeting_status": "upcoming"
+          }
+        ],
+        "qualified": [
+          {
+            "lead_id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
+            "name": "Matt McCauley",
+            "date": "2026-10-21",
+            "funnel": "Website",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          }
+        ],
+        "deals": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 61,
+      "open_leads": 16,
+      "est_pipeline": 38400,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1,
+      "rep_owner_id": "user_F0VeLnOQlWpkDncNW8rBl1V2QJ08fnDt6DcUjNATUJK",
+      "adherence": {
+        "pre_call_pct": 34,
+        "post_call_pct": 100,
+        "steps": {
+          "loom_usage": {
+            "label": "Pre-Call Loom",
+            "phase": "pre_call",
+            "done": 3,
+            "eligible": 9,
+            "exempt": 0,
+            "pct": 33
+          },
+          "precall_text": {
+            "label": "Pre-call text",
+            "phase": "pre_call",
+            "done": 4,
+            "eligible": 9,
+            "exempt": 0,
+            "pct": 44
+          },
+          "day_of_confirmation_text": {
+            "label": "Day-of confirmation",
+            "phase": "pre_call",
+            "done": 2,
+            "eligible": 8,
+            "exempt": 0,
+            "pct": 25
+          },
+          "follow_up_created": {
+            "label": "Task or follow-up meeting",
+            "phase": "post_call",
+            "done": 4,
+            "eligible": 4,
+            "exempt": 7,
+            "pct": 100
+          },
+          "recap_email": {
+            "label": "Recap email sent",
+            "phase": "post_call",
+            "done": 4,
+            "eligible": 4,
+            "exempt": 7,
+            "pct": 100
+          }
+        },
+        "lead_cohorts": {
+          "loom_usage": {
+            "completed": [
+              {
+                "id": "lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r",
+                "name": "Bee Brown",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T14:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh",
+                "name": "Esteban Pacheco",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T15:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh/",
+                "status_label": "Reschedule Requested",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
+                "name": "Matt McCauley",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T10:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "missed": [
+              {
+                "id": "lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf",
+                "name": "David Okunbo",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T13:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg",
+                "name": "Muhammad Yasin Shakirov",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T09:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0",
+                "name": "Jackson Haynes",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T09:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
+                "name": "Rubens Nore",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T10:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3",
+                "name": "Tana Choate",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T15:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt",
+                "name": "Tonia Mason",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T14:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              }
+            ],
+            "exempt": []
+          },
+          "precall_text": {
+            "completed": [
+              {
+                "id": "lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r",
+                "name": "Bee Brown",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T14:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh",
+                "name": "Esteban Pacheco",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T15:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh/",
+                "status_label": "Reschedule Requested",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
+                "name": "Rubens Nore",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T10:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
+                "name": "Matt McCauley",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T10:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "missed": [
+              {
+                "id": "lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf",
+                "name": "David Okunbo",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T13:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg",
+                "name": "Muhammad Yasin Shakirov",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T09:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0",
+                "name": "Jackson Haynes",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T09:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3",
+                "name": "Tana Choate",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T15:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt",
+                "name": "Tonia Mason",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T14:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              }
+            ],
+            "exempt": []
+          },
+          "day_of_confirmation_text": {
+            "completed": [
+              {
+                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
+                "name": "Rubens Nore",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T10:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
+                "name": "Matt McCauley",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T10:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "missed": [
+              {
+                "id": "lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r",
+                "name": "Bee Brown",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T14:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh",
+                "name": "Esteban Pacheco",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T15:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh/",
+                "status_label": "Reschedule Requested",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg",
+                "name": "Muhammad Yasin Shakirov",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T09:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0",
+                "name": "Jackson Haynes",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T09:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3",
+                "name": "Tana Choate",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T15:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt",
+                "name": "Tonia Mason",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T14:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              }
+            ],
+            "exempt": []
+          },
+          "follow_up_created": {
+            "completed": [
+              {
+                "id": "lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r",
+                "name": "Bee Brown",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T14:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf",
+                "name": "David Okunbo",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T13:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
+                "name": "Rubens Nore",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T10:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
+                "name": "Matt McCauley",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T10:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "missed": [],
+            "exempt": [
+              {
+                "id": "lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh",
+                "name": "Esteban Pacheco",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T15:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh/",
+                "status_label": "Reschedule Requested",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg",
+                "name": "Muhammad Yasin Shakirov",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T09:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0",
+                "name": "Jackson Haynes",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T09:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3",
+                "name": "Tana Choate",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T15:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt",
+                "name": "Tonia Mason",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T14:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_DOScx5kiZXMk6aqx9q5JkjWt7aKBEcDZYnSAHC704we",
+                "name": "Dondrea King",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T13:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_DOScx5kiZXMk6aqx9q5JkjWt7aKBEcDZYnSAHC704we/",
+                "status_label": "\ud83d\udd3b Canceled (by Lead)",
+                "opportunity_status": "\ud83d\udd3b Canceled (by Lead)"
+              },
+              {
+                "id": "lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y",
+                "name": "Helen Alzate",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T13:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y/",
+                "status_label": "\ud83d\udd5b Call Rescheduled",
+                "opportunity_status": "Rescheduled Call"
+              }
+            ]
+          },
+          "recap_email": {
+            "completed": [
+              {
+                "id": "lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r",
+                "name": "Bee Brown",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T14:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf",
+                "name": "David Okunbo",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T13:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
+                "name": "Rubens Nore",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T10:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
+                "name": "Matt McCauley",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T10:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "missed": [],
+            "exempt": [
+              {
+                "id": "lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh",
+                "name": "Esteban Pacheco",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T15:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh/",
+                "status_label": "Reschedule Requested",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg",
+                "name": "Muhammad Yasin Shakirov",
+                "booked_date": "2026-10-19",
+                "scored_call_at": "2026-10-19T09:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0",
+                "name": "Jackson Haynes",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T09:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3",
+                "name": "Tana Choate",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T15:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt",
+                "name": "Tonia Mason",
+                "booked_date": "2026-10-20",
+                "scored_call_at": "2026-10-20T14:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_DOScx5kiZXMk6aqx9q5JkjWt7aKBEcDZYnSAHC704we",
+                "name": "Dondrea King",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T13:45:00-07:00",
+                "url": "https://app.close.com/lead/lead_DOScx5kiZXMk6aqx9q5JkjWt7aKBEcDZYnSAHC704we/",
+                "status_label": "\ud83d\udd3b Canceled (by Lead)",
+                "opportunity_status": "\ud83d\udd3b Canceled (by Lead)"
+              },
+              {
+                "id": "lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y",
+                "name": "Helen Alzate",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T13:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y/",
+                "status_label": "\ud83d\udd5b Call Rescheduled",
+                "opportunity_status": "Rescheduled Call"
+              }
+            ]
+          }
+        }
+      },
+      "pre_call_adherence": 34,
+      "post_call_adherence": 100,
+      "opportunity_status": {
+        "hot": {
+          "count": 11
+        },
+        "warm": {
+          "count": 1
+        },
+        "general": {
+          "count": 23
+        }
+      },
+      "opportunity_status_total": 35
+    },
+    {
       "name": "Ariella Irvine",
       "booked": 3,
       "shown": 0,
@@ -3734,8 +4401,8 @@
       "deals": 0,
       "revenue": 0,
       "close_rate": 0.0,
-      "qa_score": 1.98,
-      "qa_score_count": 63,
+      "qa_score": 1.99,
+      "qa_score_count": 64,
       "avg_rev_per_deal": null,
       "crm_compliance": 0.0,
       "crm_filled": 0,
@@ -3763,8 +4430,8 @@
         ],
         "missing_leads": [
           {
-            "name": "Gerald McDowell",
-            "lead_id": "lead_us2yShJdYsYSkkephIwIswtdd9Sf1weiUwIL3Y38bHh",
+            "name": "Pedro Perez",
+            "lead_id": "lead_W6iKUhdlRrGzyJt35R4M18kxSCcIml0VtDR4Fy2xZPS",
             "missing": [
               "Show Up",
               "Disposition",
@@ -3773,8 +4440,8 @@
             ]
           },
           {
-            "name": "Pedro Perez",
-            "lead_id": "lead_W6iKUhdlRrGzyJt35R4M18kxSCcIml0VtDR4Fy2xZPS",
+            "name": "Gerald McDowell",
+            "lead_id": "lead_us2yShJdYsYSkkephIwIswtdd9Sf1weiUwIL3Y38bHh",
             "missing": [
               "Show Up",
               "Disposition",
@@ -3795,16 +4462,16 @@
             "meeting_status": "upcoming"
           },
           {
-            "lead_id": "lead_us2yShJdYsYSkkephIwIswtdd9Sf1weiUwIL3Y38bHh",
-            "name": "Gerald McDowell",
+            "lead_id": "lead_W6iKUhdlRrGzyJt35R4M18kxSCcIml0VtDR4Fy2xZPS",
+            "name": "Pedro Perez",
             "date": "2026-10-19",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": ""
           },
           {
-            "lead_id": "lead_W6iKUhdlRrGzyJt35R4M18kxSCcIml0VtDR4Fy2xZPS",
-            "name": "Pedro Perez",
+            "lead_id": "lead_us2yShJdYsYSkkephIwIswtdd9Sf1weiUwIL3Y38bHh",
+            "name": "Gerald McDowell",
             "date": "2026-10-19",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
@@ -3815,16 +4482,16 @@
         "no_shows": [],
         "no_outcome": [
           {
-            "lead_id": "lead_us2yShJdYsYSkkephIwIswtdd9Sf1weiUwIL3Y38bHh",
-            "name": "Gerald McDowell",
+            "lead_id": "lead_W6iKUhdlRrGzyJt35R4M18kxSCcIml0VtDR4Fy2xZPS",
+            "name": "Pedro Perez",
             "date": "2026-10-19",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": ""
           },
           {
-            "lead_id": "lead_W6iKUhdlRrGzyJt35R4M18kxSCcIml0VtDR4Fy2xZPS",
-            "name": "Pedro Perez",
+            "lead_id": "lead_us2yShJdYsYSkkephIwIswtdd9Sf1weiUwIL3Y38bHh",
+            "name": "Gerald McDowell",
             "date": "2026-10-19",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
@@ -3855,7 +4522,7 @@
       "rep_owner_id": "user_BaN2TstWtyF34eaQSSLG11j6DhKKm67Y6JltbIYCafO",
       "adherence": {
         "pre_call_pct": 48,
-        "post_call_pct": 67,
+        "post_call_pct": 75,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -3884,16 +4551,16 @@
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 2,
+            "done": 3,
             "eligible": 6,
             "exempt": 3,
-            "pct": 33
+            "pct": 50
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 5,
-            "eligible": 5,
+            "done": 6,
+            "eligible": 6,
             "exempt": 3,
             "pct": 100
           }
@@ -3973,7 +4640,7 @@
                 "scored_call_at": "2026-10-21T08:30:00-07:00",
                 "url": "https://app.close.com/lead/lead_nMegfyKeOtp1DQ8nY7X8MPV9pYqVt6dX8cOSr8uu51g/",
                 "status_label": "Reschedule Requested",
-                "opportunity_status": "No active opp"
+                "opportunity_status": "Reschedule Requested"
               }
             ],
             "exempt": []
@@ -4023,7 +4690,7 @@
                 "scored_call_at": "2026-10-21T08:30:00-07:00",
                 "url": "https://app.close.com/lead/lead_nMegfyKeOtp1DQ8nY7X8MPV9pYqVt6dX8cOSr8uu51g/",
                 "status_label": "Reschedule Requested",
-                "opportunity_status": "No active opp"
+                "opportunity_status": "Reschedule Requested"
               }
             ],
             "missed": [
@@ -4122,7 +4789,7 @@
                 "scored_call_at": "2026-10-21T08:30:00-07:00",
                 "url": "https://app.close.com/lead/lead_nMegfyKeOtp1DQ8nY7X8MPV9pYqVt6dX8cOSr8uu51g/",
                 "status_label": "Reschedule Requested",
-                "opportunity_status": "No active opp"
+                "opportunity_status": "Reschedule Requested"
               }
             ],
             "exempt": []
@@ -4146,6 +4813,15 @@
                 "url": "https://app.close.com/lead/lead_QU6udZ7j2tUQBTq3tFzpeei02oM8JCjtKjpDbX2B9P1/",
                 "status_label": "\ud83d\udcde HOT- Follow Up",
                 "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_hKTWDHNAgT6Qel8uwJPtAQ1VkeNjqKYc7VRoJexn170",
+                "name": "Kevin MacDonald",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T11:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_hKTWDHNAgT6Qel8uwJPtAQ1VkeNjqKYc7VRoJexn170/",
+                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
+                "opportunity_status": "GENERAL Follow Up"
               }
             ],
             "missed": [
@@ -4175,15 +4851,6 @@
                 "url": "https://app.close.com/lead/lead_nQXHWddv6XoC7o8fJ1BXDYUak1x8FpFr8CI03SqUELv/",
                 "status_label": "\ud83c\udd95 New",
                 "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_hKTWDHNAgT6Qel8uwJPtAQ1VkeNjqKYc7VRoJexn170",
-                "name": "Kevin MacDonald",
-                "booked_date": "2026-10-21",
-                "scored_call_at": "2026-10-21T11:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_hKTWDHNAgT6Qel8uwJPtAQ1VkeNjqKYc7VRoJexn170/",
-                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
-                "opportunity_status": "GENERAL Follow Up"
               }
             ],
             "exempt": [
@@ -4212,7 +4879,7 @@
                 "scored_call_at": "2026-10-21T08:30:00-07:00",
                 "url": "https://app.close.com/lead/lead_nMegfyKeOtp1DQ8nY7X8MPV9pYqVt6dX8cOSr8uu51g/",
                 "status_label": "Reschedule Requested",
-                "opportunity_status": "No active opp"
+                "opportunity_status": "Reschedule Requested"
               }
             ]
           },
@@ -4262,6 +4929,15 @@
                 "url": "https://app.close.com/lead/lead_QU6udZ7j2tUQBTq3tFzpeei02oM8JCjtKjpDbX2B9P1/",
                 "status_label": "\ud83d\udcde HOT- Follow Up",
                 "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_hKTWDHNAgT6Qel8uwJPtAQ1VkeNjqKYc7VRoJexn170",
+                "name": "Kevin MacDonald",
+                "booked_date": "2026-10-21",
+                "scored_call_at": "2026-10-21T11:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_hKTWDHNAgT6Qel8uwJPtAQ1VkeNjqKYc7VRoJexn170/",
+                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
+                "opportunity_status": "GENERAL Follow Up"
               }
             ],
             "missed": [],
@@ -4291,605 +4967,26 @@
                 "scored_call_at": "2026-10-21T08:30:00-07:00",
                 "url": "https://app.close.com/lead/lead_nMegfyKeOtp1DQ8nY7X8MPV9pYqVt6dX8cOSr8uu51g/",
                 "status_label": "Reschedule Requested",
-                "opportunity_status": "No active opp"
+                "opportunity_status": "Reschedule Requested"
               }
             ]
           }
         }
       },
       "pre_call_adherence": 48,
-      "post_call_adherence": 67,
+      "post_call_adherence": 75,
       "opportunity_status": {
         "hot": {
-          "count": 19
+          "count": 21
         },
         "warm": {
           "count": 3
         },
         "general": {
-          "count": 56
+          "count": 55
         }
       },
-      "opportunity_status_total": 78
-    },
-    {
-      "name": "Scott Seymour",
-      "booked": 2,
-      "shown": 0,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": 1.89,
-      "qa_score_count": 36,
-      "avg_rev_per_deal": null,
-      "crm_compliance": null,
-      "crm_filled": 0,
-      "crm_total": 0,
-      "crm_detail": null,
-      "metric_details": {
-        "booked": [
-          {
-            "lead_id": "lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y",
-            "name": "Helen Alzate",
-            "date": "2026-10-21",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
-          {
-            "lead_id": "lead_Bo70ZBWbhSXN7lAdODxNiSp1OXhBbiuttOYIANL3KbD",
-            "name": "Jonathan Aguilar",
-            "date": "2026-10-21",
-            "funnel": "Internal Webinar",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          }
-        ],
-        "shown": [],
-        "no_shows": [],
-        "no_outcome": [],
-        "upcoming": [
-          {
-            "lead_id": "lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y",
-            "name": "Helen Alzate",
-            "date": "2026-10-21",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
-          {
-            "lead_id": "lead_Bo70ZBWbhSXN7lAdODxNiSp1OXhBbiuttOYIANL3KbD",
-            "name": "Jonathan Aguilar",
-            "date": "2026-10-21",
-            "funnel": "Internal Webinar",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          }
-        ],
-        "qualified": [],
-        "deals": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 60,
-      "open_leads": 16,
-      "est_pipeline": 38400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1,
-      "rep_owner_id": "user_F0VeLnOQlWpkDncNW8rBl1V2QJ08fnDt6DcUjNATUJK",
-      "adherence": {
-        "pre_call_pct": 23,
-        "post_call_pct": 100,
-        "steps": {
-          "loom_usage": {
-            "label": "Pre-Call Loom",
-            "phase": "pre_call",
-            "done": 2,
-            "eligible": 9,
-            "exempt": 0,
-            "pct": 22
-          },
-          "precall_text": {
-            "label": "Pre-call text",
-            "phase": "pre_call",
-            "done": 3,
-            "eligible": 9,
-            "exempt": 0,
-            "pct": 33
-          },
-          "day_of_confirmation_text": {
-            "label": "Day-of confirmation",
-            "phase": "pre_call",
-            "done": 1,
-            "eligible": 7,
-            "exempt": 0,
-            "pct": 14
-          },
-          "follow_up_created": {
-            "label": "Task or follow-up meeting",
-            "phase": "post_call",
-            "done": 4,
-            "eligible": 4,
-            "exempt": 7,
-            "pct": 100
-          },
-          "recap_email": {
-            "label": "Recap email sent",
-            "phase": "post_call",
-            "done": 3,
-            "eligible": 3,
-            "exempt": 7,
-            "pct": 100
-          }
-        },
-        "lead_cohorts": {
-          "loom_usage": {
-            "completed": [
-              {
-                "id": "lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r",
-                "name": "Bee Brown",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T14:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh",
-                "name": "Esteban Pacheco",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T15:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh/",
-                "status_label": "Reschedule Requested",
-                "opportunity_status": "No active opp"
-              }
-            ],
-            "missed": [
-              {
-                "id": "lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf",
-                "name": "David Okunbo",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T13:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg",
-                "name": "Muhammad Yasin Shakirov",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T09:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0",
-                "name": "Jackson Haynes",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T09:30:00-07:00",
-                "url": "https://app.close.com/lead/lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
-                "name": "Rubens Nore",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T10:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3",
-                "name": "Tana Choate",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T15:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt",
-                "name": "Tonia Mason",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T14:30:00-07:00",
-                "url": "https://app.close.com/lead/lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
-                "name": "Matt McCauley",
-                "booked_date": "2026-10-21",
-                "scored_call_at": "2026-10-21T10:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS/",
-                "status_label": "\ud83c\udd95 New",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "exempt": []
-          },
-          "precall_text": {
-            "completed": [
-              {
-                "id": "lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r",
-                "name": "Bee Brown",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T14:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh",
-                "name": "Esteban Pacheco",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T15:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh/",
-                "status_label": "Reschedule Requested",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
-                "name": "Rubens Nore",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T10:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "missed": [
-              {
-                "id": "lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf",
-                "name": "David Okunbo",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T13:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg",
-                "name": "Muhammad Yasin Shakirov",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T09:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0",
-                "name": "Jackson Haynes",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T09:30:00-07:00",
-                "url": "https://app.close.com/lead/lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3",
-                "name": "Tana Choate",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T15:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt",
-                "name": "Tonia Mason",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T14:30:00-07:00",
-                "url": "https://app.close.com/lead/lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
-                "name": "Matt McCauley",
-                "booked_date": "2026-10-21",
-                "scored_call_at": "2026-10-21T10:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS/",
-                "status_label": "\ud83c\udd95 New",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "exempt": []
-          },
-          "day_of_confirmation_text": {
-            "completed": [
-              {
-                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
-                "name": "Rubens Nore",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T10:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "missed": [
-              {
-                "id": "lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r",
-                "name": "Bee Brown",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T14:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh",
-                "name": "Esteban Pacheco",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T15:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh/",
-                "status_label": "Reschedule Requested",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg",
-                "name": "Muhammad Yasin Shakirov",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T09:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0",
-                "name": "Jackson Haynes",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T09:30:00-07:00",
-                "url": "https://app.close.com/lead/lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3",
-                "name": "Tana Choate",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T15:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt",
-                "name": "Tonia Mason",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T14:30:00-07:00",
-                "url": "https://app.close.com/lead/lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              }
-            ],
-            "exempt": []
-          },
-          "follow_up_created": {
-            "completed": [
-              {
-                "id": "lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r",
-                "name": "Bee Brown",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T14:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf",
-                "name": "David Okunbo",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T13:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
-                "name": "Rubens Nore",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T10:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS",
-                "name": "Matt McCauley",
-                "booked_date": "2026-10-21",
-                "scored_call_at": "2026-10-21T10:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_pxGCJQ8JcUM881MlDtmwZfOiJL0l9NjU3F9noHBSzRS/",
-                "status_label": "\ud83c\udd95 New",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "missed": [],
-            "exempt": [
-              {
-                "id": "lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh",
-                "name": "Esteban Pacheco",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T15:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh/",
-                "status_label": "Reschedule Requested",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg",
-                "name": "Muhammad Yasin Shakirov",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T09:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0",
-                "name": "Jackson Haynes",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T09:30:00-07:00",
-                "url": "https://app.close.com/lead/lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3",
-                "name": "Tana Choate",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T15:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt",
-                "name": "Tonia Mason",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T14:30:00-07:00",
-                "url": "https://app.close.com/lead/lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_DOScx5kiZXMk6aqx9q5JkjWt7aKBEcDZYnSAHC704we",
-                "name": "Dondrea King",
-                "booked_date": "2026-10-21",
-                "scored_call_at": "2026-10-21T13:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_DOScx5kiZXMk6aqx9q5JkjWt7aKBEcDZYnSAHC704we/",
-                "status_label": "\ud83d\udd3b Canceled (by Lead)",
-                "opportunity_status": "\ud83d\udd3b Canceled (by Lead)"
-              },
-              {
-                "id": "lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y",
-                "name": "Helen Alzate",
-                "booked_date": "2026-10-21",
-                "scored_call_at": "2026-10-21T13:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y/",
-                "status_label": "\ud83d\udd5b Call Rescheduled",
-                "opportunity_status": "Rescheduled Call"
-              }
-            ]
-          },
-          "recap_email": {
-            "completed": [
-              {
-                "id": "lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r",
-                "name": "Bee Brown",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T14:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_HoywNIA03ccwGfMz2LOoZuYfDjxShShPvLThc4SOg6r/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf",
-                "name": "David Okunbo",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T13:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_NBtCFSjQtDv3IIyev0WY4aeQyhckw1uqhtVkB4gqsHf/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              },
-              {
-                "id": "lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO",
-                "name": "Rubens Nore",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T10:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_iMxzZPpJjOzAK0iwtDwPiPI8TswbZTEcBJRuJgi77GO/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "missed": [],
-            "exempt": [
-              {
-                "id": "lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh",
-                "name": "Esteban Pacheco",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T15:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_uZh0SwH0gnGC5iWieH9LuP0dIQFrTrXZUNYM8m3EIkh/",
-                "status_label": "Reschedule Requested",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg",
-                "name": "Muhammad Yasin Shakirov",
-                "booked_date": "2026-10-19",
-                "scored_call_at": "2026-10-19T09:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_33uuHozA0DDVKKkr0obhlead1p53dkY7pv8iTC2dhlg/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0",
-                "name": "Jackson Haynes",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T09:30:00-07:00",
-                "url": "https://app.close.com/lead/lead_nYLBBzg2VzBm8hxa9VXw427iZfyAPbdokjkrC5z2rU0/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3",
-                "name": "Tana Choate",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T15:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_bmLVSnEmWuJKsCNIVHP34icad8SDmSYSbLMFu8CxzO3/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt",
-                "name": "Tonia Mason",
-                "booked_date": "2026-10-20",
-                "scored_call_at": "2026-10-20T14:30:00-07:00",
-                "url": "https://app.close.com/lead/lead_nO77ZSgI6O29srQsdyHTaYlcKCVxy494Hh7zfd7Bhpt/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_DOScx5kiZXMk6aqx9q5JkjWt7aKBEcDZYnSAHC704we",
-                "name": "Dondrea King",
-                "booked_date": "2026-10-21",
-                "scored_call_at": "2026-10-21T13:45:00-07:00",
-                "url": "https://app.close.com/lead/lead_DOScx5kiZXMk6aqx9q5JkjWt7aKBEcDZYnSAHC704we/",
-                "status_label": "\ud83d\udd3b Canceled (by Lead)",
-                "opportunity_status": "\ud83d\udd3b Canceled (by Lead)"
-              },
-              {
-                "id": "lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y",
-                "name": "Helen Alzate",
-                "booked_date": "2026-10-21",
-                "scored_call_at": "2026-10-21T13:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_WomrbIux0u0A7KFvym4gMDhb9MzHazblGo0bVDQ403Y/",
-                "status_label": "\ud83d\udd5b Call Rescheduled",
-                "opportunity_status": "Rescheduled Call"
-              }
-            ]
-          }
-        }
-      },
-      "pre_call_adherence": 23,
-      "post_call_adherence": 100,
-      "opportunity_status": {
-        "hot": {
-          "count": 11
-        },
-        "warm": {
-          "count": 1
-        },
-        "general": {
-          "count": 23
-        }
-      },
-      "opportunity_status_total": 35
+      "opportunity_status_total": 79
     },
     {
       "name": "Oscar Pugh",
@@ -5455,95 +5552,95 @@
     }
   ],
   "team_adherence": {
-    "pre_call_pct": 52,
-    "post_call_pct": 67,
+    "pre_call_pct": 54,
+    "post_call_pct": 72,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
         "phase": "pre_call",
-        "done": 36,
-        "eligible": 59,
+        "done": 38,
+        "eligible": 60,
         "exempt": 0,
-        "pct": 61
+        "pct": 63
       },
       "precall_text": {
         "label": "Pre-call text",
         "phase": "pre_call",
-        "done": 32,
-        "eligible": 59,
+        "done": 34,
+        "eligible": 60,
         "exempt": 0,
-        "pct": 54
+        "pct": 57
       },
       "day_of_confirmation_text": {
         "label": "Day-of confirmation",
         "phase": "pre_call",
-        "done": 23,
-        "eligible": 56,
+        "done": 25,
+        "eligible": 58,
         "exempt": 0,
-        "pct": 41
+        "pct": 43
       },
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
-        "done": 15,
-        "eligible": 33,
+        "done": 18,
+        "eligible": 34,
         "exempt": 29,
-        "pct": 45
+        "pct": 53
       },
       "recap_email": {
         "label": "Recap email sent",
         "phase": "post_call",
-        "done": 23,
-        "eligible": 26,
+        "done": 26,
+        "eligible": 29,
         "exempt": 29,
-        "pct": 88
+        "pct": 90
       }
     }
   },
   "lane_adherence": {
     "1": {
-      "pre_call_pct": 52,
-      "post_call_pct": 67,
+      "pre_call_pct": 54,
+      "post_call_pct": 72,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
           "phase": "pre_call",
-          "done": 36,
-          "eligible": 59,
+          "done": 38,
+          "eligible": 60,
           "exempt": 0,
-          "pct": 61
+          "pct": 63
         },
         "precall_text": {
           "label": "Pre-call text",
           "phase": "pre_call",
-          "done": 32,
-          "eligible": 59,
+          "done": 34,
+          "eligible": 60,
           "exempt": 0,
-          "pct": 54
+          "pct": 57
         },
         "day_of_confirmation_text": {
           "label": "Day-of confirmation",
           "phase": "pre_call",
-          "done": 23,
-          "eligible": 56,
+          "done": 25,
+          "eligible": 58,
           "exempt": 0,
-          "pct": 41
+          "pct": 43
         },
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
-          "done": 15,
-          "eligible": 33,
+          "done": 18,
+          "eligible": 34,
           "exempt": 29,
-          "pct": 45
+          "pct": 53
         },
         "recap_email": {
           "label": "Recap email sent",
           "phase": "post_call",
-          "done": 23,
-          "eligible": 26,
+          "done": 26,
+          "eligible": 29,
           "exempt": 29,
-          "pct": 88
+          "pct": 90
         }
       }
     }
@@ -5551,7 +5648,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-10-21T11:33:42.907197-07:00",
+    "generated_at": "2026-10-21T12:59:31.880693-07:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -5559,27 +5656,27 @@
       "end_date": "2026-10-21"
     },
     "cohort": {
-      "raw": 74,
-      "included": 73,
+      "raw": 73,
+      "included": 72,
       "excluded": 1,
       "exclusion_counts": {
         "meeting_rep_not_visible": 1
       },
       "attribution_counts": {
-        "meeting_rep": 73
+        "meeting_rep": 72
       },
       "includes_lost": true
     },
     "api_requests": 334,
     "preview_only": false
   },
-  "team_pre_call_adherence": 52,
-  "team_post_call_adherence": 67,
+  "team_pre_call_adherence": 54,
+  "team_post_call_adherence": 72,
   "lane_pre_call_adherence": {
-    "1": 52
+    "1": 54
   },
   "lane_post_call_adherence": {
-    "1": 67
+    "1": 72
   },
   "dashboard_schema_version": 3
 }
