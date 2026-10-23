@@ -162,7 +162,6 @@ REP_QUOTAS = {
     "Luke Herman": 0,
     "Joe Vaughan": 0,
     "Joe Dysert": 0,
-    "Oscar Pugh": 0,
     "Ariella Irvine": 0,
 }
 
