@@ -105,8 +105,16 @@ CF_LEAD_OWNER_ID           = "cf_gOfS9pFwext58oberEegLyix8hZzeHrxhCZOVh3P3rd"
 CF_QUALIFIED_ID            = "cf_ZDx7NBQaDzV1yYrFcBMzt6cIYj81dAcswpNN0CQzCPS"
 CF_CALL_DISPOSITION_ID     = "cf_n2QvikNfeZ0uWObMsyCJmnXnrbWNLGlSvYiKJTwxTqU"
 CF_FUNNEL_NAME_ID          = "cf_xqDQE8fkPsWa0RNEve7hcaxKblCe6489XeZGRDzyPdX"
+CF_BUSINESS_LINE_ID        = "cf_aJlNlilQZIgLLuhcymNN8fiOzewnFxrbWjLZFPmsucO"
 CF_FIRST_SALES_CALL_BOOKED = "cf_LFdYEQ6bsgp49YjZzefypDmdVx8iwuakWDSLPLpVrBq"
 CF_LOST_REASON_ID          = "cf_R4i05fLNOQP8yveAs4ofTMMYGAQnkLLklunP4lov2Bt"
+
+# Keep booked totals aligned with the MTD funnel and team report: TLG/PPA
+# bookings are outside the VP sales scorecard.
+EXCLUDED_BUSINESS_LINES = {
+    "The Land Geek (TLG)",
+    "Publishing Profits Academy (PPA)",
+}
 
 # Fields to request when fetching individual leads
 LEAD_FIELDS = ",".join([
@@ -116,6 +124,7 @@ LEAD_FIELDS = ",".join([
     f"custom.{CF_QUALIFIED_ID}",
     f"custom.{CF_CALL_DISPOSITION_ID}",
     f"custom.{CF_FUNNEL_NAME_ID}",
+    f"custom.{CF_BUSINESS_LINE_ID}",
     f"custom.{CF_FIRST_SALES_CALL_BOOKED}",
     f"custom.{CF_LOST_REASON_ID}",
     "opportunities",
@@ -321,6 +330,7 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
     excluded_status = 0
     excluded_user = 0
     excluded_funnel = 0
+    excluded_business_line = 0
 
     # Raw all-owner totals are retained for diagnostics. The scorecard totals
     # shown to users are calculated from the displayed Lane 1 roster below.
@@ -360,6 +370,18 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
         funnel_raw = lead.get(f"custom.{CF_FUNNEL_NAME_ID}", "")
         if not funnel_raw:
             funnel_raw = custom.get(CF_FUNNEL_NAME_ID, "")
+
+        business_line_raw = lead.get(f"custom.{CF_BUSINESS_LINE_ID}", "")
+        if not business_line_raw:
+            business_line_raw = custom.get(CF_BUSINESS_LINE_ID, "")
+        if isinstance(business_line_raw, list):
+            business_line_raw = business_line_raw[0] if business_line_raw else ""
+        if isinstance(business_line_raw, dict):
+            business_line_raw = business_line_raw.get("name") or business_line_raw.get("value") or ""
+        business_line = str(business_line_raw).strip()
+        if business_line in EXCLUDED_BUSINESS_LINES:
+            excluded_business_line += 1
+            continue
 
         rep_name = resolve_owner(owner_raw, user_map, name_to_id)
 
@@ -520,7 +542,7 @@ def fetch_booked_leads(monday_str, today_str, user_map, name_to_id):
         elif not is_past:
             crm_skipped_future += 1
 
-    print(f"  Excluded: {excluded_status} by lead status, {excluded_user} by user, {excluded_funnel} by funnel", flush=True)
+    print(f"  Excluded: {excluded_status} by lead status, {excluded_user} by user, {excluded_funnel} by funnel, {excluded_business_line} by business line", flush=True)
     print(f"  Qualifying leads: {sum(rep_booked.values())} across {len(rep_booked)} reps", flush=True)
     if crm_skipped_future:
         print(f"  ℹ️ CRM compliance skipped for {crm_skipped_future} leads (meeting today, not yet past)", flush=True)
