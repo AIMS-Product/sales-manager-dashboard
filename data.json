@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29 02:45 PM PDT",
+  "updated_at": "2026-10-29 03:00 PM PDT",
   "week_label": "Oct 26 \u2013 Nov 01, 2026",
   "monday_str": "2026-10-26",
   "today_str": "2026-10-29",
@@ -51,7 +51,7 @@
   "team_close_rate": 13.7,
   "team_avg_rev_per_deal": 6966.4,
   "team_crm_compliance": 61.0,
-  "team_task_adherence": 55.5,
+  "team_task_adherence": 55.8,
   "qa_score_meta": {
     "available": true,
     "source": "Avoma scorecard evaluations",
@@ -85,11 +85,11 @@
       "count": 3
     },
     {
-      "funnel": "YouTube",
+      "funnel": "Google Ads",
       "count": 2
     },
     {
-      "funnel": "Google Ads",
+      "funnel": "YouTube",
       "count": 2
     },
     {
@@ -210,6 +210,14 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_Jxy4n3d6FThZh9QJcLLMZG86tzkl3TzcTkCF3ND0dwk",
+            "name": "Kulin Patel",
+            "date": "2026-10-29",
+            "funnel": "Unknown",
+            "meeting_outcome": "",
+            "meeting_status": "upcoming"
+          },
+          {
             "lead_id": "lead_vOgthWEpZTyz4PFmVWPdX6etTe1FrykQFWR6ZxjvMw4",
             "name": "Angelica McCree",
             "date": "2026-10-29",
@@ -232,14 +240,6 @@
             "funnel": "Internal Webinar",
             "meeting_outcome": "",
             "meeting_status": ""
-          },
-          {
-            "lead_id": "lead_Jxy4n3d6FThZh9QJcLLMZG86tzkl3TzcTkCF3ND0dwk",
-            "name": "Kulin Patel",
-            "date": "2026-10-29",
-            "funnel": "Unknown",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
           },
           {
             "lead_id": "lead_432GdPuecCgHAiZaWw1DNl7VvMWbmeEJiC1mI3r1qwh",
@@ -532,9 +532,9 @@
           }
         ]
       },
-      "task_adherence": 71.4,
+      "task_adherence": 73.7,
       "tasks_overdue": 10,
-      "tasks_incomplete": 35,
+      "tasks_incomplete": 38,
       "open_leads": 51,
       "est_pipeline": 122400,
       "is_manager": false,
@@ -1298,6 +1298,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Sierra Izod",
+            "lead_id": "lead_XRQmT9ZWiRImVrWirn4gm376HDkSAFyLoZMBS9As28r",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Julie Robinson",
             "lead_id": "lead_bzchHscqf5KD0tXrhGPgw3hhkEckO6Zr1RR9hNE9WZd",
             "missing": [
@@ -1335,13 +1342,6 @@
           {
             "name": "Jerry John",
             "lead_id": "lead_TpVIvQz0vFdv0BoQRAZ8GtsmtOYCCOLF89gHfHmOa0s",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Sierra Izod",
-            "lead_id": "lead_XRQmT9ZWiRImVrWirn4gm376HDkSAFyLoZMBS9As28r",
             "missing": [
               "Disposition"
             ]
@@ -1446,20 +1446,20 @@
             "meeting_status": "completed"
           },
           {
-            "lead_id": "lead_tanVcwxn3Dbw2YSSoLjt27mPZjS2Y1axKgxzG62r7Cj",
-            "name": "Joshua Coney",
-            "date": "2026-10-26",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": ""
-          },
-          {
             "lead_id": "lead_XRQmT9ZWiRImVrWirn4gm376HDkSAFyLoZMBS9As28r",
             "name": "Sierra Izod",
             "date": "2026-10-26",
             "funnel": "Google Ads",
             "meeting_outcome": "No Show",
             "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_tanVcwxn3Dbw2YSSoLjt27mPZjS2Y1axKgxzG62r7Cj",
+            "name": "Joshua Coney",
+            "date": "2026-10-26",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
           }
         ],
         "shown": [
@@ -1643,7 +1643,7 @@
       "rep_owner_id": "user_F0VeLnOQlWpkDncNW8rBl1V2QJ08fnDt6DcUjNATUJK",
       "adherence": {
         "pre_call_pct": 80,
-        "post_call_pct": 92,
+        "post_call_pct": 100,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -1672,10 +1672,10 @@
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 5,
+            "done": 6,
             "eligible": 6,
             "exempt": 9,
-            "pct": 83
+            "pct": 100
           },
           "recap_email": {
             "label": "Recap email sent",
@@ -2159,9 +2159,7 @@
                 "url": "https://app.close.com/lead/lead_SCfiAJJ7XMl8jyKuWCcDKxjUiS4K3M9NFzgqIme3pik/",
                 "status_label": "\ud83d\udcde HOT- Follow Up",
                 "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "missed": [
+              },
               {
                 "id": "lead_X4Qdj0sQ0FxR7hHWX4qo4ePHjPr9orf2DUK4wGyp73u",
                 "name": "Philip Burrell",
@@ -2172,6 +2170,7 @@
                 "opportunity_status": "Call Booked"
               }
             ],
+            "missed": [],
             "exempt": [
               {
                 "id": "lead_tanVcwxn3Dbw2YSSoLjt27mPZjS2Y1axKgxzG62r7Cj",
@@ -2383,7 +2382,7 @@
         }
       },
       "pre_call_adherence": 80,
-      "post_call_adherence": 92,
+      "post_call_adherence": 100,
       "opportunity_status": {
         "hot": {
           "count": 14
@@ -3506,6 +3505,14 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw",
+            "name": "Marcelus Tobias",
+            "date": "2026-10-29",
+            "funnel": "Internal Webinar",
+            "meeting_outcome": "",
+            "meeting_status": "in-progress"
+          },
+          {
             "lead_id": "lead_crvG3IFzHlJ9DL25nwqyEg8DFbMfTLm4tBFvmuYvi2i",
             "name": "Kanika Spataro",
             "date": "2026-10-29",
@@ -3534,14 +3541,6 @@
             "name": "Gilad Solter",
             "date": "2026-10-29",
             "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
-          {
-            "lead_id": "lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw",
-            "name": "Marcelus Tobias",
-            "date": "2026-10-29",
-            "funnel": "Internal Webinar",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
           },
@@ -3674,18 +3673,18 @@
         ],
         "upcoming": [
           {
-            "lead_id": "lead_DXx6ejSxhmlSkneTT6hrdWQ9qph5FqODi3wZdSHfLsr",
-            "name": "Gilad Solter",
-            "date": "2026-10-29",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
-          {
             "lead_id": "lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw",
             "name": "Marcelus Tobias",
             "date": "2026-10-29",
             "funnel": "Internal Webinar",
+            "meeting_outcome": "",
+            "meeting_status": "in-progress"
+          },
+          {
+            "lead_id": "lead_DXx6ejSxhmlSkneTT6hrdWQ9qph5FqODi3wZdSHfLsr",
+            "name": "Gilad Solter",
+            "date": "2026-10-29",
+            "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
           }
@@ -3720,40 +3719,40 @@
       "lane": 1,
       "rep_owner_id": "user_BaN2TstWtyF34eaQSSLG11j6DhKKm67Y6JltbIYCafO",
       "adherence": {
-        "pre_call_pct": 87,
-        "post_call_pct": 90,
+        "pre_call_pct": 88,
+        "post_call_pct": 84,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
             "phase": "pre_call",
-            "done": 9,
-            "eligible": 10,
+            "done": 10,
+            "eligible": 11,
             "exempt": 0,
-            "pct": 90
+            "pct": 91
           },
           "precall_text": {
             "label": "Pre-call text",
             "phase": "pre_call",
-            "done": 9,
-            "eligible": 10,
+            "done": 10,
+            "eligible": 11,
             "exempt": 0,
-            "pct": 90
+            "pct": 91
           },
           "day_of_confirmation_text": {
             "label": "Day-of confirmation",
             "phase": "pre_call",
-            "done": 8,
-            "eligible": 10,
+            "done": 9,
+            "eligible": 11,
             "exempt": 0,
-            "pct": 80
+            "pct": 82
           },
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
             "done": 4,
-            "eligible": 5,
+            "eligible": 6,
             "exempt": 5,
-            "pct": 80
+            "pct": 67
           },
           "recap_email": {
             "label": "Recap email sent",
@@ -3840,6 +3839,15 @@
                 "opportunity_status": "No Show"
               },
               {
+                "id": "lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw",
+                "name": "Marcelus Tobias",
+                "booked_date": "2026-10-29",
+                "scored_call_at": "2026-10-29T15:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              },
+              {
                 "id": "lead_wtoN8qLPqJMf9DZowmWAjxVFKnMaUNJ5vJpLBMDYplS",
                 "name": "Valerie Tindill",
                 "booked_date": "2026-10-29",
@@ -3937,6 +3945,15 @@
                 "opportunity_status": "No Show"
               },
               {
+                "id": "lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw",
+                "name": "Marcelus Tobias",
+                "booked_date": "2026-10-29",
+                "scored_call_at": "2026-10-29T15:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              },
+              {
                 "id": "lead_wtoN8qLPqJMf9DZowmWAjxVFKnMaUNJ5vJpLBMDYplS",
                 "name": "Valerie Tindill",
                 "booked_date": "2026-10-29",
@@ -4025,6 +4042,15 @@
                 "opportunity_status": "No Show"
               },
               {
+                "id": "lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw",
+                "name": "Marcelus Tobias",
+                "booked_date": "2026-10-29",
+                "scored_call_at": "2026-10-29T15:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              },
+              {
                 "id": "lead_wtoN8qLPqJMf9DZowmWAjxVFKnMaUNJ5vJpLBMDYplS",
                 "name": "Valerie Tindill",
                 "booked_date": "2026-10-29",
@@ -4102,6 +4128,15 @@
                 "booked_date": "2026-10-29",
                 "scored_call_at": "2026-10-29T12:00:00-07:00",
                 "url": "https://app.close.com/lead/lead_HylcMaqFzL090pmS39gD1VFHzuFo5A9ZbJSxQAsX8nW/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              },
+              {
+                "id": "lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw",
+                "name": "Marcelus Tobias",
+                "booked_date": "2026-10-29",
+                "scored_call_at": "2026-10-29T15:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_kdMicR1l4ZB9el3ov2jbeUahbM6uLNgCqCDYZ967GDw/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "Call Booked"
               }
@@ -4253,8 +4288,8 @@
           }
         }
       },
-      "pre_call_adherence": 87,
-      "post_call_adherence": 90,
+      "pre_call_adherence": 88,
+      "post_call_adherence": 84,
       "opportunity_status": {
         "hot": {
           "count": 13
@@ -6587,39 +6622,39 @@
   ],
   "team_adherence": {
     "pre_call_pct": 87,
-    "post_call_pct": 85,
+    "post_call_pct": 86,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
         "phase": "pre_call",
-        "done": 66,
-        "eligible": 75,
+        "done": 67,
+        "eligible": 76,
         "exempt": 0,
         "pct": 88
       },
       "precall_text": {
         "label": "Pre-call text",
         "phase": "pre_call",
-        "done": 70,
-        "eligible": 75,
+        "done": 71,
+        "eligible": 76,
         "exempt": 0,
         "pct": 93
       },
       "day_of_confirmation_text": {
         "label": "Day-of confirmation",
         "phase": "pre_call",
-        "done": 59,
-        "eligible": 75,
+        "done": 60,
+        "eligible": 76,
         "exempt": 0,
         "pct": 79
       },
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
-        "done": 29,
-        "eligible": 38,
+        "done": 30,
+        "eligible": 39,
         "exempt": 37,
-        "pct": 76
+        "pct": 77
       },
       "recap_email": {
         "label": "Recap email sent",
@@ -6634,39 +6669,39 @@
   "lane_adherence": {
     "1": {
       "pre_call_pct": 87,
-      "post_call_pct": 85,
+      "post_call_pct": 86,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
           "phase": "pre_call",
-          "done": 66,
-          "eligible": 75,
+          "done": 67,
+          "eligible": 76,
           "exempt": 0,
           "pct": 88
         },
         "precall_text": {
           "label": "Pre-call text",
           "phase": "pre_call",
-          "done": 70,
-          "eligible": 75,
+          "done": 71,
+          "eligible": 76,
           "exempt": 0,
           "pct": 93
         },
         "day_of_confirmation_text": {
           "label": "Day-of confirmation",
           "phase": "pre_call",
-          "done": 59,
-          "eligible": 75,
+          "done": 60,
+          "eligible": 76,
           "exempt": 0,
           "pct": 79
         },
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
-          "done": 29,
-          "eligible": 38,
+          "done": 30,
+          "eligible": 39,
           "exempt": 37,
-          "pct": 76
+          "pct": 77
         },
         "recap_email": {
           "label": "Recap email sent",
@@ -6682,7 +6717,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-10-29T14:51:48.852060-07:00",
+    "generated_at": "2026-10-29T15:07:32.777179-07:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -6701,16 +6736,16 @@
       },
       "includes_lost": true
     },
-    "api_requests": 350,
+    "api_requests": 353,
     "preview_only": false
   },
   "team_pre_call_adherence": 87,
-  "team_post_call_adherence": 85,
+  "team_post_call_adherence": 86,
   "lane_pre_call_adherence": {
     "1": 87
   },
   "lane_post_call_adherence": {
-    "1": 85
+    "1": 86
   },
   "dashboard_schema_version": 3
 }
