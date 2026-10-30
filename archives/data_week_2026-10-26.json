@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30 03:30 PM PDT",
+  "updated_at": "2026-10-30 03:45 PM PDT",
   "week_label": "Oct 26 \u2013 Nov 01, 2026",
   "monday_str": "2026-10-26",
   "today_str": "2026-10-30",
@@ -51,7 +51,7 @@
   "team_close_rate": 14.6,
   "team_avg_rev_per_deal": 6560.21,
   "team_crm_compliance": 55.4,
-  "team_task_adherence": 55.0,
+  "team_task_adherence": 55.9,
   "qa_score_meta": {
     "available": true,
     "source": "Avoma scorecard evaluations",
@@ -64,9 +64,9 @@
     "generated_at": "2026-10-27T07:10:43-07:00",
     "stale": true
   },
-  "team_overdue": 176,
-  "team_open_leads": 284,
-  "team_est_pipeline": 681600,
+  "team_overdue": 172,
+  "team_open_leads": 283,
+  "team_est_pipeline": 679200,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -233,7 +233,7 @@
             "date": "2026-10-30",
             "funnel": "Internal Webinar",
             "meeting_outcome": "",
-            "meeting_status": "in-progress"
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_rR4w7x57SOm312XyVhuWYMMiD7FOxgjaeD5XK4dM06v",
@@ -482,6 +482,14 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_t6HOu3ydAbOLQ84eFZLrkACXJkOBOZHIknhZLE1Rvbh",
+            "name": "Nelda Flores",
+            "date": "2026-10-30",
+            "funnel": "Internal Webinar",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
             "lead_id": "lead_rR4w7x57SOm312XyVhuWYMMiD7FOxgjaeD5XK4dM06v",
             "name": "Marc Lumer",
             "date": "2026-10-30",
@@ -507,14 +515,6 @@
           }
         ],
         "upcoming": [
-          {
-            "lead_id": "lead_t6HOu3ydAbOLQ84eFZLrkACXJkOBOZHIknhZLE1Rvbh",
-            "name": "Nelda Flores",
-            "date": "2026-10-30",
-            "funnel": "Internal Webinar",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          },
           {
             "lead_id": "lead_kVwurYu4d5jLmMIhdXhnVRlbcwOOPqWsJJfugnkAIIQ",
             "name": "Jordan",
@@ -3625,7 +3625,7 @@
       "rep_owner_id": "user_6kp6k4OcqKqFNrxGjgMUncedjiCYC6JHU8EI28F7etV",
       "adherence": {
         "pre_call_pct": 96,
-        "post_call_pct": 94,
+        "post_call_pct": 100,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -3654,10 +3654,10 @@
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 7,
+            "done": 8,
             "eligible": 8,
             "exempt": 9,
-            "pct": 88
+            "pct": 100
           },
           "recap_email": {
             "label": "Recap email sent",
@@ -4205,6 +4205,15 @@
                 "opportunity_status": "WARM - Follow Up"
               },
               {
+                "id": "lead_OP0wSixQC6VPF0Em6ZsKFIEXz2T21Nvwu8H1XFj4CDQ",
+                "name": "Decarrio Hartfield",
+                "booked_date": "2026-10-30",
+                "scored_call_at": "2026-10-30T14:00:00-07:00",
+                "url": "https://app.close.com/lead/lead_OP0wSixQC6VPF0Em6ZsKFIEXz2T21Nvwu8H1XFj4CDQ/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "WARM - Follow Up"
+              },
+              {
                 "id": "lead_YKeMNh3BXma4rTDfdkcd23o9w7fXCsvpO91Qs9fzpBm",
                 "name": "Emile",
                 "booked_date": "2026-10-30",
@@ -4214,17 +4223,7 @@
                 "opportunity_status": "WARM - Follow Up"
               }
             ],
-            "missed": [
-              {
-                "id": "lead_OP0wSixQC6VPF0Em6ZsKFIEXz2T21Nvwu8H1XFj4CDQ",
-                "name": "Decarrio Hartfield",
-                "booked_date": "2026-10-30",
-                "scored_call_at": "2026-10-30T14:00:00-07:00",
-                "url": "https://app.close.com/lead/lead_OP0wSixQC6VPF0Em6ZsKFIEXz2T21Nvwu8H1XFj4CDQ/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "WARM - Follow Up"
-              }
-            ],
+            "missed": [],
             "exempt": [
               {
                 "id": "lead_ZrRjpLGeUV7oLPyzutkFYFpSDT21vJ9hvmHoCqG36fe",
@@ -4472,7 +4471,7 @@
         }
       },
       "pre_call_adherence": 96,
-      "post_call_adherence": 94,
+      "post_call_adherence": 100,
       "opportunity_status": {
         "hot": {
           "count": 2
@@ -4600,20 +4599,20 @@
       "metric_details": {
         "booked": [
           {
-            "lead_id": "lead_ZGv9jdtRPnpylCGpvcw8taLm2CR9twD7FIAMwhPQbr2",
-            "name": "Phil Pinkus",
+            "lead_id": "lead_vbCF7q9NcqlA8GTpVCHbgWQZuhkGeYrWmLSH19sBxtu",
+            "name": "Kong Xiong",
             "date": "2026-10-30",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": ""
           },
           {
-            "lead_id": "lead_vbCF7q9NcqlA8GTpVCHbgWQZuhkGeYrWmLSH19sBxtu",
-            "name": "Kong Xiong",
+            "lead_id": "lead_ZGv9jdtRPnpylCGpvcw8taLm2CR9twD7FIAMwhPQbr2",
+            "name": "Phil Pinkus",
             "date": "2026-10-30",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
-            "meeting_status": "in-progress"
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_iejpP8hTRGXrkeID6WjKrO7ZMUnBQywHy6gKlECWxKK",
@@ -4774,6 +4773,14 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_vbCF7q9NcqlA8GTpVCHbgWQZuhkGeYrWmLSH19sBxtu",
+            "name": "Kong Xiong",
+            "date": "2026-10-30",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
             "lead_id": "lead_ZGv9jdtRPnpylCGpvcw8taLm2CR9twD7FIAMwhPQbr2",
             "name": "Phil Pinkus",
             "date": "2026-10-30",
@@ -4822,16 +4829,7 @@
             "meeting_status": ""
           }
         ],
-        "upcoming": [
-          {
-            "lead_id": "lead_vbCF7q9NcqlA8GTpVCHbgWQZuhkGeYrWmLSH19sBxtu",
-            "name": "Kong Xiong",
-            "date": "2026-10-30",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          }
-        ],
+        "upcoming": [],
         "qualified": [
           {
             "lead_id": "lead_ZGv9jdtRPnpylCGpvcw8taLm2CR9twD7FIAMwhPQbr2",
@@ -4892,11 +4890,11 @@
         ],
         "deals": []
       },
-      "task_adherence": 88.2,
-      "tasks_overdue": 4,
-      "tasks_incomplete": 34,
-      "open_leads": 34,
-      "est_pipeline": 81600,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 33,
+      "open_leads": 33,
+      "est_pipeline": 79200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -5844,7 +5842,7 @@
             "date": "2026-10-30",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
-            "meeting_status": "in-progress"
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_dKYD3OXlKM4exomoJUseT5d7vDcTjZEANY7wK1GhwnS",
@@ -6013,6 +6011,14 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_mVVmnpt22oknoU08UFvmJGjNfiiWjucZs3t5uvli3Ap",
+            "name": "Aaron Cloud",
+            "date": "2026-10-30",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
             "lead_id": "lead_Eqfqy6kWCs5Ddo0PPIqIS8fuddgCqB9UGLg8HcjahUH",
             "name": "Dexter Barnes",
             "date": "2026-10-30",
@@ -6054,14 +6060,6 @@
           }
         ],
         "upcoming": [
-          {
-            "lead_id": "lead_mVVmnpt22oknoU08UFvmJGjNfiiWjucZs3t5uvli3Ap",
-            "name": "Aaron Cloud",
-            "date": "2026-10-30",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          },
           {
             "lead_id": "lead_dKYD3OXlKM4exomoJUseT5d7vDcTjZEANY7wK1GhwnS",
             "name": "Alylan Thompson",
@@ -8574,7 +8572,7 @@
   ],
   "team_adherence": {
     "pre_call_pct": 85,
-    "post_call_pct": 85,
+    "post_call_pct": 86,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -8603,10 +8601,10 @@
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
-        "done": 37,
+        "done": 38,
         "eligible": 49,
         "exempt": 56,
-        "pct": 76
+        "pct": 78
       },
       "recap_email": {
         "label": "Recap email sent",
@@ -8621,7 +8619,7 @@
   "lane_adherence": {
     "1": {
       "pre_call_pct": 85,
-      "post_call_pct": 85,
+      "post_call_pct": 86,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -8650,10 +8648,10 @@
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
-          "done": 37,
+          "done": 38,
           "eligible": 49,
           "exempt": 56,
-          "pct": 76
+          "pct": 78
         },
         "recap_email": {
           "label": "Recap email sent",
@@ -8669,7 +8667,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-10-30T15:37:33.450974-07:00",
+    "generated_at": "2026-10-30T15:53:37.494265-07:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -8688,16 +8686,16 @@
       },
       "includes_lost": true
     },
-    "api_requests": 388,
+    "api_requests": 389,
     "preview_only": false
   },
   "team_pre_call_adherence": 85,
-  "team_post_call_adherence": 85,
+  "team_post_call_adherence": 86,
   "lane_pre_call_adherence": {
     "1": 85
   },
   "lane_post_call_adherence": {
-    "1": 85
+    "1": 86
   },
   "dashboard_schema_version": 3
 }
