@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30 07:30 AM PDT",
+  "updated_at": "2026-10-30 07:45 AM PDT",
   "week_label": "Oct 26 \u2013 Nov 01, 2026",
   "monday_str": "2026-10-26",
   "today_str": "2026-10-30",
@@ -46,10 +46,10 @@
   "total_booked": 96,
   "total_shown": 32,
   "total_qualified": 29,
-  "total_deals": 10,
-  "total_revenue": 69664.0,
-  "team_close_rate": 10.4,
-  "team_avg_rev_per_deal": 6966.4,
+  "total_deals": 11,
+  "total_revenue": 75661.0,
+  "team_close_rate": 11.5,
+  "team_avg_rev_per_deal": 6878.27,
   "team_crm_compliance": 55.4,
   "team_task_adherence": 53.1,
   "qa_score_meta": {
@@ -658,8 +658,8 @@
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 5,
-            "eligible": 5,
+            "done": 6,
+            "eligible": 6,
             "exempt": 9,
             "pct": 100
           }
@@ -1308,6 +1308,15 @@
                 "opportunity_status": "HOT - Follow Up"
               },
               {
+                "id": "lead_X4Qdj0sQ0FxR7hHWX4qo4ePHjPr9orf2DUK4wGyp73u",
+                "name": "Philip Burrell",
+                "booked_date": "2026-10-29",
+                "scored_call_at": "2026-10-29T14:30:00-07:00",
+                "url": "https://app.close.com/lead/lead_X4Qdj0sQ0FxR7hHWX4qo4ePHjPr9orf2DUK4wGyp73u/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
                 "id": "lead_UJ4FjBKW4P8bZt2Zu4b0kpsiXTq0DMXeWZtNwFl8chz",
                 "name": "Usama Gawad",
                 "booked_date": "2026-10-29",
@@ -1558,7 +1567,7 @@
             "date": "2026-10-30",
             "funnel": "Website",
             "meeting_outcome": "",
-            "meeting_status": "in-progress"
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_OP0wSixQC6VPF0Em6ZsKFIEXz2T21Nvwu8H1XFj4CDQ",
@@ -1742,6 +1751,14 @@
         "no_shows": [],
         "no_outcome": [
           {
+            "lead_id": "lead_YKeMNh3BXma4rTDfdkcd23o9w7fXCsvpO91Qs9fzpBm",
+            "name": "Emile",
+            "date": "2026-10-30",
+            "funnel": "Website",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
             "lead_id": "lead_ZbNzVOLm2nYiP69HJRpVPMDaJsjrGBaedFzqhLZlJe0",
             "name": "Nick DiTommaso",
             "date": "2026-10-29",
@@ -1799,14 +1816,6 @@
           }
         ],
         "upcoming": [
-          {
-            "lead_id": "lead_YKeMNh3BXma4rTDfdkcd23o9w7fXCsvpO91Qs9fzpBm",
-            "name": "Emile",
-            "date": "2026-10-30",
-            "funnel": "Website",
-            "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          },
           {
             "lead_id": "lead_OP0wSixQC6VPF0Em6ZsKFIEXz2T21Nvwu8H1XFj4CDQ",
             "name": "Decarrio Hartfield",
@@ -3932,9 +3941,9 @@
       "booked": 15,
       "shown": 3,
       "qualified": 2,
-      "deals": 1,
-      "revenue": 5997.0,
-      "close_rate": 6.7,
+      "deals": 2,
+      "revenue": 11994.0,
+      "close_rate": 13.3,
       "qa_score": 1.96,
       "qa_score_count": 74,
       "avg_rev_per_deal": 5997.0,
@@ -4323,6 +4332,13 @@
           }
         ],
         "deals": [
+          {
+            "lead_id": "lead_hKTWDHNAgT6Qel8uwJPtAQ1VkeNjqKYc7VRoJexn170",
+            "name": "Kevin MacDonald",
+            "date": "2026-10-30",
+            "value": 5997.0,
+            "opportunity_count": 1
+          },
           {
             "lead_id": "lead_3pa99ePektLNhgTwOQiQrheIRaMdlmUHbKE1XfqeGxw",
             "name": "Jack Trinh",
@@ -7509,8 +7525,8 @@
       "recap_email": {
         "label": "Recap email sent",
         "phase": "post_call",
-        "done": 33,
-        "eligible": 36,
+        "done": 34,
+        "eligible": 37,
         "exempt": 43,
         "pct": 92
       }
@@ -7556,8 +7572,8 @@
         "recap_email": {
           "label": "Recap email sent",
           "phase": "post_call",
-          "done": 33,
-          "eligible": 36,
+          "done": 34,
+          "eligible": 37,
           "exempt": 43,
           "pct": 92
         }
@@ -7567,7 +7583,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-10-30T07:38:52.831623-07:00",
+    "generated_at": "2026-10-30T07:53:49.424310-07:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -7586,7 +7602,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 386,
+    "api_requests": 387,
     "preview_only": false
   },
   "team_pre_call_adherence": 85,
