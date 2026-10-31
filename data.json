@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31 11:30 AM PDT",
+  "updated_at": "2026-10-31 11:45 AM PDT",
   "week_label": "Oct 26 \u2013 Nov 01, 2026",
   "monday_str": "2026-10-26",
   "today_str": "2026-10-31",
@@ -46,10 +46,10 @@
   "total_booked": 103,
   "total_shown": 45,
   "total_qualified": 38,
-  "total_deals": 14,
-  "total_revenue": 91843.0,
-  "team_close_rate": 13.6,
-  "team_avg_rev_per_deal": 6560.21,
+  "total_deals": 15,
+  "total_revenue": 98740.0,
+  "team_close_rate": 14.6,
+  "team_avg_rev_per_deal": 6582.67,
   "team_crm_compliance": 55.7,
   "team_task_adherence": 53.0,
   "qa_score_meta": {
@@ -115,12 +115,12 @@
       "booked": 22,
       "shown": 8,
       "qualified": 7,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
+      "deals": 1,
+      "revenue": 6897.0,
+      "close_rate": 4.5,
       "qa_score": 2.25,
       "qa_score_count": 73,
-      "avg_rev_per_deal": null,
+      "avg_rev_per_deal": 6897.0,
       "crm_compliance": 43.9,
       "crm_filled": 25,
       "crm_total": 57,
@@ -267,6 +267,14 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_S01GxwQ33fHCy5ZYco1V5kfwtxIWBqiwO868ccwYSy1",
+            "name": "Deborah",
+            "date": "2026-10-31",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": "upcoming"
+          },
+          {
             "lead_id": "lead_RB1VMhK8XsbUcx3wTCV3dOWNuvr1YtHjUbIV5BvNWr5",
             "name": "Kiara Sikes",
             "date": "2026-10-31",
@@ -285,14 +293,6 @@
           {
             "lead_id": "lead_y4v8OWGK5QPZvrIlT28SExjohv1p5B7q5EHDirqUHOR",
             "name": "Crystal Mullins",
-            "date": "2026-10-31",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
-          {
-            "lead_id": "lead_S01GxwQ33fHCy5ZYco1V5kfwtxIWBqiwO868ccwYSy1",
-            "name": "Deborah",
             "date": "2026-10-31",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
@@ -603,16 +603,16 @@
         ],
         "upcoming": [
           {
-            "lead_id": "lead_y4v8OWGK5QPZvrIlT28SExjohv1p5B7q5EHDirqUHOR",
-            "name": "Crystal Mullins",
+            "lead_id": "lead_S01GxwQ33fHCy5ZYco1V5kfwtxIWBqiwO868ccwYSy1",
+            "name": "Deborah",
             "date": "2026-10-31",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
           },
           {
-            "lead_id": "lead_S01GxwQ33fHCy5ZYco1V5kfwtxIWBqiwO868ccwYSy1",
-            "name": "Deborah",
+            "lead_id": "lead_y4v8OWGK5QPZvrIlT28SExjohv1p5B7q5EHDirqUHOR",
+            "name": "Crystal Mullins",
             "date": "2026-10-31",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
@@ -685,7 +685,15 @@
             "meeting_status": "completed"
           }
         ],
-        "deals": []
+        "deals": [
+          {
+            "lead_id": "lead_rV3BjiIn2GldnoCjLsCSRqFg0yaUch9dzlv78t26VS8",
+            "name": "Robert Hackett",
+            "date": "2026-10-31",
+            "value": 6897.0,
+            "opportunity_count": 1
+          }
+        ]
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
@@ -1775,6 +1783,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Jimmy Plannett",
+            "lead_id": "lead_DcKzOeIAkBAgbpQzErHrqyNvJdjPnmkU9jC4JZV3w5Q",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "David Bazan",
             "lead_id": "lead_W7VlTgbf35eEtsXoo3sALkvUzJr1mj8p1ooJ96Zqhya",
             "missing": [
@@ -1805,13 +1820,6 @@
           {
             "name": "Cecile Ypon",
             "lead_id": "lead_10zKhwbPqEASzyhuhtoXjmmDMnCkRkgHDz6PbCTBW9j",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Jimmy Plannett",
-            "lead_id": "lead_DcKzOeIAkBAgbpQzErHrqyNvJdjPnmkU9jC4JZV3w5Q",
             "missing": [
               "Disposition"
             ]
@@ -1907,6 +1915,14 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_DcKzOeIAkBAgbpQzErHrqyNvJdjPnmkU9jC4JZV3w5Q",
+            "name": "Jimmy Plannett",
+            "date": "2026-10-30",
+            "funnel": "Internal Webinar",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          },
+          {
             "lead_id": "lead_fFdunDeTHQKGxgALgzzGQcaKyVqtpzDKdlJv2zVGlAc",
             "name": "Wahome Wahome",
             "date": "2026-10-30",
@@ -1917,14 +1933,6 @@
           {
             "lead_id": "lead_10zKhwbPqEASzyhuhtoXjmmDMnCkRkgHDz6PbCTBW9j",
             "name": "Cecile Ypon",
-            "date": "2026-10-30",
-            "funnel": "Internal Webinar",
-            "meeting_outcome": "Completed",
-            "meeting_status": "completed"
-          },
-          {
-            "lead_id": "lead_DcKzOeIAkBAgbpQzErHrqyNvJdjPnmkU9jC4JZV3w5Q",
-            "name": "Jimmy Plannett",
             "date": "2026-10-30",
             "funnel": "Internal Webinar",
             "meeting_outcome": "Completed",
@@ -2053,16 +2061,16 @@
         ],
         "shown": [
           {
-            "lead_id": "lead_10zKhwbPqEASzyhuhtoXjmmDMnCkRkgHDz6PbCTBW9j",
-            "name": "Cecile Ypon",
+            "lead_id": "lead_DcKzOeIAkBAgbpQzErHrqyNvJdjPnmkU9jC4JZV3w5Q",
+            "name": "Jimmy Plannett",
             "date": "2026-10-30",
             "funnel": "Internal Webinar",
             "meeting_outcome": "Completed",
             "meeting_status": "completed"
           },
           {
-            "lead_id": "lead_DcKzOeIAkBAgbpQzErHrqyNvJdjPnmkU9jC4JZV3w5Q",
-            "name": "Jimmy Plannett",
+            "lead_id": "lead_10zKhwbPqEASzyhuhtoXjmmDMnCkRkgHDz6PbCTBW9j",
+            "name": "Cecile Ypon",
             "date": "2026-10-30",
             "funnel": "Internal Webinar",
             "meeting_outcome": "Completed",
@@ -2204,16 +2212,16 @@
         "upcoming": [],
         "qualified": [
           {
-            "lead_id": "lead_10zKhwbPqEASzyhuhtoXjmmDMnCkRkgHDz6PbCTBW9j",
-            "name": "Cecile Ypon",
+            "lead_id": "lead_DcKzOeIAkBAgbpQzErHrqyNvJdjPnmkU9jC4JZV3w5Q",
+            "name": "Jimmy Plannett",
             "date": "2026-10-30",
             "funnel": "Internal Webinar",
             "meeting_outcome": "Completed",
             "meeting_status": "completed"
           },
           {
-            "lead_id": "lead_DcKzOeIAkBAgbpQzErHrqyNvJdjPnmkU9jC4JZV3w5Q",
-            "name": "Jimmy Plannett",
+            "lead_id": "lead_10zKhwbPqEASzyhuhtoXjmmDMnCkRkgHDz6PbCTBW9j",
+            "name": "Cecile Ypon",
             "date": "2026-10-30",
             "funnel": "Internal Webinar",
             "meeting_outcome": "Completed",
@@ -9381,7 +9389,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-10-31T11:38:35.839598-07:00",
+    "generated_at": "2026-10-31T11:54:35.817007-07:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
