@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30 08:45 PM PDT",
+  "updated_at": "2026-10-30 09:00 PM PDT",
   "week_label": "Oct 26 \u2013 Nov 01, 2026",
   "monday_str": "2026-10-26",
   "today_str": "2026-10-30",
@@ -93,11 +93,11 @@
       "count": 4
     },
     {
-      "funnel": "WWWS",
+      "funnel": "Unknown",
       "count": 1
     },
     {
-      "funnel": "Unknown",
+      "funnel": "WWWS",
       "count": 1
     }
   ],
@@ -5888,6 +5888,20 @@
         ],
         "missing_leads": [
           {
+            "name": "Jameel O Hartley",
+            "lead_id": "lead_FHiB45CgPNWkeEnjWHsq8BJz0OtDnZSPckJkCDIJihb",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Tonia Smith",
+            "lead_id": "lead_dCyWccEwPyG0kjw6cLgAU0rzla6MZTjaakd832F1kTq",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Raymond Mayoliz",
             "lead_id": "lead_FirWNVsixet4rUcZ3WwjJdNRI54FdDcNaurpxihA0QG",
             "missing": [
@@ -5933,13 +5947,6 @@
             ]
           },
           {
-            "name": "Tonia Smith",
-            "lead_id": "lead_dCyWccEwPyG0kjw6cLgAU0rzla6MZTjaakd832F1kTq",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
             "name": "David Vargas",
             "lead_id": "lead_4Tvrp0EXbXJ88aZJef9GWWd5MLame44IcKbgJldw61x",
             "missing": [
@@ -5949,13 +5956,6 @@
           {
             "name": "Tim Klassen",
             "lead_id": "lead_9Zq3saEMMMSe11yJZSjBIWX4uNrFBv0KNyUkR90s36N",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Jameel O Hartley",
-            "lead_id": "lead_FHiB45CgPNWkeEnjWHsq8BJz0OtDnZSPckJkCDIJihb",
             "missing": [
               "Disposition"
             ]
@@ -6037,6 +6037,14 @@
             "meeting_status": ""
           },
           {
+            "lead_id": "lead_dCyWccEwPyG0kjw6cLgAU0rzla6MZTjaakd832F1kTq",
+            "name": "Tonia Smith",
+            "date": "2026-10-27",
+            "funnel": "Unknown",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
+          },
+          {
             "lead_id": "lead_dcDKxAFZrwVxdOrGGZy6OvLeNrEcS02xknO64Jvpirr",
             "name": "Kenneth Cullins",
             "date": "2026-10-27",
@@ -6045,10 +6053,10 @@
             "meeting_status": "completed"
           },
           {
-            "lead_id": "lead_dCyWccEwPyG0kjw6cLgAU0rzla6MZTjaakd832F1kTq",
-            "name": "Tonia Smith",
-            "date": "2026-10-27",
-            "funnel": "Unknown",
+            "lead_id": "lead_FHiB45CgPNWkeEnjWHsq8BJz0OtDnZSPckJkCDIJihb",
+            "name": "Jameel O Hartley",
+            "date": "2026-10-26",
+            "funnel": "Reactivation Scrapers",
             "meeting_outcome": "No Show",
             "meeting_status": "completed"
           },
@@ -6067,14 +6075,6 @@
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": ""
-          },
-          {
-            "lead_id": "lead_FHiB45CgPNWkeEnjWHsq8BJz0OtDnZSPckJkCDIJihb",
-            "name": "Jameel O Hartley",
-            "date": "2026-10-26",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "No Show",
-            "meeting_status": "completed"
           }
         ],
         "shown": [
@@ -8854,7 +8854,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-10-30T20:54:32.230765-07:00",
+    "generated_at": "2026-10-30T21:09:29.351479-07:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -8873,7 +8873,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 393,
+    "api_requests": 392,
     "preview_only": false
   },
   "team_pre_call_adherence": 86,
