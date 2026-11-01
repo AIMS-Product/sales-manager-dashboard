@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01 07:30 AM PST",
+  "updated_at": "2026-11-01 07:45 AM PST",
   "week_label": "Oct 26 \u2013 Nov 01, 2026",
   "monday_str": "2026-10-26",
   "today_str": "2026-11-01",
@@ -139,6 +139,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Crystal Mullins",
+            "lead_id": "lead_y4v8OWGK5QPZvrIlT28SExjohv1p5B7q5EHDirqUHOR",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Kelii Chow",
             "lead_id": "lead_2YCRisiud6gseuna1Exd9VYHr66pcQe4AnQYMc5OLug",
             "missing": [
@@ -204,13 +211,6 @@
               "Disposition",
               "Qualified",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Crystal Mullins",
-            "lead_id": "lead_y4v8OWGK5QPZvrIlT28SExjohv1p5B7q5EHDirqUHOR",
-            "missing": [
-              "Disposition"
             ]
           },
           {
@@ -288,6 +288,14 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_y4v8OWGK5QPZvrIlT28SExjohv1p5B7q5EHDirqUHOR",
+            "name": "Crystal Mullins",
+            "date": "2026-10-31",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
+          },
+          {
             "lead_id": "lead_2YCRisiud6gseuna1Exd9VYHr66pcQe4AnQYMc5OLug",
             "name": "Kelii Chow",
             "date": "2026-10-31",
@@ -317,14 +325,6 @@
             "date": "2026-10-31",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "Cancelled",
-            "meeting_status": "completed"
-          },
-          {
-            "lead_id": "lead_y4v8OWGK5QPZvrIlT28SExjohv1p5B7q5EHDirqUHOR",
-            "name": "Crystal Mullins",
-            "date": "2026-10-31",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "No Show",
             "meeting_status": "completed"
           },
           {
@@ -532,6 +532,14 @@
         ],
         "no_shows": [
           {
+            "lead_id": "lead_y4v8OWGK5QPZvrIlT28SExjohv1p5B7q5EHDirqUHOR",
+            "name": "Crystal Mullins",
+            "date": "2026-10-31",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
+          },
+          {
             "lead_id": "lead_RB1VMhK8XsbUcx3wTCV3dOWNuvr1YtHjUbIV5BvNWr5",
             "name": "Kiara Sikes",
             "date": "2026-10-31",
@@ -544,14 +552,6 @@
             "name": "Ade Ayo",
             "date": "2026-10-31",
             "funnel": "Internal Webinar",
-            "meeting_outcome": "No Show",
-            "meeting_status": "completed"
-          },
-          {
-            "lead_id": "lead_y4v8OWGK5QPZvrIlT28SExjohv1p5B7q5EHDirqUHOR",
-            "name": "Crystal Mullins",
-            "date": "2026-10-31",
-            "funnel": "Reactivation Scrapers",
             "meeting_outcome": "No Show",
             "meeting_status": "completed"
           },
@@ -731,7 +731,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 70,
+      "tasks_incomplete": 69,
       "open_leads": 31,
       "est_pipeline": 74400,
       "is_manager": false,
@@ -4062,9 +4062,9 @@
           }
         ]
       },
-      "task_adherence": 93.8,
+      "task_adherence": 93.9,
       "tasks_overdue": 4,
-      "tasks_incomplete": 65,
+      "tasks_incomplete": 66,
       "open_leads": 21,
       "est_pipeline": 50400,
       "is_manager": false,
@@ -8874,7 +8874,7 @@
             "date": "2026-11-01",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
-            "meeting_status": "in-progress"
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_Lcs4DqN8SnuyqcluTC1RG3JeBv8KnP7vtv8s0OBwrWN",
@@ -8903,16 +8903,17 @@
         ],
         "shown": [],
         "no_shows": [],
-        "no_outcome": [],
-        "upcoming": [
+        "no_outcome": [
           {
             "lead_id": "lead_h1KjtpSAO5RYIeoa6RG54K3LlBSRWhjgamz8sXYkWBT",
             "name": "Maimunat Tijani",
             "date": "2026-11-01",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
-            "meeting_status": "in-progress"
-          },
+            "meeting_status": ""
+          }
+        ],
+        "upcoming": [
           {
             "lead_id": "lead_Lcs4DqN8SnuyqcluTC1RG3JeBv8KnP7vtv8s0OBwrWN",
             "name": "Pollard Short",
@@ -9705,7 +9706,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-01T07:37:10.115822-08:00",
+    "generated_at": "2026-11-01T07:52:04.114153-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
