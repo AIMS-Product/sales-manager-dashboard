@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01 07:30 PM PST",
+  "updated_at": "2026-11-01 07:45 PM PST",
   "week_label": "Oct 26 \u2013 Nov 01, 2026",
   "monday_str": "2026-10-26",
   "today_str": "2026-11-01",
@@ -5128,6 +5128,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Raymond Mayoliz",
+            "lead_id": "lead_FirWNVsixet4rUcZ3WwjJdNRI54FdDcNaurpxihA0QG",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Makeva Corley",
             "lead_id": "lead_AAJy82tv8R4RrOexwOMnwYuOlAkqwXobF6fuzBjOhJM",
             "missing": [
@@ -5155,13 +5162,6 @@
           {
             "name": "Tonia Smith",
             "lead_id": "lead_dCyWccEwPyG0kjw6cLgAU0rzla6MZTjaakd832F1kTq",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Raymond Mayoliz",
-            "lead_id": "lead_FirWNVsixet4rUcZ3WwjJdNRI54FdDcNaurpxihA0QG",
             "missing": [
               "Disposition"
             ]
@@ -5277,6 +5277,14 @@
             "meeting_status": ""
           },
           {
+            "lead_id": "lead_FirWNVsixet4rUcZ3WwjJdNRI54FdDcNaurpxihA0QG",
+            "name": "Raymond Mayoliz",
+            "date": "2026-10-29",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
+          },
+          {
             "lead_id": "lead_AAJy82tv8R4RrOexwOMnwYuOlAkqwXobF6fuzBjOhJM",
             "name": "Makeva Corley",
             "date": "2026-10-29",
@@ -5291,14 +5299,6 @@
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "Cancelled",
             "meeting_status": "declined-by-org"
-          },
-          {
-            "lead_id": "lead_FirWNVsixet4rUcZ3WwjJdNRI54FdDcNaurpxihA0QG",
-            "name": "Raymond Mayoliz",
-            "date": "2026-10-29",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "No Show",
-            "meeting_status": "completed"
           },
           {
             "lead_id": "lead_9Zq3saEMMMSe11yJZSjBIWX4uNrFBv0KNyUkR90s36N",
@@ -5417,18 +5417,18 @@
         ],
         "no_shows": [
           {
-            "lead_id": "lead_AAJy82tv8R4RrOexwOMnwYuOlAkqwXobF6fuzBjOhJM",
-            "name": "Makeva Corley",
-            "date": "2026-10-29",
-            "funnel": "Internal Webinar",
-            "meeting_outcome": "No Show",
-            "meeting_status": "completed"
-          },
-          {
             "lead_id": "lead_FirWNVsixet4rUcZ3WwjJdNRI54FdDcNaurpxihA0QG",
             "name": "Raymond Mayoliz",
             "date": "2026-10-29",
             "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_AAJy82tv8R4RrOexwOMnwYuOlAkqwXobF6fuzBjOhJM",
+            "name": "Makeva Corley",
+            "date": "2026-10-29",
+            "funnel": "Internal Webinar",
             "meeting_outcome": "No Show",
             "meeting_status": "completed"
           },
@@ -9849,7 +9849,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-01T19:38:34.718430-08:00",
+    "generated_at": "2026-11-01T19:53:33.853437-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
