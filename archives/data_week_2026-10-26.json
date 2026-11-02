@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01 05:00 PM PST",
+  "updated_at": "2026-11-01 05:15 PM PST",
   "week_label": "Oct 26 \u2013 Nov 01, 2026",
   "monday_str": "2026-10-26",
   "today_str": "2026-11-01",
@@ -6474,6 +6474,15 @@
         ],
         "missing_leads": [
           {
+            "name": "Bryce Patterson",
+            "lead_id": "lead_I2zUO5JAqLOSTQZPnQlMuzagVDXZNLbrzDIzkh51xi1",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "David Vargas",
             "lead_id": "lead_4Tvrp0EXbXJ88aZJef9GWWd5MLame44IcKbgJldw61x",
             "missing": [
@@ -6492,15 +6501,6 @@
             "lead_id": "lead_FirWNVsixet4rUcZ3WwjJdNRI54FdDcNaurpxihA0QG",
             "missing": [
               "Disposition"
-            ]
-          },
-          {
-            "name": "Bryce Patterson",
-            "lead_id": "lead_I2zUO5JAqLOSTQZPnQlMuzagVDXZNLbrzDIzkh51xi1",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
             ]
           },
           {
@@ -6614,20 +6614,20 @@
             "meeting_status": ""
           },
           {
-            "lead_id": "lead_FirWNVsixet4rUcZ3WwjJdNRI54FdDcNaurpxihA0QG",
-            "name": "Raymond Mayoliz",
-            "date": "2026-10-29",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "No Show",
-            "meeting_status": "completed"
-          },
-          {
             "lead_id": "lead_I2zUO5JAqLOSTQZPnQlMuzagVDXZNLbrzDIzkh51xi1",
             "name": "Bryce Patterson",
             "date": "2026-10-29",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "Cancelled",
             "meeting_status": "declined-by-org"
+          },
+          {
+            "lead_id": "lead_FirWNVsixet4rUcZ3WwjJdNRI54FdDcNaurpxihA0QG",
+            "name": "Raymond Mayoliz",
+            "date": "2026-10-29",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
           },
           {
             "lead_id": "lead_9Zq3saEMMMSe11yJZSjBIWX4uNrFBv0KNyUkR90s36N",
@@ -9847,7 +9847,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-01T17:09:55.955316-08:00",
+    "generated_at": "2026-11-01T17:23:28.657433-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
