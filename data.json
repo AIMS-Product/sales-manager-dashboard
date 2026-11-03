@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03 02:00 PM PST",
+  "updated_at": "2026-11-03 02:15 PM PST",
   "week_label": "Nov 02 \u2013 Nov 08, 2026",
   "monday_str": "2026-11-02",
   "today_str": "2026-11-03",
@@ -720,6 +720,14 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_aGXqi3BJnvF8pJ3eay6goyB1dEwgaJtsGenMPRRbITw",
+            "name": "Lewis Davis",
+            "date": "2026-11-03",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
+          },
+          {
             "lead_id": "lead_Ds65JW8Y0MHDOpvvhCCApYrwGjX5C3GmW82wV0O2pRB",
             "name": "Joyce Brewer",
             "date": "2026-11-03",
@@ -730,14 +738,6 @@
           {
             "lead_id": "lead_mHBHTd6l31oQbXTRqezdhv067mrIhPPEuR9ohyVFvyK",
             "name": "Jeffrey Stack",
-            "date": "2026-11-03",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": ""
-          },
-          {
-            "lead_id": "lead_aGXqi3BJnvF8pJ3eay6goyB1dEwgaJtsGenMPRRbITw",
-            "name": "Lewis Davis",
             "date": "2026-11-03",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
@@ -794,19 +794,20 @@
             "meeting_status": "completed"
           }
         ],
-        "no_shows": [],
+        "no_shows": [
+          {
+            "lead_id": "lead_aGXqi3BJnvF8pJ3eay6goyB1dEwgaJtsGenMPRRbITw",
+            "name": "Lewis Davis",
+            "date": "2026-11-03",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
+          }
+        ],
         "no_outcome": [
           {
             "lead_id": "lead_mHBHTd6l31oQbXTRqezdhv067mrIhPPEuR9ohyVFvyK",
             "name": "Jeffrey Stack",
-            "date": "2026-11-03",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": ""
-          },
-          {
-            "lead_id": "lead_aGXqi3BJnvF8pJ3eay6goyB1dEwgaJtsGenMPRRbITw",
-            "name": "Lewis Davis",
             "date": "2026-11-03",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
@@ -2619,7 +2620,7 @@
             "date": "2026-11-03",
             "funnel": "Unknown",
             "meeting_outcome": "",
-            "meeting_status": "in-progress"
+            "meeting_status": ""
           },
           {
             "lead_id": "lead_ASCBL6a6nT7UUVU6G3JblnF97aqB7ntxYNxoDFDj0Gn",
@@ -2658,17 +2659,17 @@
             "meeting_status": "completed"
           }
         ],
-        "no_outcome": [],
-        "upcoming": [
+        "no_outcome": [
           {
             "lead_id": "lead_2vxsr6w0O55OecORlelsfiIk8qoncB4RWC8vOBLVLE4",
             "name": "Henry Mac",
             "date": "2026-11-03",
             "funnel": "Unknown",
             "meeting_outcome": "",
-            "meeting_status": "in-progress"
+            "meeting_status": ""
           }
         ],
+        "upcoming": [],
         "qualified": [],
         "deals": []
       },
@@ -3679,7 +3680,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-03T14:08:43.352860-08:00",
+    "generated_at": "2026-11-03T14:22:56.127116-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
