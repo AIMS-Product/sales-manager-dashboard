@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03 03:30 PM PST",
+  "updated_at": "2026-11-03 03:45 PM PST",
   "week_label": "Nov 02 \u2013 Nov 08, 2026",
   "monday_str": "2026-11-02",
   "today_str": "2026-11-03",
@@ -43,15 +43,15 @@
     "post_call_adherence": 90,
     "task_adherence": 100
   },
-  "total_booked": 30,
-  "total_shown": 13,
-  "total_qualified": 7,
+  "total_booked": 31,
+  "total_shown": 14,
+  "total_qualified": 8,
   "total_deals": 1,
   "total_revenue": 5997.0,
-  "team_close_rate": 3.3,
+  "team_close_rate": 3.2,
   "team_avg_rev_per_deal": 5997.0,
   "team_crm_compliance": 54.5,
-  "team_task_adherence": 55.4,
+  "team_task_adherence": 55.6,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -854,8 +854,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 29,
-      "open_leads": 32,
-      "est_pipeline": 76800,
+      "open_leads": 31,
+      "est_pipeline": 74400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -1259,16 +1259,503 @@
       "post_call_adherence": 100,
       "opportunity_status": {
         "hot": {
-          "count": 8
+          "count": 7
         },
         "warm": {
           "count": 7
         },
         "general": {
-          "count": 24
+          "count": 25
         }
       },
       "opportunity_status_total": 39
+    },
+    {
+      "name": "Christian Hartwell",
+      "booked": 5,
+      "shown": 3,
+      "qualified": 1,
+      "deals": 0,
+      "revenue": 0,
+      "close_rate": 0.0,
+      "qa_score": null,
+      "qa_score_count": 0,
+      "avg_rev_per_deal": null,
+      "crm_compliance": 71.4,
+      "crm_filled": 5,
+      "crm_total": 7,
+      "crm_detail": {
+        "show_up": [
+          2,
+          2
+        ],
+        "disposition": [
+          0,
+          2
+        ],
+        "qualified": [
+          1,
+          1
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "lost_reason": [
+          1,
+          1
+        ],
+        "missing_leads": [
+          {
+            "name": "Dev Handa",
+            "lead_id": "lead_YZU1Nxp4rGJPG38pPbIaxLPNAq2CD9yDzbi7BWnpGHF",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Creola Jones",
+            "lead_id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
+            "missing": [
+              "Disposition"
+            ]
+          }
+        ]
+      },
+      "metric_details": {
+        "booked": [
+          {
+            "lead_id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
+            "name": "Josh Reese",
+            "date": "2026-11-03",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
+            "name": "Jimmie Davis",
+            "date": "2026-11-03",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          },
+          {
+            "lead_id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
+            "name": "Elise Walton",
+            "date": "2026-11-03",
+            "funnel": "Unknown",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_YZU1Nxp4rGJPG38pPbIaxLPNAq2CD9yDzbi7BWnpGHF",
+            "name": "Dev Handa",
+            "date": "2026-11-02",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
+            "name": "Creola Jones",
+            "date": "2026-11-02",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          }
+        ],
+        "shown": [
+          {
+            "lead_id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
+            "name": "Josh Reese",
+            "date": "2026-11-03",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
+            "name": "Elise Walton",
+            "date": "2026-11-03",
+            "funnel": "Unknown",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
+            "name": "Creola Jones",
+            "date": "2026-11-02",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          }
+        ],
+        "no_shows": [
+          {
+            "lead_id": "lead_YZU1Nxp4rGJPG38pPbIaxLPNAq2CD9yDzbi7BWnpGHF",
+            "name": "Dev Handa",
+            "date": "2026-11-02",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
+          }
+        ],
+        "no_outcome": [
+          {
+            "lead_id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
+            "name": "Jimmie Davis",
+            "date": "2026-11-03",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": ""
+          }
+        ],
+        "upcoming": [],
+        "qualified": [
+          {
+            "lead_id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
+            "name": "Josh Reese",
+            "date": "2026-11-03",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed"
+          }
+        ],
+        "deals": []
+      },
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 27,
+      "open_leads": 52,
+      "est_pipeline": 124800,
+      "is_manager": false,
+      "is_lead": false,
+      "lane": 1,
+      "rep_owner_id": "user_wHm1vcLde4RExd3vv9UOjnms5Oz8ssXg8600mQuxMPb",
+      "adherence": {
+        "pre_call_pct": 67,
+        "post_call_pct": 75,
+        "steps": {
+          "loom_usage": {
+            "label": "Pre-Call Loom",
+            "phase": "pre_call",
+            "done": 4,
+            "eligible": 5,
+            "exempt": 0,
+            "pct": 80
+          },
+          "precall_text": {
+            "label": "Pre-call text",
+            "phase": "pre_call",
+            "done": 3,
+            "eligible": 5,
+            "exempt": 0,
+            "pct": 60
+          },
+          "day_of_confirmation_text": {
+            "label": "Day-of confirmation",
+            "phase": "pre_call",
+            "done": 3,
+            "eligible": 5,
+            "exempt": 0,
+            "pct": 60
+          },
+          "follow_up_created": {
+            "label": "Task or follow-up meeting",
+            "phase": "post_call",
+            "done": 1,
+            "eligible": 2,
+            "exempt": 3,
+            "pct": 50
+          },
+          "recap_email": {
+            "label": "Recap email sent",
+            "phase": "post_call",
+            "done": 2,
+            "eligible": 2,
+            "exempt": 3,
+            "pct": 100
+          }
+        },
+        "lead_cohorts": {
+          "loom_usage": {
+            "completed": [
+              {
+                "id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
+                "name": "Creola Jones",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T09:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
+              },
+              {
+                "id": "lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM",
+                "name": "Randy Jones",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T10:30:00-08:00",
+                "url": "https://app.close.com/lead/lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
+              },
+              {
+                "id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
+                "name": "Jimmie Davis",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T13:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
+              },
+              {
+                "id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
+                "name": "Josh Reese",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T14:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "missed": [
+              {
+                "id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
+                "name": "Elise Walton",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T11:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "exempt": []
+          },
+          "precall_text": {
+            "completed": [
+              {
+                "id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
+                "name": "Creola Jones",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T09:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
+              },
+              {
+                "id": "lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM",
+                "name": "Randy Jones",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T10:30:00-08:00",
+                "url": "https://app.close.com/lead/lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
+              },
+              {
+                "id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
+                "name": "Jimmie Davis",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T13:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
+              }
+            ],
+            "missed": [
+              {
+                "id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
+                "name": "Elise Walton",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T11:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
+                "name": "Josh Reese",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T14:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "exempt": []
+          },
+          "day_of_confirmation_text": {
+            "completed": [
+              {
+                "id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
+                "name": "Creola Jones",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T09:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
+              },
+              {
+                "id": "lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM",
+                "name": "Randy Jones",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T10:30:00-08:00",
+                "url": "https://app.close.com/lead/lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
+              },
+              {
+                "id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
+                "name": "Jimmie Davis",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T13:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
+              }
+            ],
+            "missed": [
+              {
+                "id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
+                "name": "Elise Walton",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T11:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
+                "name": "Josh Reese",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T14:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "exempt": []
+          },
+          "follow_up_created": {
+            "completed": [
+              {
+                "id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
+                "name": "Elise Walton",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T11:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "missed": [
+              {
+                "id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
+                "name": "Josh Reese",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T14:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "exempt": [
+              {
+                "id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
+                "name": "Creola Jones",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T09:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
+              },
+              {
+                "id": "lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM",
+                "name": "Randy Jones",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T10:30:00-08:00",
+                "url": "https://app.close.com/lead/lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
+              },
+              {
+                "id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
+                "name": "Jimmie Davis",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T13:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
+              }
+            ]
+          },
+          "recap_email": {
+            "completed": [
+              {
+                "id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
+                "name": "Elise Walton",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T11:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
+                "name": "Josh Reese",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T14:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              }
+            ],
+            "missed": [],
+            "exempt": [
+              {
+                "id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
+                "name": "Creola Jones",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T09:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
+              },
+              {
+                "id": "lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM",
+                "name": "Randy Jones",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T10:30:00-08:00",
+                "url": "https://app.close.com/lead/lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
+              },
+              {
+                "id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
+                "name": "Jimmie Davis",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T13:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
+              }
+            ]
+          }
+        }
+      },
+      "pre_call_adherence": 67,
+      "post_call_adherence": 75,
+      "opportunity_status": {
+        "hot": {
+          "count": 21
+        },
+        "warm": {
+          "count": 7
+        },
+        "general": {
+          "count": 32
+        }
+      },
+      "opportunity_status_total": 60
     },
     {
       "name": "Luke Herman",
@@ -1710,459 +2197,6 @@
       "opportunity_status_total": 42
     },
     {
-      "name": "Christian Hartwell",
-      "booked": 4,
-      "shown": 2,
-      "qualified": 0,
-      "deals": 0,
-      "revenue": 0,
-      "close_rate": 0.0,
-      "qa_score": null,
-      "qa_score_count": 0,
-      "avg_rev_per_deal": null,
-      "crm_compliance": 71.4,
-      "crm_filled": 5,
-      "crm_total": 7,
-      "crm_detail": {
-        "show_up": [
-          2,
-          2
-        ],
-        "disposition": [
-          0,
-          2
-        ],
-        "qualified": [
-          1,
-          1
-        ],
-        "confidence": [
-          1,
-          1
-        ],
-        "lost_reason": [
-          1,
-          1
-        ],
-        "missing_leads": [
-          {
-            "name": "Dev Handa",
-            "lead_id": "lead_YZU1Nxp4rGJPG38pPbIaxLPNAq2CD9yDzbi7BWnpGHF",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Creola Jones",
-            "lead_id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
-            "missing": [
-              "Disposition"
-            ]
-          }
-        ]
-      },
-      "metric_details": {
-        "booked": [
-          {
-            "lead_id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
-            "name": "Jimmie Davis",
-            "date": "2026-11-03",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": ""
-          },
-          {
-            "lead_id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
-            "name": "Elise Walton",
-            "date": "2026-11-03",
-            "funnel": "Unknown",
-            "meeting_outcome": "Completed",
-            "meeting_status": "completed"
-          },
-          {
-            "lead_id": "lead_YZU1Nxp4rGJPG38pPbIaxLPNAq2CD9yDzbi7BWnpGHF",
-            "name": "Dev Handa",
-            "date": "2026-11-02",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "No Show",
-            "meeting_status": "completed"
-          },
-          {
-            "lead_id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
-            "name": "Creola Jones",
-            "date": "2026-11-02",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "Completed",
-            "meeting_status": "completed"
-          }
-        ],
-        "shown": [
-          {
-            "lead_id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
-            "name": "Elise Walton",
-            "date": "2026-11-03",
-            "funnel": "Unknown",
-            "meeting_outcome": "Completed",
-            "meeting_status": "completed"
-          },
-          {
-            "lead_id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
-            "name": "Creola Jones",
-            "date": "2026-11-02",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "Completed",
-            "meeting_status": "completed"
-          }
-        ],
-        "no_shows": [
-          {
-            "lead_id": "lead_YZU1Nxp4rGJPG38pPbIaxLPNAq2CD9yDzbi7BWnpGHF",
-            "name": "Dev Handa",
-            "date": "2026-11-02",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "No Show",
-            "meeting_status": "completed"
-          }
-        ],
-        "no_outcome": [
-          {
-            "lead_id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
-            "name": "Jimmie Davis",
-            "date": "2026-11-03",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": ""
-          }
-        ],
-        "upcoming": [],
-        "qualified": [],
-        "deals": []
-      },
-      "task_adherence": 100.0,
-      "tasks_overdue": 0,
-      "tasks_incomplete": 27,
-      "open_leads": 51,
-      "est_pipeline": 122400,
-      "is_manager": false,
-      "is_lead": false,
-      "lane": 1,
-      "rep_owner_id": "user_wHm1vcLde4RExd3vv9UOjnms5Oz8ssXg8600mQuxMPb",
-      "adherence": {
-        "pre_call_pct": 80,
-        "post_call_pct": 75,
-        "steps": {
-          "loom_usage": {
-            "label": "Pre-Call Loom",
-            "phase": "pre_call",
-            "done": 4,
-            "eligible": 5,
-            "exempt": 0,
-            "pct": 80
-          },
-          "precall_text": {
-            "label": "Pre-call text",
-            "phase": "pre_call",
-            "done": 4,
-            "eligible": 5,
-            "exempt": 0,
-            "pct": 80
-          },
-          "day_of_confirmation_text": {
-            "label": "Day-of confirmation",
-            "phase": "pre_call",
-            "done": 4,
-            "eligible": 5,
-            "exempt": 0,
-            "pct": 80
-          },
-          "follow_up_created": {
-            "label": "Task or follow-up meeting",
-            "phase": "post_call",
-            "done": 1,
-            "eligible": 2,
-            "exempt": 3,
-            "pct": 50
-          },
-          "recap_email": {
-            "label": "Recap email sent",
-            "phase": "post_call",
-            "done": 1,
-            "eligible": 1,
-            "exempt": 3,
-            "pct": 100
-          }
-        },
-        "lead_cohorts": {
-          "loom_usage": {
-            "completed": [
-              {
-                "id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
-                "name": "Creola Jones",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T09:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "\ud83d\udc94 Lost"
-              },
-              {
-                "id": "lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM",
-                "name": "Randy Jones",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T10:30:00-08:00",
-                "url": "https://app.close.com/lead/lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "\ud83d\udc94 Lost"
-              },
-              {
-                "id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
-                "name": "Jimmie Davis",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T13:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No Show"
-              },
-              {
-                "id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
-                "name": "Josh Reese",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T14:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "No active opp"
-              }
-            ],
-            "missed": [
-              {
-                "id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
-                "name": "Elise Walton",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T11:45:00-08:00",
-                "url": "https://app.close.com/lead/lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "exempt": []
-          },
-          "precall_text": {
-            "completed": [
-              {
-                "id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
-                "name": "Creola Jones",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T09:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "\ud83d\udc94 Lost"
-              },
-              {
-                "id": "lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM",
-                "name": "Randy Jones",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T10:30:00-08:00",
-                "url": "https://app.close.com/lead/lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "\ud83d\udc94 Lost"
-              },
-              {
-                "id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
-                "name": "Jimmie Davis",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T13:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No Show"
-              },
-              {
-                "id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
-                "name": "Josh Reese",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T14:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "No active opp"
-              }
-            ],
-            "missed": [
-              {
-                "id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
-                "name": "Elise Walton",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T11:45:00-08:00",
-                "url": "https://app.close.com/lead/lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "exempt": []
-          },
-          "day_of_confirmation_text": {
-            "completed": [
-              {
-                "id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
-                "name": "Creola Jones",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T09:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "\ud83d\udc94 Lost"
-              },
-              {
-                "id": "lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM",
-                "name": "Randy Jones",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T10:30:00-08:00",
-                "url": "https://app.close.com/lead/lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "\ud83d\udc94 Lost"
-              },
-              {
-                "id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
-                "name": "Jimmie Davis",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T13:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No Show"
-              },
-              {
-                "id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
-                "name": "Josh Reese",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T14:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "No active opp"
-              }
-            ],
-            "missed": [
-              {
-                "id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
-                "name": "Elise Walton",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T11:45:00-08:00",
-                "url": "https://app.close.com/lead/lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "exempt": []
-          },
-          "follow_up_created": {
-            "completed": [
-              {
-                "id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
-                "name": "Elise Walton",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T11:45:00-08:00",
-                "url": "https://app.close.com/lead/lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "missed": [
-              {
-                "id": "lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi",
-                "name": "Josh Reese",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T14:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_vBmjVxAtqyNbj3nbxy51GpG5oX69KdJidbQNrwNG0gi/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "No active opp"
-              }
-            ],
-            "exempt": [
-              {
-                "id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
-                "name": "Creola Jones",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T09:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "\ud83d\udc94 Lost"
-              },
-              {
-                "id": "lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM",
-                "name": "Randy Jones",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T10:30:00-08:00",
-                "url": "https://app.close.com/lead/lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "\ud83d\udc94 Lost"
-              },
-              {
-                "id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
-                "name": "Jimmie Davis",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T13:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No Show"
-              }
-            ]
-          },
-          "recap_email": {
-            "completed": [
-              {
-                "id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
-                "name": "Elise Walton",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T11:45:00-08:00",
-                "url": "https://app.close.com/lead/lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4/",
-                "status_label": "\ud83d\udcde HOT- Follow Up",
-                "opportunity_status": "HOT - Follow Up"
-              }
-            ],
-            "missed": [],
-            "exempt": [
-              {
-                "id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
-                "name": "Creola Jones",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T09:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "\ud83d\udc94 Lost"
-              },
-              {
-                "id": "lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM",
-                "name": "Randy Jones",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T10:30:00-08:00",
-                "url": "https://app.close.com/lead/lead_8Mhm5D4b7joDx1i0kogIToTpD7Np3QNxYdmQCUuBEeM/",
-                "status_label": "\ud83d\udc94 Lost",
-                "opportunity_status": "\ud83d\udc94 Lost"
-              },
-              {
-                "id": "lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv",
-                "name": "Jimmie Davis",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T13:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_KsHtS9TWrBquwYPPBAGtUjW7XFEmNigdynVBgkpUUQv/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No Show"
-              }
-            ]
-          }
-        }
-      },
-      "pre_call_adherence": 80,
-      "post_call_adherence": 75,
-      "opportunity_status": {
-        "hot": {
-          "count": 20
-        },
-        "warm": {
-          "count": 7
-        },
-        "general": {
-          "count": 32
-        }
-      },
-      "opportunity_status_total": 59
-    },
-    {
       "name": "Scott Seymour",
       "booked": 3,
       "shown": 2,
@@ -2278,7 +2312,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 58,
+      "tasks_incomplete": 59,
       "open_leads": 23,
       "est_pipeline": 55200,
       "is_manager": false,
@@ -2691,7 +2725,7 @@
       "rep_owner_id": "user_BaN2TstWtyF34eaQSSLG11j6DhKKm67Y6JltbIYCafO",
       "adherence": {
         "pre_call_pct": 75,
-        "post_call_pct": 46,
+        "post_call_pct": 50,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -2721,16 +2755,16 @@
             "label": "Task or follow-up meeting",
             "phase": "post_call",
             "done": 1,
-            "eligible": 4,
-            "exempt": 0,
-            "pct": 25
+            "eligible": 3,
+            "exempt": 1,
+            "pct": 33
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
             "done": 2,
             "eligible": 3,
-            "exempt": 0,
+            "exempt": 1,
             "pct": 67
           }
         },
@@ -2772,7 +2806,7 @@
                 "booked_date": "2026-11-03",
                 "scored_call_at": "2026-11-03T15:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7/",
-                "status_label": "\u260e\ufe0f Call Booked",
+                "status_label": "Reschedule Requested",
                 "opportunity_status": "No active opp"
               }
             ],
@@ -2813,7 +2847,7 @@
                 "booked_date": "2026-11-03",
                 "scored_call_at": "2026-11-03T15:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7/",
-                "status_label": "\u260e\ufe0f Call Booked",
+                "status_label": "Reschedule Requested",
                 "opportunity_status": "No active opp"
               }
             ],
@@ -2846,7 +2880,7 @@
                 "booked_date": "2026-11-03",
                 "scored_call_at": "2026-11-03T15:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7/",
-                "status_label": "\u260e\ufe0f Call Booked",
+                "status_label": "Reschedule Requested",
                 "opportunity_status": "No active opp"
               }
             ],
@@ -2893,18 +2927,19 @@
                 "url": "https://app.close.com/lead/lead_1GGpf2E0XVioeqOrwDqoP1RxLYtYjAZX4E9vndPA2Lo/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "No active opp"
-              },
+              }
+            ],
+            "exempt": [
               {
                 "id": "lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7",
                 "name": "Kamal Islam",
                 "booked_date": "2026-11-03",
                 "scored_call_at": "2026-11-03T15:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7/",
-                "status_label": "\u260e\ufe0f Call Booked",
+                "status_label": "Reschedule Requested",
                 "opportunity_status": "No active opp"
               }
-            ],
-            "exempt": []
+            ]
           },
           "recap_email": {
             "completed": [
@@ -2938,12 +2973,22 @@
                 "opportunity_status": "Call Booked"
               }
             ],
-            "exempt": []
+            "exempt": [
+              {
+                "id": "lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7",
+                "name": "Kamal Islam",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T15:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7/",
+                "status_label": "Reschedule Requested",
+                "opportunity_status": "No active opp"
+              }
+            ]
           }
         }
       },
       "pre_call_adherence": 75,
-      "post_call_adherence": 46,
+      "post_call_adherence": 50,
       "opportunity_status": {
         "hot": {
           "count": 13
@@ -3591,8 +3636,8 @@
     }
   ],
   "team_adherence": {
-    "pre_call_pct": 85,
-    "post_call_pct": 71,
+    "pre_call_pct": 83,
+    "post_call_pct": 73,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -3605,41 +3650,41 @@
       "precall_text": {
         "label": "Pre-call text",
         "phase": "pre_call",
-        "done": 32,
+        "done": 31,
         "eligible": 34,
         "exempt": 0,
-        "pct": 94
+        "pct": 91
       },
       "day_of_confirmation_text": {
         "label": "Day-of confirmation",
         "phase": "pre_call",
-        "done": 26,
+        "done": 25,
         "eligible": 34,
         "exempt": 0,
-        "pct": 76
+        "pct": 74
       },
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
         "done": 9,
-        "eligible": 16,
-        "exempt": 18,
-        "pct": 56
+        "eligible": 15,
+        "exempt": 19,
+        "pct": 60
       },
       "recap_email": {
         "label": "Recap email sent",
         "phase": "post_call",
-        "done": 11,
-        "eligible": 13,
-        "exempt": 18,
-        "pct": 85
+        "done": 12,
+        "eligible": 14,
+        "exempt": 19,
+        "pct": 86
       }
     }
   },
   "lane_adherence": {
     "1": {
-      "pre_call_pct": 85,
-      "post_call_pct": 71,
+      "pre_call_pct": 83,
+      "post_call_pct": 73,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -3652,34 +3697,34 @@
         "precall_text": {
           "label": "Pre-call text",
           "phase": "pre_call",
-          "done": 32,
+          "done": 31,
           "eligible": 34,
           "exempt": 0,
-          "pct": 94
+          "pct": 91
         },
         "day_of_confirmation_text": {
           "label": "Day-of confirmation",
           "phase": "pre_call",
-          "done": 26,
+          "done": 25,
           "eligible": 34,
           "exempt": 0,
-          "pct": 76
+          "pct": 74
         },
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
           "done": 9,
-          "eligible": 16,
-          "exempt": 18,
-          "pct": 56
+          "eligible": 15,
+          "exempt": 19,
+          "pct": 60
         },
         "recap_email": {
           "label": "Recap email sent",
           "phase": "post_call",
-          "done": 11,
-          "eligible": 13,
-          "exempt": 18,
-          "pct": 85
+          "done": 12,
+          "eligible": 14,
+          "exempt": 19,
+          "pct": 86
         }
       }
     }
@@ -3687,7 +3732,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-03T15:38:46.640349-08:00",
+    "generated_at": "2026-11-03T15:53:49.234264-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -3709,13 +3754,13 @@
     "api_requests": 290,
     "preview_only": false
   },
-  "team_pre_call_adherence": 85,
-  "team_post_call_adherence": 71,
+  "team_pre_call_adherence": 83,
+  "team_post_call_adherence": 73,
   "lane_pre_call_adherence": {
-    "1": 85
+    "1": 83
   },
   "lane_post_call_adherence": {
-    "1": 71
+    "1": 73
   },
   "dashboard_schema_version": 3
 }
