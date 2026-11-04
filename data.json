@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-04 06:00 AM PST",
+  "updated_at": "2026-11-04 06:15 AM PST",
   "week_label": "Nov 02 \u2013 Nov 08, 2026",
   "monday_str": "2026-11-02",
   "today_str": "2026-11-04",
@@ -51,7 +51,7 @@
   "team_close_rate": 2.4,
   "team_avg_rev_per_deal": 5997.0,
   "team_crm_compliance": 49.1,
-  "team_task_adherence": 55.1,
+  "team_task_adherence": 55.5,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -188,26 +188,26 @@
       "metric_details": {
         "booked": [
           {
-            "lead_id": "lead_IuS8MCYib6J64MMDZJ7VJOpDelDtr9xjL44m3b1b493",
-            "name": "Zachary Bornstein",
-            "date": "2026-11-04",
-            "funnel": "YouTube",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
-          {
             "lead_id": "lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB",
             "name": "Juanita Clark",
             "date": "2026-11-04",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
-            "meeting_status": "upcoming"
+            "meeting_status": "in-progress"
           },
           {
             "lead_id": "lead_KCQBczZek77nkY7o7gWylTk8tyAv35mqr2C55dxuiQz",
             "name": "Chiquita Banks",
             "date": "2026-11-04",
             "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": "upcoming"
+          },
+          {
+            "lead_id": "lead_IuS8MCYib6J64MMDZJ7VJOpDelDtr9xjL44m3b1b493",
+            "name": "Zachary Bornstein",
+            "date": "2026-11-04",
+            "funnel": "YouTube",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
           },
@@ -316,26 +316,26 @@
         ],
         "upcoming": [
           {
-            "lead_id": "lead_IuS8MCYib6J64MMDZJ7VJOpDelDtr9xjL44m3b1b493",
-            "name": "Zachary Bornstein",
-            "date": "2026-11-04",
-            "funnel": "YouTube",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
-          {
             "lead_id": "lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB",
             "name": "Juanita Clark",
             "date": "2026-11-04",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
-            "meeting_status": "upcoming"
+            "meeting_status": "in-progress"
           },
           {
             "lead_id": "lead_KCQBczZek77nkY7o7gWylTk8tyAv35mqr2C55dxuiQz",
             "name": "Chiquita Banks",
             "date": "2026-11-04",
             "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "",
+            "meeting_status": "upcoming"
+          },
+          {
+            "lead_id": "lead_IuS8MCYib6J64MMDZJ7VJOpDelDtr9xjL44m3b1b493",
+            "name": "Zachary Bornstein",
+            "date": "2026-11-04",
+            "funnel": "YouTube",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
           }
@@ -409,16 +409,16 @@
             "label": "Task or follow-up meeting",
             "phase": "post_call",
             "done": 0,
-            "eligible": 2,
-            "exempt": 5,
+            "eligible": 1,
+            "exempt": 6,
             "pct": 0
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 2,
-            "eligible": 2,
-            "exempt": 5,
+            "done": 1,
+            "eligible": 1,
+            "exempt": 6,
             "pct": 100
           }
         },
@@ -476,8 +476,8 @@
                 "booked_date": "2026-11-04",
                 "scored_call_at": "2026-11-04T06:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
               }
             ],
             "missed": [
@@ -555,8 +555,8 @@
                 "booked_date": "2026-11-04",
                 "scored_call_at": "2026-11-04T06:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
               }
             ],
             "missed": [],
@@ -626,8 +626,8 @@
                 "booked_date": "2026-11-04",
                 "scored_call_at": "2026-11-04T06:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
               }
             ],
             "exempt": []
@@ -643,15 +643,6 @@
                 "url": "https://app.close.com/lead/lead_SzpnHom4Kb77ITVIfy1WKRCtCxx7zhqV866wVKgrbZ1/",
                 "status_label": "WARM - Follow up",
                 "opportunity_status": "WARM - Follow Up"
-              },
-              {
-                "id": "lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB",
-                "name": "Juanita Clark",
-                "booked_date": "2026-11-04",
-                "scored_call_at": "2026-11-04T06:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
               }
             ],
             "exempt": [
@@ -699,6 +690,15 @@
                 "url": "https://app.close.com/lead/lead_3pcbC6qLHDOKrVIweiWhasgijJYoMbp7HB08brzvso2/",
                 "status_label": "\ud83c\udfc6 Closed / Won",
                 "opportunity_status": "\ud83c\udfc6 Closed / Won"
+              },
+              {
+                "id": "lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB",
+                "name": "Juanita Clark",
+                "booked_date": "2026-11-04",
+                "scored_call_at": "2026-11-04T06:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
               }
             ]
           },
@@ -712,15 +712,6 @@
                 "url": "https://app.close.com/lead/lead_SzpnHom4Kb77ITVIfy1WKRCtCxx7zhqV866wVKgrbZ1/",
                 "status_label": "WARM - Follow up",
                 "opportunity_status": "WARM - Follow Up"
-              },
-              {
-                "id": "lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB",
-                "name": "Juanita Clark",
-                "booked_date": "2026-11-04",
-                "scored_call_at": "2026-11-04T06:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
               }
             ],
             "missed": [],
@@ -769,6 +760,15 @@
                 "url": "https://app.close.com/lead/lead_3pcbC6qLHDOKrVIweiWhasgijJYoMbp7HB08brzvso2/",
                 "status_label": "\ud83c\udfc6 Closed / Won",
                 "opportunity_status": "\ud83c\udfc6 Closed / Won"
+              },
+              {
+                "id": "lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB",
+                "name": "Juanita Clark",
+                "booked_date": "2026-11-04",
+                "scored_call_at": "2026-11-04T06:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_v8XvcqafMV8xqjC2JeFQ4WbUL42QCFQDXdhQeEv1GtB/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
               }
             ]
           }
@@ -1523,16 +1523,16 @@
       "metric_details": {
         "booked": [
           {
-            "lead_id": "lead_AnHdlgbvQPggveN1o5CnDl9jAu3itVgPJws8kBQtBux",
-            "name": "Jayden Covington - Instagram",
+            "lead_id": "lead_kYtaOsvND0T3mm5VvHwewNCnM5UH74SgbvWqdjuySyn",
+            "name": "Vince James",
             "date": "2026-11-04",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
           },
           {
-            "lead_id": "lead_kYtaOsvND0T3mm5VvHwewNCnM5UH74SgbvWqdjuySyn",
-            "name": "Vince James",
+            "lead_id": "lead_AnHdlgbvQPggveN1o5CnDl9jAu3itVgPJws8kBQtBux",
+            "name": "Jayden Covington - Instagram",
             "date": "2026-11-04",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
@@ -1635,16 +1635,16 @@
         ],
         "upcoming": [
           {
-            "lead_id": "lead_AnHdlgbvQPggveN1o5CnDl9jAu3itVgPJws8kBQtBux",
-            "name": "Jayden Covington - Instagram",
+            "lead_id": "lead_kYtaOsvND0T3mm5VvHwewNCnM5UH74SgbvWqdjuySyn",
+            "name": "Vince James",
             "date": "2026-11-04",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
           },
           {
-            "lead_id": "lead_kYtaOsvND0T3mm5VvHwewNCnM5UH74SgbvWqdjuySyn",
-            "name": "Vince James",
+            "lead_id": "lead_AnHdlgbvQPggveN1o5CnDl9jAu3itVgPJws8kBQtBux",
+            "name": "Jayden Covington - Instagram",
             "date": "2026-11-04",
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "",
@@ -1673,7 +1673,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 63,
+      "tasks_incomplete": 66,
       "open_leads": 32,
       "est_pipeline": 76800,
       "is_manager": false,
@@ -4157,7 +4157,7 @@
   ],
   "team_adherence": {
     "pre_call_pct": 81,
-    "post_call_pct": 72,
+    "post_call_pct": 73,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -4187,24 +4187,24 @@
         "label": "Task or follow-up meeting",
         "phase": "post_call",
         "done": 11,
-        "eligible": 20,
-        "exempt": 18,
-        "pct": 55
+        "eligible": 19,
+        "exempt": 19,
+        "pct": 58
       },
       "recap_email": {
         "label": "Recap email sent",
         "phase": "post_call",
-        "done": 16,
-        "eligible": 18,
-        "exempt": 18,
-        "pct": 89
+        "done": 15,
+        "eligible": 17,
+        "exempt": 19,
+        "pct": 88
       }
     }
   },
   "lane_adherence": {
     "1": {
       "pre_call_pct": 81,
-      "post_call_pct": 72,
+      "post_call_pct": 73,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -4234,17 +4234,17 @@
           "label": "Task or follow-up meeting",
           "phase": "post_call",
           "done": 11,
-          "eligible": 20,
-          "exempt": 18,
-          "pct": 55
+          "eligible": 19,
+          "exempt": 19,
+          "pct": 58
         },
         "recap_email": {
           "label": "Recap email sent",
           "phase": "post_call",
-          "done": 16,
-          "eligible": 18,
-          "exempt": 18,
-          "pct": 89
+          "done": 15,
+          "eligible": 17,
+          "exempt": 19,
+          "pct": 88
         }
       }
     }
@@ -4252,7 +4252,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-04T06:07:32.548466-08:00",
+    "generated_at": "2026-11-04T06:22:10.891165-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -4275,12 +4275,12 @@
     "preview_only": false
   },
   "team_pre_call_adherence": 81,
-  "team_post_call_adherence": 72,
+  "team_post_call_adherence": 73,
   "lane_pre_call_adherence": {
     "1": 81
   },
   "lane_post_call_adherence": {
-    "1": 72
+    "1": 73
   },
   "dashboard_schema_version": 3
 }
