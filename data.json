@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05 08:30 AM PST",
+  "updated_at": "2026-11-05 08:45 AM PST",
   "week_label": "Nov 02 \u2013 Nov 08, 2026",
   "monday_str": "2026-11-02",
   "today_str": "2026-11-05",
@@ -57,8 +57,8 @@
     "reason": "missing_api_key"
   },
   "team_overdue": 183,
-  "team_open_leads": 280,
-  "team_est_pipeline": 672000,
+  "team_open_leads": 281,
+  "team_est_pipeline": 674400,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -2067,8 +2067,8 @@
       "task_adherence": 90.0,
       "tasks_overdue": 3,
       "tasks_incomplete": 30,
-      "open_leads": 25,
-      "est_pipeline": 60000,
+      "open_leads": 26,
+      "est_pipeline": 62400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -2568,10 +2568,10 @@
           "count": 4
         },
         "general": {
-          "count": 23
+          "count": 24
         }
       },
-      "opportunity_status_total": 32
+      "opportunity_status_total": 33
     },
     {
       "name": "Christian Hartwell",
@@ -3443,7 +3443,7 @@
       "rep_owner_id": "user_BaN2TstWtyF34eaQSSLG11j6DhKKm67Y6JltbIYCafO",
       "adherence": {
         "pre_call_pct": 89,
-        "post_call_pct": 63,
+        "post_call_pct": 75,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -3472,10 +3472,10 @@
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 1,
+            "done": 2,
             "eligible": 4,
             "exempt": 2,
-            "pct": 25
+            "pct": 50
           },
           "recap_email": {
             "label": "Recap email sent",
@@ -3671,6 +3671,15 @@
           "follow_up_created": {
             "completed": [
               {
+                "id": "lead_1GGpf2E0XVioeqOrwDqoP1RxLYtYjAZX4E9vndPA2Lo",
+                "name": "Scott Wilkins",
+                "booked_date": "2026-11-02",
+                "scored_call_at": "2026-11-02T13:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_1GGpf2E0XVioeqOrwDqoP1RxLYtYjAZX4E9vndPA2Lo/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "No active opp"
+              },
+              {
                 "id": "lead_ulUVNyKnRfDLPjjfpkLrgK2dLwNUFLNBPQsPllYbeNL",
                 "name": "Nicole Jackson",
                 "booked_date": "2026-11-04",
@@ -3689,15 +3698,6 @@
                 "url": "https://app.close.com/lead/lead_h8bpENKMCY2HynIfBNoVwNSrbp4m29zKfNIjKYY7MeC/",
                 "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
                 "opportunity_status": "Call Booked"
-              },
-              {
-                "id": "lead_1GGpf2E0XVioeqOrwDqoP1RxLYtYjAZX4E9vndPA2Lo",
-                "name": "Scott Wilkins",
-                "booked_date": "2026-11-02",
-                "scored_call_at": "2026-11-02T13:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_1GGpf2E0XVioeqOrwDqoP1RxLYtYjAZX4E9vndPA2Lo/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "No active opp"
               },
               {
                 "id": "lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w",
@@ -3794,7 +3794,7 @@
         }
       },
       "pre_call_adherence": 89,
-      "post_call_adherence": 63,
+      "post_call_adherence": 75,
       "opportunity_status": {
         "hot": {
           "count": 14
@@ -5080,7 +5080,7 @@
   ],
   "team_adherence": {
     "pre_call_pct": 81,
-    "post_call_pct": 76,
+    "post_call_pct": 78,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -5109,10 +5109,10 @@
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
-        "done": 15,
+        "done": 16,
         "eligible": 25,
         "exempt": 26,
-        "pct": 60
+        "pct": 64
       },
       "recap_email": {
         "label": "Recap email sent",
@@ -5127,7 +5127,7 @@
   "lane_adherence": {
     "1": {
       "pre_call_pct": 81,
-      "post_call_pct": 76,
+      "post_call_pct": 78,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -5156,10 +5156,10 @@
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
-          "done": 15,
+          "done": 16,
           "eligible": 25,
           "exempt": 26,
-          "pct": 60
+          "pct": 64
         },
         "recap_email": {
           "label": "Recap email sent",
@@ -5175,7 +5175,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-05T08:39:15.819603-08:00",
+    "generated_at": "2026-11-05T08:53:28.100865-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -5198,12 +5198,12 @@
     "preview_only": false
   },
   "team_pre_call_adherence": 81,
-  "team_post_call_adherence": 76,
+  "team_post_call_adherence": 78,
   "lane_pre_call_adherence": {
     "1": 81
   },
   "lane_post_call_adherence": {
-    "1": 76
+    "1": 78
   },
   "dashboard_schema_version": 3
 }
