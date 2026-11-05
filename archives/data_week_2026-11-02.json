@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05 04:45 AM PST",
+  "updated_at": "2026-11-05 05:00 AM PST",
   "week_label": "Nov 02 \u2013 Nov 08, 2026",
   "monday_str": "2026-11-02",
   "today_str": "2026-11-05",
@@ -3907,7 +3907,7 @@
             "label": "Recap email sent",
             "phase": "post_call",
             "done": 0,
-            "eligible": 1,
+            "eligible": 2,
             "exempt": 2,
             "pct": 0
           }
@@ -4097,6 +4097,15 @@
                 "url": "https://app.close.com/lead/lead_qLzjW1epPqiQL7RfIOZGhtgCYwGJkYlXnDOTs7qMLs4/",
                 "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
                 "opportunity_status": "GENERAL Follow Up"
+              },
+              {
+                "id": "lead_ka19aUhI5MQxHMOYUFiLndV3sIeurqs7wtImG20Un2N",
+                "name": "Houston Hardy",
+                "booked_date": "2026-11-04",
+                "scored_call_at": "2026-11-04T05:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_ka19aUhI5MQxHMOYUFiLndV3sIeurqs7wtImG20Un2N/",
+                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
+                "opportunity_status": "No active opp"
               }
             ],
             "exempt": [
@@ -4940,7 +4949,7 @@
   ],
   "team_adherence": {
     "pre_call_pct": 82,
-    "post_call_pct": 80,
+    "post_call_pct": 78,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -4978,16 +4987,16 @@
         "label": "Recap email sent",
         "phase": "post_call",
         "done": 20,
-        "eligible": 21,
+        "eligible": 22,
         "exempt": 26,
-        "pct": 95
+        "pct": 91
       }
     }
   },
   "lane_adherence": {
     "1": {
       "pre_call_pct": 82,
-      "post_call_pct": 80,
+      "post_call_pct": 78,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -5025,9 +5034,9 @@
           "label": "Recap email sent",
           "phase": "post_call",
           "done": 20,
-          "eligible": 21,
+          "eligible": 22,
           "exempt": 26,
-          "pct": 95
+          "pct": 91
         }
       }
     }
@@ -5035,7 +5044,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-05T04:54:03.187975-08:00",
+    "generated_at": "2026-11-05T05:05:57.536386-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -5054,16 +5063,16 @@
       },
       "includes_lost": true
     },
-    "api_requests": 323,
+    "api_requests": 324,
     "preview_only": false
   },
   "team_pre_call_adherence": 82,
-  "team_post_call_adherence": 80,
+  "team_post_call_adherence": 78,
   "lane_pre_call_adherence": {
     "1": 82
   },
   "lane_post_call_adherence": {
-    "1": 80
+    "1": 78
   },
   "dashboard_schema_version": 3
 }
