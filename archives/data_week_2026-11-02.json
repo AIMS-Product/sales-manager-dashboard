@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05 10:00 AM PST",
+  "updated_at": "2026-11-05 10:15 AM PST",
   "week_label": "Nov 02 \u2013 Nov 08, 2026",
   "monday_str": "2026-11-02",
   "today_str": "2026-11-05",
@@ -139,6 +139,15 @@
         ],
         "missing_leads": [
           {
+            "name": "Robert McGowan",
+            "lead_id": "lead_LoXht31ZROdgywnYwzGX7YwN7gGxzzwdLtqyXGYrE6s",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Chad Carron",
             "lead_id": "lead_Wdfo7WhoCAqbBvke0jOcmOMswZmyXJzEOO6tKgmNunc",
             "missing": [
@@ -165,15 +174,6 @@
             "lead_id": "lead_ULrwnPhGqW66SkzCEpox7ueSyg5JM21uD0JrrE1E38K",
             "missing": [
               "Disposition"
-            ]
-          },
-          {
-            "name": "Robert McGowan",
-            "lead_id": "lead_LoXht31ZROdgywnYwzGX7YwN7gGxzzwdLtqyXGYrE6s",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
             ]
           },
           {
@@ -260,19 +260,19 @@
             "meeting_status": "completed"
           },
           {
-            "lead_id": "lead_ULrwnPhGqW66SkzCEpox7ueSyg5JM21uD0JrrE1E38K",
-            "name": "Brittney Ellis",
-            "date": "2026-11-03",
-            "funnel": "Google Ads",
-            "meeting_outcome": "Completed",
-            "meeting_status": "completed"
-          },
-          {
             "lead_id": "lead_LoXht31ZROdgywnYwzGX7YwN7gGxzzwdLtqyXGYrE6s",
             "name": "Robert McGowan",
             "date": "2026-11-03",
             "funnel": "Linkedin",
             "meeting_outcome": "Cancelled",
+            "meeting_status": "completed"
+          },
+          {
+            "lead_id": "lead_ULrwnPhGqW66SkzCEpox7ueSyg5JM21uD0JrrE1E38K",
+            "name": "Brittney Ellis",
+            "date": "2026-11-03",
+            "funnel": "Google Ads",
+            "meeting_outcome": "Completed",
             "meeting_status": "completed"
           },
           {
@@ -1145,18 +1145,18 @@
       "metric_details": {
         "booked": [
           {
-            "lead_id": "lead_snIqjYyWjdsSueLnfsIXKaWskjkHFyOPH0DLe1lvnCL",
-            "name": "Wilson Sherels",
-            "date": "2026-11-05",
-            "funnel": "Internal Webinar",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
-          {
             "lead_id": "lead_RHZ1ST3FBpgsFY61lmgeplW6WqtWbAvf5J71Qsz0NJ0",
             "name": "David Cohen",
             "date": "2026-11-05",
             "funnel": "Unknown",
+            "meeting_outcome": "",
+            "meeting_status": "in-progress"
+          },
+          {
+            "lead_id": "lead_snIqjYyWjdsSueLnfsIXKaWskjkHFyOPH0DLe1lvnCL",
+            "name": "Wilson Sherels",
+            "date": "2026-11-05",
+            "funnel": "Internal Webinar",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
           },
@@ -1256,18 +1256,18 @@
         "no_outcome": [],
         "upcoming": [
           {
-            "lead_id": "lead_snIqjYyWjdsSueLnfsIXKaWskjkHFyOPH0DLe1lvnCL",
-            "name": "Wilson Sherels",
-            "date": "2026-11-05",
-            "funnel": "Internal Webinar",
-            "meeting_outcome": "",
-            "meeting_status": "upcoming"
-          },
-          {
             "lead_id": "lead_RHZ1ST3FBpgsFY61lmgeplW6WqtWbAvf5J71Qsz0NJ0",
             "name": "David Cohen",
             "date": "2026-11-05",
             "funnel": "Unknown",
+            "meeting_outcome": "",
+            "meeting_status": "in-progress"
+          },
+          {
+            "lead_id": "lead_snIqjYyWjdsSueLnfsIXKaWskjkHFyOPH0DLe1lvnCL",
+            "name": "Wilson Sherels",
+            "date": "2026-11-05",
+            "funnel": "Internal Webinar",
             "meeting_outcome": "",
             "meeting_status": "upcoming"
           },
@@ -5220,7 +5220,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-05T10:07:39.756427-08:00",
+    "generated_at": "2026-11-05T10:24:38.384826-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
