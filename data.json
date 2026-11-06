@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05 07:30 PM PST",
+  "updated_at": "2026-11-05 07:45 PM PST",
   "week_label": "Nov 02 \u2013 Nov 08, 2026",
   "monday_str": "2026-11-02",
   "today_str": "2026-11-05",
@@ -57,8 +57,8 @@
     "reason": "missing_api_key"
   },
   "team_overdue": 175,
-  "team_open_leads": 245,
-  "team_est_pipeline": 588000,
+  "team_open_leads": 246,
+  "team_est_pipeline": 590400,
   "funnel_breakdown": [
     {
       "funnel": "Reactivation Scrapers",
@@ -3744,8 +3744,8 @@
       "task_adherence": 80.6,
       "tasks_overdue": 6,
       "tasks_incomplete": 31,
-      "open_leads": 87,
-      "est_pipeline": 208800,
+      "open_leads": 88,
+      "est_pipeline": 211200,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -4236,8 +4236,8 @@
             "name": "MacKenzie Banks",
             "date": "2026-11-05",
             "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": ""
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
           },
           {
             "lead_id": "lead_k8ZDx0zKtgyom8CJj7FduFL38W45ei3TWVGCfeJHVx8",
@@ -4292,6 +4292,14 @@
         ],
         "no_shows": [
           {
+            "lead_id": "lead_YOI2VVH5uozLrciQysyByCKW2mKIlAdJ4d97SErVFeU",
+            "name": "MacKenzie Banks",
+            "date": "2026-11-05",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed"
+          },
+          {
             "lead_id": "lead_ASCBL6a6nT7UUVU6G3JblnF97aqB7ntxYNxoDFDj0Gn",
             "name": "Julissa Neal",
             "date": "2026-11-03",
@@ -4301,14 +4309,6 @@
           }
         ],
         "no_outcome": [
-          {
-            "lead_id": "lead_YOI2VVH5uozLrciQysyByCKW2mKIlAdJ4d97SErVFeU",
-            "name": "MacKenzie Banks",
-            "date": "2026-11-05",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": ""
-          },
           {
             "lead_id": "lead_k8ZDx0zKtgyom8CJj7FduFL38W45ei3TWVGCfeJHVx8",
             "name": "Tyler Campbell",
@@ -5644,7 +5644,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-05T19:38:11.094062-08:00",
+    "generated_at": "2026-11-05T19:52:55.627803-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
