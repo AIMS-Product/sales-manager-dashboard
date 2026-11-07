@@ -4,12 +4,16 @@ on:
   workflow_dispatch:
     inputs:
       rerun_week:
-        description: 'Re-run for a past week (Monday date YYYY-MM-DD). Leave blank for current week.'
+        description: 'Re-run for a past week (Monday date YYYY-MM-DD). Leave blank for the current month-to-date scorecard.'
         required: false
         default: ''
 
 permissions:
   contents: write
+
+concurrency:
+  group: sales-manager-dashboard-publication
+  cancel-in-progress: false
 
 jobs:
   update-dashboard:
@@ -17,6 +21,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -25,6 +32,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests
+
+      - name: Verify dashboard reporting rules
+        run: python3 -m unittest discover -s tests -p 'test*.py' -q
 
       - name: Fetch data from Close API
         env:
@@ -39,5 +49,13 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json archives/
           git diff --staged --quiet || git commit -m "📊 Update dashboard data - $(date -u +'%Y-%m-%d %H:%M UTC')"
-          git pull --rebase -X theirs origin main || true
-          git push
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 2
+          done
+          echo "Could not publish dashboard after five attempts." >&2
+          exit 1

@@ -233,7 +233,7 @@
     <div class="metric-drawer-list" id="metricDrawerList"></div>
 </aside>
 
-<div class="footer">Historical weekly snapshots &nbsp;·&nbsp; Data from Close CRM</div>
+<div class="footer">Historical snapshots &nbsp;·&nbsp; Data from Close CRM</div>
 
 <script>
 (function () {
@@ -243,7 +243,7 @@
         try {
             const resp = await fetch('archives/index.json?t=' + Date.now());
             const index = await resp.json();
-            renderWeekList(index.weeks || []);
+            renderWeekList(index.weeks || [], index.months || []);
         } catch (e) {
             document.getElementById('weekList').innerHTML =
                 '<div class="empty">No archives yet — check back next week.</div>';
@@ -260,13 +260,13 @@
         return `Week of ${monLabel} – ${friLabel}`;
     }
 
-    function renderWeekList(weeks) {
+    function renderWeekList(weeks, months = []) {
         const container = document.getElementById('weekList');
-        if (!weeks.length) {
+        if (!weeks.length && !months.length) {
             container.innerHTML = '<div class="empty">No archives yet — check back next week.</div>';
             return;
         }
-        let html = '';
+        let html = months.map(month => `<div class="week-item" onclick="loadSnapshot('${month}', 'month')"><a href="#">${new Date(month + '-01T12:00:00').toLocaleDateString('en-US', {month:'long', year:'numeric'})}</a><span class="meta">Monthly snapshot</span></div>`).join('');
         for (const w of weeks) {
             html += `<div class="week-item" onclick="loadSnapshot('${w}')">
                 <a href="#">${formatWeek(w)}</a>
@@ -360,14 +360,14 @@
         document.getElementById('metricDrawerTitle').textContent = `${rep.name} · ${metricLabels[metric]}`;
         document.getElementById('metricDrawerSummary').innerHTML = metric === 'shown'
             ? `<strong>${records?.length ?? rep.shown ?? 0} shown · ${noShows.length} no show${noShows.length === 1 ? '' : 's'} · ${noOutcome.length} no outcome · ${upcoming.length} upcoming</strong>Groups use the selected meeting outcome.`
-            : `<strong>${records?.length ?? 0} ${metricLabels[metric].toLowerCase()} records</strong>Leads in this week’s saved cohort.`;
+            : `<strong>${records?.length ?? 0} ${metricLabels[metric].toLowerCase()} records</strong>${currentSnapshot.metric_definitions?.booked === 'native_completed_plus_no_show' ? 'Calls with Completed or No Show outcomes in the saved period.' : 'Leads in this week’s saved cohort.'}`;
         let html;
         if (!Array.isArray(records)) {
             html = '<div class="metric-drawer-empty">Lead records are unavailable in this snapshot.</div>';
         } else if (metric === 'shown') {
             const section = (title, items, type) => `<section class="metric-drawer-section"><div class="metric-drawer-section-title">${title} (${items.length})</div>${items.length
                 ? items.map(record => metricRecordHtml(record, type)).join('')
-                : '<div class="metric-drawer-empty">None this week.</div>'}</section>`;
+                : '<div class="metric-drawer-empty">None in this period.</div>'}</section>`;
             html = section('Shown', records, 'shown')
                 + section('No shows', noShows, 'no_shows')
                 + section('No outcome', noOutcome, 'no_outcome')
@@ -391,15 +391,15 @@
         return 'rate-bad';
     }
 
-    window.loadSnapshot = async function (mondayStr) {
+    window.loadSnapshot = async function (mondayStr, kind = 'week') {
         document.getElementById('weekListView').style.display = 'none';
         document.getElementById('snapshotView').style.display = 'block';
-        document.getElementById('snapshotTitle').textContent = formatWeek(mondayStr);
+        document.getElementById('snapshotTitle').textContent = kind === 'month' ? new Date(mondayStr + '-01T12:00:00').toLocaleDateString('en-US', {month:'long', year:'numeric'}) : formatWeek(mondayStr);
         document.getElementById('snapshotBody').innerHTML =
             '<tr><td colspan="11" class="loading">Loading…</td></tr>';
 
         try {
-            const resp = await fetch(`archives/data_week_${mondayStr}.json?t=${Date.now()}`);
+            const resp = await fetch(`archives/data_${kind === 'month' ? 'month' : 'week'}_${mondayStr}.json?t=${Date.now()}`);
             const data = await resp.json();
             renderSnapshot(data);
         } catch (e) {

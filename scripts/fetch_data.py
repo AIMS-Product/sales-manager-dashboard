@@ -1,21 +1,10 @@
 #!/usr/bin/env python3
-"""
-Fetch WEEK-TO-DATE rep-level metrics from Close CRM.
-Writes data.json for the GitHub Pages dashboard.
+"""Build the month-to-date Sales Manager scorecard from read-only Close data.
 
-Strategy:
-  1. Query leads where "First Sales Call Booked Date" is within Mon–today (PDT)
-  2. Exclude leads with Canceled/Outside US status, excluded users
-  3. Process lead-level CRM fields for compliance, funnel, shown/qualified
-  4. Separately fetch Closed/Won opps, task adherence, qualified pipeline,
-     and the Avoma month-to-date scorecard average
-
-Weekly targets per rep:
-  Meetings Booked: 20    Close Rate: 30%
-  Meetings Shown: 15     QA Score: Avoma MTD average (/5)
-  Opps Qualified: 10     Avg/Deal: $8k
-  Opps Closed Won: 3     Post-call Process Adherence: 90%
-  Revenue Booked: $24k   Task Adherence: 100% (TBD)
+Live call metrics use pinned MTD v2.8 eligibility, scheduled dates and native
+Completed/No Show outcomes. Wins/revenue retain native won-date selectors;
+process, task and QA scoring retain their independent definitions. RERUN_WEEK
+supports explicit historical Monday-Sunday windows.
 """
 
 import json
@@ -28,7 +17,7 @@ from calendar import monthrange
 from pathlib import Path
 from zoneinfo import ZoneInfo
 # Reuse the canonical rep-dashboard per-lead evidence rules over this dashboard's
-# Monday-through-today cohort. The vendored rules module is copied verbatim.
+# reporting-period cohort. The vendored rules module is copied verbatim.
 from build_adherence_preview import LATEST_BOOKED_DATE_FIELD, add_adherence_to_dashboard, load_env_value  # noqa: E402
 from dashboard_adherence import apply_dashboard_post_call_scores  # noqa: E402
 from avoma_scores import fetch_avoma_mtd_scores  # noqa: E402
@@ -815,6 +804,13 @@ def get_week_range(now_pst):
 
 # ── Step 2: Fetch Closed/Won opps for the week ──────────────────────────────
 
+def get_reporting_range(now_pst):
+    """The reviewed live scorecard is month-to-date; rerun weeks stay explicit."""
+    today = now_pst.date()
+    start = today.replace(day=1)
+    return start.isoformat(), today.isoformat(), []
+
+
 def fetch_closed_won_week(monday_str, today_str):
     all_opps = []
     skip = 0
@@ -1012,7 +1008,7 @@ def build_dashboard_data():
     now = now_utc.astimezone(pst)
     today_str = now.strftime("%Y-%m-%d")
 
-    monday_str, today_str, _ = get_week_range(now)
+    monday_str, today_str, _ = get_reporting_range(now)
     day_of_week = now.date().weekday() + 1  # 1=Mon, 5=Fri
 
     # Optional: re-run for a specific past week (set RERUN_WEEK=YYYY-MM-DD of Monday)
@@ -1026,7 +1022,7 @@ def build_dashboard_data():
         day_of_week = 7  # treat as full week (Mon-Sun)
         print(f"⚠️ RERUN MODE: overriding week to {monday_str} through {today_str}", flush=True)
 
-    print(f"Fetching WTD data: {monday_str} through {today_str} (day {day_of_week} of week)...", flush=True)
+    print(f"Fetching reporting-period data: {monday_str} through {today_str} (day {day_of_week} of week)...", flush=True)
 
     # Users
     t0 = time.time()
@@ -1243,20 +1239,40 @@ def build_dashboard_data():
     }
 
 
-if __name__ == "__main__":
-    data = build_dashboard_data()
+def apply_outcome_metrics(dashboard, *, now=None, reader=None):
+    from mtd_v28.outcome_core import ReportingReader, apply_dashboard_outcomes
+    now = now or datetime.now(PACIFIC)
+    start = datetime.strptime(dashboard['monday_str'], '%Y-%m-%d').date()
+    last = datetime.strptime(dashboard['today_str'], '%Y-%m-%d').date()
+    exclusive = datetime.combine(last + timedelta(days=1), datetime.min.time(), PACIFIC)
+    cutoff = min(now, exclusive)
+    reader = reader or ReportingReader(
+        lambda endpoint, params: api_get('/' + endpoint.lstrip('/'), params), start, cutoff,
+    )
+    result = apply_dashboard_outcomes(dashboard, reader, surface='manager', source_map=FUNNEL_SOURCE)
+    weekly = bool(os.environ.get('RERUN_WEEK', '').strip())
+    result['metric_definitions']['period_kind'] = 'week' if weekly else 'month'
+    if not weekly:
+        result['week_label'] = reader.cutoff.strftime('%B %Y')
+    result['updated_at'] = reader.cutoff.strftime('%Y-%m-%d %I:%M %p %Z')
+    return result
+
+
+def build_live_dashboard_data():
+    data = apply_outcome_metrics(build_dashboard_data())
     data = add_adherence_to_dashboard(
-        data,
-        date_range=(data["monday_str"], data["today_str"]),
-        source="close_crm",
-        preview_only=False,
+        data, date_range=(data['monday_str'], data['today_str']),
+        source='close_crm', preview_only=False,
         candidate_booked_date_field=LATEST_BOOKED_DATE_FIELD,
     )
     apply_dashboard_post_call_scores(data)
     fetch_opportunity_statuses(data)
-    # Version the archive presentation independently from historical snapshots.
-    # Schema 2 adds adherence and lead cohorts; schema 3 adds Avoma MTD scores.
-    data["dashboard_schema_version"] = 3
+    data['dashboard_schema_version'] = 3
+    return data
+
+
+if __name__ == "__main__":
+    data = build_live_dashboard_data()
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     repo_root = os.path.dirname(script_dir)
@@ -1271,7 +1287,9 @@ if __name__ == "__main__":
     os.makedirs(archive_dir, exist_ok=True)
 
     monday_str = data["monday_str"]  # e.g. "2026-03-03"
-    archive_path = os.path.join(archive_dir, f"data_week_{monday_str}.json")
+    is_week = data['metric_definitions']['period_kind'] == 'week'
+    archive_key = monday_str if is_week else monday_str[:7]
+    archive_path = os.path.join(archive_dir, f"data_week_{archive_key}.json" if is_week else f"data_month_{archive_key}.json")
     with open(archive_path, "w") as f:
         json.dump(data, f, indent=2)
 
@@ -1284,16 +1302,18 @@ if __name__ == "__main__":
 
     # Migrate from old daily format if needed
     if "weeks" not in index_data:
-        index_data = {"weeks": []}
+        index_data["weeks"] = []
 
-    if monday_str not in index_data["weeks"]:
-        index_data["weeks"].append(monday_str)
-        index_data["weeks"].sort(reverse=True)
+    index_key = 'weeks' if is_week else 'months'
+    index_data.setdefault(index_key, [])
+    if archive_key not in index_data[index_key]:
+        index_data[index_key].append(archive_key)
+        index_data[index_key].sort(reverse=True)
 
     with open(index_path, "w") as f:
         json.dump(index_data, f, indent=2)
 
     print(f"✅ Wrote {output_path}", flush=True)
-    print(f"📁 Archived week of {monday_str} to {archive_path}", flush=True)
+    print(f"📁 Archived reporting period {archive_key} to {archive_path}", flush=True)
     print(f"   {len(data['reps'])} reps | {data['total_booked']} booked | "
           f"{data['total_deals']} deals | ${data['total_revenue']:,.2f} revenue", flush=True)

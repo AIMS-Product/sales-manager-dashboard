@@ -71,12 +71,13 @@ class MetricDetailsTests(unittest.TestCase):
         ]
         with patch.object(fetch_data, "CLOSE_API_KEY", "test-key"), \
              patch.object(fetch_data, "init_session"), \
-             patch.object(fetch_data, "fetch_org_users", return_value={"joe-id": "Joe Dysert"}), \
+             patch.object(fetch_data, "fetch_org_users", return_value=({"joe-id": "Joe Dysert"}, {})), \
              patch.object(fetch_data, "fetch_closed_won_week", return_value=opps), \
              patch.object(fetch_data, "fetch_booked_leads", return_value=meeting_result), \
              patch.object(fetch_data, "fetch_task_adherence", return_value=({}, {}, {})), \
              patch.object(fetch_data, "fetch_open_leads_per_rep", return_value={}), \
-             patch.object(fetch_data, "fetch_mtd_weekly_totals", return_value=None):
+             patch.object(fetch_data, "load_env_value", return_value=""), \
+             patch.object(fetch_data, "fetch_avoma_mtd_scores", return_value=({}, {"available": True})):
             data = fetch_data.build_dashboard_data()
 
         joe = next(row for row in data["reps"] if row["name"] == "Joe Dysert")

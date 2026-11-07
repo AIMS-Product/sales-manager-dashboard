@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Rep Metrics</title>
+    <title>Rep Metrics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -114,11 +114,11 @@
 
         table { width: 100%; min-width: 1450px; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
 
-        col.col-name  { width: 170px; }
-        col.col-prog  { width: 95px; }
+        col.col-name  { width: 156px; }
+        col.col-prog  { width: 70px; }
         col.col-money { width: 115px; }
-        col.col-rate  { width: 105px; }
-        col.col-opp-status { width: 145px; }
+        col.col-rate  { width: 78px; }
+        col.col-opp-status { width: 86px; }
 
         thead tr.group-header th {
             background: #e8e9ec;
@@ -521,7 +521,8 @@
             .content { padding: 16px 20px; }
             col.col-name { width: 140px; }
         }
-    </style>
+    thead tr.sort-header th { white-space:normal; line-height:1.4; }
+</style>
 </head>
 <body>
 
@@ -530,7 +531,7 @@
         <div class="header-icon">
             <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
         </div>
-        <h1>Weekly Rep Metrics <span>Dashboard</span></h1>
+        <h1>Rep Metrics <span>Dashboard</span></h1>
     </div>
     <div class="header-right">
         <span class="week-badge" id="weekLabel">—</span>
@@ -542,7 +543,7 @@
 <div class="content">
     <div class="table-section">
         <div class="table-header">
-            <div class="table-title">Rep Breakdown — WTD <span id="repCount"></span></div>
+            <div class="table-title">Rep Breakdown — MTD <span id="repCount"></span></div>
             <div style="font-size: 12px; color: var(--text-muted);">Click a number for its records · Click a header to sort</div>
         </div>
         <div class="table-wrap">
@@ -556,6 +557,8 @@
                     <col class="col-money">
                     <col class="col-rate">
                     <col class="col-rate">
+                    <col class="col-rate">
+                    <col class="col-rate">
                     <col class="col-money">
                     <col class="col-rate">
                     <col class="col-rate">
@@ -565,28 +568,30 @@
                 <thead>
                     <tr class="group-header">
                         <th></th>
-                        <th class="group-activity" colspan="5">Week-to-Date Activity</th>
-                        <th class="group-performance" colspan="3">Performance</th>
+                        <th class="group-activity" colspan="5">Month-to-Date Activity</th>
+                        <th class="group-performance" colspan="5">Performance</th>
                         <th class="group-quality" colspan="4">Quality</th>
                     </tr>
                     <tr class="sort-header" id="tableHead">
                         <th data-key="name" data-dir="asc" data-type="string">Rep Name</th>
-                        <th data-key="booked" data-dir="desc" data-type="num" class="active g-activity-start" title="First strategy calls booked this week (Mon–today). Includes today's upcoming calls that haven't happened yet. Based on 'First Sales Call Booked Date' field.">Booked</th>
-                        <th data-key="shown" data-dir="desc" data-type="num" title="Booked meetings with a Completed meeting outcome. Today's upcoming calls remain outside Shown until an outcome is recorded.">Shown</th>
-                        <th data-key="qualified" data-dir="desc" data-type="num" title="Booked meetings where the lead was marked as qualified. Based on the 'Qualified (Opp)' field = Yes on the lead.">Qualified</th>
-                        <th data-key="deals" data-dir="desc" data-type="num" title="Unique Closed/Won deals this week. One deal per lead per rep. Based on date_won in the Sales Pipeline.">Closed Won</th>
-                        <th data-key="revenue" data-dir="desc" data-type="num" class="g-activity-end" title="Total dollar value of Closed/Won opportunities this week. Includes all opps per lead (not deduplicated by value).">Revenue</th>
-                        <th data-key="close_rate" data-dir="desc" data-type="num" title="Deals closed ÷ meetings booked × 100. Week-to-date conversion rate.">Close %</th>
+                        <th data-key="booked" data-dir="desc" data-type="num" class="active g-activity-start" title="Qualifying calls scheduled in elapsed period with native Completed or No Show outcome">Booked</th>
+                        <th data-key="shown" data-dir="desc" data-type="num" title="Native Completed outcome on qualifying calls scheduled in elapsed period">Shown</th>
+                        <th data-key="qualified" data-dir="desc" data-type="num" title="Distinct qualified leads from Calls Occurred, using the current Close qualification flag">Qualified</th>
+                        <th data-key="deals" data-dir="desc" data-type="num" title="Unique Closed/Won deals in this period. One deal per lead per rep. Based on date_won in the Sales Pipeline.">Closed Won</th>
+                        <th data-key="revenue" data-dir="desc" data-type="num" class="g-activity-end" title="Total dollar value of Closed/Won opportunities in this period. Includes all opps per lead (not deduplicated by value).">Revenue</th>
+                        <th data-key="close_rate" data-dir="desc" data-type="num" title="Leads closed by date won divided by Calls Occurred; independent date cohorts">Close %</th>
+                        <th data-key="show_rate" data-dir="desc" data-type="num" title="Shows divided by Calls Occurred">Show %</th>
+                        <th data-key="qualification_rate" data-dir="desc" data-type="num" title="Qualified leads from occurred calls divided by Calls Occurred">Qual %</th>
                         <th data-key="qa_score" data-dir="desc" data-type="num" title="Month-to-date mean Avoma VP Closing Call Scorecard score, based on meetings held this month in Pacific time. Scores are out of 5; the number of scored calls is shown below.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
-                        <th data-key="pre_call_adherence" data-dir="desc" data-type="num" title="WTD pre-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Pre-Call Loom, Pre-call text, and Day-of confirmation percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Pre-Call Adh.</th>
-                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="WTD post-call adherence for leads first booked from Monday through the dashboard's current date. Equal-weight average of eligible Task or follow-up meeting and Recap email sent percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Post-Call Adh.</th>
+                        <th data-key="pre_call_adherence" data-dir="desc" data-type="num" title="Scheduled-call pre-call adherence for the native qualifying scheduled-call cohort through the reporting date. Equal-weight average of eligible Pre-Call Loom, Pre-call text, and Day-of confirmation percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Pre-Call Adh.</th>
+                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="Scheduled-call post-call adherence for the native qualifying scheduled-call cohort through the reporting date. Equal-weight average of eligible Task or follow-up meeting and Recap email sent percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Post-Call Adh.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. Tasks on Closed/Won leads are excluded. 100% = fully caught up.">Task Adh.</th>
                         <th data-key="opportunity_status_total" data-dir="desc" data-type="num" title="Active Sales Pipeline opportunities grouped by status. Open a saved Close view for each status.">Opp Status</th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <tr><td colspan="13" class="loading"><div class="spinner"></div> Loading data…</td></tr>
+                    <tr><td colspan="15" class="loading"><div class="spinner"></div> Loading data…</td></tr>
                 </tbody>
             </table>
         </div>
@@ -620,12 +625,13 @@
     let DATA = null;
     let currentSort = { key: 'booked', dir: 'desc' };
     let lastMetricTrigger = null;
-    const metricLabels = { booked: 'Booked', shown: 'Shown', qualified: 'Qualified', deals: 'Closed Won' };
+    const metricLabels = { occurred_calls: 'Calls Occurred', booked: 'Booked', shown: 'Shown', qualified: 'Qualified', deals: 'Closed Won' };
     const metricDescriptions = {
-        booked: 'Leads with a first sales call booked this week.',
-        shown: 'Booked leads grouped by the selected meeting outcome. Upcoming calls remain separate until an outcome is recorded.',
-        qualified: 'Booked leads marked as qualified in Close.',
-        deals: 'Unique leads with Closed/Won opportunities this week.',
+        occurred_calls: 'Qualifying scheduled calls with a native Completed or No Show outcome. Cancellations, future and unresolved calls are excluded.',
+        booked: 'Qualifying calls scheduled in the elapsed period with native Completed or No Show outcome. Excludes cancellations, future calls and unresolved outcomes.',
+        shown: 'Calls scheduled in the elapsed period, grouped by native outcome. Only Completed and No Show count as Calls Occurred.',
+        qualified: 'Distinct qualified leads from Calls Occurred; current Close flag, no reset applied.',
+        deals: 'Unique leads with Closed/Won opportunities in this period.',
     };
     const metricDrawer = document.getElementById('metricDrawer');
     const metricBackdrop = document.getElementById('metricBackdrop');
@@ -689,7 +695,7 @@
         const nameHtml = /^lead_[A-Za-z0-9]+$/.test(leadId)
             ? `<a href="https://app.close.com/lead/${leadId}/" target="_blank" rel="noopener noreferrer">${name} ↗</a>`
             : `<span class="metric-drawer-item-name">${name}</span>`;
-        const status = metric === 'deals' ? 'Won' : metric === 'no_shows' ? (record.meeting_outcome || 'No show') : metric === 'no_outcome' ? (record.meeting_outcome || 'No outcome') : metric === 'upcoming' ? (record.meeting_outcome || 'Upcoming') : metric === 'shown' ? (record.meeting_outcome || 'Shown') : 'Booked';
+        const status = metric === 'deals' ? 'Won' : metric === 'no_shows' ? (record.meeting_outcome || 'No show') : metric === 'no_outcome' ? (record.meeting_outcome || 'No outcome') : metric === 'upcoming' ? (record.meeting_outcome || 'Upcoming') : (metric === 'booked' || metric === 'shown' || metric === 'occurred_calls' || metric === 'qualified') ? (record.meeting_outcome || 'No outcome') : 'Booked';
         const parts = [status, escapeHtml(record.date || 'Date unavailable')];
         if (metric === 'deals') {
             const amount = Number(record.value || 0);
@@ -736,13 +742,13 @@
         } else if (metric === 'shown' && Array.isArray(noShows)) {
             const section = (title, items, type) => `<section class="metric-drawer-section"><div class="metric-drawer-section-title">${title}</div>${items.length
                 ? items.map(record => metricRecordHtml(record, type)).join('')
-                : '<div class="metric-drawer-empty">None this week.</div>'}</section>`;
+                : '<div class="metric-drawer-empty">None in this period.</div>'}</section>`;
             listHtml = section(`Shown (${records.length})`, records, 'shown')
                 + section(`No shows (${noShows.length})`, noShows, 'no_shows')
                 + section(`No outcome (${noOutcome.length})`, noOutcome, 'no_outcome')
                 + section(`Upcoming (${upcomingRecords.length})`, upcomingRecords, 'upcoming');
         } else if (records.length === 0) {
-            listHtml = `<div class="metric-drawer-empty">No ${metricLabels[metric].toLowerCase()} records for this rep this week.</div>`;
+            listHtml = `<div class="metric-drawer-empty">No ${metricLabels[metric].toLowerCase()} records for this rep in this period.</div>`;
         } else {
             listHtml = records.map(record => metricRecordHtml(record, metric)).join('');
         }
@@ -791,7 +797,8 @@
         document.getElementById('weekLabel').textContent = DATA.week_label || '—';
         document.getElementById('updatedAt').textContent = DATA.updated_at || '—';
 
-        // Day-of-week indicator (M T W T F S S)
+        const monthly = DATA.metric_definitions?.period_kind === 'month';
+        // Keep the same progress indicator for monthly and explicit weekly views.
         const dayOfWeek = DATA.day_of_week || 1;
         const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
         let dayHtml = '<span class="day-label">DAY ' + dayOfWeek + '/7</span>';
@@ -801,6 +808,16 @@
         }
         document.getElementById('dayIndicator').innerHTML = dayHtml;
 
+        if (monthly && DATA.today_str) {
+            const date = new Date(DATA.today_str + 'T12:00:00');
+            const monthDays = new Date(date.getFullYear(), date.getMonth()+1, 0).getDate();
+            document.getElementById('dayIndicator').innerHTML = '<span class="day-label">DAY ' + date.getDate() + '/' + monthDays + '</span>';
+        }
+        document.querySelector('.group-activity').textContent = monthly ? 'Month-to-Date Activity' : 'Week-to-Date Activity';
+        document.querySelector('.table-title').firstChild.textContent = monthly ? 'Rep Breakdown — MTD ' : 'Rep Breakdown — WTD ';
+        if (!DATA.metric_definitions) {
+            document.querySelector('[data-key="booked"]').title = 'Historical First Sales Call Booked Date cohort';
+        }
         renderTable();
         renderFunnel();
     }
@@ -1004,7 +1021,10 @@
             const q = reps.reduce((s, r) => s + (r.qualified || 0), 0);
             const d = reps.reduce((s, r) => s + (r.deals || 0), 0);
             const rev = reps.reduce((s, r) => s + (r.revenue || 0), 0);
-            const cr = b > 0 ? Math.round(d / b * 1000) / 10 : null;
+            const oc = reps.reduce((s, r) => s + (r.occurred_calls ?? r.booked ?? 0), 0);
+            const cr = oc > 0 ? Math.round(d / oc * 1000) / 10 : null;
+            const sr = oc > 0 ? Math.round(sh / oc * 1000) / 10 : null;
+            const qr = oc > 0 ? Math.round(q / oc * 1000) / 10 : null;
             const avg = d > 0 ? Math.round(rev / d) : null;
             const lane = String(reps[0]?.lane || 1);
             const postCall = aggregatePhasePct(reps, 'post');
@@ -1013,7 +1033,7 @@
             const totalInc = incmplt.reduce((s, r) => s + (r.tasks_incomplete || 0), 0);
             const totalOvd = incmplt.reduce((s, r) => s + (r.tasks_overdue || 0), 0);
             const taskAdh = totalInc > 0 ? Math.round((totalInc - totalOvd) / totalInc * 1000) / 10 : null;
-            return { booked: b, shown: sh, qualified: q, deals: d, revenue: rev, close_rate: cr, avg, postCall, preCall, taskAdh, totalOvd };
+            return { occurred_calls: oc, show_rate: sr, qualification_rate: qr, booked: b, shown: sh, qualified: q, deals: d, revenue: rev, close_rate: cr, avg, postCall, preCall, taskAdh, totalOvd };
         }
 
         // Helper: render a single rep row
@@ -1031,6 +1051,8 @@
                     <td>${metricButton(globalIdx, 'deals', r.deals, r.name)}</td>
                     <td class="g-activity-end">${r.revenue ? fmtK(r.revenue) : '—'}</td>
                     <td>${r.close_rate != null ? r.close_rate + '%' : '—'}</td>
+                    <td>${r.show_rate == null ? '—' : r.show_rate + '%'}</td>
+                    <td>${r.qualification_rate == null ? '—' : r.qualification_rate + '%'}</td>
                     ${qaScoreCell(r.qa_score, r.qa_score_count)}
                     <td class="g-perf-end">${r.avg_rev_per_deal ? fmtK(r.avg_rev_per_deal) : '—'}</td>
                     <td style="color:var(--text-muted)">—</td>
@@ -1053,7 +1075,9 @@
                 <td>${metricButton(globalIdx, 'deals', prog(r.deals, rt.deals), r.name)}</td>
                 <td class="g-activity-end">${progMoney(r.revenue, rt.revenue)}</td>
                 <td>${progPct(r.close_rate, rt.close_rate)}</td>
-                ${qaScoreCell(r.qa_score, r.qa_score_count)}
+                <td>${r.show_rate == null ? '—' : r.show_rate + '%'}</td>
+                    <td>${r.qualification_rate == null ? '—' : r.qualification_rate + '%'}</td>
+                    ${qaScoreCell(r.qa_score, r.qa_score_count)}
                 <td class="g-perf-end">${progMoney(r.avg_rev_per_deal, rt.avg_rev_per_deal)}</td>
                 ${adherenceCell('pre', r.pre_call_adherence, rt.pre_call_adherence)}
                 ${adherenceCell('post', adherencePhasePct(r.adherence, 'post'), rt.post_call_adherence)}
@@ -1104,7 +1128,7 @@
                         return `<section class="post-call-step"><div class="post-call-step-head"><span class="post-call-step-title">${label}</span><span class="crm-field-val ${step.pct == null ? '' : step.pct >= 90 ? 'good' : step.pct >= 50 ? 'partial' : 'bad'}">${pct}</span></div><div class="post-call-step-meta">${done} of ${eligible} eligible${step.exempt ? ` · ${step.exempt} exempt` : ''}</div>${cohortHtml}</section>`;
                     }).join('');
                     return `<tr class="crm-detail-row" id="crm-detail-${phase}-${globalIdx}" style="display:none;">
-                        <td colspan="13"><div class="post-call-detail-grid">${stepHtml}</div></td>
+                        <td colspan="15"><div class="post-call-detail-grid">${stepHtml}</div></td>
                     </tr>`;
                 };
                 html += renderDetail('pre') + renderDetail('post');
@@ -1123,6 +1147,8 @@
                 <td>${prog(lt.deals, targets.deals)}</td>
                 <td class="g-activity-end">${progMoney(lt.revenue, targets.revenue)}</td>
                 <td>${progPct(lt.close_rate, targets.close_rate)}</td>
+                <td>${lt.show_rate == null ? '—' : lt.show_rate + '%'}</td>
+                <td>${lt.qualification_rate == null ? '—' : lt.qualification_rate + '%'}</td>
                 ${(() => { const qa = aggregateQaScore(reps); return qaScoreCell(qa.score, qa.count); })()}
                 <td class="g-perf-end">${lt.avg ? fmtK(lt.avg) : '—'}</td>
                 <td>${progPct(lt.preCall, targets.pre_call_adherence)}</td>
@@ -1139,7 +1165,7 @@
         let html = '';
 
         // ── Lane 1 ──
-        html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Lane 1</span></td></tr>`;
+        html += `<tr class="lane-header-row"><td colspan="15"><span class="lane-label">Lane 1</span></td></tr>`;
         for (const r of lane1) {
             html += repRow(r, globalIdxMap.get(r));
         }
@@ -1148,8 +1174,8 @@
 
         // ── Lane 2 (only if there are Lane 2 reps) ──
         if (lane2.length > 0) {
-            html += `<tr class="lane-divider-row"><td colspan="13"></td></tr>`;
-            html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Lane 2</span></td></tr>`;
+            html += `<tr class="lane-divider-row"><td colspan="15"></td></tr>`;
+            html += `<tr class="lane-header-row"><td colspan="15"><span class="lane-label">Lane 2</span></td></tr>`;
             for (const r of lane2) {
                 html += repRow(r, globalIdxMap.get(r));
             }
@@ -1158,8 +1184,8 @@
         }
 
         if (mgrs.length > 0) {
-            html += `<tr class="lane-divider-row"><td colspan="13"></td></tr>`;
-            html += `<tr class="lane-header-row"><td colspan="13"><span class="lane-label">Manager</span></td></tr>`;
+            html += `<tr class="lane-divider-row"><td colspan="15"></td></tr>`;
+            html += `<tr class="lane-header-row"><td colspan="15"><span class="lane-label">Manager</span></td></tr>`;
             for (const r of mgrs) {
                 html += repRow(r, globalIdxMap.get(r));
             }
@@ -1174,6 +1200,8 @@
             <td>${prog(DATA.total_deals, tt.deals)}</td>
             <td class="g-activity-end">${progMoney(DATA.total_revenue, tt.revenue)}</td>
             <td>${progPct(DATA.team_close_rate, tt.close_rate)}</td>
+            <td>${DATA.team_show_rate == null ? '—' : DATA.team_show_rate + '%'}</td>
+            <td>${DATA.team_qualification_rate == null ? '—' : DATA.team_qualification_rate + '%'}</td>
             ${(() => { const qa = aggregateQaScore([...lane1, ...lane2, ...mgrs]); return qaScoreCell(qa.score, qa.count); })()}
             <td class="g-perf-end">${DATA.team_avg_rev_per_deal ? fmtK(DATA.team_avg_rev_per_deal) : '—'}</td>
             <td>${progPct(DATA.team_pre_call_adherence, tt.pre_call_adherence)}</td>
@@ -1220,9 +1248,9 @@
         if (!DATA || !DATA.reps) return;
         const scorecardReps = DATA.reps.filter(r => r.lane === 1 || r.lane === 2 || r.is_manager);
         const salesReps = scorecardReps.filter(r => !r.is_manager);
-        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'QA Score MTD (/5)', 'QA Scored Calls MTD', 'Avg/Deal', 'Pre-Call Adherence', 'Post-Call Adherence', 'Task Adh.'];
+        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Show %', 'Qual %', 'QA Score MTD (/5)', 'QA Scored Calls MTD', 'Avg/Deal', 'Pre-Call Adherence', 'Post-Call Adherence', 'Task Adh.'];
         const rows = DATA.reps
-            .filter(r => !r.is_manager)
+            .filter(r => r.lane === 1 || r.lane === 2 || r.is_manager)
             .sort((a, b) => (b.booked || 0) - (a.booked || 0))
             .map(r => [
                 r.name,
@@ -1233,6 +1261,8 @@
                 r.deals || 0,
                 r.revenue || 0,
                 r.close_rate != null ? r.close_rate + '%' : '',
+                r.show_rate != null ? r.show_rate + '%' : '',
+                r.qualification_rate != null ? r.qualification_rate + '%' : '',
                 r.qa_score != null ? Number(r.qa_score).toFixed(2) : '',
                 r.qa_score_count || 0,
                 r.avg_rev_per_deal || 0,
@@ -1250,6 +1280,8 @@
             DATA.total_deals || 0,
             DATA.total_revenue || 0,
             DATA.team_close_rate != null ? DATA.team_close_rate + '%' : '',
+            DATA.team_show_rate != null ? DATA.team_show_rate + '%' : '',
+            DATA.team_qualification_rate != null ? DATA.team_qualification_rate + '%' : '',
             (() => { const qa = aggregateQaScore(scorecardReps); return qa.score != null ? qa.score.toFixed(2) : ''; })(),
             aggregateQaScore(scorecardReps).count,
             DATA.team_avg_rev_per_deal || 0,
