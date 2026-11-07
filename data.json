@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06 04:30 PM PST",
+  "updated_at": "2026-11-06 04:45 PM PST",
   "week_label": "Nov 02 \u2013 Nov 08, 2026",
   "monday_str": "2026-11-02",
   "today_str": "2026-11-06",
@@ -51,7 +51,7 @@
   "team_close_rate": 6.7,
   "team_avg_rev_per_deal": 5577.4,
   "team_crm_compliance": 54.8,
-  "team_task_adherence": 52.0,
+  "team_task_adherence": 52.1,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -587,7 +587,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 63,
+      "tasks_incomplete": 64,
       "open_leads": 29,
       "est_pipeline": 69600,
       "is_manager": false,
@@ -596,7 +596,7 @@
       "rep_owner_id": "user_6kp6k4OcqKqFNrxGjgMUncedjiCYC6JHU8EI28F7etV",
       "adherence": {
         "pre_call_pct": 96,
-        "post_call_pct": 88,
+        "post_call_pct": 100,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -625,10 +625,10 @@
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 6,
+            "done": 8,
             "eligible": 8,
             "exempt": 10,
-            "pct": 75
+            "pct": 100
           },
           "recap_email": {
             "label": "Recap email sent",
@@ -1194,17 +1194,6 @@
                 "opportunity_status": "WARM - Follow Up"
               },
               {
-                "id": "lead_RU8QFsNsB7bkI76EoI0DTlyUVf7i4nj4Md9pgoGp1Pq",
-                "name": "Nooria Khogyani",
-                "booked_date": "2026-11-06",
-                "scored_call_at": "2026-11-06T07:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_RU8QFsNsB7bkI76EoI0DTlyUVf7i4nj4Md9pgoGp1Pq/",
-                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
-                "opportunity_status": "GENERAL Follow Up"
-              }
-            ],
-            "missed": [
-              {
                 "id": "lead_3oDGHf0ZdyICSoc9912leInU5TZ5nwbDR0g0naHdYVi",
                 "name": "Aurburn Lee",
                 "booked_date": "2026-11-06",
@@ -1221,8 +1210,18 @@
                 "url": "https://app.close.com/lead/lead_NXZmQpHH0hM06eNpNgg2523WXl2ZB1n4tZpFDFpjweg/",
                 "status_label": "WARM - Follow up",
                 "opportunity_status": "WARM - Follow Up"
+              },
+              {
+                "id": "lead_RU8QFsNsB7bkI76EoI0DTlyUVf7i4nj4Md9pgoGp1Pq",
+                "name": "Nooria Khogyani",
+                "booked_date": "2026-11-06",
+                "scored_call_at": "2026-11-06T07:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_RU8QFsNsB7bkI76EoI0DTlyUVf7i4nj4Md9pgoGp1Pq/",
+                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
+                "opportunity_status": "GENERAL Follow Up"
               }
             ],
+            "missed": [],
             "exempt": [
               {
                 "id": "lead_Wdfo7WhoCAqbBvke0jOcmOMswZmyXJzEOO6tKgmNunc",
@@ -1488,19 +1487,19 @@
         }
       },
       "pre_call_adherence": 96,
-      "post_call_adherence": 88,
+      "post_call_adherence": 100,
       "opportunity_status": {
         "hot": {
           "count": 1
         },
         "warm": {
-          "count": 21
+          "count": 22
         },
         "general": {
-          "count": 11
+          "count": 12
         }
       },
-      "opportunity_status_total": 33
+      "opportunity_status_total": 35
     },
     {
       "name": "Robin Perkins",
@@ -3246,7 +3245,7 @@
                 "scored_call_at": "2026-11-06T16:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_15pwGCuiq0lA4OcLLLgUy0PY1ffLQLrQlNc0ljhjA8q/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "GENERAL Follow Up"
               }
             ],
             "exempt": []
@@ -3370,7 +3369,7 @@
                 "scored_call_at": "2026-11-06T16:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_15pwGCuiq0lA4OcLLLgUy0PY1ffLQLrQlNc0ljhjA8q/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "GENERAL Follow Up"
               }
             ],
             "exempt": []
@@ -3494,7 +3493,7 @@
                 "scored_call_at": "2026-11-06T16:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_15pwGCuiq0lA4OcLLLgUy0PY1ffLQLrQlNc0ljhjA8q/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "GENERAL Follow Up"
               }
             ],
             "exempt": []
@@ -3573,7 +3572,7 @@
                 "scored_call_at": "2026-11-06T16:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_15pwGCuiq0lA4OcLLLgUy0PY1ffLQLrQlNc0ljhjA8q/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "GENERAL Follow Up"
               }
             ],
             "exempt": [
@@ -3743,10 +3742,10 @@
           "count": 5
         },
         "general": {
-          "count": 16
+          "count": 17
         }
       },
-      "opportunity_status_total": 44
+      "opportunity_status_total": 45
     },
     {
       "name": "Ariella Irvine",
@@ -6311,7 +6310,7 @@
       "rep_owner_id": "user_7HSxi55O8q5jO11khvrTcAGoL2nlcoa3kZ6loAY6i78",
       "adherence": {
         "pre_call_pct": 74,
-        "post_call_pct": 17,
+        "post_call_pct": 13,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -6349,9 +6348,9 @@
             "label": "Recap email sent",
             "phase": "post_call",
             "done": 1,
-            "eligible": 3,
+            "eligible": 4,
             "exempt": 4,
-            "pct": 33
+            "pct": 25
           }
         },
         "lead_cohorts": {
@@ -6737,6 +6736,15 @@
                 "url": "https://app.close.com/lead/lead_ggkU0JiLo9fZTH4X2nZrKMO4zoSzH6G8Pg5JIKwYWID/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_QHitgCF1c35sj1WhMuu0gAXGeU7WdJWRMs80arg3ufT",
+                "name": "Steve Hall",
+                "booked_date": "2026-11-05",
+                "scored_call_at": "2026-11-05T16:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_QHitgCF1c35sj1WhMuu0gAXGeU7WdJWRMs80arg3ufT/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "No active opp"
               }
             ],
             "exempt": [
@@ -6781,7 +6789,7 @@
         }
       },
       "pre_call_adherence": 74,
-      "post_call_adherence": 17,
+      "post_call_adherence": 13,
       "opportunity_status": {
         "hot": {
           "count": 8
@@ -7149,7 +7157,7 @@
   ],
   "team_adherence": {
     "pre_call_pct": 83,
-    "post_call_pct": 67,
+    "post_call_pct": 69,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -7178,25 +7186,25 @@
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
-        "done": 19,
+        "done": 21,
         "eligible": 42,
         "exempt": 43,
-        "pct": 45
+        "pct": 50
       },
       "recap_email": {
         "label": "Recap email sent",
         "phase": "post_call",
         "done": 33,
-        "eligible": 37,
+        "eligible": 38,
         "exempt": 43,
-        "pct": 89
+        "pct": 87
       }
     }
   },
   "lane_adherence": {
     "1": {
       "pre_call_pct": 83,
-      "post_call_pct": 67,
+      "post_call_pct": 69,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -7225,18 +7233,18 @@
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
-          "done": 19,
+          "done": 21,
           "eligible": 42,
           "exempt": 43,
-          "pct": 45
+          "pct": 50
         },
         "recap_email": {
           "label": "Recap email sent",
           "phase": "post_call",
           "done": 33,
-          "eligible": 37,
+          "eligible": 38,
           "exempt": 43,
-          "pct": 89
+          "pct": 87
         }
       }
     }
@@ -7244,7 +7252,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-06T16:39:11.426892-08:00",
+    "generated_at": "2026-11-06T16:53:02.490633-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -7267,12 +7275,12 @@
     "preview_only": false
   },
   "team_pre_call_adherence": 83,
-  "team_post_call_adherence": 67,
+  "team_post_call_adherence": 69,
   "lane_pre_call_adherence": {
     "1": 83
   },
   "lane_post_call_adherence": {
-    "1": 67
+    "1": 69
   },
   "dashboard_schema_version": 3
 }
