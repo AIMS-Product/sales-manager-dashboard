@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06 08:00 PM PST",
+  "updated_at": "2026-11-06 08:15 PM PST",
   "week_label": "Nov 02 \u2013 Nov 08, 2026",
   "monday_str": "2026-11-02",
   "today_str": "2026-11-06",
@@ -1621,6 +1621,14 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_AN4Iy2DRhg5nOOldiRZiKoKeB0c3VilEhb4fRUAU8vr",
+            "name": "Travion",
+            "date": "2026-11-06",
+            "funnel": "Reactivation Scrapers",
+            "meeting_outcome": "Cancelled",
+            "meeting_status": "declined-by-org"
+          },
+          {
             "lead_id": "lead_8i4SCc1Se9cfPl6ihlvKpzVeaVio9OAZ3LRMhoJG1NO",
             "name": "Vivek Jogi",
             "date": "2026-11-06",
@@ -1635,14 +1643,6 @@
             "funnel": "Reactivation Scrapers",
             "meeting_outcome": "Completed",
             "meeting_status": "completed"
-          },
-          {
-            "lead_id": "lead_AN4Iy2DRhg5nOOldiRZiKoKeB0c3VilEhb4fRUAU8vr",
-            "name": "Travion",
-            "date": "2026-11-06",
-            "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": ""
           },
           {
             "lead_id": "lead_6nI2aN699yic2Zjl8gPH7Sf8CaWqYUKtJmyA54jivSH",
@@ -1815,8 +1815,8 @@
             "name": "Travion",
             "date": "2026-11-06",
             "funnel": "Reactivation Scrapers",
-            "meeting_outcome": "",
-            "meeting_status": ""
+            "meeting_outcome": "Cancelled",
+            "meeting_status": "declined-by-org"
           },
           {
             "lead_id": "lead_6nI2aN699yic2Zjl8gPH7Sf8CaWqYUKtJmyA54jivSH",
@@ -7286,7 +7286,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-06T20:08:08.221491-08:00",
+    "generated_at": "2026-11-06T20:23:05.202334-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
