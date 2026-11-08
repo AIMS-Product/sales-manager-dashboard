@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07 07:59 PM PST",
+  "updated_at": "2026-11-07 08:15 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-07",
@@ -50,15 +50,15 @@
   "total_revenue": 27887.0,
   "team_close_rate": 6.3,
   "team_avg_rev_per_deal": 5577.4,
-  "team_crm_compliance": 54.4,
+  "team_crm_compliance": 54.6,
   "team_task_adherence": 49.9,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
   },
   "team_overdue": 194,
-  "team_open_leads": 213,
-  "team_est_pipeline": 511200,
+  "team_open_leads": 209,
+  "team_est_pipeline": 501600,
   "funnel_breakdown": [
     {
       "funnel": "Unknown (Needs Review)",
@@ -6805,9 +6805,9 @@
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": null,
-      "crm_compliance": 51.9,
-      "crm_filled": 14,
-      "crm_total": 27,
+      "crm_compliance": 53.6,
+      "crm_filled": 15,
+      "crm_total": 28,
       "crm_detail": {
         "show_up": [
           9,
@@ -6822,14 +6822,22 @@
           4
         ],
         "confidence": [
-          1,
+          2,
           4
         ],
         "lost_reason": [
           0,
-          1
+          2
         ],
         "missing_leads": [
+          {
+            "name": "Christian Rogel",
+            "lead_id": "lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w",
+            "missing": [
+              "Disposition",
+              "Lost Reason"
+            ]
+          },
           {
             "name": "Nicole Jackson",
             "lead_id": "lead_ulUVNyKnRfDLPjjfpkLrgK2dLwNUFLNBPQsPllYbeNL",
@@ -6884,14 +6892,6 @@
           {
             "name": "Frederick Choute",
             "lead_id": "lead_h8bpENKMCY2HynIfBNoVwNSrbp4m29zKfNIjKYY7MeC",
-            "missing": [
-              "Disposition",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Christian Rogel",
-            "lead_id": "lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w",
             "missing": [
               "Disposition",
               "Confidence"
@@ -7052,8 +7052,8 @@
       "task_adherence": 67.6,
       "tasks_overdue": 11,
       "tasks_incomplete": 34,
-      "open_leads": 64,
-      "est_pipeline": 153600,
+      "open_leads": 60,
+      "est_pipeline": 144000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -7071,7 +7071,7 @@
       "rep_owner_id": "user_BaN2TstWtyF34eaQSSLG11j6DhKKm67Y6JltbIYCafO",
       "adherence": {
         "pre_call_pct": 93,
-        "post_call_pct": 63,
+        "post_call_pct": 67,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -7101,16 +7101,16 @@
             "label": "Task or follow-up meeting",
             "phase": "post_call",
             "done": 1,
-            "eligible": 4,
-            "exempt": 6,
-            "pct": 25
+            "eligible": 3,
+            "exempt": 7,
+            "pct": 33
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 4,
-            "eligible": 4,
-            "exempt": 6,
+            "done": 3,
+            "eligible": 3,
+            "exempt": 7,
             "pct": 100
           }
         },
@@ -7141,8 +7141,8 @@
                 "booked_date": "2026-11-03",
                 "scored_call_at": "2026-11-03T17:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w/",
-                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
-                "opportunity_status": "GENERAL Follow Up"
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
               },
               {
                 "id": "lead_7C7ReCl4exFVAzM4lYn2yZGzjMH6ZHUEFmww4Vlz5bM",
@@ -7247,8 +7247,8 @@
                 "booked_date": "2026-11-03",
                 "scored_call_at": "2026-11-03T17:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w/",
-                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
-                "opportunity_status": "GENERAL Follow Up"
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
               },
               {
                 "id": "lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7",
@@ -7343,8 +7343,8 @@
                 "booked_date": "2026-11-03",
                 "scored_call_at": "2026-11-03T17:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w/",
-                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
-                "opportunity_status": "GENERAL Follow Up"
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
               },
               {
                 "id": "lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7",
@@ -7427,15 +7427,6 @@
                 "opportunity_status": "Call Booked"
               },
               {
-                "id": "lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w",
-                "name": "Christian Rogel",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T17:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w/",
-                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
-                "opportunity_status": "GENERAL Follow Up"
-              },
-              {
                 "id": "lead_2UcKvjZJIuDaZbnanExDJ3ZvSpqCLZr9Pp1u1aLnFwJ",
                 "name": "Daniel Iniguez",
                 "booked_date": "2026-11-06",
@@ -7454,6 +7445,15 @@
                 "url": "https://app.close.com/lead/lead_dKYD3OXlKM4exomoJUseT5d7vDcTjZEANY7wK1GhwnS/",
                 "status_label": "Reschedule Requested",
                 "opportunity_status": "Reschedule Requested"
+              },
+              {
+                "id": "lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w",
+                "name": "Christian Rogel",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T17:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
               },
               {
                 "id": "lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7",
@@ -7523,15 +7523,6 @@
                 "opportunity_status": "No active opp"
               },
               {
-                "id": "lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w",
-                "name": "Christian Rogel",
-                "booked_date": "2026-11-03",
-                "scored_call_at": "2026-11-03T17:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w/",
-                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
-                "opportunity_status": "GENERAL Follow Up"
-              },
-              {
                 "id": "lead_2UcKvjZJIuDaZbnanExDJ3ZvSpqCLZr9Pp1u1aLnFwJ",
                 "name": "Daniel Iniguez",
                 "booked_date": "2026-11-06",
@@ -7551,6 +7542,15 @@
                 "url": "https://app.close.com/lead/lead_dKYD3OXlKM4exomoJUseT5d7vDcTjZEANY7wK1GhwnS/",
                 "status_label": "Reschedule Requested",
                 "opportunity_status": "Reschedule Requested"
+              },
+              {
+                "id": "lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w",
+                "name": "Christian Rogel",
+                "booked_date": "2026-11-03",
+                "scored_call_at": "2026-11-03T17:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_eq0P4DmDrkqh6p5J1VzuQgPELelNaT1a4gXq4rRNo1w/",
+                "status_label": "\ud83d\udc94 Lost",
+                "opportunity_status": "\ud83d\udc94 Lost"
               },
               {
                 "id": "lead_Q1IY2n45zKrN8x9u0j02nj7k1BM0LjjjVCrBjLlZ4w7",
@@ -7602,19 +7602,19 @@
         }
       },
       "pre_call_adherence": 93,
-      "post_call_adherence": 63,
+      "post_call_adherence": 67,
       "opportunity_status": {
         "hot": {
-          "count": 13
+          "count": 7
         },
         "warm": {
-          "count": 1
+          "count": 6
         },
         "general": {
-          "count": 2
+          "count": 0
         }
       },
-      "opportunity_status_total": 16
+      "opportunity_status_total": 13
     },
     {
       "name": "Eric Piccione",
@@ -8157,7 +8157,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-07T19:59:21.756154-08:00",
+    "cutoff_exclusive": "2026-11-07T20:15:11.939774-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -8196,17 +8196,17 @@
         "label": "Task or follow-up meeting",
         "phase": "post_call",
         "done": 24,
-        "eligible": 47,
-        "exempt": 48,
-        "pct": 51
+        "eligible": 46,
+        "exempt": 49,
+        "pct": 52
       },
       "recap_email": {
         "label": "Recap email sent",
         "phase": "post_call",
-        "done": 36,
-        "eligible": 43,
-        "exempt": 48,
-        "pct": 84
+        "done": 35,
+        "eligible": 42,
+        "exempt": 49,
+        "pct": 83
       }
     }
   },
@@ -8243,17 +8243,17 @@
           "label": "Task or follow-up meeting",
           "phase": "post_call",
           "done": 24,
-          "eligible": 47,
-          "exempt": 48,
-          "pct": 51
+          "eligible": 46,
+          "exempt": 49,
+          "pct": 52
         },
         "recap_email": {
           "label": "Recap email sent",
           "phase": "post_call",
-          "done": 36,
-          "eligible": 43,
-          "exempt": 48,
-          "pct": 84
+          "done": 35,
+          "eligible": 42,
+          "exempt": 49,
+          "pct": 83
         }
       }
     }
@@ -8261,7 +8261,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-07T20:06:59.601901-08:00",
+    "generated_at": "2026-11-07T20:23:47.868239-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -8281,7 +8281,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 377,
+    "api_requests": 375,
     "preview_only": false
   },
   "team_pre_call_adherence": 84,
