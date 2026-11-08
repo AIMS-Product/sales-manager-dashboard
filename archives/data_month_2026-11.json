@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08 01:39 PM PST",
+  "updated_at": "2026-11-08 01:56 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-08",
@@ -5422,7 +5422,7 @@
       "rep_owner_id": "user_7HSxi55O8q5jO11khvrTcAGoL2nlcoa3kZ6loAY6i78",
       "adherence": {
         "pre_call_pct": 79,
-        "post_call_pct": 7,
+        "post_call_pct": 6,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -5460,9 +5460,9 @@
             "label": "Recap email sent",
             "phase": "post_call",
             "done": 1,
-            "eligible": 8,
+            "eligible": 9,
             "exempt": 5,
-            "pct": 13
+            "pct": 11
           }
         },
         "lead_cohorts": {
@@ -6066,6 +6066,15 @@
                 "opportunity_status": "Call Booked"
               },
               {
+                "id": "lead_BDbWjbQz87a16NQImdVYTW9GXKkR7MKk567Ed6hgRUy",
+                "name": "Mike Pillar",
+                "booked_date": "2026-11-07",
+                "scored_call_at": "2026-11-07T14:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_BDbWjbQz87a16NQImdVYTW9GXKkR7MKk567Ed6hgRUy/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              },
+              {
                 "id": "lead_mr7IPVmkjfLFnF05ZJWqWqNkNd1P5IzYpJzbi71l2rZ",
                 "name": "Monica Hernandez",
                 "booked_date": "2026-11-07",
@@ -6126,7 +6135,7 @@
         }
       },
       "pre_call_adherence": 79,
-      "post_call_adherence": 7,
+      "post_call_adherence": 6,
       "opportunity_status": {
         "hot": {
           "count": 8
@@ -8302,7 +8311,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-08T13:39:45.496853-08:00",
+    "cutoff_exclusive": "2026-11-08T13:56:47.647309-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -8311,7 +8320,7 @@
   },
   "team_adherence": {
     "pre_call_pct": 84,
-    "post_call_pct": 65,
+    "post_call_pct": 64,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -8349,16 +8358,16 @@
         "label": "Recap email sent",
         "phase": "post_call",
         "done": 35,
-        "eligible": 45,
+        "eligible": 46,
         "exempt": 50,
-        "pct": 78
+        "pct": 76
       }
     }
   },
   "lane_adherence": {
     "1": {
       "pre_call_pct": 84,
-      "post_call_pct": 65,
+      "post_call_pct": 64,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -8396,9 +8405,9 @@
           "label": "Recap email sent",
           "phase": "post_call",
           "done": 35,
-          "eligible": 45,
+          "eligible": 46,
           "exempt": 50,
-          "pct": 78
+          "pct": 76
         }
       }
     }
@@ -8406,7 +8415,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-08T13:48:39.281415-08:00",
+    "generated_at": "2026-11-08T14:04:22.250286-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -8426,16 +8435,16 @@
       },
       "includes_lost": true
     },
-    "api_requests": 377,
+    "api_requests": 378,
     "preview_only": false
   },
   "team_pre_call_adherence": 84,
-  "team_post_call_adherence": 65,
+  "team_post_call_adherence": 64,
   "lane_pre_call_adherence": {
     "1": 84
   },
   "lane_post_call_adherence": {
-    "1": 65
+    "1": 64
   },
   "dashboard_schema_version": 3
 }
