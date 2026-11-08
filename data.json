@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-11-07 11:49 PM PST",
+  "updated_at": "2026-11-08 12:04 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
-  "today_str": "2026-11-07",
-  "day_of_week": 6,
+  "today_str": "2026-11-08",
+  "day_of_week": 7,
   "num_reps": 8,
   "targets": {
     "booked": 15,
@@ -50,7 +50,7 @@
   "total_revenue": 27887.0,
   "team_close_rate": 6.3,
   "team_avg_rev_per_deal": 5577.4,
-  "team_crm_compliance": 54.6,
+  "team_crm_compliance": 51.1,
   "team_task_adherence": 49.9,
   "qa_score_meta": {
     "available": false,
@@ -1513,25 +1513,25 @@
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 5997.0,
-      "crm_compliance": 53.3,
-      "crm_filled": 24,
-      "crm_total": 45,
+      "crm_compliance": 55.1,
+      "crm_filled": 27,
+      "crm_total": 49,
       "crm_detail": {
         "show_up": [
-          11,
-          12
+          12,
+          13
         ],
         "disposition": [
           0,
-          12
+          13
         ],
         "qualified": [
-          5,
-          10
+          6,
+          11
         ],
         "confidence": [
-          7,
-          10
+          8,
+          11
         ],
         "lost_reason": [
           1,
@@ -1541,6 +1541,13 @@
           {
             "name": "Creola Jones",
             "lead_id": "lead_DbeXdXBLN7xEiKiQ8VQfEgLKgJl0vJHraWmouEOqNjd",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Tania K",
+            "lead_id": "lead_9OqSAKkUK6zTPRTlosV7JDAvmnhh0LyzsLObLTm5rSq",
             "missing": [
               "Disposition"
             ]
@@ -4993,25 +5000,25 @@
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": null,
-      "crm_compliance": 52.0,
+      "crm_compliance": 28.9,
       "crm_filled": 13,
-      "crm_total": 25,
+      "crm_total": 45,
       "crm_detail": {
         "show_up": [
           6,
-          6
+          11
         ],
         "disposition": [
           0,
-          6
+          11
         ],
         "qualified": [
           5,
-          6
+          11
         ],
         "confidence": [
           1,
-          6
+          11
         ],
         "lost_reason": [
           1,
@@ -5019,10 +5026,60 @@
         ],
         "missing_leads": [
           {
+            "name": "Mike Pillar",
+            "lead_id": "lead_BDbWjbQz87a16NQImdVYTW9GXKkR7MKk567Ed6hgRUy",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Jakayla Alexander",
+            "lead_id": "lead_DRJEXSYJqXSHA4IrMGTUSb3YteCwjfCwtmGlVuFmpvB",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Rachel Dampf",
             "lead_id": "lead_IDEPf2JnQDMTvB7mBRGksFQvgrj0JYmyE3VYDWXl1eY",
             "missing": [
               "Disposition",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Monica Hernandez",
+            "lead_id": "lead_mr7IPVmkjfLFnF05ZJWqWqNkNd1P5IzYpJzbi71l2rZ",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Joseph Soadwa",
+            "lead_id": "lead_iCuFlIogeMZILPZpH3BQEXV04eMt7Lhz7Lt8tsQyfD2",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Dakota Sacket",
+            "lead_id": "lead_K2DoSbNXqyWnmA16zs2bxns2W0IVktWC84a5Vv46eq9",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
               "Confidence"
             ]
           },
@@ -8157,7 +8214,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-07T23:49:31.551335-08:00",
+    "cutoff_exclusive": "2026-11-08T00:04:36.570143-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -8261,27 +8318,27 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-07T23:56:08.415008-08:00",
+    "generated_at": "2026-11-08T00:11:13.018725-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
       "start_date": "2026-11-01",
-      "end_date": "2026-11-07"
+      "end_date": "2026-11-08"
     },
     "cohort": {
-      "raw": 97,
-      "included": 95,
+      "raw": 98,
+      "included": 96,
       "excluded": 2,
       "exclusion_counts": {
         "outside_us": 1,
         "meeting_rep_not_visible": 1
       },
       "attribution_counts": {
-        "meeting_rep": 95
+        "meeting_rep": 96
       },
       "includes_lost": true
     },
-    "api_requests": 375,
+    "api_requests": 376,
     "preview_only": false
   },
   "team_pre_call_adherence": 84,
