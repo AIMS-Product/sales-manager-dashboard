@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11 05:28 AM PST",
+  "updated_at": "2026-11-11 05:45 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-11",
@@ -51,7 +51,7 @@
   "team_close_rate": 9.9,
   "team_avg_rev_per_deal": 6924.73,
   "team_crm_compliance": 53.1,
-  "team_task_adherence": 53.9,
+  "team_task_adherence": 54.3,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -729,7 +729,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 73,
+      "tasks_incomplete": 76,
       "open_leads": 27,
       "est_pipeline": 64800,
       "is_manager": false,
@@ -829,7 +829,7 @@
                 "scored_call_at": "2026-11-03T07:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_LoXht31ZROdgywnYwzGX7YwN7gGxzzwdLtqyXGYrE6s/",
                 "status_label": "Reschedule Requested",
-                "opportunity_status": "Reschedule Requested"
+                "opportunity_status": "Rescheduled Call"
               },
               {
                 "id": "lead_AnHdlgbvQPggveN1o5CnDl9jAu3itVgPJws8kBQtBux",
@@ -1060,7 +1060,7 @@
                 "scored_call_at": "2026-11-03T07:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_LoXht31ZROdgywnYwzGX7YwN7gGxzzwdLtqyXGYrE6s/",
                 "status_label": "Reschedule Requested",
-                "opportunity_status": "Reschedule Requested"
+                "opportunity_status": "Rescheduled Call"
               },
               {
                 "id": "lead_AnHdlgbvQPggveN1o5CnDl9jAu3itVgPJws8kBQtBux",
@@ -1292,7 +1292,7 @@
                 "scored_call_at": "2026-11-03T07:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_LoXht31ZROdgywnYwzGX7YwN7gGxzzwdLtqyXGYrE6s/",
                 "status_label": "Reschedule Requested",
-                "opportunity_status": "Reschedule Requested"
+                "opportunity_status": "Rescheduled Call"
               },
               {
                 "id": "lead_AnHdlgbvQPggveN1o5CnDl9jAu3itVgPJws8kBQtBux",
@@ -1600,7 +1600,7 @@
                 "scored_call_at": "2026-11-03T07:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_LoXht31ZROdgywnYwzGX7YwN7gGxzzwdLtqyXGYrE6s/",
                 "status_label": "Reschedule Requested",
-                "opportunity_status": "Reschedule Requested"
+                "opportunity_status": "Rescheduled Call"
               },
               {
                 "id": "lead_yRMb72DFJnySUSjrcdYL7FIUoQRLsqLyNcYMa7vPEOy",
@@ -1832,7 +1832,7 @@
                 "scored_call_at": "2026-11-03T07:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_LoXht31ZROdgywnYwzGX7YwN7gGxzzwdLtqyXGYrE6s/",
                 "status_label": "Reschedule Requested",
-                "opportunity_status": "Reschedule Requested"
+                "opportunity_status": "Rescheduled Call"
               },
               {
                 "id": "lead_yRMb72DFJnySUSjrcdYL7FIUoQRLsqLyNcYMa7vPEOy",
@@ -10707,7 +10707,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-11T05:28:44.527280-08:00",
+    "cutoff_exclusive": "2026-11-11T05:45:24.115273-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -10811,7 +10811,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-11T05:37:15.555713-08:00",
+    "generated_at": "2026-11-11T05:54:05.946623-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -10819,19 +10819,19 @@
       "end_date": "2026-11-11"
     },
     "cohort": {
-      "raw": 146,
-      "included": 144,
+      "raw": 148,
+      "included": 146,
       "excluded": 2,
       "exclusion_counts": {
         "outside_us": 1,
         "meeting_rep_not_visible": 1
       },
       "attribution_counts": {
-        "meeting_rep": 144
+        "meeting_rep": 146
       },
       "includes_lost": true
     },
-    "api_requests": 454,
+    "api_requests": 458,
     "preview_only": false
   },
   "team_pre_call_adherence": 79,
