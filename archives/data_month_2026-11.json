@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11 08:15 AM PST",
+  "updated_at": "2026-11-11 08:32 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-11",
@@ -51,7 +51,7 @@
   "team_close_rate": 9.9,
   "team_avg_rev_per_deal": 6924.73,
   "team_crm_compliance": 53.8,
-  "team_task_adherence": 53.8,
+  "team_task_adherence": 53.6,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -9079,6 +9079,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Jan Torres",
+            "lead_id": "lead_uWz01oqr7mPVe76dqcjJyI8Y2ehhUgm0zrk1mLBljJt",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Joel Cardenas",
             "lead_id": "lead_raSoPqNkqZZ6KXrZM3ZDQfVfh3o0F8ZAwxoo2wCwF8t",
             "missing": [
@@ -9095,13 +9102,6 @@
           {
             "name": "Dharshanie Persaud",
             "lead_id": "lead_1pyispvYtA7tWMXUT3FS1TSvkl7lJKBp2m0w3UhkqEd",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Jan Torres",
-            "lead_id": "lead_uWz01oqr7mPVe76dqcjJyI8Y2ehhUgm0zrk1mLBljJt",
             "missing": [
               "Disposition"
             ]
@@ -9436,7 +9436,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 63,
+      "tasks_incomplete": 61,
       "open_leads": 14,
       "est_pipeline": 33600,
       "is_manager": false,
@@ -10750,7 +10750,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-11T08:15:33.076155-08:00",
+    "cutoff_exclusive": "2026-11-11T08:32:57.708543-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -10854,7 +10854,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-11T08:24:51.795970-08:00",
+    "generated_at": "2026-11-11T08:39:50.460854-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -10862,19 +10862,19 @@
       "end_date": "2026-11-11"
     },
     "cohort": {
-      "raw": 149,
-      "included": 147,
+      "raw": 148,
+      "included": 146,
       "excluded": 2,
       "exclusion_counts": {
         "outside_us": 1,
         "meeting_rep_not_visible": 1
       },
       "attribution_counts": {
-        "meeting_rep": 147
+        "meeting_rep": 146
       },
       "includes_lost": true
     },
-    "api_requests": 456,
+    "api_requests": 454,
     "preview_only": false
   },
   "team_pre_call_adherence": 79,
