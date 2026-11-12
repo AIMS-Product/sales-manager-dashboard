@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11 07:29 PM PST",
+  "updated_at": "2026-11-11 07:45 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-11",
@@ -2237,6 +2237,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Angela Brown",
+            "lead_id": "lead_gEEFKzd4CAcb4AbpVVkYCS7kAtx7JRSXuShKcATqGns",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Abdul Iddrisu",
             "lead_id": "lead_y7bvyU3nY3C5MIdjzbdbFxSumcdUR3ghALQUV8coZXG",
             "missing": [
@@ -2249,13 +2256,6 @@
             "missing": [
               "Disposition",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Angela Brown",
-            "lead_id": "lead_gEEFKzd4CAcb4AbpVVkYCS7kAtx7JRSXuShKcATqGns",
-            "missing": [
-              "Disposition"
             ]
           },
           {
@@ -11778,7 +11778,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-11T19:29:08.106772-08:00",
+    "cutoff_exclusive": "2026-11-11T19:45:30.333649-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -11882,7 +11882,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-11T19:37:23.274640-08:00",
+    "generated_at": "2026-11-11T19:52:59.900553-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -11902,7 +11902,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 456,
+    "api_requests": 457,
     "preview_only": false
   },
   "team_pre_call_adherence": 79,
