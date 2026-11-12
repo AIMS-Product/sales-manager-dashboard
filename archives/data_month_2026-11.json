@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12 03:01 PM PST",
+  "updated_at": "2026-11-12 03:17 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-12",
@@ -151,15 +151,15 @@
         ],
         "missing_leads": [
           {
-            "name": "Robert Balsamo",
-            "lead_id": "lead_TuE3w40RW4hO1cGVxvrgIhbACRtAhBbBmDoSiLR7FhH",
+            "name": "Harpreet Singh",
+            "lead_id": "lead_AlSn6rtyhiFvusD8M2RGl5H2nkr5vEEnMePXhI5wC4M",
             "missing": [
               "Disposition"
             ]
           },
           {
-            "name": "Harpreet Singh",
-            "lead_id": "lead_AlSn6rtyhiFvusD8M2RGl5H2nkr5vEEnMePXhI5wC4M",
+            "name": "Robert Balsamo",
+            "lead_id": "lead_TuE3w40RW4hO1cGVxvrgIhbACRtAhBbBmDoSiLR7FhH",
             "missing": [
               "Disposition"
             ]
@@ -2157,19 +2157,19 @@
         ],
         "missing_leads": [
           {
-            "name": "Zachary Bornstein",
-            "lead_id": "lead_IuS8MCYib6J64MMDZJ7VJOpDelDtr9xjL44m3b1b493",
-            "missing": [
-              "Disposition",
-              "Confidence"
-            ]
-          },
-          {
             "name": "Clint Major",
             "lead_id": "lead_WsckP5JIODUdDTGmTpohU3Yn171butVEMEBUwuf8dbK",
             "missing": [
               "Disposition",
               "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Zachary Bornstein",
+            "lead_id": "lead_IuS8MCYib6J64MMDZJ7VJOpDelDtr9xjL44m3b1b493",
+            "missing": [
+              "Disposition",
               "Confidence"
             ]
           },
@@ -3189,7 +3189,7 @@
                 "scored_call_at": "2026-11-12T14:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_IIezvoqGhpbXkZsGvQUBOT6cE31tSNynDZoOh0EFfzg/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "WARM - Follow Up"
               },
               {
                 "id": "lead_98Kg5SlOwiki0cDbKsYE5t4M44Sq5Y7lZIHoX99gBN7",
@@ -3502,7 +3502,7 @@
                 "scored_call_at": "2026-11-12T14:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_IIezvoqGhpbXkZsGvQUBOT6cE31tSNynDZoOh0EFfzg/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "WARM - Follow Up"
               },
               {
                 "id": "lead_98Kg5SlOwiki0cDbKsYE5t4M44Sq5Y7lZIHoX99gBN7",
@@ -3806,7 +3806,7 @@
                 "scored_call_at": "2026-11-12T14:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_IIezvoqGhpbXkZsGvQUBOT6cE31tSNynDZoOh0EFfzg/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "WARM - Follow Up"
               },
               {
                 "id": "lead_98Kg5SlOwiki0cDbKsYE5t4M44Sq5Y7lZIHoX99gBN7",
@@ -3950,7 +3950,7 @@
                 "scored_call_at": "2026-11-12T14:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_IIezvoqGhpbXkZsGvQUBOT6cE31tSNynDZoOh0EFfzg/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "WARM - Follow Up"
               },
               {
                 "id": "lead_K2LoMTxSzAdLpd1S79akqpmSAl5huH41aXYBzHxWRpe",
@@ -4467,13 +4467,13 @@
           "count": 1
         },
         "warm": {
-          "count": 17
+          "count": 18
         },
         "general": {
           "count": 11
         }
       },
-      "opportunity_status_total": 29
+      "opportunity_status_total": 30
     },
     {
       "name": "Ariella Irvine",
@@ -10897,7 +10897,7 @@
       "post_call_adherence": 100,
       "opportunity_status": {
         "hot": {
-          "count": 8
+          "count": 9
         },
         "warm": {
           "count": 3
@@ -10906,7 +10906,7 @@
           "count": 5
         }
       },
-      "opportunity_status_total": 16
+      "opportunity_status_total": 17
     },
     {
       "name": "Shreya Bechra",
@@ -12694,7 +12694,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-12T15:01:19.268155-08:00",
+    "cutoff_exclusive": "2026-11-12T15:17:52.693265-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12798,7 +12798,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-12T15:09:57.299588-08:00",
+    "generated_at": "2026-11-12T15:26:31.216665-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
