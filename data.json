@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12 03:17 PM PST",
+  "updated_at": "2026-11-12 03:34 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-12",
@@ -51,7 +51,7 @@
   "team_close_rate": 10.4,
   "team_avg_rev_per_deal": 6311.86,
   "team_crm_compliance": 53.6,
-  "team_task_adherence": 55.9,
+  "team_task_adherence": 56.0,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -2157,19 +2157,19 @@
         ],
         "missing_leads": [
           {
+            "name": "Zachary Bornstein",
+            "lead_id": "lead_IuS8MCYib6J64MMDZJ7VJOpDelDtr9xjL44m3b1b493",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Clint Major",
             "lead_id": "lead_WsckP5JIODUdDTGmTpohU3Yn171butVEMEBUwuf8dbK",
             "missing": [
               "Disposition",
               "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Zachary Bornstein",
-            "lead_id": "lead_IuS8MCYib6J64MMDZJ7VJOpDelDtr9xjL44m3b1b493",
-            "missing": [
-              "Disposition",
               "Confidence"
             ]
           },
@@ -3188,7 +3188,7 @@
                 "booked_date": "2026-11-12",
                 "scored_call_at": "2026-11-12T14:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_IIezvoqGhpbXkZsGvQUBOT6cE31tSNynDZoOh0EFfzg/",
-                "status_label": "\u260e\ufe0f Call Booked",
+                "status_label": "WARM - Follow up",
                 "opportunity_status": "WARM - Follow Up"
               },
               {
@@ -3501,7 +3501,7 @@
                 "booked_date": "2026-11-12",
                 "scored_call_at": "2026-11-12T14:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_IIezvoqGhpbXkZsGvQUBOT6cE31tSNynDZoOh0EFfzg/",
-                "status_label": "\u260e\ufe0f Call Booked",
+                "status_label": "WARM - Follow up",
                 "opportunity_status": "WARM - Follow Up"
               },
               {
@@ -3805,7 +3805,7 @@
                 "booked_date": "2026-11-12",
                 "scored_call_at": "2026-11-12T14:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_IIezvoqGhpbXkZsGvQUBOT6cE31tSNynDZoOh0EFfzg/",
-                "status_label": "\u260e\ufe0f Call Booked",
+                "status_label": "WARM - Follow up",
                 "opportunity_status": "WARM - Follow Up"
               },
               {
@@ -3949,7 +3949,7 @@
                 "booked_date": "2026-11-12",
                 "scored_call_at": "2026-11-12T14:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_IIezvoqGhpbXkZsGvQUBOT6cE31tSNynDZoOh0EFfzg/",
-                "status_label": "\u260e\ufe0f Call Booked",
+                "status_label": "WARM - Follow up",
                 "opportunity_status": "WARM - Follow Up"
               },
               {
@@ -4924,7 +4924,7 @@
             "name": "Jawad Tareen Tareen",
             "date": "2026-11-12",
             "meeting_outcome": "No outcome",
-            "meeting_status": "in-progress",
+            "meeting_status": "completed",
             "funnel": "Instagram"
           },
           {
@@ -10207,7 +10207,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 62,
+      "tasks_incomplete": 63,
       "open_leads": 14,
       "est_pipeline": 33600,
       "is_manager": false,
@@ -12694,7 +12694,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-12T15:17:52.693265-08:00",
+    "cutoff_exclusive": "2026-11-12T15:34:24.590178-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12798,7 +12798,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-12T15:26:31.216665-08:00",
+    "generated_at": "2026-11-12T15:42:09.618276-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
