@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13 04:46 PM PST",
+  "updated_at": "2026-11-13 05:01 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-13",
@@ -8830,6 +8830,14 @@
         ],
         "missing_leads": [
           {
+            "name": "Adam Ortega",
+            "lead_id": "lead_ncQ5L8BtpmVjNlKINx8NS1V09tvP8CEmOrFHckcxPrx",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Iris Johnson",
             "lead_id": "lead_LS7EqtiH5QsVane0MzGMu0fkIiogJWLKxuwTMlmmzfL",
             "missing": [
@@ -8874,14 +8882,6 @@
             "lead_id": "lead_c546LnaI0HdbZGDEBNMGhPXWNIhYebU0Z8H6KnJChUk",
             "missing": [
               "Disposition"
-            ]
-          },
-          {
-            "name": "Adam Ortega",
-            "lead_id": "lead_ncQ5L8BtpmVjNlKINx8NS1V09tvP8CEmOrFHckcxPrx",
-            "missing": [
-              "Disposition",
-              "Confidence"
             ]
           },
           {
@@ -9375,7 +9375,7 @@
       "rep_owner_id": "user_BaN2TstWtyF34eaQSSLG11j6DhKKm67Y6JltbIYCafO",
       "adherence": {
         "pre_call_pct": 78,
-        "post_call_pct": 63,
+        "post_call_pct": 59,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -9413,9 +9413,9 @@
             "label": "Recap email sent",
             "phase": "post_call",
             "done": 8,
-            "eligible": 10,
+            "eligible": 11,
             "exempt": 15,
-            "pct": 80
+            "pct": 73
           }
         },
         "lead_cohorts": {
@@ -10477,6 +10477,15 @@
                 "url": "https://app.close.com/lead/lead_41U5IkSZvvQlUgSDtm3hR2La5IYdBoGi2VvQSdYmyUb/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "No active opp"
+              },
+              {
+                "id": "lead_9CdrDqdS1pN3Rav4LDRbf09ZfLdt4GgtpujGjShYnWL",
+                "name": "Adil S",
+                "booked_date": "2026-11-12",
+                "scored_call_at": "2026-11-12T17:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_9CdrDqdS1pN3Rav4LDRbf09ZfLdt4GgtpujGjShYnWL/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "No active opp"
               }
             ],
             "exempt": [
@@ -10620,7 +10629,7 @@
         }
       },
       "pre_call_adherence": 78,
-      "post_call_adherence": 63,
+      "post_call_adherence": 59,
       "opportunity_status": {
         "hot": {
           "count": 9
@@ -11950,6 +11959,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Kiara Crawford",
+            "lead_id": "lead_YbSSduRAR8bTRKZF4TpjtiXqe1Sz3rwpGDRom6lz4j0",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Choeun park",
             "lead_id": "lead_Ji2ByFIp1Snyc9gfqUaFUcwGdRHUzbra0x17X5lpxeQ",
             "missing": [
@@ -11968,13 +11984,6 @@
           {
             "name": "Amari Futon",
             "lead_id": "lead_Z7cx6EQOqKJdyEMp9fMj34WeW85tH0YAlMvTsv3nwe4",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Kiara Crawford",
-            "lead_id": "lead_YbSSduRAR8bTRKZF4TpjtiXqe1Sz3rwpGDRom6lz4j0",
             "missing": [
               "Disposition"
             ]
@@ -13699,7 +13708,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-13T16:46:11.924327-08:00",
+    "cutoff_exclusive": "2026-11-13T17:01:15.453934-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13746,9 +13755,9 @@
         "label": "Recap email sent",
         "phase": "post_call",
         "done": 57,
-        "eligible": 74,
+        "eligible": 75,
         "exempt": 96,
-        "pct": 77
+        "pct": 76
       }
     }
   },
@@ -13793,9 +13802,9 @@
           "label": "Recap email sent",
           "phase": "post_call",
           "done": 57,
-          "eligible": 74,
+          "eligible": 75,
           "exempt": 96,
-          "pct": 77
+          "pct": 76
         }
       }
     }
@@ -13803,7 +13812,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-13T16:53:10.998512-08:00",
+    "generated_at": "2026-11-13T17:11:21.396744-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13823,7 +13832,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 495,
+    "api_requests": 497,
     "preview_only": false
   },
   "team_pre_call_adherence": 81,
