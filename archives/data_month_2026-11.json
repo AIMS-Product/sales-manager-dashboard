@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15 09:09 AM PST",
+  "updated_at": "2026-11-15 09:25 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-15",
@@ -57,8 +57,8 @@
     "reason": "missing_api_key"
   },
   "team_overdue": 174,
-  "team_open_leads": 191,
-  "team_est_pipeline": 458400,
+  "team_open_leads": 190,
+  "team_est_pipeline": 456000,
   "funnel_breakdown": [
     {
       "funnel": "Internal Webinar",
@@ -798,6 +798,14 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ",
+            "name": "Christian Castillo",
+            "date": "2026-11-15",
+            "meeting_outcome": "No outcome",
+            "meeting_status": "in-progress",
+            "funnel": "YouTube"
+          },
+          {
             "lead_id": "lead_a8riPzcecg2nm4YxdVgcp99eCAeAV4u8JEhFfdrblkC",
             "name": "Eva Roche",
             "date": "2026-11-10",
@@ -989,15 +997,15 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 56,
-      "open_leads": 23,
-      "est_pipeline": 55200,
+      "open_leads": 22,
+      "est_pipeline": 52800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
       "occurred_calls": 28,
       "no_shows": 9,
-      "unresolved_calls": 6,
-      "scheduled_calls": 34,
+      "unresolved_calls": 7,
+      "scheduled_calls": 35,
       "show_rate": 67.9,
       "qualification_rate": 53.6,
       "revenue_per_occurred": 567.64,
@@ -2891,10 +2899,10 @@
           "count": 9
         },
         "general": {
-          "count": 13
+          "count": 12
         }
       },
-      "opportunity_status_total": 23
+      "opportunity_status_total": 22
     },
     {
       "name": "Robin Perkins",
@@ -13845,10 +13853,10 @@
       "opportunity_status_total": 50
     }
   ],
-  "total_scheduled_calls": 174,
+  "total_scheduled_calls": 175,
   "total_occurred_calls": 145,
   "total_no_shows": 41,
-  "total_unresolved_calls": 29,
+  "total_unresolved_calls": 30,
   "team_show_rate": 71.7,
   "team_qualification_rate": 49.7,
   "metric_definitions": {
@@ -13856,7 +13864,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-15T09:09:45.089012-08:00",
+    "cutoff_exclusive": "2026-11-15T09:25:35.643858-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13960,7 +13968,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-15T09:17:35.915957-08:00",
+    "generated_at": "2026-11-15T09:35:54.690440-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
