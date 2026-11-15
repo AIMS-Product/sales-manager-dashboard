@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15 01:18 PM PST",
+  "updated_at": "2026-11-15 01:35 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-15",
@@ -51,7 +51,7 @@
   "team_close_rate": 10.3,
   "team_avg_rev_per_deal": 6524.2,
   "team_crm_compliance": 53.9,
-  "team_task_adherence": 52.6,
+  "team_task_adherence": 52.7,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -1012,7 +1012,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 57,
+      "tasks_incomplete": 58,
       "open_leads": 22,
       "est_pipeline": 52800,
       "is_manager": false,
@@ -1032,7 +1032,7 @@
       "rep_owner_id": "user_6kp6k4OcqKqFNrxGjgMUncedjiCYC6JHU8EI28F7etV",
       "adherence": {
         "pre_call_pct": 90,
-        "post_call_pct": 89,
+        "post_call_pct": 93,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -1061,16 +1061,16 @@
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 10,
+            "done": 11,
             "eligible": 13,
             "exempt": 29,
-            "pct": 77
+            "pct": 85
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 12,
-            "eligible": 12,
+            "done": 13,
+            "eligible": 13,
             "exempt": 29,
             "pct": 100
           }
@@ -2315,6 +2315,15 @@
                 "opportunity_status": "WARM - Follow Up"
               },
               {
+                "id": "lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ",
+                "name": "Christian Castillo",
+                "booked_date": "2026-11-15",
+                "scored_call_at": "2026-11-15T09:15:00-08:00",
+                "url": "https://app.close.com/lead/lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ/",
+                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
+                "opportunity_status": "GENERAL Follow Up"
+              },
+              {
                 "id": "lead_qKTapnf53Dl3J8cCWgE5DnkNQZ7Y5nI7Fq4ZVomJ8SJ",
                 "name": "Eunice Pierre-Canel",
                 "booked_date": "2026-11-15",
@@ -2340,15 +2349,6 @@
                 "booked_date": "2026-11-13",
                 "scored_call_at": "2026-11-13T14:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_3CsREusg45HAGqHsXQnFGiw3UxVHRAfCCxKW0hzu7F4/",
-                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
-                "opportunity_status": "GENERAL Follow Up"
-              },
-              {
-                "id": "lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ",
-                "name": "Christian Castillo",
-                "booked_date": "2026-11-15",
-                "scored_call_at": "2026-11-15T09:15:00-08:00",
-                "url": "https://app.close.com/lead/lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ/",
                 "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
                 "opportunity_status": "GENERAL Follow Up"
               }
@@ -2719,6 +2719,15 @@
                 "opportunity_status": "GENERAL Follow Up"
               },
               {
+                "id": "lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ",
+                "name": "Christian Castillo",
+                "booked_date": "2026-11-15",
+                "scored_call_at": "2026-11-15T09:15:00-08:00",
+                "url": "https://app.close.com/lead/lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ/",
+                "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
+                "opportunity_status": "GENERAL Follow Up"
+              },
+              {
                 "id": "lead_qKTapnf53Dl3J8cCWgE5DnkNQZ7Y5nI7Fq4ZVomJ8SJ",
                 "name": "Eunice Pierre-Canel",
                 "booked_date": "2026-11-15",
@@ -2996,7 +3005,7 @@
         }
       },
       "pre_call_adherence": 90,
-      "post_call_adherence": 89,
+      "post_call_adherence": 93,
       "opportunity_status": {
         "hot": {
           "count": 1
@@ -13978,7 +13987,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-15T13:18:17.968067-08:00",
+    "cutoff_exclusive": "2026-11-15T13:35:01.871519-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13987,7 +13996,7 @@
   },
   "team_adherence": {
     "pre_call_pct": 79,
-    "post_call_pct": 61,
+    "post_call_pct": 62,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -14016,16 +14025,16 @@
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
-        "done": 36,
+        "done": 37,
         "eligible": 76,
         "exempt": 101,
-        "pct": 47
+        "pct": 49
       },
       "recap_email": {
         "label": "Recap email sent",
         "phase": "post_call",
-        "done": 56,
-        "eligible": 75,
+        "done": 57,
+        "eligible": 76,
         "exempt": 101,
         "pct": 75
       }
@@ -14034,7 +14043,7 @@
   "lane_adherence": {
     "1": {
       "pre_call_pct": 79,
-      "post_call_pct": 61,
+      "post_call_pct": 62,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -14063,16 +14072,16 @@
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
-          "done": 36,
+          "done": 37,
           "eligible": 76,
           "exempt": 101,
-          "pct": 47
+          "pct": 49
         },
         "recap_email": {
           "label": "Recap email sent",
           "phase": "post_call",
-          "done": 56,
-          "eligible": 75,
+          "done": 57,
+          "eligible": 76,
           "exempt": 101,
           "pct": 75
         }
@@ -14082,7 +14091,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-15T13:27:05.026344-08:00",
+    "generated_at": "2026-11-15T13:42:50.625245-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -14106,12 +14115,12 @@
     "preview_only": false
   },
   "team_pre_call_adherence": 79,
-  "team_post_call_adherence": 61,
+  "team_post_call_adherence": 62,
   "lane_pre_call_adherence": {
     "1": 79
   },
   "lane_post_call_adherence": {
-    "1": 61
+    "1": 62
   },
   "dashboard_schema_version": 3
 }
