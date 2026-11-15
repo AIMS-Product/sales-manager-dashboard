@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15 02:08 PM PST",
+  "updated_at": "2026-11-15 02:26 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-15",
@@ -51,12 +51,12 @@
   "team_close_rate": 10.3,
   "team_avg_rev_per_deal": 6524.2,
   "team_crm_compliance": 53.9,
-  "team_task_adherence": 52.7,
+  "team_task_adherence": 52.9,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
   },
-  "team_overdue": 174,
+  "team_overdue": 171,
   "team_open_leads": 189,
   "team_est_pipeline": 453600,
   "funnel_breakdown": [
@@ -150,6 +150,13 @@
           10
         ],
         "missing_leads": [
+          {
+            "name": "David Falo",
+            "lead_id": "lead_bpbU3C8zLMG5Atz4Q3NSqkWlMYaY5QI2KjBK2rV5PcH",
+            "missing": [
+              "Disposition"
+            ]
+          },
           {
             "name": "Troy Clark",
             "lead_id": "lead_pNpmbLPiPBzWjlyzhw1fo0UCxGYLlsy7vmWBbCRFjc2",
@@ -264,13 +271,6 @@
             "missing": [
               "Disposition",
               "Confidence"
-            ]
-          },
-          {
-            "name": "David Falo",
-            "lead_id": "lead_bpbU3C8zLMG5Atz4Q3NSqkWlMYaY5QI2KjBK2rV5PcH",
-            "missing": [
-              "Disposition"
             ]
           },
           {
@@ -10959,13 +10959,6 @@
         ],
         "missing_leads": [
           {
-            "name": "Tyler Campbell",
-            "lead_id": "lead_k8ZDx0zKtgyom8CJj7FduFL38W45ei3TWVGCfeJHVx8",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
             "name": "Henry Mac",
             "lead_id": "lead_2vxsr6w0O55OecORlelsfiIk8qoncB4RWC8vOBLVLE4",
             "missing": [
@@ -10982,6 +10975,13 @@
           {
             "name": "Jan Torres",
             "lead_id": "lead_uWz01oqr7mPVe76dqcjJyI8Y2ehhUgm0zrk1mLBljJt",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Tyler Campbell",
+            "lead_id": "lead_k8ZDx0zKtgyom8CJj7FduFL38W45ei3TWVGCfeJHVx8",
             "missing": [
               "Disposition"
             ]
@@ -11408,9 +11408,9 @@
           }
         ]
       },
-      "task_adherence": 95.9,
-      "tasks_overdue": 3,
-      "tasks_incomplete": 73,
+      "task_adherence": 100.0,
+      "tasks_overdue": 0,
+      "tasks_incomplete": 68,
       "open_leads": 16,
       "est_pipeline": 38400,
       "is_manager": false,
@@ -13987,7 +13987,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-15T14:08:00.840958-08:00",
+    "cutoff_exclusive": "2026-11-15T14:26:23.704193-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -14091,7 +14091,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-15T14:18:18.422267-08:00",
+    "generated_at": "2026-11-15T14:36:46.348780-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
