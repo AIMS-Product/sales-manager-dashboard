@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16 07:28 AM PST",
+  "updated_at": "2026-11-16 07:48 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-16",
@@ -5272,6 +5272,14 @@
         ],
         "missing_leads": [
           {
+            "name": "Iris Johnson",
+            "lead_id": "lead_LS7EqtiH5QsVane0MzGMu0fkIiogJWLKxuwTMlmmzfL",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Elvia Rosales",
             "lead_id": "lead_nFrX6IRW5Sjpa9dHIhYwLXF7IJpdo7Jlosfqurry9Su",
             "missing": [
@@ -5337,14 +5345,6 @@
           {
             "name": "Alicia Zellous",
             "lead_id": "lead_F1bcT9xyV6eyX8FvZnjyOmvJePGCrH6a23QbrMJRXI4",
-            "missing": [
-              "Disposition",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Iris Johnson",
-            "lead_id": "lead_LS7EqtiH5QsVane0MzGMu0fkIiogJWLKxuwTMlmmzfL",
             "missing": [
               "Disposition",
               "Confidence"
@@ -13400,6 +13400,14 @@
         "no_shows": [],
         "no_outcome": [
           {
+            "lead_id": "lead_gjBxV7e9KCOvddXvAQZG2OQP91STSGMstoyQhclqtL3",
+            "name": "Javier Liz",
+            "date": "2026-11-16",
+            "meeting_outcome": "No outcome",
+            "meeting_status": "in-progress",
+            "funnel": "Internal Webinar"
+          },
+          {
             "lead_id": "lead_XxRbJGHulKCQpRSzpKrlxVMuiydWhBj1SjolGTIAwTO",
             "name": "Jacquelyn Roche",
             "date": "2026-11-03",
@@ -13422,8 +13430,8 @@
       "lane": 1,
       "occurred_calls": 0,
       "no_shows": 0,
-      "unresolved_calls": 1,
-      "scheduled_calls": 1,
+      "unresolved_calls": 2,
+      "scheduled_calls": 2,
       "show_rate": null,
       "qualification_rate": null,
       "revenue_per_occurred": null,
@@ -13439,16 +13447,16 @@
           "loom_usage": {
             "label": "Pre-Call Loom",
             "phase": "pre_call",
-            "done": 1,
-            "eligible": 1,
+            "done": 2,
+            "eligible": 2,
             "exempt": 0,
             "pct": 100
           },
           "precall_text": {
             "label": "Pre-call text",
             "phase": "pre_call",
-            "done": 1,
-            "eligible": 1,
+            "done": 2,
+            "eligible": 2,
             "exempt": 0,
             "pct": 100
           },
@@ -13456,7 +13464,7 @@
             "label": "Day-of confirmation",
             "phase": "pre_call",
             "done": 0,
-            "eligible": 1,
+            "eligible": 2,
             "exempt": 0,
             "pct": 0
           },
@@ -13464,7 +13472,7 @@
             "label": "Task or follow-up meeting",
             "phase": "post_call",
             "done": 0,
-            "eligible": 1,
+            "eligible": 2,
             "exempt": 0,
             "pct": 0
           },
@@ -13488,6 +13496,15 @@
                 "url": "https://app.close.com/lead/lead_XxRbJGHulKCQpRSzpKrlxVMuiydWhBj1SjolGTIAwTO/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "Call Booked"
+              },
+              {
+                "id": "lead_gjBxV7e9KCOvddXvAQZG2OQP91STSGMstoyQhclqtL3",
+                "name": "Javier Liz",
+                "booked_date": "2026-11-16",
+                "scored_call_at": "2026-11-16T07:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_gjBxV7e9KCOvddXvAQZG2OQP91STSGMstoyQhclqtL3/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
               }
             ],
             "missed": [],
@@ -13501,6 +13518,15 @@
                 "booked_date": "2026-11-03",
                 "scored_call_at": "2026-11-03T05:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_XxRbJGHulKCQpRSzpKrlxVMuiydWhBj1SjolGTIAwTO/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              },
+              {
+                "id": "lead_gjBxV7e9KCOvddXvAQZG2OQP91STSGMstoyQhclqtL3",
+                "name": "Javier Liz",
+                "booked_date": "2026-11-16",
+                "scored_call_at": "2026-11-16T07:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_gjBxV7e9KCOvddXvAQZG2OQP91STSGMstoyQhclqtL3/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "Call Booked"
               }
@@ -13519,6 +13545,15 @@
                 "url": "https://app.close.com/lead/lead_XxRbJGHulKCQpRSzpKrlxVMuiydWhBj1SjolGTIAwTO/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "Call Booked"
+              },
+              {
+                "id": "lead_gjBxV7e9KCOvddXvAQZG2OQP91STSGMstoyQhclqtL3",
+                "name": "Javier Liz",
+                "booked_date": "2026-11-16",
+                "scored_call_at": "2026-11-16T07:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_gjBxV7e9KCOvddXvAQZG2OQP91STSGMstoyQhclqtL3/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
               }
             ],
             "exempt": []
@@ -13532,6 +13567,15 @@
                 "booked_date": "2026-11-03",
                 "scored_call_at": "2026-11-03T05:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_XxRbJGHulKCQpRSzpKrlxVMuiydWhBj1SjolGTIAwTO/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
+              },
+              {
+                "id": "lead_gjBxV7e9KCOvddXvAQZG2OQP91STSGMstoyQhclqtL3",
+                "name": "Javier Liz",
+                "booked_date": "2026-11-16",
+                "scored_call_at": "2026-11-16T07:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_gjBxV7e9KCOvddXvAQZG2OQP91STSGMstoyQhclqtL3/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "Call Booked"
               }
@@ -13993,10 +14037,10 @@
       "opportunity_status_total": 50
     }
   ],
-  "total_scheduled_calls": 175,
+  "total_scheduled_calls": 176,
   "total_occurred_calls": 145,
   "total_no_shows": 41,
-  "total_unresolved_calls": 30,
+  "total_unresolved_calls": 31,
   "team_show_rate": 71.7,
   "team_qualification_rate": 48.3,
   "metric_definitions": {
@@ -14004,7 +14048,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-16T07:28:36.197094-08:00",
+    "cutoff_exclusive": "2026-11-16T07:48:59.442513-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -14012,22 +14056,22 @@
     "period_kind": "month"
   },
   "team_adherence": {
-    "pre_call_pct": 78,
-    "post_call_pct": 63,
+    "pre_call_pct": 77,
+    "post_call_pct": 62,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
         "phase": "pre_call",
-        "done": 139,
-        "eligible": 178,
+        "done": 140,
+        "eligible": 179,
         "exempt": 0,
         "pct": 78
       },
       "precall_text": {
         "label": "Pre-call text",
         "phase": "pre_call",
-        "done": 151,
-        "eligible": 178,
+        "done": 152,
+        "eligible": 179,
         "exempt": 0,
         "pct": 85
       },
@@ -14035,17 +14079,17 @@
         "label": "Day-of confirmation",
         "phase": "pre_call",
         "done": 124,
-        "eligible": 178,
+        "eligible": 179,
         "exempt": 0,
-        "pct": 70
+        "pct": 69
       },
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
         "done": 39,
-        "eligible": 78,
+        "eligible": 79,
         "exempt": 100,
-        "pct": 50
+        "pct": 49
       },
       "recap_email": {
         "label": "Recap email sent",
@@ -14059,22 +14103,22 @@
   },
   "lane_adherence": {
     "1": {
-      "pre_call_pct": 78,
-      "post_call_pct": 63,
+      "pre_call_pct": 77,
+      "post_call_pct": 62,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
           "phase": "pre_call",
-          "done": 139,
-          "eligible": 178,
+          "done": 140,
+          "eligible": 179,
           "exempt": 0,
           "pct": 78
         },
         "precall_text": {
           "label": "Pre-call text",
           "phase": "pre_call",
-          "done": 151,
-          "eligible": 178,
+          "done": 152,
+          "eligible": 179,
           "exempt": 0,
           "pct": 85
         },
@@ -14082,17 +14126,17 @@
           "label": "Day-of confirmation",
           "phase": "pre_call",
           "done": 124,
-          "eligible": 178,
+          "eligible": 179,
           "exempt": 0,
-          "pct": 70
+          "pct": 69
         },
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
           "done": 39,
-          "eligible": 78,
+          "eligible": 79,
           "exempt": 100,
-          "pct": 50
+          "pct": 49
         },
         "recap_email": {
           "label": "Recap email sent",
@@ -14108,7 +14152,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-16T07:40:28.977243-08:00",
+    "generated_at": "2026-11-16T07:59:56.291562-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -14131,13 +14175,13 @@
     "api_requests": 538,
     "preview_only": false
   },
-  "team_pre_call_adherence": 78,
-  "team_post_call_adherence": 63,
+  "team_pre_call_adherence": 77,
+  "team_post_call_adherence": 62,
   "lane_pre_call_adherence": {
-    "1": 78
+    "1": 77
   },
   "lane_post_call_adherence": {
-    "1": 63
+    "1": 62
   },
   "dashboard_schema_version": 3
 }
