@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15 03:49 PM PST",
+  "updated_at": "2026-11-15 04:08 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-15",
@@ -43,12 +43,12 @@
     "post_call_adherence": 90,
     "task_adherence": 100
   },
-  "total_booked": 146,
-  "total_shown": 105,
+  "total_booked": 147,
+  "total_shown": 106,
   "total_qualified": 72,
   "total_deals": 15,
   "total_revenue": 97863.0,
-  "team_close_rate": 10.3,
+  "team_close_rate": 10.2,
   "team_avg_rev_per_deal": 6524.2,
   "team_crm_compliance": 53.9,
   "team_task_adherence": 52.9,
@@ -62,7 +62,7 @@
   "funnel_breakdown": [
     {
       "funnel": "Internal Webinar",
-      "count": 46
+      "count": 47
     },
     {
       "funnel": "YouTube",
@@ -106,12 +106,12 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 80,
+    "in_house": 81,
     "unknown": 55,
     "external": 11,
-    "in_house_pct": 54.8,
+    "in_house_pct": 55.1,
     "external_pct": 7.5,
-    "unknown_pct": 37.7
+    "unknown_pct": 37.4
   },
   "reps": [
     {
@@ -7124,12 +7124,12 @@
     },
     {
       "name": "Christian Hartwell",
-      "booked": 25,
-      "shown": 21,
+      "booked": 26,
+      "shown": 22,
       "qualified": 17,
       "deals": 4,
       "revenue": 23388.0,
-      "close_rate": 16.0,
+      "close_rate": 15.4,
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 5847.0,
@@ -7302,6 +7302,14 @@
       },
       "metric_details": {
         "booked": [
+          {
+            "lead_id": "lead_qKTapnf53Dl3J8cCWgE5DnkNQZ7Y5nI7Fq4ZVomJ8SJ",
+            "name": "Eunice Pierre-Canel",
+            "date": "2026-11-15",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Internal Webinar"
+          },
           {
             "lead_id": "lead_pAi3IPGgGkNESb28Jlx8GmrkLJNJH0PxIB4X0SD1XQm",
             "name": "Erika Simonsen Pirchio",
@@ -7504,6 +7512,14 @@
           }
         ],
         "shown": [
+          {
+            "lead_id": "lead_qKTapnf53Dl3J8cCWgE5DnkNQZ7Y5nI7Fq4ZVomJ8SJ",
+            "name": "Eunice Pierre-Canel",
+            "date": "2026-11-15",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Internal Webinar"
+          },
           {
             "lead_id": "lead_pAi3IPGgGkNESb28Jlx8GmrkLJNJH0PxIB4X0SD1XQm",
             "name": "Erika Simonsen Pirchio",
@@ -7709,14 +7725,6 @@
         ],
         "no_outcome": [
           {
-            "lead_id": "lead_qKTapnf53Dl3J8cCWgE5DnkNQZ7Y5nI7Fq4ZVomJ8SJ",
-            "name": "Eunice Pierre-Canel",
-            "date": "2026-11-15",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "completed",
-            "funnel": "Internal Webinar"
-          },
-          {
             "lead_id": "lead_QHitgCF1c35sj1WhMuu0gAXGeU7WdJWRMs80arg3ufT",
             "name": "Steve Hall",
             "date": "2026-11-05",
@@ -7919,15 +7927,15 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 25,
+      "occurred_calls": 26,
       "no_shows": 4,
-      "unresolved_calls": 4,
+      "unresolved_calls": 3,
       "scheduled_calls": 29,
-      "show_rate": 84.0,
-      "qualification_rate": 68.0,
-      "revenue_per_occurred": 935.52,
-      "revenue_per_lead": 935.52,
-      "marketing": 10,
+      "show_rate": 84.6,
+      "qualification_rate": 65.4,
+      "revenue_per_occurred": 899.54,
+      "revenue_per_lead": 899.54,
+      "marketing": 11,
       "lane2": 15,
       "social_dms": 0,
       "rep_owner_id": "user_wHm1vcLde4RExd3vv9UOjnms5Oz8ssXg8600mQuxMPb",
@@ -13977,17 +13985,17 @@
     }
   ],
   "total_scheduled_calls": 177,
-  "total_occurred_calls": 146,
+  "total_occurred_calls": 147,
   "total_no_shows": 41,
-  "total_unresolved_calls": 31,
-  "team_show_rate": 71.9,
-  "team_qualification_rate": 49.3,
+  "total_unresolved_calls": 30,
+  "team_show_rate": 72.1,
+  "team_qualification_rate": 49.0,
   "metric_definitions": {
     "version": "calls-occurred.v1",
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-15T15:49:52.184713-08:00",
+    "cutoff_exclusive": "2026-11-15T16:08:12.448608-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -14091,7 +14099,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-15T16:00:06.872824-08:00",
+    "generated_at": "2026-11-15T16:14:30.806840-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
