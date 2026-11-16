@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16 05:53 AM PST",
+  "updated_at": "2026-11-16 06:13 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-16",
@@ -51,14 +51,14 @@
   "team_close_rate": 10.3,
   "team_avg_rev_per_deal": 6524.2,
   "team_crm_compliance": 52.8,
-  "team_task_adherence": 52.5,
+  "team_task_adherence": 51.8,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
   },
   "team_overdue": 172,
-  "team_open_leads": 188,
-  "team_est_pipeline": 451200,
+  "team_open_leads": 187,
+  "team_est_pipeline": 448800,
   "funnel_breakdown": [
     {
       "funnel": "Internal Webinar",
@@ -151,10 +151,11 @@
         ],
         "missing_leads": [
           {
-            "name": "Daniel Iniguez",
-            "lead_id": "lead_2UcKvjZJIuDaZbnanExDJ3ZvSpqCLZr9Pp1u1aLnFwJ",
+            "name": "Christian Castillo",
+            "lead_id": "lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ",
             "missing": [
               "Disposition",
+              "Qualified",
               "Confidence"
             ]
           },
@@ -169,11 +170,10 @@
             ]
           },
           {
-            "name": "Christian Castillo",
-            "lead_id": "lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ",
+            "name": "Daniel Iniguez",
+            "lead_id": "lead_2UcKvjZJIuDaZbnanExDJ3ZvSpqCLZr9Pp1u1aLnFwJ",
             "missing": [
               "Disposition",
-              "Qualified",
               "Confidence"
             ]
           },
@@ -1000,9 +1000,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 55,
-      "open_leads": 22,
-      "est_pipeline": 52800,
+      "tasks_incomplete": 50,
+      "open_leads": 21,
+      "est_pipeline": 50400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -13959,7 +13959,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-16T05:53:39.861506-08:00",
+    "cutoff_exclusive": "2026-11-16T06:13:06.815979-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -14063,7 +14063,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-16T06:04:52.723420-08:00",
+    "generated_at": "2026-11-16T06:25:09.824471-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -14083,7 +14083,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 540,
+    "api_requests": 561,
     "preview_only": false
   },
   "team_pre_call_adherence": 78,
