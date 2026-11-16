@@ -18,6 +18,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 # Reuse the canonical rep-dashboard per-lead evidence rules over this dashboard's
 # reporting-period cohort. The vendored rules module is copied verbatim.
+from rep_roster import INACTIVE_CLOSERS
 from build_adherence_preview import LATEST_BOOKED_DATE_FIELD, add_adherence_to_dashboard, load_env_value  # noqa: E402
 from dashboard_adherence import apply_dashboard_post_call_scores  # noqa: E402
 from avoma_scores import fetch_avoma_mtd_scores  # noqa: E402
@@ -156,9 +157,7 @@ REP_QUOTAS = {
     "Scott Seymour": 100_000,
     "Eric Piccione": 100_000,
     "Robin Perkins": 75_000,
-    "Shreya Bechra": 0,
     "Luke Herman": 0,
-    "Joe Vaughan": 0,
     "Joe Dysert": 0,
     "Ariella Irvine": 0,
 }
@@ -1103,7 +1102,7 @@ def build_dashboard_data():
 
     # Build per-rep data — ONLY show approved closers in REP_QUOTAS
     # (anyone not in this list is invisible on the dashboard, regardless of data)
-    all_rep_names = set(REP_QUOTAS.keys())
+    all_rep_names = set(REP_QUOTAS.keys()) - INACTIVE_CLOSERS
 
     # Debug: check for near-duplicate names
     name_list = sorted(all_rep_names)
@@ -1182,9 +1181,10 @@ def build_dashboard_data():
     else:
         team_task_adherence = round((total_incomplete - total_overdue) / total_incomplete * 100, 1)
 
-    # Revenue and deals include everyone (including manager)
-    total_deals = sum(r["deals"] for r in reps)
-    total_revenue = sum(r["revenue"] for r in reps)
+    # Preserve earned results for departed closers without active dashboard rows.
+    revenue_names = set(REP_QUOTAS) | INACTIVE_CLOSERS
+    total_deals = sum(rep_deals.get(name, 0) for name in revenue_names)
+    total_revenue = sum(rep_revenue.get(name, 0) for name in revenue_names)
     total_avg_rev = round(total_revenue / total_deals, 2) if total_deals > 0 else None
 
     # Open leads and pipeline (non-manager)

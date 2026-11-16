@@ -95,3 +95,7 @@ The dashboard auto-refreshes in the browser every 5 minutes.
 - **Rep quotas & exclusions** — Edit `REP_QUOTAS`, `EXCLUDED_NAMES`, and `MANAGERS` in `scripts/fetch_data.py`
 - **Team quota** — Update `TEAM_QUOTA` in the script
 - **Styling** — Modify CSS variables in `index.html` under `:root`
+
+## Closer attribution and active roster
+
+Process SMS and confirmation dial evidence belongs to the closer credited with the scored call. Lead Owner is a fallback only when no meeting closer is identified; reassignment does not erase historical credit. Joe Vaughan and Shreya Bechra are inactive and have no active dashboard rows. Their earned revenue and deals remain in team results. Call, task, pipeline and target totals reflect the active roster; historical archives are retained, and inactive closers’ calls are not reassigned to another attendee.

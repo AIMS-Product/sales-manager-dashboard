@@ -8,6 +8,32 @@ import fetch_data  # noqa: E402
 
 
 class MetricDetailsTests(unittest.TestCase):
+    def test_inactive_closers_leave_active_roster_but_keep_earned_team_results(self):
+        meeting_result = ({}, {}, {}, {}, {}, {}, [], {}, {}, {})
+        user_map = {'scott': 'Scott Seymour', 'joe-v': 'Joe Vaughan',
+                    'shreya': 'Shreya Bechra', 'unrelated': 'Unrelated Rep'}
+        opps = [
+            {'user_id': user, 'lead_id': user, 'value': amount, 'date_won': '2026-11-01'}
+            for user, amount in [('scott', 10000), ('joe-v', 20000),
+                                 ('shreya', 30000), ('unrelated', 40000)]
+        ]
+        with patch.object(fetch_data, 'CLOSE_API_KEY', 'test-key'), \
+             patch.object(fetch_data, 'init_session'), \
+             patch.object(fetch_data, 'fetch_org_users', return_value=(user_map, {})), \
+             patch.object(fetch_data, 'fetch_closed_won_week', return_value=opps), \
+             patch.object(fetch_data, 'fetch_booked_leads', return_value=meeting_result), \
+             patch.object(fetch_data, 'fetch_task_adherence', return_value=({}, {}, {})), \
+             patch.object(fetch_data, 'fetch_open_leads_per_rep', return_value={}), \
+             patch.object(fetch_data, 'load_env_value', return_value=''), \
+             patch.object(fetch_data, 'fetch_avoma_mtd_scores', return_value=({}, {'available': True})):
+            data = fetch_data.build_dashboard_data()
+        names = {rep['name'] for rep in data['reps']}
+        self.assertTrue({'Joe Vaughan', 'Shreya Bechra', 'Unrelated Rep'}.isdisjoint(names))
+        self.assertEqual(data['total_revenue'], 600)
+        self.assertEqual(data['total_deals'], 3)
+        self.assertEqual(data['num_reps'], 6)
+        self.assertEqual(data['team_targets']['revenue'], 6 * fetch_data.WEEKLY_TARGETS['revenue'])
+
     def test_meeting_lists_use_meeting_outcomes_and_separate_upcoming(self):
         def lead(lead_id, name, show, qualified, booked_date="2026-10-13", status_id="active"):
             return {
