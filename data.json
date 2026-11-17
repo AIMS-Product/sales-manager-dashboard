@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 12:00 PM PST",
+  "updated_at": "2026-11-17 12:18 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -43,12 +43,12 @@
     "post_call_adherence": 90,
     "task_adherence": 100
   },
-  "total_booked": 139,
-  "total_shown": 105,
+  "total_booked": 140,
+  "total_shown": 106,
   "total_qualified": 71,
   "total_deals": 14,
   "total_revenue": 97663.0,
-  "team_close_rate": 10.1,
+  "team_close_rate": 10.0,
   "team_avg_rev_per_deal": 6975.93,
   "team_crm_compliance": 57.0,
   "team_task_adherence": 81.4,
@@ -63,6 +63,10 @@
     {
       "funnel": "Unknown (Needs Review)",
       "count": 28
+    },
+    {
+      "funnel": "Anthony IG",
+      "count": 2
     },
     {
       "funnel": "Website",
@@ -99,19 +103,15 @@
     {
       "funnel": "X",
       "count": 1
-    },
-    {
-      "funnel": "Anthony IG",
-      "count": 1
     }
   ],
   "funnel_sources": {
-    "unknown": 51,
+    "unknown": 52,
     "in_house": 77,
     "external": 11,
-    "in_house_pct": 55.4,
+    "in_house_pct": 55.0,
     "external_pct": 7.9,
-    "unknown_pct": 36.7
+    "unknown_pct": 37.1
   },
   "reps": [
     {
@@ -937,7 +937,7 @@
       "rep_owner_id": "user_7F059xEinVentOEvkRMP77fWZyvwUiTRTUOuhD11J0e",
       "adherence": {
         "pre_call_pct": 92,
-        "post_call_pct": 68,
+        "post_call_pct": 69,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -967,17 +967,17 @@
             "label": "Task or follow-up meeting",
             "phase": "post_call",
             "done": 9,
-            "eligible": 17,
-            "exempt": 18,
-            "pct": 53
+            "eligible": 16,
+            "exempt": 19,
+            "pct": 56
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 14,
-            "eligible": 17,
-            "exempt": 18,
-            "pct": 82
+            "done": 13,
+            "eligible": 16,
+            "exempt": 19,
+            "pct": 81
           }
         },
         "lead_cohorts": {
@@ -1277,8 +1277,8 @@
                 "booked_date": "2026-11-17",
                 "scored_call_at": "2026-11-17T11:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "\ud83c\udfc6 Closed / Won",
+                "opportunity_status": "\ud83c\udfc6 Closed / Won"
               }
             ],
             "missed": [
@@ -1590,8 +1590,8 @@
                 "booked_date": "2026-11-17",
                 "scored_call_at": "2026-11-17T11:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "\ud83c\udfc6 Closed / Won",
+                "opportunity_status": "\ud83c\udfc6 Closed / Won"
               }
             ],
             "missed": [
@@ -1912,8 +1912,8 @@
                 "booked_date": "2026-11-17",
                 "scored_call_at": "2026-11-17T11:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "\ud83c\udfc6 Closed / Won",
+                "opportunity_status": "\ud83c\udfc6 Closed / Won"
               }
             ],
             "missed": [
@@ -2094,15 +2094,6 @@
                 "url": "https://app.close.com/lead/lead_lEyOXfMVqtHcKQ48XXpU38KZWP1GByaMP3E1E9lRJyg/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "Call Booked"
-              },
-              {
-                "id": "lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy",
-                "name": "Erwin Huerta",
-                "booked_date": "2026-11-17",
-                "scored_call_at": "2026-11-17T11:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
               }
             ],
             "exempt": [
@@ -2267,6 +2258,15 @@
                 "url": "https://app.close.com/lead/lead_dgSQVePcBTX3BjK7RODhsMyZ4YDqyE3AwQCap0PXO4e/",
                 "status_label": "\ud83d\udd5b Call Rescheduled",
                 "opportunity_status": "Rescheduled Call"
+              },
+              {
+                "id": "lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy",
+                "name": "Erwin Huerta",
+                "booked_date": "2026-11-17",
+                "scored_call_at": "2026-11-17T11:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy/",
+                "status_label": "\ud83c\udfc6 Closed / Won",
+                "opportunity_status": "\ud83c\udfc6 Closed / Won"
               }
             ]
           },
@@ -2388,15 +2388,6 @@
                 "url": "https://app.close.com/lead/lead_46iULhAEjQIpvmzKD25TRClKYpGPFKqS1Z6wUjYHlgu/",
                 "status_label": "WARM - Follow up",
                 "opportunity_status": "WARM - Follow Up"
-              },
-              {
-                "id": "lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy",
-                "name": "Erwin Huerta",
-                "booked_date": "2026-11-17",
-                "scored_call_at": "2026-11-17T11:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
               }
             ],
             "missed": [
@@ -2590,13 +2581,22 @@
                 "url": "https://app.close.com/lead/lead_dgSQVePcBTX3BjK7RODhsMyZ4YDqyE3AwQCap0PXO4e/",
                 "status_label": "\ud83d\udd5b Call Rescheduled",
                 "opportunity_status": "Rescheduled Call"
+              },
+              {
+                "id": "lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy",
+                "name": "Erwin Huerta",
+                "booked_date": "2026-11-17",
+                "scored_call_at": "2026-11-17T11:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy/",
+                "status_label": "\ud83c\udfc6 Closed / Won",
+                "opportunity_status": "\ud83c\udfc6 Closed / Won"
               }
             ]
           }
         }
       },
       "pre_call_adherence": 92,
-      "post_call_adherence": 68,
+      "post_call_adherence": 69,
       "opportunity_status": {
         "hot": {
           "count": 4
@@ -2612,12 +2612,12 @@
     },
     {
       "name": "Luke Herman",
-      "booked": 31,
-      "shown": 22,
+      "booked": 32,
+      "shown": 23,
       "qualified": 15,
       "deals": 2,
       "revenue": 15894.0,
-      "close_rate": 6.5,
+      "close_rate": 6.2,
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 7947.0,
@@ -2646,6 +2646,14 @@
           18
         ],
         "missing_leads": [
+          {
+            "name": "Shane Harper",
+            "lead_id": "lead_xkgVCEWpLVKJ5RIhnW82NQ3h2djS6sxJ16M3E8FFso3",
+            "missing": [
+              "Disposition",
+              "Qualified"
+            ]
+          },
           {
             "name": "Christian Castillo",
             "lead_id": "lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ",
@@ -2781,14 +2789,6 @@
             ]
           },
           {
-            "name": "Shane Harper",
-            "lead_id": "lead_xkgVCEWpLVKJ5RIhnW82NQ3h2djS6sxJ16M3E8FFso3",
-            "missing": [
-              "Disposition",
-              "Qualified"
-            ]
-          },
-          {
             "name": "Zachary Bornstein",
             "lead_id": "lead_IuS8MCYib6J64MMDZJ7VJOpDelDtr9xjL44m3b1b493",
             "missing": [
@@ -2873,6 +2873,14 @@
       },
       "metric_details": {
         "booked": [
+          {
+            "lead_id": "lead_alJwsNKLe1Opyw5l22t8gRFj9KTJcECmnvMfefrY9QA",
+            "name": "Melody Shar",
+            "date": "2026-11-17",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Anthony IG"
+          },
           {
             "lead_id": "lead_K7GGJ3iW8IbpD2SnMMzCb0nQ0pDjVoujIDzfuCjuymM",
             "name": "Jeremy Surowiec",
@@ -3123,6 +3131,14 @@
           }
         ],
         "shown": [
+          {
+            "lead_id": "lead_alJwsNKLe1Opyw5l22t8gRFj9KTJcECmnvMfefrY9QA",
+            "name": "Melody Shar",
+            "date": "2026-11-17",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Anthony IG"
+          },
           {
             "lead_id": "lead_K7GGJ3iW8IbpD2SnMMzCb0nQ0pDjVoujIDzfuCjuymM",
             "name": "Jeremy Surowiec",
@@ -3376,14 +3392,6 @@
         ],
         "no_outcome": [
           {
-            "lead_id": "lead_alJwsNKLe1Opyw5l22t8gRFj9KTJcECmnvMfefrY9QA",
-            "name": "Melody Shar",
-            "date": "2026-11-17",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "completed",
-            "funnel": "Anthony IG"
-          },
-          {
             "lead_id": "lead_a8riPzcecg2nm4YxdVgcp99eCAeAV4u8JEhFfdrblkC",
             "name": "Eva Roche",
             "date": "2026-11-10",
@@ -3580,15 +3588,15 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 31,
+      "occurred_calls": 32,
       "no_shows": 9,
-      "unresolved_calls": 7,
+      "unresolved_calls": 6,
       "scheduled_calls": 38,
-      "show_rate": 71.0,
-      "qualification_rate": 48.4,
-      "revenue_per_occurred": 512.71,
-      "revenue_per_lead": 512.71,
-      "marketing": 15,
+      "show_rate": 71.9,
+      "qualification_rate": 46.9,
+      "revenue_per_occurred": 496.69,
+      "revenue_per_lead": 496.69,
+      "marketing": 16,
       "lane2": 16,
       "social_dms": 0,
       "rep_owner_id": "user_6kp6k4OcqKqFNrxGjgMUncedjiCYC6JHU8EI28F7etV",
@@ -5843,6 +5851,14 @@
         ],
         "missing_leads": [
           {
+            "name": "Iris Johnson",
+            "lead_id": "lead_LS7EqtiH5QsVane0MzGMu0fkIiogJWLKxuwTMlmmzfL",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Justin Gobeille",
             "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
             "missing": [
@@ -5856,14 +5872,6 @@
             "lead_id": "lead_ncQ5L8BtpmVjNlKINx8NS1V09tvP8CEmOrFHckcxPrx",
             "missing": [
               "Disposition"
-            ]
-          },
-          {
-            "name": "Iris Johnson",
-            "lead_id": "lead_LS7EqtiH5QsVane0MzGMu0fkIiogJWLKxuwTMlmmzfL",
-            "missing": [
-              "Disposition",
-              "Confidence"
             ]
           },
           {
@@ -9025,7 +9033,7 @@
       "rep_owner_id": "user_wHm1vcLde4RExd3vv9UOjnms5Oz8ssXg8600mQuxMPb",
       "adherence": {
         "pre_call_pct": 69,
-        "post_call_pct": 67,
+        "post_call_pct": 69,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -9054,18 +9062,18 @@
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 8,
-            "eligible": 15,
-            "exempt": 11,
-            "pct": 53
+            "done": 9,
+            "eligible": 16,
+            "exempt": 10,
+            "pct": 56
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 12,
-            "eligible": 15,
-            "exempt": 11,
-            "pct": 80
+            "done": 13,
+            "eligible": 16,
+            "exempt": 10,
+            "pct": 81
           }
         },
         "lead_cohorts": {
@@ -9221,8 +9229,8 @@
                 "booked_date": "2026-11-11",
                 "scored_call_at": "2026-11-11T16:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz/",
-                "status_label": "\ud83d\udd5b Call Rescheduled",
-                "opportunity_status": "Rescheduled Call"
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
               },
               {
                 "id": "lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK",
@@ -9453,8 +9461,8 @@
                 "booked_date": "2026-11-11",
                 "scored_call_at": "2026-11-11T16:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz/",
-                "status_label": "\ud83d\udd5b Call Rescheduled",
-                "opportunity_status": "Rescheduled Call"
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
               },
               {
                 "id": "lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK",
@@ -9786,8 +9794,8 @@
                 "booked_date": "2026-11-11",
                 "scored_call_at": "2026-11-11T16:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz/",
-                "status_label": "\ud83d\udd5b Call Rescheduled",
-                "opportunity_status": "Rescheduled Call"
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
               }
             ],
             "exempt": []
@@ -9856,6 +9864,15 @@
                 "url": "https://app.close.com/lead/lead_J7zt6v8hLHv0CJtl3hPyZQ3W41aZ19KnBMZwaBvos2U/",
                 "status_label": "\ud83d\uddd3\ufe0fGENERAL - Follow Up",
                 "opportunity_status": "GENERAL Follow Up"
+              },
+              {
+                "id": "lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz",
+                "name": "Jeremy Black",
+                "booked_date": "2026-11-11",
+                "scored_call_at": "2026-11-11T16:15:00-08:00",
+                "url": "https://app.close.com/lead/lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
               },
               {
                 "id": "lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK",
@@ -10004,15 +10021,6 @@
                 "url": "https://app.close.com/lead/lead_HnaWEPSSpIW99vFhNTUiiQD6awJAAtXqzrBmccjs12U/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz",
-                "name": "Jeremy Black",
-                "booked_date": "2026-11-11",
-                "scored_call_at": "2026-11-11T16:15:00-08:00",
-                "url": "https://app.close.com/lead/lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz/",
-                "status_label": "\ud83d\udd5b Call Rescheduled",
-                "opportunity_status": "Rescheduled Call"
               },
               {
                 "id": "lead_ZfSOgnahrdnJLD5UjNSyUFZhv7goPHjWnp5pxIWTmCw",
@@ -10136,6 +10144,15 @@
                 "opportunity_status": "HOT - Follow Up"
               },
               {
+                "id": "lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz",
+                "name": "Jeremy Black",
+                "booked_date": "2026-11-11",
+                "scored_call_at": "2026-11-11T16:15:00-08:00",
+                "url": "https://app.close.com/lead/lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz/",
+                "status_label": "\ud83d\udcde HOT- Follow Up",
+                "opportunity_status": "HOT - Follow Up"
+              },
+              {
                 "id": "lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK",
                 "name": "Ben Lucero",
                 "booked_date": "2026-11-16",
@@ -10248,15 +10265,6 @@
                 "opportunity_status": "No active opp"
               },
               {
-                "id": "lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz",
-                "name": "Jeremy Black",
-                "booked_date": "2026-11-11",
-                "scored_call_at": "2026-11-11T16:15:00-08:00",
-                "url": "https://app.close.com/lead/lead_YQpsZs0JIHyrbmqecJKJgcaOwmy3rynIetKzCGL1njz/",
-                "status_label": "\ud83d\udd5b Call Rescheduled",
-                "opportunity_status": "Rescheduled Call"
-              },
-              {
                 "id": "lead_ZfSOgnahrdnJLD5UjNSyUFZhv7goPHjWnp5pxIWTmCw",
                 "name": "Hakim Robinson",
                 "booked_date": "2026-11-16",
@@ -10279,10 +10287,10 @@
         }
       },
       "pre_call_adherence": 69,
-      "post_call_adherence": 67,
+      "post_call_adherence": 69,
       "opportunity_status": {
         "hot": {
-          "count": 23
+          "count": 24
         },
         "warm": {
           "count": 5
@@ -10291,7 +10299,7 @@
           "count": 9
         }
       },
-      "opportunity_status_total": 37
+      "opportunity_status_total": 38
     },
     {
       "name": "Scott Seymour",
@@ -12597,17 +12605,17 @@
     }
   ],
   "total_scheduled_calls": 167,
-  "total_occurred_calls": 139,
+  "total_occurred_calls": 140,
   "total_no_shows": 34,
-  "total_unresolved_calls": 28,
-  "team_show_rate": 75.5,
-  "team_qualification_rate": 51.1,
+  "total_unresolved_calls": 27,
+  "team_show_rate": 75.7,
+  "team_qualification_rate": 50.7,
   "metric_definitions": {
     "version": "calls-occurred.v1",
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T12:00:41.848857-08:00",
+    "cutoff_exclusive": "2026-11-17T12:18:46.780932-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12616,7 +12624,7 @@
   },
   "team_adherence": {
     "pre_call_pct": 88,
-    "post_call_pct": 74,
+    "post_call_pct": 75,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -12645,10 +12653,10 @@
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
-        "done": 35,
+        "done": 36,
         "eligible": 59,
         "exempt": 100,
-        "pct": 59
+        "pct": 61
       },
       "recap_email": {
         "label": "Recap email sent",
@@ -12663,7 +12671,7 @@
   "lane_adherence": {
     "1": {
       "pre_call_pct": 88,
-      "post_call_pct": 74,
+      "post_call_pct": 75,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -12692,10 +12700,10 @@
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
-          "done": 35,
+          "done": 36,
           "eligible": 59,
           "exempt": 100,
-          "pct": 59
+          "pct": 61
         },
         "recap_email": {
           "label": "Recap email sent",
@@ -12711,7 +12719,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T12:11:46.660398-08:00",
+    "generated_at": "2026-11-17T12:25:33.189031-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -12735,12 +12743,12 @@
     "preview_only": false
   },
   "team_pre_call_adherence": 88,
-  "team_post_call_adherence": 74,
+  "team_post_call_adherence": 75,
   "lane_pre_call_adherence": {
     "1": 88
   },
   "lane_post_call_adherence": {
-    "1": 74
+    "1": 75
   },
   "dashboard_schema_version": 3
 }
