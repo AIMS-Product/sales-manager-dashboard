@@ -29,9 +29,8 @@ task or later qualifying meeting completes the combined next-step check.
 Both use the same scoring rules as `rep-dashboard/scripts/adherence_rules.py`. Click either score
 to see completed and missed lead cohorts for each step. Closed/Won and Lost leads are exempt from
 post-call scoring, and show-up outcome does not affect eligibility.
-The shared pre-call Day-of confirmation step also accepts any current-owner outbound dial on the
-meeting's Pacific date before it begins, alongside an owner-sent outbound
-SMS with a message body.
+Day-of confirmation counts an outbound SMS or email with a message body, or an outbound call,
+from the credited closer on the meeting's Pacific date before it begins.
 Process candidates come from active meetings in the Pacific reporting period that
 match the updater's qualifying sales-call titles, even when First and Latest Sales
 Call Booked Date are blank. Booked and qualified metrics retain their lead-field
