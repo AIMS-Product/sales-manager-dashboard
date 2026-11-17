@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 06:30 AM PST",
+  "updated_at": "2026-11-17 06:45 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -50,7 +50,7 @@
   "total_revenue": 97663.0,
   "team_close_rate": 10.2,
   "team_avg_rev_per_deal": 6975.93,
-  "team_crm_compliance": 54.9,
+  "team_crm_compliance": 55.1,
   "team_task_adherence": 81.5,
   "qa_score_meta": {
     "available": false,
@@ -2586,6 +2586,14 @@
         ],
         "missing_leads": [
           {
+            "name": "Alejandro Bejarano",
+            "lead_id": "lead_SqxEc5AjfLAIYkG9zeC5TJpCZMbAOS7v9W7GAbA7adm",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Eva Roche",
             "lead_id": "lead_a8riPzcecg2nm4YxdVgcp99eCAeAV4u8JEhFfdrblkC",
             "missing": [
@@ -2611,14 +2619,6 @@
             "lead_id": "lead_NXZmQpHH0hM06eNpNgg2523WXl2ZB1n4tZpFDFpjweg",
             "missing": [
               "Disposition"
-            ]
-          },
-          {
-            "name": "Alejandro Bejarano",
-            "lead_id": "lead_SqxEc5AjfLAIYkG9zeC5TJpCZMbAOS7v9W7GAbA7adm",
-            "missing": [
-              "Disposition",
-              "Confidence"
             ]
           },
           {
@@ -5708,8 +5708,8 @@
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 5847.0,
-      "crm_compliance": 52.1,
-      "crm_filled": 49,
+      "crm_compliance": 53.2,
+      "crm_filled": 50,
       "crm_total": 94,
       "crm_detail": {
         "show_up": [
@@ -5721,7 +5721,7 @@
           26
         ],
         "qualified": [
-          12,
+          13,
           21
         ],
         "confidence": [
@@ -5737,8 +5737,7 @@
             "name": "Ben Lucero",
             "lead_id": "lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK",
             "missing": [
-              "Disposition",
-              "Qualified"
+              "Disposition"
             ]
           },
           {
@@ -12496,7 +12495,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T06:30:21.344589-08:00",
+    "cutoff_exclusive": "2026-11-17T06:45:13.300535-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12600,7 +12599,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T06:38:50.387890-08:00",
+    "generated_at": "2026-11-17T06:53:58.535119-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
