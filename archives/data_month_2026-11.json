@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 12:32 PM PST",
+  "updated_at": "2026-11-17 12:47 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -51,14 +51,14 @@
   "team_close_rate": 10.7,
   "team_avg_rev_per_deal": 7200.67,
   "team_crm_compliance": 57.1,
-  "team_task_adherence": 81.6,
+  "team_task_adherence": 81.8,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
   },
   "team_overdue": 36,
-  "team_open_leads": 166,
-  "team_est_pipeline": 398400,
+  "team_open_leads": 167,
+  "team_est_pipeline": 400800,
   "funnel_breakdown": [
     {
       "funnel": "Unknown (Needs Review)",
@@ -150,6 +150,13 @@
           10
         ],
         "missing_leads": [
+          {
+            "name": "Kevin Carias",
+            "lead_id": "lead_OrFRcylmeP60ArdeVFvMDlle0QWBCoVuxhu8INAdrfy",
+            "missing": [
+              "Disposition"
+            ]
+          },
           {
             "name": "Crystal - Twitter",
             "lead_id": "lead_exBDGFbwichwqyTWdEPl9vxU0edVy5cIU5r7L3kC0B3",
@@ -332,13 +339,6 @@
           {
             "name": "Abdul Iddrisu",
             "lead_id": "lead_y7bvyU3nY3C5MIdjzbdbFxSumcdUR3ghALQUV8coZXG",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Kevin Carias",
-            "lead_id": "lead_OrFRcylmeP60ArdeVFvMDlle0QWBCoVuxhu8INAdrfy",
             "missing": [
               "Disposition"
             ]
@@ -6537,6 +6537,14 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_GLeKkIFXmNd6168pj9l7AUDO8tF3TkYQWmFGpVfWLdJ",
+            "name": "Mario Vilela",
+            "date": "2026-11-17",
+            "meeting_outcome": "No outcome",
+            "meeting_status": "in-progress",
+            "funnel": "Internal Webinar"
+          },
+          {
             "lead_id": "lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK",
             "name": "Ben Lucero",
             "date": "2026-11-16",
@@ -6781,8 +6789,8 @@
       "lane": 1,
       "occurred_calls": 29,
       "no_shows": 5,
-      "unresolved_calls": 6,
-      "scheduled_calls": 35,
+      "unresolved_calls": 7,
+      "scheduled_calls": 36,
       "show_rate": 82.8,
       "qualification_rate": 65.5,
       "revenue_per_occurred": 806.48,
@@ -6792,40 +6800,40 @@
       "social_dms": 0,
       "rep_owner_id": "user_wHm1vcLde4RExd3vv9UOjnms5Oz8ssXg8600mQuxMPb",
       "adherence": {
-        "pre_call_pct": 69,
-        "post_call_pct": 69,
+        "pre_call_pct": 70,
+        "post_call_pct": 67,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
             "phase": "pre_call",
-            "done": 20,
-            "eligible": 26,
+            "done": 21,
+            "eligible": 27,
             "exempt": 0,
-            "pct": 77
+            "pct": 78
           },
           "precall_text": {
             "label": "Pre-call text",
             "phase": "pre_call",
-            "done": 19,
-            "eligible": 26,
+            "done": 20,
+            "eligible": 27,
             "exempt": 0,
-            "pct": 73
+            "pct": 74
           },
           "day_of_confirmation_text": {
             "label": "Day-of confirmation",
             "phase": "pre_call",
-            "done": 15,
-            "eligible": 26,
+            "done": 16,
+            "eligible": 27,
             "exempt": 0,
-            "pct": 58
+            "pct": 59
           },
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
             "done": 9,
-            "eligible": 16,
+            "eligible": 17,
             "exempt": 10,
-            "pct": 56
+            "pct": 53
           },
           "recap_email": {
             "label": "Recap email sent",
@@ -7018,6 +7026,15 @@
                 "url": "https://app.close.com/lead/lead_jztp8Eo36JXNeMtWumjbLFcAfnEaoMOBaJ7neRbdVM3/",
                 "status_label": "\ud83d\udc7b No Show",
                 "opportunity_status": "No Show"
+              },
+              {
+                "id": "lead_GLeKkIFXmNd6168pj9l7AUDO8tF3TkYQWmFGpVfWLdJ",
+                "name": "Mario Vilela",
+                "booked_date": "2026-11-17",
+                "scored_call_at": "2026-11-17T12:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_GLeKkIFXmNd6168pj9l7AUDO8tF3TkYQWmFGpVfWLdJ/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
               }
             ],
             "missed": [
@@ -7250,6 +7267,15 @@
                 "url": "https://app.close.com/lead/lead_jztp8Eo36JXNeMtWumjbLFcAfnEaoMOBaJ7neRbdVM3/",
                 "status_label": "\ud83d\udc7b No Show",
                 "opportunity_status": "No Show"
+              },
+              {
+                "id": "lead_GLeKkIFXmNd6168pj9l7AUDO8tF3TkYQWmFGpVfWLdJ",
+                "name": "Mario Vilela",
+                "booked_date": "2026-11-17",
+                "scored_call_at": "2026-11-17T12:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_GLeKkIFXmNd6168pj9l7AUDO8tF3TkYQWmFGpVfWLdJ/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
               }
             ],
             "missed": [
@@ -7455,6 +7481,15 @@
                 "url": "https://app.close.com/lead/lead_jztp8Eo36JXNeMtWumjbLFcAfnEaoMOBaJ7neRbdVM3/",
                 "status_label": "\ud83d\udc7b No Show",
                 "opportunity_status": "No Show"
+              },
+              {
+                "id": "lead_GLeKkIFXmNd6168pj9l7AUDO8tF3TkYQWmFGpVfWLdJ",
+                "name": "Mario Vilela",
+                "booked_date": "2026-11-17",
+                "scored_call_at": "2026-11-17T12:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_GLeKkIFXmNd6168pj9l7AUDO8tF3TkYQWmFGpVfWLdJ/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
               }
             ],
             "missed": [
@@ -7707,6 +7742,15 @@
                 "url": "https://app.close.com/lead/lead_pAi3IPGgGkNESb28Jlx8GmrkLJNJH0PxIB4X0SD1XQm/",
                 "status_label": "\ud83d\udcde HOT- Follow Up",
                 "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_GLeKkIFXmNd6168pj9l7AUDO8tF3TkYQWmFGpVfWLdJ",
+                "name": "Mario Vilela",
+                "booked_date": "2026-11-17",
+                "scored_call_at": "2026-11-17T12:45:00-08:00",
+                "url": "https://app.close.com/lead/lead_GLeKkIFXmNd6168pj9l7AUDO8tF3TkYQWmFGpVfWLdJ/",
+                "status_label": "\u260e\ufe0f Call Booked",
+                "opportunity_status": "Call Booked"
               }
             ],
             "exempt": [
@@ -8046,8 +8090,8 @@
           }
         }
       },
-      "pre_call_adherence": 69,
-      "post_call_adherence": 69,
+      "pre_call_adherence": 70,
+      "post_call_adherence": 67,
       "opportunity_status": {
         "hot": {
           "count": 24
@@ -10916,9 +10960,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 72,
-      "open_leads": 19,
-      "est_pipeline": 45600,
+      "tasks_incomplete": 73,
+      "open_leads": 20,
+      "est_pipeline": 48000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -11993,9 +12037,9 @@
         ],
         "deals": []
       },
-      "task_adherence": 16.7,
+      "task_adherence": 28.6,
       "tasks_overdue": 5,
-      "tasks_incomplete": 6,
+      "tasks_incomplete": 7,
       "open_leads": 11,
       "est_pipeline": 26400,
       "is_manager": false,
@@ -12619,10 +12663,10 @@
       "opportunity_status_total": 50
     }
   ],
-  "total_scheduled_calls": 167,
+  "total_scheduled_calls": 168,
   "total_occurred_calls": 140,
   "total_no_shows": 34,
-  "total_unresolved_calls": 27,
+  "total_unresolved_calls": 28,
   "team_show_rate": 75.7,
   "team_qualification_rate": 50.7,
   "metric_definitions": {
@@ -12630,7 +12674,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T12:32:39.171327-08:00",
+    "cutoff_exclusive": "2026-11-17T12:47:51.957325-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12639,29 +12683,29 @@
   },
   "team_adherence": {
     "pre_call_pct": 88,
-    "post_call_pct": 75,
+    "post_call_pct": 74,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
         "phase": "pre_call",
-        "done": 142,
-        "eligible": 159,
+        "done": 143,
+        "eligible": 160,
         "exempt": 0,
         "pct": 89
       },
       "precall_text": {
         "label": "Pre-call text",
         "phase": "pre_call",
-        "done": 145,
-        "eligible": 159,
+        "done": 146,
+        "eligible": 160,
         "exempt": 0,
         "pct": 91
       },
       "day_of_confirmation_text": {
         "label": "Day-of confirmation",
         "phase": "pre_call",
-        "done": 135,
-        "eligible": 159,
+        "done": 136,
+        "eligible": 160,
         "exempt": 0,
         "pct": 85
       },
@@ -12669,9 +12713,9 @@
         "label": "Task or follow-up meeting",
         "phase": "post_call",
         "done": 36,
-        "eligible": 59,
+        "eligible": 60,
         "exempt": 100,
-        "pct": 61
+        "pct": 60
       },
       "recap_email": {
         "label": "Recap email sent",
@@ -12686,29 +12730,29 @@
   "lane_adherence": {
     "1": {
       "pre_call_pct": 88,
-      "post_call_pct": 75,
+      "post_call_pct": 74,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
           "phase": "pre_call",
-          "done": 142,
-          "eligible": 159,
+          "done": 143,
+          "eligible": 160,
           "exempt": 0,
           "pct": 89
         },
         "precall_text": {
           "label": "Pre-call text",
           "phase": "pre_call",
-          "done": 145,
-          "eligible": 159,
+          "done": 146,
+          "eligible": 160,
           "exempt": 0,
           "pct": 91
         },
         "day_of_confirmation_text": {
           "label": "Day-of confirmation",
           "phase": "pre_call",
-          "done": 135,
-          "eligible": 159,
+          "done": 136,
+          "eligible": 160,
           "exempt": 0,
           "pct": 85
         },
@@ -12716,9 +12760,9 @@
           "label": "Task or follow-up meeting",
           "phase": "post_call",
           "done": 36,
-          "eligible": 59,
+          "eligible": 60,
           "exempt": 100,
-          "pct": 61
+          "pct": 60
         },
         "recap_email": {
           "label": "Recap email sent",
@@ -12734,7 +12778,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T12:41:07.939957-08:00",
+    "generated_at": "2026-11-17T12:58:09.743197-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -12758,12 +12802,12 @@
     "preview_only": false
   },
   "team_pre_call_adherence": 88,
-  "team_post_call_adherence": 75,
+  "team_post_call_adherence": 74,
   "lane_pre_call_adherence": {
     "1": 88
   },
   "lane_post_call_adherence": {
-    "1": 75
+    "1": 74
   },
   "dashboard_schema_version": 3
 }
