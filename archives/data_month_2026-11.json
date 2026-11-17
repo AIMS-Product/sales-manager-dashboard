@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 01:04 PM PST",
+  "updated_at": "2026-11-17 01:18 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -43,26 +43,30 @@
     "post_call_adherence": 90,
     "task_adherence": 100
   },
-  "total_booked": 141,
-  "total_shown": 106,
-  "total_qualified": 71,
+  "total_booked": 142,
+  "total_shown": 107,
+  "total_qualified": 72,
   "total_deals": 15,
   "total_revenue": 108010.0,
   "team_close_rate": 10.6,
   "team_avg_rev_per_deal": 7200.67,
   "team_crm_compliance": 57.1,
-  "team_task_adherence": 81.9,
+  "team_task_adherence": 82.7,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
   },
-  "team_overdue": 36,
+  "team_overdue": 34,
   "team_open_leads": 167,
   "team_est_pipeline": 400800,
   "funnel_breakdown": [
     {
       "funnel": "Internal Webinar",
       "count": 46
+    },
+    {
+      "funnel": "Instagram",
+      "count": 9
     },
     {
       "funnel": "Unknown (Needs Review)",
@@ -93,10 +97,6 @@
       "count": 5
     },
     {
-      "funnel": "Instagram",
-      "count": 8
-    },
-    {
       "funnel": "GoHighLevel",
       "count": 2
     },
@@ -107,21 +107,21 @@
   ],
   "funnel_sources": {
     "in_house": 78,
+    "external": 12,
     "unknown": 52,
-    "external": 11,
-    "in_house_pct": 55.3,
-    "external_pct": 7.8,
-    "unknown_pct": 36.9
+    "in_house_pct": 54.9,
+    "external_pct": 8.5,
+    "unknown_pct": 36.6
   },
   "reps": [
     {
       "name": "Robin Perkins",
-      "booked": 24,
-      "shown": 18,
-      "qualified": 10,
+      "booked": 25,
+      "shown": 19,
+      "qualified": 11,
       "deals": 1,
       "revenue": 10347.0,
-      "close_rate": 4.2,
+      "close_rate": 4.0,
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 10347.0,
@@ -400,6 +400,14 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy",
+            "name": "Erwin Huerta",
+            "date": "2026-11-17",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Instagram"
+          },
+          {
             "lead_id": "lead_46iULhAEjQIpvmzKD25TRClKYpGPFKqS1Z6wUjYHlgu",
             "name": "Chris Zurbuch",
             "date": "2026-11-16",
@@ -593,6 +601,14 @@
           }
         ],
         "shown": [
+          {
+            "lead_id": "lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy",
+            "name": "Erwin Huerta",
+            "date": "2026-11-17",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Instagram"
+          },
           {
             "lead_id": "lead_46iULhAEjQIpvmzKD25TRClKYpGPFKqS1Z6wUjYHlgu",
             "name": "Chris Zurbuch",
@@ -790,14 +806,6 @@
         ],
         "no_outcome": [
           {
-            "lead_id": "lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy",
-            "name": "Erwin Huerta",
-            "date": "2026-11-17",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "completed",
-            "funnel": "Instagram"
-          },
-          {
             "lead_id": "lead_dgSQVePcBTX3BjK7RODhsMyZ4YDqyE3AwQCap0PXO4e",
             "name": "Reina Davis",
             "date": "2026-11-16",
@@ -832,6 +840,14 @@
         ],
         "upcoming": [],
         "qualified": [
+          {
+            "lead_id": "lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy",
+            "name": "Erwin Huerta",
+            "date": "2026-11-17",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Instagram"
+          },
           {
             "lead_id": "lead_46iULhAEjQIpvmzKD25TRClKYpGPFKqS1Z6wUjYHlgu",
             "name": "Chris Zurbuch",
@@ -931,16 +947,16 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 24,
+      "occurred_calls": 25,
       "no_shows": 6,
-      "unresolved_calls": 5,
+      "unresolved_calls": 4,
       "scheduled_calls": 29,
-      "show_rate": 75.0,
-      "qualification_rate": 41.7,
-      "revenue_per_occurred": 431.12,
-      "revenue_per_lead": 431.12,
+      "show_rate": 76.0,
+      "qualification_rate": 44.0,
+      "revenue_per_occurred": 413.88,
+      "revenue_per_lead": 413.88,
       "marketing": 14,
-      "lane2": 9,
+      "lane2": 10,
       "social_dms": 1,
       "rep_owner_id": "user_7F059xEinVentOEvkRMP77fWZyvwUiTRTUOuhD11J0e",
       "adherence": {
@@ -6787,9 +6803,9 @@
           }
         ]
       },
-      "task_adherence": 56.0,
-      "tasks_overdue": 11,
-      "tasks_incomplete": 25,
+      "task_adherence": 60.9,
+      "tasks_overdue": 9,
+      "tasks_incomplete": 23,
       "open_leads": 41,
       "est_pipeline": 98400,
       "is_manager": false,
@@ -8159,6 +8175,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Adam Ortega",
+            "lead_id": "lead_ncQ5L8BtpmVjNlKINx8NS1V09tvP8CEmOrFHckcxPrx",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Iris Johnson",
             "lead_id": "lead_LS7EqtiH5QsVane0MzGMu0fkIiogJWLKxuwTMlmmzfL",
             "missing": [
@@ -8173,13 +8196,6 @@
               "Disposition",
               "Qualified",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Adam Ortega",
-            "lead_id": "lead_ncQ5L8BtpmVjNlKINx8NS1V09tvP8CEmOrFHckcxPrx",
-            "missing": [
-              "Disposition"
             ]
           },
           {
@@ -12681,17 +12697,17 @@
     }
   ],
   "total_scheduled_calls": 168,
-  "total_occurred_calls": 141,
+  "total_occurred_calls": 142,
   "total_no_shows": 35,
-  "total_unresolved_calls": 27,
-  "team_show_rate": 75.2,
-  "team_qualification_rate": 50.4,
+  "total_unresolved_calls": 26,
+  "team_show_rate": 75.4,
+  "team_qualification_rate": 50.7,
   "metric_definitions": {
     "version": "calls-occurred.v1",
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T13:04:49.001498-08:00",
+    "cutoff_exclusive": "2026-11-17T13:18:20.739832-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12795,7 +12811,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T13:12:05.273175-08:00",
+    "generated_at": "2026-11-17T13:28:44.886625-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
