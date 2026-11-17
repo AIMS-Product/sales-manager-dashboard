@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 10:58 AM PST",
+  "updated_at": "2026-11-17 11:13 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -51,7 +51,7 @@
   "team_close_rate": 10.1,
   "team_avg_rev_per_deal": 6975.93,
   "team_crm_compliance": 56.8,
-  "team_task_adherence": 81.3,
+  "team_task_adherence": 81.4,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -790,6 +790,14 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_wqNDDxgIJ5Ph73BzkGmR4VezJUMjSS0eNk7CHriStSy",
+            "name": "Erwin Huerta",
+            "date": "2026-11-17",
+            "meeting_outcome": "No outcome",
+            "meeting_status": "in-progress",
+            "funnel": "Instagram"
+          },
+          {
             "lead_id": "lead_dgSQVePcBTX3BjK7RODhsMyZ4YDqyE3AwQCap0PXO4e",
             "name": "Reina Davis",
             "date": "2026-11-16",
@@ -917,8 +925,8 @@
       "lane": 1,
       "occurred_calls": 24,
       "no_shows": 6,
-      "unresolved_calls": 4,
-      "scheduled_calls": 28,
+      "unresolved_calls": 5,
+      "scheduled_calls": 29,
       "show_rate": 75.0,
       "qualification_rate": 41.7,
       "revenue_per_occurred": 0.0,
@@ -2630,20 +2638,20 @@
         ],
         "missing_leads": [
           {
-            "name": "Cynthia Nelson",
-            "lead_id": "lead_rDtUoxFXQ0xXKojrr10dSzydBMmcXSFjgMoBEryOmky",
-            "missing": [
-              "Disposition",
-              "Confidence"
-            ]
-          },
-          {
             "name": "Christian Castillo",
             "lead_id": "lead_dXLunQWPOfHp8FXNW9avhiShLQbW9a4opKAqYkxrjfQ",
             "missing": [
               "Disposition",
               "Qualified",
               "Lost Reason"
+            ]
+          },
+          {
+            "name": "Cynthia Nelson",
+            "lead_id": "lead_rDtUoxFXQ0xXKojrr10dSzydBMmcXSFjgMoBEryOmky",
+            "missing": [
+              "Disposition",
+              "Confidence"
             ]
           },
           {
@@ -8051,6 +8059,15 @@
         ],
         "missing_leads": [
           {
+            "name": "Justin Gobeille",
+            "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Adam Ortega",
             "lead_id": "lead_ncQ5L8BtpmVjNlKINx8NS1V09tvP8CEmOrFHckcxPrx",
             "missing": [
@@ -8096,15 +8113,6 @@
             "lead_id": "lead_h8bpENKMCY2HynIfBNoVwNSrbp4m29zKfNIjKYY7MeC",
             "missing": [
               "Disposition",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Justin Gobeille",
-            "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
-            "missing": [
-              "Disposition",
-              "Qualified",
               "Confidence"
             ]
           },
@@ -10887,7 +10895,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 71,
+      "tasks_incomplete": 72,
       "open_leads": 19,
       "est_pipeline": 45600,
       "is_manager": false,
@@ -12590,10 +12598,10 @@
       "opportunity_status_total": 50
     }
   ],
-  "total_scheduled_calls": 166,
+  "total_scheduled_calls": 167,
   "total_occurred_calls": 139,
   "total_no_shows": 34,
-  "total_unresolved_calls": 27,
+  "total_unresolved_calls": 28,
   "team_show_rate": 75.5,
   "team_qualification_rate": 51.1,
   "metric_definitions": {
@@ -12601,7 +12609,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T10:58:17.171925-08:00",
+    "cutoff_exclusive": "2026-11-17T11:13:18.305657-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12705,7 +12713,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T11:06:56.814394-08:00",
+    "generated_at": "2026-11-17T11:22:50.506005-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -12725,7 +12733,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 501,
+    "api_requests": 500,
     "preview_only": false
   },
   "team_pre_call_adherence": 88,
