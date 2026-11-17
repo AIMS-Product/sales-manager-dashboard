@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 03:42 AM PST",
+  "updated_at": "2026-11-17 03:57 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -150,6 +150,22 @@
           10
         ],
         "missing_leads": [
+          {
+            "name": "Jarod Mason",
+            "lead_id": "lead_OkREE2jATgNet3WqYrRzLBjuUcmhpoSmzbw4qZaK8FJ",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Billy Kemmis",
+            "lead_id": "lead_IKUdamoQsKj1cX3GCoLOeuXJ6I0Gore3Y7sJsYioKQC",
+            "missing": [
+              "Disposition"
+            ]
+          },
           {
             "name": "Eddie Cabrera",
             "lead_id": "lead_9DnxcJZahDzpCa6jpofXmywQ712qxrLSfb7uYgPvqqn",
@@ -305,15 +321,6 @@
             ]
           },
           {
-            "name": "Jarod Mason",
-            "lead_id": "lead_OkREE2jATgNet3WqYrRzLBjuUcmhpoSmzbw4qZaK8FJ",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
             "name": "Kevin Carias",
             "lead_id": "lead_OrFRcylmeP60ArdeVFvMDlle0QWBCoVuxhu8INAdrfy",
             "missing": [
@@ -351,13 +358,6 @@
           {
             "name": "Dustin Plowman",
             "lead_id": "lead_5RJKOOISx9ihqB7In5oZX863tNgch35kvJ9OZcNoEAv",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Billy Kemmis",
-            "lead_id": "lead_IKUdamoQsKj1cX3GCoLOeuXJ6I0Gore3Y7sJsYioKQC",
             "missing": [
               "Disposition"
             ]
@@ -2594,6 +2594,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Jeremy Adams",
+            "lead_id": "lead_mBREvRBl7BwyzzXrfkB0AYYKoT1fad1FW2Lcz4hVI5j",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Ethan Gilson",
             "lead_id": "lead_NXZmQpHH0hM06eNpNgg2523WXl2ZB1n4tZpFDFpjweg",
             "missing": [
@@ -2668,13 +2675,6 @@
             "missing": [
               "Disposition",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Jeremy Adams",
-            "lead_id": "lead_mBREvRBl7BwyzzXrfkB0AYYKoT1fad1FW2Lcz4hVI5j",
-            "missing": [
-              "Disposition"
             ]
           },
           {
@@ -12495,7 +12495,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T03:42:32.238962-08:00",
+    "cutoff_exclusive": "2026-11-17T03:57:44.863994-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12599,7 +12599,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T03:51:40.712685-08:00",
+    "generated_at": "2026-11-17T04:06:14.877657-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -12619,7 +12619,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 504,
+    "api_requests": 499,
     "preview_only": false
   },
   "team_pre_call_adherence": 88,
