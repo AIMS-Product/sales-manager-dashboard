@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 08:21 AM PST",
+  "updated_at": "2026-11-17 08:37 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -43,22 +43,22 @@
     "post_call_adherence": 90,
     "task_adherence": 100
   },
-  "total_booked": 137,
-  "total_shown": 104,
+  "total_booked": 138,
+  "total_shown": 105,
   "total_qualified": 70,
   "total_deals": 14,
   "total_revenue": 97663.0,
-  "team_close_rate": 10.2,
+  "team_close_rate": 10.1,
   "team_avg_rev_per_deal": 6975.93,
-  "team_crm_compliance": 55.1,
-  "team_task_adherence": 81.5,
+  "team_crm_compliance": 55.4,
+  "team_task_adherence": 81.4,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
   },
   "team_overdue": 37,
-  "team_open_leads": 171,
-  "team_est_pipeline": 410400,
+  "team_open_leads": 170,
+  "team_est_pipeline": 408000,
   "funnel_breakdown": [
     {
       "funnel": "Unknown (Needs Review)",
@@ -94,7 +94,7 @@
     },
     {
       "funnel": "GoHighLevel",
-      "count": 1
+      "count": 2
     },
     {
       "funnel": "X",
@@ -106,12 +106,12 @@
     }
   ],
   "funnel_sources": {
-    "unknown": 49,
+    "unknown": 50,
     "in_house": 77,
     "external": 11,
-    "in_house_pct": 56.2,
+    "in_house_pct": 55.8,
     "external_pct": 8.0,
-    "unknown_pct": 35.8
+    "unknown_pct": 36.2
   },
   "reps": [
     {
@@ -150,6 +150,15 @@
           10
         ],
         "missing_leads": [
+          {
+            "name": "Jeffrey Stack",
+            "lead_id": "lead_mHBHTd6l31oQbXTRqezdhv067mrIhPPEuR9ohyVFvyK",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
           {
             "name": "Robert Balsamo",
             "lead_id": "lead_TuE3w40RW4hO1cGVxvrgIhbACRtAhBbBmDoSiLR7FhH",
@@ -223,15 +232,6 @@
             "lead_id": "lead_46iULhAEjQIpvmzKD25TRClKYpGPFKqS1Z6wUjYHlgu",
             "missing": [
               "Disposition"
-            ]
-          },
-          {
-            "name": "Jeffrey Stack",
-            "lead_id": "lead_mHBHTd6l31oQbXTRqezdhv067mrIhPPEuR9ohyVFvyK",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
             ]
           },
           {
@@ -809,7 +809,7 @@
             "lead_id": "lead_mHBHTd6l31oQbXTRqezdhv067mrIhPPEuR9ohyVFvyK",
             "name": "Jeffrey Stack",
             "date": "2026-11-03",
-            "meeting_outcome": "No outcome",
+            "meeting_outcome": "Rescheduled",
             "meeting_status": "completed",
             "funnel": "Internal Webinar"
           }
@@ -2560,9 +2560,9 @@
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 7947.0,
-      "crm_compliance": 60.0,
-      "crm_filled": 72,
-      "crm_total": 120,
+      "crm_compliance": 61.2,
+      "crm_filled": 74,
+      "crm_total": 121,
       "crm_detail": {
         "show_up": [
           28,
@@ -2577,20 +2577,27 @@
           24
         ],
         "confidence": [
-          13,
+          14,
           24
         ],
         "lost_reason": [
-          12,
-          12
+          13,
+          13
         ],
         "missing_leads": [
           {
             "name": "Alejandro Bejarano",
             "lead_id": "lead_SqxEc5AjfLAIYkG9zeC5TJpCZMbAOS7v9W7GAbA7adm",
             "missing": [
-              "Disposition",
-              "Confidence"
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Luz Medina",
+            "lead_id": "lead_OnTaev0GW6fqOq7b5iFaBa112T2GwLUqnQieOYwT4xO",
+            "missing": [
+              "Show Up",
+              "Disposition"
             ]
           },
           {
@@ -2618,14 +2625,6 @@
             "name": "Ethan Gilson",
             "lead_id": "lead_NXZmQpHH0hM06eNpNgg2523WXl2ZB1n4tZpFDFpjweg",
             "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Luz Medina",
-            "lead_id": "lead_OnTaev0GW6fqOq7b5iFaBa112T2GwLUqnQieOYwT4xO",
-            "missing": [
-              "Show Up",
               "Disposition"
             ]
           },
@@ -3339,7 +3338,7 @@
             "lead_id": "lead_wI23MSm0fZKh7lfhh87TDyinTkVqDlPAdjCLdRTooPX",
             "name": "Mike Esposito",
             "date": "2026-11-10",
-            "meeting_outcome": "No outcome",
+            "meeting_outcome": "Rescheduled",
             "meeting_status": "completed",
             "funnel": "Meta Ads"
           },
@@ -3347,7 +3346,7 @@
             "lead_id": "lead_1TLSfcEWl35UtX7ThyoPzzThrZwkUCNWjfSflTY5Ahj",
             "name": "Mary DiBeneditto",
             "date": "2026-11-11",
-            "meeting_outcome": "No outcome",
+            "meeting_outcome": "Rescheduled",
             "meeting_status": "completed",
             "funnel": "Unknown (Needs Review)"
           },
@@ -3510,9 +3509,9 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 49,
-      "open_leads": 20,
-      "est_pipeline": 48000,
+      "tasks_incomplete": 48,
+      "open_leads": 19,
+      "est_pipeline": 45600,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -10199,12 +10198,12 @@
     },
     {
       "name": "Scott Seymour",
-      "booked": 18,
-      "shown": 12,
+      "booked": 19,
+      "shown": 13,
       "qualified": 9,
       "deals": 2,
       "revenue": 14994.0,
-      "close_rate": 11.1,
+      "close_rate": 10.5,
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 7497.0,
@@ -10234,6 +10233,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Indira Barksdale",
+            "lead_id": "lead_EIBAoowx5lmgV2MJKphgQc2AF1s2uBF6x1cF7fICf4H",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Kristin Hagen",
             "lead_id": "lead_gWS6cJv4cakRoPks1X2bbOrwnF7kPcuDiKtRnidrrPm",
             "missing": [
@@ -10251,13 +10257,6 @@
           {
             "name": "FELICIA DIXON",
             "lead_id": "lead_qKMhtsxVMFqLejLYVF30OK986FCr9SMFFoLubcvKbHy",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Indira Barksdale",
-            "lead_id": "lead_EIBAoowx5lmgV2MJKphgQc2AF1s2uBF6x1cF7fICf4H",
             "missing": [
               "Disposition"
             ]
@@ -10473,6 +10472,14 @@
             "funnel": "Internal Webinar"
           },
           {
+            "lead_id": "lead_EIBAoowx5lmgV2MJKphgQc2AF1s2uBF6x1cF7fICf4H",
+            "name": "Indira Barksdale",
+            "date": "2026-11-09",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "GoHighLevel"
+          },
+          {
             "lead_id": "lead_raSoPqNkqZZ6KXrZM3ZDQfVfh3o0F8ZAwxoo2wCwF8t",
             "name": "Joel Cardenas",
             "date": "2026-11-09",
@@ -10579,6 +10586,14 @@
             "funnel": "Unknown (Needs Review)"
           },
           {
+            "lead_id": "lead_EIBAoowx5lmgV2MJKphgQc2AF1s2uBF6x1cF7fICf4H",
+            "name": "Indira Barksdale",
+            "date": "2026-11-09",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "GoHighLevel"
+          },
+          {
             "lead_id": "lead_raSoPqNkqZZ6KXrZM3ZDQfVfh3o0F8ZAwxoo2wCwF8t",
             "name": "Joel Cardenas",
             "date": "2026-11-09",
@@ -10669,14 +10684,6 @@
             "meeting_outcome": "No outcome",
             "meeting_status": "in-progress",
             "funnel": "Google Ads"
-          },
-          {
-            "lead_id": "lead_EIBAoowx5lmgV2MJKphgQc2AF1s2uBF6x1cF7fICf4H",
-            "name": "Indira Barksdale",
-            "date": "2026-11-09",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "completed",
-            "funnel": "GoHighLevel"
           },
           {
             "lead_id": "lead_njOX6qItzmYxRB8kjlQsMLi9TeGGyi1plXXwZEfJbR1",
@@ -10795,16 +10802,16 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 18,
+      "occurred_calls": 19,
       "no_shows": 6,
-      "unresolved_calls": 5,
+      "unresolved_calls": 4,
       "scheduled_calls": 23,
-      "show_rate": 66.7,
-      "qualification_rate": 50.0,
-      "revenue_per_occurred": 833.0,
-      "revenue_per_lead": 833.0,
+      "show_rate": 68.4,
+      "qualification_rate": 47.4,
+      "revenue_per_occurred": 789.16,
+      "revenue_per_lead": 789.16,
       "marketing": 5,
-      "lane2": 11,
+      "lane2": 12,
       "social_dms": 2,
       "rep_owner_id": "user_F0VeLnOQlWpkDncNW8rBl1V2QJ08fnDt6DcUjNATUJK",
       "adherence": {
@@ -12493,17 +12500,17 @@
     }
   ],
   "total_scheduled_calls": 165,
-  "total_occurred_calls": 137,
+  "total_occurred_calls": 138,
   "total_no_shows": 33,
-  "total_unresolved_calls": 28,
-  "team_show_rate": 75.9,
-  "team_qualification_rate": 51.1,
+  "total_unresolved_calls": 27,
+  "team_show_rate": 76.1,
+  "team_qualification_rate": 50.7,
   "metric_definitions": {
     "version": "calls-occurred.v1",
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T08:21:25.622830-08:00",
+    "cutoff_exclusive": "2026-11-17T08:37:23.556805-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12607,7 +12614,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T08:31:06.636180-08:00",
+    "generated_at": "2026-11-17T08:44:48.360708-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -12627,7 +12634,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 502,
+    "api_requests": 500,
     "preview_only": false
   },
   "team_pre_call_adherence": 88,
