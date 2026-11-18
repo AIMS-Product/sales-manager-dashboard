@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 08:08 AM PST",
+  "updated_at": "2026-11-18 08:25 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-18",
@@ -57,8 +57,8 @@
     "reason": "missing_api_key"
   },
   "team_overdue": 42,
-  "team_open_leads": 166,
-  "team_est_pipeline": 398400,
+  "team_open_leads": 165,
+  "team_est_pipeline": 396000,
   "funnel_breakdown": [
     {
       "funnel": "Unknown (Needs Review)",
@@ -3728,8 +3728,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 43,
-      "open_leads": 12,
-      "est_pipeline": 28800,
+      "open_leads": 11,
+      "est_pipeline": 26400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -5996,10 +5996,27 @@
         ],
         "missing_leads": [
           {
+            "name": "Jawad Tareen",
+            "lead_id": "lead_PmXjA7M0BbTwWTxZLMg6uF1MROfuwvtRD7pyJzxeUh9",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Iris Johnson",
             "lead_id": "lead_LS7EqtiH5QsVane0MzGMu0fkIiogJWLKxuwTMlmmzfL",
             "missing": [
               "Disposition",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Justin Gobeille",
+            "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
+            "missing": [
+              "Disposition",
+              "Qualified",
               "Confidence"
             ]
           },
@@ -6069,15 +6086,6 @@
             ]
           },
           {
-            "name": "Justin Gobeille",
-            "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
             "name": "Tai Shepperson",
             "lead_id": "lead_FhLuYVjgHqINRCHEC8VPmdcqJEJwmOeGj9zH4pC94Hy",
             "missing": [
@@ -6140,14 +6148,6 @@
             "missing": [
               "Disposition",
               "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Jawad Tareen",
-            "lead_id": "lead_PmXjA7M0BbTwWTxZLMg6uF1MROfuwvtRD7pyJzxeUh9",
-            "missing": [
-              "Disposition",
               "Confidence"
             ]
           },
@@ -8336,6 +8336,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Zachary Nichols - Instagram",
+            "lead_id": "lead_E8lzdoXK3TatU6OgGyJtj8zfdyWLpKsgu9sIiRT2wnN",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Michelle Geller",
             "lead_id": "lead_jztp8Eo36JXNeMtWumjbLFcAfnEaoMOBaJ7neRbdVM3",
             "missing": [
@@ -8370,13 +8377,6 @@
               "Disposition",
               "Qualified",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Zachary Nichols - Instagram",
-            "lead_id": "lead_E8lzdoXK3TatU6OgGyJtj8zfdyWLpKsgu9sIiRT2wnN",
-            "missing": [
-              "Disposition"
             ]
           },
           {
@@ -13032,7 +13032,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-18T08:08:20.994557-08:00",
+    "cutoff_exclusive": "2026-11-18T08:25:06.400296-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13136,7 +13136,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-18T08:18:31.510247-08:00",
+    "generated_at": "2026-11-18T08:32:56.598398-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13156,7 +13156,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 519,
+    "api_requests": 509,
     "preview_only": false
   },
   "team_pre_call_adherence": 89,
