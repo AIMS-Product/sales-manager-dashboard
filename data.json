@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 03:34 PM PST",
+  "updated_at": "2026-11-17 03:47 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -51,7 +51,7 @@
   "team_close_rate": 10.4,
   "team_avg_rev_per_deal": 7200.67,
   "team_crm_compliance": 57.3,
-  "team_task_adherence": 83.2,
+  "team_task_adherence": 83.0,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -5981,6 +5981,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Adam Ortega",
+            "lead_id": "lead_ncQ5L8BtpmVjNlKINx8NS1V09tvP8CEmOrFHckcxPrx",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Luis Robles",
             "lead_id": "lead_DAKvrD6nFdtF6PumCcZ8LweEHpVnyiFejZJ8Yb3pdvC",
             "missing": [
@@ -5995,13 +6002,6 @@
               "Disposition",
               "Qualified",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Adam Ortega",
-            "lead_id": "lead_ncQ5L8BtpmVjNlKINx8NS1V09tvP8CEmOrFHckcxPrx",
-            "missing": [
-              "Disposition"
             ]
           },
           {
@@ -6578,7 +6578,7 @@
             "name": "N'Kote Bethea",
             "date": "2026-11-17",
             "meeting_outcome": "No outcome",
-            "meeting_status": "in-progress",
+            "meeting_status": "completed",
             "funnel": "Unknown (Needs Review)"
           },
           {
@@ -10604,6 +10604,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Valencia Sweet",
+            "lead_id": "lead_aRDmJtRcctLZuO3zy5LuCSEwUFY5cgdjyJtZKX4JzN2",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Henry Mac",
             "lead_id": "lead_2vxsr6w0O55OecORlelsfiIk8qoncB4RWC8vOBLVLE4",
             "missing": [
@@ -10666,13 +10673,6 @@
           {
             "name": "Brody Sergott",
             "lead_id": "lead_7g722XnwZvnxAuS0Inub6fvcT2C8dSLumK7UUxIqHl8",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Valencia Sweet",
-            "lead_id": "lead_aRDmJtRcctLZuO3zy5LuCSEwUFY5cgdjyJtZKX4JzN2",
             "missing": [
               "Disposition"
             ]
@@ -11057,6 +11057,14 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_gusdy9MTGaUorYZ8ArUbUcCh3sVuC1ZjNnxvT0f2Zjj",
+            "name": "Paul VanHorne",
+            "date": "2026-11-17",
+            "meeting_outcome": "No outcome",
+            "meeting_status": "in-progress",
+            "funnel": "Internal Webinar"
+          },
+          {
             "lead_id": "lead_gWS6cJv4cakRoPks1X2bbOrwnF7kPcuDiKtRnidrrPm",
             "name": "Kristin Hagen",
             "date": "2026-11-17",
@@ -11175,7 +11183,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 72,
+      "tasks_incomplete": 70,
       "open_leads": 19,
       "est_pipeline": 45600,
       "is_manager": false,
@@ -11183,8 +11191,8 @@
       "lane": 1,
       "occurred_calls": 20,
       "no_shows": 6,
-      "unresolved_calls": 3,
-      "scheduled_calls": 23,
+      "unresolved_calls": 4,
+      "scheduled_calls": 24,
       "show_rate": 70.0,
       "qualification_rate": 45.0,
       "revenue_per_occurred": 749.7,
@@ -12878,10 +12886,10 @@
       "opportunity_status_total": 50
     }
   ],
-  "total_scheduled_calls": 172,
+  "total_scheduled_calls": 173,
   "total_occurred_calls": 144,
   "total_no_shows": 36,
-  "total_unresolved_calls": 28,
+  "total_unresolved_calls": 29,
   "team_show_rate": 75.0,
   "team_qualification_rate": 50.0,
   "metric_definitions": {
@@ -12889,7 +12897,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T15:34:26.415789-08:00",
+    "cutoff_exclusive": "2026-11-17T15:47:45.899475-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12993,7 +13001,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T15:41:31.868824-08:00",
+    "generated_at": "2026-11-17T15:56:34.448210-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13013,7 +13021,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 498,
+    "api_requests": 500,
     "preview_only": false
   },
   "team_pre_call_adherence": 89,
