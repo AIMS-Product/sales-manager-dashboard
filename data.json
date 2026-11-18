@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 04:35 AM PST",
+  "updated_at": "2026-11-18 04:48 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-18",
@@ -150,6 +150,14 @@
           10
         ],
         "missing_leads": [
+          {
+            "name": "Connor Fernandes",
+            "lead_id": "lead_3Stq5ileSg2j1q6GmmaumEZpgDb4E1Y7xH3qVI85Zcy",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
           {
             "name": "Tavon Ault-Robertson",
             "lead_id": "lead_pdxeB1IT0NSa95q1OqkpFve4HUXMmGyf1mjXYro1qMn",
@@ -336,14 +344,6 @@
             "missing": [
               "Disposition",
               "Qualified"
-            ]
-          },
-          {
-            "name": "Connor Fernandes",
-            "lead_id": "lead_3Stq5ileSg2j1q6GmmaumEZpgDb4E1Y7xH3qVI85Zcy",
-            "missing": [
-              "Disposition",
-              "Confidence"
             ]
           },
           {
@@ -13032,7 +13032,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-18T04:35:17.772203-08:00",
+    "cutoff_exclusive": "2026-11-18T04:48:39.653314-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13136,7 +13136,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-18T04:42:29.163455-08:00",
+    "generated_at": "2026-11-18T04:56:39.511055-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
