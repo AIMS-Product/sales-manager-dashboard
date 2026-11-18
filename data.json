@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 11:24 AM PST",
+  "updated_at": "2026-11-18 11:38 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-18",
@@ -51,7 +51,7 @@
   "team_close_rate": 10.1,
   "team_avg_rev_per_deal": 7200.67,
   "team_crm_compliance": 58.6,
-  "team_task_adherence": 79.6,
+  "team_task_adherence": 79.7,
   "qa_score_meta": {
     "available": true,
     "source": "Avoma scorecard evaluations",
@@ -61,11 +61,11 @@
     "period_end": "2026-11-18",
     "scale_max": 5,
     "evaluation_count": 205,
-    "generated_at": "2026-11-18T11:21:53-08:00"
+    "generated_at": "2026-11-18T11:35:34-08:00"
   },
   "team_overdue": 42,
-  "team_open_leads": 161,
-  "team_est_pipeline": 386400,
+  "team_open_leads": 162,
+  "team_est_pipeline": 388800,
   "funnel_breakdown": [
     {
       "funnel": "Unknown (Needs Review)",
@@ -3644,14 +3644,6 @@
             "funnel": "Unknown (Needs Review)"
           },
           {
-            "lead_id": "lead_J00d0qo4nixe9OlcYiPrSev0zPulYtFAXXV4ngvJiIq",
-            "name": "Chris Wilson",
-            "date": "2026-11-05",
-            "meeting_outcome": "Rescheduled",
-            "meeting_status": "completed",
-            "funnel": "Unknown (Needs Review)"
-          },
-          {
             "lead_id": "lead_rDtUoxFXQ0xXKojrr10dSzydBMmcXSFjgMoBEryOmky",
             "name": "Cynthia Nelson",
             "date": "2026-11-06",
@@ -3802,8 +3794,8 @@
       "lane": 1,
       "occurred_calls": 31,
       "no_shows": 9,
-      "unresolved_calls": 6,
-      "scheduled_calls": 37,
+      "unresolved_calls": 5,
+      "scheduled_calls": 36,
       "show_rate": 71.0,
       "qualification_rate": 45.2,
       "revenue_per_occurred": 512.71,
@@ -6063,6 +6055,15 @@
         ],
         "missing_leads": [
           {
+            "name": "Omar Allen",
+            "lead_id": "lead_Nsvuf20TO9myMBL8KBcdGGeTzLJVuaxsXHewYhmhuGU",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Jawad Tareen",
             "lead_id": "lead_PmXjA7M0BbTwWTxZLMg6uF1MROfuwvtRD7pyJzxeUh9",
             "missing": [
@@ -6109,15 +6110,6 @@
           {
             "name": "Justin Gobeille",
             "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Omar Allen",
-            "lead_id": "lead_Nsvuf20TO9myMBL8KBcdGGeTzLJVuaxsXHewYhmhuGU",
             "missing": [
               "Disposition",
               "Qualified",
@@ -9355,9 +9347,9 @@
           }
         ]
       },
-      "task_adherence": 53.8,
+      "task_adherence": 55.6,
       "tasks_overdue": 12,
-      "tasks_incomplete": 26,
+      "tasks_incomplete": 27,
       "open_leads": 41,
       "est_pipeline": 98400,
       "is_manager": false,
@@ -11426,8 +11418,8 @@
       "task_adherence": 98.7,
       "tasks_overdue": 1,
       "tasks_incomplete": 79,
-      "open_leads": 21,
-      "est_pipeline": 50400,
+      "open_leads": 22,
+      "est_pipeline": 52800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -12340,16 +12332,16 @@
       "post_call_adherence": 100,
       "opportunity_status": {
         "hot": {
-          "count": 6
+          "count": 7
         },
         "warm": {
-          "count": 7
+          "count": 8
         },
         "general": {
           "count": 9
         }
       },
-      "opportunity_status_total": 22
+      "opportunity_status_total": 24
     },
     {
       "name": "Joe Dysert",
@@ -13001,10 +12993,10 @@
       "opportunity_status_total": 10
     }
   ],
-  "total_scheduled_calls": 173,
+  "total_scheduled_calls": 172,
   "total_occurred_calls": 149,
   "total_no_shows": 36,
-  "total_unresolved_calls": 24,
+  "total_unresolved_calls": 23,
   "team_show_rate": 75.8,
   "team_qualification_rate": 49.7,
   "metric_definitions": {
@@ -13012,7 +13004,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-18T11:24:34.002449-08:00",
+    "cutoff_exclusive": "2026-11-18T11:38:47.922213-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13116,7 +13108,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-18T11:31:21.130909-08:00",
+    "generated_at": "2026-11-18T11:48:53.824124-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13136,7 +13128,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 507,
+    "api_requests": 510,
     "preview_only": false
   },
   "team_pre_call_adherence": 89,
