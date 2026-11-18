@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 02:46 PM PST",
+  "updated_at": "2026-11-18 02:59 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-18",
@@ -51,7 +51,7 @@
   "team_close_rate": 10.0,
   "team_avg_rev_per_deal": 7200.67,
   "team_crm_compliance": 58.8,
-  "team_task_adherence": 79.3,
+  "team_task_adherence": 80.2,
   "qa_score_meta": {
     "available": true,
     "source": "Avoma scorecard evaluations",
@@ -60,12 +60,12 @@
     "period_start": "2026-11-01",
     "period_end": "2026-11-18",
     "scale_max": 5,
-    "evaluation_count": 208,
-    "generated_at": "2026-11-18T14:43:44-08:00"
+    "evaluation_count": 209,
+    "generated_at": "2026-11-18T14:57:07-08:00"
   },
-  "team_overdue": 41,
-  "team_open_leads": 162,
-  "team_est_pipeline": 388800,
+  "team_overdue": 39,
+  "team_open_leads": 163,
+  "team_est_pipeline": 391200,
   "funnel_breakdown": [
     {
       "funnel": "Internal Webinar",
@@ -158,6 +158,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Kevin Carias",
+            "lead_id": "lead_OrFRcylmeP60ArdeVFvMDlle0QWBCoVuxhu8INAdrfy",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Michael Radford",
             "lead_id": "lead_tU7ELiPdlvM918nsioU4FiV9PHbZgjsi9gkjZOO3WT3",
             "missing": [
@@ -230,13 +237,6 @@
               "Disposition",
               "Qualified",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Kevin Carias",
-            "lead_id": "lead_OrFRcylmeP60ArdeVFvMDlle0QWBCoVuxhu8INAdrfy",
-            "missing": [
-              "Disposition"
             ]
           },
           {
@@ -1041,11 +1041,11 @@
           }
         ]
       },
-      "task_adherence": 43.2,
-      "tasks_overdue": 21,
-      "tasks_incomplete": 37,
-      "open_leads": 26,
-      "est_pipeline": 62400,
+      "task_adherence": 47.2,
+      "tasks_overdue": 19,
+      "tasks_incomplete": 36,
+      "open_leads": 27,
+      "est_pipeline": 64800,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -2956,10 +2956,10 @@
           "count": 4
         },
         "general": {
-          "count": 23
+          "count": 21
         }
       },
-      "opportunity_status_total": 30
+      "opportunity_status_total": 28
     },
     {
       "name": "Luke Herman",
@@ -6168,6 +6168,15 @@
         ],
         "missing_leads": [
           {
+            "name": "Marian Streeter",
+            "lead_id": "lead_c546LnaI0HdbZGDEBNMGhPXWNIhYebU0Z8H6KnJChUk",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Iris Johnson",
             "lead_id": "lead_LS7EqtiH5QsVane0MzGMu0fkIiogJWLKxuwTMlmmzfL",
             "missing": [
@@ -6206,15 +6215,6 @@
             "lead_id": "lead_PmXjA7M0BbTwWTxZLMg6uF1MROfuwvtRD7pyJzxeUh9",
             "missing": [
               "Disposition",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Marian Streeter",
-            "lead_id": "lead_c546LnaI0HdbZGDEBNMGhPXWNIhYebU0Z8H6KnJChUk",
-            "missing": [
-              "Disposition",
-              "Qualified",
               "Confidence"
             ]
           },
@@ -8447,13 +8447,13 @@
           "count": 9
         },
         "warm": {
-          "count": 4
+          "count": 3
         },
         "general": {
           "count": 0
         }
       },
-      "opportunity_status_total": 13
+      "opportunity_status_total": 12
     },
     {
       "name": "Christian Hartwell",
@@ -13170,7 +13170,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-18T14:46:18.836724-08:00",
+    "cutoff_exclusive": "2026-11-18T14:59:34.436940-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13274,7 +13274,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-18T14:53:21.803127-08:00",
+    "generated_at": "2026-11-18T15:09:15.402475-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13294,7 +13294,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 511,
+    "api_requests": 510,
     "preview_only": false
   },
   "team_pre_call_adherence": 90,
