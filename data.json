@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 08:53 AM PST",
+  "updated_at": "2026-11-18 09:17 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-18",
@@ -57,8 +57,8 @@
     "reason": "missing_api_key"
   },
   "team_overdue": 42,
-  "team_open_leads": 165,
-  "team_est_pipeline": 396000,
+  "team_open_leads": 166,
+  "team_est_pipeline": 398400,
   "funnel_breakdown": [
     {
       "funnel": "Unknown (Needs Review)",
@@ -998,8 +998,8 @@
       "task_adherence": 41.7,
       "tasks_overdue": 21,
       "tasks_incomplete": 36,
-      "open_leads": 24,
-      "est_pipeline": 57600,
+      "open_leads": 25,
+      "est_pipeline": 60000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -12827,7 +12827,16 @@
             "funnel": "YouTube"
           }
         ],
-        "no_outcome": [],
+        "no_outcome": [
+          {
+            "lead_id": "lead_9xA5WexBfrZpyRZh5aI26wgVfrXa4RLevvXv3xq8acZ",
+            "name": "Ben Tischler",
+            "date": "2026-11-18",
+            "meeting_outcome": "No outcome",
+            "meeting_status": "in-progress",
+            "funnel": "Unknown (Needs Review)"
+          }
+        ],
         "upcoming": [],
         "qualified": [
           {
@@ -12922,8 +12931,8 @@
       "lane": 1,
       "occurred_calls": 11,
       "no_shows": 1,
-      "unresolved_calls": 0,
-      "scheduled_calls": 11,
+      "unresolved_calls": 1,
+      "scheduled_calls": 12,
       "show_rate": 90.9,
       "qualification_rate": 72.7,
       "revenue_per_occurred": 1090.55,
@@ -13021,10 +13030,10 @@
       "opportunity_status_total": 47
     }
   ],
-  "total_scheduled_calls": 174,
+  "total_scheduled_calls": 175,
   "total_occurred_calls": 148,
   "total_no_shows": 36,
-  "total_unresolved_calls": 26,
+  "total_unresolved_calls": 27,
   "team_show_rate": 75.7,
   "team_qualification_rate": 50.0,
   "metric_definitions": {
@@ -13032,7 +13041,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-18T08:53:20.341136-08:00",
+    "cutoff_exclusive": "2026-11-18T09:17:26.683185-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13136,7 +13145,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-18T09:05:40.141166-08:00",
+    "generated_at": "2026-11-18T09:33:55.223964-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13156,7 +13165,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 599,
+    "api_requests": 564,
     "preview_only": false
   },
   "team_pre_call_adherence": 89,
