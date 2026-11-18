@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 05:17 PM PST",
+  "updated_at": "2026-11-17 05:33 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -51,7 +51,7 @@
   "team_close_rate": 10.3,
   "team_avg_rev_per_deal": 7200.67,
   "team_crm_compliance": 57.3,
-  "team_task_adherence": 84.1,
+  "team_task_adherence": 84.2,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -150,6 +150,15 @@
           10
         ],
         "missing_leads": [
+          {
+            "name": "Pablo Vega",
+            "lead_id": "lead_r5BzjapmGtZTSijE37t1W056afJZt5EOsbP936CnD02",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
           {
             "name": "Kevin Carias",
             "lead_id": "lead_OrFRcylmeP60ArdeVFvMDlle0QWBCoVuxhu8INAdrfy",
@@ -333,15 +342,6 @@
             "lead_id": "lead_yPBAzyK3SKBWJUVhU8a5inzfu81tnVrxqi2a4QpXw52",
             "missing": [
               "Disposition"
-            ]
-          },
-          {
-            "name": "Pablo Vega",
-            "lead_id": "lead_r5BzjapmGtZTSijE37t1W056afJZt5EOsbP936CnD02",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
             ]
           },
           {
@@ -5981,6 +5981,16 @@
         ],
         "missing_leads": [
           {
+            "name": "Joseph Benson",
+            "lead_id": "lead_FMyg8M5HkGQf7CJzYjuUXOx2zXskjLjWoovoZheKD53",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Justin Gobeille",
             "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
             "missing": [
@@ -6137,16 +6147,6 @@
             "lead_id": "lead_oDB0zKXzxPN31Yp4YR6EDAYoXHIjdJ4EIBkbzxb1bPx",
             "missing": [
               "Disposition",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Joseph Benson",
-            "lead_id": "lead_FMyg8M5HkGQf7CJzYjuUXOx2zXskjLjWoovoZheKD53",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
               "Confidence"
             ]
           },
@@ -9293,9 +9293,9 @@
           }
         ]
       },
-      "task_adherence": 64.0,
+      "task_adherence": 65.4,
       "tasks_overdue": 9,
-      "tasks_incomplete": 25,
+      "tasks_incomplete": 26,
       "open_leads": 41,
       "est_pipeline": 98400,
       "is_manager": false,
@@ -12974,7 +12974,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T17:17:40.655019-08:00",
+    "cutoff_exclusive": "2026-11-17T17:33:14.032359-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13078,7 +13078,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T17:24:30.646951-08:00",
+    "generated_at": "2026-11-17T17:43:30.431238-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
