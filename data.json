@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 10:30 AM PST",
+  "updated_at": "2026-11-18 10:49 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-18",
@@ -50,7 +50,7 @@
   "total_revenue": 108010.0,
   "team_close_rate": 10.1,
   "team_avg_rev_per_deal": 7200.67,
-  "team_crm_compliance": 57.4,
+  "team_crm_compliance": 57.6,
   "team_task_adherence": 79.6,
   "qa_score_meta": {
     "available": false,
@@ -1393,7 +1393,7 @@
                 "scored_call_at": "2026-11-18T10:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_dAWHegbgtLFHMRfCoydxuZ8HvRdcROZw5LqzZwQoJYf/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "\ud83d\udc94 Lost"
               }
             ],
             "missed": [
@@ -1733,7 +1733,7 @@
                 "scored_call_at": "2026-11-18T10:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_dAWHegbgtLFHMRfCoydxuZ8HvRdcROZw5LqzZwQoJYf/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "\ud83d\udc94 Lost"
               }
             ],
             "missed": [
@@ -2082,7 +2082,7 @@
                 "scored_call_at": "2026-11-18T10:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_dAWHegbgtLFHMRfCoydxuZ8HvRdcROZw5LqzZwQoJYf/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "\ud83d\udc94 Lost"
               }
             ],
             "missed": [
@@ -2280,7 +2280,7 @@
                 "scored_call_at": "2026-11-18T10:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_dAWHegbgtLFHMRfCoydxuZ8HvRdcROZw5LqzZwQoJYf/",
                 "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "opportunity_status": "\ud83d\udc94 Lost"
               }
             ],
             "exempt": [
@@ -6013,12 +6013,12 @@
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 9497.0,
-      "crm_compliance": 43.3,
-      "crm_filled": 45,
+      "crm_compliance": 44.2,
+      "crm_filled": 46,
       "crm_total": 104,
       "crm_detail": {
         "show_up": [
-          25,
+          26,
           29
         ],
         "disposition": [
@@ -6038,6 +6038,15 @@
           4
         ],
         "missing_leads": [
+          {
+            "name": "Tai Shepperson",
+            "lead_id": "lead_FhLuYVjgHqINRCHEC8VPmdcqJEJwmOeGj9zH4pC94Hy",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
           {
             "name": "Iris Johnson",
             "lead_id": "lead_LS7EqtiH5QsVane0MzGMu0fkIiogJWLKxuwTMlmmzfL",
@@ -6126,16 +6135,6 @@
             "missing": [
               "Disposition",
               "Lost Reason"
-            ]
-          },
-          {
-            "name": "Tai Shepperson",
-            "lead_id": "lead_FhLuYVjgHqINRCHEC8VPmdcqJEJwmOeGj9zH4pC94Hy",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
             ]
           },
           {
@@ -6804,16 +6803,16 @@
       "social_dms": 0,
       "rep_owner_id": "user_BaN2TstWtyF34eaQSSLG11j6DhKKm67Y6JltbIYCafO",
       "adherence": {
-        "pre_call_pct": 92,
+        "pre_call_pct": 93,
         "post_call_pct": 59,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
             "phase": "pre_call",
-            "done": 26,
+            "done": 27,
             "eligible": 32,
             "exempt": 0,
-            "pct": 81
+            "pct": 84
           },
           "precall_text": {
             "label": "Pre-call text",
@@ -7050,6 +7049,15 @@
                 "opportunity_status": "No Show"
               },
               {
+                "id": "lead_Rz8HE7WOjavjB32lr2tqEvJtrKf5VQEJuxMK4GXl5p9",
+                "name": "Elizabeth Davis",
+                "booked_date": "2026-11-16",
+                "scored_call_at": "2026-11-16T15:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_Rz8HE7WOjavjB32lr2tqEvJtrKf5VQEJuxMK4GXl5p9/",
+                "status_label": "Reschedule Requested",
+                "opportunity_status": "Reschedule Requested"
+              },
+              {
                 "id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
                 "name": "Justin Gobeille",
                 "booked_date": "2026-11-16",
@@ -7122,15 +7130,6 @@
                 "url": "https://app.close.com/lead/lead_SKf33axOkIUORB7cxc153dWdZErgnxoTQQyOa6Bgwr4/",
                 "status_label": "\ud83c\udd95 New",
                 "opportunity_status": "No active opp"
-              },
-              {
-                "id": "lead_Rz8HE7WOjavjB32lr2tqEvJtrKf5VQEJuxMK4GXl5p9",
-                "name": "Elizabeth Davis",
-                "booked_date": "2026-11-16",
-                "scored_call_at": "2026-11-16T15:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_Rz8HE7WOjavjB32lr2tqEvJtrKf5VQEJuxMK4GXl5p9/",
-                "status_label": "Reschedule Requested",
-                "opportunity_status": "Reschedule Requested"
               },
               {
                 "id": "lead_FhLuYVjgHqINRCHEC8VPmdcqJEJwmOeGj9zH4pC94Hy",
@@ -8327,7 +8326,7 @@
           }
         }
       },
-      "pre_call_adherence": 92,
+      "pre_call_adherence": 93,
       "post_call_adherence": 59,
       "opportunity_status": {
         "hot": {
@@ -11247,7 +11246,7 @@
             "name": "David Cranston",
             "date": "2026-11-18",
             "meeting_outcome": "No outcome",
-            "meeting_status": "in-progress",
+            "meeting_status": "completed",
             "funnel": "Unknown (Needs Review)"
           },
           {
@@ -13107,7 +13106,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-18T10:30:59.239854-08:00",
+    "cutoff_exclusive": "2026-11-18T10:49:37.670275-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13121,10 +13120,10 @@
       "loom_usage": {
         "label": "Pre-Call Loom",
         "phase": "pre_call",
-        "done": 146,
+        "done": 147,
         "eligible": 164,
         "exempt": 0,
-        "pct": 89
+        "pct": 90
       },
       "precall_text": {
         "label": "Pre-call text",
@@ -13168,10 +13167,10 @@
         "loom_usage": {
           "label": "Pre-Call Loom",
           "phase": "pre_call",
-          "done": 146,
+          "done": 147,
           "eligible": 164,
           "exempt": 0,
-          "pct": 89
+          "pct": 90
         },
         "precall_text": {
           "label": "Pre-call text",
@@ -13211,7 +13210,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-18T10:42:05.239641-08:00",
+    "generated_at": "2026-11-18T11:00:26.054512-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13231,7 +13230,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 507,
+    "api_requests": 506,
     "preview_only": false
   },
   "team_pre_call_adherence": 89,
