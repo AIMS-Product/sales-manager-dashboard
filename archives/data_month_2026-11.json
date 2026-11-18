@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 01:25 PM PST",
+  "updated_at": "2026-11-18 01:41 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-18",
@@ -61,11 +61,11 @@
     "period_end": "2026-11-18",
     "scale_max": 5,
     "evaluation_count": 207,
-    "generated_at": "2026-11-18T13:22:14-08:00"
+    "generated_at": "2026-11-18T13:38:11-08:00"
   },
   "team_overdue": 41,
-  "team_open_leads": 163,
-  "team_est_pipeline": 391200,
+  "team_open_leads": 162,
+  "team_est_pipeline": 388800,
   "funnel_breakdown": [
     {
       "funnel": "Internal Webinar",
@@ -8405,10 +8405,10 @@
           "count": 4
         },
         "general": {
-          "count": 1
+          "count": 0
         }
       },
-      "opportunity_status_total": 14
+      "opportunity_status_total": 13
     },
     {
       "name": "Christian Hartwell",
@@ -8446,6 +8446,13 @@
           0
         ],
         "missing_leads": [
+          {
+            "name": "Hannah Herback",
+            "lead_id": "lead_aHczOypSA127X2oFuZluh4aGyJWPr6q94YorR7TDZFE",
+            "missing": [
+              "Disposition"
+            ]
+          },
           {
             "name": "Hakim Robinson",
             "lead_id": "lead_ZfSOgnahrdnJLD5UjNSyUFZhv7goPHjWnp5pxIWTmCw",
@@ -8551,13 +8558,6 @@
           {
             "name": "Brian Conant",
             "lead_id": "lead_x3BY9QTseqayfWPILgmbOGdFCm5NrcjVmu7yUtz2Cp1",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Hannah Herback",
-            "lead_id": "lead_aHczOypSA127X2oFuZluh4aGyJWPr6q94YorR7TDZFE",
             "missing": [
               "Disposition"
             ]
@@ -10941,7 +10941,7 @@
             "name": "Yoiny Fischer",
             "date": "2026-11-18",
             "meeting_outcome": "No Show",
-            "meeting_status": "in-progress",
+            "meeting_status": "completed",
             "funnel": "Internal Webinar"
           },
           {
@@ -11289,7 +11289,7 @@
             "name": "Yoiny Fischer",
             "date": "2026-11-18",
             "meeting_outcome": "No Show",
-            "meeting_status": "in-progress",
+            "meeting_status": "completed",
             "funnel": "Internal Webinar"
           },
           {
@@ -11494,8 +11494,8 @@
       "task_adherence": 100.0,
       "tasks_overdue": 0,
       "tasks_incomplete": 66,
-      "open_leads": 22,
-      "est_pipeline": 52800,
+      "open_leads": 21,
+      "est_pipeline": 50400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -12453,7 +12453,7 @@
       "post_call_adherence": 100,
       "opportunity_status": {
         "hot": {
-          "count": 7
+          "count": 6
         },
         "warm": {
           "count": 8
@@ -12462,7 +12462,7 @@
           "count": 9
         }
       },
-      "opportunity_status_total": 24
+      "opportunity_status_total": 23
     },
     {
       "name": "Joe Dysert",
@@ -13125,7 +13125,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-18T13:25:04.637235-08:00",
+    "cutoff_exclusive": "2026-11-18T13:41:08.661040-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13229,7 +13229,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-18T13:34:08.580441-08:00",
+    "generated_at": "2026-11-18T13:52:06.171453-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13249,7 +13249,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 507,
+    "api_requests": 511,
     "preview_only": false
   },
   "team_pre_call_adherence": 90,
