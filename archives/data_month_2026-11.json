@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 04:02 PM PST",
+  "updated_at": "2026-11-17 04:18 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -43,12 +43,12 @@
     "post_call_adherence": 90,
     "task_adherence": 100
   },
-  "total_booked": 144,
-  "total_shown": 108,
+  "total_booked": 145,
+  "total_shown": 109,
   "total_qualified": 72,
   "total_deals": 15,
   "total_revenue": 108010.0,
-  "team_close_rate": 10.4,
+  "team_close_rate": 10.3,
   "team_avg_rev_per_deal": 7200.67,
   "team_crm_compliance": 57.3,
   "team_task_adherence": 82.9,
@@ -57,9 +57,13 @@
     "reason": "missing_api_key"
   },
   "team_overdue": 34,
-  "team_open_leads": 167,
-  "team_est_pipeline": 400800,
+  "team_open_leads": 166,
+  "team_est_pipeline": 398400,
   "funnel_breakdown": [
+    {
+      "funnel": "Unknown (Needs Review)",
+      "count": 29
+    },
     {
       "funnel": "Internal Webinar",
       "count": 48
@@ -67,10 +71,6 @@
     {
       "funnel": "Instagram",
       "count": 9
-    },
-    {
-      "funnel": "Unknown (Needs Review)",
-      "count": 28
     },
     {
       "funnel": "Anthony IG",
@@ -106,12 +106,12 @@
     }
   ],
   "funnel_sources": {
+    "unknown": 53,
     "in_house": 80,
     "external": 12,
-    "unknown": 52,
-    "in_house_pct": 55.6,
+    "in_house_pct": 55.2,
     "external_pct": 8.3,
-    "unknown_pct": 36.1
+    "unknown_pct": 36.6
   },
   "reps": [
     {
@@ -5946,12 +5946,12 @@
     },
     {
       "name": "Ariella Irvine",
-      "booked": 23,
-      "shown": 16,
+      "booked": 24,
+      "shown": 17,
       "qualified": 8,
       "deals": 1,
       "revenue": 9497.0,
-      "close_rate": 4.3,
+      "close_rate": 4.2,
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 9497.0,
@@ -6200,6 +6200,14 @@
       "metric_details": {
         "booked": [
           {
+            "lead_id": "lead_ddWP2RlblkrQ8P4WwKQn9BNHEpsDZ5CbdU1hCCvire3",
+            "name": "N'Kote Bethea",
+            "date": "2026-11-17",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Unknown (Needs Review)"
+          },
+          {
             "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
             "name": "Justin Gobeille",
             "date": "2026-11-16",
@@ -6385,6 +6393,14 @@
           }
         ],
         "shown": [
+          {
+            "lead_id": "lead_ddWP2RlblkrQ8P4WwKQn9BNHEpsDZ5CbdU1hCCvire3",
+            "name": "N'Kote Bethea",
+            "date": "2026-11-17",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Unknown (Needs Review)"
+          },
           {
             "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
             "name": "Justin Gobeille",
@@ -6574,14 +6590,6 @@
         ],
         "no_outcome": [
           {
-            "lead_id": "lead_ddWP2RlblkrQ8P4WwKQn9BNHEpsDZ5CbdU1hCCvire3",
-            "name": "N'Kote Bethea",
-            "date": "2026-11-17",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "completed",
-            "funnel": "Unknown (Needs Review)"
-          },
-          {
             "lead_id": "lead_FhLuYVjgHqINRCHEC8VPmdcqJEJwmOeGj9zH4pC94Hy",
             "name": "Tai Shepperson",
             "date": "2026-11-17",
@@ -6707,16 +6715,16 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 23,
+      "occurred_calls": 24,
       "no_shows": 7,
-      "unresolved_calls": 6,
+      "unresolved_calls": 5,
       "scheduled_calls": 29,
-      "show_rate": 69.6,
-      "qualification_rate": 34.8,
-      "revenue_per_occurred": 412.91,
-      "revenue_per_lead": 412.91,
+      "show_rate": 70.8,
+      "qualification_rate": 33.3,
+      "revenue_per_occurred": 395.71,
+      "revenue_per_lead": 395.71,
       "marketing": 7,
-      "lane2": 16,
+      "lane2": 17,
       "social_dms": 0,
       "rep_owner_id": "user_BaN2TstWtyF34eaQSSLG11j6DhKKm67Y6JltbIYCafO",
       "adherence": {
@@ -9288,8 +9296,8 @@
       "task_adherence": 62.5,
       "tasks_overdue": 9,
       "tasks_incomplete": 24,
-      "open_leads": 41,
-      "est_pipeline": 98400,
+      "open_leads": 40,
+      "est_pipeline": 96000,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -12151,7 +12159,7 @@
       "post_call_adherence": 100,
       "opportunity_status": {
         "hot": {
-          "count": 6
+          "count": 7
         },
         "warm": {
           "count": 6
@@ -12160,7 +12168,7 @@
           "count": 9
         }
       },
-      "opportunity_status_total": 21
+      "opportunity_status_total": 22
     },
     {
       "name": "Eric Piccione",
@@ -12940,17 +12948,17 @@
     }
   ],
   "total_scheduled_calls": 174,
-  "total_occurred_calls": 144,
+  "total_occurred_calls": 145,
   "total_no_shows": 36,
-  "total_unresolved_calls": 30,
-  "team_show_rate": 75.0,
-  "team_qualification_rate": 50.0,
+  "total_unresolved_calls": 29,
+  "team_show_rate": 75.2,
+  "team_qualification_rate": 49.7,
   "metric_definitions": {
     "version": "calls-occurred.v1",
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T16:02:58.413075-08:00",
+    "cutoff_exclusive": "2026-11-17T16:18:04.949705-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13054,7 +13062,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T16:11:21.529024-08:00",
+    "generated_at": "2026-11-17T16:27:34.000638-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13074,7 +13082,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 500,
+    "api_requests": 499,
     "preview_only": false
   },
   "team_pre_call_adherence": 89,
