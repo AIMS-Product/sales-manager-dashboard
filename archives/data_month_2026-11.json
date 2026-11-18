@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 05:49 PM PST",
+  "updated_at": "2026-11-17 06:03 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -51,7 +51,7 @@
   "team_close_rate": 10.3,
   "team_avg_rev_per_deal": 7200.67,
   "team_crm_compliance": 57.3,
-  "team_task_adherence": 84.2,
+  "team_task_adherence": 84.5,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
@@ -6677,7 +6677,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 18,
+      "tasks_incomplete": 19,
       "open_leads": 61,
       "est_pipeline": 146400,
       "is_manager": false,
@@ -6697,7 +6697,7 @@
       "rep_owner_id": "user_BaN2TstWtyF34eaQSSLG11j6DhKKm67Y6JltbIYCafO",
       "adherence": {
         "pre_call_pct": 92,
-        "post_call_pct": 63,
+        "post_call_pct": 59,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -6726,10 +6726,10 @@
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 4,
+            "done": 3,
             "eligible": 12,
             "exempt": 21,
-            "pct": 33
+            "pct": 25
           },
           "recap_email": {
             "label": "Recap email sent",
@@ -7656,15 +7656,6 @@
           "follow_up_created": {
             "completed": [
               {
-                "id": "lead_SKf33axOkIUORB7cxc153dWdZErgnxoTQQyOa6Bgwr4",
-                "name": "Jose and Maria Herrera",
-                "booked_date": "2026-11-11",
-                "scored_call_at": "2026-11-11T17:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_SKf33axOkIUORB7cxc153dWdZErgnxoTQQyOa6Bgwr4/",
-                "status_label": "\ud83c\udd95 New",
-                "opportunity_status": "No active opp"
-              },
-              {
                 "id": "lead_DAKvrD6nFdtF6PumCcZ8LweEHpVnyiFejZJ8Yb3pdvC",
                 "name": "Luis Robles",
                 "booked_date": "2026-11-11",
@@ -7710,6 +7701,15 @@
                 "url": "https://app.close.com/lead/lead_EMIR0xFVD7tCuHG65DZzNHRCw4TOuBT0oGFEWBo8mcz/",
                 "status_label": "WARM - Follow up",
                 "opportunity_status": "WARM - Follow Up"
+              },
+              {
+                "id": "lead_SKf33axOkIUORB7cxc153dWdZErgnxoTQQyOa6Bgwr4",
+                "name": "Jose and Maria Herrera",
+                "booked_date": "2026-11-11",
+                "scored_call_at": "2026-11-11T17:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_SKf33axOkIUORB7cxc153dWdZErgnxoTQQyOa6Bgwr4/",
+                "status_label": "\ud83c\udd95 New",
+                "opportunity_status": "No active opp"
               },
               {
                 "id": "lead_F1bcT9xyV6eyX8FvZnjyOmvJePGCrH6a23QbrMJRXI4",
@@ -8266,7 +8266,7 @@
         }
       },
       "pre_call_adherence": 92,
-      "post_call_adherence": 63,
+      "post_call_adherence": 59,
       "opportunity_status": {
         "hot": {
           "count": 9
@@ -8317,6 +8317,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Ben Lucero",
+            "lead_id": "lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Michelle Geller",
             "lead_id": "lead_jztp8Eo36JXNeMtWumjbLFcAfnEaoMOBaJ7neRbdVM3",
             "missing": [
@@ -8340,13 +8347,6 @@
           {
             "name": "Elise Walton",
             "lead_id": "lead_YZ8Np181HfXcibTFFyvsnrK3yVt1S5SgP49gnOY7jH4",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Ben Lucero",
-            "lead_id": "lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK",
             "missing": [
               "Disposition"
             ]
@@ -10633,6 +10633,43 @@
         ],
         "missing_leads": [
           {
+            "name": "Brody Sergott",
+            "lead_id": "lead_7g722XnwZvnxAuS0Inub6fvcT2C8dSLumK7UUxIqHl8",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Jordan Grace",
+            "lead_id": "lead_njOX6qItzmYxRB8kjlQsMLi9TeGGyi1plXXwZEfJbR1",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Kristin Hagen",
+            "lead_id": "lead_gWS6cJv4cakRoPks1X2bbOrwnF7kPcuDiKtRnidrrPm",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Indira Barksdale",
+            "lead_id": "lead_EIBAoowx5lmgV2MJKphgQc2AF1s2uBF6x1cF7fICf4H",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
+            "name": "Henry Mac",
+            "lead_id": "lead_2vxsr6w0O55OecORlelsfiIk8qoncB4RWC8vOBLVLE4",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Daniel Iniguez",
             "lead_id": "lead_2UcKvjZJIuDaZbnanExDJ3ZvSpqCLZr9Pp1u1aLnFwJ",
             "missing": [
@@ -10648,22 +10685,8 @@
             ]
           },
           {
-            "name": "Indira Barksdale",
-            "lead_id": "lead_EIBAoowx5lmgV2MJKphgQc2AF1s2uBF6x1cF7fICf4H",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
             "name": "Valencia Sweet",
             "lead_id": "lead_aRDmJtRcctLZuO3zy5LuCSEwUFY5cgdjyJtZKX4JzN2",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Henry Mac",
-            "lead_id": "lead_2vxsr6w0O55OecORlelsfiIk8qoncB4RWC8vOBLVLE4",
             "missing": [
               "Disposition"
             ]
@@ -10685,31 +10708,8 @@
             ]
           },
           {
-            "name": "Kristin Hagen",
-            "lead_id": "lead_gWS6cJv4cakRoPks1X2bbOrwnF7kPcuDiKtRnidrrPm",
-            "missing": [
-              "Disposition",
-              "Confidence"
-            ]
-          },
-          {
             "name": "FELICIA DIXON",
             "lead_id": "lead_qKMhtsxVMFqLejLYVF30OK986FCr9SMFFoLubcvKbHy",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Jordan Grace",
-            "lead_id": "lead_njOX6qItzmYxRB8kjlQsMLi9TeGGyi1plXXwZEfJbR1",
-            "missing": [
-              "Disposition",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Brody Sergott",
-            "lead_id": "lead_7g722XnwZvnxAuS0Inub6fvcT2C8dSLumK7UUxIqHl8",
             "missing": [
               "Disposition"
             ]
@@ -11260,7 +11260,7 @@
       },
       "task_adherence": 100.0,
       "tasks_overdue": 0,
-      "tasks_incomplete": 72,
+      "tasks_incomplete": 75,
       "open_leads": 19,
       "est_pipeline": 45600,
       "is_manager": false,
@@ -12974,7 +12974,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T17:49:55.806625-08:00",
+    "cutoff_exclusive": "2026-11-17T18:03:05.177971-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -12983,7 +12983,7 @@
   },
   "team_adherence": {
     "pre_call_pct": 89,
-    "post_call_pct": 74,
+    "post_call_pct": 73,
     "steps": {
       "loom_usage": {
         "label": "Pre-Call Loom",
@@ -13012,10 +13012,10 @@
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
-        "done": 36,
+        "done": 35,
         "eligible": 61,
         "exempt": 103,
-        "pct": 59
+        "pct": 57
       },
       "recap_email": {
         "label": "Recap email sent",
@@ -13030,7 +13030,7 @@
   "lane_adherence": {
     "1": {
       "pre_call_pct": 89,
-      "post_call_pct": 74,
+      "post_call_pct": 73,
       "steps": {
         "loom_usage": {
           "label": "Pre-Call Loom",
@@ -13059,10 +13059,10 @@
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
-          "done": 36,
+          "done": 35,
           "eligible": 61,
           "exempt": 103,
-          "pct": 59
+          "pct": 57
         },
         "recap_email": {
           "label": "Recap email sent",
@@ -13078,7 +13078,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T17:56:15.184958-08:00",
+    "generated_at": "2026-11-17T18:09:19.118103-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13102,12 +13102,12 @@
     "preview_only": false
   },
   "team_pre_call_adherence": 89,
-  "team_post_call_adherence": 74,
+  "team_post_call_adherence": 73,
   "lane_pre_call_adherence": {
     "1": 89
   },
   "lane_post_call_adherence": {
-    "1": 74
+    "1": 73
   },
   "dashboard_schema_version": 3
 }
