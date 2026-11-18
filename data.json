@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 10:12 AM PST",
+  "updated_at": "2026-11-18 10:30 AM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-18",
@@ -854,6 +854,14 @@
         ],
         "no_outcome": [
           {
+            "lead_id": "lead_dAWHegbgtLFHMRfCoydxuZ8HvRdcROZw5LqzZwQoJYf",
+            "name": "Mukhtar Ali",
+            "date": "2026-11-18",
+            "meeting_outcome": "No outcome",
+            "meeting_status": "in-progress",
+            "funnel": "YouTube"
+          },
+          {
             "lead_id": "lead_dgSQVePcBTX3BjK7RODhsMyZ4YDqyE3AwQCap0PXO4e",
             "name": "Reina Davis",
             "date": "2026-11-16",
@@ -1005,8 +1013,8 @@
       "lane": 1,
       "occurred_calls": 27,
       "no_shows": 6,
-      "unresolved_calls": 4,
-      "scheduled_calls": 31,
+      "unresolved_calls": 5,
+      "scheduled_calls": 32,
       "show_rate": 77.8,
       "qualification_rate": 44.4,
       "revenue_per_occurred": 383.22,
@@ -2853,6 +2861,13 @@
         ],
         "missing_leads": [
           {
+            "name": "Cynthia Nelson",
+            "lead_id": "lead_rDtUoxFXQ0xXKojrr10dSzydBMmcXSFjgMoBEryOmky",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Gustavo del",
             "lead_id": "lead_5Y7egiUbZ0Vn8Rt3OKTLduPmKKuf7KqBxtNm3I0r2Zq",
             "missing": [
@@ -2873,13 +2888,6 @@
             "missing": [
               "Disposition",
               "Confidence"
-            ]
-          },
-          {
-            "name": "Cynthia Nelson",
-            "lead_id": "lead_rDtUoxFXQ0xXKojrr10dSzydBMmcXSFjgMoBEryOmky",
-            "missing": [
-              "Disposition"
             ]
           },
           {
@@ -13088,10 +13096,10 @@
       "opportunity_status_total": 47
     }
   ],
-  "total_scheduled_calls": 176,
+  "total_scheduled_calls": 177,
   "total_occurred_calls": 149,
   "total_no_shows": 36,
-  "total_unresolved_calls": 27,
+  "total_unresolved_calls": 28,
   "team_show_rate": 75.8,
   "team_qualification_rate": 50.3,
   "metric_definitions": {
@@ -13099,7 +13107,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-18T10:12:47.391104-08:00",
+    "cutoff_exclusive": "2026-11-18T10:30:59.239854-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13203,7 +13211,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-18T10:24:33.633653-08:00",
+    "generated_at": "2026-11-18T10:42:05.239641-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13223,7 +13231,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 523,
+    "api_requests": 507,
     "preview_only": false
   },
   "team_pre_call_adherence": 89,
