@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17 04:48 PM PST",
+  "updated_at": "2026-11-17 05:04 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-17",
@@ -51,14 +51,14 @@
   "team_close_rate": 10.3,
   "team_avg_rev_per_deal": 7200.67,
   "team_crm_compliance": 57.3,
-  "team_task_adherence": 84.0,
+  "team_task_adherence": 84.1,
   "qa_score_meta": {
     "available": false,
     "reason": "missing_api_key"
   },
   "team_overdue": 32,
-  "team_open_leads": 166,
-  "team_est_pipeline": 398400,
+  "team_open_leads": 167,
+  "team_est_pipeline": 400800,
   "funnel_breakdown": [
     {
       "funnel": "Unknown (Needs Review)",
@@ -5981,6 +5981,15 @@
         ],
         "missing_leads": [
           {
+            "name": "Justin Gobeille",
+            "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Luis Robles",
             "lead_id": "lead_DAKvrD6nFdtF6PumCcZ8LweEHpVnyiFejZJ8Yb3pdvC",
             "missing": [
@@ -6009,15 +6018,6 @@
             "lead_id": "lead_LS7EqtiH5QsVane0MzGMu0fkIiogJWLKxuwTMlmmzfL",
             "missing": [
               "Disposition",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Justin Gobeille",
-            "lead_id": "lead_De1MtXzW8zZc5gYZrpBd5dggeuHgitOaE6TxaRecMUv",
-            "missing": [
-              "Disposition",
-              "Qualified",
               "Confidence"
             ]
           },
@@ -9293,11 +9293,11 @@
           }
         ]
       },
-      "task_adherence": 62.5,
+      "task_adherence": 64.0,
       "tasks_overdue": 9,
-      "tasks_incomplete": 24,
-      "open_leads": 40,
-      "est_pipeline": 96000,
+      "tasks_incomplete": 25,
+      "open_leads": 41,
+      "est_pipeline": 98400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
@@ -12958,7 +12958,7 @@
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-17T16:48:01.347735-08:00",
+    "cutoff_exclusive": "2026-11-17T17:04:56.628179-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13062,7 +13062,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-17T16:58:26.362683-08:00",
+    "generated_at": "2026-11-17T17:11:19.297051-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13082,7 +13082,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 500,
+    "api_requests": 499,
     "preview_only": false
   },
   "team_pre_call_adherence": 89,
