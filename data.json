@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 06:52 PM PST",
+  "updated_at": "2026-11-18 07:09 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-18",
@@ -43,8 +43,8 @@
     "post_call_adherence": 90,
     "task_adherence": 100
   },
-  "total_booked": 152,
-  "total_shown": 115,
+  "total_booked": 153,
+  "total_shown": 116,
   "total_qualified": 74,
   "total_deals": 16,
   "total_revenue": 114007.0,
@@ -61,7 +61,7 @@
     "period_end": "2026-11-18",
     "scale_max": 5,
     "evaluation_count": 212,
-    "generated_at": "2026-11-18T18:50:17-08:00"
+    "generated_at": "2026-11-18T19:06:13-08:00"
   },
   "team_overdue": 21,
   "team_open_leads": 158,
@@ -74,6 +74,10 @@
     {
       "funnel": "Meta Ads",
       "count": 6
+    },
+    {
+      "funnel": "Google Ads",
+      "count": 20
     },
     {
       "funnel": "Instagram",
@@ -100,10 +104,6 @@
       "count": 2
     },
     {
-      "funnel": "Google Ads",
-      "count": 19
-    },
-    {
       "funnel": "GoHighLevel",
       "count": 2
     },
@@ -114,21 +114,21 @@
   ],
   "funnel_sources": {
     "in_house": 87,
+    "unknown": 53,
     "external": 13,
-    "unknown": 52,
-    "in_house_pct": 57.2,
-    "external_pct": 8.6,
-    "unknown_pct": 34.2
+    "in_house_pct": 56.9,
+    "external_pct": 8.5,
+    "unknown_pct": 34.6
   },
   "reps": [
     {
       "name": "Robin Perkins",
-      "booked": 29,
-      "shown": 23,
+      "booked": 30,
+      "shown": 24,
       "qualified": 12,
       "deals": 1,
       "revenue": 10347.0,
-      "close_rate": 3.4,
+      "close_rate": 3.3,
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 10347.0,
@@ -157,6 +157,13 @@
           11
         ],
         "missing_leads": [
+          {
+            "name": "Tyrone Christopher",
+            "lead_id": "lead_qfDW30NK4lZeN5tJD3aIE0sjk1QZGi0BdpLInLrrIUp",
+            "missing": [
+              "Disposition"
+            ]
+          },
           {
             "name": "Robert Balsamo",
             "lead_id": "lead_TuE3w40RW4hO1cGVxvrgIhbACRtAhBbBmDoSiLR7FhH",
@@ -247,13 +254,6 @@
           {
             "name": "Davy Lynch",
             "lead_id": "lead_FeIHRItfI0SXoJouHWGs2kqgRSGqEoNq62dLD6s6lBR",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Tyrone Christopher",
-            "lead_id": "lead_qfDW30NK4lZeN5tJD3aIE0sjk1QZGi0BdpLInLrrIUp",
             "missing": [
               "Disposition"
             ]
@@ -429,6 +429,14 @@
       },
       "metric_details": {
         "booked": [
+          {
+            "lead_id": "lead_OzGIQNe2aB1TLrQ1fAA4lY0JF8gUB31KyPMtlsBG6nU",
+            "name": "Kelsin Rivera",
+            "date": "2026-11-18",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Google Ads"
+          },
           {
             "lead_id": "lead_fsHWKaE5FvywbANqYnGMtfMvgxIT4ESvEd06FtPi0zs",
             "name": "John Nollet",
@@ -663,6 +671,14 @@
           }
         ],
         "shown": [
+          {
+            "lead_id": "lead_OzGIQNe2aB1TLrQ1fAA4lY0JF8gUB31KyPMtlsBG6nU",
+            "name": "Kelsin Rivera",
+            "date": "2026-11-18",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Google Ads"
+          },
           {
             "lead_id": "lead_fsHWKaE5FvywbANqYnGMtfMvgxIT4ESvEd06FtPi0zs",
             "name": "John Nollet",
@@ -908,14 +924,6 @@
             "funnel": "Unknown (Needs Review)"
           },
           {
-            "lead_id": "lead_OzGIQNe2aB1TLrQ1fAA4lY0JF8gUB31KyPMtlsBG6nU",
-            "name": "Kelsin Rivera",
-            "date": "2026-11-18",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "completed",
-            "funnel": "Google Ads"
-          },
-          {
             "lead_id": "lead_dgSQVePcBTX3BjK7RODhsMyZ4YDqyE3AwQCap0PXO4e",
             "name": "Reina Davis",
             "date": "2026-11-16",
@@ -1065,15 +1073,15 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 29,
+      "occurred_calls": 30,
       "no_shows": 6,
-      "unresolved_calls": 6,
+      "unresolved_calls": 5,
       "scheduled_calls": 35,
-      "show_rate": 79.3,
-      "qualification_rate": 41.4,
-      "revenue_per_occurred": 356.79,
-      "revenue_per_lead": 356.79,
-      "marketing": 16,
+      "show_rate": 80.0,
+      "qualification_rate": 40.0,
+      "revenue_per_occurred": 344.9,
+      "revenue_per_lead": 344.9,
+      "marketing": 17,
       "lane2": 12,
       "social_dms": 1,
       "rep_owner_id": "user_7F059xEinVentOEvkRMP77fWZyvwUiTRTUOuhD11J0e",
@@ -7067,7 +7075,7 @@
             "name": "Michael Lewis",
             "date": "2026-11-18",
             "meeting_outcome": "No outcome",
-            "meeting_status": "in-progress",
+            "meeting_status": "completed",
             "funnel": "Internal Webinar"
           },
           {
@@ -7305,9 +7313,9 @@
           }
         ]
       },
-      "task_adherence": 57.1,
+      "task_adherence": 58.6,
       "tasks_overdue": 12,
-      "tasks_incomplete": 28,
+      "tasks_incomplete": 29,
       "open_leads": 42,
       "est_pipeline": 100800,
       "is_manager": false,
@@ -7327,7 +7335,7 @@
       "rep_owner_id": "user_wHm1vcLde4RExd3vv9UOjnms5Oz8ssXg8600mQuxMPb",
       "adherence": {
         "pre_call_pct": 70,
-        "post_call_pct": 66,
+        "post_call_pct": 69,
         "steps": {
           "loom_usage": {
             "label": "Pre-Call Loom",
@@ -7356,18 +7364,18 @@
           "follow_up_created": {
             "label": "Task or follow-up meeting",
             "phase": "post_call",
-            "done": 9,
+            "done": 10,
             "eligible": 18,
             "exempt": 11,
-            "pct": 50
+            "pct": 56
           },
           "recap_email": {
             "label": "Recap email sent",
             "phase": "post_call",
-            "done": 13,
-            "eligible": 16,
+            "done": 14,
+            "eligible": 17,
             "exempt": 11,
-            "pct": 81
+            "pct": 82
           }
         },
         "lead_cohorts": {
@@ -7577,8 +7585,8 @@
                 "booked_date": "2026-11-18",
                 "scored_call_at": "2026-11-18T17:30:00-08:00",
                 "url": "https://app.close.com/lead/lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "WARM - Follow up",
+                "opportunity_status": "WARM - Follow Up"
               }
             ],
             "missed": [
@@ -7836,8 +7844,8 @@
                 "booked_date": "2026-11-18",
                 "scored_call_at": "2026-11-18T17:30:00-08:00",
                 "url": "https://app.close.com/lead/lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "WARM - Follow up",
+                "opportunity_status": "WARM - Follow Up"
               }
             ],
             "missed": [
@@ -8169,8 +8177,8 @@
                 "booked_date": "2026-11-18",
                 "scored_call_at": "2026-11-18T17:30:00-08:00",
                 "url": "https://app.close.com/lead/lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
+                "status_label": "WARM - Follow up",
+                "opportunity_status": "WARM - Follow Up"
               }
             ],
             "exempt": []
@@ -8257,6 +8265,15 @@
                 "url": "https://app.close.com/lead/lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK/",
                 "status_label": "\ud83d\udcde HOT- Follow Up",
                 "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx",
+                "name": "Shayla Pratt",
+                "booked_date": "2026-11-18",
+                "scored_call_at": "2026-11-18T17:30:00-08:00",
+                "url": "https://app.close.com/lead/lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx/",
+                "status_label": "WARM - Follow up",
+                "opportunity_status": "WARM - Follow Up"
               }
             ],
             "missed": [
@@ -8329,15 +8346,6 @@
                 "booked_date": "2026-11-18",
                 "scored_call_at": "2026-11-18T18:15:00-08:00",
                 "url": "https://app.close.com/lead/lead_B9te8MLxtGHd5SnOxBTarGntFnOuMD2Li32T2mhvuZ2/",
-                "status_label": "\u260e\ufe0f Call Booked",
-                "opportunity_status": "Call Booked"
-              },
-              {
-                "id": "lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx",
-                "name": "Shayla Pratt",
-                "booked_date": "2026-11-18",
-                "scored_call_at": "2026-11-18T17:30:00-08:00",
-                "url": "https://app.close.com/lead/lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "Call Booked"
               }
@@ -8562,6 +8570,15 @@
                 "url": "https://app.close.com/lead/lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK/",
                 "status_label": "\ud83d\udcde HOT- Follow Up",
                 "opportunity_status": "HOT - Follow Up"
+              },
+              {
+                "id": "lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx",
+                "name": "Shayla Pratt",
+                "booked_date": "2026-11-18",
+                "scored_call_at": "2026-11-18T17:30:00-08:00",
+                "url": "https://app.close.com/lead/lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx/",
+                "status_label": "WARM - Follow up",
+                "opportunity_status": "WARM - Follow Up"
               }
             ],
             "missed": [
@@ -8698,19 +8715,19 @@
         }
       },
       "pre_call_adherence": 70,
-      "post_call_adherence": 66,
+      "post_call_adherence": 69,
       "opportunity_status": {
         "hot": {
           "count": 26
         },
         "warm": {
-          "count": 7
+          "count": 8
         },
         "general": {
           "count": 9
         }
       },
-      "opportunity_status_total": 42
+      "opportunity_status_total": 43
     },
     {
       "name": "Ariella Irvine",
@@ -11094,6 +11111,14 @@
         ],
         "missing_leads": [
           {
+            "name": "Jordan Grace",
+            "lead_id": "lead_njOX6qItzmYxRB8kjlQsMLi9TeGGyi1plXXwZEfJbR1",
+            "missing": [
+              "Disposition",
+              "Confidence"
+            ]
+          },
+          {
             "name": "Henry Mac",
             "lead_id": "lead_2vxsr6w0O55OecORlelsfiIk8qoncB4RWC8vOBLVLE4",
             "missing": [
@@ -11169,14 +11194,6 @@
             "lead_id": "lead_7g722XnwZvnxAuS0Inub6fvcT2C8dSLumK7UUxIqHl8",
             "missing": [
               "Disposition"
-            ]
-          },
-          {
-            "name": "Jordan Grace",
-            "lead_id": "lead_njOX6qItzmYxRB8kjlQsMLi9TeGGyi1plXXwZEfJbR1",
-            "missing": [
-              "Disposition",
-              "Confidence"
             ]
           },
           {
@@ -13430,17 +13447,17 @@
     }
   ],
   "total_scheduled_calls": 179,
-  "total_occurred_calls": 152,
+  "total_occurred_calls": 153,
   "total_no_shows": 37,
-  "total_unresolved_calls": 27,
-  "team_show_rate": 75.7,
-  "team_qualification_rate": 48.7,
+  "total_unresolved_calls": 26,
+  "team_show_rate": 75.8,
+  "team_qualification_rate": 48.4,
   "metric_definitions": {
     "version": "calls-occurred.v1",
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-18T18:52:57.143776-08:00",
+    "cutoff_exclusive": "2026-11-18T19:09:05.815033-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13478,16 +13495,16 @@
       "follow_up_created": {
         "label": "Task or follow-up meeting",
         "phase": "post_call",
-        "done": 34,
+        "done": 35,
         "eligible": 60,
         "exempt": 112,
-        "pct": 57
+        "pct": 58
       },
       "recap_email": {
         "label": "Recap email sent",
         "phase": "post_call",
-        "done": 52,
-        "eligible": 58,
+        "done": 53,
+        "eligible": 59,
         "exempt": 112,
         "pct": 90
       }
@@ -13525,16 +13542,16 @@
         "follow_up_created": {
           "label": "Task or follow-up meeting",
           "phase": "post_call",
-          "done": 34,
+          "done": 35,
           "eligible": 60,
           "exempt": 112,
-          "pct": 57
+          "pct": 58
         },
         "recap_email": {
           "label": "Recap email sent",
           "phase": "post_call",
-          "done": 52,
-          "eligible": 58,
+          "done": 53,
+          "eligible": 59,
           "exempt": 112,
           "pct": 90
         }
@@ -13544,7 +13561,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-18T19:02:14.856925-08:00",
+    "generated_at": "2026-11-18T19:19:32.399235-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -13564,7 +13581,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 515,
+    "api_requests": 513,
     "preview_only": false
   },
   "team_pre_call_adherence": 89,
