@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18 08:00 PM PST",
+  "updated_at": "2026-11-18 08:13 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-18",
@@ -43,12 +43,12 @@
     "post_call_adherence": 90,
     "task_adherence": 100
   },
-  "total_booked": 153,
-  "total_shown": 116,
+  "total_booked": 154,
+  "total_shown": 117,
   "total_qualified": 74,
   "total_deals": 16,
   "total_revenue": 114007.0,
-  "team_close_rate": 10.5,
+  "team_close_rate": 10.4,
   "team_avg_rev_per_deal": 7125.44,
   "team_crm_compliance": 58.9,
   "team_task_adherence": 88.9,
@@ -61,7 +61,7 @@
     "period_end": "2026-11-18",
     "scale_max": 5,
     "evaluation_count": 213,
-    "generated_at": "2026-11-18T19:57:37-08:00"
+    "generated_at": "2026-11-18T20:11:09-08:00"
   },
   "team_overdue": 21,
   "team_open_leads": 158,
@@ -69,7 +69,7 @@
   "funnel_breakdown": [
     {
       "funnel": "Internal Webinar",
-      "count": 52
+      "count": 53
     },
     {
       "funnel": "Meta Ads",
@@ -113,12 +113,12 @@
     }
   ],
   "funnel_sources": {
-    "in_house": 87,
+    "in_house": 88,
     "unknown": 53,
     "external": 13,
-    "in_house_pct": 56.9,
-    "external_pct": 8.5,
-    "unknown_pct": 34.6
+    "in_house_pct": 57.1,
+    "external_pct": 8.4,
+    "unknown_pct": 34.4
   },
   "reps": [
     {
@@ -6294,12 +6294,12 @@
     },
     {
       "name": "Christian Hartwell",
-      "booked": 32,
-      "shown": 25,
+      "booked": 33,
+      "shown": 26,
       "qualified": 19,
       "deals": 4,
       "revenue": 23388.0,
-      "close_rate": 12.5,
+      "close_rate": 12.1,
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 5847.0,
@@ -6552,6 +6552,14 @@
       },
       "metric_details": {
         "booked": [
+          {
+            "lead_id": "lead_B9te8MLxtGHd5SnOxBTarGntFnOuMD2Li32T2mhvuZ2",
+            "name": "Michael Lewis",
+            "date": "2026-11-18",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Internal Webinar"
+          },
           {
             "lead_id": "lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx",
             "name": "Shayla Pratt",
@@ -6810,6 +6818,14 @@
           }
         ],
         "shown": [
+          {
+            "lead_id": "lead_B9te8MLxtGHd5SnOxBTarGntFnOuMD2Li32T2mhvuZ2",
+            "name": "Michael Lewis",
+            "date": "2026-11-18",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Internal Webinar"
+          },
           {
             "lead_id": "lead_AFrlSYD5D8oWrekZnai2MxXSoSuTTv42iFCwGqnIMVx",
             "name": "Shayla Pratt",
@@ -7071,14 +7087,6 @@
         ],
         "no_outcome": [
           {
-            "lead_id": "lead_B9te8MLxtGHd5SnOxBTarGntFnOuMD2Li32T2mhvuZ2",
-            "name": "Michael Lewis",
-            "date": "2026-11-18",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "completed",
-            "funnel": "Internal Webinar"
-          },
-          {
             "lead_id": "lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK",
             "name": "Ben Lucero",
             "date": "2026-11-16",
@@ -7321,15 +7329,15 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 32,
+      "occurred_calls": 33,
       "no_shows": 7,
-      "unresolved_calls": 7,
+      "unresolved_calls": 6,
       "scheduled_calls": 39,
-      "show_rate": 78.1,
-      "qualification_rate": 59.4,
-      "revenue_per_occurred": 730.88,
-      "revenue_per_lead": 730.88,
-      "marketing": 16,
+      "show_rate": 78.8,
+      "qualification_rate": 57.6,
+      "revenue_per_occurred": 708.73,
+      "revenue_per_lead": 708.73,
+      "marketing": 17,
       "lane2": 16,
       "social_dms": 0,
       "rep_owner_id": "user_wHm1vcLde4RExd3vv9UOjnms5Oz8ssXg8600mQuxMPb",
@@ -13456,17 +13464,17 @@
     }
   ],
   "total_scheduled_calls": 179,
-  "total_occurred_calls": 153,
+  "total_occurred_calls": 154,
   "total_no_shows": 37,
-  "total_unresolved_calls": 26,
-  "team_show_rate": 75.8,
-  "team_qualification_rate": 48.4,
+  "total_unresolved_calls": 25,
+  "team_show_rate": 76.0,
+  "team_qualification_rate": 48.1,
   "metric_definitions": {
     "version": "calls-occurred.v1",
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-18T20:00:09.078774-08:00",
+    "cutoff_exclusive": "2026-11-18T20:13:58.580711-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -13570,7 +13578,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-18T20:07:27.085582-08:00",
+    "generated_at": "2026-11-18T20:24:36.814022-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
