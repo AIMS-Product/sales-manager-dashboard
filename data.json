@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19 12:02 PM PST",
+  "updated_at": "2026-11-19 12:19 PM PST",
   "week_label": "November 2026",
   "monday_str": "2026-11-01",
   "today_str": "2026-11-19",
@@ -43,12 +43,12 @@
     "post_call_adherence": 90,
     "task_adherence": 100
   },
-  "total_booked": 157,
-  "total_shown": 120,
+  "total_booked": 161,
+  "total_shown": 122,
   "total_qualified": 77,
   "total_deals": 17,
   "total_revenue": 120004.0,
-  "team_close_rate": 10.8,
+  "team_close_rate": 10.6,
   "team_avg_rev_per_deal": 7059.06,
   "team_crm_compliance": 58.6,
   "team_task_adherence": 90.6,
@@ -60,20 +60,24 @@
     "period_start": "2026-11-01",
     "period_end": "2026-11-19",
     "scale_max": 5,
-    "evaluation_count": 219,
-    "generated_at": "2026-11-19T11:58:19-08:00"
+    "evaluation_count": 220,
+    "generated_at": "2026-11-19T12:16:35-08:00"
   },
   "team_overdue": 17,
-  "team_open_leads": 158,
-  "team_est_pipeline": 379200,
+  "team_open_leads": 157,
+  "team_est_pipeline": 376800,
   "funnel_breakdown": [
+    {
+      "funnel": "Google Ads",
+      "count": 21
+    },
     {
       "funnel": "Unknown (Needs Review)",
       "count": 30
     },
     {
       "funnel": "Internal Webinar",
-      "count": 54
+      "count": 55
     },
     {
       "funnel": "Website",
@@ -84,16 +88,12 @@
       "count": 5
     },
     {
-      "funnel": "Instagram",
-      "count": 11
-    },
-    {
-      "funnel": "Google Ads",
-      "count": 20
-    },
-    {
       "funnel": "YouTube",
-      "count": 23
+      "count": 24
+    },
+    {
+      "funnel": "Instagram",
+      "count": 12
     },
     {
       "funnel": "Anthony IG",
@@ -113,12 +113,12 @@
     }
   ],
   "funnel_sources": {
-    "unknown": 54,
-    "in_house": 89,
-    "external": 14,
-    "in_house_pct": 56.7,
-    "external_pct": 8.9,
-    "unknown_pct": 34.4
+    "unknown": 55,
+    "in_house": 91,
+    "external": 15,
+    "in_house_pct": 56.5,
+    "external_pct": 9.3,
+    "unknown_pct": 34.2
   },
   "reps": [
     {
@@ -6315,12 +6315,12 @@
     },
     {
       "name": "Ariella Irvine",
-      "booked": 23,
+      "booked": 24,
       "shown": 17,
       "qualified": 9,
       "deals": 3,
       "revenue": 21491.0,
-      "close_rate": 13.0,
+      "close_rate": 12.5,
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 7163.67,
@@ -6350,10 +6350,36 @@
         ],
         "missing_leads": [
           {
+            "name": "Joseph Benson",
+            "lead_id": "lead_FMyg8M5HkGQf7CJzYjuUXOx2zXskjLjWoovoZheKD53",
+            "missing": [
+              "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Gavin Reyes",
+            "lead_id": "lead_jmtEuoWTiCp8ymHxett4sRYiGgC9JuDw5b4miHHkz0O",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Jay Torres",
             "lead_id": "lead_VwxTPugsSPeHtS9EKSelCB6zPITwD6AjXbpGJxEUZWW",
             "missing": [
               "Disposition"
+            ]
+          },
+          {
+            "name": "Marian Streeter",
+            "lead_id": "lead_c546LnaI0HdbZGDEBNMGhPXWNIhYebU0Z8H6KnJChUk",
+            "missing": [
+              "Disposition",
+              "Qualified",
+              "Confidence"
             ]
           },
           {
@@ -6379,15 +6405,6 @@
             "lead_id": "lead_gjBxV7e9KCOvddXvAQZG2OQP91STSGMstoyQhclqtL3",
             "missing": [
               "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
-            "name": "Marian Streeter",
-            "lead_id": "lead_c546LnaI0HdbZGDEBNMGhPXWNIhYebU0Z8H6KnJChUk",
-            "missing": [
               "Disposition",
               "Qualified",
               "Confidence"
@@ -6532,16 +6549,6 @@
             ]
           },
           {
-            "name": "Joseph Benson",
-            "lead_id": "lead_FMyg8M5HkGQf7CJzYjuUXOx2zXskjLjWoovoZheKD53",
-            "missing": [
-              "Show Up",
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
             "name": "Frederick Choute",
             "lead_id": "lead_h8bpENKMCY2HynIfBNoVwNSrbp4m29zKfNIjKYY7MeC",
             "missing": [
@@ -6601,18 +6608,19 @@
             "missing": [
               "Disposition"
             ]
-          },
-          {
-            "name": "Gavin Reyes",
-            "lead_id": "lead_jmtEuoWTiCp8ymHxett4sRYiGgC9JuDw5b4miHHkz0O",
-            "missing": [
-              "Disposition"
-            ]
           }
         ]
       },
       "metric_details": {
         "booked": [
+          {
+            "lead_id": "lead_VwxTPugsSPeHtS9EKSelCB6zPITwD6AjXbpGJxEUZWW",
+            "name": "Jay Torres",
+            "date": "2026-11-19",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed",
+            "funnel": "Google Ads"
+          },
           {
             "lead_id": "lead_ddWP2RlblkrQ8P4WwKQn9BNHEpsDZ5CbdU1hCCvire3",
             "name": "N'Kote Bethea",
@@ -6938,6 +6946,14 @@
         ],
         "no_shows": [
           {
+            "lead_id": "lead_VwxTPugsSPeHtS9EKSelCB6zPITwD6AjXbpGJxEUZWW",
+            "name": "Jay Torres",
+            "date": "2026-11-19",
+            "meeting_outcome": "No Show",
+            "meeting_status": "completed",
+            "funnel": "Google Ads"
+          },
+          {
             "lead_id": "lead_AjZLwRzWNHchF3ThSiHc2mKX8k0XV1MivhbvdfQvPnv",
             "name": "Duha Almasude",
             "date": "2026-11-16",
@@ -6987,14 +7003,6 @@
           }
         ],
         "no_outcome": [
-          {
-            "lead_id": "lead_VwxTPugsSPeHtS9EKSelCB6zPITwD6AjXbpGJxEUZWW",
-            "name": "Jay Torres",
-            "date": "2026-11-19",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "completed",
-            "funnel": "Google Ads"
-          },
           {
             "lead_id": "lead_sXu72x0VLro3o7hEImbIGRfaDVpF4TExrJgaxOY4Hfh",
             "name": "Tammy Baldwin",
@@ -7159,16 +7167,16 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 23,
-      "no_shows": 6,
-      "unresolved_calls": 8,
+      "occurred_calls": 24,
+      "no_shows": 7,
+      "unresolved_calls": 7,
       "scheduled_calls": 31,
-      "show_rate": 73.9,
-      "qualification_rate": 39.1,
-      "revenue_per_occurred": 934.39,
-      "revenue_per_lead": 934.39,
+      "show_rate": 70.8,
+      "qualification_rate": 37.5,
+      "revenue_per_occurred": 895.46,
+      "revenue_per_lead": 895.46,
       "marketing": 6,
-      "lane2": 17,
+      "lane2": 18,
       "social_dms": 0,
       "rep_owner_id": "user_BaN2TstWtyF34eaQSSLG11j6DhKKm67Y6JltbIYCafO",
       "adherence": {
@@ -8757,12 +8765,12 @@
     },
     {
       "name": "Christian Hartwell",
-      "booked": 34,
-      "shown": 27,
+      "booked": 35,
+      "shown": 28,
       "qualified": 20,
       "deals": 4,
       "revenue": 23388.0,
-      "close_rate": 11.8,
+      "close_rate": 11.4,
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 5847.0,
@@ -8792,10 +8800,26 @@
         ],
         "missing_leads": [
           {
+            "name": "Classie",
+            "lead_id": "lead_0NC3JH1Y4wwmQoyagHWmzNHlRVwNShBDJh42FZ214CG",
+            "missing": [
+              "Disposition"
+            ]
+          },
+          {
             "name": "Ian Lenzi",
             "lead_id": "lead_u06HnUqWRE4YeHstnkI0Uwp2dMqB42OU9Ea8SPDQG94",
             "missing": [
               "Show Up",
+              "Disposition",
+              "Qualified",
+              "Confidence"
+            ]
+          },
+          {
+            "name": "Eunice Pierre-Canel",
+            "lead_id": "lead_qKTapnf53Dl3J8cCWgE5DnkNQZ7Y5nI7Fq4ZVomJ8SJ",
+            "missing": [
               "Disposition",
               "Qualified",
               "Confidence"
@@ -8884,15 +8908,6 @@
             ]
           },
           {
-            "name": "Eunice Pierre-Canel",
-            "lead_id": "lead_qKTapnf53Dl3J8cCWgE5DnkNQZ7Y5nI7Fq4ZVomJ8SJ",
-            "missing": [
-              "Disposition",
-              "Qualified",
-              "Confidence"
-            ]
-          },
-          {
             "name": "Hakim Robinson",
             "lead_id": "lead_ZfSOgnahrdnJLD5UjNSyUFZhv7goPHjWnp5pxIWTmCw",
             "missing": [
@@ -8938,13 +8953,6 @@
           {
             "name": "Brian Conant",
             "lead_id": "lead_x3BY9QTseqayfWPILgmbOGdFCm5NrcjVmu7yUtz2Cp1",
-            "missing": [
-              "Disposition"
-            ]
-          },
-          {
-            "name": "Classie",
-            "lead_id": "lead_0NC3JH1Y4wwmQoyagHWmzNHlRVwNShBDJh42FZ214CG",
             "missing": [
               "Disposition"
             ]
@@ -9052,6 +9060,14 @@
             "meeting_outcome": "No Show",
             "meeting_status": "completed",
             "funnel": "Internal Webinar"
+          },
+          {
+            "lead_id": "lead_u06HnUqWRE4YeHstnkI0Uwp2dMqB42OU9Ea8SPDQG94",
+            "name": "Ian Lenzi",
+            "date": "2026-11-19",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Instagram"
           },
           {
             "lead_id": "lead_ei9O5Z11PBTiqFueJol7UqV9CG7Ef4lfPgWx3vrc4Lp",
@@ -9320,6 +9336,14 @@
             "funnel": "Internal Webinar"
           },
           {
+            "lead_id": "lead_u06HnUqWRE4YeHstnkI0Uwp2dMqB42OU9Ea8SPDQG94",
+            "name": "Ian Lenzi",
+            "date": "2026-11-19",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "Instagram"
+          },
+          {
             "lead_id": "lead_ei9O5Z11PBTiqFueJol7UqV9CG7Ef4lfPgWx3vrc4Lp",
             "name": "Bill Ward",
             "date": "2026-11-19",
@@ -9580,14 +9604,6 @@
         ],
         "no_outcome": [
           {
-            "lead_id": "lead_u06HnUqWRE4YeHstnkI0Uwp2dMqB42OU9Ea8SPDQG94",
-            "name": "Ian Lenzi",
-            "date": "2026-11-19",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "completed",
-            "funnel": "Instagram"
-          },
-          {
             "lead_id": "lead_fPSJXg0wn9UGzuAzeOYyr4VzIDyO8U7foesBLbySQUK",
             "name": "Ben Lucero",
             "date": "2026-11-16",
@@ -9833,20 +9849,20 @@
       "task_adherence": 75.9,
       "tasks_overdue": 7,
       "tasks_incomplete": 29,
-      "open_leads": 42,
-      "est_pipeline": 100800,
+      "open_leads": 41,
+      "est_pipeline": 98400,
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 34,
+      "occurred_calls": 35,
       "no_shows": 7,
-      "unresolved_calls": 7,
+      "unresolved_calls": 6,
       "scheduled_calls": 41,
-      "show_rate": 79.4,
-      "qualification_rate": 58.8,
-      "revenue_per_occurred": 687.88,
-      "revenue_per_lead": 687.88,
-      "marketing": 17,
+      "show_rate": 80.0,
+      "qualification_rate": 57.1,
+      "revenue_per_occurred": 668.23,
+      "revenue_per_lead": 668.23,
+      "marketing": 18,
       "lane2": 17,
       "social_dms": 0,
       "rep_owner_id": "user_wHm1vcLde4RExd3vv9UOjnms5Oz8ssXg8600mQuxMPb",
@@ -10181,7 +10197,7 @@
               },
               {
                 "id": "lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH",
-                "name": "Waubwila Abongela",
+                "name": "Abongela Waubwila",
                 "booked_date": "2026-11-19",
                 "scored_call_at": "2026-11-19T12:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH/",
@@ -10476,7 +10492,7 @@
               },
               {
                 "id": "lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH",
-                "name": "Waubwila Abongela",
+                "name": "Abongela Waubwila",
                 "booked_date": "2026-11-19",
                 "scored_call_at": "2026-11-19T12:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH/",
@@ -10752,6 +10768,15 @@
                 "opportunity_status": "WARM - Follow Up"
               },
               {
+                "id": "lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH",
+                "name": "Abongela Waubwila",
+                "booked_date": "2026-11-19",
+                "scored_call_at": "2026-11-19T12:00:00-08:00",
+                "url": "https://app.close.com/lead/lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH/",
+                "status_label": "\ud83d\udc7b No Show",
+                "opportunity_status": "No Show"
+              },
+              {
                 "id": "lead_ei9O5Z11PBTiqFueJol7UqV9CG7Ef4lfPgWx3vrc4Lp",
                 "name": "Bill Ward",
                 "booked_date": "2026-11-19",
@@ -10768,15 +10793,6 @@
                 "url": "https://app.close.com/lead/lead_u06HnUqWRE4YeHstnkI0Uwp2dMqB42OU9Ea8SPDQG94/",
                 "status_label": "\u260e\ufe0f Call Booked",
                 "opportunity_status": "Call Booked"
-              },
-              {
-                "id": "lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH",
-                "name": "Waubwila Abongela",
-                "booked_date": "2026-11-19",
-                "scored_call_at": "2026-11-19T12:00:00-08:00",
-                "url": "https://app.close.com/lead/lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH/",
-                "status_label": "\ud83d\udc7b No Show",
-                "opportunity_status": "No Show"
               }
             ],
             "exempt": []
@@ -11068,7 +11084,7 @@
               },
               {
                 "id": "lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH",
-                "name": "Waubwila Abongela",
+                "name": "Abongela Waubwila",
                 "booked_date": "2026-11-19",
                 "scored_call_at": "2026-11-19T12:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH/",
@@ -11355,7 +11371,7 @@
               },
               {
                 "id": "lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH",
-                "name": "Waubwila Abongela",
+                "name": "Abongela Waubwila",
                 "booked_date": "2026-11-19",
                 "scored_call_at": "2026-11-19T12:00:00-08:00",
                 "url": "https://app.close.com/lead/lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH/",
@@ -11370,10 +11386,10 @@
       "post_call_adherence": 77,
       "opportunity_status": {
         "hot": {
-          "count": 15
+          "count": 14
         },
         "warm": {
-          "count": 15
+          "count": 16
         },
         "general": {
           "count": 16
@@ -11383,12 +11399,12 @@
     },
     {
       "name": "Scott Seymour",
-      "booked": 25,
-      "shown": 19,
+      "booked": 26,
+      "shown": 20,
       "qualified": 12,
       "deals": 2,
       "revenue": 14994.0,
-      "close_rate": 8.0,
+      "close_rate": 7.7,
       "qa_score": null,
       "qa_score_count": 0,
       "avg_rev_per_deal": 7497.0,
@@ -11606,6 +11622,14 @@
             "funnel": "Internal Webinar"
           },
           {
+            "lead_id": "lead_USzF7NXNLUv2hGmmNLQWBmanbZ6n30XSdNNDN2QduZl",
+            "name": "Jeremy McAlee",
+            "date": "2026-11-19",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "YouTube"
+          },
+          {
             "lead_id": "lead_9xA5WexBfrZpyRZh5aI26wgVfrXa4RLevvXv3xq8acZ",
             "name": "Ben Tischler",
             "date": "2026-11-18",
@@ -11798,6 +11822,14 @@
             "meeting_outcome": "Completed",
             "meeting_status": "completed",
             "funnel": "Website"
+          },
+          {
+            "lead_id": "lead_USzF7NXNLUv2hGmmNLQWBmanbZ6n30XSdNNDN2QduZl",
+            "name": "Jeremy McAlee",
+            "date": "2026-11-19",
+            "meeting_outcome": "Completed",
+            "meeting_status": "completed",
+            "funnel": "YouTube"
           },
           {
             "lead_id": "lead_9xA5WexBfrZpyRZh5aI26wgVfrXa4RLevvXv3xq8acZ",
@@ -11996,14 +12028,6 @@
         ],
         "no_outcome": [
           {
-            "lead_id": "lead_USzF7NXNLUv2hGmmNLQWBmanbZ6n30XSdNNDN2QduZl",
-            "name": "Jeremy McAlee",
-            "date": "2026-11-19",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "completed",
-            "funnel": "YouTube"
-          },
-          {
             "lead_id": "lead_gWS6cJv4cakRoPks1X2bbOrwnF7kPcuDiKtRnidrrPm",
             "name": "Kristin Hagen",
             "date": "2026-11-17",
@@ -12152,15 +12176,15 @@
       "is_manager": false,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 25,
+      "occurred_calls": 26,
       "no_shows": 6,
-      "unresolved_calls": 4,
+      "unresolved_calls": 3,
       "scheduled_calls": 29,
-      "show_rate": 76.0,
-      "qualification_rate": 48.0,
-      "revenue_per_occurred": 599.76,
-      "revenue_per_lead": 599.76,
-      "marketing": 8,
+      "show_rate": 76.9,
+      "qualification_rate": 46.2,
+      "revenue_per_occurred": 576.69,
+      "revenue_per_lead": 576.69,
+      "marketing": 9,
       "lane2": 15,
       "social_dms": 2,
       "rep_owner_id": "user_F0VeLnOQlWpkDncNW8rBl1V2QJ08fnDt6DcUjNATUJK",
@@ -13200,12 +13224,12 @@
     },
     {
       "name": "Joe Dysert",
-      "booked": 12,
+      "booked": 13,
       "shown": 10,
       "qualified": 8,
       "deals": 2,
       "revenue": 11996.0,
-      "close_rate": 16.7,
+      "close_rate": 15.4,
       "qa_score": 1.8,
       "qa_score_count": 15,
       "avg_rev_per_deal": 5998.0,
@@ -13263,6 +13287,14 @@
             "meeting_outcome": "No Show",
             "meeting_status": "completed",
             "funnel": "Unknown (Needs Review)"
+          },
+          {
+            "lead_id": "lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH",
+            "name": "Abongela Waubwila",
+            "date": "2026-11-19",
+            "meeting_outcome": "No Show",
+            "meeting_status": "in-progress",
+            "funnel": "Internal Webinar"
           },
           {
             "lead_id": "lead_cAWWKgnPoOXyW09WLtUSyQ4SyERpbCrGclxHgCppQgq",
@@ -13445,6 +13477,14 @@
             "funnel": "Unknown (Needs Review)"
           },
           {
+            "lead_id": "lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH",
+            "name": "Abongela Waubwila",
+            "date": "2026-11-19",
+            "meeting_outcome": "No Show",
+            "meeting_status": "in-progress",
+            "funnel": "Internal Webinar"
+          },
+          {
             "lead_id": "lead_jNAjcIDartJKqGC6Jl90EhhLpQXo6fsuKTkuK8Vabta",
             "name": "Joe",
             "date": "2026-11-02",
@@ -13454,14 +13494,6 @@
           }
         ],
         "no_outcome": [
-          {
-            "lead_id": "lead_D5S9Yc2RWSI5JsqRF4ffHoYxME513XkUZ8B1FGynfUH",
-            "name": "Abongela Abongela",
-            "date": "2026-11-19",
-            "meeting_outcome": "No outcome",
-            "meeting_status": "in-progress",
-            "funnel": "Internal Webinar"
-          },
           {
             "lead_id": "lead_9gJQ0cS53WgutFDOCMCqe317RiLFPka77LMU6wQRjWY",
             "name": "James Garrity",
@@ -13563,15 +13595,15 @@
       "is_manager": true,
       "is_lead": false,
       "lane": 1,
-      "occurred_calls": 12,
-      "no_shows": 2,
-      "unresolved_calls": 2,
+      "occurred_calls": 13,
+      "no_shows": 3,
+      "unresolved_calls": 1,
       "scheduled_calls": 14,
-      "show_rate": 83.3,
-      "qualification_rate": 66.7,
-      "revenue_per_occurred": 999.67,
-      "revenue_per_lead": 999.67,
-      "marketing": 1,
+      "show_rate": 76.9,
+      "qualification_rate": 61.5,
+      "revenue_per_occurred": 922.77,
+      "revenue_per_lead": 922.77,
+      "marketing": 2,
       "lane2": 11,
       "social_dms": 0,
       "rep_owner_id": "user_lUjlATIIgFg8mELa0GFzZUj0lG4Cs7PwQsxbi34I6Su",
@@ -13940,17 +13972,17 @@
     }
   ],
   "total_scheduled_calls": 191,
-  "total_occurred_calls": 157,
-  "total_no_shows": 37,
-  "total_unresolved_calls": 34,
-  "team_show_rate": 76.4,
-  "team_qualification_rate": 49.0,
+  "total_occurred_calls": 161,
+  "total_no_shows": 39,
+  "total_unresolved_calls": 30,
+  "team_show_rate": 75.8,
+  "team_qualification_rate": 47.8,
   "metric_definitions": {
     "version": "calls-occurred.v1",
     "booking_rules": "booked_calls.v2.8-naria-navigator-title-20261102",
     "booked": "native_completed_plus_no_show",
     "period_start": "2026-11-01",
-    "cutoff_exclusive": "2026-11-19T12:02:10.160617-08:00",
+    "cutoff_exclusive": "2026-11-19T12:19:32.390961-08:00",
     "timezone": "America/Los_Angeles",
     "qualification": "distinct_current_qualified_leads_in_occurred_cohort",
     "closed_won": "native_date_won_independent_of_meeting_dates",
@@ -14054,7 +14086,7 @@
   "adherence_meta": {
     "schema_version": 6,
     "source": "close_crm",
-    "generated_at": "2026-11-19T12:12:36.829459-08:00",
+    "generated_at": "2026-11-19T12:31:10.574700-08:00",
     "period": {
       "timezone": "America/Los_Angeles",
       "basis": "latest_sales_call_booked_date_with_first_date_fallback",
@@ -14074,7 +14106,7 @@
       },
       "includes_lost": true
     },
-    "api_requests": 529,
+    "api_requests": 532,
     "preview_only": false
   },
   "team_pre_call_adherence": 88,
