@@ -62,6 +62,20 @@
 
         .header-right { display: flex; align-items: center; gap: 20px; color: var(--text-secondary); font-size: 13px; }
 
+        #periodControl:not([hidden]) { display: grid; gap: 4px; }
+        #reportPeriod {
+            max-width: 100%; min-height: 36px; padding: 4px 8px;
+            font: inherit; color: var(--text); background: var(--surface);
+            border: 1px solid var(--border); border-radius: 6px;
+        }
+        #reportPeriod:focus-visible, .adherence-toggle:focus-visible {
+            outline: 2px solid var(--accent); outline-offset: 2px;
+        }
+        #operatingSnapshot { font-size: 12px; color: var(--text-muted); padding: 0 16px 10px; }
+        .adherence-toggle {
+            font: inherit; color: inherit; background: none; border: 0; cursor: pointer;
+        }
+
         .live-dot {
             width: 8px; height: 8px; background: var(--green); border-radius: 50%;
             display: inline-block; margin-right: 6px;
@@ -518,6 +532,8 @@
 
         @media (max-width: 768px) {
             .header { padding: 16px 20px; flex-wrap: wrap; gap: 12px; }
+            .header-right { flex-wrap: wrap; gap: 8px 12px; }
+            #periodControl { max-width: 100%; }
             .content { padding: 16px 20px; }
             col.col-name { width: 140px; }
         }
@@ -534,6 +550,11 @@
         <h1>Rep Metrics <span>Dashboard</span></h1>
     </div>
     <div class="header-right">
+        <label id="periodControl" hidden>Reporting period
+            <select id="reportPeriod">
+                <option value="month">Month to Date</option>
+            </select>
+        </label>
         <span class="week-badge" id="weekLabel">—</span>
         <div class="day-indicator" id="dayIndicator"></div>
         <span><span class="live-dot"></span>Updated <span id="updatedAt">—</span></span>
@@ -546,6 +567,7 @@
             <div class="table-title">Rep Breakdown — MTD <span id="repCount"></span></div>
             <div style="font-size: 12px; color: var(--text-muted);">Click a number for its records · Click a header to sort</div>
         </div>
+        <p id="operatingSnapshot" hidden></p>
         <div class="table-wrap">
             <table>
                 <colgroup>
@@ -577,15 +599,15 @@
                         <th data-key="booked" data-dir="desc" data-type="num" class="active g-activity-start" title="Qualifying calls scheduled in elapsed period with native Completed or No Show outcome">Booked</th>
                         <th data-key="shown" data-dir="desc" data-type="num" title="Native Completed outcome on qualifying calls scheduled in elapsed period">Shown</th>
                         <th data-key="qualified" data-dir="desc" data-type="num" title="Distinct qualified leads from Booked, using the current Close qualification flag">Qualified</th>
-                        <th data-key="deals" data-dir="desc" data-type="num" title="Won opportunities by date_won in the Sales Pipeline, using the shared MTD rules. Multiple won opportunities on one lead count separately.">Closed Won</th>
+                        <th data-key="deals" data-dir="desc" data-type="num" title="Won opportunities by date_won in the Sales Pipeline, using the shared reporting rules. Multiple won opportunities on one lead count separately.">Closed Won</th>
                         <th data-key="revenue" data-dir="desc" data-type="num" class="g-activity-end" title="Total dollar value of Closed/Won opportunities in this period. Includes all opps per lead (not deduplicated by value).">Revenue</th>
                         <th data-key="close_rate" data-dir="desc" data-type="num" title="Won opportunities by date won divided by Booked; independent date cohorts">Close %</th>
                         <th data-key="show_rate" data-dir="desc" data-type="num" title="Shows divided by Booked">Show %</th>
                         <th data-key="qualification_rate" data-dir="desc" data-type="num" title="Qualified leads from booked calls divided by Booked">Qual %</th>
-                        <th data-key="qa_score" data-dir="desc" data-type="num" title="Month-to-date mean Avoma VP Closing Call Scorecard score, based on meetings held this month in Pacific time. Scores are out of 5; the number of scored calls is shown below.">QA Score</th>
+                        <th data-key="qa_score" data-dir="desc" data-type="num" title="Mean Avoma VP Closing Call Scorecard score for meetings held in the selected Pacific reporting period. Scores are out of 5; the number of scored calls is shown below.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
                         <th data-key="pre_call_adherence" data-dir="desc" data-type="num" title="Scheduled-call pre-call adherence for the native qualifying scheduled-call cohort through the reporting date. Equal-weight average of eligible Pre-Call Loom, Pre-call text, and Day-of confirmation percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Pre-Call Adh.</th>
-                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="Scheduled-call post-call adherence for the native qualifying scheduled-call cohort through the reporting date. Average of the 12-hour recap email rate and the 12-hour follow-up meeting or task rate. Pending calls are excluded. Click a rep's score for step details.">Post-Call Adh.</th>
+                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="Scheduled-call post-call adherence for the native qualifying scheduled-call cohort through the reporting date. Average of the 12-hour recap email/SMS rate and the 12-hour task, meeting or scheduled-text rate. Pending calls are excluded. Click a rep's score for step details.">Post-Call Adh.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. Tasks on Closed/Won leads are excluded. 100% = fully caught up.">Task Adh.</th>
                         <th data-key="opportunity_status_total" data-dir="desc" data-type="num" title="Active Sales Pipeline opportunities grouped by status. Open a saved Close view for each status.">Opp Status</th>
                     </tr>
@@ -609,7 +631,7 @@
 <aside class="metric-drawer" id="metricDrawer" role="dialog" aria-modal="true" aria-labelledby="metricDrawerTitle" hidden>
     <div class="metric-drawer-header">
         <div>
-            <div class="metric-drawer-kicker">Month-to-date records</div>
+            <div class="metric-drawer-kicker" id="metricDrawerPeriod">Reporting period</div>
             <h2 id="metricDrawerTitle"></h2>
         </div>
         <button class="metric-drawer-close" id="metricDrawerClose" type="button" aria-label="Close details">×</button>
@@ -623,6 +645,35 @@
     'use strict';
 
     let DATA = null;
+    let report = null;
+    let selectedPeriod = 'month';
+    const periodControl = document.getElementById('periodControl');
+    const reportPeriod = document.getElementById('reportPeriod');
+
+    function selectPeriod(value, remember = false) {
+        selectedPeriod = Object.hasOwn(report.weeks || {}, value) ? value : 'month';
+        DATA = selectedPeriod === 'month' ? report : report.weeks[selectedPeriod];
+        reportPeriod.value = selectedPeriod;
+        if (remember) {
+            const url = new URL(location.href);
+            url.searchParams.set('period', selectedPeriod);
+            history.replaceState(history.state, '', url);
+        }
+        closeMetricDrawer();
+        render();
+    }
+
+    function setReport(payload) {
+        report = payload;
+        const keys = Object.keys(report.weeks || {}).sort().reverse();
+        periodControl.hidden = !keys.length;
+        reportPeriod.replaceChildren(new Option('Month to Date', 'month'), ...keys.map((key, index) =>
+            new Option(`${index === 0 ? 'This Week' : 'Previous Week'} · ${report.weeks[key].week_label}`, key)
+        ));
+        selectPeriod(new URLSearchParams(location.search).get('period') || selectedPeriod);
+    }
+
+    reportPeriod.addEventListener('change', () => selectPeriod(reportPeriod.value, true));
     let currentSort = { key: 'booked', dir: 'desc' };
     let lastMetricTrigger = null;
     const metricLabels = { occurred_calls: 'Booked', booked: 'Booked', shown: 'Shown', qualified: 'Qualified', deals: 'Closed Won' };
@@ -631,7 +682,7 @@
         booked: 'Qualifying calls scheduled in the elapsed period with native Completed or No Show outcome. Excludes cancellations, future calls and unresolved outcomes.',
         shown: 'Calls scheduled in the elapsed period, grouped by native outcome. Only Completed and No Show count as Booked.',
         qualified: 'Distinct qualified leads from Booked; current Close flag, no reset applied.',
-        deals: 'Unique leads with Closed/Won opportunities in this period.',
+        deals: 'Closed/Won opportunities by won date in this period. Multiple opportunities on one lead count separately.',
     };
     const metricDrawer = document.getElementById('metricDrawer');
     const metricBackdrop = document.getElementById('metricBackdrop');
@@ -663,7 +714,7 @@
     }
 
     function qaScoreCell(score, count) {
-        if (score == null || !count) return '<td><span title="No scored Avoma calls this month">—</span></td>';
+        if (score == null || !count) return '<td><span title="No scored Avoma calls in this period">—</span></td>';
         const value = Number(score).toFixed(2);
         return `<td><div class="qa-score-cell" aria-label="MTD Avoma score ${value} out of 5 from ${count} scored calls"><span>${value} / 5</span><small>${count} ${count === 1 ? 'call' : 'calls'}</small></div></td>`;
     }
@@ -784,9 +835,8 @@
             const preview = previewMode === 'process-adherence' || previewMode === 'post-call';
             const dataFile = preview ? 'data.preview.json' : 'data.json';
             const resp = await fetch(dataFile + '?t=' + Date.now());
-            closeMetricDrawer();
-            DATA = await resp.json();
-            render();
+            if (!resp.ok) throw new Error(`Dashboard returned ${resp.status}`);
+            setReport(await resp.json());
         } catch (e) {
             console.error('Failed to fetch dashboard data:', e);
         }
@@ -795,10 +845,19 @@
     function render() {
         if (!DATA) return;
         document.getElementById('weekLabel').textContent = DATA.week_label || '—';
+        document.getElementById('metricDrawerPeriod').textContent = DATA.week_label || 'Reporting period';
         document.getElementById('updatedAt').textContent = DATA.updated_at || '—';
 
         const monthly = DATA.metric_definitions?.period_kind === 'month';
-        // Keep the same progress indicator for monthly and explicit weekly views.
+        const completedWeek = DATA.period?.complete;
+        const snapshot = document.getElementById('operatingSnapshot');
+        snapshot.hidden = !DATA.auxiliary_snapshot;
+        const snapshotTime = new Date(DATA.auxiliary_snapshot);
+        snapshot.textContent = !snapshot.hidden && Number.isFinite(snapshotTime.getTime())
+            ? 'Current task and pipeline snapshot · ' + new Intl.DateTimeFormat('en-US', {
+                dateStyle: 'medium', timeStyle: 'short', timeZone: 'America/Los_Angeles',
+            }).format(snapshotTime) + ' PT'
+            : '';
         const dayOfWeek = DATA.day_of_week || 1;
         const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
         let dayHtml = '<span class="day-label">DAY ' + dayOfWeek + '/7</span>';
@@ -813,8 +872,8 @@
             const monthDays = new Date(date.getFullYear(), date.getMonth()+1, 0).getDate();
             document.getElementById('dayIndicator').innerHTML = '<span class="day-label">DAY ' + date.getDate() + '/' + monthDays + '</span>';
         }
-        document.querySelector('.group-activity').textContent = monthly ? 'Month-to-Date Activity' : 'Week-to-Date Activity';
-        document.querySelector('.table-title').firstChild.textContent = monthly ? 'Rep Breakdown — MTD ' : 'Rep Breakdown — WTD ';
+        document.querySelector('.group-activity').textContent = monthly ? 'Month-to-Date Activity' : completedWeek ? 'Weekly Activity' : 'Week-to-Date Activity';
+        document.querySelector('.table-title').firstChild.textContent = monthly ? 'Rep Breakdown — MTD ' : completedWeek ? 'Rep Breakdown — Week ' : 'Rep Breakdown — WTD ';
         if (!DATA.metric_definitions) {
             document.querySelector('[data-key="booked"]').title = 'Historical First Sales Call Booked Date cohort';
         }
@@ -1026,46 +1085,29 @@
             const mgrTag = mgr ? '<span class="manager-tag">MGR</span>' : '';
             const leadTag = r.is_lead ? '<span class="lead-tag">Lead</span>' : '';
 
-            if (mgr) {
-                return `<tr>
-                    <td>${r.name}${mgrTag}${leadTag}</td>
-                    <td class="g-activity-start">${metricButton(globalIdx, 'booked', r.booked, r.name)}</td>
-                    <td>${metricButton(globalIdx, 'shown', r.shown, r.name)}</td>
-                    <td>${metricButton(globalIdx, 'qualified', r.qualified, r.name)}</td>
-                    <td>${metricButton(globalIdx, 'deals', r.deals, r.name)}</td>
-                    <td class="g-activity-end">${r.revenue ? fmtK(r.revenue) : '—'}</td>
-                    <td>${r.close_rate != null ? r.close_rate + '%' : '—'}</td>
-                    <td>${r.show_rate == null ? '—' : r.show_rate + '%'}</td>
-                    <td>${r.qualification_rate == null ? '—' : r.qualification_rate + '%'}</td>
-                    ${qaScoreCell(r.qa_score, r.qa_score_count)}
-                    <td class="g-perf-end">${r.avg_rev_per_deal ? fmtK(r.avg_rev_per_deal) : '—'}</td>
-                    <td style="color:var(--text-muted)">—</td>
-                    <td style="color:var(--text-muted)">—</td>
-                    <td style="color:var(--text-muted)">—</td>
-                    ${opportunityStatusCell(r)}
-                </tr>`;
-            }
-
             const rt = r.lane === 2 ? t2 : t;
             const adherenceCell = (phase, value, target) => r.adherence
-                ? `<td class="crm-clickable" data-crm-phase="${phase}" data-crm-idx="${globalIdx}">${progPct(value, target)} <span style="font-size:9px;color:var(--text-muted);">▼</span></td>`
+                ? `<td><button type="button" class="adherence-toggle"
+                    aria-label="View ${phase === 'pre' ? 'pre' : 'post'}-call adherence for ${escapeHtml(r.name)}"
+                    aria-expanded="false" aria-controls="crm-detail-${phase}-${globalIdx}">
+                    ${progPct(value, target)} <span aria-hidden="true">▼</span></button></td>`
                 : `<td>${progPct(value, target)}</td>`;
 
             let html = `<tr>
                 <td>${r.name}${mgrTag}${leadTag}</td>
-                <td class="g-activity-start">${metricButton(globalIdx, 'booked', prog(r.booked, rt.booked), r.name)}</td>
-                <td>${metricButton(globalIdx, 'shown', prog(r.shown, rt.shown), r.name)}</td>
-                <td>${metricButton(globalIdx, 'qualified', prog(r.qualified, rt.qualified), r.name)}</td>
-                <td>${metricButton(globalIdx, 'deals', prog(r.deals, rt.deals), r.name)}</td>
-                <td class="g-activity-end">${progMoney(r.revenue, rt.revenue)}</td>
-                <td>${progPct(r.close_rate, rt.close_rate)}</td>
+                <td class="g-activity-start">${metricButton(globalIdx, 'booked', mgr ? r.booked : prog(r.booked, rt.booked), r.name)}</td>
+                <td>${metricButton(globalIdx, 'shown', mgr ? r.shown : prog(r.shown, rt.shown), r.name)}</td>
+                <td>${metricButton(globalIdx, 'qualified', mgr ? r.qualified : prog(r.qualified, rt.qualified), r.name)}</td>
+                <td>${metricButton(globalIdx, 'deals', mgr ? r.deals : prog(r.deals, rt.deals), r.name)}</td>
+                <td class="g-activity-end">${mgr ? (r.revenue ? fmtK(r.revenue) : '—') : progMoney(r.revenue, rt.revenue)}</td>
+                <td>${mgr ? (r.close_rate == null ? '—' : r.close_rate + '%') : progPct(r.close_rate, rt.close_rate)}</td>
                 <td>${r.show_rate == null ? '—' : r.show_rate + '%'}</td>
                     <td>${r.qualification_rate == null ? '—' : r.qualification_rate + '%'}</td>
                     ${qaScoreCell(r.qa_score, r.qa_score_count)}
-                <td class="g-perf-end">${progMoney(r.avg_rev_per_deal, rt.avg_rev_per_deal)}</td>
+                <td class="g-perf-end">${mgr ? (r.avg_rev_per_deal ? fmtK(r.avg_rev_per_deal) : '—') : progMoney(r.avg_rev_per_deal, rt.avg_rev_per_deal)}</td>
                 ${adherenceCell('pre', r.pre_call_adherence, rt.pre_call_adherence)}
                 ${adherenceCell('post', adherencePhasePct(r.adherence, 'post'), rt.post_call_adherence)}
-                <td>${fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
+                <td>${mgr ? '—' : fmtAdherence(r.task_adherence, r.tasks_overdue)}</td>
                 ${opportunityStatusCell(r)}
             </tr>`;
 
@@ -1074,8 +1116,8 @@
                 const cohorts = r.adherence.lead_cohorts || {};
                 const phaseSteps = {
                     post: [
-                        ['recap_12h', 'Recap email sent within 12 hours'],
-                        ['next_step_12h', 'Follow-up meeting or task created within 12 hours'],
+                        ['recap_12h', 'Recap email or SMS sent within 12 hours'],
+                        ['next_step_12h', 'Task, meeting or SMS follow-up set within 12 hours'],
                     ],
                     pre: [
                         ['loom_usage', 'Pre-Call Loom'],
@@ -1105,12 +1147,15 @@
                                 const leadName = leadUrl
                                     ? `<a href="${leadUrl}" target="_blank" rel="noopener noreferrer" class="crm-missing-name" style="color:var(--accent);text-decoration:none;">${name}</a>`
                                     : `<span class="crm-missing-name">${name}</span>`;
-                                return `<div class="crm-missing-item adherence-lead-entry">${leadName}${statusHtml}</div>`;
+                                const reassigned = lead.reassigned ? '<span class="adherence-opportunity-status">Reassigned</span>' : '';
+                                return `<div class="crm-missing-item adherence-lead-entry">${leadName}${statusHtml}${reassigned}</div>`;
                             }).join('')
                             : '<div class="crm-missing-item">None</div>'}</div></div>`;
-                        const cohortHtml = `<div class="post-call-step-cohorts">${renderCohort('Completed', completed)}${renderCohort('Missed', missed)}</div>`;
+                        const extra = ['exempt', 'pending', 'unknown'].filter(bucket => stepCohorts[bucket]?.length)
+                            .map(bucket => renderCohort(bucket[0].toUpperCase() + bucket.slice(1), stepCohorts[bucket])).join('');
+                        const cohortHtml = `<div class="post-call-step-cohorts">${renderCohort('Completed', completed)}${renderCohort('Missed', missed)}${extra}</div>`;
                         const description = key === 'day_of_confirmation_text'
-                            ? '<div class="post-call-step-meta">The credited closer sends an outbound SMS or email with a message body, or makes an outbound call, on the meeting’s Pacific calendar day before it begins.</div>'
+                            ? '<div class="post-call-step-meta">The closer or Lane 2 sends an outbound SMS or email with a message body, or makes an outbound call, on the meeting’s Pacific calendar day before it begins.</div>'
                             : '';
                         return `<section class="post-call-step"><div class="post-call-step-head"><span class="post-call-step-title">${label}</span><span class="crm-field-val ${step.pct == null ? '' : step.pct >= 90 ? 'good' : step.pct >= 50 ? 'partial' : 'bad'}">${pct}</span></div><div class="post-call-step-meta">${done} of ${eligible} eligible${step.exempt ? ` · ${step.exempt} exempt` : ''}</div>${description}${cohortHtml}</section>`;
                     }).join('');
@@ -1200,13 +1245,14 @@
         document.getElementById('tableBody').innerHTML = html;
 
         // Attach click handlers for CRM detail toggle
-        document.querySelectorAll('.crm-clickable').forEach(td => {
-            td.addEventListener('click', (e) => {
+        document.querySelectorAll('.adherence-toggle').forEach(button => {
+            button.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const idx = td.dataset.crmIdx;
-                const row = document.getElementById(`crm-detail-${td.dataset.crmPhase}-${idx}`);
+                const row = document.getElementById(button.getAttribute('aria-controls'));
                 if (row) {
-                    row.style.display = row.style.display === 'none' ? '' : 'none';
+                    const opening = row.style.display === 'none';
+                    row.style.display = opening ? '' : 'none';
+                    button.setAttribute('aria-expanded', String(opening));
                 }
             });
         });
@@ -1234,7 +1280,7 @@
     window.downloadCSV = function() {
         if (!DATA || !DATA.reps) return;
         const scorecardReps = DATA.reps.filter(r => r.lane === 1 || r.lane === 2 || r.is_manager);
-        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Show %', 'Qual %', 'QA Score MTD (/5)', 'QA Scored Calls MTD', 'Avg/Deal', 'Pre-Call Adherence', 'Post-Call Adherence', 'Task Adh.'];
+        const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Show %', 'Qual %', 'QA Score (/5)', 'QA Scored Calls', 'Avg/Deal', 'Pre-Call Adherence', 'Post-Call Adherence', 'Task Adh. (Current Snapshot)'];
         const rows = DATA.reps
             .filter(r => r.lane === 1 || r.lane === 2 || r.is_manager)
             .sort((a, b) => (b.booked || 0) - (a.booked || 0))
@@ -1285,7 +1331,9 @@
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'sales-manager-mtd-' + DATA.today_str.slice(0,7) + '.csv';
+        a.download = DATA.period?.kind === 'week'
+            ? `sales-manager-week-${DATA.period.start}.csv`
+            : `sales-manager-mtd-${DATA.today_str.slice(0, 7)}.csv`;
         a.click();
         URL.revokeObjectURL(url);
     };
