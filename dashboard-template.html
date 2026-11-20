@@ -576,12 +576,12 @@
                         <th data-key="name" data-dir="asc" data-type="string">Rep Name</th>
                         <th data-key="booked" data-dir="desc" data-type="num" class="active g-activity-start" title="Qualifying calls scheduled in elapsed period with native Completed or No Show outcome">Booked</th>
                         <th data-key="shown" data-dir="desc" data-type="num" title="Native Completed outcome on qualifying calls scheduled in elapsed period">Shown</th>
-                        <th data-key="qualified" data-dir="desc" data-type="num" title="Distinct qualified leads from Calls Occurred, using the current Close qualification flag">Qualified</th>
+                        <th data-key="qualified" data-dir="desc" data-type="num" title="Distinct qualified leads from Booked, using the current Close qualification flag">Qualified</th>
                         <th data-key="deals" data-dir="desc" data-type="num" title="Won opportunities by date_won in the Sales Pipeline, using the shared MTD rules. Multiple won opportunities on one lead count separately.">Closed Won</th>
                         <th data-key="revenue" data-dir="desc" data-type="num" class="g-activity-end" title="Total dollar value of Closed/Won opportunities in this period. Includes all opps per lead (not deduplicated by value).">Revenue</th>
-                        <th data-key="close_rate" data-dir="desc" data-type="num" title="Won opportunities by date won divided by Calls Occurred; independent date cohorts">Close %</th>
-                        <th data-key="show_rate" data-dir="desc" data-type="num" title="Shows divided by Calls Occurred">Show %</th>
-                        <th data-key="qualification_rate" data-dir="desc" data-type="num" title="Qualified leads from occurred calls divided by Calls Occurred">Qual %</th>
+                        <th data-key="close_rate" data-dir="desc" data-type="num" title="Won opportunities by date won divided by Booked; independent date cohorts">Close %</th>
+                        <th data-key="show_rate" data-dir="desc" data-type="num" title="Shows divided by Booked">Show %</th>
+                        <th data-key="qualification_rate" data-dir="desc" data-type="num" title="Qualified leads from booked calls divided by Booked">Qual %</th>
                         <th data-key="qa_score" data-dir="desc" data-type="num" title="Month-to-date mean Avoma VP Closing Call Scorecard score, based on meetings held this month in Pacific time. Scores are out of 5; the number of scored calls is shown below.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
                         <th data-key="pre_call_adherence" data-dir="desc" data-type="num" title="Scheduled-call pre-call adherence for the native qualifying scheduled-call cohort through the reporting date. Equal-weight average of eligible Pre-Call Loom, Pre-call text, and Day-of confirmation percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Pre-Call Adh.</th>
@@ -625,12 +625,12 @@
     let DATA = null;
     let currentSort = { key: 'booked', dir: 'desc' };
     let lastMetricTrigger = null;
-    const metricLabels = { occurred_calls: 'Calls Occurred', booked: 'Booked', shown: 'Shown', qualified: 'Qualified', deals: 'Closed Won' };
+    const metricLabels = { occurred_calls: 'Booked', booked: 'Booked', shown: 'Shown', qualified: 'Qualified', deals: 'Closed Won' };
     const metricDescriptions = {
         occurred_calls: 'Qualifying scheduled calls with a native Completed or No Show outcome. Cancellations, future and unresolved calls are excluded.',
         booked: 'Qualifying calls scheduled in the elapsed period with native Completed or No Show outcome. Excludes cancellations, future calls and unresolved outcomes.',
-        shown: 'Calls scheduled in the elapsed period, grouped by native outcome. Only Completed and No Show count as Calls Occurred.',
-        qualified: 'Distinct qualified leads from Calls Occurred; current Close flag, no reset applied.',
+        shown: 'Calls scheduled in the elapsed period, grouped by native outcome. Only Completed and No Show count as Booked.',
+        qualified: 'Distinct qualified leads from Booked; current Close flag, no reset applied.',
         deals: 'Unique leads with Closed/Won opportunities in this period.',
     };
     const metricDrawer = document.getElementById('metricDrawer');
