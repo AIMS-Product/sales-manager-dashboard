@@ -585,7 +585,7 @@
                         <th data-key="qa_score" data-dir="desc" data-type="num" title="Month-to-date mean Avoma VP Closing Call Scorecard score, based on meetings held this month in Pacific time. Scores are out of 5; the number of scored calls is shown below.">QA Score</th>
                         <th data-key="avg_rev_per_deal" data-dir="desc" data-type="num" class="g-perf-end" title="Average revenue per closed deal. Total revenue ÷ number of deals. Shows '—' if no deals closed.">Avg/Deal</th>
                         <th data-key="pre_call_adherence" data-dir="desc" data-type="num" title="Scheduled-call pre-call adherence for the native qualifying scheduled-call cohort through the reporting date. Equal-weight average of eligible Pre-Call Loom, Pre-call text, and Day-of confirmation percentages, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Pre-Call Adh.</th>
-                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="Scheduled-call post-call adherence for the native qualifying scheduled-call cohort through the reporting date. Both recap email and task or follow-up meeting creation must pass within 12 hours, using the same rules as the Rep Dashboard. Click a rep's score for step details.">Post-Call Adh.</th>
+                        <th data-key="post_call_adherence" data-dir="desc" data-type="num" title="Scheduled-call post-call adherence for the native qualifying scheduled-call cohort through the reporting date. Average of the 12-hour recap email rate and the 12-hour follow-up meeting or task rate. Pending calls are excluded. Click a rep's score for step details.">Post-Call Adh.</th>
                         <th data-key="task_adherence" data-dir="desc" data-type="num" title="% of incomplete tasks that are NOT overdue. Looks at all open tasks assigned to the rep — any task past its due date counts against them. Tasks on Closed/Won leads are excluded. 100% = fully caught up.">Task Adh.</th>
                         <th data-key="opportunity_status_total" data-dir="desc" data-type="num" title="Active Sales Pipeline opportunities grouped by status. Open a saved Close view for each status.">Opp Status</th>
                     </tr>
@@ -954,26 +954,6 @@
         return values.length ? Math.floor(values.reduce((sum, value) => sum + value, 0) / values.length + 0.5) : null;
     }
 
-    function aggregatePhasePct(reps, phase) {
-        if (phase === 'post') {
-            const done = reps.reduce((s,r) => s + (r.post_call_12h?.done || 0),0);
-            const eligible = reps.reduce((s,r) => s + (r.post_call_12h?.eligible || 0),0);
-            return eligible ? Math.floor(100*done/eligible+0.5) : null;
-        }
-        const keys = ['loom_usage', 'precall_text', 'day_of_confirmation_text'];
-        const values = keys.map(key => {
-            let done = 0;
-            let eligible = 0;
-            for (const rep of reps) {
-                const step = adherenceStep(rep.adherence, key);
-                done += step?.done || 0;
-                eligible += step?.eligible || 0;
-            }
-            return eligible ? Math.floor(done / eligible * 100 + 0.5) : null;
-        }).filter(value => value != null);
-        return values.length ? Math.floor(values.reduce((sum, value) => sum + value, 0) / values.length + 0.5) : null;
-    }
-
     const SMART_VIEW_URL = 'https://app.close.com/leads/save_vIX4e18a9Sb1ZjOgu8dN1DDa6lI01O7syYvYwvhiwep/'; // kept for reference
 
     function crmFieldHtml(label, filled, total) {
@@ -1031,7 +1011,7 @@
             const qr = oc > 0 ? Math.round(q / oc * 1000) / 10 : null;
             const avg = d > 0 ? Math.round(rev / d) : null;
             const lane = String(reps[0]?.lane || 1);
-            const postCall = aggregatePhasePct(reps, 'post');
+            const postCall = DATA.lane_post_call_adherence?.[lane] ?? null;
             const preCall = DATA.lane_pre_call_adherence?.[lane] ?? null;
             const incmplt = reps.filter(r => r.tasks_incomplete != null);
             const totalInc = incmplt.reduce((s, r) => s + (r.tasks_incomplete || 0), 0);
@@ -1212,7 +1192,7 @@
             ${(() => { const qa = aggregateQaScore([...lane1, ...lane2, ...mgrs]); return qaScoreCell(qa.score, qa.count); })()}
             <td class="g-perf-end">${DATA.team_avg_rev_per_deal ? fmtK(DATA.team_avg_rev_per_deal) : '—'}</td>
             <td>${progPct(DATA.team_pre_call_adherence, tt.pre_call_adherence)}</td>
-            <td>${progPct(aggregatePhasePct([...lane1, ...lane2], 'post'), tt.post_call_adherence)}</td>
+            <td>${progPct(DATA.team_post_call_adherence, tt.post_call_adherence)}</td>
             <td>${fmtAdherence(DATA.team_task_adherence, DATA.team_overdue)}</td>
             ${opportunityStatusCell({ opportunity_status: aggregateOpportunityStatuses([...lane1, ...lane2, ...mgrs]) })}
         </tr>`;
@@ -1254,7 +1234,6 @@
     window.downloadCSV = function() {
         if (!DATA || !DATA.reps) return;
         const scorecardReps = DATA.reps.filter(r => r.lane === 1 || r.lane === 2 || r.is_manager);
-        const salesReps = scorecardReps.filter(r => !r.is_manager);
         const headers = ['Rep Name', 'Lane', 'Booked', 'Shown', 'Qualified', 'Closed Won', 'Revenue', 'Close %', 'Show %', 'Qual %', 'QA Score MTD (/5)', 'QA Scored Calls MTD', 'Avg/Deal', 'Pre-Call Adherence', 'Post-Call Adherence', 'Task Adh.'];
         const rows = DATA.reps
             .filter(r => r.lane === 1 || r.lane === 2 || r.is_manager)
@@ -1293,7 +1272,7 @@
             aggregateQaScore(scorecardReps).count,
             DATA.team_avg_rev_per_deal || 0,
             DATA.team_pre_call_adherence != null ? DATA.team_pre_call_adherence + '%' : '',
-            aggregatePhasePct(salesReps, 'post') != null ? aggregatePhasePct(salesReps, 'post') + '%' : '',
+            DATA.team_post_call_adherence != null ? DATA.team_post_call_adherence + '%' : '',
             DATA.team_task_adherence != null ? DATA.team_task_adherence + '%' : '',
         ]);
 
