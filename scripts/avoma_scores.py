@@ -17,6 +17,20 @@ PACIFIC = ZoneInfo("America/Los_Angeles")
 SCORECARD_TEMPLATE = "VP Closing Call Scorecard"
 
 
+# Verified Close login aliases for the active VP reps' Avoma accounts.
+AVOMA_EMAIL_ALIASES = {
+    f"{name}@vendingpreneurshq.com": f"{name}@modern-amenities.com"
+    for name in ("ariella", "christian", "eric", "luke", "robin", "scott")
+}
+
+
+def score_for_close_email(scores, email):
+    email = str(email or "").strip().casefold()
+    if email in scores:
+        return scores[email]
+    return scores.get(AVOMA_EMAIL_ALIASES.get(email, ""), {})
+
+
 def fetch_avoma_mtd_scores(api_key: str) -> tuple[dict[str, dict[str, Any]], dict[str, Any]]:
     """Return per-rep mean overall_score and call count for local-calendar MTD.
 

@@ -21,7 +21,7 @@ from zoneinfo import ZoneInfo
 from rep_roster import INACTIVE_CLOSERS
 from build_adherence_preview import LATEST_BOOKED_DATE_FIELD, add_adherence_to_dashboard, load_env_value  # noqa: E402
 from dashboard_adherence import apply_dashboard_post_call_scores  # noqa: E402
-from avoma_scores import fetch_avoma_mtd_scores  # noqa: E402
+from avoma_scores import fetch_avoma_mtd_scores, score_for_close_email  # noqa: E402
 
 # ── Config ───────────────────────────────────────────────────────────────────
 
@@ -1034,7 +1034,7 @@ def build_dashboard_data():
     avoma_api_key = load_env_value([workspace_env], "AVOMA_API_KEY")
     avoma_scores_by_email, avoma_score_meta = fetch_avoma_mtd_scores(avoma_api_key)
     avoma_scores_by_name = {
-        name: avoma_scores_by_email.get(user_emails.get(user_id, ""), {})
+        name: score_for_close_email(avoma_scores_by_email, user_emails.get(user_id, ""))
         for user_id, name in user_map.items()
     }
     if not avoma_score_meta.get("available"):
